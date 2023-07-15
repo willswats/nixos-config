@@ -20,7 +20,6 @@
 
 ## Cleanup
 
-- [ ] Replace wallpaper with actual png from host (not just renamed)
 - [ ] Decide what to do with steam.md, retroarch.md, slippi.md and yuzu.md
 - [ ] Set variables in config:
   - [ ] hostName
