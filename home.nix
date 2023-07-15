@@ -41,16 +41,13 @@
     brightnessctl
     redshift
     lxde.lxsession
-    lxappearance
-    libsForQt5.qt5ct
-    libsForQt5.qtstyleplugins
-    qt6ct
+    lxappearance # REMOVE
+    libsForQt5.qt5ct # REMOVE
     dconf
-    gtk-engine-murrine
     gnome-themes-extra
     # Utilities
     firefox
-    xfce.thunar
+    pcmanfm
     gnome.file-roller
     mpv
     qview
@@ -98,7 +95,22 @@
   xdg.configFile.fish.source = ./config/fish;
   xdg.configFile.lazygit.source = ./config/lazygit;
   xdg.configFile.rofi.source = ./config/rofi;
-  xdg.configFile.mullvad-vpn.source = ./config/MullvadVPN;
+  xdg.configFile.${"Mullvad VPN"}.source = ./config/${"Mullvad VPN"};
+
+  xsession = {
+    windowManager.i3 = {
+      enable = true;
+      config = {
+        startup = [
+          {
+            command = "${pkgs.feh}/bin/feh --no-fehbg --bg-fill ~/nixos-config/minimal-desert.png --bg-fill ~/nixos-config/Wallpapers/minimal-desert.png";
+            always = true;
+            notification = false;
+          }
+        ];
+      };
+    };
+  };
 
   programs = {
     neovim = {
@@ -111,6 +123,7 @@
     enable = true;
     userName = "willswats";
     userEmail = "williamstuwatson@gmail.com";
+    extraConfig.init.defaultBranch = "main";
   };
 
   services.dunst.enable = true;

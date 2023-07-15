@@ -55,6 +55,7 @@
   };
 
   services = {
+    gvfs.enable = true;
     xserver = {
       enable = true;
       # Configure keymap in X11
@@ -100,6 +101,8 @@
     # Enable bluetooth pairing via blueman
     blueman.enable = true;
   };
+
+  security.polkit.enable = true;
 
   # Configure console keymap
   console.keyMap = "uk";

@@ -173,6 +173,6 @@ bindsym $mod+r mode "resize"
 # programs
 bindsym $mod+Return $exec $TERMINAL
 bindsym $mod+w $exec firefox # web browser
-bindsym $mod+e $exec Thunar # explorer
+bindsym $mod+e $exec pcmanfm # explorer
 bindsym $mod+t $exec alacritty -e nvim # text editor
 bindsym $mod+s $exec alacritty -e btm -b # system monitor 
