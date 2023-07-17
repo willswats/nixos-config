@@ -1,6 +1,0 @@
-[Default Applications]
-text/plain=nvim.desktop
-
-[Added Associations]
-text/plain=nvim.desktop;
-application/x-desktop=nvim.desktop;

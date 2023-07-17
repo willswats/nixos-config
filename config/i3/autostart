@@ -2,16 +2,16 @@ set $exec exec --no-startup-id
 set $exec_always exec_always --no-startup-id
 
 # Transfer sleep lock to i3lock
-$exec xss-lock --transfer-sleep-lock -- i3lock -c 1e1e2e
+#$exec xss-lock --transfer-sleep-lock -- i3lock -c 1e1e2e
 
 # Program to generate and execute DesktopEntry files of type Application
-$exec dex-autostart --autostart --environment i3
+#$exec dex-autostart --autostart --environment i3
 
 # Setup displays
-$exec xrandr --output DP-2 --primary --mode 1920x1080 --rate 144.00 --rotate normal --output DP-0 --mode 1920x1080 --rate 144.00 --rotate right --left-of DP-2
+#$exec xrandr --output DP-2 --primary --mode 1920x1080 --rate 144.00 --rotate normal --output DP-0 --mode 1920x1080 --rate 144.00 --rotate right --left-of DP-2
 
 # Set background
-$exec feh --no-fehbg --bg-fill ~/Pictures/Wallpapers/minimal-desert.png --bg-fill ~/Pictures/Wallpapers/minimal-desert.png
+$exec feh --no-fehbg --bg-fill ~/nixos-config/wallpapers/minimal-desert.png ~/nixos-config/wallpapers/minimal-desert.png
 
 # Start polybar
 $exec_always killall polybar; polybar -r
@@ -19,20 +19,8 @@ $exec_always killall polybar; polybar -r
 # Start lxpolkit (graphical authentication agent)
 $exec lxpolkit
 
-# GUI tray icon for blueman (bluetooth)
-$exec blueman-applet
-
 # Mount google-drive remote
 $exec rclone mount --vfs-cache-mode writes google-drive: ~/Drive
 
 # Start OpenTabletDriver.Daemon
-$exec /usr/share/OpenTabletDriver/OpenTabletDriver.Daemon
-
-# Disable mouse acceleration
-$exec xinput set-prop "BenQ ZOWIE BenQ ZOWIE Gaming Mouse" "libinput Accel Profile Enabled" 0, 1
-
-# Enable touchpad tap
-$exec xinput set-prop "DLL07A0:01 044E:120B" "libinput Tapping Enabled" 1
-
-# Allow touchpad movement when typing
-$exec xinput set-prop "DLL07A0:01 044E:120B" "libinput Disable While Typing Enabled" 0
+$exec otd-daemon

@@ -4,8 +4,6 @@
 
 - [ ] Setup gnome-keyring and ssh
 - [ ] Move i3 autostart to nix equivalents
-- [ ] Setup polkit
-- [ ] Setup qt themes without qt5ct
 - [ ] Auto create directories
 - [ ] Set screen timeout
 - [ ] Setup support for AppImages (Slippi) and Flatpak
@@ -13,14 +11,14 @@
 
 ## Fix
 
+- [ ] Fix Hack font missing icons
 - [ ] Fix mullvad (missing directories from symlink)
 - [ ] Fix fish errors and set as shell
-- [ ] Fix Hack font missing icons
 - [ ] Fix nvim errors
+- [ ] Fix default themes for certain qt apps (Yuzu, PCSX2)
 
 ## Cleanup
 
-- [ ] Decide what to do with steam.md, retroarch.md, slippi.md and yuzu.md
 - [ ] Set variables in config:
   - [ ] hostName
   - [ ] username
@@ -31,7 +29,7 @@
   - [ ] desktop
   - [ ] laptop
   - [ ] virtualmachine
-- [ ] Cleanup config and move to modules
+- [ ] Decide what to do with steam.md, retroarch.md, slippi.md and yuzu.md
 - [ ] Create a flake.nix for each project and remove the packages from the base system
 
 ## Desktop specific
