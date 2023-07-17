@@ -11,6 +11,7 @@
 
 ## Fix
 
+- [ ] Fix lazygit
 - [ ] Fix Hack font missing icons
 - [ ] Fix mullvad (missing directories from symlink)
 - [ ] Fix fish errors and set as shell
