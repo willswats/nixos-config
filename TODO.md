@@ -2,7 +2,7 @@
 
 ## Features
 
-- [ ] Setup gnome-keyring and ssh
+- [ ] Setup gnome-keyring
 - [ ] Move i3 autostart to nix equivalents
 - [ ] Auto create directories
 - [ ] Set screen timeout
