@@ -2,7 +2,7 @@
 
 ## Features
 
-- [ ] Move git credentials
+- [ ] Move git username and email & wipe .git
 - [ ] Setup gnome-keyring
 - [ ] Move i3 autostart to nix equivalents
 - [ ] Auto create directories
