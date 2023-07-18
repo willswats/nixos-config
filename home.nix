@@ -6,6 +6,7 @@
     ./modules/theme
     ./modules/fonts
     ./modules/fish
+    ./modules/alacritty
     ./modules/lazygit
     ./modules/mullvad-vpn
   ];
@@ -85,7 +86,6 @@
     configFile.nvim.source = ./config/nvim;
     configFile.i3.source = ./config/i3;
     configFile.polybar.source = ./config/polybar;
-    configFile.alacritty.source = ./config/alacritty;
     configFile.bottom.source = ./config/bottom;
     configFile.rofi.source = ./config/rofi;
   };
