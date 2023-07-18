@@ -8,6 +8,7 @@
 - [ ] Switch to systemd boot (or a way to make disk encryption pass quicker)
 - [ ] Auto create directories
 - [ ] Create a firefox nix config
+- [ ] Move nvim config to nix
 
 ## Fix
 
