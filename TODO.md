@@ -12,8 +12,6 @@
 
 ## Fix
 
-- [ ] Fix Hack font missing icons
-- [ ] Fix mullvad (missing directories from symlink)
 - [ ] Fix nvim errors
 - [ ] Fix default themes for certain qt apps (Yuzu, PCSX2)
 
