@@ -2,7 +2,6 @@
 
 ## Features
 
-- [ ] Move i3 autostart to nix equivalents
 - [ ] Setup gnome-keyring
 - [ ] Set screen timeout
 - [ ] Setup support for AppImages (Slippi) and Flatpak
@@ -13,6 +12,7 @@
 ## Fix
 
 - [ ] Fix nvim errors
+- [ ] Fix mullvad gui error
 - [ ] Fix default themes for certain qt apps (Yuzu, PCSX2)
 
 ## Cleanup
