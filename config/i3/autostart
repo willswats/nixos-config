@@ -11,16 +11,16 @@ set $exec_always exec_always --no-startup-id
 #$exec xrandr --output DP-2 --primary --mode 1920x1080 --rate 144.00 --rotate normal --output DP-0 --mode 1920x1080 --rate 144.00 --rotate right --left-of DP-2
 
 # Set background
-$exec feh --no-fehbg --bg-fill ~/nixos-config/wallpapers/minimal-desert.png ~/nixos-config/wallpapers/minimal-desert.png
+#$exec feh --no-fehbg --bg-fill ~/nixos-config/wallpapers/minimal-desert.png ~/nixos-config/wallpapers/minimal-desert.png
 
 # Start polybar
-$exec_always killall polybar; polybar -r
+#$exec_always killall polybar; polybar -r
 
 # Start lxpolkit (graphical authentication agent)
-$exec lxpolkit
+#$exec lxpolkit
 
 # Mount google-drive remote
-$exec rclone mount --vfs-cache-mode writes google-drive: ~/Drive
+#$exec rclone mount --vfs-cache-mode writes google-drive: ~/Drive
 
 # Start OpenTabletDriver.Daemon
-$exec otd-daemon
+#$exec otd-daemon
