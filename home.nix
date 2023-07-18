@@ -4,6 +4,7 @@
   imports = [
     ./modules/i3
     ./modules/theme
+    ./modules/fonts
     ./modules/fish
     ./modules/lazygit
   ];

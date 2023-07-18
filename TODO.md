@@ -2,11 +2,12 @@
 
 ## Features
 
-- [ ] Setup gnome-keyring
 - [ ] Move i3 autostart to nix equivalents
-- [ ] Auto create directories
+- [ ] Setup gnome-keyring
 - [ ] Set screen timeout
 - [ ] Setup support for AppImages (Slippi) and Flatpak
+- [ ] Switch to systemd boot (or a way to make disk encryption pass quicker)
+- [ ] Auto create directories
 - [ ] Create a firefox nix config
 
 ## Fix

@@ -149,12 +149,6 @@
     };
   };
 
-  fonts = {
-    fonts = with pkgs; [
-      (nerdfonts.override { fonts = [ "Hack" ]; })
-    ];
-  };
-
   system = {
     stateVersion = "23.05";
 
