@@ -7,6 +7,7 @@
     ./modules/fonts
     ./modules/fish
     ./modules/lazygit
+    ./modules/mullvad-vpn
   ];
 
   programs = {
@@ -67,7 +68,6 @@
       rclone-browser
       gnome.seahorse
       opentabletdriver
-      mullvad-vpn
       # Entertainment
       steam
       retroarch
@@ -89,6 +89,5 @@
     configFile.bottom.source = ./config/bottom;
     configFile.dunst.source = ./config/dunst;
     configFile.rofi.source = ./config/rofi;
-    configFile.${"Mullvad VPN"}.source = ./config/${"Mullvad VPN"};
   };
 }
