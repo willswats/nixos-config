@@ -11,7 +11,6 @@
 
 ## Fix
 
-- [ ] Fix lazygit
 - [ ] Fix Hack font missing icons
 - [ ] Fix mullvad (missing directories from symlink)
 - [ ] Fix nvim errors
