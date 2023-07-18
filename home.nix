@@ -4,6 +4,8 @@
   imports = [
     ./modules/i3
     ./modules/theme
+    ./modules/fish
+    ./modules/lazygit
   ];
 
   programs = {
@@ -77,14 +79,15 @@
     ];
   };
 
-  xdg.configFile.nvim.source = ./config/nvim;
-  xdg.configFile.i3.source = ./config/i3;
-  xdg.configFile.polybar.source = ./config/polybar;
-  xdg.configFile.alacritty.source = ./config/alacritty;
-  xdg.configFile.bottom.source = ./config/bottom;
-  xdg.configFile.dunst.source = ./config/dunst;
-  xdg.configFile.fish.source = ./config/fish;
-  xdg.configFile.lazygit.source = ./config/lazygit;
-  xdg.configFile.rofi.source = ./config/rofi;
-  xdg.configFile.${"Mullvad VPN"}.source = ./config/${"Mullvad VPN"};
+  xdg = {
+    enable = true;
+    configFile.nvim.source = ./config/nvim;
+    configFile.i3.source = ./config/i3;
+    configFile.polybar.source = ./config/polybar;
+    configFile.alacritty.source = ./config/alacritty;
+    configFile.bottom.source = ./config/bottom;
+    configFile.dunst.source = ./config/dunst;
+    configFile.rofi.source = ./config/rofi;
+    configFile.${"Mullvad VPN"}.source = ./config/${"Mullvad VPN"};
+  };
 }

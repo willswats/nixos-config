@@ -25,7 +25,7 @@
   };
 
   networking = {
-    hostName = "will-desktop";
+    hostName = "will-virtual";
     networkmanager.enable = true;
     wireguard.enable = true;
   };
@@ -95,26 +95,34 @@
 
   security.polkit.enable = true;
 
-  # Configure console keymap
   console.keyMap = "uk";
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.will = {
     isNormalUser = true;
     description = "will";
     extraGroups = [ "networkmanager" "wheel" "audio" ];
+    shell = pkgs.fish;
   };
 
-  # Allow unfree packages
+  programs = {
+    fish.enable = true;
+    dconf.enable = true;
+  };
+
   nixpkgs.config = {
+    # Allow unfree packages
     allowUnfree = true;
-    pulseaudio = true; # Explicit PulseAudio support in applications
+    # Explicit PulseAudio support in applications
+    pulseaudio = true;
   };
-
-  environment.variables = {
-    TERMINAL = "alacritty";
-    EDITOR = "nvim";
-    QT_QPA_PLATFORMTHEME = "qt5ct";
+  environment = {
+    variables = {
+      TERMINAL = "alacritty";
+      EDITOR = "nvim";
+      QT_QPA_PLATFORMTHEME = "qt5ct";
+    };
+    # Add shells to /etc/shells
+    shells = with pkgs; [ fish ];
   };
 
   hardware = {
