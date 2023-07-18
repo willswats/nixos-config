@@ -2,7 +2,6 @@
 
 ## Features
 
-- [ ] Move git username and email & wipe .git
 - [ ] Setup gnome-keyring
 - [ ] Move i3 autostart to nix equivalents
 - [ ] Auto create directories
@@ -15,7 +14,6 @@
 - [ ] Fix lazygit
 - [ ] Fix Hack font missing icons
 - [ ] Fix mullvad (missing directories from symlink)
-- [ ] Fix fish errors and set as shell
 - [ ] Fix nvim errors
 - [ ] Fix default themes for certain qt apps (Yuzu, PCSX2)
 
