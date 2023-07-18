@@ -85,6 +85,5 @@
     enable = true;
     configFile.nvim.source = ./config/nvim;
     configFile.i3.source = ./config/i3;
-    configFile.polybar.source = ./config/polybar;
   };
 }

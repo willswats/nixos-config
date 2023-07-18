@@ -1,10 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ../dunst ../rofi ];
+  imports = [ ../dunst ../rofi ../polybar ];
 
   home.packages = with pkgs; [
-    polybar
     feh
     pavucontrol
     brightnessctl
