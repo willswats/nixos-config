@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  imports = [ ../dunst ];
+
   home.packages = with pkgs; [
     rofi
     polybar
@@ -14,7 +16,6 @@
 
   services = {
     gnome-keyring.enable = true;
-    dunst.enable = true;
     picom.enable = true;
     network-manager-applet.enable = true;
     blueman-applet.enable = true;

@@ -87,7 +87,6 @@
     configFile.polybar.source = ./config/polybar;
     configFile.alacritty.source = ./config/alacritty;
     configFile.bottom.source = ./config/bottom;
-    configFile.dunst.source = ./config/dunst;
     configFile.rofi.source = ./config/rofi;
   };
 }
