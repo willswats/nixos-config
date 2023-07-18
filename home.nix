@@ -7,6 +7,7 @@
     ./modules/fonts
     ./modules/fish
     ./modules/alacritty
+    ./modules/bottom
     ./modules/lazygit
     ./modules/mullvad-vpn
   ];
@@ -51,7 +52,6 @@
       alacritty
       neovim
       lazygit
-      bottom
       trash-cli
       # Utilities
       firefox
@@ -86,7 +86,5 @@
     configFile.nvim.source = ./config/nvim;
     configFile.i3.source = ./config/i3;
     configFile.polybar.source = ./config/polybar;
-    configFile.bottom.source = ./config/bottom;
-    configFile.rofi.source = ./config/rofi;
   };
 }

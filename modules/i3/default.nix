@@ -1,10 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ../dunst ];
+  imports = [ ../dunst ../rofi ];
 
   home.packages = with pkgs; [
-    rofi
     polybar
     feh
     pavucontrol

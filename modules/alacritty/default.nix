@@ -13,6 +13,7 @@
 
       env.TERM = "xterm-256color";
 
+      # Catppuccin Mocha Theme
       colors = {
         primary = {
           background = "#1E1E2E"; # base
