@@ -115,23 +115,20 @@
         keybindings =
           let
             mod = config.xsession.windowManager.i3.config.modifier;
-            exec = " exec - -no-startup-id ";
-            monitor_left = "
-              Virtual-1 ";
-            monitor_center = "
-              Virtual-1 ";
-            refresh_i3status = "
-              killall - SIGUSR1 i3status ";
-            ws1 = " 1 ";
-            ws2 = " 2 ";
-            ws3 = " 3 ";
-            ws4 = " 4 ";
-            ws5 = " 5 ";
-            ws6 = " 6 ";
-            ws7 = " 7 ";
-            ws8 = " 8 ";
-            ws9 = " 9 ";
-            ws10 = " 10 ";
+            exec = "exec --no-startup-id";
+            monitor_left = "Virtual-1 ";
+            monitor_center = "Virtual-1 ";
+            refresh_i3status = "killall - SIGUSR1 i3status ";
+            ws1 = "1";
+            ws2 = "2";
+            ws3 = "3";
+            ws4 = "4";
+            ws5 = "5";
+            ws6 = "6";
+            ws7 = "7";
+            ws8 = "8";
+            ws9 = "9";
+            ws10 = "10";
           in
           lib.mkOptionDefault {
 
