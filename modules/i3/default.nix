@@ -11,7 +11,6 @@
     redshift
     networkmanagerapplet
     lxde.lxsession
-    gcr
   ];
 
   services = {
