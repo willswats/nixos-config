@@ -228,18 +228,17 @@
             notification = false;
           }
           {
-
             command = "lxpolkit";
             always = false;
             notification = false;
           }
           {
-            command = "rclone mount --vfs-cache-mode writes google-drive: ~/Drive";
+            command = "otd-daemon";
             always = false;
             notification = false;
           }
           {
-            command = "otd-daemon";
+            command = "rclone mount --vfs-cache-mode writes google-drive: ~/Drive";
             always = false;
             notification = false;
           }
