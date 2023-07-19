@@ -28,35 +28,54 @@
   xsession = {
     enable = true;
     scriptPath = ".hm-xsession";
-    windowManager.i3 = {
-      enable = true;
-      config = {
-        modifier = "Mod4";
-        fonts = {
-          names = [ "Hack Nerd Font" ];
-          size = 14.0;
-        };
-        window.commands = [
-          {
-            command = "border pixel 1";
-            criteria = { class = "^.*"; };
-          }
-        ];
-        gaps = {
-          inner = 10;
-        };
-        bars = [ ];
-        colors =
-          let
-            # https://github.com/catppuccin/i3
-            mauve = "#cba6f7";
-            red = "#f38ba8";
-            blue = "#89b4fa";
-            text = "#cdd6f4";
-            overlay0 = "#6c7086";
-            base = "#1e1e2e";
-          in
-          {
+    windowManager.i3 =
+      let
+        mod = config.xsession.windowManager.i3.config.modifier;
+        exec = "exec --no-startup-id";
+        refresh_i3status = "${pkgs.killall}/bin/killall - SIGUSR1 ${pkgs.i3status}/bin/i3status";
+
+        ws1 = "1";
+        ws2 = "2";
+        ws3 = "3";
+        ws4 = "4";
+        ws5 = "5";
+        ws6 = "6";
+        ws7 = "7";
+        ws8 = "8";
+        ws9 = "9";
+        ws10 = "10";
+
+        # monitor_left = "Virtual-1";
+        # monitor_center = "Virtual-1";
+
+        # https://github.com/catppuccin/i3
+        mauve = "#cba6f7";
+        red = "#f38ba8";
+        blue = "#89b4fa";
+        text = "#cdd6f4";
+        overlay0 = "#6c7086";
+        base = "#1e1e2e";
+      in
+      {
+        enable = true;
+        config = {
+          modifier = "Mod4";
+          floating.modifier = "Mod4";
+          fonts = {
+            names = [ "Hack Nerd Font" ];
+            size = 14.0;
+          };
+          window.commands = [
+            {
+              command = "border pixel 1";
+              criteria = { class = "^.*"; };
+            }
+          ];
+          gaps = {
+            inner = 10;
+          };
+          bars = [ ];
+          colors = {
             focused = {
               background = "${base}";
               text = "${text}";
@@ -93,25 +112,7 @@
               childBorder = "${overlay0}";
             };
           };
-        keybindings =
-          let
-            mod = config.xsession.windowManager.i3.config.modifier;
-            exec = "exec --no-startup-id";
-            refresh_i3status = "${pkgs.killall}/bin/killall - SIGUSR1 ${pkgs.i3status}/bin/i3status";
-            ws1 = "1";
-            ws2 = "2";
-            ws3 = "3";
-            ws4 = "4";
-            ws5 = "5";
-            ws6 = "6";
-            ws7 = "7";
-            ws8 = "8";
-            ws9 = "9";
-            ws10 = "10";
-            #monitor_left = "Virtual-1";
-            #monitor_center = "Virtual-1";
-          in
-          lib.mkOptionDefault {
+          keybindings = lib.mkOptionDefault {
             # Raise and lower volume 
             "XF86AudioRaiseVolume " = "${exec} ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ +10% && ${refresh_i3status}";
             "XF86AudioLowerVolume" = "${exec} ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -10% && ${refresh_i3status}";
@@ -177,18 +178,7 @@
             # "workspace ${ws9}" = "output ${monitor_center}";
             # "workspace ${ws10}" = "output ${monitor_center}";
 
-            # "mode resize" = {
-            #   "h" = "resize shrink width 10 px or 10 ppt";
-            #   "j" = "resize grow height 10 px or 10 ppt";
-            #   "k" = "resize shrink height 10 px or 10 ppt";
-            #   "l" = "resize grow width 10 px or 10 ppt";
-            #
-            #   "Return" = "mode default";
-            #   "Escape" = "mode default";
-            #   "${mod}+r" = "mode default";
-            # };
-
-            # "${mod}+r" = "mode resize";
+            "${mod}+r" = "mode resize";
 
             "${mod}+z" = "split v"; # Move split to vertical
             "${mod}+x" = "split h"; # Move split to horizontal
@@ -215,34 +205,51 @@
             "${mod}+t" = "${exec} ${pkgs.alacritty}/bin/alacritty -e ${pkgs.neovim}/bin/nvim";
             "${mod}+s" = "${exec} ${pkgs.alacritty}/bin/alacritty -e ${pkgs.bottom}/bin/btm -b";
           };
-        startup = [
-          {
-            command = "${pkgs.feh}/bin/feh --no-fehbg --bg-fill ~/nixos-config/wallpapers/minimal-desert.png ~/nixos-config/wallpapers/minimal-desert.png";
-            always = false;
-            notification = false;
-          }
-          {
-            command = "systemctl --user restart polybar";
-            always = true;
-            notification = false;
-          }
-          {
-            command = "${pkgs.lxde.lxsession}/bin/lxpolkit";
-            always = false;
-            notification = false;
-          }
-          {
-            command = "${pkgs.opentabletdriver}/bin/otd-daemon";
-            always = false;
-            notification = false;
-          }
-          {
-            command = "${pkgs.rclone}/bin/rclone mount --vfs-cache-mode writes google-drive: ~/Drive";
-            always = false;
-            notification = false;
-          }
-        ];
+          modes = {
+            resize = {
+              "h" = "resize shrink width 10 px or 10 ppt";
+              "j" = "resize grow height 10 px or 10 ppt";
+              "k" = "resize shrink height 10 px or 10 ppt";
+              "l" = "resize grow width 10 px or 10 ppt";
+
+              Down = "resize grow height 10 px or 10 ppt";
+              Left = "resize shrink width 10 px or 10 ppt";
+              Right = "resize grow width 10 px or 10 ppt";
+              Up = "resize shrink height 10 px or 10 ppt";
+
+              "Escape" = "mode default";
+              "Return" = "mode default";
+              "${mod}+r" = "mode default";
+            };
+          };
+          startup = [
+            {
+              command = "${pkgs.feh}/bin/feh --no-fehbg --bg-fill ~/nixos-config/wallpapers/minimal-desert.png ~/nixos-config/wallpapers/minimal-desert.png";
+              always = false;
+              notification = false;
+            }
+            {
+              command = "systemctl --user restart polybar";
+              always = true;
+              notification = false;
+            }
+            {
+              command = "${pkgs.lxde.lxsession}/bin/lxpolkit";
+              always = false;
+              notification = false;
+            }
+            {
+              command = "${pkgs.opentabletdriver}/bin/otd-daemon";
+              always = false;
+              notification = false;
+            }
+            {
+              command = "${pkgs.rclone}/bin/rclone mount --vfs-cache-mode writes google-drive: ~/Drive";
+              always = false;
+              notification = false;
+            }
+          ];
+        };
       };
-    };
   };
 }
