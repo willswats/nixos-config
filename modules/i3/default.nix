@@ -8,6 +8,7 @@
     i3lock
     feh
     pavucontrol
+    playerctl
     brightnessctl
     redshift
     networkmanagerapplet
@@ -48,67 +49,49 @@
         };
         colors =
           let
-            rosewater = "#f5e0dc";
-            flamingo = "#f2cdcd";
-            pink = "#f5c2e7";
+            # https://github.com/catppuccin/i3
             mauve = "#cba6f7";
             red = "#f38ba8";
-            maroon = "#eba0ac";
-            peach = "#fab387";
-            green = "#a6e3a1";
-            teal = "#94e2d5";
-            sky = "#89dceb";
-            sapphire = "#74c7ec";
             blue = "#89b4fa";
-            lavender = "#b4befe";
             text = "#cdd6f4";
-            subtext1 = "#bac2de";
-            subtext0 = "#a6adc8";
-            overlay2 = "#9399b2";
-            overlay1 = "#7f849c";
             overlay0 = "#6c7086";
-            surface2 = "#585b70";
-            surface1 = "#45475a";
-            surface0 = "#313244";
             base = "#1e1e2e";
-            mantle = "#181825";
-            crust = "#11111b";
           in
           {
             focused = {
-              childBorder = "${blue}";
               background = "${base}";
               text = "${text}";
               indicator = "${mauve}";
               border = "${blue}";
+              childBorder = "${blue}";
             };
             focusedInactive = {
-              childBorder = "${base}";
               background = "${base}";
               text = "${text}";
               indicator = "${base}";
               border = "${base}";
+              childBorder = "${base}";
             };
             unfocused = {
-              childBorder = "${base}";
               background = "${base}";
               text = "${text}";
               indicator = "${base}";
               border = "${base}";
+              childBorder = "${base}";
             };
             urgent = {
-              childBorder = "${red}";
               background = "${base}";
               text = "${red}";
               indicator = "${overlay0}";
               border = "${red}";
+              childBorder = "${red}";
             };
             placeholder = {
-              childBorder = "${overlay0}";
               background = "${base}";
               text = "${text}";
               indicator = "${overlay0}";
               border = "${overlay0}";
+              childBorder = "${overlay0}";
             };
           };
         bars = [ ];
@@ -116,9 +99,7 @@
           let
             mod = config.xsession.windowManager.i3.config.modifier;
             exec = "exec --no-startup-id";
-            monitor_left = "Virtual-1 ";
-            monitor_center = "Virtual-1 ";
-            refresh_i3status = "killall - SIGUSR1 i3status ";
+            refresh_i3status = "killall - SIGUSR1 i3status";
             ws1 = "1";
             ws2 = "2";
             ws3 = "3";
@@ -129,28 +110,26 @@
             ws8 = "8";
             ws9 = "9";
             ws10 = "10";
+            #monitor_left = "Virtual-1";
+            #monitor_center = "Virtual-1";
           in
           lib.mkOptionDefault {
+            # Raise and lower volume 
+            "XF86AudioRaiseVolume " = "${exec} pactl set-sink-volume @DEFAULT_SINK@ +10% && ${refresh_i3status}";
+            "XF86AudioLowerVolume" = "${exec} pactl set-sink-volume @DEFAULT_SINK@ -10% && ${refresh_i3status}";
+            # Mute audio and mic mute
+            "XF86AudioMute" = "${exec} pactl set-sink-mute @DEFAULT_SINK@ toggle && ${refresh_i3status}";
+            "XF86AudioMicMute" = "${exec} pactl set-source-mute @DEFAULT_SOURCE@ toggle && ${refresh_i3status}";
 
-            # "XF86AudioRaiseVolume " = "${exec} pactl set-sink-volume @DEFAULT_SINK@ +10% && ${refresh_i3status}";
-            # "XF86AudioLowerVolume" = "${exec} pactl set-sink-volume @DEFAULT_SINK@ -10% && ${refresh_i3status}";
-            # "XF86AudioMute" = "${exec} pactl set-sink-mute @DEFAULT_SINK@ toggle && ${refresh_i3status}";
-            # "XF86AudioMicMute" = "${exec} pactl set-source-mute @DEFAULT_SOURCE@ toggle && ${refresh_i3status}";
+            # Setup play, pause, next and previous keys
+            "XF86AudioPlay" = "${exec} playerctl play";
+            "XF86AudioPause" = "${exec} playerctl pause";
+            "XF86AudioNext" = "${exec} playerctl next";
+            "XF86AudioPrev" = "${exec} playerctl previous";
 
-            # "XF86AudioPlay" = "${exec} playerctl play";
-            # "XF86AudioPause" = "${exec} playerctl pause";
-            # "XF86AudioNext" = "${exec} playerctl next";
-            # "XF86AudioPrev" = "${exec} playerctl previous";
-
-            # "XF86MonBrightnessUp" = "${exec} brightnessctl set +5%";
-            # "XF86MonBrightnessDown" = "${exec} brightnessctl set 5%-";
-
-            # Use Mouse+$mod to drag floating windows to their wanted position
-            "floating_modifier" = "${mod}";
-
-            # move tiling windows via drag & drop by left-clicking into the title bar,
-            # or left-clicking anywhere into the window while holding the floating modifier.
-            # tiling_drag modifier titlebar
+            # Set brightness
+            "XF86MonBrightnessUp" = "${exec} brightnessctl set +5%";
+            "XF86MonBrightnessDown" = "${exec} brightnessctl set 5%-";
 
             # change focus
             "${mod}+h" = "focus left";
@@ -164,23 +143,14 @@
             "${mod}+Shift+k" = "move up";
             "${mod}+Shift+l" = "move right";
 
-            "${mod}+z" = "split v";
-            "${mod}+x" = "split h";
-
-            # toggle between all layouts
-            "${mod}+Tab" = "layout toggle all";
+            "${mod}+z" = "split v"; # Move split to vertical
+            "${mod}+x" = "split h"; # Move split to horizontal
+            "${mod}+Tab" = "layout toggle all"; # Toggle between layouts
 
             "${mod}+f" = "fullscreen toggle";
-
-            # toggle tiling / floating
-            "${mod}+Shift+space" = "floating toggle";
-
-            # change focus between tiling / floating windows
-            "${mod}+space" = "focus mode_toggle";
-
-            # focus the parent or child container
-            "${mod}+p" = "focus parent";
-            "${mod}+shift+p" = "focus child";
+            "${mod}+space" = "focus mode_toggle"; # Focus floating window
+            "${mod}+Shift+space" = "floating toggle"; # Toggle floating window
+            "floating_modifier" = "${mod}"; # Use Mouse+$mod to drag floating windows to their wanted position
 
             # switch to workspace
             "${mod}+1" = "workspace number ${ws1}";
@@ -218,56 +188,34 @@
             # "workspace ${ws9}" = "output ${monitor_center}";
             # "workspace ${ws10}" = "output ${monitor_center}";
 
-            # rofi
-            "${mod}+d" = "${exec} rofi -modes 'run' -show drun";
+            # "mode resize" = {
+            #   "h" = "resize shrink width 10 px or 10 ppt";
+            #   "j" = "resize grow height 10 px or 10 ppt";
+            #   "k" = "resize shrink height 10 px or 10 ppt";
+            #   "l" = "resize grow width 10 px or 10 ppt";
+            #
+            #   "Return" = "mode default";
+            #   "Escape" = "mode default";
+            #   "${mod}+r" = "mode default";
+            # };
+            #
+            # "${mod}+r" = "mode resize";
 
-            # lock i3
-            "${mod}+semicolon" = "${exec} i3lock -c 1e1e2e";
-
-            # kill focused window
-            "${mod}+q" = "kill";
-
-            # make the currently focused window a scratchpad
             "${mod}+minus" = "move scratchpad";
-
-            # Show the first scratchpad window
             "${mod}+Shift+minus" = "scratchpad show";
 
-            # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+            "${mod}+q" = "kill";
             "${mod}+Shift+r" = "restart";
-
-            # exit i3 (logs you out of your X session)
             "${mod}+Shift+e" = "${exec} i3-msg exit";
+            "${mod}+semicolon" = "${exec} i3lock -c 1e1e2e";
 
-            # resize window (you can also use the mouse for that)
-            #"mode" = "resize" {
-            # These bindings trigger as soon as you enter the resize mode
-
-            # Pressing left will shrink the window’s width.
-            # Pressing right will grow the window’s width.
-            # Pressing up will shrink the window’s height.
-            # Pressing down will grow the window’s height.
-            # "h" = "resize shrink width 10 px or 10 ppt";
-            # "j" = "resize grow height 10 px or 10 ppt";
-            # "k" = "resize shrink height 10 px or 10 ppt";
-            # "l" = "resize grow width 10 px or 10 ppt";
-            #
-            # back to normal: Enter or Escape or "${mod}+r
-            #   "Return" = "mode 'default'";
-            #   "Escape" = "mode 'default'";
-            #   "${mod}+r" = "mode 'default'";
-            # };
-
-            "${mod}+r" = "mode 'resize'";
-
-            # programs
+            "${mod}+d" = "${exec} rofi -show drun";
             "${mod}+Return" = "${exec} $TERMINAL";
-            "${mod}+w" = "${exec} firefox"; # web browser
-            "${mod}+e" = "${exec} pcmanfm"; # explorer
-            "${mod}+t" = "${exec} alacritty -e nvim"; # text editor
-            "${mod}+s" = "${exec} alacritty -e btm -b"; # system monitor 
+            "${mod}+w" = "${exec} firefox";
+            "${mod}+e" = "${exec} pcmanfm";
+            "${mod}+t" = "${exec} alacritty -e nvim";
+            "${mod}+s" = "${exec} alacritty -e btm -b";
           };
-
         startup = [
           {
             command = "feh --no-fehbg --bg-fill ~/nixos-config/wallpapers/minimal-desert.png ~/nixos-config/wallpapers/minimal-desert.png";
