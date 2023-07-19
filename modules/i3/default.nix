@@ -171,9 +171,7 @@
             "${mod}+Shift+0" = "move container to workspace number ${ws10}";
 
             # assign workspaces to monitors
-            # "workspace ${ws1}" = "output ${monitor_left}";
-            # "workspace ${ws2}" = "output ${monitor_center}";
-            # "workspace ${ws3}" = "output ${monitor_center}";
+            # "workspace ${ws1}" = "output ${monitor_left}"; "workspace ${ws2}" = "output ${monitor_center}"; "workspace ${ws3}" = "output ${monitor_center}";
             # "workspace ${ws4}" = "output ${monitor_center}";
             # "workspace ${ws5}" = "output ${monitor_center}";
             # "workspace ${ws6}" = "output ${monitor_center}";

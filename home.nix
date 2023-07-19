@@ -2,9 +2,11 @@
 
 {
   imports = [
-    ./modules/i3
     ./modules/theme
     ./modules/fonts
+    ./modules/git
+    ./modules/i3
+    ./modules/neovim
     ./modules/fish
     ./modules/alacritty
     ./modules/bottom
@@ -14,12 +16,6 @@
 
   programs = {
     home-manager.enable = true;
-    git = {
-      enable = true;
-      userName = "willswats";
-      userEmail = "williamstuwatson@gmail.com";
-      extraConfig.init.defaultBranch = "main";
-    };
   };
 
   home = {
@@ -28,31 +24,16 @@
     stateVersion = "23.05";
 
     packages = with pkgs; [
-      killall
+      # Essentials
       wget
       zip
       unzip
+      killall
+      xclip
       # Development
       git
       gcc
-      rustup
-      nixpkgs-fmt
-      nodejs_20
       nodePackages.pnpm
-      nodePackages.prettier
-      nodePackages.markdownlint-cli
-      nodePackages.neovim
-      python311
-      python311Packages.pip
-      python311Packages.pynvim
-      fd
-      ripgrep
-      xclip
-      fish
-      alacritty
-      neovim
-      lazygit
-      trash-cli
       # Utilities
       firefox
       pcmanfm
@@ -78,10 +59,5 @@
       zandronum
       prismlauncher
     ];
-  };
-
-  xdg = {
-    enable = true;
-    configFile.nvim.source = ./config/nvim;
   };
 }
