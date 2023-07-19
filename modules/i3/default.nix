@@ -11,6 +11,7 @@
     redshift
     networkmanagerapplet
     lxde.lxsession
+    gcr
   ];
 
   services = {
@@ -28,6 +29,10 @@
   xsession = {
     enable = true;
     scriptPath = ".hm-xsession";
+    profileExtra = ''
+      eval $(${pkgs.gnome3.gnome-keyring}/bin/gnome-keyring-daemon --daemonize --components=ssh,secrets)
+      export SSH_AUTH_SOCK
+    '';
     windowManager.i3 =
       let
         mod = config.xsession.windowManager.i3.config.modifier;
