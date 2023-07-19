@@ -5,7 +5,7 @@ end
 
 configs.setup({
   -- A list of parser names, or "all" (the four listed parsers should always be installed)
-  ensure_installed = { "c", "lua", "vim", "help" },
+  ensure_installed = { "c", "lua", "vim", "vimdoc" },
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
   -- Automatically install missing parsers when entering buffer
