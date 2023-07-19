@@ -223,7 +223,7 @@
             notification = false;
           }
           {
-            command = "killall polybar;polybar -r";
+            command = "killall polybar;polybar";
             always = true;
             notification = false;
           }

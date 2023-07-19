@@ -37,7 +37,7 @@ in
 {
   services.polybar = {
     enable = true;
-    script = "polybar -r";
+    script = "polybar";
 
     settings = {
       "bar/main" = {
