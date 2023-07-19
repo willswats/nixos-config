@@ -4,8 +4,6 @@
   imports = [ ../dunst ../rofi ../polybar ];
 
   home.packages = with pkgs; [
-    i3status
-    i3lock
     feh
     pavucontrol
     playerctl
@@ -47,6 +45,7 @@
         gaps = {
           inner = 10;
         };
+        bars = [ ];
         colors =
           let
             # https://github.com/catppuccin/i3
@@ -94,12 +93,11 @@
               childBorder = "${overlay0}";
             };
           };
-        bars = [ ];
         keybindings =
           let
             mod = config.xsession.windowManager.i3.config.modifier;
             exec = "exec --no-startup-id";
-            refresh_i3status = "killall - SIGUSR1 i3status";
+            refresh_i3status = "${pkgs.killall}/bin/killall - SIGUSR1 ${pkgs.i3status}/bin/i3status";
             ws1 = "1";
             ws2 = "2";
             ws3 = "3";
@@ -115,21 +113,21 @@
           in
           lib.mkOptionDefault {
             # Raise and lower volume 
-            "XF86AudioRaiseVolume " = "${exec} pactl set-sink-volume @DEFAULT_SINK@ +10% && ${refresh_i3status}";
-            "XF86AudioLowerVolume" = "${exec} pactl set-sink-volume @DEFAULT_SINK@ -10% && ${refresh_i3status}";
+            "XF86AudioRaiseVolume " = "${exec} ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ +10% && ${refresh_i3status}";
+            "XF86AudioLowerVolume" = "${exec} ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -10% && ${refresh_i3status}";
             # Mute audio and mic mute
-            "XF86AudioMute" = "${exec} pactl set-sink-mute @DEFAULT_SINK@ toggle && ${refresh_i3status}";
-            "XF86AudioMicMute" = "${exec} pactl set-source-mute @DEFAULT_SOURCE@ toggle && ${refresh_i3status}";
+            "XF86AudioMute" = "${exec} ${pkgs.pulseaudio}/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle && ${refresh_i3status}";
+            "XF86AudioMicMute" = "${exec} ${pkgs.pulseaudio}/bin/pactl set-source-mute @DEFAULT_SOURCE@ toggle && ${refresh_i3status}";
 
             # Setup play, pause, next and previous keys
-            "XF86AudioPlay" = "${exec} playerctl play";
-            "XF86AudioPause" = "${exec} playerctl pause";
-            "XF86AudioNext" = "${exec} playerctl next";
-            "XF86AudioPrev" = "${exec} playerctl previous";
+            "XF86AudioPlay" = "${exec} ${pkgs.playerctl}/bin/playerctl play";
+            "XF86AudioPause" = "${exec} ${pkgs.playerctl}/bin/playerctl pause";
+            "XF86AudioNext" = "${exec} ${pkgs.playerctl}/bin/playerctl next";
+            "XF86AudioPrev" = "${exec} ${pkgs.playerctl}/bin/playerctl previous";
 
             # Set brightness
-            "XF86MonBrightnessUp" = "${exec} brightnessctl set +5%";
-            "XF86MonBrightnessDown" = "${exec} brightnessctl set 5%-";
+            "XF86MonBrightnessUp" = "${exec} ${pkgs.brightnessctl}/bin/brightnessctl set +5%";
+            "XF86MonBrightnessDown" = "${exec} ${pkgs.brightnessctl}/bin/brightnessctl set 5%-";
 
             # change focus
             "${mod}+h" = "focus left";
@@ -142,15 +140,6 @@
             "${mod}+Shift+j" = "move down";
             "${mod}+Shift+k" = "move up";
             "${mod}+Shift+l" = "move right";
-
-            "${mod}+z" = "split v"; # Move split to vertical
-            "${mod}+x" = "split h"; # Move split to horizontal
-            "${mod}+Tab" = "layout toggle all"; # Toggle between layouts
-
-            "${mod}+f" = "fullscreen toggle";
-            "${mod}+space" = "focus mode_toggle"; # Focus floating window
-            "${mod}+Shift+space" = "floating toggle"; # Toggle floating window
-            "floating_modifier" = "${mod}"; # Use Mouse+$mod to drag floating windows to their wanted position
 
             # switch to workspace
             "${mod}+1" = "workspace number ${ws1}";
@@ -198,47 +187,57 @@
             #   "Escape" = "mode default";
             #   "${mod}+r" = "mode default";
             # };
-            #
+
             # "${mod}+r" = "mode resize";
+
+            "${mod}+z" = "split v"; # Move split to vertical
+            "${mod}+x" = "split h"; # Move split to horizontal
+            "${mod}+Tab" = "layout toggle all"; # Toggle between layouts
+
+            "floating_modifier" = "${mod}"; # Use Mouse+$mod to drag floating windows to their wanted position
+
+            "${mod}+f" = "fullscreen toggle";
+            "${mod}+space" = "floating toggle"; # Toggle floating window
+            "${mod}+Shift+space" = "focus mode_toggle"; # Focus floating window
 
             "${mod}+minus" = "move scratchpad";
             "${mod}+Shift+minus" = "scratchpad show";
 
             "${mod}+q" = "kill";
             "${mod}+Shift+r" = "restart";
-            "${mod}+Shift+e" = "${exec} i3-msg exit";
-            "${mod}+semicolon" = "${exec} i3lock -c 1e1e2e";
+            "${mod}+Shift+e" = "${exec} ${pkgs.i3}/bin/i3-msg exit";
+            "${mod}+semicolon" = "${exec} ${pkgs.i3lock}/bin/i3lock -c 1e1e2e";
 
-            "${mod}+d" = "${exec} rofi -show drun";
-            "${mod}+Return" = "${exec} $TERMINAL";
-            "${mod}+w" = "${exec} firefox";
-            "${mod}+e" = "${exec} pcmanfm";
-            "${mod}+t" = "${exec} alacritty -e nvim";
-            "${mod}+s" = "${exec} alacritty -e btm -b";
+            "${mod}+d" = "${exec} ${pkgs.rofi}/bin/rofi -show drun";
+            "${mod}+Return" = "${exec} ${pkgs.alacritty}/bin/alacritty";
+            "${mod}+w" = "${exec} ${pkgs.firefox}/bin/firefox";
+            "${mod}+e" = "${exec} ${pkgs.pcmanfm}/bin/pcmanfm";
+            "${mod}+t" = "${exec} ${pkgs.alacritty}/bin/alacritty -e ${pkgs.neovim}/bin/nvim";
+            "${mod}+s" = "${exec} ${pkgs.alacritty}/bin/alacritty -e ${pkgs.bottom}/bin/btm -b";
           };
         startup = [
           {
-            command = "feh --no-fehbg --bg-fill ~/nixos-config/wallpapers/minimal-desert.png ~/nixos-config/wallpapers/minimal-desert.png";
+            command = "${pkgs.feh}/bin/feh --no-fehbg --bg-fill ~/nixos-config/wallpapers/minimal-desert.png ~/nixos-config/wallpapers/minimal-desert.png";
             always = false;
             notification = false;
           }
           {
-            command = "killall polybar;polybar";
+            command = "systemctl --user restart polybar";
             always = true;
             notification = false;
           }
           {
-            command = "lxpolkit";
+            command = "${pkgs.lxde.lxsession}/bin/lxpolkit";
             always = false;
             notification = false;
           }
           {
-            command = "otd-daemon";
+            command = "${pkgs.opentabletdriver}/bin/otd-daemon";
             always = false;
             notification = false;
           }
           {
-            command = "rclone mount --vfs-cache-mode writes google-drive: ~/Drive";
+            command = "${pkgs.rclone}/bin/rclone mount --vfs-cache-mode writes google-drive: ~/Drive";
             always = false;
             notification = false;
           }
