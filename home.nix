@@ -67,7 +67,6 @@
       virt-manager
       rclone
       rclone-browser
-      gnome.seahorse
       opentabletdriver
       # Entertainment
       steam
