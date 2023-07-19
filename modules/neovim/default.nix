@@ -11,6 +11,7 @@
     python311
     python311Packages.pip
     python311Packages.pynvim
+    gcc # rustup dependency
     rustup # rust-analyzer
     trash-cli # nvim-tree
     # Formatters

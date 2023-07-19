@@ -32,7 +32,6 @@
       xclip
       # Development
       git
-      gcc
       nodePackages.pnpm
       # Utilities
       firefox
