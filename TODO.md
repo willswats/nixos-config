@@ -2,7 +2,6 @@
 
 ## Features
 
-- [ ] Setup gnome-keyring
 - [ ] Setup bluetooth
 - [ ] Set screen timeout / lock (xss-lock?)
 - [ ] Setup support for AppImages (Slippi) and Flatpak

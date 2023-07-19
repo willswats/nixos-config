@@ -4,6 +4,7 @@
   programs.fish = {
     enable = true;
     shellAliases = {
+      github = "ssh-add ~/.ssh/id_ed25519";
       note = "cd Drive/Work/Notebook; nvim";
       code = "cd ~/Code; nvim";
     };
