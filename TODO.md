@@ -2,19 +2,20 @@
 
 ## Features
 
-- [ ] Setup bluetooth
 - [ ] Set screen timeout / lock (xss-lock?)
 - [ ] Setup support for AppImages (Slippi) and Flatpak
 - [ ] Switch to systemd boot (or a way to make disk encryption pass quicker)
 - [ ] Auto create directories
 - [ ] Create a firefox nix config
-- [ ] Move nvim config to nix
+- [ ] Setup bluetooth
 - [ ] Assign i3 workspaces to monitors (currently causing errors when uncommented)
+- [ ] Move nvim config to nix
+- [ ] Move from gnome-keyring
 
 ## Fix
 
+- [ ] Fix nvim mason error
 - [ ] Fix i3 starting on ws10
-- [ ] Fix nvim errors
 - [ ] Fix mullvad gui error
 - [ ] Fix default themes for certain qt apps (Yuzu, PCSX2)
 
