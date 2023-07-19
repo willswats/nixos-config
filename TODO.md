@@ -16,6 +16,7 @@
 
 - [ ] Fix nvim mason error
 - [ ] Fix i3 starting on ws10
+- [ ] Fix polybar can't find i3 - [issue](https://github.com/nix-community/home-manager/issues/213)
 - [ ] Fix mullvad gui error
 - [ ] Fix default themes for certain qt apps (Yuzu, PCSX2)
 
