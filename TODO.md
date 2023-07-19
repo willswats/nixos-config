@@ -12,6 +12,7 @@
 
 ## Fix
 
+- [ ] Fix i3 taking a long time to read config / start
 - [ ] Fix nvim errors
 - [ ] Fix mullvad gui error
 - [ ] Fix default themes for certain qt apps (Yuzu, PCSX2)
