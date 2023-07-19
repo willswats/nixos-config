@@ -3,7 +3,7 @@
 ## Features
 
 - [ ] Setup gnome-keyring
-- [ ] Set screen timeout
+- [ ] Set screen timeout / lock (xss-lock?)
 - [ ] Setup support for AppImages (Slippi) and Flatpak
 - [ ] Switch to systemd boot (or a way to make disk encryption pass quicker)
 - [ ] Auto create directories
