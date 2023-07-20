@@ -4,13 +4,14 @@
 
 ### Features
 
+- [ ] Auto create directories
 - [ ] Create seperate configurations and variables for:
   - [ ] desktop
   - [ ] laptop
   - [ ] virtual
-- [ ] Auto create directories
 - [ ] Switch to systemd boot
-- [ ] Lightdm background
+  - [ ] Theme encryption password
+  - [ ] Faster encryption password
 - [ ] Create a firefox nix config
 
 ### Fix
