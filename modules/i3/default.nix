@@ -156,7 +156,6 @@
             "${mod}+7" = "workspace number ${ws7}";
             "${mod}+8" = "workspace number ${ws8}";
             "${mod}+9" = "workspace number ${ws9}";
-            # currenty causes order to be incorrect https://github.com/nix-community/home-manager/issues/695
             # "${mod}+0" = "workspace number ${ws10}";
 
             # move focused container to workspace
@@ -169,7 +168,6 @@
             "${mod}+Shift+7" = "move container to workspace number ${ws7}";
             "${mod}+Shift+8" = "move container to workspace number ${ws8}";
             "${mod}+Shift+9" = "move container to workspace number ${ws9}";
-            # currenty causes order to be incorrect https://github.com/nix-community/home-manager/issues/695
             # "${mod}+Shift+0" = "move container to workspace number ${ws10}";
 
             # assign workspaces to monitors
