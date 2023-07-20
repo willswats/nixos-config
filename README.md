@@ -7,10 +7,11 @@ sudo nixos-rebuild switch --flake .#will
 ```
 
 ```bash
+mkdir ~/AppImages
 mkdir ~/Drive
-mkdir ~/Applications
-mkdir ~/Emulation
-mkdir ~/Emulation/ROMs
-mkdir ~/Emulation/WADs
-mkdir ~/Code
+mkdir -p ~/Local/Code
+# Only on desktop
+mkdir -p ~/Local/Emulation
+mkdir -p ~/Local/Emulation/ROMs
+mkdir -p ~/Local/Emulation/WADs
 ```
