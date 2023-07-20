@@ -16,9 +16,9 @@
 
 ### Fix
 
+- [ ] Default themes for certain qt apps (Yuzu, PCSX2) (QApplication: invalid style override 'gtk2' passed, ignoring it. Available styles: Windows, Fusion) (Seems to be the same as Qt6 Settings)
 - [ ] Neovim mason error
 - [ ] Mullvad GUI error
-- [ ] Default themes for certain qt apps (Yuzu, PCSX2)
 - [ ] Assigning i3 workspaces to monitors causes errors
 - [ ] Fix bluetooth - issue [issue](https://github.com/NixOS/nixpkgs/issues/170573)
 - [ ] i3 starting on ws10 - [issue](https://github.com/nix-community/home-manager/issues/695)
