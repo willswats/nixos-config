@@ -1,11 +1,5 @@
 # Steam
 
-## flatpak override
-
-```bash
-flatpak --user override com.valvesoftware.Steam --filesystem=/dev/uninput # Fix controllers
-```
-
 ## Steam Settings
 
 ### Notifications
@@ -23,5 +17,3 @@ In-game FPS counter: Top-right
 ### Compatability
 
 Enable Steam Play for all other titles: Enabled
-
-Run other titles with: Proton-GE

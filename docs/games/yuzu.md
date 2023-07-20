@@ -2,8 +2,8 @@
 
 ## Keys
 
-Add `title.keys` and `prod.keys` to `~/.var/app/org.yuzu_emu.yuzu/data/yuzu/keys`.
+Add `title.keys` and `prod.keys` to `~/.local/share/yuzu/keys`.
 
 ## Firmware
 
-Extract the firmware to `~/.var/app/org.yuzu_emu.yuzu/data/yuzu/nand/system/Contents/registered`.
+Extract the firmware to `~/.local/share/yuzu/nand/system/Contents/registered`.

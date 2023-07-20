@@ -4,7 +4,7 @@
 
 ### PS1
 
-Add BIOS files to `~/.var/app/org.libretro.RetroArch/config/retroarch/system`.
+Add BIOS files to `~/.config/retroarch/system`.
 
 ## Download Cores
 

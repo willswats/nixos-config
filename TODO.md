@@ -5,11 +5,11 @@
 ### Features
 
 - [ ] Setup bluetooth
-- [ ] Auto create directories
 - [ ] Create seperate configurations and variables for:
   - [ ] desktop
   - [ ] laptop
   - [ ] virtual
+- [ ] Auto create directories
 - [ ] Switch to systemd boot
 - [ ] Create a firefox nix config
 
@@ -25,7 +25,6 @@
 ### Desktop specific
 
 - [ ] Nvida drivers
-- [ ] Proton-GE
 
 ### VM Specific
 
