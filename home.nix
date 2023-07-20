@@ -36,6 +36,7 @@
       firefox
       pcmanfm
       gnome.file-roller
+      gnome.seahorse
       mpv
       qview
       flameshot
