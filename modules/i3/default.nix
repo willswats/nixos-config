@@ -21,11 +21,9 @@
       tray = true;
       provider = "geoclue2";
     };
-    screen-locker = {
+    betterlockscreen = {
       enable = true;
       inactiveInterval = 60; # minutes (maximum 1 hour)
-      lockCmd = "${pkgs.i3lock}/bin/i3lock -c 1e1e2e";
-      xautolock.enable = true;
     };
   };
 
@@ -189,7 +187,7 @@
             "${mod}+q" = "kill";
             "${mod}+Shift+r" = "restart";
             "${mod}+Shift+e" = "${exec} ${pkgs.i3}/bin/i3-msg exit";
-            "${mod}+semicolon" = "${exec} ${pkgs.i3lock}/bin/i3lock -c 1e1e2e";
+            "${mod}+semicolon" = "${exec} betterlockscreen --lock";
 
             "${mod}+d" = "${exec} ${pkgs.rofi}/bin/rofi -show drun";
             "${mod}+Return" = "${exec} ${pkgs.alacritty}/bin/alacritty";
