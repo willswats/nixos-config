@@ -47,7 +47,7 @@
         ws7 = "7";
         ws8 = "8";
         ws9 = "9";
-        ws10 = "10";
+        # ws10 = "10"; 
 
         # monitor_left = "Virtual-1";
         # monitor_center = "Virtual-1";
@@ -156,7 +156,8 @@
             "${mod}+7" = "workspace number ${ws7}";
             "${mod}+8" = "workspace number ${ws8}";
             "${mod}+9" = "workspace number ${ws9}";
-            "${mod}+0" = "workspace number ${ws10}";
+            # currenty causes order to be incorrect https://github.com/nix-community/home-manager/issues/695
+            # "${mod}+0" = "workspace number ${ws10}";
 
             # move focused container to workspace
             "${mod}+Shift+1" = "move container to workspace number ${ws1}";
@@ -168,7 +169,8 @@
             "${mod}+Shift+7" = "move container to workspace number ${ws7}";
             "${mod}+Shift+8" = "move container to workspace number ${ws8}";
             "${mod}+Shift+9" = "move container to workspace number ${ws9}";
-            "${mod}+Shift+0" = "move container to workspace number ${ws10}";
+            # currenty causes order to be incorrect https://github.com/nix-community/home-manager/issues/695
+            # "${mod}+Shift+0" = "move container to workspace number ${ws10}";
 
             # assign workspaces to monitors
             # "workspace ${ws1}" = "output ${monitor_left}"; "workspace ${ws2}" = "output ${monitor_center}"; "workspace ${ws3}" = "output ${monitor_center}";
