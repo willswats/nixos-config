@@ -1,5 +1,11 @@
 # Steam
 
+## flatpak override
+
+```bash
+flatpak --user override com.valvesoftware.Steam --filesystem=/dev/uninput # Fix controllers
+```
+
 ## Steam Settings
 
 ### Notifications

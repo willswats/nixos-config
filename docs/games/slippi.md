@@ -1,5 +1,5 @@
 # Slippi
 
-Download and move the following to `~/Applications`:
+Download and move the following to `~/AppImages`:
 
 - [Slippi](https://slippi.gg)
