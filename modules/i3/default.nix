@@ -21,6 +21,12 @@
       tray = true;
       provider = "geoclue2";
     };
+    screen-locker = {
+      enable = true;
+      inactiveInterval = 60; # minutes (maximum 1 hour)
+      lockCmd = "${pkgs.i3lock}/bin/i3lock -c 1e1e2e";
+      xautolock.enable = true;
+    };
   };
 
   xsession = {
