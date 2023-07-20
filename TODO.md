@@ -9,16 +9,14 @@
 - [ ] Create a firefox nix config
 - [ ] Setup bluetooth
 - [ ] Assign i3 workspaces to monitors (currently causing errors when uncommented)
-- [ ] Move nvim config to nix
-- [ ] Move from gnome-keyring
 
 ## Fix
 
 - [ ] Fix nvim mason error
-- [ ] Fix i3 starting on ws10
-- [ ] Fix polybar can't find i3 - [issue](https://github.com/nix-community/home-manager/issues/213)
 - [ ] Fix mullvad gui error
 - [ ] Fix default themes for certain qt apps (Yuzu, PCSX2)
+- [ ] Fix i3 starting on ws10 - [issue](https://github.com/nix-community/home-manager/issues/695)
+- [ ] Fix polybar can't find i3 - [issue](https://github.com/nix-community/home-manager/issues/213)
 
 ## Cleanup
 
@@ -32,17 +30,12 @@
   - [ ] desktop
   - [ ] laptop
   - [ ] virtualmachine
-- [ ] Decide what to do with steam.md, retroarch.md, slippi.md and yuzu.md
-- [ ] Create a flake.nix for each project and remove the packages from the base system
+- [ ] Decide what to do with steam.md, retroarch.md, slippi.md, yuzu.md, ssh.md
 
 ## Desktop specific
 
 - [ ] Nvida drivers
 - [ ] Proton-GE
-
-## Laptop specific
-
-- [ ] TLP
 
 ## VM Specific
 
