@@ -187,7 +187,7 @@
             "${mod}+q" = "kill";
             "${mod}+Shift+r" = "restart";
             "${mod}+Shift+e" = "${exec} ${pkgs.i3}/bin/i3-msg exit";
-            "${mod}+semicolon" = "${exec} betterlockscreen --lock";
+            "${mod}+semicolon" = "${exec} betterlockscreen -l";
 
             "${mod}+d" = "${exec} ${pkgs.rofi}/bin/rofi -show drun";
             "${mod}+Return" = "${exec} ${pkgs.alacritty}/bin/alacritty";
@@ -215,8 +215,13 @@
           };
           startup = [
             {
-              command = "${pkgs.feh}/bin/feh --no-fehbg --bg-fill ~/nixos-config/wallpapers/minimal-desert.png ~/nixos-config/wallpapers/minimal-desert.png";
-              always = false;
+              command = "betterlockscreen -u ~/nixos-config/wallpapers/minimal-desert.png;";
+              always = true;
+              notification = false;
+            }
+            {
+              command = "betterlockscreen -w;";
+              always = true;
               notification = false;
             }
             {
