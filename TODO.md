@@ -4,7 +4,6 @@
 
 ### Features
 
-- [ ] Setup support for AppImages (Slippi) and Flatpak
 - [ ] Setup xss-lock
 - [ ] Set screen timeout
 - [ ] Setup bluetooth
@@ -19,11 +18,11 @@
 ### Fix
 
 - [ ] Neovim mason error
-- [ ] Default themes for certain qt apps (Yuzu, PCSX2)
 - [ ] Mullvad GUI error
-- [ ] Assign i3 workspaces to monitors (currently causing errors when uncommented)
+- [ ] Default themes for certain qt apps (Yuzu, PCSX2)
+- [ ] Assigning i3 workspaces to monitors causes errors
 - [ ] i3 starting on ws10 - [issue](https://github.com/nix-community/home-manager/issues/695)
-- [ ] polybar can't find i3 - [issue](https://github.com/nix-community/home-manager/issues/213)
+- [ ] polybar can't find i3 (doesn't show resize mode) - [issue](https://github.com/nix-community/home-manager/issues/213)
 
 ### Desktop specific
 
@@ -45,4 +44,4 @@
 
 - [ ] Move lsp keymaps into on_attach
 - [ ] Add session plugin
-- [ ]Setup dap
+- [ ] Setup dap
