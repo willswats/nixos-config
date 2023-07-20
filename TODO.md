@@ -2,35 +2,26 @@
 
 ## Features
 
-- [ ] Set screen timeout / lock (xss-lock?)
 - [ ] Setup support for AppImages (Slippi) and Flatpak
-- [ ] Switch to systemd boot (or a way to make disk encryption pass quicker)
-- [ ] Auto create directories
-- [ ] Create a firefox nix config
+- [ ] Setup xss-lock
+- [ ] Set screen timeout
 - [ ] Setup bluetooth
-- [ ] Assign i3 workspaces to monitors (currently causing errors when uncommented)
+- [ ] Auto create directories
+- [ ] Create seperate configurations and variables for:
+  - [ ] desktop
+  - [ ] laptop
+  - [ ] virtual
+- [ ] Create a firefox nix config
+- [ ] Switch to systemd boot
 
 ## Fix
 
-- [ ] Fix nvim mason error
-- [ ] Fix mullvad gui error
-- [ ] Fix default themes for certain qt apps (Yuzu, PCSX2)
-- [ ] Fix i3 starting on ws10 - [issue](https://github.com/nix-community/home-manager/issues/695)
-- [ ] Fix polybar can't find i3 - [issue](https://github.com/nix-community/home-manager/issues/213)
-
-## Cleanup
-
-- [ ] Set variables in config:
-  - [ ] hostName
-  - [ ] username
-  - [ ] nixos-config name
-  - [ ] nixos-config location
-- [ ] Remove unneeded nvim plugins (Mason?)
-- [ ] Create hosts:
-  - [ ] desktop
-  - [ ] laptop
-  - [ ] virtualmachine
-- [ ] Decide what to do with steam.md, retroarch.md, slippi.md, yuzu.md, ssh.md
+- [ ] Neovim mason error
+- [ ] Default themes for certain qt apps (Yuzu, PCSX2)
+- [ ] Mullvad GUI error
+- [ ] Assign i3 workspaces to monitors (currently causing errors when uncommented)
+- [ ] i3 starting on ws10 - [issue](https://github.com/nix-community/home-manager/issues/695)
+- [ ] polybar can't find i3 - [issue](https://github.com/nix-community/home-manager/issues/213)
 
 ## Desktop specific
 
