@@ -4,8 +4,6 @@
 
 ### Features
 
-- [ ] Setup xss-lock
-- [ ] Set screen timeout
 - [ ] Setup bluetooth
 - [ ] Auto create directories
 - [ ] Create seperate configurations and variables for:
