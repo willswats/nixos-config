@@ -114,6 +114,7 @@
     # Explicit PulseAudio support in applications
     pulseaudio = true;
   };
+
   environment = {
     variables = {
       TERMINAL = "alacritty";

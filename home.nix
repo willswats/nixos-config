@@ -14,9 +14,7 @@
     ./modules/mullvad-vpn
   ];
 
-  programs = {
-    home-manager.enable = true;
-  };
+  programs.home-manager.enable = true;
 
   home = {
     username = "will";
@@ -30,6 +28,7 @@
       unzip
       killall
       xclip
+      appimage-run
       # Development
       git
       nodePackages.pnpm

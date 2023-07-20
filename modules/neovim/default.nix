@@ -3,21 +3,19 @@
 {
   home.packages = with pkgs; [
     neovim
-    # Dependencies
     fd
     ripgrep
+    gcc
+    rustup
     nodejs_20
-    nodePackages.neovim
     python311
     python311Packages.pip
+    nodePackages.neovim
     python311Packages.pynvim
-    gcc # rustup dependency
-    rustup # rust-analyzer
-    trash-cli # nvim-tree
-    # Formatters
     nodePackages.prettier
     nodePackages.markdownlint-cli
     nixpkgs-fmt
+    trash-cli
   ];
 
   xdg.configFile.nvim.source = ./nvim;
