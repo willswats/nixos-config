@@ -10,8 +10,8 @@
   - [ ] desktop
   - [ ] laptop
   - [ ] virtual
-- [ ] Create a firefox nix config
 - [ ] Switch to systemd boot
+- [ ] Create a firefox nix config
 
 ### Fix
 
