@@ -4,23 +4,20 @@
 
 ### Features
 
+- [ ] Auto create directories
 - [ ] Create firefox nix config
-- [ ] Switch to systemd boot
-  - [ ] Theme encryption password
-  - [ ] Faster encryption password
 - [ ] Create seperate configurations and variables for:
   - [ ] desktop
   - [ ] laptop
   - [ ] virtual
+- [ ] Switch to systemd boot
 
 ### Fix
 
-- [ ] Neovim mason error
-- [ ] Mullvad GUI error
 - [ ] Assigning i3 workspaces to monitors causes errors
-- [ ] Fix bluetooth - issue [issue](https://github.com/NixOS/nixpkgs/issues/170573)
 - [ ] i3 starting on ws10 - [issue](https://github.com/nix-community/home-manager/issues/695)
 - [ ] polybar can't find i3 (doesn't show resize mode) - [issue](https://github.com/nix-community/home-manager/issues/213)
+- [ ] Fix bluetooth - issue [issue](https://github.com/NixOS/nixpkgs/issues/170573)
 
 ### Desktop specific
 
@@ -37,6 +34,7 @@
 - [ ] Move from gnome-keyring
 - [ ] Move nvim config to home manager
 - [ ] Fix Catppuccin black borders in lightdm
+- [ ] Mullvad GUI error - Inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
 
 ### Neovim
 
