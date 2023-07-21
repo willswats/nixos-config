@@ -5,8 +5,7 @@
 
 {
   imports =
-    [
-      (modulesPath + "/profiles/qemu-guest.nix")
+    [ (modulesPath + "/profiles/qemu-guest.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "ahci" "xhci_pci" "virtio_pci" "sr_mod" "virtio_blk" ];
@@ -15,12 +14,9 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    {
-      device = "/dev/disk/by-uuid/082898bf-f63e-41a8-9157-459ab8d89a80";
+    { device = "/dev/disk/by-uuid/dd91c2c5-2bc4-4a85-81c4-1630c3543933";
       fsType = "ext4";
     };
-
-  boot.initrd.luks.devices."luks-2cc37e3f-d240-45a0-8a2b-b511cc7a1f1e".device = "/dev/disk/by-uuid/2cc37e3f-d240-45a0-8a2b-b511cc7a1f1e";
 
   swapDevices = [ ];
 
