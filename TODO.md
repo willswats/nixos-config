@@ -4,17 +4,16 @@
 
 ### Features
 
+- [ ] Switch to systemd boot
+  - [ ] Theme encryption password
+  - [ ] Faster encryption password
 - [ ] Create seperate configurations and variables for:
   - [ ] desktop
   - [ ] laptop
   - [ ] virtual
-- [ ] Switch to systemd boot
-  - [ ] Theme encryption password
-  - [ ] Faster encryption password
 
 ### Fix
 
-- [ ] Catppuccin black borders in lightdm
 - [ ] Neovim mason error
 - [ ] Mullvad GUI error
 - [ ] Assigning i3 workspaces to monitors causes errors
@@ -36,6 +35,7 @@
 
 - [ ] Move from gnome-keyring
 - [ ] Move nvim config to home manager
+- [ ] Fix Catppuccin black borders in lightdm
 
 ### Neovim
 
