@@ -42,4 +42,3 @@
 - [ ] Move lsp keymaps into on_attach
 - [ ] Add session plugin
 - [ ] Setup dap
-- [ ] Remove plugins (mason?)
