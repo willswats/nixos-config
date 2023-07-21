@@ -4,6 +4,7 @@
 
 ### Features
 
+- [ ] Create firefox nix config
 - [ ] Switch to systemd boot
   - [ ] Theme encryption password
   - [ ] Faster encryption password
