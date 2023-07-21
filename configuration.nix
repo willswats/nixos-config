@@ -15,6 +15,14 @@
       enableCryptodisk = true;
     };
 
+    plymouth = {
+      enable = true;
+      theme = "catppuccin-mocha";
+      themePackages = [
+        (pkgs.catppuccin-plymouth.override { variant = "mocha"; })
+      ];
+    };
+
     # initrd = {
     # Setup keyfile
     #  secrets = {
