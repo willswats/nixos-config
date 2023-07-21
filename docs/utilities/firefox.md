@@ -24,7 +24,6 @@ Remove all search engines except for DuckDuckGo.
    - Import bookmarks
    - Save to Pocket
    - Firefox View
-   - Firefox account
 4. Sign into Firefox account.
 
 ## Extension Settings
