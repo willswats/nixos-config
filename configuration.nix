@@ -25,7 +25,7 @@
   };
 
   networking = {
-    hostName = "will-virtual";
+    hostName = "will-desktop";
     networkmanager.enable = true;
     wireguard.enable = true;
   };
