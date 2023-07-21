@@ -3,7 +3,7 @@
 ```bash
 mkdir ~/AppImages
 mkdir ~/Drive
-mkdir -p ~/Code
+mkdir ~/Code
 # Only on desktop
 mkdir -p ~/Emulation
 mkdir -p ~/Emulation/ROMs

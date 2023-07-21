@@ -21,7 +21,13 @@ Run this command and input the output into the `Key` input on GitHub:
 cat ~/.ssh/id_ed25519.pub
 ```
 
-## Connecting to GitHub
+## Add the key
+
+```bash
+ssh-add ~/.ssh/id_ed25519
+```
+
+## Connect to GitHub
 
 ```bash
 ssh git@github.com -v
