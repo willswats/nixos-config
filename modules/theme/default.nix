@@ -35,6 +35,7 @@
         flavor = "mocha";
       };
     };
+    # Remove black borders https://github.com/catppuccin/gtk/issues/6#issuecomment-1443573299
     gtk3.extraCss = ''
       menu,
       .csd .menu,
