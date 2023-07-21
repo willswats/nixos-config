@@ -4,6 +4,7 @@
 
 ### Features
 
+- [ ] Install rust without need for "rustup default stable"
 - [ ] Auto create directories
 - [ ] Create firefox nix config
 - [ ] Create seperate configurations and variables for:
