@@ -4,7 +4,7 @@
 
 ### Features
 
-- [ ] Install rust without need for "rustup default stable"
+- [ ] Install rust without need for "rustup default stable" (alternatively remove mason and install lsps with nix) (nil_ls fails to install unless command is run)
 - [ ] Auto create directories
 - [ ] Create firefox nix config
 - [ ] Create seperate configurations and variables for:
