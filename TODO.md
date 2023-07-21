@@ -4,14 +4,13 @@
 
 ### Features
 
-- [ ] Auto create directories
-- [ ] Switch to systemd boot
-  - [ ] Theme encryption password
-  - [ ] Faster encryption password
 - [ ] Create seperate configurations and variables for:
   - [ ] desktop
   - [ ] laptop
   - [ ] virtual
+- [ ] Switch to systemd boot
+  - [ ] Theme encryption password
+  - [ ] Faster encryption password
 
 ### Fix
 
