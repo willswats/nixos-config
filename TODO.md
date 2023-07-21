@@ -14,7 +14,7 @@
 
 ### Fix
 
-- [ ] Default themes for certain qt apps (Yuzu, PCSX2) (QApplication: invalid style override 'gtk2' passed, ignoring it. Available styles: Windows, Fusion) (Seems to be the same as Qt6 Settings)
+- [ ] Catppuccin black borders in lightdm
 - [ ] Neovim mason error
 - [ ] Mullvad GUI error
 - [ ] Assigning i3 workspaces to monitors causes errors
