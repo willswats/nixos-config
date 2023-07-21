@@ -215,7 +215,7 @@
           };
           startup = [
             {
-              command = "betterlockscreen -u ~/nixos-config/wallpapers/minimal-desert.png;";
+              command = "betterlockscreen -u ~/Code/nixos-config/wallpapers/minimal-desert.png;";
               always = true;
               notification = false;
             }
