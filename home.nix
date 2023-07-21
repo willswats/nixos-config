@@ -4,6 +4,7 @@
   imports = [
     ./modules/theme
     ./modules/fonts
+    ./modules/bookmarks
     ./modules/git
     ./modules/i3
     ./modules/neovim
