@@ -148,7 +148,7 @@
     variables = {
       TERMINAL = "alacritty";
       EDITOR = "nvim";
-      QT_QPA_PLATFORMTHEME = "qt5ct";
+      QT_QPA_PLATFORMTHEME = "qt6ct";
     };
     # Add shells to /etc/shells
     shells = with pkgs; [ fish ];

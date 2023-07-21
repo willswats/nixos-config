@@ -41,19 +41,6 @@ Remove all search engines except for DuckDuckGo.
 
 - Preferences and Functionality: Enabled
 
-### Tridactyl
-
-Keybindings:
-
-```text
-bind / fillcmdline find
-bind ? fillcmdline find --reverse
-bind n findnext --search-from-view
-bind N findnext --search-from-view --reverse
-bind <Space>h nohlsearch
-bind I mode ignore
-```
-
 ### MAL-Sync
 
 - Notifications (Anime): Disabled
