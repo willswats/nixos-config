@@ -30,10 +30,18 @@
         flavor = "mocha";
       };
     };
+    gtk3.extraCss = ''
+      decoration, window, window.background, window.titlebar, * {
+      border-radius: 0px;
+      }
+    '';
   };
 
   qt = {
     enable = true;
-    platformTheme = "qtct";
+    platformTheme = "gtk";
+    style = {
+      name = "gtk2";
+    };
   };
 }
