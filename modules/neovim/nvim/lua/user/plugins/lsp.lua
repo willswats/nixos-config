@@ -34,7 +34,7 @@ mason_lspconfig.setup({
     "eslint",
     "lua_ls",
     "rust_analyzer",
-    "nil",
+    "nil_ls",
   },
 })
 
