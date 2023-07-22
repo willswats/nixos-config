@@ -6,6 +6,7 @@
     ./modules/fonts
     ./modules/bookmarks
     ./modules/git
+    ./modules/firefox
     ./modules/i3
     ./modules/neovim
     ./modules/fish
@@ -35,7 +36,6 @@
       git
       nodePackages.pnpm
       # Utilities
-      firefox
       pcmanfm
       gnome.file-roller
       gnome.seahorse
