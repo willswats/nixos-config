@@ -56,7 +56,7 @@
   };
 
   services = {
-    gvfs.enable = true;
+    gvfs.enable = true; # Fix wastebasket restore (GVfs is GNOME's userspace virtual filesystem)
     blueman.enable = true;
     mullvad-vpn.enable = true;
     geoclue2.enable = true;
@@ -116,8 +116,6 @@
         };
         defaultSession = "none+i3";
       };
-
-
 
       windowManager.i3 = {
         enable = true;
