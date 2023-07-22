@@ -15,6 +15,7 @@
 
 ### Fix
 
+- [ ] Lock screen is set to 10 minutes, not one hour
 - [ ] Can't move floating windows with i3 floating_modifier
 - [ ] Assigning i3 workspaces to monitors causes errors
 - [ ] i3 starting on ws10 - [issue](https://github.com/nix-community/home-manager/issues/695)
