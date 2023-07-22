@@ -39,6 +39,8 @@
         mod = config.xsession.windowManager.i3.config.modifier;
         exec = "exec --no-startup-id";
         refresh_i3status = "${pkgs.killall}/bin/killall - SIGUSR1 ${pkgs.i3status}/bin/i3status";
+
+        directories = "~/AppImages ~/Drive ~/Code ~/Emulation/ROMs ~/Emulation/WADs";
         image = "~/Code/nixos-config/wallpapers/minimal-desert.png";
 
         ws1 = "1";
@@ -255,6 +257,11 @@
             }
             {
               command = "${rclone} mount --vfs-cache-mode writes google-drive: ~/Drive";
+              always = false;
+              notification = false;
+            }
+            {
+              command = "mkdir -p ${directories}";
               always = false;
               notification = false;
             }

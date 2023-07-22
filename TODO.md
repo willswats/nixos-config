@@ -4,7 +4,6 @@
 
 ### Features
 
-- [ ] Auto create directories
 - [ ] Create seperate configurations and variables for:
   - [ ] desktop
   - [ ] laptop
