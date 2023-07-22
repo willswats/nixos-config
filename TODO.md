@@ -24,7 +24,6 @@
 
 ### Firefox
 
-- [ ] Add directories to bookmarks
 - [ ] Install extensions from NUR
 
 ### i3
