@@ -10,6 +10,7 @@
   - [ ] desktop
   - [ ] laptop
   - [ ] virtual
+- [ ] Setup swap
 - [ ] Switch to systemd boot
 
 ### Fix
