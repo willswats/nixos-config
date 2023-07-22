@@ -39,6 +39,7 @@
         mod = config.xsession.windowManager.i3.config.modifier;
         exec = "exec --no-startup-id";
         refresh_i3status = "${pkgs.killall}/bin/killall - SIGUSR1 ${pkgs.i3status}/bin/i3status";
+        image = "~/Code/nixos-config/wallpapers/minimal-desert.png";
 
         ws1 = "1";
         ws2 = "2";
@@ -50,6 +51,20 @@
         ws8 = "8";
         ws9 = "9";
         ws10 = "10";
+
+        rofi = "${pkgs.rofi}/bin/rofi";
+        lockscreen = "${pkgs.betterlockscreen}/bin/betterlockscreen";
+        terminal = "${pkgs.alacritty}/bin/alacritty";
+        editor = "${pkgs.neovim}/bin/nvim";
+        web_browser = "${pkgs.firefox}/bin/firefox";
+        file_explorer = "${pkgs.pcmanfm}/bin/pcmanfm";
+        system_monitor = "${pkgs.bottom}/bin/btm";
+        pactl = "${pkgs.pulseaudio}/bin/pactl";
+        playerctl = "${pkgs.playerctl}/bin/playerctl";
+        brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
+        lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
+        otd-daemon = "${pkgs.opentabletdriver}/bin/otd-daemon";
+        rclone = "${pkgs.rclone}/bin/rclone";
 
         # https://github.com/catppuccin/i3
         mauve = "#cba6f7";
@@ -116,21 +131,21 @@
           };
           keybindings = lib.mkOptionDefault {
             # Raise and lower volume 
-            "XF86AudioRaiseVolume " = "${exec} ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ +10% && ${refresh_i3status}";
-            "XF86AudioLowerVolume" = "${exec} ${pkgs.pulseaudio}/bin/pactl set-sink-volume @DEFAULT_SINK@ -10% && ${refresh_i3status}";
+            "XF86AudioRaiseVolume " = "${exec} ${pactl} set-sink-volume @DEFAULT_SINK@ +10% && ${refresh_i3status}";
+            "XF86AudioLowerVolume" = "${exec} ${pactl} set-sink-volume @DEFAULT_SINK@ -10% && ${refresh_i3status}";
             # Mute audio and mic mute
-            "XF86AudioMute" = "${exec} ${pkgs.pulseaudio}/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle && ${refresh_i3status}";
-            "XF86AudioMicMute" = "${exec} ${pkgs.pulseaudio}/bin/pactl set-source-mute @DEFAULT_SOURCE@ toggle && ${refresh_i3status}";
+            "XF86AudioMute" = "${exec} ${pactl} set-sink-mute @DEFAULT_SINK@ toggle && ${refresh_i3status}";
+            "XF86AudioMicMute" = "${exec} ${pactl} set-source-mute @DEFAULT_SOURCE@ toggle && ${refresh_i3status}";
 
             # Setup play, pause, next and previous keys
-            "XF86AudioPlay" = "${exec} ${pkgs.playerctl}/bin/playerctl play";
-            "XF86AudioPause" = "${exec} ${pkgs.playerctl}/bin/playerctl pause";
-            "XF86AudioNext" = "${exec} ${pkgs.playerctl}/bin/playerctl next";
-            "XF86AudioPrev" = "${exec} ${pkgs.playerctl}/bin/playerctl previous";
+            "XF86AudioPlay" = "${exec} ${playerctl} play";
+            "XF86AudioPause" = "${exec} ${playerctl} pause";
+            "XF86AudioNext" = "${exec} ${playerctl} next";
+            "XF86AudioPrev" = "${exec} ${playerctl} previous";
 
             # Set brightness
-            "XF86MonBrightnessUp" = "${exec} ${pkgs.brightnessctl}/bin/brightnessctl set +5%";
-            "XF86MonBrightnessDown" = "${exec} ${pkgs.brightnessctl}/bin/brightnessctl set 5%-";
+            "XF86MonBrightnessUp" = "${exec} ${brightnessctl} set +5%";
+            "XF86MonBrightnessDown" = "${exec} ${brightnessctl} set 5%-";
 
             # change focus
             "${mod}+h" = "focus left";
@@ -185,15 +200,15 @@
 
             "${mod}+q" = "kill";
             "${mod}+Shift+r" = "restart";
-            "${mod}+Shift+e" = "${exec} ${pkgs.i3}/bin/i3-msg exit";
-            "${mod}+semicolon" = "${exec} betterlockscreen -l";
+            "${mod}+Shift+e" = "${exec} i3-msg exit";
+            "${mod}+semicolon" = "${exec} ${lockscreen} -l";
 
-            "${mod}+d" = "${exec} ${pkgs.rofi}/bin/rofi -show drun";
-            "${mod}+Return" = "${exec} ${pkgs.alacritty}/bin/alacritty";
-            "${mod}+w" = "${exec} ${pkgs.firefox}/bin/firefox";
-            "${mod}+e" = "${exec} ${pkgs.pcmanfm}/bin/pcmanfm";
-            "${mod}+t" = "${exec} ${pkgs.alacritty}/bin/alacritty -e ${pkgs.neovim}/bin/nvim";
-            "${mod}+s" = "${exec} ${pkgs.alacritty}/bin/alacritty -e ${pkgs.bottom}/bin/btm -b";
+            "${mod}+d" = "${exec} ${rofi} -show drun";
+            "${mod}+Return" = "${exec} ${terminal}";
+            "${mod}+w" = "${exec} ${web_browser}";
+            "${mod}+e" = "${exec} ${file_explorer}";
+            "${mod}+t" = "${exec} ${terminal} -e ${editor}";
+            "${mod}+s" = "${exec} ${terminal} -e ${system_monitor} -b";
           };
           modes = {
             resize = {
@@ -214,12 +229,12 @@
           };
           startup = [
             {
-              command = "betterlockscreen -u ~/Code/nixos-config/wallpapers/minimal-desert.png;";
+              command = "${lockscreen} -u ${image}";
               always = false;
               notification = false;
             }
             {
-              command = "betterlockscreen -w;";
+              command = "${lockscreen} -w";
               always = false;
               notification = false;
             }
@@ -229,17 +244,17 @@
               notification = false;
             }
             {
-              command = "${pkgs.lxde.lxsession}/bin/lxpolkit";
+              command = "${lxpolkit}";
               always = false;
               notification = false;
             }
             {
-              command = "${pkgs.opentabletdriver}/bin/otd-daemon";
+              command = "${otd-daemon}";
               always = false;
               notification = false;
             }
             {
-              command = "${pkgs.rclone}/bin/rclone mount --vfs-cache-mode writes google-drive: ~/Drive";
+              command = "${rclone} mount --vfs-cache-mode writes google-drive: ~/Drive";
               always = false;
               notification = false;
             }
