@@ -4,7 +4,6 @@
 
 ### Features
 
-- [ ] Auto create directories
 - [ ] Create firefox nix config
 - [ ] Create seperate configurations and variables for:
   - [ ] desktop
@@ -33,6 +32,7 @@
 
 ### Home Manager
 
+- [ ] Auto create directories without creating a file
 - [ ] Move from gnome-keyring
 - [ ] Move nvim config to home manager
 - [ ] Fix Catppuccin black borders in lightdm
