@@ -12,6 +12,7 @@
     ./modules/alacritty
     ./modules/bottom
     ./modules/lazygit
+    ./modules/rustup
     ./modules/mullvad-vpn
   ];
 
