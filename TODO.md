@@ -10,7 +10,9 @@
 - [ ] Add variables:
   - [ ] hostname
   - [ ] directoriesToCreate
-- [ ] Setup swap
+- [ ] Setup swap:
+  - [ ] desktop (24gb)
+  - [ ] laptop (48gb)
 - [ ] Switch to systemd boot
 
 ### Desktop specific
