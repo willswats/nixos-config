@@ -7,6 +7,9 @@
 - [ ] Add hardware-configuration.nix:
   - [ ] desktop
   - [ ] laptop
+- [ ] Add variables:
+  - [ ] hostname
+  - [ ] directoriesToCreate
 - [ ] Setup swap
 - [ ] Switch to systemd boot
 
