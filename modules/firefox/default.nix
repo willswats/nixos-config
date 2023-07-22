@@ -22,128 +22,57 @@
         };
       };
       extraConfig = ''
-        user_pref("accessibility.typeaheadfind.flashBar", 0);
-        user_pref("app.normandy.first_run", false);
-        user_pref("app.normandy.migrationsApplied", 12);
-        user_pref("app.shield.optoutstudies.enabled", false);
-        user_pref("browser.bookmarks.editDialog.confirmationHintShowCount", 3);
-        user_pref("browser.bookmarks.restore_default_bookmarks", false);
-        user_pref("browser.bookmarks.showMobileBookmarks", false);
-        user_pref("browser.contentblocking.category", "strict");
-        user_pref("browser.download.panel.shown", true);
-        user_pref("browser.download.viewableInternally.typeWasRegistered.avif", true);
-        user_pref("browser.download.viewableInternally.typeWasRegistered.webp", true);
-        user_pref("browser.eme.ui.firstContentShown", true);
-        user_pref("browser.engagement.ctrlTab.has-used", true);
-        user_pref("browser.engagement.downloads-button.has-used", true);
-        user_pref("browser.laterrun.bookkeeping.sessionCount", 51);
-        user_pref("browser.newtab.extensionControlled", true);
-        user_pref("browser.newtab.privateAllowed", false);
-        user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
-        user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
-        user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.havePinned", "amazon,google");
-        user_pref("browser.newtabpage.activity-stream.showSearch", false);
-        user_pref("browser.newtabpage.activity-stream.showSponsored", false);
-        user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
-        user_pref("browser.newtabpage.blocked", "{\"R8wYCmScoyV0xHr6e1KJng==\":1,\"c/GpBaAESHY/bXEx/uourw==\":1,\"Z3sawLcfnygbilXeU5fdHg==\":1,\"6qTsCBZaEVXWrWxdXn5pmQ==\":1,\"+CUypgsitL9L0VmPZ0t22g==\":1,\"c9lsKElwtRd9PbcOXhz3dA==\":1,\"otFC2oJcatFNwWRBjMU7YA==\":1,\"26UbzFJ7qT9/4DhodHKA1Q==\":1,\"4gPpjkxgZzXPVtuEoAL9Ig==\":1,\"gLv0ja2RYVgxKdp0I5qwvA==\":1,\"0GuysDfjFIJXq6QVZ2C5YA==\":1,\"FX7dGM0Jj2q2tTyEv9oaUQ==\":1,\"BRX66S9KVyZQ1z3AIk0A7w==\":1}");
-        user_pref("browser.newtabpage.pinned", "[{\"url\":\"https://google.com\",\"label\":\"@google\",\"searchTopSite\":true}]");
-        user_pref("browser.newtabpage.storageVersion", 1);
-        user_pref("browser.pageActions.persistedActions", "{\"ids\":[\"bookmark\",\"_036a55b4-5e72-4d05-a06c-cba2dfcc134a_\"],\"idsInUrlbar\":[\"_036a55b4-5e72-4d05-a06c-cba2dfcc134a_\",\"bookmark\"],\"idsInUrlbarPreProton\":[],\"version\":1}");
-        user_pref("browser.pagethumbnails.storage_version", 3);
+        user_pref("app.shield.optoutstudies.enabled", false); # Opt out of studies
+        user_pref("browser.bookmarks.restore_default_bookmarks", false); # Don't restore default bookmarks
+        user_pref("browser.bookmarks.showMobileBookmarks", false); # Don't show mobile bookmarks
+        user_pref("browser.contentblocking.category", "strict"); # Strict content blocking
+        user_pref("browser.newtab.extensionControlled", true); # Extension controlled new tab page
+        user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false); # Disable top stories
+        user_pref("browser.newtabpage.activity-stream.feeds.topsites", false); # Disable top sites
+        user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.havePinned", ""); # Remove pinned top site search shortcuts
+        user_pref("browser.newtabpage.activity-stream.showSearch", false); # Disable search on new tab page
+        user_pref("browser.newtabpage.activity-stream.showSponsored", false); # Disable sponsored
+        user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false); # Disable sponsored top sites
         user_pref("browser.policies.applied", true);
         user_pref("browser.protections_panel.infoMessage.seen", true);
-        user_pref("browser.proton.toolbar.version", 3);
-        user_pref("browser.region.update.updated", 1689544572);
         user_pref("browser.rights.3.shown", true);
-        user_pref("browser.search.region", "GB");
-        user_pref("browser.search.suggest.enabled", false);
+        user_pref("browser.search.region", "GB"); # Search region
+        user_pref("browser.search.suggest.enabled", false); # Disable search suggestions
         user_pref("browser.startup.couldRestoreSession.count", 2);
         user_pref("browser.tabs.inTitlebar", 0);
         user_pref("browser.topsites.blockedSponsors", "[\"amazon\",\"vodafone\"]");
         user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"unified-extensions-area\":[\"_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"gdpr_cavi_au_dk-browser-action\",\"addon_darkreader_org-browser-action\",\"_c84d89d9-a826-4015-957b-affebd9eb603_-browser-action\",\"firefoxcolor_mozilla_com-browser-action\",\"_036a55b4-5e72-4d05-a06c-cba2dfcc134a_-browser-action\"],\"nav-bar\":[\"back-button\",\"forward-button\",\"stop-reload-button\",\"customizableui-special-spring1\",\"urlbar-container\",\"customizableui-special-spring2\",\"downloads-button\",\"unified-extensions-button\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"new-tab-button\",\"alltabs-button\"],\"PersonalToolbar\":[\"personal-bookmarks\"]},\"seen\":[\"save-to-pocket-button\",\"developer-button\",\"_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"gdpr_cavi_au_dk-browser-action\",\"addon_darkreader_org-browser-action\",\"_c84d89d9-a826-4015-957b-affebd9eb603_-browser-action\",\"firefoxcolor_mozilla_com-browser-action\",\"_036a55b4-5e72-4d05-a06c-cba2dfcc134a_-browser-action\"],\"dirtyAreaCache\":[\"nav-bar\",\"PersonalToolbar\",\"toolbar-menubar\",\"TabsToolbar\",\"unified-extensions-area\"],\"currentVersion\":19,\"newElementCount\":2}");
-        user_pref("browser.urlbar.placeholderName", "DuckDuckGo");
-        user_pref("browser.urlbar.placeholderName.private", "DuckDuckGo");
-        user_pref("browser.urlbar.quicksuggest.migrationVersion", 2);
-        user_pref("browser.urlbar.quicksuggest.scenario", "history");
         user_pref("browser.urlbar.tipShownCount.searchTip_onboard", 4);
-        user_pref("datareporting.healthreport.uploadEnabled", false);
-        user_pref("datareporting.policy.dataSubmissionPolicyAcceptedVersion", 2);
-        user_pref("distribution.iniFile.exists.appversion", "115.0.2");
-        user_pref("distribution.iniFile.exists.value", true);
-        user_pref("distribution.mozilla-flatpak.bookmarksProcessed", true);
+        user_pref("datareporting.healthreport.uploadEnabled", false); # Disable health report
         user_pref("doh-rollout.doneFirstRun", true);
         user_pref("doh-rollout.home-region", "GB");
         user_pref("dom.forms.autocomplete.formautofill", true);
-        user_pref("dom.security.https_only_mode", true);
-        user_pref("dom.security.https_only_mode_ever_enabled", true);
-        user_pref("extensions.activeThemeID", "default-theme@mozilla.org");
-        user_pref("extensions.blocklist.pingCountVersion", -1);
-        user_pref("extensions.databaseSchema", 35);
-        user_pref("extensions.formautofill.creditCards.enabled", false);
-        user_pref("extensions.getAddons.databaseSchema", 6);
-        user_pref("extensions.installedDistroAddon.langpack-en-CA@firefox.mozilla.org", true);
-        user_pref("extensions.installedDistroAddon.langpack-en-GB@firefox.mozilla.org", true);
-        user_pref("extensions.lastAppVersion", "115.0.2");
-        user_pref("extensions.lastPlatformVersion", "115.0.2");
-        user_pref("extensions.pendingOperations", false);
-        user_pref("extensions.pictureinpicture.enable_picture_in_picture_overrides", true);
-        user_pref("extensions.quarantinedDomains.list", "autoatendimento.bb.com.br,ibpf.sicredi.com.br,ibpj.sicredi.com.br,internetbanking.caixa.gov.br,www.ib12.bradesco.com.br,www2.bancobrasil.com.br");
-        user_pref("extensions.systemAddonSet", "{\"schema\":1,\"addons\":{}}");
-        user_pref("extensions.ui.dictionary.hidden", true);
-        user_pref("extensions.ui.extension.hidden", false);
-        user_pref("extensions.ui.lastCategory", "addons://list/extension");
-        user_pref("extensions.ui.locale.hidden", false);
-        user_pref("extensions.ui.plugin.hidden", false);
-        user_pref("extensions.ui.sitepermission.hidden", true);
-        user_pref("extensions.webcompat.enable_shims", true);
-        user_pref("extensions.webcompat.perform_injections", true);
-        user_pref("extensions.webcompat.perform_ua_overrides", true);
-        user_pref("extensions.webextensions.ExtensionStorageIDB.migrated.addon@darkreader.org", true);
-        user_pref("extensions.webextensions.ExtensionStorageIDB.migrated.gdpr@cavi.au.dk", true);
-        user_pref("extensions.webextensions.ExtensionStorageIDB.migrated.screenshots@mozilla.org", true);
-        user_pref("extensions.webextensions.ExtensionStorageIDB.migrated.tridactyl.vim@cmcaine.co.uk", true);
-        user_pref("extensions.webextensions.ExtensionStorageIDB.migrated.uBlock0@raymondhill.net", true);
-        user_pref("extensions.webextensions.ExtensionStorageIDB.migrated.{036a55b4-5e72-4d05-a06c-cba2dfcc134a}", true);
-        user_pref("extensions.webextensions.ExtensionStorageIDB.migrated.{446900e4-71c2-419f-a6a7-df9c091e268b}", true);
-        user_pref("extensions.webextensions.ExtensionStorageIDB.migrated.{c84d89d9-a826-4015-957b-affebd9eb603}", true);
-        user_pref("extensions.webextensions.uuids", "{\"formautofill@mozilla.org\":\"d1f91a5b-a54c-40d1-b9d9-739844463db9\",\"pictureinpicture@mozilla.org\":\"16623ea8-ce61-4548-8a03-82cb302916dc\",\"screenshots@mozilla.org\":\"2b797918-4be4-4cf3-9dd8-2d2cb1150a8a\",\"webcompat-reporter@mozilla.org\":\"8e9c7ec6-2532-48b7-82fb-3839d1f88f74\",\"webcompat@mozilla.org\":\"4ee2c727-ab52-4a87-8674-c13dde5a8294\",\"default-theme@mozilla.org\":\"7224c0e0-e48c-422f-842f-d80024ed06f0\",\"addons-search-detection@mozilla.com\":\"76c09051-6f89-4de5-9ff5-623e6c9ba55e\",\"google@search.mozilla.org\":\"e5427953-c0dc-4bbb-bbab-69363c044b99\",\"wikipedia@search.mozilla.org\":\"ab2fc56e-bcac-4816-9a4d-27a348fed7d2\",\"bing@search.mozilla.org\":\"7097d812-8450-4d5f-bafd-5f7ff86b8fe9\",\"ddg@search.mozilla.org\":\"631029d1-2395-45ad-afb4-1d4595c375e3\",\"ebay@search.mozilla.org\":\"0af824cd-f81a-4c65-8cfc-897463c783ca\",\"amazon@search.mozilla.org\":\"01f59d9e-f46e-41bd-a027-63a324726506\",\"{446900e4-71c2-419f-a6a7-df9c091e268b}\":\"4f3a352c-96cb-497c-9e32-7b82f4f842f7\",\"uBlock0@raymondhill.net\":\"7d5bfac4-7231-4629-95af-0e26131667bd\",\"tridactyl.vim@cmcaine.co.uk\":\"5f319f5f-2861-4e63-9027-9996b7da6eae\",\"gdpr@cavi.au.dk\":\"bd665cee-f3ef-4c58-be9e-6c21f82fb134\",\"addon@darkreader.org\":\"a9648129-5f2f-4953-b2ce-a389f77b3364\",\"{c84d89d9-a826-4015-957b-affebd9eb603}\":\"c1e7472e-e29e-4436-b50d-87c47763002c\",\"firefox@betterttv.net\":\"3d5e1ee0-7213-42b8-b7d7-3aab1e0ada70\",\"{036a55b4-5e72-4d05-a06c-cba2dfcc134a}\":\"ddabc8ae-02f5-4085-9b25-b52109840730\",\"addons-restricted-domains@mozilla.com\":\"62382249-d377-47cb-bbcf-173b00db7582\"}");
-        user_pref("fission.experiment.max-origins.last-disqualified", 0);
-        user_pref("fission.experiment.max-origins.qualified", true);
-        user_pref("gecko.handlerService.defaultHandlersVersion", 1);
-        user_pref("general.autoScroll", true);
-        user_pref("gfx.blacklist.accelerated-canvas2d.failureid", "FEATURE_FAILURE_DL_BLOCKLIST_NO_ID");
-        user_pref("gfx.blacklist.dmabuf.failureid", "FEATURE_FAILURE_DL_BLOCKLIST_NO_ID");
-        user_pref("gfx.blacklist.gl.threadsafe.failureid", "FEATURE_FAILURE_DL_BLOCKLIST_NO_ID");
-        user_pref("idle.lastDailyNotification", 1689814134);
+        user_pref("dom.security.https_only_mode", true); # HTTPS only mode
+        user_pref("dom.security.https_only_mode_ever_enabled", true); # Always HTTPS only mode
+        user_pref("extensions.formautofill.creditCards.enabled", false); # Disable auto fill credit cards
+        user_pref("general.autoScroll", true); # Enable auto scroll
         user_pref("media.eme.enabled", true);
-        user_pref("media.videocontrols.picture-in-picture.video-toggle.has-used", true);
         user_pref("network.dns.disablePrefetch", true);
         user_pref("network.http.referer.disallowCrossSiteRelaxingDefault.top_navigation", true);
         user_pref("network.http.speculative-parallel-limit", 0);
         user_pref("network.predictor.enabled", false);
         user_pref("network.prefetch-next", false);
-        user_pref("pdfjs.enabledCache.state", true);
-        user_pref("pdfjs.migrationVersion", 2);
-        user_pref("permissions.default.desktop-notification", 2);
+        user_pref("permissions.default.desktop-notification", 2); # Disable desktop notifications by default
         user_pref("privacy.annotate_channels.strict_list.enabled", true);
-        user_pref("privacy.clearOnShutdown.cache", false);
-        user_pref("privacy.clearOnShutdown.cookies", false);
-        user_pref("privacy.donottrackheader.enabled", true);
-        user_pref("privacy.history.custom", true);
+        user_pref("privacy.history.custom", true); # Custom history settings
+        user_pref("privacy.clearOnShutdown.cache", false); # Clear cache on shutdown
+        user_pref("privacy.clearOnShutdown.cookies", false); # Clear cookies on shutdown
+        user_pref("privacy.donottrackheader.enabled", true); # Send do not track header
         user_pref("privacy.partition.network_state.ocsp_cache", true);
         user_pref("privacy.purge_trackers.date_in_cookie_database", "0");
         user_pref("privacy.query_stripping.enabled", true);
         user_pref("privacy.query_stripping.enabled.pbmode", true);
         user_pref("privacy.sanitize.pending", "[{\"id\":\"shutdown\",\"itemsToClear\":[\"history\",\"formdata\",\"downloads\",\"sessions\"],\"options\":{}},{\"id\":\"newtab-container\",\"itemsToClear\":[],\"options\":{}}]");
         user_pref("privacy.sanitize.sanitizeOnShutdown", true);
-        user_pref("privacy.trackingprotection.emailtracking.enabled", true);
-        user_pref("privacy.trackingprotection.enabled", true);
-        user_pref("privacy.trackingprotection.socialtracking.enabled", true);
-        user_pref("privacy.userContext.enabled", true);
-        user_pref("privacy.userContext.extension", "tridactyl.vim@cmcaine.co.uk");
-        user_pref("privacy.userContext.ui.enabled", true);
+        user_pref("privacy.trackingprotection.enabled", true); # Tracking protection
+        user_pref("privacy.trackingprotection.emailtracking.enabled", true); # Email tracking protection
+        user_pref("privacy.trackingprotection.socialtracking.enabled", true); # Social tracking protection
         user_pref("signon.rememberSignons", false);
-        user_pref("storage.vacuum.last.index", 2);
         user_pref("toolkit.telemetry.pioneer-new-studies-available", true);
         user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
         user_pref("trailhead.firstrun.didSeeAboutWelcome", true);
