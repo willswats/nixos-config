@@ -5,7 +5,6 @@
     ./modules/theme
     ./modules/fonts
     ./modules/bookmarks
-    ./modules/directories
     ./modules/git
     ./modules/i3
     ./modules/neovim
