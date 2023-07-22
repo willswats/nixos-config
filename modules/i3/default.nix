@@ -63,7 +63,6 @@
         enable = true;
         config = {
           modifier = "Mod4";
-          floating.modifier = "Mod4";
           fonts = {
             names = [ "Hack Nerd Font" ];
             size = 14.0;
