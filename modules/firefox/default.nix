@@ -230,6 +230,7 @@
         "browser.newtabpage.activity-stream.showSponsored" = false; # Disable new tab page sponsored
         "browser.newtabpage.activity-stream.showSponsoredTopSites" = false; # Disable new tab page sponsored top sites
         "browser.newtabpage.blocked" = "{\"R8wYCmScoyV0xHr6e1KJng==\":1,\"c/GpBaAESHY/bXEx/uourw==\":1,\"Z3sawLcfnygbilXeU5fdHg==\":1,\"6qTsCBZaEVXWrWxdXn5pmQ==\":1,\"+CUypgsitL9L0VmPZ0t22g==\":1,\"c9lsKElwtRd9PbcOXhz3dA==\":1,\"otFC2oJcatFNwWRBjMU7YA==\":1,\"26UbzFJ7qT9/4DhodHKA1Q==\":1,\"4gPpjkxgZzXPVtuEoAL9Ig==\":1,\"gLv0ja2RYVgxKdp0I5qwvA==\":1,\"0GuysDfjFIJXq6QVZ2C5YA==\":1,\"FX7dGM0Jj2q2tTyEv9oaUQ==\":1,\"BRX66S9KVyZQ1z3AIk0A7w==\":1}"; # Remove the default pinned websites from the new tab page (appears in search)
+        "browser.uiCustomization.state" = "{\"placements\":{\"PersonalToolbar\":[\"personal-bookmarks\"]}}"; # Remove "Import bookmarks"
         "browser.search.suggest.enabled" = false; # Disable search suggestions
         "media.eme.enabled" = true; # Play DRM controlled content
         "permissions.default.desktop-notification" = 2; # Disable desktop notifications by default
