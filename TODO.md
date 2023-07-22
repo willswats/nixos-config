@@ -5,7 +5,6 @@
 ### Features
 
 - [ ] Auto create directories
-- [ ] Create firefox nix config
 - [ ] Create seperate configurations and variables for:
   - [ ] desktop
   - [ ] laptop
@@ -22,6 +21,11 @@
 - [ ] spice (or whatever is needed for mouse4 and mouse5 + copy, paste and file transfer between host and vm )
 
 ## Low Priority
+
+### Firefox
+
+- [ ] Add directories to bookmarks
+- [ ] Install extensions from NUR
 
 ### i3
 
