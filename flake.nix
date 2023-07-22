@@ -9,15 +9,39 @@
 
   outputs = { nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
-      will = nixpkgs.lib.nixosSystem {
+      will-desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./configuration.nix
+          ./hosts/desktop
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.will = import ./home.nix;
+            home-manager.users.will = import ./hosts/desktop/home.nix;
+          }
+        ];
+      };
+      will-laptop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/laptop
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.will = import ./hosts/home.nix;
+          }
+        ];
+      };
+      will-virtual = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/virtual
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.will = import ./hosts/home.nix;
           }
         ];
       };

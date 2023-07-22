@@ -1,18 +1,11 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-    ];
-
   boot = {
     loader.grub = {
       enable = true;
-      device = "/dev/vda";
       useOSProber = true;
-      # Enable grub cryptodisk
-      enableCryptodisk = true;
+      device = "/dev/vda";
     };
 
     plymouth = {
@@ -22,18 +15,9 @@
         (pkgs.catppuccin-plymouth.override { variant = "mocha"; })
       ];
     };
-
-    # initrd = {
-    # Setup keyfile
-    #  secrets = {
-    # "/crypto_keyfile.bin" = null;
-    # };
-    # luks.devices."luks-2cc37e3f-d240-45a0-8a2b-b511cc7a1f1e".keyFile = "/#crypto_keyfile.bin";
-    # };
   };
 
   networking = {
-    hostName = "will-desktop";
     networkmanager.enable = true;
     wireguard.enable = true;
   };
@@ -91,7 +75,7 @@
       displayManager = {
         lightdm = {
           enable = true;
-          background = ./wallpapers/minimal-desert.png;
+          background = ../wallpapers/minimal-desert.png;
           greeters.gtk = {
             enable = true;
             theme = {

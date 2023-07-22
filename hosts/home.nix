@@ -2,19 +2,19 @@
 
 {
   imports = [
-    ./modules/theme
-    ./modules/fonts
-    ./modules/bookmarks
-    ./modules/git
-    ./modules/firefox
-    ./modules/i3
-    ./modules/neovim
-    ./modules/fish
-    ./modules/alacritty
-    ./modules/bottom
-    ./modules/lazygit
-    ./modules/rustup
-    ./modules/mullvad-vpn
+    ../modules/theme
+    ../modules/fonts
+    ../modules/bookmarks
+    ../modules/git
+    ../modules/firefox
+    ../modules/i3
+    ../modules/neovim
+    ../modules/fish
+    ../modules/alacritty
+    ../modules/bottom
+    ../modules/lazygit
+    ../modules/rustup
+    ../modules/mullvad-vpn
   ];
 
   programs.home-manager.enable = true;
@@ -50,15 +50,6 @@
       rclone
       rclone-browser
       opentabletdriver
-      # Entertainment
-      steam
-      retroarch
-      yuzu-mainline
-      pcsx2
-      rpcs3
-      osu-lazer-bin
-      zandronum
-      prismlauncher
     ];
   };
 }
