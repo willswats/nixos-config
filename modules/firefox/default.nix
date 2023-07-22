@@ -9,7 +9,8 @@
         enableTridactylNative = true;
       };
     };
-    profiles.will = {
+    profiles.default = {
+      id = 0;
       search = {
         force = true;
         default = "DuckDuckGo";
