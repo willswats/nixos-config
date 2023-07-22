@@ -15,6 +15,7 @@
 
 ### Fix
 
+- [ ] Can't move floating windows with i3 floating_modifier
 - [ ] Assigning i3 workspaces to monitors causes errors
 - [ ] i3 starting on ws10 - [issue](https://github.com/nix-community/home-manager/issues/695)
 - [ ] polybar can't find i3 (doesn't show resize mode) - [issue](https://github.com/nix-community/home-manager/issues/213)
