@@ -6,8 +6,8 @@
   programs.fish = {
     enable = true;
     shellAliases = {
-      github = "ssh-add ~/.ssh/id_ed25519";
       note = "cd Drive/Work/Notebook; nvim";
+      kgh = "ssh-add ~/.ssh/id_ed25519";
     };
     interactiveShellInit = ''
       # Hide fish greeting
