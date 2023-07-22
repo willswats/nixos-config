@@ -4,16 +4,14 @@
 
 ### Features
 
-- [ ] Add hardware-configuration.nix:
-  - [ ] desktop
-  - [ ] laptop
-- [ ] Add variables:
-  - [ ] hostname
-  - [ ] directoriesToCreate
+- [ ] Add parted commands to README
 - [ ] Setup swap:
   - [ ] desktop (24gb)
   - [ ] laptop (48gb)
 - [ ] Switch to systemd boot
+- [ ] Add hardware-configuration.nix:
+  - [ ] desktop
+  - [ ] laptop
 
 ### Desktop specific
 
@@ -24,6 +22,12 @@
 - [ ] spice (or whatever is needed for mouse4 and mouse5 + copy, paste and file transfer between host and vm )
 
 ## Low Priority
+
+### Home Manager
+
+- [ ] Add variables:
+  - [ ] hostname
+  - [ ] directoriesToCreate
 
 ### Firefox
 
