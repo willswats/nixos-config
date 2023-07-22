@@ -26,151 +26,194 @@
         {
           toolbar = true;
           bookmarks = [
-            # Utilities
             {
-              name = "Gmail";
-              url = "https://mail.google.com/";
+              name = "Utilities";
+              bookmarks = [
+                {
+                  name = "Gmail";
+                  url = "https://mail.google.com/";
+                }
+
+                {
+                  name = "Calendar";
+                  url = "https://calendar.google.com/";
+                }
+                {
+                  name = "Contacts";
+                  url = "https://contacts.google.com/";
+                }
+                {
+                  name = "Maps";
+                  url = "https://maps.google.com/";
+                }
+                {
+                  name = "Drive";
+                  url = "https://drive.google.com/";
+                }
+                {
+                  name = "Bitwarden";
+                  url = "https://vault.bitwarden.com/";
+                }
+                {
+                  name = "AnonAddy";
+                  url = "https://app.anonaddy.com/";
+                }
+                {
+                  name = "Reactive Resume";
+                  url = "https://rxresu.me/dashboard";
+                }
+              ];
             }
             {
-              name = "Calendar";
-              url = "https://calendar.google.com/";
+              name = "Media";
+              bookmarks = [
+                {
+                  name = "YouTube";
+                  url = "https://youtube.com/subscriptions";
+                }
+                {
+                  name = "Twitch";
+                  url = "https://www.twitch.tv/";
+                }
+                {
+                  name = "Spotify";
+                  url = "https://open.spotify.com/";
+                }
+                {
+                  name = "myNoise";
+                  url = "https://mynoise.net/";
+                }
+                {
+                  name = "9Anime";
+                  url = "https://9anime.pl/home";
+                }
+                {
+                  name = "https://mangadex.org/";
+                  url = "MangaDex";
+                }
+              ];
             }
             {
-              name = "Contacts";
-              url = "https://contacts.google.com/";
+              name = "Lists";
+              bookmarks = [
+                {
+                  name = "AniList";
+                  url = "https://anilist.co/";
+                }
+                {
+                  name = "TMDB";
+                  url = "https://www.themoviedb.org/";
+                }
+                {
+                  name = "AlternativeTo";
+                  url = "https://alternativeto.net/";
+                }
+                {
+                  name = "ProtonDB";
+                  url = "https://www.protondb.com/";
+                }
+              ];
             }
             {
-              name = "Maps";
-              url = "https://maps.google.com/";
+              name = "Social";
+              bookmarks = [
+                {
+                  name = "Discord";
+                  url = "https://discord.com/app";
+                }
+                {
+                  name = "GitHub";
+                  url = "https://github.com/";
+                }
+                {
+                  name = "LinkedIn";
+                  url = "https://www.linkedin.com/";
+                }
+              ];
             }
             {
-              name = "Drive";
-              url = "https://drive.google.com/";
+              name = "Shopping";
+              bookmarks = [
+
+                {
+                  name = "Amazon";
+                  url = "https://www.amazon.co.uk/";
+                }
+                {
+                  name = "https://www.tesco.com/";
+                  url = "Tesco";
+                }
+                {
+                  name = "2Tall";
+                  url = "https://www.2tall.com/";
+                }
+              ];
             }
             {
-              name = "Bitwarden";
-              url = "https://vault.bitwarden.com/";
+              name = "Learn";
+              bookmarks = [
+                {
+                  name = "Wikipedia";
+                  url = "https://www.wikipedia.org/";
+                }
+                {
+                  name = "Dictionary";
+                  url = "https://www.dictionary.com/";
+                }
+                {
+                  name = "Thesaurus";
+                  url = "https://www.thesaurus.com/";
+                }
+              ];
             }
             {
-              name = "AnonAddy";
-              url = "https://app.anonaddy.com/";
+              name = "Education";
+              bookmarks = [
+                {
+                  name = "Harvard Referencing";
+                  url = "https://librarydevelopment.group.shef.ac.uk/referencing/harvard.html";
+                }
+                {
+                  name = "Scribbr";
+                  url = "https://www.scribbr.co.uk/referencing/generator/";
+                }
+              ];
             }
             {
-              name = "Reactive Resume";
-              url = "https://rxresu.me/dashboard";
-            }
-            # Media
-            {
-              name = "YouTube";
-              url = "https://youtube.com/subscriptions";
-            }
-            {
-              name = "Twitch";
-              url = "https://www.twitch.tv/";
-            }
-            {
-              name = "Spotify";
-              url = "https://open.spotify.com/";
+              name = "Hosting";
+              bookmarks = [
+
+                {
+                  name = "Vercel";
+                  url = "https://vercel.com/";
+                }
+                {
+                  name = "Hover";
+                  url = "https://www.hover.com/";
+                }
+              ];
             }
             {
-              name = "myNoise";
-              url = "https://mynoise.net/";
+              name = "Nix";
+              bookmarks = [
+                {
+                  name = "NixOS Search";
+                  url = "https://search.nixos.org/packages";
+                }
+                {
+                  name = "Home Manager";
+                  url = "https://nix-community.github.io/home-manager/options.html";
+                }
+              ];
             }
             {
-              name = "9Anime";
-              url = "https://9anime.pl/home";
-            }
-            {
-              name = "https://mangadex.org/";
-              url = "MangaDex";
-            }
-            # Lists
-            {
-              name = "AniList";
-              url = "https://anilist.co/";
-            }
-            {
-              name = "TMDB";
-              url = "https://www.themoviedb.org/";
-            }
-            {
-              name = "AlternativeTo";
-              url = "https://alternativeto.net/";
-            }
-            {
-              name = "ProtonDB";
-              url = "https://www.protondb.com/";
-            }
-            # Social
-            {
-              name = "Discord";
-              url = "https://discord.com/app";
-            }
-            {
-              name = "GitHub";
-              url = "https://github.com/";
-            }
-            {
-              name = "LinkedIn";
-              url = "https://www.linkedin.com/";
-            }
-            # Shopping
-            {
-              name = "Amazon";
-              url = "https://www.amazon.co.uk/";
-            }
-            {
-              name = "https://www.tesco.com/";
-              url = "Tesco";
-            }
-            {
-              name = "2Tall";
-              url = "https://www.2tall.com/";
-            }
-            # Learn
-            {
-              name = "Wikipedia";
-              url = "https://www.wikipedia.org/";
-            }
-            {
-              name = "Dictionary";
-              url = "https://www.dictionary.com/";
-            }
-            {
-              name = "Thesaurus";
-              url = "https://www.thesaurus.com/";
-            }
-            # Education
-            {
-              name = "Harvard Referencing";
-              url = "https://librarydevelopment.group.shef.ac.uk/referencing/harvard.html";
-            }
-            {
-              name = "Scribbr";
-              url = "https://www.scribbr.co.uk/referencing/generator/";
-            }
-            # Hosting
-            {
-              name = "Vercel";
-              url = "https://vercel.com/";
-            }
-            {
-              name = "Hover";
-              url = "https://www.hover.com/";
-            }
-            # Nix 
-            {
-              name = "NixOS Search";
-              url = "https://search.nixos.org/packages";
-            }
-            {
-              name = "Home Manager";
-              url = "https://nix-community.github.io/home-manager/options.html";
-            }
-            # Other
-            {
-              name = "williamwatson.dev";
-              url = "https://williamwatson.dev";
+              name = "Other";
+              bookmarks = [
+                {
+                  name = "williamwatson.dev";
+                  url = "https://williamwatson.dev";
+                }
+              ];
             }
           ];
         }
