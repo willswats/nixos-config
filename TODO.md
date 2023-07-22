@@ -4,10 +4,9 @@
 
 ### Features
 
-- [ ] Create seperate configurations and variables for:
+- [ ] Add hardware-configuration.nix:
   - [ ] desktop
   - [ ] laptop
-  - [ ] virtual
 - [ ] Setup swap
 - [ ] Switch to systemd boot
 
