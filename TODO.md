@@ -1,6 +1,8 @@
 # TODO
 
 - [ ] Fix error for command not found
+- [ ] Fix gnome-keyring error Environment variable $SSH_AUTH_SOCK not set, ignoring. gnome-keyring-daemon: no process capabilities, insecure memory might get used
+- [ ] Add pcmanfm config
 - [ ] Add hardware-configuration.nix:
   - [ ] desktop
 - [ ] Merge dotfiles .git and nixos-config .git
