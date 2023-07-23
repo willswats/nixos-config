@@ -2,6 +2,15 @@
 
 My NixOS config.
 
+## Table of Contents
+
+- [Installation](#installation)
+  - [Graphical Setup](#graphical-setup)
+  - [Installing nixos-config](#installing-nixos-config)
+- [Non-Declarative Setups](#non-declarative-setups)
+  - [Utilities (all hosts)](#utilities-all-hosts)
+  - [Games (desktop)](#games-desktop)
+
 ## Installation
 
 ### Graphical Setup
