@@ -29,15 +29,15 @@
 
 ## Neovim
 
-- [ ] Fix markdown files should indent by 2, not 4
-- [ ] Fix markdown files do not show action for ToC
+- [ ] Fix markdown issues:
+  - [ ] Current indenting by 4, should be 2
+  - [ ] No option for updating ToC in lsp actions
 - [ ] Move lsp keymaps into on_attach
 - [ ] Add session plugin
 - [ ] Setup dap
 
 ## Other
 
-- [ ] Fix bluetooth - issue [issue](https://github.com/NixOS/nixpkgs/issues/170573)
 - [ ] Mullvad GUI error - Inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
 - [ ] Fix Catppuccin black borders in lightdm
 - [ ] Move from gnome-keyring
