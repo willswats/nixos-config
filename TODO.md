@@ -12,6 +12,8 @@
 - [ ] Add hardware-configuration.nix:
   - [ ] desktop
   - [ ] laptop
+- [ ] Merge dotfiles .git and nixos-config .git
+- [ ] Delete old dotfiles and fedora-sericea-config
 
 ### Desktop specific
 
@@ -43,6 +45,8 @@
 
 ### Neovim
 
+- [ ] Fix markdown files should indent by 2, not 4
+- [ ] Fix markdown files do not show action for ToC
 - [ ] Move lsp keymaps into on_attach
 - [ ] Add session plugin
 - [ ] Setup dap
