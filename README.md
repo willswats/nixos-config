@@ -11,18 +11,41 @@ My NixOS config.
   - [Utilities (all hosts)](#utilities-all-hosts)
   - [Games (desktop)](#games-desktop)
 
-## Installation
-
-### Graphical Setup
+## Installing NixOS
 
 1. Write the NixOS GNOME ISO to a USB and boot into it.
-2. Run the installer and set an appropriate username and password.
-3. Create an EXT4 partition with 1.5x the swap space of your RAM (desktop has 16GB RAM - 24GB swap) (laptop has 32GB RAM - 48GB swap).
-4. Enable encryption if needed (desktop and laptop).
-5. Set the desktop environment to no desktop.
-6. Reboot the system.
+2. Run the installer and set the following:
+   - username and password
+   - enable unfree packages
+   - erase the disk
+   - enable swap with hibernation (desktop and laptop)
+   - enable encryption (desktop and laptop)
+   - desktop environment: no desktop
+3. Reboot the system.
 
-### Installing nixos-config
+## Installing nixos-config
+
+### Connect to Wi-Fi
+
+To list Wi-Fi access points:
+
+```bash
+nmcli dev wifi list
+```
+
+To connect to a Wi-Fi access point (replace network-ssid with the name of the network and network-password with the password of the network):
+
+```bash
+sudo nmcli dev wifi connect network-ssid password "network-password"
+```
+
+### Clone the repository
+
+Enter a nix-shell with git:
+
+```bash
+nix-shell -p git
+```
 
 Clone the repository:
 
@@ -30,10 +53,12 @@ Clone the repository:
 git clone https://github.com/willswats/nixos-config.git
 ```
 
-CD into the cloned repository and run:
+### Build the config
+
+CD into the cloned repository and run (replace host-name with the desired host name):
 
 ```bash
-sudo nixos-rebuild switch --flake .#will
+sudo nixos-rebuild switch --flake .#host-name
 ```
 
 Note to self: once you are logged in with SSH, clone the repository with SSH into `~/Code` and delete the old clone.
