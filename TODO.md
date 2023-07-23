@@ -1,5 +1,6 @@
 # TODO
 
+- [ ] Make wallpaper set in i3 not based upon Code/nixos-config location
 - [ ] Fix error for command not found
 - [ ] Fix gnome-keyring error Environment variable $SSH_AUTH_SOCK not set, ignoring. gnome-keyring-daemon: no process capabilities, insecure memory might get used
 - [ ] Add pcmanfm config
