@@ -2,12 +2,6 @@
 
 {
   boot = {
-    loader.grub = {
-      enable = true;
-      useOSProber = true;
-      device = "/dev/vda";
-    };
-
     plymouth = {
       enable = true;
       theme = "catppuccin-mocha";
@@ -69,7 +63,6 @@
       desktopManager = {
         xterm.enable = false;
       };
-
       excludePackages = with pkgs; [ xterm ];
 
       displayManager = {

@@ -6,20 +6,18 @@
     ./hardware-configuration.nix
   ];
 
-  networking.hostName = "will-laptop";
+  # Bootloader.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
-  boot = {
-    loader.grub = {
-      # Enable grub cryptodisk
-      enableCryptodisk = true;
-    };
-
-    initrd = {
-      # Setup keyfile
-      secrets = {
-        "/crypto_keyfile.bin" = null;
-      };
-      luks.devices."luks-2cc37e3f-d240-45a0-8a2b-b511cc7a1f1e".keyFile = "/#crypto_keyfile.bin";
-    };
+  # Setup keyfile
+  boot.initrd.secrets = {
+    "/crypto_keyfile.bin" = null;
   };
+
+  # Enable swap on luks
+  boot.initrd.luks.devices."luks-3cda00c0-e50f-4776-98b6-3760ff91f791".device = "/dev/disk/by-uuid/3cda00c0-e50f-4776-98b6-3760ff91f791";
+  boot.initrd.luks.devices."luks-3cda00c0-e50f-4776-98b6-3760ff91f791".keyFile = "/crypto_keyfile.bin";
+
+  networking.hostName = "will-laptop";
 }
