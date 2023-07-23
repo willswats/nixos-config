@@ -4,9 +4,11 @@ My NixOS config.
 
 ## Table of Contents
 
-- [Installation](#installation)
-  - [Graphical Setup](#graphical-setup)
-  - [Installing nixos-config](#installing-nixos-config)
+- [Installaing NixOS](#installing-nixos)
+- [Install nixos-config](#installing-nixos-config)
+  - [Connect to Wi-Fi](#connect-to-wi-fi)
+  - [Clone the Repository](#clone-the-repository)
+  - [Build the Config](#build-the-config)
 - [Non-Declarative Setups](#non-declarative-setups)
   - [Utilities (all hosts)](#utilities-all-hosts)
   - [Games (desktop)](#games-desktop)
@@ -39,7 +41,7 @@ To connect to a Wi-Fi access point (replace network-ssid with the name of the ne
 sudo nmcli dev wifi connect network-ssid password "network-password"
 ```
 
-### Clone the repository
+### Clone the Repository
 
 Enter a nix-shell with git:
 
@@ -53,7 +55,7 @@ Clone the repository:
 git clone https://github.com/willswats/nixos-config.git
 ```
 
-### Build the config
+### Build the Config
 
 CD into the cloned repository and run (replace host-name with the desired host name):
 
