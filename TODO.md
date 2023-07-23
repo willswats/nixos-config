@@ -4,10 +4,10 @@
 
 ### Features
 
-- [ ] Add parted commands to README
-- [ ] Setup swap:
-  - [ ] desktop (24gb)
-  - [ ] laptop (48gb)
+- [ ] Add commands to README (avoid GUI installer):
+  - [ ] Partition EXT4 drive
+  - [ ] Swap space
+  - [ ] LUKS encryption
 - [ ] Switch to systemd boot
 - [ ] Add hardware-configuration.nix:
   - [ ] desktop
@@ -49,8 +49,8 @@
 
 ### Other
 
-- [ ] Move from gnome-keyring
-- [ ] Move nvim config to home manager
 - [ ] Fix bluetooth - issue [issue](https://github.com/NixOS/nixpkgs/issues/170573)
 - [ ] Mullvad GUI error - Inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
 - [ ] Fix Catppuccin black borders in lightdm
+- [ ] Move from gnome-keyring
+- [ ] Move nvim config to home manager
