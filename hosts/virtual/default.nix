@@ -12,6 +12,7 @@
     device = "/dev/vda";
   };
 
+  # Set resolution
   xserver.resolutions = [
     { x = 1920; y = 1080; }
   ];

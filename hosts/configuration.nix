@@ -34,10 +34,10 @@
   };
 
   services = {
-    gvfs.enable = true; # Fix wastebasket restore (GVfs is GNOME's userspace virtual filesystem)
+    gvfs.enable = true; # Fix wastebasket restore (pcmanfm)
     blueman.enable = true;
     mullvad-vpn.enable = true;
-    geoclue2.enable = true;
+    geoclue2.enable = true; # For redshift
 
     xserver = {
       enable = true;
@@ -96,7 +96,6 @@
       windowManager.i3 = {
         enable = true;
         extraPackages = with pkgs; [
-          dmenu
           i3status
           i3lock
         ];
