@@ -43,13 +43,13 @@ sudo nmcli dev wifi connect network-ssid password "network-password"
 
 ### Clone the Repository
 
-Enter a nix-shell with git:
+Enter a nix-shell with git and neovim:
 
 ```bash
 nix-shell -p git nvim
 ```
 
-Clone the repository:
+Clone the repository to `~/Code/nixos-config:
 
 ```bash
 mkdir ~/Code
@@ -61,23 +61,19 @@ git clone https://github.com/willswats/nixos-config.git ~/Code
 Add the `hardware-configuration.nix` to your chosen host (replace host-name with the desired host):
 
 ```bash
-mv /etc/nixos/hardware-configuration.nix ~/nixos-config/hosts/host-name
+cp /etc/nixos/hardware-configuration.nix ~/Code/nixos-config/hosts/host-name/
 ```
 
 ### Add boot.initrd.luks.devices Information
 
-Copy the `boot.initrd.luks.devices` from `/etc/nixos/configuration.nix` to `~/nixos-config/hosts/host-name/default.nix` with `host-name` being your desired host.
+Copy the text that starts with `boot.initrd.luks.devices` from `/etc/nixos/configuration.nix` to `~/Code/nixos-config/hosts/host-name/default.nix`, with `host-name` being your desired host.
 
 ### Build the Config
-
-```bash
-cd ~/Code/nixos-config
-```
 
 Remove the `.git` directory (otherwise the build is based off of git):
 
 ```bash
-rm -rf ./.git
+rm -rf ~/Code/nixos-config/.git
 ```
 
 Run (replace host-name with the desired host name):
@@ -92,18 +88,15 @@ Reboot the system:
 reboot
 ```
 
-### Note to self
+### Note to Self
 
-Once you are logged in with SSH, run the following:
+Once you are logged in to GitHub with SSH, run the following and then commit the changes:
 
 ```bash
 git clone git@github.com:willswats/nixos-config.git ~/nixos-config-temp
-cp ~/nixos-config-temp/.git ~/Code/nixos-config
+sudo cp ~/nixos-config-temp/.git ~/Code/nixos-config
 rm -rf ~/nixos-config-temp
-cd ~/Code/nixos-config
 ```
-
-Then commit the changes.
 
 ## Non-Declarative Setups
 
