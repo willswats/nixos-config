@@ -26,24 +26,20 @@
     };
   };
 
-  services = {
-    blueman.enable = true;
+  services.xserver = {
+    enable = true;
+    layout = "gb";
+    xkbVariant = "";
 
-    xserver = {
+    libinput = {
       enable = true;
-      layout = "gb";
-      xkbVariant = "";
 
-      libinput = {
-        enable = true;
+      mouse = {
+        accelProfile = "flat";
+      };
 
-        mouse = {
-          accelProfile = "flat";
-        };
-
-        touchpad = {
-          accelProfile = "flat";
-        };
+      touchpad = {
+        accelProfile = "flat";
       };
     };
   };

@@ -5,48 +5,52 @@
     ../redshift
   ];
 
-  services.xserver = {
-    desktopManager = {
-      xterm.enable = false;
-    };
+  services = {
+    blueman.enable = true;
 
-    displayManager = {
-      lightdm = {
-        enable = true;
-        background = ../../wallpapers/minimal-desert.png;
-        greeters.gtk = {
+    xserver = {
+      desktopManager = {
+        xterm.enable = false;
+      };
+
+      displayManager = {
+        lightdm = {
           enable = true;
-          theme = {
-            name = "Catppuccin-Mocha-Standard-Blue-dark";
-            package = pkgs.catppuccin-gtk.override {
-              accents = [ "blue" ];
-              size = "standard";
-              variant = "mocha";
+          background = ../../wallpapers/minimal-desert.png;
+          greeters.gtk = {
+            enable = true;
+            theme = {
+              name = "Catppuccin-Mocha-Standard-Blue-dark";
+              package = pkgs.catppuccin-gtk.override {
+                accents = [ "blue" ];
+                size = "standard";
+                variant = "mocha";
+              };
             };
-          };
-          iconTheme = {
-            name = "Papirus-Dark";
-            package = pkgs.catppuccin-papirus-folders.override {
-              accent = "blue";
-              flavor = "mocha";
+            iconTheme = {
+              name = "Papirus-Dark";
+              package = pkgs.catppuccin-papirus-folders.override {
+                accent = "blue";
+                flavor = "mocha";
+              };
             };
-          };
-          cursorTheme = {
-            name = "Catppuccin-Mocha-Dark-Cursors";
-            package = pkgs.catppuccin-cursors.mochaDark;
-            size = 32; # 24 32 48 64
+            cursorTheme = {
+              name = "Catppuccin-Mocha-Dark-Cursors";
+              package = pkgs.catppuccin-cursors.mochaDark;
+              size = 32; # 24 32 48 64
+            };
           };
         };
+        defaultSession = "none+i3";
       };
-      defaultSession = "none+i3";
-    };
 
-    windowManager.i3 = {
-      enable = true;
-      extraPackages = with pkgs; [
-        i3status
-        i3lock
-      ];
+      windowManager.i3 = {
+        enable = true;
+        extraPackages = with pkgs; [
+          i3status
+          i3lock
+        ];
+      };
     };
   };
 }
