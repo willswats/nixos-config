@@ -1,20 +1,19 @@
 # TODO
 
-- [ ] Make wallpaper set in i3 not based upon Code/nixos-config location
-- [ ] Fix error for command not found
+- [ ] Fix starting on tty1 (instead of tty7 for lightdm)
+- [ ] Fix error for command not found in shell
 - [ ] Fix gnome-keyring error Environment variable $SSH_AUTH_SOCK not set, ignoring. gnome-keyring-daemon: no process capabilities, insecure memory might get used
-- [ ] Add pcmanfm config
 - [ ] Add hardware-configuration.nix:
   - [ ] desktop
-- [ ] Merge dotfiles .git and nixos-config .git
-- [ ] Delete old dotfiles and fedora-sericea-config
-- [ ] Nvida drivers
-- [ ] spice (or whatever is needed for mouse4 and mouse5 + copy, paste and file transfer between host and vm )
+- [ ] Add nvida drivers (desktop)
+- [ ] Add spice (virtual)
 
 ## Home Manager
 
 - [ ] Add variables:
   - [ ] hostname
+  - [ ] wallpaper
+  - [ ] lockscreen
   - [ ] directoriesToCreate
 
 ## Firefox
