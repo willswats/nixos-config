@@ -11,12 +11,13 @@
 
 ## Home Manager
 
-- [ ] Add variables:
+- [ ] Add global variables:
   - [ ] hostname
   - [ ] wallpaper
   - [ ] lockscreen
   - [ ] directoriesToCreate
   - [ ] bookmarks
+  - [ ] monitors
 - [ ] Seperate configuration.nix into modules
 
 ## Firefox
