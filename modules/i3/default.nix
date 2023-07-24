@@ -54,7 +54,7 @@
         ws9 = "9";
         ws10 = "10";
 
-        rofi = "${pkgs.rofi}/bin/rofi";
+        menu = "${pkgs.rofi}/bin/rofi";
         lockscreen = "${pkgs.betterlockscreen}/bin/betterlockscreen";
         terminal = "${pkgs.alacritty}/bin/alacritty";
         editor = "${pkgs.neovim}/bin/nvim";
@@ -80,6 +80,8 @@
         enable = true;
         config = {
           modifier = "Mod4";
+          terminal = terminal;
+          menu = menu;
           fonts = {
             names = [ "Hack Nerd Font" ];
             size = 14.0;
@@ -205,7 +207,7 @@
             "${mod}+Shift+e" = "${exec} i3-msg exit";
             "${mod}+semicolon" = "${exec} ${lockscreen} -l";
 
-            "${mod}+d" = "${exec} ${rofi} -show drun";
+            "${mod}+d" = "${exec} ${menu} -show drun";
             "${mod}+Return" = "${exec} ${terminal}";
             "${mod}+w" = "${exec} ${web_browser}";
             "${mod}+e" = "${exec} ${file_explorer}";
