@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../modules/theme
     ../modules/i3
     ../modules/plymouth
     ../modules/mullvad-vpn
@@ -55,10 +56,7 @@
     shell = pkgs.fish;
   };
 
-  programs = {
-    fish.enable = true;
-    dconf.enable = true;
-  };
+  programs.fish.enable = true;
 
   nixpkgs.config = {
     # Allow unfree packages
