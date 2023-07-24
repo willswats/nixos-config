@@ -1,9 +1,9 @@
 # TODO
 
-- [ ] Fix opening on tty1 instead of tty7 (lightdm)
-- [ ] Fix error for command not found in shell
 - [ ] Fix cannot pair with bluetooth speakers
 - [ ] Fix scale of alacritty font on laptop
+- [ ] Fix opening on tty1 instead of tty7 (lightdm)
+- [ ] Fix error for command not found in shell
 - [ ] Add hardware-configuration.nix:
   - [ ] desktop
 - [ ] Add nvida drivers (desktop)
