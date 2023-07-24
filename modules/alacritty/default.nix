@@ -7,7 +7,7 @@
     enable = true;
     settings = {
       font = {
-        size = 14;
+        size = 10;
         normal.family = "Hack Nerd Font";
         bold.family = "Hack Nerd Font";
         italic.family = "Hack Nerd Font";
