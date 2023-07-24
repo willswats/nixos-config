@@ -21,6 +21,7 @@
       ws10 = "10";
     in
     {
+      # Fixes i3 starting on ws10 - https://github.com/nix-community/home-manager/issues/695
       extraConfig = ''
         workspace ${ws1} output ${monitor}
         workspace ${ws2} output ${monitor}

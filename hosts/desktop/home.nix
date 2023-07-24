@@ -53,6 +53,8 @@
             notification = false;
           }
         ];
+      # Set specific monitors to workspaces
+      # Also fixes i3 starting on ws10 - https://github.com/nix-community/home-manager/issues/695
       extraConfig = ''
         workspace ${ws1} output ${monitor-left}
         workspace ${ws2} output ${monitor-center}
