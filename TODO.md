@@ -1,7 +1,5 @@
 # TODO
 
-- [ ] Assigning i3 workspaces to monitors causes errors
-- [ ] i3 starting on ws10 - [issue](https://github.com/nix-community/home-manager/issues/695)
 - [ ] Fix opening on tty1 instead of tty7 (lightdm)
 - [ ] Fix error for command not found in shell
 - [ ] Fix gnome-keyring error - Environment variable $SSH_AUTH_SOCK not set, ignoring. gnome-keyring-daemon: no process capabilities, insecure memory might get used
