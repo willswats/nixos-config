@@ -19,7 +19,7 @@
   boot.initrd.luks.devices."luks-1bb26d75-1e56-449f-9a51-bb94ea8183e7".device = "/dev/disk/by-uuid/1bb26d75-1e56-449f-9a51-bb94ea8183e7";
   boot.initrd.luks.devices."luks-1bb26d75-1e56-449f-9a51-bb94ea8183e7".keyFile = "/crypto_keyfile.bin";
 
-  xserver.displayManager.setupCommands =
+  services.xserver.displayManager.setupCommands =
     let
       monitor-center = "DP-2";
       monitor-left = "DP-3";
