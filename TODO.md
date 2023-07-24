@@ -4,6 +4,7 @@
 - [ ] Fix error for command not found in shell
 - [ ] Fix gnome-keyring error - Environment variable $SSH_AUTH_SOCK not set, ignoring. gnome-keyring-daemon: no process capabilities, insecure memory might get used
 - [ ] Fix cannot pair with bluetooth speakers
+- [ ] Fix scale of alacritty font on laptop
 - [ ] Add hardware-configuration.nix:
   - [ ] desktop
 - [ ] Add nvida drivers (desktop)
