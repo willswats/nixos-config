@@ -1,8 +1,7 @@
 # TODO
 
-- [ ] Fix starting on tty1 (instead of tty7 for lightdm)
 - [ ] Fix error for command not found in shell
-- [ ] Fix gnome-keyring error Environment variable $SSH_AUTH_SOCK not set, ignoring. gnome-keyring-daemon: no process capabilities, insecure memory might get used
+- [ ] Fix gnome-keyring error - Environment variable $SSH_AUTH_SOCK not set, ignoring. gnome-keyring-daemon: no process capabilities, insecure memory might get used
 - [ ] Add hardware-configuration.nix:
   - [ ] desktop
 - [ ] Add nvida drivers (desktop)
@@ -15,6 +14,7 @@
   - [ ] wallpaper
   - [ ] lockscreen
   - [ ] directoriesToCreate
+  - [ ] bookmarks
 
 ## Firefox
 
