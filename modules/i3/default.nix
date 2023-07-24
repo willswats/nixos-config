@@ -40,7 +40,7 @@
         exec = "exec --no-startup-id";
         refresh_i3status = "${pkgs.killall}/bin/killall - SIGUSR1 ${pkgs.i3status}/bin/i3status";
 
-        directories = "~/AppImages ~/Drive ~/Code ~/Emulation/ROMs ~/Emulation/WADs";
+        directories = "~/AppImages ~/Drive ~/Code";
         image = "~/Code/nixos-config/wallpapers/minimal-desert.png";
 
         ws1 = "1";
@@ -65,7 +65,6 @@
         playerctl = "${pkgs.playerctl}/bin/playerctl";
         brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
         lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
-        otd-daemon = "${pkgs.opentabletdriver}/bin/otd-daemon";
         rclone = "${pkgs.rclone}/bin/rclone";
 
         # https://github.com/catppuccin/i3
@@ -249,11 +248,6 @@
             }
             {
               command = "${lxpolkit}";
-              always = false;
-              notification = false;
-            }
-            {
-              command = "${otd-daemon}";
               always = false;
               notification = false;
             }

@@ -54,7 +54,6 @@
       virt-manager
       rclone
       rclone-browser
-      opentabletdriver
     ];
   };
 }
