@@ -2,19 +2,20 @@
 
 {
   imports = [
-    ../modules/theme
-    ../modules/fonts
-    ../modules/bookmarks
-    ../modules/git
-    ../modules/firefox
-    ../modules/i3
-    ../modules/neovim
-    ../modules/fish
-    ../modules/alacritty
-    ../modules/bottom
-    ../modules/lazygit
-    ../modules/rustup
-    ../modules/mullvad-vpn
+    ../modules/theme/home.nix
+    ../modules/fonts/home.nix
+    ../modules/bookmarks/home.nix
+    ../modules/git/home.nix
+    ../modules/firefox/home.nix
+    ../modules/i3/home.nix
+    ../modules/neovim/home.nix
+    ../modules/fish/home.nix
+    ../modules/alacritty/home.nix
+    ../modules/bottom/home.nix
+    ../modules/lazygit/home.nix
+    ../modules/rustup/home.nix
+    ../modules/pcmanfm/home.nix
+    ../modules/mullvad-vpn/home.nix
   ];
 
   programs.home-manager.enable = true;

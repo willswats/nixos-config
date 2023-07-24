@@ -1,4 +1,4 @@
-{ ... }:
+{ config, pkgs, ... }:
 
 {
   # This removes the need for the command "rustup default stable" on fresh install
