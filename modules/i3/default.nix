@@ -55,6 +55,7 @@
         ws10 = "10";
 
         menu = "${pkgs.rofi}/bin/rofi";
+        feh = "${pkgs.feh}/bin/feh";
         lockscreen = "${pkgs.betterlockscreen}/bin/betterlockscreen";
         terminal = "${pkgs.alacritty}/bin/alacritty";
         editor = "${pkgs.neovim}/bin/nvim";
@@ -237,7 +238,7 @@
               notification = false;
             }
             {
-              command = "feh --bg-fill ${image} --bg-fill ${image}";
+              command = "${feh} --bg-fill ${image} --bg-fill ${image}";
               always = false;
               notification = false;
             }
