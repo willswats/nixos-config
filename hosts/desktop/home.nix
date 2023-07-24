@@ -21,10 +21,17 @@
 
   xsession.windowManager.i3.config.startup =
     let
+      monitor-center = "DP-2";
+      monitor-left = "DP-3";
       otd-daemon = "${pkgs.opentabletdriver}/bin/otd-daemon";
       directories = "~/Games/WADs ~/Games/ROMs";
     in
     [
+      {
+        command = "xrandr --output ${monitor-center} --primary --mode 1920x1080 --rate 144.00 --rotate normal --output ${monitor-left} --mode 1920x1080 --rate 144.00 --rotate right --left-of ${monitor-center}";
+        always = false;
+        notification = false;
+      }
       {
         command = "${otd-daemon}";
         always = false;
