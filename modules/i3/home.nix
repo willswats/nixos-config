@@ -189,8 +189,6 @@
             "${mod}+x" = "split h"; # Move split to horizontal
             "${mod}+Tab" = "layout toggle all"; # Toggle between layouts
 
-            "floating_modifier" = "${mod}"; # Use Mouse+$mod to drag floating windows to their wanted position
-
             "${mod}+f" = "fullscreen toggle";
             "${mod}+space" = "floating toggle"; # Toggle floating window
             "${mod}+Shift+space" = "focus mode_toggle"; # Focus floating window
