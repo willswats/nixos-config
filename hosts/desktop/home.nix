@@ -6,8 +6,6 @@
   ];
 
   home.packages = with pkgs; [
-    # Utilities
-    opentabletdriver
     # Games
     steam
     retroarch
@@ -36,17 +34,11 @@
       ws9 = "9";
       ws10 = "10";
 
-      otd-daemon = "${pkgs.opentabletdriver}/bin/otd-daemon";
       directories = "~/Games/WADs ~/Games/ROMs";
     in
     {
       config.startup =
         [
-          {
-            command = "${otd-daemon}";
-            always = false;
-            notification = false;
-          }
           {
             command = "mkdir -p ${directories}";
             always = false;
