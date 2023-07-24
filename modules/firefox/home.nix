@@ -224,6 +224,7 @@
         "browser.contentblocking.category" = "strict"; # Content blocking strict
         "browser.tabs.firefox-view" = false; # Disable firefox view
         "browser.aboutConfig.showWarning" = false; # Disable about config warning
+        "browser.toolbars.bookmarks.visibility" = "newtab"; # Only show toolbar on new tab
         "browser.newtabpage.activity-stream.showSearch" = false; # Don't show search on new tab page
         "browser.newtabpage.activity-stream.feeds.topsites" = false; # Disable new tab page top sites
         "browser.newtabpage.activity-stream.feeds.section.topstories" = false; # Disable new tab page recommended by pocket
