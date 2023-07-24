@@ -94,7 +94,7 @@ Once you are logged in to GitHub with SSH, run the following and then commit the
 
 ```bash
 git clone git@github.com:willswats/nixos-config.git ~/nixos-config-temp
-cp ~/nixos-config-temp/.git ~/Code/nixos-config
+cp -r ~/nixos-config-temp/.git ~/Code/nixos-config
 rm -rf ~/nixos-config-temp
 ```
 
