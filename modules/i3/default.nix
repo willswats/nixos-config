@@ -237,7 +237,7 @@
               notification = false;
             }
             {
-              command = "${lockscreen} -w";
+              command = "feh --bg-fill ${image} --bg-fill ${image}";
               always = false;
               notification = false;
             }
