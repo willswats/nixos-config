@@ -17,12 +17,12 @@ My NixOS config.
 
 1. Write the NixOS GNOME ISO to a USB and boot into it.
 2. Run the installer and set the following:
-   - username and password
-   - enable unfree packages
-   - erase the disk
-   - enable swap with hibernation (desktop and laptop)
-   - enable encryption (desktop and laptop)
-   - desktop environment: no desktop
+   - Username and password
+   - Enable unfree packages
+   - Erase the disk
+   - Enable swap with hibernation (desktop and laptop)
+   - Enable encryption (desktop and laptop)
+   - Desktop environment: no desktop
 3. Reboot the system.
 
 ## Installing nixos-config
@@ -46,24 +46,64 @@ sudo nmcli dev wifi connect network-ssid password "network-password"
 Enter a nix-shell with git:
 
 ```bash
-nix-shell -p git
+nix-shell -p git nvim
 ```
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/willswats/nixos-config.git
+mkdir ~/Code
+git clone https://github.com/willswats/nixos-config.git ~/Code
 ```
+
+### Add hardware-configuration.nix
+
+Add the `hardware-configuration.nix` to your chosen host (replace host-name with the desired host):
+
+```bash
+mv /etc/nixos/hardware-configuration.nix ~/nixos-config/hosts/host-name
+```
+
+### Add boot.initrd.luks.devices Information
+
+Copy the `boot.initrd.luks.devices` from `/etc/nixos/configuration.nix` to `~/nixos-config/hosts/host-name/default.nix` with `host-name` being your desired host.
 
 ### Build the Config
 
-CD into the cloned repository and run (replace host-name with the desired host name):
+```bash
+cd ~/Code/nixos-config
+```
+
+Remove the `.git` directory (otherwise the build is based off of git):
+
+```bash
+rm -rf ./.git
+```
+
+Run (replace host-name with the desired host name):
 
 ```bash
 sudo nixos-rebuild switch --flake .#host-name
 ```
 
-Note to self: once you are logged in with SSH, clone the repository with SSH into `~/Code` and delete the old clone.
+Reboot the system:
+
+```bash
+reboot
+```
+
+### Note to self
+
+Once you are logged in with SSH, run the following:
+
+```bash
+git clone git@github.com:willswats/nixos-config.git ~/nixos-config-temp
+cp ~/nixos-config-temp/.git ~/Code/nixos-config
+rm -rf ~/nixos-config-temp
+cd ~/Code/nixos-config
+```
+
+Then commit the changes.
 
 ## Non-Declarative Setups
 
@@ -71,7 +111,7 @@ Note to self: once you are logged in with SSH, clone the repository with SSH int
 
 1. [Firefox](./docs/utilities/firefox.md)
 2. [SSH](./docs/utilities/ssh.md)
-3. [rclone](./docs/utilities/rclone.md)
+3. [rclone](./docs/utilities/rclo##ne.md)
 
 ### Games (desktop)
 
