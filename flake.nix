@@ -29,7 +29,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.will = import ./hosts/home.nix;
+            home-manager.users.will = import ./hosts/laptop/home.nix;
           }
         ];
       };
@@ -41,7 +41,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.will = import ./hosts/home.nix;
+            home-manager.users.will = import ./hosts/virtual/home.nix;
           }
         ];
       };
