@@ -44,10 +44,6 @@
       layout = "gb";
       xkbVariant = "";
 
-      resolutions = [
-        { x = 1920; y = 1080; }
-      ];
-
       libinput = {
         enable = true;
 
@@ -63,6 +59,7 @@
       desktopManager = {
         xterm.enable = false;
       };
+
       excludePackages = with pkgs; [ xterm ];
 
       displayManager = {
@@ -99,6 +96,7 @@
       windowManager.i3 = {
         enable = true;
         extraPackages = with pkgs; [
+          dmenu
           i3status
           i3lock
         ];

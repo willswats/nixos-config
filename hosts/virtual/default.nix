@@ -12,5 +12,9 @@
     device = "/dev/vda";
   };
 
+  xserver.resolutions = [
+    { x = 1920; y = 1080; }
+  ];
+
   networking.hostName = "will-virtual";
 }
