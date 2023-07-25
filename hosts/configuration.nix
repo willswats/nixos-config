@@ -87,6 +87,21 @@
     bluetooth.enable = true;
   };
 
+  # services.printing.enable = true;
+  # sound.enable = true;
+  # security.rtkit.enable = true;
+  # services.pipewire = {
+  #   enable = true;
+  #   alsa.enable = true;
+  #   alsa.support32Bit = true;
+  #   pule.enable = true;
+
+  # for jack apps
+  # jack.enable = true
+
+  # media-session.enable = true;
+  # };
+
   nix = {
     # Setup flakes
     package = pkgs.nixFlakes;
