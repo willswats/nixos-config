@@ -6,6 +6,7 @@
     ../modules/i3
     ../modules/plymouth
     ../modules/pcmanfm
+    ../modules/virt-manager
     ../modules/mullvad-vpn
   ];
 

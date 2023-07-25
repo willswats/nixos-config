@@ -52,7 +52,6 @@
       gimp
       shotcut
       fragments
-      virt-manager
       rclone
       rclone-browser
     ];
