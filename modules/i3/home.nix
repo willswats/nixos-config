@@ -1,5 +1,8 @@
 { lib, config, pkgs, ... }:
 
+let
+  lockCmd = "${pkgs.i3lock}/bin/i3lock -c 1e1e2e";
+in
 {
   imports = [
     ../dunst/home.nix
@@ -21,8 +24,9 @@
     picom.enable = true;
     network-manager-applet.enable = true;
     blueman-applet.enable = true;
-    betterlockscreen = {
+    screen-locker = {
       enable = true;
+      lockCmd = lockCmd;
       inactiveInterval = 60; # minutes (maximum 1 hour)
     };
   };
@@ -52,7 +56,6 @@
 
         menu = "${pkgs.rofi}/bin/rofi";
         feh = "${pkgs.feh}/bin/feh";
-        lockscreen = "${pkgs.betterlockscreen}/bin/betterlockscreen";
         terminal = "${pkgs.alacritty}/bin/alacritty";
         editor = "${pkgs.neovim}/bin/nvim";
         web_browser = "${pkgs.firefox}/bin/firefox";
@@ -199,7 +202,7 @@
             "${mod}+q" = "kill";
             "${mod}+Shift+r" = "restart";
             "${mod}+Shift+e" = "${exec} i3-msg exit";
-            "${mod}+semicolon" = "${exec} ${lockscreen} -l";
+            "${mod}+semicolon" = "${exec} ${lockCmd}";
 
             "${mod}+d" = "${exec} ${menu} -show drun";
             "${mod}+Return" = "${exec} ${terminal}";
@@ -226,11 +229,6 @@
             };
           };
           startup = [
-            {
-              command = "${lockscreen} -u ${image}";
-              always = false;
-              notification = false;
-            }
             {
               command = "${feh} --bg-fill ${image} --bg-fill ${image}";
               always = false;
