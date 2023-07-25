@@ -1,8 +1,6 @@
 # TODO
 
 - [ ] Add way of accepting dunst notification
-- [ ] Fix scale of alacritty font on laptop
-- [ ] Fix nvida drivers (desktop)
 - [ ] Fix opening on tty1 instead of tty7 (lightdm)
 - [ ] Fix error for command not found in shell
 
@@ -10,11 +8,10 @@
 
 - [ ] Add global variables:
   - [ ] hostname
-  - [ ] wallpaper
-  - [ ] lockscreen
-  - [ ] directoriesToCreate
-  - [ ] bookmarks
   - [ ] monitors
+  - [ ] wallpaper
+  - [ ] fontSize
+  - [ ] directoriesToCreate / bookmarks
 
 ## Firefox
 
