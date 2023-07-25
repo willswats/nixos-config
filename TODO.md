@@ -1,5 +1,6 @@
 # TODO
 
+- [ ] Add osu config
 - [ ] Fix cannot pair with bluetooth speakers
 - [ ] Fix scale of alacritty font on laptop
 - [ ] Fix opening on tty1 instead of tty7 (lightdm)
