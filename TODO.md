@@ -1,10 +1,6 @@
 # TODO
 
-- [ ] Prevent pcmanfm overriding config
-- [ ] Add osu config
 - [ ] Fix scale of alacritty font on laptop
-- [ ] Fix cannot pair with bluetooth speakers
-
 - [ ] Fix nvida drivers (desktop)
 - [ ] Fix opening on tty1 instead of tty7 (lightdm)
 - [ ] Fix error for command not found in shell
