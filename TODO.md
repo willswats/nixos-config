@@ -37,6 +37,7 @@
 ## Other
 
 - [ ] Add spice (virtual)
+- [ ] Fix plymouth only showing on power off
 - [ ] Mullvad GUI error - Inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
 - [ ] Fix Catppuccin black borders in lightdm
 - [ ] Move from gnome-keyring
