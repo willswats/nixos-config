@@ -2,7 +2,7 @@
 
 ## High priority
 
-- [ ] Look into pipewire
+- [ ] Look into pipewire (comment)
 - [ ] Fix opening on tty1 instead of tty7 (lightdm):
   - [ ] Create a nixos-unstable vm
   - [ ] Set DE as gnome and view configuration file to see how it is set
