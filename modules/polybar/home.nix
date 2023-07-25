@@ -36,6 +36,7 @@ in
 
         module-margin = "1";
 
+        # font-N = <fontconfig pattern>;<vertical offset>
         font-0 = "Hack Nerd Font:size=14;2";
 
         modules-left = "xworkspaces i3 xwindow";
