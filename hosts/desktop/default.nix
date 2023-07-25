@@ -5,6 +5,7 @@
     ../configuration.nix
     ./hardware-configuration.nix
     ../../modules/opentabletdriver
+    # ../../modules/nvidia
   ];
 
   # Bootloader.
