@@ -24,7 +24,7 @@
 
 #### letsblock.it
 
-1. Go to [here](https://letsblock.it/) and sign.
+1. Go to [here](https://letsblock.it/) and sign in.
 2. Add your custom list to ublock [here](https://letsblock.it/help/use-list)
 
 ### Consent-O-Matic
