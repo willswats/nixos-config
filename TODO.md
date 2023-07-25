@@ -1,6 +1,9 @@
 # TODO
 
-- [ ] Fix opening on tty1 instead of tty7 (lightdm)
+- [ ] Fix opening on tty1 instead of tty7 (lightdm):
+  - [ ] Create a nixos-unstable vm
+  - [ ] Set DE as gnome and view configuration file to see how it is set
+  - [ ] Test if it's necessary to add nixos-unstable channel to fix command not found
 
 ## Home Manager
 
