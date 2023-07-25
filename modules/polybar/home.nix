@@ -16,6 +16,9 @@ in
 {
   services.polybar = {
     enable = true;
+    package = pkgs.polybar.override {
+      i3Support = true;
+    };
     script = "polybar &";
 
     settings = {

@@ -20,7 +20,6 @@
 ## i3
 
 - [ ] Lock screen is set to 10 minutes, not one hour
-- [ ] polybar can't find i3 (doesn't show resize mode) - [issue](https://github.com/nix-community/home-manager/issues/213)
 
 ## Neovim
 
