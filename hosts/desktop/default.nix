@@ -9,7 +9,10 @@
   ];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot = {
+    enable = true;
+    configurationLimit = 5; # Limit the amount of configurations
+  };
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Setup keyfile
