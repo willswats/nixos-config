@@ -1,5 +1,6 @@
 # TODO
 
+- [ ] Add way of accepting dunst notification
 - [ ] Fix scale of alacritty font on laptop
 - [ ] Fix nvida drivers (desktop)
 - [ ] Fix opening on tty1 instead of tty7 (lightdm)
