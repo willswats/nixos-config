@@ -215,6 +215,19 @@
                 }
               ];
             }
+            {
+              name = "Temp";
+              bookmarks = [
+                {
+                  name = "Matthias nixos-config";
+                  url = "https://github.com/MatthiasBenaets/nixos-config";
+                }
+                {
+                  name = "nix issue";
+                  url = "https://discourse.nixos.org/t/nvidia-drivers-failed-to-start-x11-server/30928";
+                }
+              ];
+            }
           ];
         }
       ];
