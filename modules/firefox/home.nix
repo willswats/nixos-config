@@ -69,7 +69,7 @@
               bookmarks = [
                 {
                   name = "YouTube";
-                  url = "https://youtube.com/subscriptions";
+                  url = "https://youtube.com/feed/subscriptions";
                 }
                 {
                   name = "Twitch";
