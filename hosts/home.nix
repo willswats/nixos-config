@@ -20,10 +20,10 @@
 
   programs.home-manager.enable = true;
 
-  programs.nix-index = {
-    enable = true;
-    enableFishIntegration = true;
-  };
+  # programs.nix-index = {
+  #   enable = true;
+  #   enableFishIntegration = true;
+  # };
 
   home = {
     username = "will";

@@ -1,7 +1,6 @@
 # TODO
 
 - [ ] Fix opening on tty1 instead of tty7 (lightdm)
-- [ ] Fix error for command not found in shell
 
 ## Home Manager
 

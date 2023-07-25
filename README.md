@@ -8,6 +8,7 @@ My NixOS config.
 - [Install nixos-config](#installing-nixos-config)
   - [Connect to Wi-Fi](#connect-to-wi-fi)
   - [Clone the Repository](#clone-the-repository)
+  - [Add the nixos-unstable Channel](#add-the-nixos-unstable-channel)
   - [Build the Config](#build-the-config)
 - [Non-Declarative Setups](#non-declarative-setups)
   - [Utilities (all hosts)](#utilities-all-hosts)
@@ -67,6 +68,14 @@ cp /etc/nixos/hardware-configuration.nix ~/Code/nixos-config/hosts/host-name/
 ### Add boot.initrd.luks.devices Information
 
 Copy the text that starts with `boot.initrd.luks.devices` from `/etc/nixos/configuration.nix` to `~/Code/nixos-config/hosts/host-name/default.nix`, with `host-name` being your desired host.
+
+### Add the nixos-unstable Channel
+
+To ensure `command-not-found` works, root must have a nixos channel (not used for anything else as the flake defines the channel):
+
+```bash
+sudo nix-channel --add https://nixos.org/channels/nixos-unstable sudo nixos nix-channel --update
+```
 
 ### Build the Config
 
