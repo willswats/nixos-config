@@ -1,6 +1,5 @@
 # TODO
 
-- [ ] Add way of accepting dunst notification
 - [ ] Fix opening on tty1 instead of tty7 (lightdm)
 - [ ] Fix error for command not found in shell
 
@@ -33,6 +32,7 @@
 ## Other
 
 - [ ] Add spice (virtual)
+- [ ] Add way of accepting dunst notification
 - [ ] Fix plymouth only showing on power off
 - [ ] Mullvad GUI error - Inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
 - [ ] Fix Catppuccin black borders in lightdm
