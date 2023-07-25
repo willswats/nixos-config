@@ -35,4 +35,6 @@
         workspace ${ws10} output ${monitor}
       '';
     };
+
+  programs.alacritty.settings.font.size = 10;
 }

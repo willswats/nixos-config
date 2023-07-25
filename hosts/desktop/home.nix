@@ -61,7 +61,6 @@
       '';
     };
 
-
   gtk.gtk3.bookmarks =
     let
       bookmarkStart = "file:///home/will/";
@@ -69,4 +68,6 @@
     [
       "${bookmarkStart}Games Games"
     ];
+
+  programs.alacritty.settings.font.size = 14;
 }
