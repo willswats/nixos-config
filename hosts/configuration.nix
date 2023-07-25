@@ -5,6 +5,7 @@
     ../modules/theme
     ../modules/i3
     ../modules/plymouth
+    ../modules/pcmanfm
     ../modules/mullvad-vpn
   ];
 
