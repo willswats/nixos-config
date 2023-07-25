@@ -7,7 +7,6 @@
 - [ ] Fix nvida drivers (desktop)
 - [ ] Fix opening on tty1 instead of tty7 (lightdm)
 - [ ] Fix error for command not found in shell
-- [ ] Add spice (virtual)
 
 ## Home Manager
 
@@ -39,6 +38,7 @@
 
 ## Other
 
+- [ ] Add spice (virtual)
 - [ ] Mullvad GUI error - Inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
 - [ ] Fix Catppuccin black borders in lightdm
 - [ ] Move from gnome-keyring
