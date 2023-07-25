@@ -1,5 +1,6 @@
 # TODO
 
+- [ ] Prevent pcmanfm overriding config
 - [ ] Add osu config
 - [ ] Fix scale of alacritty font on laptop
 - [ ] Fix cannot pair with bluetooth speakers
