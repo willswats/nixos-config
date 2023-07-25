@@ -2,6 +2,7 @@
 
 ## High priority
 
+- [ ] Look into pipewire
 - [ ] Fix opening on tty1 instead of tty7 (lightdm):
   - [ ] Create a nixos-unstable vm
   - [ ] Set DE as gnome and view configuration file to see how it is set
@@ -12,9 +13,7 @@
   - [ ] Current indenting by 4, should be 2
   - [ ] No option for updating ToC in lsp actions
 - [ ] Fix plymouth only showing on power off
-
-## Home Manager
-
+- [ ] Lock screen is set to 10 minutes, not one hour
 - [ ] Add global variables:
   - [ ] hostname
   - [ ] monitors
@@ -25,10 +24,6 @@
 ## Firefox
 
 - [ ] Install extensions from NUR
-
-## i3
-
-- [ ] Lock screen is set to 10 minutes, not one hour
 
 ## Neovim
 
