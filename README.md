@@ -4,27 +4,28 @@ My NixOS config.
 
 ## Table of Contents
 
-- [Installaing NixOS](#installing-nixos)
+- [Installing NixOS](#installing-nixos)
 - [Install nixos-config](#installing-nixos-config)
   - [Connect to Wi-Fi](#connect-to-wi-fi)
   - [Clone the Repository](#clone-the-repository)
-  - [Add the nixos-unstable Channel](#add-the-nixos-unstable-channel)
   - [Build the Config](#build-the-config)
+  - [Add the nixos-unstable Channel](#add-the-nixos-unstable-channel)
 - [Non-Declarative Setups](#non-declarative-setups)
   - [Utilities (all hosts)](#utilities-all-hosts)
   - [Games (desktop)](#games-desktop)
 
 ## Installing NixOS
 
-1. Write the NixOS GNOME ISO to a USB and boot into it.
-2. Run the installer and set the following:
+1. Get the latest NixOS GNOME ISO from [here](https://releases.nixos.org/?prefix=nixos/unstable/).
+2. Write the NixOS GNOME ISO to a USB and boot into it.
+3. Run the installer and set the following:
    - Username and password
    - Enable unfree packages
    - Erase the disk
    - Enable swap with hibernation (desktop and laptop)
    - Enable encryption (desktop and laptop)
    - Desktop environment: no desktop
-3. Reboot the system.
+4. Reboot the system.
 
 ## Installing nixos-config
 
@@ -50,7 +51,7 @@ Enter a nix-shell with git and neovim:
 nix-shell -p git nvim
 ```
 
-Clone the repository to `~/Code/nixos-config:
+Clone the repository to `~/Code/nixos-config`:
 
 ```bash
 mkdir ~/Code
@@ -68,14 +69,6 @@ cp /etc/nixos/hardware-configuration.nix ~/Code/nixos-config/hosts/host-name/
 ### Add boot.initrd.luks.devices Information
 
 Copy the text that starts with `boot.initrd.luks.devices` from `/etc/nixos/configuration.nix` to `~/Code/nixos-config/hosts/host-name/default.nix`, with `host-name` being your desired host.
-
-### Add the nixos-unstable Channel
-
-To ensure `command-not-found` works, root must have a nixos channel (not used for anything else as the flake defines the channel):
-
-```bash
-sudo nix-channel --add https://nixos.org/channels/nixos-unstable sudo nixos nix-channel --update
-```
 
 ### Build the Config
 
@@ -95,6 +88,14 @@ Reboot the system:
 
 ```bash
 reboot
+```
+
+### Add the nixos-unstable Channel
+
+To ensure `command-not-found` works, root must have a nixos channel (not used for anything else as the flake defines the channel):
+
+```bash
+sudo nix-channel --add https://nixos.org/channels/nixos-unstable sudo nixos nix-channel --update
 ```
 
 ### Note to Self
