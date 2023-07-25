@@ -22,6 +22,11 @@
 
 - Run in Private Windows: Allow
 
+#### letsblock.it
+
+1. Go to [here](https://letsblock.it/) and sign.
+2. Add your custom list to ublock [here](https://letsblock.it/help/use-list)
+
 ### Consent-O-Matic
 
 - Preferences and Functionality: Enabled
