@@ -14,7 +14,6 @@
       };
 
       displayManager = {
-        # sddm.enable = true;
         lightdm = {
           enable = true;
           background = ../../wallpapers/minimal-desert.png;
