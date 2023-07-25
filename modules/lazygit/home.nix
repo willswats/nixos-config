@@ -6,6 +6,7 @@
   programs.lazygit = {
     enable = true;
     settings = {
+      disableForcePushing = true;
       gui.theme = {
         lightTheme = false;
         activeBorderColor = [ "#a6e3a1" "bold" ];
