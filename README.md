@@ -19,15 +19,13 @@ My NixOS config.
 1. Get the latest NixOS GNOME ISO from [here](https://releases.nixos.org/?prefix=nixos/unstable/).
 2. Write the NixOS GNOME ISO to a USB and boot into it.
 3. Run the installer and set the following:
-
-- Username and password
-- Use the same password for the administrator account
-- Desktop: No desktop
-- Allow unfree packages
-- Erase the disk
-- Enable swap with hibernation (desktop and laptop)
-- Enable encryption (desktop and laptop)
-
+   - Username and password
+   - Use the same password for the administrator account
+   - Desktop: No desktop
+   - Allow unfree packages
+   - Erase the disk
+   - Enable swap with hibernation (desktop and laptop)
+   - Enable encryption (desktop and laptop)
 4. Reboot the system.
 
 ## Installing nixos-config
