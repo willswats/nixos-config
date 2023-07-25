@@ -5,7 +5,7 @@
     ../configuration.nix
     ./hardware-configuration.nix
     ../../modules/opentabletdriver
-    # ../../modules/nvidia
+    ../../modules/nvidia
   ];
 
   # Bootloader.
@@ -28,7 +28,7 @@
   services.xserver.displayManager.setupCommands =
     let
       monitor-center = "DP-2";
-      monitor-left = "DP-3";
+      monitor-left = "DP-0";
     in
     ''
       ${pkgs.xorg.xrandr}/bin/xrandr --output ${monitor-center} --primary --mode 1920x1080 --rate 144.00 --rotate normal --output ${monitor-left} --mode 1920x1080 --rate 144.00 --rotate right --left-of ${monitor-center}
