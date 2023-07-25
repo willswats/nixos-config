@@ -26,6 +26,7 @@ in
     blueman-applet.enable = true;
     screen-locker = {
       enable = true;
+      xautolock.enable = true;
       lockCmd = lockCmd;
       inactiveInterval = 60; # minutes (maximum 1 hour)
     };
