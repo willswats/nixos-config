@@ -14,6 +14,7 @@
   - [ ] No option for updating ToC in lsp actions
 - [ ] Fix plymouth only showing on power off
 - [ ] Lock screen is set to 10 minutes, not one hour
+- [ ] Setup test printing
 - [ ] Add global variables:
   - [ ] hostname
   - [ ] monitors
