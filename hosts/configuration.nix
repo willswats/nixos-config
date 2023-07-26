@@ -2,14 +2,13 @@
 
 {
   imports = [
+    ../modules/pipewire
     ../modules/theme
     ../modules/i3
     ../modules/plymouth
     ../modules/pcmanfm
     ../modules/mullvad-vpn
   ];
-
-  networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/London";
 
@@ -27,6 +26,8 @@
       LC_TIME = "en_GB.UTF-8";
     };
   };
+
+  console.keyMap = "uk";
 
   services.xserver = {
     enable = true;
@@ -46,9 +47,14 @@
     };
   };
 
+  # Networking
+  networking.networkmanager.enable = true;
+
+  # Enable polkit
   security.polkit.enable = true;
 
-  console.keyMap = "uk";
+  # Enable bluetooth 
+  hardware.bluetooth.enable = true;
 
   users.users.will = {
     isNormalUser = true;
@@ -59,13 +65,6 @@
 
   programs.fish.enable = true;
 
-  nixpkgs.config = {
-    # Allow unfree packages
-    allowUnfree = true;
-    # Explicit PulseAudio support in applications
-    pulseaudio = true;
-  };
-
   environment = {
     variables = {
       TERMINAL = "alacritty";
@@ -74,32 +73,6 @@
     # Add shells to /etc/shells
     shells = with pkgs; [ fish ];
   };
-
-  hardware = {
-    # Enable PulseAudio
-    pulseaudio = {
-      enable = true;
-      support32Bit = true;
-      package = pkgs.pulseaudioFull; # enable extra codecs
-    };
-    # Enable bluetooth
-    bluetooth.enable = true;
-  };
-
-  # services.printing.enable = true;
-  # sound.enable = true;
-  # security.rtkit.enable = true;
-  # services.pipewire = {
-  #   enable = true;
-  #   alsa.enable = true;
-  #   alsa.support32Bit = true;
-  #   pule.enable = true;
-
-  # for jack apps
-  # jack.enable = true
-
-  # media-session.enable = true;
-  # };
 
   nix = {
     # Setup flakes
@@ -113,6 +86,11 @@
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
+  };
+
+  nixpkgs.config = {
+    # Allow unfree packages
+    allowUnfree = true;
   };
 
   system = {
