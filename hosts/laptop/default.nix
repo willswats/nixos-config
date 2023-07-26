@@ -4,6 +4,7 @@
   imports = [
     ../configuration.nix
     ./hardware-configuration.nix
+    ../../modules/plymouth
     ../../modules/virt-manager
   ];
 

@@ -3,9 +3,8 @@
 {
   imports = [
     ../modules/pipewire
-    ../modules/theme
     ../modules/i3
-    ../modules/plymouth
+    ../modules/theme
     ../modules/pcmanfm
     ../modules/mullvad-vpn
   ];
