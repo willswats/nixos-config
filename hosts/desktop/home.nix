@@ -3,6 +3,7 @@
 {
   imports = [
     ../home.nix
+    ../../modules/opentabletdriver/home.nix
   ];
 
   home.packages = with pkgs; [
