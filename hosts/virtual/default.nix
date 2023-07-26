@@ -4,6 +4,7 @@
   imports = [
     ../configuration.nix
     ./hardware-configuration.nix
+    ../../modules/spice
   ];
 
   boot.loader.grub = {
@@ -15,9 +16,6 @@
 
   # Set resolution
   services.xserver.resolutions = [{ x = 1920; y = 1080; }];
-
-  # Enable Spice vdagent daemon
-  services.spice-vdagentd.enable = true;
 
   networking.hostName = "will-virtual";
 }

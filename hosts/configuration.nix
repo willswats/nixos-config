@@ -3,6 +3,7 @@
 {
   imports = [
     ../modules/pipewire
+    ../modules/plymouth
     ../modules/i3
     ../modules/theme
     ../modules/pcmanfm

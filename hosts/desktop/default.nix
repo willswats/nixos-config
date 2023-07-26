@@ -4,7 +4,6 @@
   imports = [
     ../configuration.nix
     ./hardware-configuration.nix
-    ../../modules/plymouth
     ../../modules/virt-manager
     ../../modules/opentabletdriver
     ../../modules/nvidia

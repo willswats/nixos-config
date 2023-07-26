@@ -5,15 +5,8 @@
     ../home.nix
   ];
 
-
-  home.packages = with pkgs; [
-    spice
-  ];
-
   xsession.windowManager.i3 =
     let
-      spice-vdgagent = "${pkgs.spice-vdagent}/bin/spice-vdagent";
-
       monitor = "Virtual-1";
 
       ws1 = "1";
@@ -28,14 +21,6 @@
       ws10 = "10";
     in
     {
-      config.startup =
-        [
-          {
-            command = "${spice-vdgagent}";
-            always = false;
-            notification = false;
-          }
-        ];
       # Fixes i3 starting on ws10 - https://github.com/nix-community/home-manager/issues/695
       extraConfig = ''
         workspace ${ws1} output ${monitor}
