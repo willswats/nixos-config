@@ -2,7 +2,6 @@
 
 ## High priority
 
-- [ ] Add spice (virtual)
 - [ ] Fix opening on tty1 instead of tty7 (lightdm):
 - [ ] Add way of accepting dunst notification
 - [ ] Fix markdown issues:
