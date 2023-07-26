@@ -4,6 +4,7 @@
   imports = [
     ../configuration.nix
     ./hardware-configuration.nix
+    ../../modules/virt-manager
     ../../modules/opentabletdriver
     ../../modules/nvidia
   ];
