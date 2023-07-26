@@ -47,14 +47,14 @@
     };
   };
 
-  # Networking
+  # Enable networking
   networking.networkmanager.enable = true;
-
-  # Enable polkit
-  security.polkit.enable = true;
 
   # Enable bluetooth 
   hardware.bluetooth.enable = true;
+
+  # Enable polkit
+  security.polkit.enable = true;
 
   users.users.will = {
     isNormalUser = true;

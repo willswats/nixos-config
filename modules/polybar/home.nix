@@ -14,11 +14,20 @@ let
   pink = "#f5c2e7";
 in
 {
+  xsession.windowManager.i3.config.startup = [
+    {
+      command = "systemctl --user restart polybar";
+      always = true;
+      notification = false;
+    }
+  ];
   services.polybar = {
     enable = true;
     package = pkgs.polybar.override {
       i3Support = true;
+      pulseSupport = true;
     };
+
     script = "polybar &";
 
     settings = {

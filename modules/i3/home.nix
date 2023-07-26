@@ -5,9 +5,9 @@ let
 in
 {
   imports = [
+    ../polybar/home.nix
     ../dunst/home.nix
     ../rofi/home.nix
-    ../polybar/home.nix
     ../redshift/home.nix
     ../gnome-keyring/home.nix
   ];
@@ -38,7 +38,6 @@ in
       let
         mod = config.xsession.windowManager.i3.config.modifier;
         exec = "exec --no-startup-id";
-        refresh_i3status = "${pkgs.killall}/bin/killall - SIGUSR1 ${pkgs.i3status}/bin/i3status";
 
         directories = "~/AppImages ~/Drive ~/Code";
         image = "~/Code/nixos-config/wallpapers/minimal-desert.png";
@@ -134,11 +133,11 @@ in
           };
           keybindings = lib.mkOptionDefault {
             # Raise and lower volume 
-            "XF86AudioRaiseVolume " = "${exec} ${pactl} set-sink-volume @DEFAULT_SINK@ +10% && ${refresh_i3status}";
-            "XF86AudioLowerVolume" = "${exec} ${pactl} set-sink-volume @DEFAULT_SINK@ -10% && ${refresh_i3status}";
+            "XF86AudioRaiseVolume " = "${exec} ${pactl} set-sink-volume @DEFAULT_SINK@ +10%";
+            "XF86AudioLowerVolume" = "${exec} ${pactl} set-sink-volume @DEFAULT_SINK@ -10%";
             # Mute audio and mic mute
-            "XF86AudioMute" = "${exec} ${pactl} set-sink-mute @DEFAULT_SINK@ toggle && ${refresh_i3status}";
-            "XF86AudioMicMute" = "${exec} ${pactl} set-source-mute @DEFAULT_SOURCE@ toggle && ${refresh_i3status}";
+            "XF86AudioMute" = "${exec} ${pactl} set-sink-mute @DEFAULT_SINK@ toggle";
+            "XF86AudioMicMute" = "${exec} ${pactl} set-source-mute @DEFAULT_SOURCE@ toggle";
 
             # Setup play, pause, next and previous keys
             "XF86AudioPlay" = "${exec} ${playerctl} play";
@@ -232,11 +231,6 @@ in
             {
               command = "${feh} --bg-fill ${image} --bg-fill ${image}";
               always = false;
-              notification = false;
-            }
-            {
-              command = "systemctl --user restart polybar";
-              always = true;
               notification = false;
             }
             {
