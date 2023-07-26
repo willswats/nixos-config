@@ -56,7 +56,7 @@ Clone the repository to `~/Code/nixos-config`:
 
 ```bash
 mkdir ~/Code
-git clone https://github.com/willswats/nixos-config.git ~/Code
+git clone https://github.com/willswats/nixos-config.git ~/Code/nixos-config
 ```
 
 ### Add hardware-configuration.nix
@@ -67,7 +67,7 @@ Add the `hardware-configuration.nix` to your chosen host (replace host-name with
 cp /etc/nixos/hardware-configuration.nix ~/Code/nixos-config/hosts/host-name/
 ```
 
-### Add boot.initrd.luks.devices Information
+### Add boot.initrd.luks.devices Information (desktop & laptop)
 
 Copy the text that starts with `boot.initrd.luks.devices` from `/etc/nixos/configuration.nix` to `~/Code/nixos-config/hosts/host-name/default.nix`, with `host-name` being your desired host.
 
