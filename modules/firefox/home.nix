@@ -88,8 +88,8 @@
                   url = "https://9anime.pl/home";
                 }
                 {
-                  name = "https://mangadex.org/";
-                  url = "MangaDex";
+                  name = "MangaDex";
+                  url = "https://mangadex.org/";
                 }
               ];
             }
