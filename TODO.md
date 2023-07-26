@@ -2,14 +2,17 @@
 
 ## High priority
 
-- [ ] Fix opening on tty1 instead of tty7 (lightdm):
 - [ ] Add way of accepting dunst notification
 - [ ] Fix markdown issues:
   - [ ] Current indenting by 4, should be 2
   - [ ] No option for updating ToC in lsp actions
-- [ ] Lock screen is set to 10 minutes, not one hour
 - [ ] Setup and test printing
+- [ ] Fix opening on tty1 instead of tty7 (lightdm):
+- [ ] Lock screen is set to 10 minutes, not one hour
 - [ ] Find declarative way to fix command-not-found errors with flakes
+
+## Home Manager
+
 - [ ] Add global variables:
   - [ ] hostname
   - [ ] monitors
