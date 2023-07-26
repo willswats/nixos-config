@@ -7,9 +7,9 @@
   - [ ] Current indenting by 4, should be 2
   - [ ] No option for updating ToC in lsp actions
 - [ ] Setup and test printing
+- [ ] Find declarative way to fix command-not-found errors with flakes
 - [ ] Fix opening on tty1 instead of tty7 (lightdm):
 - [ ] Lock screen is set to 10 minutes, not one hour
-- [ ] Find declarative way to fix command-not-found errors with flakes
 
 ## Home Manager
 
