@@ -8,7 +8,6 @@
 - [ ] Fix markdown issues:
   - [ ] Current indenting by 4, should be 2
   - [ ] No option for updating ToC in lsp actions
-- [ ] Fix plymouth only showing on power off
 - [ ] Lock screen is set to 10 minutes, not one hour
 - [ ] Setup and test printing
 - [ ] Find declarative way to fix command-not-found errors with flakes
