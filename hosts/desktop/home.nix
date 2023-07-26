@@ -17,7 +17,6 @@
     prismlauncher
   ];
 
-
   xsession.windowManager.i3 =
     let
       monitor-center = "DP-2";
