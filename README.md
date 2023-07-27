@@ -122,7 +122,7 @@ rm ~/.bash_history
 1. [Firefox](./docs/utilities/firefox.md)
 2. [SSH](./docs/utilities/ssh.md)
 3. [rclone](./docs/utilities/rclone.md)
-4. [virt-manager](./dosc/utilities/virt-manager)
+4. [virt-manager](./docs/utilities/virt-manager)
 
 ### Games
 
