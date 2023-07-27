@@ -1,13 +1,14 @@
 # osu
 
+## Skins
+
+Run all skin files.
+
 ## Options
 
-Add `game.ini`, `framework.ini` and `input.json` to `.local/share/osu`.
+1. Add `game.ini`, `framework.ini` and `input.json` to `.local/share/osu`.
+2. Set keybindings.
 
 ## Beatmaps
 
 Add `files` to `.local/share/osu`.
-
-## Skins
-
-Run all skin files.
