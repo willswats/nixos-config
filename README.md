@@ -93,14 +93,14 @@ rm -rf ~/nixos-config-temp
 
 ## Non-Declarative Setups
 
-### Utilities (all hosts)
+### Utilities
 
 1. [Firefox](./docs/utilities/firefox.md)
 2. [SSH](./docs/utilities/ssh.md)
 3. [virt-manager](./dosc/utilities/virt-manager)
 4. [rclone](./docs/utilities/rclone.md)
 
-### Games (desktop)
+### Games
 
 1. [steam](./docs/games/steam/steam.md)
 2. [CSGO](./docs/games/steam/csgo.md)
