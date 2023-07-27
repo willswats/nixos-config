@@ -47,9 +47,9 @@
       gimp
       shotcut
       fragments
-      popsicle
       rclone
       rclone-browser
+      popsicle
     ];
   };
 }

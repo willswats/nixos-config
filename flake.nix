@@ -8,15 +8,22 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Fix command-not-found
+    fps = {
+      url = "github:wamserma/flake-programs-sqlite";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, ... }: {
+  outputs = { nixpkgs, home-manager, fps, ... }: {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./hosts/desktop
           home-manager.nixosModules.home-manager
+          fps.nixosModules.programs-sqlite
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -29,6 +36,7 @@
         modules = [
           ./hosts/laptop
           home-manager.nixosModules.home-manager
+          fps.nixosModules.programs-sqlite
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -41,6 +49,7 @@
         modules = [
           ./hosts/virtual
           home-manager.nixosModules.home-manager
+          fps.nixosModules.programs-sqlite
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
