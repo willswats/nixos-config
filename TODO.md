@@ -2,6 +2,7 @@
 
 ## Home Manager
 
+- [ ] Fix warning on rebuild
 - [ ] Lock screen is set to 10 minutes, not one hour
 - [ ] Add global variables:
   - [ ] hostname
