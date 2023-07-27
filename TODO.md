@@ -22,7 +22,7 @@
 
 ## Firefox
 
-- [ ] Install extensions from NUR
+- [ ] Install extensions from NUR - [example](https://github.com/rhoriguchi/nixos-setup/tree/master)
 
 ## Neovim
 
