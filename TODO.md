@@ -2,12 +2,11 @@
 
 ## High priority
 
-- [ ] Lock screen is set to 10 minutes, not one hour
 - [ ] Automate installation of game configs
-- [ ] Setup and test printing
 
 ## Home Manager
 
+- [ ] Lock screen is set to 10 minutes, not one hour
 - [ ] Add global variables:
   - [ ] hostname
   - [ ] monitors
@@ -30,6 +29,7 @@
 
 ## Other
 
+- [ ] Setup and test printing
 - [ ] Fix can't accept dunst notification (e.g. pairing bluetooth)
 - [ ] Mullvad GUI error - Inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
 - [ ] Fix Catppuccin black borders in lightdm
