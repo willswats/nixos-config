@@ -45,28 +45,34 @@ git clone https://github.com/willswats/nixos-config.git ~/Code/nixos-config
 
 ### Add hardware-configuration.nix
 
-Add the `hardware-configuration.nix` to your chosen host (replace host-name with the desired host):
+Add the `hardware-configuration.nix` to your chosen host (replace `host` with the desired host):
 
 ```bash
-cp /etc/nixos/hardware-configuration.nix ~/Code/nixos-config/hosts/host-name/
+cp /etc/nixos/hardware-configuration.nix ~/Code/nixos-config/hosts/host/
 ```
 
 ### Add boot.initrd.luks.devices Information (desktop & laptop)
 
-Copy the text that starts with `boot.initrd.luks.devices` from `/etc/nixos/configuration.nix` to `~/Code/nixos-config/hosts/host-name/default.nix`, with `host-name` being your desired host.
+Copy the text that starts with `boot.initrd.luks.devices` from `/etc/nixos/configuration.nix` to `~/Code/nixos-config/hosts/host/default.nix`, with `host` being your desired host.
 
 ### Build the Config
+
+CD to the directory:
+
+```bash
+cd ~/Code/nixos-config
+```
 
 Remove the `.git` directory (otherwise the build is based off of git):
 
 ```bash
-rm -rf ~/Code/nixos-config/.git
+rm -rf ./.git
 ```
 
-Run (replace host-name with the desired host name):
+Run (replace `host` with your desired host):
 
 ```bash
-sudo nixos-rebuild switch --flake .#host-name
+sudo nixos-rebuild switch --flake .#host
 ```
 
 Reboot the system:
