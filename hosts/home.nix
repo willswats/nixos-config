@@ -49,6 +49,7 @@
       fragments
       rclone
       rclone-browser
+      popsicle
     ];
   };
 }
