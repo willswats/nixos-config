@@ -2,7 +2,6 @@
 
 ## High priority
 
-- [ ] Find better solution to command-not-found
 - [ ] Lock screen is set to 10 minutes, not one hour
 - [ ] Automate installation of game configs
 - [ ] Setup and test printing
