@@ -1,4 +1,4 @@
-# Team Fortress 2
+# TF2
 
 ## Install Hud
 

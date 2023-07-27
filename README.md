@@ -111,7 +111,11 @@ rm -rf ~/nixos-config-temp
 
 ### Games (desktop)
 
-1. [steam](./docs/games/steam.md)
-1. [Slippi](./docs/games/slippi.md)
-1. [RetroArch](./docs/games/retroarch.md)
-1. [Yuzu](.edocs/games/yuzu.md)
+1. [steam](./docs/games/steam/steam.md)
+2. [CSGO](./docs/games/steam/csgo.md)
+3. [TF2](./docs/games/steam/tf2.md)
+4. [DS3](./docs/games/steam/tf2.md)
+5. [osu](./docs/games/osu.md)
+6. [Slippi](./docs/games/slippi.md)
+7. [RetroArch](./docs/games/retroarch.md)
+8. [Yuzu](./docs/games/yuzu.md)
