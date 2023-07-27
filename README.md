@@ -6,6 +6,7 @@ My NixOS config.
 
 - [Installing NixOS](#installing-nixos)
 - [Install nixos-config](#installing-nixos-config)
+  - [Connect to Wi-Fi](#connect-to-wi-fi)
   - [Clone the Repository](#clone-the-repository)
   - [Build the Config](#build-the-config)
 - [Non-Declarative Setups](#non-declarative-setups)
@@ -27,6 +28,20 @@ My NixOS config.
 4. Reboot the system.
 
 ## Installing nixos-config
+
+### Connect to Wi-Fi
+
+To list Wi-Fi access points:
+
+```bash
+nmcli dev wifi list
+```
+
+To connect to a Wi-Fi access point (replace network-ssid with the name of the network and network-password with the password of the network):
+
+```bash
+sudo nmcli dev wifi connect network-ssid password "network-password"
+```
 
 ### Clone the Repository
 
