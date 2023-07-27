@@ -2,10 +2,11 @@
 
 ## High priority
 
-- [ ] Setup and test printing
+- [ ] Find better solution to command-not-found
 - [ ] Fix opening on tty1 instead of tty7 (lightdm):
 - [ ] Lock screen is set to 10 minutes, not one hour
 - [ ] Automate installation of game configs
+- [ ] Setup and test printing
 
 ## Home Manager
 
