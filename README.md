@@ -9,8 +9,8 @@ My NixOS config.
   - [Connect to Wi-Fi](#connect-to-wi-fi)
   - [Clone the Repository](#clone-the-repository)
   - [Build the Config](#build-the-config)
+  - [Add the nixos-unstable Channel](#add-the-nixos-unstable-channel)
   - [Delete Bash History](#delete-bash-history)
-  - [Push the Changes](#push-the-changes)
 - [Non-Declarative Setups](#non-declarative-setups)
   - [Utilities](#utilities)
   - [Games](#games)
@@ -113,16 +113,6 @@ Delete `.bash_history` to ensure the Wi-Fi password is removed from it:
 
 ```bash
 rm ~/.bash_history
-```
-
-### Push the Changes
-
-Once logged in to GitHub with SSH, run the following and then commit the changes:
-
-```bash
-git clone git@github.com:willswats/nixos-config.git ~/nixos-config-temp
-cp -r ~/nixos-config-temp/.git ~/Code/nixos-config
-rm -rf ~/nixos-config-temp
 ```
 
 ## Non-Declarative Setups
