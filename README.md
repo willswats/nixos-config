@@ -20,7 +20,7 @@ My NixOS config.
 1. Download the NixOS Plasma ISO from [here](https://nixos.org/download.html).
 2. Write the NixOS Plasma ISO to a USB and boot into it.
 3. Run the installer and set the following:
-   - Language: British English
+   - Language
    - Username and password
    - Use the same password for the administrator account
    - Desktop: No desktop
