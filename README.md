@@ -98,6 +98,15 @@ Reboot the system:
 reboot
 ```
 
+### Add the nixos-unstable Channel
+
+Add the nixos-unstable channel for `nix-shell` and run `sudo nix-channel --update` to fix issues with `command-not-found`:
+
+```bash
+sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
+sudo nix-channel --update
+```
+
 ### Delete Bash History
 
 Delete `.bash_history` to ensure the Wi-Fi password is removed from it:
