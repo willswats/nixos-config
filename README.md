@@ -9,8 +9,8 @@ My NixOS config.
   - [Clone the Repository](#clone-the-repository)
   - [Build the Config](#build-the-config)
 - [Non-Declarative Setups](#non-declarative-setups)
-  - [Utilities (all hosts)](#utilities-all-hosts)
-  - [Games (desktop)](#games-desktop)
+  - [Utilities](#utilities)
+  - [Games](#games)
 
 ## Installing NixOS
 
