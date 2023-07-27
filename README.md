@@ -6,7 +6,6 @@ My NixOS config.
 
 - [Installing NixOS](#installing-nixos)
 - [Install nixos-config](#installing-nixos-config)
-  - [Connect to Wi-Fi](#connect-to-wi-fi)
   - [Clone the Repository](#clone-the-repository)
   - [Build the Config](#build-the-config)
 - [Non-Declarative Setups](#non-declarative-setups)
@@ -15,12 +14,12 @@ My NixOS config.
 
 ## Installing NixOS
 
-1. Get the latest NixOS GNOME ISO from [here](https://releases.nixos.org/?prefix=nixos/unstable/).
-2. Write the NixOS GNOME ISO to a USB and boot into it.
+1. Download the NixOS Plasma ISO from [here](https://nixos.org/download.html).
+2. Write the NixOS Plasma ISO to a USB and boot into it.
 3. Run the installer and set the following:
    - Username and password
    - Use the same password for the administrator account
-   - Desktop: No desktop
+   - Desktop: Plasma
    - Allow unfree packages
    - Erase the disk
    - Enable swap with hibernation (desktop and laptop)
@@ -28,20 +27,6 @@ My NixOS config.
 4. Reboot the system.
 
 ## Installing nixos-config
-
-### Connect to Wi-Fi
-
-To list Wi-Fi access points:
-
-```bash
-nmcli dev wifi list
-```
-
-To connect to a Wi-Fi access point (replace network-ssid with the name of the network and network-password with the password of the network):
-
-```bash
-sudo nmcli dev wifi connect network-ssid password "network-password"
-```
 
 ### Clone the Repository
 
