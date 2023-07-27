@@ -17,8 +17,8 @@ My NixOS config.
 
 ## Installing NixOS
 
-1. Download the NixOS Plasma ISO from [here](https://nixos.org/download.html).
-2. Write the NixOS Plasma ISO to a USB and boot into it.
+1. Download the NixOS GNOME ISO from [here](https://nixos.org/download.html).
+2. Write the NixOS GNOME ISO to a USB and boot into it.
 3. Run the installer and set the following:
    - Language
    - Username and password
