@@ -97,8 +97,8 @@ rm -rf ~/nixos-config-temp
 
 1. [Firefox](./docs/utilities/firefox.md)
 2. [SSH](./docs/utilities/ssh.md)
-3. [virt-manager](./dosc/utilities/virt-manager)
-4. [rclone](./docs/utilities/rclone.md)
+3. [rclone](./docs/utilities/rclone.md)
+4. [virt-manager](./dosc/utilities/virt-manager)
 
 ### Games
 
