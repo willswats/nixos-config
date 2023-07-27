@@ -14,8 +14,6 @@
     pcsx2
     rpcs3
     osu-lazer-bin
-    zandronum
-    prismlauncher
   ];
 
   xsession.windowManager.i3 =
