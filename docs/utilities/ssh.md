@@ -13,7 +13,7 @@ passphrase to something and save it somewhere.
 
 ## Adding SSH key to GitHub
 
-Optionally navigate to [here] and delete any SSH keys that may have a conflicting name to the one that is going to be created.
+Optionally navigate to [here](https://github.com/settings/keys) and delete any SSH keys that may have a conflicting name to the one that is going to be created.
 
 Navigate to [here](https://github.com/settings/ssh/new) and input a title.
 
