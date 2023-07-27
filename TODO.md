@@ -2,7 +2,6 @@
 
 ## High priority
 
-- [ ] Add way of accepting dunst notification
 - [ ] Setup and test printing
 - [ ] Fix opening on tty1 instead of tty7 (lightdm):
 - [ ] Lock screen is set to 10 minutes, not one hour
@@ -32,7 +31,8 @@
 
 ## Other
 
+- [ ] Fix can't accept dunst notification (e.g. pairing bluetooth)
 - [ ] Mullvad GUI error - Inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
 - [ ] Fix Catppuccin black borders in lightdm
-- [ ] Move from gnome-keyring
+- [ ] Move from gnome-keyring to gnupg
 - [ ] Move nvim config to home manager
