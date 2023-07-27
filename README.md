@@ -48,7 +48,7 @@ sudo nmcli dev wifi connect network-ssid password "network-password"
 Enter a nix-shell with git and neovim:
 
 ```bash
-nix-shell -p git nvim
+nix-shell -p git neovim
 ```
 
 Clone the repository to `~/Code/nixos-config`:
