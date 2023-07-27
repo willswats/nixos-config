@@ -140,8 +140,8 @@ in
             "XF86AudioMicMute" = "${exec} ${pactl} set-source-mute @DEFAULT_SOURCE@ toggle";
 
             # Setup play, pause, next and previous keys
-            "XF86AudioPlay" = "${exec} ${playerctl} play";
-            "XF86AudioPause" = "${exec} ${playerctl} pause";
+            "XF86AudioPlay" = "${exec} ${playerctl} play-pause";
+            "XF86AudioPause" = "${exec} ${playerctl} play-pause";
             "XF86AudioNext" = "${exec} ${playerctl} next";
             "XF86AudioPrev" = "${exec} ${playerctl} previous";
 
