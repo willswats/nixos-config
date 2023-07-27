@@ -18,9 +18,10 @@ My NixOS config.
 1. Download the NixOS Plasma ISO from [here](https://nixos.org/download.html).
 2. Write the NixOS Plasma ISO to a USB and boot into it.
 3. Run the installer and set the following:
+   - Language: British English
    - Username and password
    - Use the same password for the administrator account
-   - Desktop: Plasma
+   - Desktop: No desktop
    - Allow unfree packages
    - Erase the disk
    - Enable swap with hibernation (desktop and laptop)
@@ -54,7 +55,6 @@ nix-shell -p git neovim
 Clone the repository to `~/Code/nixos-config`:
 
 ```bash
-mkdir ~/Code
 git clone https://github.com/willswats/nixos-config.git ~/Code/nixos-config
 ```
 
@@ -94,6 +94,14 @@ Reboot the system:
 
 ```bash
 reboot
+```
+
+### Delete Bash History
+
+Delete `.bash_history` to ensure the Wi-Fi password is removed from it:
+
+```bash
+rm ~/.bash_history
 ```
 
 ### Note to Self
