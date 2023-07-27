@@ -4,15 +4,13 @@
 
 ### Notifications
 
+Play a sound whena a notification toast is displayed: Disabled
+
 When a friend joins a game: Disabled
 
 ### Interface
 
 Start Up Location: Library
-
-### In-Game
-
-In-game FPS counter: Top-right
 
 ### Compatability
 
