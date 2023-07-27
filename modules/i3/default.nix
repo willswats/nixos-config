@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../redshift
+    ./redshift
   ];
 
   services = {

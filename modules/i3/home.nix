@@ -5,11 +5,11 @@ let
 in
 {
   imports = [
-    ../polybar/home.nix
-    ../dunst/home.nix
-    ../rofi/home.nix
-    ../redshift/home.nix
-    ../gnome-keyring/home.nix
+    ./polybar/home.nix
+    ./dunst/home.nix
+    ./rofi/home.nix
+    ./redshift/home.nix
+    ./gnome-keyring/home.nix
   ];
 
   home.packages = with pkgs; [
