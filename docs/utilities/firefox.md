@@ -22,25 +22,9 @@
 
 - Run in Private Windows: Allow
 
-#### letsblock.it
-
-1. Go to [here](https://letsblock.it/) and sign in.
-2. Add your custom list to ublock [here](https://letsblock.it/help/use-list)
-
 ### Consent-O-Matic
 
 - Preferences and Functionality: Enabled
-
-### Tridactyl
-
-```tridactyl
-bind / fillcmdline find
-bind ? fillcmdline find --reverse
-bind n findnext --search-from-view
-bind N findnext --search-from-view --reverse
-bind <Space>h nohlsearch
-bind I mode ignore
-```
 
 ### MAL-Sync
 
