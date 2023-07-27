@@ -1,9 +1,5 @@
 # TODO
 
-## High priority
-
-- [ ] Automate installation of game configs
-
 ## Home Manager
 
 - [ ] Lock screen is set to 10 minutes, not one hour
