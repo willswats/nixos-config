@@ -3,17 +3,28 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Fix command-not-found
+    # https://discourse.nixos.org/t/flake-programs-sqlite-fixing-command-not-found-for-pure-flake-systems/27669
+    fps = {
+      url = "github:wamserma/flake-programs-sqlite";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, ... }: {
+  outputs = { nixpkgs, home-manager, fps, ... }: {
     nixosConfigurations = {
       will-desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./hosts/desktop
           home-manager.nixosModules.home-manager
+          fps.nixosModules.programs-sqlite
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

@@ -9,7 +9,6 @@ My NixOS config.
   - [Connect to Wi-Fi](#connect-to-wi-fi)
   - [Clone the Repository](#clone-the-repository)
   - [Build the Config](#build-the-config)
-  - [Add the nixos-unstable Channel](#add-the-nixos-unstable-channel)
 - [Non-Declarative Setups](#non-declarative-setups)
   - [Utilities (all hosts)](#utilities-all-hosts)
   - [Games (desktop)](#games-desktop)
@@ -91,14 +90,6 @@ Reboot the system:
 reboot
 ```
 
-### Add the nixos-unstable Channel
-
-To ensure `command-not-found` works, root must have a nixos channel (not used for anything else as the flake defines the channel):
-
-```bash
-sudo nix-channel --add https://nixos.org/channels/nixos-unstable sudo nixos nix-channel --update
-```
-
 ### Note to Self
 
 Once you are logged in to GitHub with SSH, run the following and then commit the changes:
@@ -115,7 +106,8 @@ rm -rf ~/nixos-config-temp
 
 1. [Firefox](./docs/utilities/firefox.md)
 2. [SSH](./docs/utilities/ssh.md)
-3. [rclone](./docs/utilities/rclo##ne.md)
+3. [virt-manager](./dosc/utilities/virt-manager)
+4. [rclone](./docs/utilities/rclone.md)
 
 ### Games (desktop)
 
