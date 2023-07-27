@@ -10,7 +10,6 @@
     };
 
     # Fix command-not-found
-    # https://discourse.nixos.org/t/flake-programs-sqlite-fixing-command-not-found-for-pure-flake-systems/27669
     fps = {
       url = "github:wamserma/flake-programs-sqlite";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -37,6 +36,7 @@
         modules = [
           ./hosts/laptop
           home-manager.nixosModules.home-manager
+          fps.nixosModules.programs-sqlite
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -49,6 +49,7 @@
         modules = [
           ./hosts/virtual
           home-manager.nixosModules.home-manager
+          fps.nixosModules.programs-sqlite
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
