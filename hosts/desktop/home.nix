@@ -3,6 +3,7 @@
 {
   imports = [
     ../home.nix
+    ../../modules/gzdoom/home.nix
     ../../modules/opentabletdriver/home.nix
   ];
 
@@ -10,7 +11,6 @@
     # Games
     steam
     osu-lazer-bin
-    prismlauncher
     retroarch
     yuzu-mainline
     pcsx2
