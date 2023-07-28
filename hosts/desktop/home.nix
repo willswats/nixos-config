@@ -9,11 +9,12 @@
   home.packages = with pkgs; [
     # Games
     steam
+    osu-lazer-bin
+    prismlauncher
     retroarch
     yuzu-mainline
     pcsx2
     rpcs3
-    osu-lazer-bin
   ];
 
   xsession.windowManager.i3 =
