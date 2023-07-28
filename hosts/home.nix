@@ -2,10 +2,10 @@
 
 {
   imports = [
-    ../modules/theme/home.nix
     ../modules/fonts/home.nix
+    ../modules/cursor/home.nix
     ../modules/gtk/home.nix
-    ../modules/bookmarks/home.nix
+    ../modules/qt/home.nix
     ../modules/git/home.nix
     ../modules/firefox/home.nix
     ../modules/i3/home.nix

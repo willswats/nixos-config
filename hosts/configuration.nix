@@ -5,7 +5,8 @@
     ../modules/pipewire
     ../modules/plymouth
     ../modules/i3
-    ../modules/theme
+    ../modules/gtk
+    ../modules/qt
     ../modules/pcmanfm
     ../modules/mullvad-vpn
   ];
