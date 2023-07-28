@@ -88,13 +88,15 @@
 
   xdg.configFile."SlippiOnline/Config/Dolphin.ini".text =
     let
-      isoPath = "/home/will/Games/ROMs/GC/";
+      homeDir = "/home/will/";
+      isoPath = "${homeDir}Games/ROMs/GC/";
+      iso = "Super Smash Bros. Melee (USA) (En,Ja) (Rev 2).nkit.iso";
     in
     ''
       [General]
       ISOPaths = 1
       ISOPath0 = ${isoPath}
-      LastFilename = ${isoPath}Super Smash Bros. Melee (USA) (En,Ja) (Rev 2).nkit.iso
+      LastFilename = ${isoPath}${iso}
       ShowLag = False
       ShowFrameCount = False
       RecursiveISOPaths = False
@@ -103,7 +105,7 @@
       WirelessMac = 
       WiiSDCardPath = 
       [Core]
-      SlippiReplayDir = /home/will/Slippi
+      SlippiReplayDir = ${homeDir}Slippi
       SlippiReplayMonthFolders = False
       HLE_BS2 = False
       TimingVariance = 8
@@ -140,8 +142,8 @@
       SlippiLanIp = 
       SlippiPlaybackDisplayFrameIndex = False
       BlockingPipes = False
-      MemcardAPath = /home/will/.config/SlippiOnline/GC/MemoryCardA.USA.raw
-      MemcardBPath = /home/will/.config/SlippiOnline/GC/MemoryCardB.USA.raw
+      MemcardAPath = ${homeDir}.config/SlippiOnline/GC/MemoryCardA.USA.raw
+      MemcardBPath = ${homeDir}.config/SlippiOnline/GC/MemoryCardB.USA.raw
       AgpCartAPath = 
       AgpCartBPath = 
       SlotA = 255
