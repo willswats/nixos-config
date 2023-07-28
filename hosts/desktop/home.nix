@@ -3,10 +3,10 @@
 {
   imports = [
     ../home.nix
-    ../../modules/csgo/home.nix
-    ../../modules/slippi/home.nix
-    ../../modules/gzdoom/home.nix
     ../../modules/opentabletdriver/home.nix
+    ../../modules/games/csgo/home.nix
+    ../../modules/games/slippi/home.nix
+    ../../modules/games/gzdoom/home.nix
   ];
 
   home.packages = with pkgs; [
