@@ -13,7 +13,7 @@
         in
         pkgs.appimageTools.wrapType2
           {
-            name = "slippi";
+            name = "slippi-online";
             extraPkgs = pkgs: [
               pkgs.gmp
               pkgs.mpg123
@@ -27,6 +27,18 @@
       )
     ];
 
+  home.file.".local/share/icons/slippi.png".source = ./slippi.png;
+
+  # Create desktop entry
+  home.file.".local/share/applications/slippi.desktop".text = ''
+    [Desktop Entry]
+    Name=Slippi
+    Exec=slippi-online
+    Type=Application
+    Icon=slippi
+  '';
+
+  # Setup controller
   xdg.configFile."SlippiOnline/Config/GCPadNew.ini".text = ''
     [GCPad1]
     Device = evdev/0/Xbox 360 Wireless Receiver
@@ -69,6 +81,7 @@
     D-Pad/Threshold = 9.6196565225512093e-35
   '';
 
+  # Setup settings - set path to ISO and disable slippi replays
   xdg.configFile."SlippiOnline/Config/Dolphin.ini".text =
     let
       homeDir = "/home/will/";
