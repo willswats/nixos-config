@@ -39,7 +39,7 @@ in
         mod = config.xsession.windowManager.i3.config.modifier;
         exec = "exec --no-startup-id";
 
-        directories = "~/AppImages ~/Drive ~/Code";
+        directories = "~/Drive ~/Code";
         image = "~/Code/nixos-config/wallpapers/minimal-desert.png";
 
         ws1 = "1";

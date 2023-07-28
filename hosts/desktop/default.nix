@@ -7,6 +7,7 @@
     ../../modules/virt-manager
     ../../modules/opentabletdriver
     ../../modules/nvidia
+    ../../modules/slippi
   ];
 
   # Bootloader.

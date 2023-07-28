@@ -1,5 +1,7 @@
 # Slippi
 
-Download and move the following to `~/AppImages`:
+## Config
 
-- [Slippi](https://slippi.gg)
+### Slippi (section)
+
+Save Slippi Replays: Disabled
