@@ -27,9 +27,8 @@
       )
     ];
 
-  home.file.".local/share/icons/slippi.png".source = ./slippi.png;
-
   # Create desktop entry
+  home.file.".local/share/icons/slippi.png".source = ./slippi.png;
   home.file.".local/share/applications/slippi.desktop".text = ''
     [Desktop Entry]
     Name=Slippi
