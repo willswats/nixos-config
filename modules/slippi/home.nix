@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages =
+  home.packages =
     let
       app_name = "Slippi_Online-x86_64.AppImage";
       gh_proj = "Ishiiruka";
