@@ -2,24 +2,24 @@
 
 ## Slippi Launcher
 
-Download:
+Run:
 
 ```bash
-wget https://github.com/project-slippi/slippi-launcher/releases/latest/download/Slippi-Launcher-2.10.2-x86_64.AppImage -P ~/AppImages
+slippi-launcher
 ```
 
-Sign in and provide Melee ISO.
+Sign in and provide the Melee ISO.
 
 ## Slippi Online
 
-To run:
+Run:
 
 ```bash
 slippi-online
 ```
 
-### Config
+### Slippi Online Config
 
-### Slippi (section)
+#### Slippi (section)
 
 Save Slippi Replays: Disabled
