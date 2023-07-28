@@ -1,9 +1,13 @@
 # TF2
 
-## Install Hud
+## HUD
 
-Copy `budhud-master` to `Team Fortress 2/tf/custom`.
+```bash
+git clone https://github.com/rbjaxter/budhud.git ~/.steam/steam/steamapps/common/'Team Fortress 2'/tf/custom/budhud-master
+```
 
-## Add launch options
+## Launch options
 
-Add the text in `launch-options.txt` to the steam launch options.
+```text
+-novid
+```
