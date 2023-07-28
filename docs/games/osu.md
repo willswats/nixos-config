@@ -2,7 +2,7 @@
 
 ## Beatmaps and Skins
 
-Drag and drop beatmaps and skin files into osu.
+Drag and drop all of the beatmaps and skins into osu.
 
 ## Options
 
