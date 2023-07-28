@@ -7,7 +7,6 @@
     in
     [
       "${bookmarkStart}Downloads Downloads"
-      "${bookmarkStart}AppImages AppImages"
       "${bookmarkStart}Code Code"
     ];
 }
