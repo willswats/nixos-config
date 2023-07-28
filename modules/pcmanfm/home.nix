@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
+  home.packages = with pkgs; [ pcmanfm ];
+
   xdg.configFile."pcmanfm/default/pcmanfm.conf" = {
     force = true;
     text = ''

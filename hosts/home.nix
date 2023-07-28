@@ -37,7 +37,6 @@
       git
       nodePackages.pnpm
       # Utilities
-      pcmanfm
       gnome.file-roller
       gnome.seahorse
       mpv
