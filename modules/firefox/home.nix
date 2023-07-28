@@ -255,6 +255,7 @@
         "dom.security.https_only_mode_ever_enabled" = true; # Always enable HTTPS only mode
         "signon.rememberSignons" = false; # Don't ask to save passwords
         "general.autoScroll" = true; # Enable auto scroll
+        "accessibility.typeaheadfind.enablesound" = false; # Disable sound effect on failed "Find in page"
       };
     };
   };
