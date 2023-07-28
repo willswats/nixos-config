@@ -24,11 +24,15 @@
 - [ ] Add session plugin
 - [ ] Setup dap
 
+## Theme
+
+- [ ] Fix missing steam tray icon image
+- [ ] Fix Catppuccin black borders in lightdm
+
 ## Other
 
 - [ ] Setup and test printing
 - [ ] Fix can't accept dunst notification (e.g. pairing bluetooth)
 - [ ] Mullvad GUI error - Inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
-- [ ] Fix Catppuccin black borders in lightdm
 - [ ] Move from gnome-keyring to gnupg
 - [ ] Move nvim config to home manager
