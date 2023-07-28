@@ -13,6 +13,8 @@
         xterm.enable = false;
       };
 
+      excludePackages = [ pkgs.xterm ];
+
       displayManager = {
         lightdm = {
           enable = true;
