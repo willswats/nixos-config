@@ -88,13 +88,13 @@
 
   xdg.configFile."SlippiOnline/Config/Dolphin.ini".text =
     let
-      isoPath = "~/Games/ROMs/GC/";
+      isoPath = "/home/will/Games/ROMs/GC/";
     in
     ''
       [General]
       ISOPaths = 1
       ISOPath0 = ${isoPath}
-      LastFilename = /home/will/Games/ROMs/GC/Super Smash Bros. Melee (USA) (En,Ja) (Rev 2).nkit.iso
+      LastFilename = ${isoPath}Super Smash Bros. Melee (USA) (En,Ja) (Rev 2).nkit.iso
       ShowLag = False
       ShowFrameCount = False
       RecursiveISOPaths = False
