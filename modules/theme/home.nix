@@ -56,10 +56,8 @@
   };
 
   # qt = {
-  # enable = true;
-  # Supports QT6 
-  # The following environment variable must be set in configuration.nix (https://github.com/NixOS/nixpkgs/issues/210891): 
-  # environment.variables.QT_PLUGIN_PATH = "${pkgs.adwaita-qt6}/lib/qt-6/plugins";
+  #   enable = true;
+  #   # Supports QT6 
   #   platformTheme = "gnome";
   #   style = {
   #     name = "adwaita-dark";
