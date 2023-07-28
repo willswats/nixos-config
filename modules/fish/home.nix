@@ -6,7 +6,7 @@
   programs.fish = {
     enable = true;
     shellAliases = {
-      note = "cd Drive/Work/Notebook; nvim";
+      note = "cd ~/Drive/Work/Notebook; nvim";
       kgh = "ssh-add ~/.ssh/id_ed25519";
     };
     interactiveShellInit = ''
