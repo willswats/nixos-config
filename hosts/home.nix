@@ -4,6 +4,7 @@
   imports = [
     ../modules/theme/home.nix
     ../modules/fonts/home.nix
+    ../modules/gtk/home.nix
     ../modules/bookmarks/home.nix
     ../modules/git/home.nix
     ../modules/firefox/home.nix
