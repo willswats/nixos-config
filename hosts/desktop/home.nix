@@ -4,8 +4,8 @@
   imports = [
     ../home.nix
     ../../modules/csgo/home.nix
-    ../../modules/gzdoom/home.nix
     ../../modules/slippi/home.nix
+    ../../modules/gzdoom/home.nix
     ../../modules/opentabletdriver/home.nix
   ];
 
