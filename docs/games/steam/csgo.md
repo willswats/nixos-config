@@ -1,10 +1,6 @@
 # CS:GO
 
-## Add autoexec
-
-Copy `autoexec.cfg` to `Counter-Strike Global Offensive/csgo/cfg`.
-
-## Add launch options
+## Launch Options
 
 Add to launch options:
 

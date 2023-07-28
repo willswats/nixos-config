@@ -1,8 +1,8 @@
 # osu
 
-## Skins
+## Beatmaps and Skins
 
-Run all skin files.
+Drag and drop beatmaps and skin files into osu.
 
 ## Options
 
@@ -20,7 +20,3 @@ Quick Retry (hold): `RSHIFT`
 Left button (2): `,`
 Right button (2): `.`
 Smoke: `/`
-
-## Beatmaps
-
-Add `files` to `.local/share/osu`.
