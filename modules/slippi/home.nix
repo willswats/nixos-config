@@ -13,7 +13,7 @@
         in
         pkgs.appimageTools.wrapType2
           {
-            name = "slippi-online";
+            name = "slippi";
             extraPkgs = pkgs: [
               pkgs.gmp
               pkgs.mpg123
