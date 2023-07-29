@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  file.home.".local/share/osu/input.json".text = ''
+  home.file.".local/share/osu/input.json".text = ''
     {
       "InputHandlers": [
         {
