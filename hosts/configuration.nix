@@ -4,9 +4,9 @@
   imports = [
     ../modules/pipewire
     ../modules/plymouth
-    ../modules/i3
     ../modules/gtk
     ../modules/qt
+    ../modules/i3
     ../modules/pcmanfm
     ../modules/mullvad-vpn
   ];
