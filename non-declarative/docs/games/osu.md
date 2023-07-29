@@ -2,7 +2,7 @@
 
 ## Options
 
-Add `modules/osu/framework.ini` to `.local/share/osu`.
+Add `non-declarative/configs/osu/game.ini` to `.local/share/osu`.
 
 ## Skins
 

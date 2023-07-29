@@ -119,16 +119,16 @@ rm ~/.bash_history
 
 ### Utilities
 
-1. [Firefox](./docs/utilities/firefox.md)
-2. [SSH](./docs/utilities/ssh.md)
-3. [rclone](./docs/utilities/rclone.md)
-4. [virt-manager](./docs/utilities/virt-manager)
+1. [Firefox](./non-declarative/docs/utilities/firefox.md)
+2. [SSH](./non-declarative/docs/utilities/ssh.md)
+3. [rclone](./non-declarative/docs/utilities/rclone.md)
+4. [virt-manager](./non-declarative/docs/utilities/virt-manager)
 
 ### Games
 
-1. [steam](./docs/games/steam/steam.md)
-2. [CSGO](./docs/games/steam/csgo.md)
-3. [TF2](./docs/games/steam/tf2.md)
-4. [osu](./docs/games/osu.md)
-5. [RetroArch](./docs/games/retroarch.md)
-6. [Yuzu](./docs/games/yuzu.md)
+1. [steam](./non-declarative/docs/games/steam/steam.md)
+2. [CSGO](./non-declarative/docs/games/steam/csgo.md)
+3. [TF2](./non-declarative/docs/games/steam/tf2.md)
+4. [osu](./non-declarative/docs/games/osu.md)
+5. [RetroArch](./non-declarative/docs/games/retroarch.md)
+6. [Yuzu](./non-declarative/docs/games/yuzu.md)
