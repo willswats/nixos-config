@@ -717,7 +717,7 @@ in
     sb_deathmatch_yourplayercolor=3
     sb_teamdeathmatch_enable=true
     sb_teamdeathmatch_headingcolor=6
-    screenblocks=10
+    screenblocks=11
     setslotstrict=true
     show_obituaries=true
     snd_menuvolume=0.6000000238418579
