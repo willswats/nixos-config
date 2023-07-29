@@ -3,7 +3,6 @@
 ## Home Manager
 
 - [ ] Fix warning on rebuild
-- [ ] Lock screen is set to 10 minutes, not one hour
 - [ ] Organise modules
 - [ ] Add global variables:
   - [ ] user
@@ -12,6 +11,11 @@
   - [ ] wallpaper
   - [ ] fontSize
   - [ ] directoriesToCreate / bookmarks
+- [ ] Setup and test printing
+
+## i3
+
+- [ ] Lock screen is set to 10 minutes, not one hour
 
 ## Firefox
 
@@ -33,7 +37,6 @@
 
 ## Other
 
-- [ ] Setup and test printing
 - [ ] Fix can't accept dunst notification (e.g. pairing bluetooth)
 - [ ] Mullvad GUI error - Inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
 - [ ] Move from gnome-keyring to gnupg
