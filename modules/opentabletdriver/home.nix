@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   xdg.configFile."OpenTabletDriver/settings.json".text = ''
