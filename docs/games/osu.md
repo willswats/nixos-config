@@ -1,12 +1,12 @@
 # osu
 
-## Skins
-
-Drag and drop all of the skins into osu.
-
 ## Options
 
-Add `game.ini`, `framework.ini` and `input.json` to `.local/share/osu`.
+Add `modules/osu/framework.ini` to `.local/share/osu`.
+
+## Skins
+
+Drag and drop all of the skins into osu (stored in my personal drive).
 
 ### Keybindings
 

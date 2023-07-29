@@ -4,7 +4,7 @@
 
 ### PS1
 
-Add BIOS files to `~/.config/retroarch/system`.
+Add BIOS files (stored in my personal drive) to `~/.config/retroarch/system`.
 
 ## Download Cores
 

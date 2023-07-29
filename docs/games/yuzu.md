@@ -2,8 +2,8 @@
 
 ## Keys
 
-Add `title.keys` and `prod.keys` to `~/.local/share/yuzu/keys`.
+Add `title.keys` and `prod.keys` (stored in my personal drive) to `~/.local/share/yuzu/keys`.
 
 ## Firmware
 
-Extract the firmware to `~/.local/share/yuzu/nand/system/Contents/registered`.
+Extract the firmware (stored in my personal drive) to `~/.local/share/yuzu/nand/system/Contents/registered`.
