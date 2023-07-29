@@ -9,6 +9,7 @@ in
     ./dunst/home.nix
     ./rofi/home.nix
     ./redshift/home.nix
+    ./flameshot/home.nix
     ./gnome-keyring/home.nix
   ];
 

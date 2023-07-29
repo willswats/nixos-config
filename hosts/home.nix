@@ -42,7 +42,6 @@
       gnome.seahorse
       mpv
       qview
-      flameshot
       obs-studio
       gimp
       shotcut
