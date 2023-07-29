@@ -425,7 +425,7 @@ in
     vid_defheight=480
     vid_defwidth=640
     vid_fullscreen=true
-    vid_gamma=1.1015625
+    vid_gamma=1.20
     vid_hdr=false
     vid_maxfps=0
     vid_preferbackend=1
