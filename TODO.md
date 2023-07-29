@@ -4,7 +4,9 @@
 
 - [ ] Fix warning on rebuild
 - [ ] Lock screen is set to 10 minutes, not one hour
+- [ ] Organise modules
 - [ ] Add global variables:
+  - [ ] user
   - [ ] hostname
   - [ ] monitors
   - [ ] wallpaper
