@@ -36,7 +36,7 @@
       ws9 = "9";
       ws10 = "10";
 
-      directories = "~/Games/WADs ~/Games/ROMs";
+      directories = "~/Games/WADs ~/Games/ROMs ~/Games/pk3";
     in
     {
       config.startup =
