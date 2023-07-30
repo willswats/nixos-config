@@ -126,9 +126,9 @@ rm ~/.bash_history
 
 ### Games
 
-1. [steam](./non-declarative/docs/games/steam/steam.md)
-2. [CSGO](./non-declarative/docs/games/steam/csgo.md)
-3. [TF2](./non-declarative/docs/games/steam/tf2.md)
+1. [steam](./non-declarative/docs/games/steam.md)
+2. [CSGO](./non-declarative/docs/games/csgo.md)
+3. [TF2](./non-declarative/docs/games/tf2.md)
 4. [osu](./non-declarative/docs/games/osu.md)
 5. [RetroArch](./non-declarative/docs/games/retroarch.md)
 6. [Yuzu](./non-declarative/docs/games/yuzu.md)
