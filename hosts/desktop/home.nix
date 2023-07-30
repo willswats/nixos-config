@@ -8,13 +8,13 @@
     ../../modules/games/osu/home.nix
     ../../modules/games/slippi/home.nix
     ../../modules/games/gzdoom/home.nix
+    ../../modules/games/retroarch/home.nix
   ];
 
   home.packages = with pkgs; [
     # Games
     steam
     osu-lazer-bin
-    retroarch
     yuzu-mainline
     pcsx2
     rpcs3
