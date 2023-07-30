@@ -4,10 +4,6 @@
 
 Add `non-declarative/configs/osu/game.ini` to `.local/share/osu`.
 
-## Skins
-
-Drag and drop all of the skins into osu (stored in my personal drive).
-
 ### Keybindings
 
 #### Global
@@ -20,3 +16,7 @@ Quick Retry (hold): `RSHIFT`
 Left button (2): `,`
 Right button (2): `.`
 Smoke: `/`
+
+## Beatmaps and Skins
+
+Drag and drop all of the beatmaps and skins into osu (stored in my personal drive).
