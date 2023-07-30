@@ -1,7 +1,8 @@
 # TODO
 
-## Home Manager
+## High Priority
 
+- [ ] Move from gnome-keyring to gnupg
 - [ ] Fix warning on rebuild
 - [ ] Organise modules
 - [ ] Add global variables:
@@ -32,6 +33,7 @@
 
 ## Theme
 
+- [ ] Fix missing GZDoom icon
 - [ ] Fix missing steam tray icon image
 - [ ] Fix Catppuccin black borders in lightdm
 
@@ -39,5 +41,3 @@
 
 - [ ] Fix can't accept dunst notification (e.g. pairing bluetooth)
 - [ ] Mullvad GUI error - Inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
-- [ ] Move from gnome-keyring to gnupg
-- [ ] Move nvim config to home manager
