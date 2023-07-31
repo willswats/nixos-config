@@ -2,7 +2,7 @@
 
 ## High Priority
 
-- [ ] Move from gnome-keyring to gnupg
+- [ ] Setup gpg signing commits
 - [ ] Fix warning on rebuild
 - [ ] Organise modules
 - [ ] Add global variables:
