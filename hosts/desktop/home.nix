@@ -7,7 +7,7 @@
     ../../modules/games/csgo/home.nix
     ../../modules/games/osu/home.nix
     ../../modules/games/slippi/home.nix
-    ../../modules/games/gzdoom/home.nix
+    ../../modules/games/doom/home.nix
     ../../modules/games/retroarch/home.nix
   ];
 
