@@ -204,7 +204,7 @@
         hud_oldscale=true
         hud_scale=0
         hud_scalefactor=1
-        hud_showammo=2
+        hud_showammo=0
         hud_showangles=false
         hud_showitems=false
         hud_showlag=0
