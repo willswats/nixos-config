@@ -2,7 +2,6 @@
 
 ## High Priority
 
-- [ ] Setup gpg signing commits
 - [ ] Fix warning on rebuild
 - [ ] Organise modules
 - [ ] Add global variables:

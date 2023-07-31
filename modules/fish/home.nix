@@ -7,6 +7,7 @@
     enable = true;
     shellAliases = {
       note = "cd ~/Drive/Work/Notebook; nvim";
+      key = "ssh-add ~/.ssh/id_ed25519";
     };
     interactiveShellInit = ''
       # Hide fish greeting

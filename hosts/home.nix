@@ -7,7 +7,6 @@
     ../modules/gtk/home.nix
     ../modules/qt/home.nix
     ../modules/git/home.nix
-    ../modules/gpg/home.nix
     ../modules/firefox/home.nix
     ../modules/i3/home.nix
     ../modules/neovim/home.nix
@@ -36,11 +35,9 @@
       xclip
       appimage-run
       # Development
-      git
       nodePackages.pnpm
       # Utilities
       gnome.file-roller
-      gnome.seahorse
       mpv
       qview
       obs-studio

@@ -10,6 +10,7 @@ in
     ./rofi/home.nix
     ./redshift/home.nix
     ./flameshot/home.nix
+    ./gnome-keyring/home.nix
   ];
 
   home.packages = with pkgs; [
