@@ -1,20 +1,20 @@
 { ... }:
 
+
+let
+  email = "willswats@users.noreply.github.com";
+in
 {
   programs.git = {
     enable = true;
     userName = "willswats";
-    userEmail = "willswats@users.noreply.github.com";
+    userEmail = email;
     signing = {
-      key = "~/.ssh/id_ed25519.pub";
+      key = email;
       signByDefault = true;
     };
     extraConfig = {
       init.defaultBranch = "main";
-      gpg = {
-        format = "ssh";
-        ssh.allowedSignersFile = "~/.config/git/allowed_signers";
-      };
     };
   };
 }

@@ -6,7 +6,10 @@
   programs.lazygit = {
     enable = true;
     settings = {
-      disableForcePushing = true;
+      git = {
+        disableForcePushing = true; # To ensure that a force push is not fat fingered
+        overrideGpg = true; # To not get booted to shell on each commit 
+      };
       gui.theme = {
         lightTheme = false;
         activeBorderColor = [ "#a6e3a1" "bold" ];
