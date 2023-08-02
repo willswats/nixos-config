@@ -40,3 +40,4 @@
 
 - [ ] Fix can't accept dunst notification (e.g. pairing bluetooth)
 - [ ] Mullvad GUI error - Inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
+- [ ] Setup a Yubikey for GPG git commit signing
