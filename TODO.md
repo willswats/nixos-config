@@ -2,7 +2,6 @@
 
 ## High Priority
 
-- [ ] Fix warning on rebuild
 - [ ] Organise modules
 - [ ] Add global variables:
   - [ ] user
@@ -12,6 +11,7 @@
   - [ ] fontSize
   - [ ] directoriesToCreate / bookmarks
 - [ ] Setup and test printing
+- [ ] Fix laptop locking on wake
 
 ## i3
 
