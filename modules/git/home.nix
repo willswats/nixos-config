@@ -9,10 +9,10 @@ in
     enable = true;
     userName = "willswats";
     userEmail = email;
-    signing = {
-      key = email;
-      signByDefault = true;
-    };
+    # signing = {
+    #   key = email;
+    #   signByDefault = true;
+    # };
     extraConfig = {
       init.defaultBranch = "main";
     };
