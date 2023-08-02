@@ -84,8 +84,8 @@
                   url = "https://mynoise.net/";
                 }
                 {
-                  name = "9Anime";
-                  url = "https://9anime.pl/home";
+                  name = "AniWave";
+                  url = "https://aniwave.to/";
                 }
                 {
                   name = "MangaDex";
