@@ -7,6 +7,7 @@
     ../modules/gtk/home.nix
     ../modules/qt/home.nix
     ../modules/git/home.nix
+    ../modules/gpg/home.nix
     ../modules/firefox/home.nix
     ../modules/i3/home.nix
     ../modules/neovim/home.nix
