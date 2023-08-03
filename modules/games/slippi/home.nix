@@ -14,10 +14,10 @@
         pkgs.appimageTools.wrapType2
           {
             name = "slippi-online";
-            extraPkgs = pkgs: [
-              pkgs.gmp
-              pkgs.mpg123
-              pkgs.libmpg123
+            extraPkgs = pkgs: with pkgs; [
+              gmp
+              mpg123
+              libmpg123
             ];
             src = builtins.fetchurl {
               url = "https://github.com/${user}/${project}/releases/download/v${version}/${assetName}";
