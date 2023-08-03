@@ -2,7 +2,6 @@
 
 {
   xdg.configFile."OpenTabletDriver/settings.json" = {
-    force = true;
     text = ''
       {
         "Profiles": [

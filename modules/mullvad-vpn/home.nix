@@ -3,8 +3,8 @@
 {
   home.packages = with pkgs; [ mullvad-vpn ];
 
-  xdg.configFile."Mullvad VPN/gui_settings.json".text = ''
-    {
+  xdg.configFile."Mullvad VPN/gui_settings.json" = {
+    text = '' {
       "preferredLocale": "system",
       "autoConnect": true,
       "enableSystemNotifications": true,
@@ -15,4 +15,5 @@
       "changelogDisplayedForVersion": "2023.4"
     }
   '';
+  };
 }
