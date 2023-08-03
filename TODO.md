@@ -2,6 +2,7 @@
 
 ## High Priority
 
+- [ ] Overlay osu package version
 - [ ] Organise modules
 - [ ] Add global variables:
   - [ ] user
