@@ -11,11 +11,10 @@
   - [ ] wallpaper
   - [ ] fontSize
   - [ ] directoriesToCreate / bookmarks
-- [ ] Setup and test printing
-- [ ] Fix laptop locking on wake
 
 ## i3
 
+- [ ] Fix laptop locking on wake
 - [ ] Lock screen is set to 10 minutes, not one hour
 
 ## Firefox
@@ -39,6 +38,7 @@
 
 ## Other
 
+- [ ] Setup and test printing
 - [ ] Fix can't accept dunst notification (e.g. pairing bluetooth)
 - [ ] Mullvad GUI error - Inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
 - [ ] Setup a Yubikey for GPG git commit signing
