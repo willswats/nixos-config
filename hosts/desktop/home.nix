@@ -14,7 +14,6 @@
   home.packages = with pkgs; [
     # Games
     steam
-    osu-lazer-bin
     yuzu-mainline
     pcsx2
     rpcs3

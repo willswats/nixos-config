@@ -1,6 +1,10 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    osu-lazer-bin
+  ];
+
   home.file.".local/share/osu/input.json" = {
     force = true;
     text = ''
