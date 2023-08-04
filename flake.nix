@@ -8,9 +8,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixvim.url = "github:nix-community/nixvim";
   };
 
-  outputs = { nixpkgs, home-manager, ... }: {
+  outputs = { nixpkgs, home-manager, nixvim, ... }: {
     nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -20,7 +22,10 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.will = import ./hosts/desktop/home.nix;
+            home-manager.users.will.imports = [
+              ./hosts/desktop/home.nix
+              nixvim.homeManagerModules.nixvim
+            ];
           }
         ];
       };
@@ -32,7 +37,10 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.will = import ./hosts/laptop/home.nix;
+            home-manager.users.will.imports = [
+              ./hosts/laptop/home.nix
+              nixvim.homeManagerModules.nixvim
+            ];
           }
         ];
       };
@@ -44,7 +52,10 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.will = import ./hosts/virtual/home.nix;
+            home-manager.users.will.imports = [
+              ./hosts/virtual/home.nix
+              nixvim.homeManagerModules.nixvim
+            ];
           }
         ];
       };
