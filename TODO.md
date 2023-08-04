@@ -1,8 +1,7 @@
 # TODO
 
-## High Priority
+## Home Manager
 
-- [ ] Fix markdown indent by 4 (should be 2)
 - [ ] Organise modules
 - [ ] Add global variables:
   - [ ] user
@@ -23,6 +22,8 @@
 
 ## Neovim
 
+- [ ] Remove mason
+- [ ] Fix markdown indent by 4 (should be 2)
 - [ ] Move lsp keymaps into on_attach
 - [ ] Add session plugin
 - [ ] Setup dap
