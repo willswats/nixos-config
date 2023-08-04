@@ -23,7 +23,7 @@ if not status_ok_icons then
   return
 end
 
-mason.setup()
+mason.setup({ PATH = "append" })
 mason_lspconfig.setup({
   ensure_installed = {
     "marksman",

@@ -4,16 +4,19 @@ My NixOS config.
 
 ## Table of Contents
 
+<!--toc:start-->
+
 - [Installing NixOS](#installing-nixos)
-- [Install nixos-config](#installing-nixos-config)
+- [Installing nixos-config](#installing-nixos-config)
   - [Connect to Wi-Fi](#connect-to-wi-fi)
   - [Clone the Repository](#clone-the-repository)
+  - [Add hardware-configuration.nix](#add-hardware-configurationnix)
+  - [Add boot.initrd.luks.devices (desktop & laptop)](#add-bootinitrdluksdevices-desktop-laptop)
   - [Build the Config](#build-the-config)
   - [Add the nixos-unstable Channel](#add-the-nixos-unstable-channel)
   - [Delete Bash History](#delete-bash-history)
-- [Non-Declarative Setups](#non-declarative-setups)
-  - [Utilities](#utilities)
-  - [Games](#games)
+- [Non-Declarative Setups](#non-declarative-setups) - [Utilities](#utilities) - [Games](#games)
+<!--toc:end-->
 
 ## Installing NixOS
 
@@ -68,7 +71,7 @@ Add the `hardware-configuration.nix` to your chosen host (replace `host` with th
 cp /etc/nixos/hardware-configuration.nix ~/Code/nixos-config/hosts/host/
 ```
 
-### Add boot.initrd.luks.devices Information (desktop & laptop)
+### Add boot.initrd.luks.devices (desktop and laptop)
 
 Copy the text that starts with `boot.initrd.luks.devices` from `/etc/nixos/configuration.nix` to `~/Code/nixos-config/hosts/host/default.nix`, with `host` being your desired host.
 
