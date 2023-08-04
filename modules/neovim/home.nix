@@ -30,19 +30,61 @@
   # xdg.configFile.nvim.source = ./nvim;
   programs.nixvim = {
     enable = true;
-    colorschemes.catppuccin = {
+    options = {
+	number = true;
+	};
+    colorschemes.catppuccin = { 
       enable = true;
       flavour = "mocha";
     };
-    autoCmd = [{
-      event = [ "BufWritePre" ];
-      callback = {
-        __raw = ''
-          function()
-              vim.lsp.buf.format({ async = false })
+    autoCmd = [
+      {
+        event = [ "FileType" ];
+        pattern =
+          [ "qf" "help" "man" "lspinfo" "lsp-installer" "null-ls-info" ];
+        callback = {
+          __raw = ''
+            function()
+                vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = true })
+                vim.opt_local.buflisted = false
+              end
+          '';
+        };
+      }
+      {
+        # Set markdown and gitcommit opts
+        event = [ "FileType" ];
+        pattern = [ "markdown" "gitcommit" ];
+        callback = {
+          __raw = ''
+            function()
+                vim.opt_local.wrap = true
+                vim.opt_local.linebreak = true
             end'';
-      };
-    }];
+        };
+      }
+      # Show highlight on yank
+      {
+        event = [ "TextYankPost" ];
+        callback = {
+          __raw = ''
+	  function()
+            vim.highlight.on_yank { higroup = "Visual", timeout = 200 }
+	    end
+          '';
+        };
+      }
+      # Auto format on write
+      {
+        event = [ "BufWritePre" ];
+        callback = {
+          __raw = ''
+            function()
+                vim.lsp.buf.format({ async = false })
+              end'';
+        };
+      }
+    ];
     plugins = {
       telescope = { enable = true; };
       nvim-tree = { enable = true; };
