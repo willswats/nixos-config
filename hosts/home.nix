@@ -11,6 +11,7 @@
     ../modules/firefox/home.nix
     ../modules/i3/home.nix
     ../modules/neovim/home.nix
+    ../modules/mpv/home.nix
     ../modules/fish/home.nix
     ../modules/alacritty/home.nix
     ../modules/bottom/home.nix
@@ -39,7 +40,6 @@
       nodePackages.pnpm
       # Utilities
       gnome.file-roller
-      mpv
       qview
       obs-studio
       gimp
