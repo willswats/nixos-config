@@ -31,9 +31,12 @@
   programs.nixvim = {
     enable = true;
     options = {
-	number = true;
-	};
-    colorschemes.catppuccin = { 
+      clipboard = "unnamedplus"; # Allows neovim to access the system clipboard
+      number = true; # Show numbered lines
+      tabstop = 2; # Insert two spaces for a tab
+      cursorline = true; # Highlight the current line
+    };
+    colorschemes.catppuccin = {
       enable = true;
       flavour = "mocha";
     };
@@ -68,9 +71,9 @@
         event = [ "TextYankPost" ];
         callback = {
           __raw = ''
-	  function()
-            vim.highlight.on_yank { higroup = "Visual", timeout = 200 }
-	    end
+            	  function()
+                        vim.highlight.on_yank { higroup = "Visual", timeout = 200 }
+            	    end
           '';
         };
       }
