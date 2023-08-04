@@ -18,6 +18,7 @@ in
     playerctl
     brightnessctl
     lxde.lxsession
+    autotiling
   ];
 
   services = {
@@ -64,6 +65,7 @@ in
         playerctl = "${pkgs.playerctl}/bin/playerctl";
         brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
         lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
+        autotiling = "${pkgs.autotiling}/bin/autotiling";
         rclone = "${pkgs.rclone}/bin/rclone";
 
         # https://github.com/catppuccin/i3
@@ -236,6 +238,11 @@ in
             {
               command = "${lxpolkit}";
               always = false;
+              notification = false;
+            }
+            {
+              command = "${autotiling}";
+              always = true; # Restarting i3 kills autotiling
               notification = false;
             }
             {
