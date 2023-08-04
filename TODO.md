@@ -2,10 +2,7 @@
 
 ## High Priority
 
-- [ ] Fix lsp issues (lua)
-- [ ] Fix markdown issues:
-  - [ ] Current indenting by 4, should be 2
-  - [ ] No option for updating ToC in lsp actions
+- [ ] Fix markdown indent by 4 (should be 2)
 - [ ] Organise modules
 - [ ] Add global variables:
   - [ ] user
