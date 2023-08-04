@@ -2,7 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    neovim
     fd
     ripgrep
     gcc
@@ -17,6 +16,10 @@
     nixpkgs-fmt
     trash-cli
   ];
+
+  programs.neovim = {
+    enable = true;
+  };
 
   xdg.configFile.nvim.source = ./nvim;
 }
