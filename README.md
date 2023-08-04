@@ -11,7 +11,7 @@ My NixOS config.
   - [Connect to Wi-Fi](#connect-to-wi-fi)
   - [Clone the Repository](#clone-the-repository)
   - [Add hardware-configuration.nix](#add-hardware-configurationnix)
-  - [Add boot.initrd.luks.devices (desktop & laptop)](#add-bootinitrdluksdevices-desktop-laptop)
+  - [Add boot.initrd.luks.devices Information (desktop and laptop)](#add-bootinitrdluksdevices-information-desktop-and-laptop)
   - [Build the Config](#build-the-config)
   - [Add the nixos-unstable Channel](#add-the-nixos-unstable-channel)
   - [Delete Bash History](#delete-bash-history)
@@ -71,7 +71,7 @@ Add the `hardware-configuration.nix` to your chosen host (replace `host` with th
 cp /etc/nixos/hardware-configuration.nix ~/Code/nixos-config/hosts/host/
 ```
 
-### Add boot.initrd.luks.devices (desktop and laptop)
+### Add boot.initrd.luks.devices Information (desktop and laptop)
 
 Copy the text that starts with `boot.initrd.luks.devices` from `/etc/nixos/configuration.nix` to `~/Code/nixos-config/hosts/host/default.nix`, with `host` being your desired host.
 
