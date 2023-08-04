@@ -66,6 +66,19 @@
     };
     autoCmd = [
       {
+        event = [ "FileType" ];
+        pattern =
+          [ "qf" "help" "man" "lspinfo" "lsp-installer" "null-ls-info" ];
+        callback = {
+          __raw = ''
+            function()
+                vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = true })
+                vim.opt_local.buflisted = false
+              end
+          '';
+        };
+      }
+      {
         # Set markdown and gitcommit opts
         event = [ "FileType" ];
         pattern = [ "markdown" "gitcommit" ];
