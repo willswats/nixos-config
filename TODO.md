@@ -22,7 +22,7 @@
 
 ## Neovim
 
-- [ ] Remove mason
+- [ ] Add marksman lsp
 - [ ] Fix markdown indent by 4 (should be 2)
 - [ ] Move lsp keymaps into on_attach
 - [ ] Add session plugin
