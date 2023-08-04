@@ -17,7 +17,7 @@
             extraPkgs = pkgs: with pkgs; [ icu ];
             src = builtins.fetchurl {
               url = "https://github.com/${user}/${project}/releases/download/${version}/${assetName}";
-              sha256 = "${hash}";
+              sha256 = hash;
             };
           }
       )
