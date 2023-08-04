@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -10,7 +10,7 @@
     ../modules/gpg/home.nix
     ../modules/firefox/home.nix
     ../modules/i3/home.nix
-    ../modules/neovim/home.nix
+    ../modules/nixvim/home.nix
     ../modules/mpv/home.nix
     ../modules/fish/home.nix
     ../modules/alacritty/home.nix
