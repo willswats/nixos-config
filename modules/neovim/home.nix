@@ -31,6 +31,8 @@
   programs.nixvim = {
     enable = true;
     options = {
+      backup = false; # Creates a backup file
+      swapfile = false; # Creates a swapfile
       clipboard = "unnamedplus"; # Allows neovim to access the system clipboard
       number = true; # Show numbered lines
       tabstop = 2; # Insert two spaces for a tab
@@ -40,20 +42,29 @@
       enable = true;
       flavour = "mocha";
     };
-    autoCmd = [
-      {
-        event = [ "FileType" ];
-        pattern =
-          [ "qf" "help" "man" "lspinfo" "lsp-installer" "null-ls-info" ];
-        callback = {
-          __raw = ''
-            function()
-                vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = true })
-                vim.opt_local.buflisted = false
-              end
-          '';
+    globals.mapleader = " ";
+    maps = {
+      normal = {
+        # Better window navigation
+        "<C-h>" = {
+          action = "<C-w>h";
+          silent = true;
         };
-      }
+        "<C-j>" = {
+          action = "<C-w>j";
+          silent = true;
+        };
+        "<C-k>" = {
+          action = "<C-w>k";
+          silent = true;
+        };
+        "<C-l>" = {
+          action = "<C-w>l>";
+          silent = true;
+        };
+      };
+    };
+    autoCmd = [
       {
         # Set markdown and gitcommit opts
         event = [ "FileType" ];
