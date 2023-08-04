@@ -20,13 +20,13 @@
 - [ ] Fix laptop locking on wake
 - [ ] Lock screen is set to 10 minutes, not one hour
 
-## Neovim
+## NixVim
 
+- [ ] Add friendly-snippets
 - [ ] Add marksman lsp
-- [ ] Fix markdown indent by 4 (should be 2)
-- [ ] Move lsp keymaps into on_attach
-- [ ] Add session plugin
-- [ ] Setup dap
+- [ ] Add mkdnflow
+- [ ] Indent markdown by 2
+- [ ] Add nvim dap and dap ui
 
 ## Theme
 
