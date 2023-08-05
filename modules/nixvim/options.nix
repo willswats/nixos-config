@@ -2,52 +2,42 @@
 
 {
   programs.nixvim.options = {
-    backup = false; # creates a backup file
-    clipboard = "unnamedplus"; # allows neovim to access the system clipboard
-    cmdheight =
-      1; # more space in the neovim command line for displaying messages
-    #completeopt = { "menuone"; "noselect" }, # for nvim-cmp
-    conceallevel = 0; # so that `` is visible in markdown files
-    fileencoding = "utf-8"; # the encoding written to a file
-    foldmethod = "manual"; # folding set to "expr" for treesitter based folding
-    foldexpr =
-      ""; # set to "nvim_treesitter#foldexpr()" for treesitter based folding
-    guifont = "monospace:h17"; # the font used in graphical neovim applications
-    hidden = true; # required to keep multiple buffers and open multiple buffers
-    hlsearch = true; # highlight all matches on previous search pattern
-    ignorecase = true; # ignore case in search patterns
-    mouse = "a"; # allow the mouse to be used in neovim
-    pumheight = 10; # pop up menu height
-    showmode = false; # we don't need to see things like -- INSERT -- anymore
-    showtabline = 2; # always show tabs
-    smartcase = true; # smart case
-    smartindent = true; # make indenting smarter again
-    splitbelow = true; # force all horizontal splits to go below current window
-    splitright =
-      true; # force all vertical splits to go to the right of current window
-    swapfile = false; # creates a swapfile
-    termguicolors = true; # set term gui colors (most terminals support this)
-    timeoutlen =
-      500; # time to wait for a mapped sequence to complete (in milliseconds)
-    #undodir = vim.fn.stdpath "cache" .. "/undo";
-    undofile = true; # enable persistent undo
-    updatetime = 300; # faster completion
+    backup = false; # Creates a backup file
+    swapfile = false; # Creates a swapfile
     writebackup =
-      false; # if a file is being edited by another program (or was written to file while editing with another program) it is not allowed to be edited
-    expandtab = true; # convert tabs to spaces
-    shiftwidth = 2; # the number of spaces inserted for each indentation
-    tabstop = 2; # insert 2 spaces for a tab
-    cursorline = true; # highlight the current line
-    number = true; # set numbered lines
-    relativenumber = false; # set relative numbered lines
-    numberwidth = 4; # set number column width
+      false; # If a file is being edited by another program (or was written to file while editing with another program) it is not allowed to be edited
+    clipboard = "unnamedplus"; # Allows neovim to access the system clipboard
+    fileencoding = "utf-8"; # The encoding written to a file
+    ignorecase = true; # Ignore case in search patterns
+    mouse = "a"; # Allow the mouse to be used in neovim
+    showmode =
+      false; # If in Insert, Replace or Visual mode put a message on the last line
+    smartcase =
+      true; # Override the 'ignorecase' option if the search pattern contains upper case characters.
+    smartindent = true; # Do smart autoindenting when starting a new line
+    splitbelow =
+      true; # When on, splitting a window will put the new window below the current one
+    splitright =
+      true; # When on, splitting a window will put the new window right of the current one
+    termguicolors = true; # Enables 24-bit RGB color in the TUI
+    timeoutlen =
+      500; # Time in milliseconds to wait for a mapped sequence to complete
+    undofile =
+      true; # When on, Vim automatically saves undo history to an undo file when writing a buffer to a file, and restores undo history from the same file on buffer read
+    expandtab = true; # Convert tabs to spaces
+    shiftwidth = 2; # Number of spaces to use for each step of (auto)indent.
+    tabstop = 2; # Number of spaces that a <Tab> in the file counts for
+    cursorline = true; # Highlight the text line of the cursor
+    number = true; # Set numbered lines
     signcolumn =
-      "yes"; # always show the sign column otherwise it would shift the text each time
-    wrap = false; # display lines as one long line
-    linebreak = false; # companion to wrap, don't split words
-    spell = false;
-    spelllang = "en";
-    scrolloff = 8; # is one of my fav
-    sidescrolloff = 8;
+      "yes"; # Always show the sign column otherwise it would shift the text each time
+    wrap = false; # Display lines as one long line
+    linebreak = false; # Companion to wrap, don't split words
+    spell = false; # Spell check
+    spelllang = "en"; # Spell check language
+    scrolloff =
+      8; # Minimal number of screen lines to keep above and below the cursor
+    sidescrolloff =
+      8; # The minimal number of screen columns to keep to the left and to the right of the cursor if 'nowrap' is set
   };
 }

@@ -9,9 +9,10 @@
       callback = {
         __raw = ''
           function()
-              vim.opt_local.wrap = true
-              vim.opt_local.linebreak = true
-          end'';
+            vim.opt_local.wrap = true
+            vim.opt_local.linebreak = true
+          end
+        '';
       };
     }
     # Show highlight on yank
@@ -19,9 +20,9 @@
       event = [ "TextYankPost" ];
       callback = {
         __raw = ''
-          	  function()
-                      vim.highlight.on_yank { higroup = "Visual", timeout = 200 }
-          	    end
+          function()
+            vim.highlight.on_yank { higroup = "Visual", timeout = 200 }
+          end
         '';
       };
     }
@@ -31,8 +32,9 @@
       callback = {
         __raw = ''
           function()
-              vim.lsp.buf.format({ async = false })
-            end'';
+            vim.lsp.buf.format({ async = false })
+          end
+        '';
       };
     }
   ];

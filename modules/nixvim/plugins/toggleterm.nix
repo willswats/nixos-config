@@ -3,20 +3,10 @@
 {
   programs.nixvim.plugins.toggleterm = {
     enable = true;
-    autochdir = true;
-    size = 10;
-    openMapping = "<c-t>";
-    hideNumbers = true;
-    shadeTerminals = true;
-    shadingFactor = 2;
-    startInInsert = true;
-    insertMappings = true;
-    persistSize = false;
-    direction = "float";
-    closeOnExit = true;
-    floatOpts = {
-      border = "curved";
-      winblend = 0;
-    };
+    autochdir =
+      true; # When neovim changes it current directory the terminal will change it’s own when next it’s opened
+    openMapping = "<c-t>"; # Mapping to open the terminal
+    direction = "float"; # Floating terminal
+    floatOpts = { border = "single"; }; # Floating terminal options
   };
 }

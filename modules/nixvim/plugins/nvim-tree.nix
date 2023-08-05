@@ -8,22 +8,24 @@
 
   programs.nixvim.plugins.nvim-tree = {
     enable = true;
-    disableNetrw = true;
-    hijackCursor = true;
-    hijackNetrw = true;
-    syncRootWithCwd = true;
-    trash.cmd = "trash";
+    disableNetrw = true; # Disable default neovim explorer
+    hijackCursor = true; # Keep the cursor on the first letter of the filename
+    syncRootWithCwd =
+      true; # Changes the tree root directory on DirChanged and refreshes the tree
+    trash.cmd = "trash"; # The command used to trash items
+    # Set as floating
     view = {
       float = {
         enable = true;
         openWinConfig = {
           relative = "editor";
-          border = "rounded";
+          border = "single";
           width = 40;
           height = 100000;
         };
       };
     };
+    # Set custom mappings
     onAttach = {
       __raw = ''
         function(bufnr)
