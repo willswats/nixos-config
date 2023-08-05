@@ -8,7 +8,10 @@
 
   programs.nixvim.plugins.nvim-tree = {
     enable = true;
-    disableNetrw = false;
+    disableNetrw = true;
+    hijackCursor = true;
+    hijackNetrw = true;
+    syncRootWithCwd = true;
     view = {
       float = {
         enable = true;

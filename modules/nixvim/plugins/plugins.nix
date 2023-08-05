@@ -1,14 +1,19 @@
 { ... }:
 
 {
-  imports = [ ./lsp.nix ./null-ls.nix ./nvim-tree.nix ./telescope.nix ];
+  imports = [
+    ./lsp.nix
+    ./null-ls.nix
+    ./nvim-tree.nix
+    ./telescope.nix
+    ./toggleterm.nix
+  ];
 
   programs.nixvim.plugins = {
     noice.enable = true;
     bufferline.enable = true;
     treesitter.enable = true;
     lualine.enable = true;
-    toggleterm.enable = true;
     which-key.enable = true;
     gitsigns.enable = true;
     comment-nvim.enable = true;
