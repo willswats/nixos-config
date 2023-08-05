@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   imports = [
@@ -15,13 +15,13 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Setup keyfile
-  boot.initrd.secrets = {
-    "/crypto_keyfile.bin" = null;
-  };
+  boot.initrd.secrets = { "/crypto_keyfile.bin" = null; };
 
   # Enable swap on luks
-  boot.initrd.luks.devices."luks-c82679d7-a63e-4e85-959d-325632f2bc7e".device = "/dev/disk/by-uuid/c82679d7-a63e-4e85-959d-325632f2bc7e";
-  boot.initrd.luks.devices."luks-c82679d7-a63e-4e85-959d-325632f2bc7e".keyFile = "/crypto_keyfile.bin";
+  boot.initrd.luks.devices."luks-c82679d7-a63e-4e85-959d-325632f2bc7e".device =
+    "/dev/disk/by-uuid/c82679d7-a63e-4e85-959d-325632f2bc7e";
+  boot.initrd.luks.devices."luks-c82679d7-a63e-4e85-959d-325632f2bc7e".keyFile =
+    "/crypto_keyfile.bin";
 
   networking.hostName = "will-laptop";
 }

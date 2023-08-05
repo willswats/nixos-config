@@ -8,7 +8,9 @@
   systemd.user.services.spice-agent = {
     enable = true;
     wantedBy = [ "graphical-session.target" ];
-    serviceConfig = { ExecStart = "${pkgs.spice-vdagent}/bin/spice-vdagent -x"; };
+    serviceConfig = {
+      ExecStart = "${pkgs.spice-vdagent}/bin/spice-vdagent -x";
+    };
     unitConfig = {
       ConditionVirtualization = "vm";
       Description = "Spice guest session agent";

@@ -3,8 +3,6 @@
 {
   programs.mpv = {
     enable = true;
-    config = {
-      volume = 50;
-    };
+    config = { volume = 50; };
   };
 }

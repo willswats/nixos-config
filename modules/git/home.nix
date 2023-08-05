@@ -1,10 +1,7 @@
 { ... }:
 
-
-let
-  email = "willswats@users.noreply.github.com";
-in
-{
+let email = "willswats@users.noreply.github.com";
+in {
   programs.git = {
     enable = true;
     userName = "willswats";
@@ -15,8 +12,6 @@ in
     #   key = email;
     #   signByDefault = true;
     # };
-    extraConfig = {
-      init.defaultBranch = "main";
-    };
+    extraConfig = { init.defaultBranch = "main"; };
   };
 }

@@ -12,15 +12,12 @@ let
   red = "#f38ba8";
   mauve = "#cba6f7";
   pink = "#f5c2e7";
-in
-{
-  xsession.windowManager.i3.config.startup = [
-    {
-      command = "systemctl --user restart polybar";
-      always = true;
-      notification = false;
-    }
-  ];
+in {
+  xsession.windowManager.i3.config.startup = [{
+    command = "systemctl --user restart polybar";
+    always = true;
+    notification = false;
+  }];
   services.polybar = {
     enable = true;
     package = pkgs.polybar.override {
@@ -60,26 +57,25 @@ in
         tray-position = "right";
       };
 
-      "module/xworkspaces" =
-        {
-          type = "internal/xworkspaces";
-          label-active = "%name%";
-          label-active-background = "${crust}";
-          label-active-underline = "${blue}";
-          label-active-padding = "1";
+      "module/xworkspaces" = {
+        type = "internal/xworkspaces";
+        label-active = "%name%";
+        label-active-background = "${crust}";
+        label-active-underline = "${blue}";
+        label-active-padding = "1";
 
-          label-occupied = "%name%";
-          label-occupied-padding = "1";
+        label-occupied = "%name%";
+        label-occupied-padding = "1";
 
-          label-urgent = "%name%";
-          label-urgent-background = "${red}";
-          label-urgent-padding = "1";
+        label-urgent = "%name%";
+        label-urgent-background = "${red}";
+        label-urgent-padding = "1";
 
-          label-empty = "%name%";
-          label-empty-foreground = "${overlay0}";
-          label-empty-padding = "1";
+        label-empty = "%name%";
+        label-empty-foreground = "${overlay0}";
+        label-empty-padding = "1";
 
-        };
+      };
 
       "module/i3" = {
         type = "internal/i3";
@@ -120,7 +116,6 @@ in
         ramp-capacity-3 = "";
         ramp-capacity-4 = "";
       };
-
 
       "module/backlight" = {
         type = "internal/backlight";
@@ -165,20 +160,19 @@ in
         label-foreground = "${mauve}";
       };
 
-      "module/time" =
-        {
-          type = "internal/date";
-          interval = "1";
+      "module/time" = {
+        type = "internal/date";
+        interval = "1";
 
-          time = "%H:%M";
+        time = "%H:%M";
 
-          format = "󱑍 <label>";
-          format-foreground = "${blue}";
+        format = "󱑍 <label>";
+        format-foreground = "${blue}";
 
-          label = "%time%";
-          label-foreground = "${blue}";
+        label = "%time%";
+        label-foreground = "${blue}";
 
-        };
+      };
       "settings" = {
         screenchange-reload = "true";
         pseudo-transparency = "true";

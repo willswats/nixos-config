@@ -3,8 +3,7 @@
 let
   blue = "#89b4fa";
   base = "#1e1e2e";
-in
-{
+in {
   services.flameshot = {
     enable = true;
     settings = {

@@ -1,17 +1,13 @@
 { pkgs, ... }:
 
 {
-  imports = [
-    ./redshift
-  ];
+  imports = [ ./redshift ];
 
   services = {
     blueman.enable = true;
 
     xserver = {
-      desktopManager = {
-        xterm.enable = false;
-      };
+      desktopManager = { xterm.enable = false; };
 
       excludePackages = [ pkgs.xterm ];
 

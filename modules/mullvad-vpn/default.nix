@@ -1,11 +1,7 @@
 { ... }:
 
 {
-  networking = {
-    wireguard.enable = true;
-  };
+  networking = { wireguard.enable = true; };
 
-  services = {
-    mullvad-vpn.enable = true;
-  };
+  services = { mullvad-vpn.enable = true; };
 }

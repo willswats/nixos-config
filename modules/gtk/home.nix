@@ -18,21 +18,11 @@
         flavor = "mocha";
       };
     };
-    gtk2 = {
-      extraConfig = "gtk-error-bell = 0";
-    };
+    gtk2 = { extraConfig = "gtk-error-bell = 0"; };
     gtk3 = {
-      bookmarks =
-        let
-          bookmarkStart = "file:///home/will/";
-        in
-        [
-          "${bookmarkStart}Downloads Downloads"
-          "${bookmarkStart}Code Code"
-        ];
-      extraConfig = {
-        gtk-error-bell = 0;
-      };
+      bookmarks = let bookmarkStart = "file:///home/will/";
+      in [ "${bookmarkStart}Downloads Downloads" "${bookmarkStart}Code Code" ];
+      extraConfig = { gtk-error-bell = 0; };
       # Remove black borders https://github.com/catppuccin/gtk/issues/6#issuecomment-1443573299
       extraCss = ''
         menu,
@@ -44,9 +34,7 @@
       '';
     };
     gtk4 = {
-      extraConfig = {
-        gtk-error-bell = 0;
-      };
+      extraConfig = { gtk-error-bell = 0; };
       # Remove black borders https://github.com/catppuccin/gtk/issues/6#issuecomment-1443573299
       extraCss = ''
         menu,

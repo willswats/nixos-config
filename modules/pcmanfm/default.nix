@@ -2,6 +2,6 @@
 
 {
   services = {
-    gvfs.enable = true; # For restoring from the wastebasket 
+    gvfs.enable = true; # For restoring from the wastebasket
   };
 }

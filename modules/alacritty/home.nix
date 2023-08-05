@@ -96,14 +96,16 @@
           cyan = "#94E2D5"; # teal
           white = "#BAC2DE"; # subtext1
         };
-        indexed_colors =
-          [
-            {
-              index = 16;
-              color = "#FAB387";
-            }
-            { index = 17; color = "#F5E0DC"; }
-          ];
+        indexed_colors = [
+          {
+            index = 16;
+            color = "#FAB387";
+          }
+          {
+            index = 17;
+            color = "#F5E0DC";
+          }
+        ];
       };
     };
   };

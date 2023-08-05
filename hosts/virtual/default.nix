@@ -1,11 +1,8 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
-  imports = [
-    ../configuration.nix
-    ./hardware-configuration.nix
-    ../../modules/spice
-  ];
+  imports =
+    [ ../configuration.nix ./hardware-configuration.nix ../../modules/spice ];
 
   boot.loader.grub = {
     enable = true;
@@ -15,7 +12,10 @@
   };
 
   # Set resolution
-  services.xserver.resolutions = [{ x = 1920; y = 1080; }];
+  services.xserver.resolutions = [{
+    x = 1920;
+    y = 1080;
+  }];
 
   networking.hostName = "will-virtual";
 }
