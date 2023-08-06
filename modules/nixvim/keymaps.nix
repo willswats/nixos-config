@@ -2,7 +2,10 @@
 
 {
   programs.nixvim = {
-    globals.mapleader = " ";
+    globals = {
+      mapleader = " ";
+      maplocalleader = " ";
+    };
     maps = let
       cr = "<CR>";
       cmd = "<CMD>";
