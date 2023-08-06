@@ -6,13 +6,14 @@
     ./nvim-cmp.nix
     ./null-ls.nix
     ./nvim-tree.nix
+    ./bufferline.nix
+    ./lualine.nix
     ./telescope.nix
     ./toggleterm.nix
   ];
 
   programs.nixvim.plugins = {
     noice.enable = true;
-    bufferline.enable = true;
     treesitter.enable = true;
     lualine.enable = true;
     which-key.enable = true;
