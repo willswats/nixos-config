@@ -2,6 +2,8 @@
 
 ## NixVim
 
+- [ ] Add more cmp config
+- [ ] Add more lualine config
 - [ ] Move plugin keymaps into their own files
 - [ ] Add friendly-snippets
 - [ ] Add marksman lsp
