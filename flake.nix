@@ -22,10 +22,8 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.will.imports = [
-              ./hosts/desktop/home.nix
-              nixvim.homeManagerModules.nixvim
-            ];
+            home-manager.users.will.imports =
+              [ ./hosts/desktop/home.nix nixvim.homeManagerModules.nixvim ];
           }
         ];
       };
@@ -37,10 +35,8 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.will.imports = [
-              ./hosts/laptop/home.nix
-              nixvim.homeManagerModules.nixvim
-            ];
+            home-manager.users.will.imports =
+              [ ./hosts/laptop/home.nix nixvim.homeManagerModules.nixvim ];
           }
         ];
       };
@@ -52,10 +48,8 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.will.imports = [
-              ./hosts/virtual/home.nix
-              nixvim.homeManagerModules.nixvim
-            ];
+            home-manager.users.will.imports =
+              [ ./hosts/virtual/home.nix nixvim.homeManagerModules.nixvim ];
           }
         ];
       };
