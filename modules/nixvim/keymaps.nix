@@ -52,6 +52,7 @@
         "<leader>t8".action = "${cmd}ToggleTerm 8${cr}";
         "<leader>t9".action = "${cmd}ToggleTerm 9${cr}";
         "<leader>t0".action = "${cmd}ToggleTerm 10${cr}";
+        "<leader>tg".action = "${cmd}lua LAZYGIT_TOGGLE()${cr}";
       };
       insert = {
         # Escape insert mode faster
