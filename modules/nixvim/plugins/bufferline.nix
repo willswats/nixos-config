@@ -4,7 +4,7 @@
   programs.nixvim.plugins.bufferline = {
     enable = true;
     closeCommand = "confirm bdelete %d";
-    showCloseIcon = false;
+    showBufferCloseIcons = false;
     alwaysShowBufferline = false;
   };
 }
