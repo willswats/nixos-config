@@ -1,5 +1,14 @@
 # TODO
 
+## NixVim
+
+- [ ] Move plugin keymaps into their own files
+- [ ] Add friendly-snippets
+- [ ] Add marksman lsp
+- [ ] Add mkdnflow
+- [ ] Indent markdown by 2
+- [ ] Add nvim dap and dap ui
+
 ## Home Manager
 
 - [ ] Organise modules
@@ -18,14 +27,6 @@
 ## i3
 
 - [ ] Fix laptop locking on wake
-
-## NixVim
-
-- [ ] Add friendly-snippets
-- [ ] Add marksman lsp
-- [ ] Add mkdnflow
-- [ ] Indent markdown by 2
-- [ ] Add nvim dap and dap ui
 
 ## Theme
 
