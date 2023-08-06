@@ -13,6 +13,7 @@
     ./toggleterm.nix
     ./gitsigns.nix
     ./illuminate.nix
+    ./indent-blankline.nix
   ];
 
   programs.nixvim.plugins = {
@@ -21,6 +22,5 @@
     which-key.enable = true;
     nvim-autopairs.enable = true;
     ts-autotag.enable = true;
-    indent-blankline.enable = true;
   };
 }
