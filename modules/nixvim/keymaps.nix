@@ -68,8 +68,6 @@
         "<leader>lf".action = "${cmd}lua vim.diagnostic.open_float()${cr}";
         "<leader>la".action = "${cmd}lua vim.lsp.buf.code_action()${cr}";
         "<leader>li".action = "${cmd}lua vim.lsp.buf.implementation()${cr}";
-        "<leader>ld".action = "${cmd}lua vim.lsp.buf.definition()${cr}";
-        "<leader>lD".action = "${cmd}lua vim.lsp.buf.declaration()${cr}";
         "<leader>lr".action = "${cmd}lua vim.lsp.buf.references()${cr}";
         "<leader>lh".action = "${cmd}lua vim.lsp.buf.hover()${cr}";
       };
