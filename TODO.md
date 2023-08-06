@@ -18,7 +18,6 @@
 ## i3
 
 - [ ] Fix laptop locking on wake
-- [ ] Lock screen is set to 10 minutes, not one hour
 
 ## NixVim
 
