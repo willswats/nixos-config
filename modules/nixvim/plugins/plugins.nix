@@ -9,13 +9,12 @@
     ./bufferline.nix
     ./lualine.nix
     ./telescope.nix
+    ./noice.nix
     ./toggleterm.nix
   ];
 
   programs.nixvim.plugins = {
-    noice.enable = true;
     treesitter.enable = true;
-    lualine.enable = true;
     which-key.enable = true;
     gitsigns.enable = true;
     comment-nvim.enable = true;
