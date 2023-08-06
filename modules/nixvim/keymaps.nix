@@ -53,6 +53,25 @@
         "<leader>t9".action = "${cmd}ToggleTerm 9${cr}";
         "<leader>t0".action = "${cmd}ToggleTerm 10${cr}";
         "<leader>tg".action = "${cmd}lua LAZYGIT_TOGGLE()${cr}";
+        # Gitsigns
+        "<leader>gj".action =
+          "${cmd}lua require 'gitsigns'.next_hunk({navigation_message = false})${cr}";
+        "<leader>gk".action =
+          "${cmd}lua require 'gitsigns'.prev_hunk({navigation_message = false})${cr}";
+        "<leader>gr" = "${cmd}lua require 'gitsigns'.reset_hunk()${cr}";
+        "<leader>gR" = "${cmd}lua require 'gitsigns'.reset_buffer()${cr}";
+        "<leader>gs" = "${cmd}lua require 'gitsigns'.stage_hunk()${cr}";
+        "<leader>gS" = "${cmd}lua require 'gitsigns'.undo_stage_hunk()${cr}";
+        # LSP
+        "<leader>lj".action = "${cmd}lua vim.diagnostic.goto_next()${cr}";
+        "<leader>lk".action = "${cmd}lua vim.diagnostic.goto_prev()${cr}";
+        "<leader>lf".action = "${cmd}lua vim.diagnostic.open_float()${cr}";
+        "<leader>la".action = "${cmd}lua vim.lsp.buf.code_action()${cr}";
+        "<leader>li".action = "${cmd}lua vim.lsp.buf.implementation()${cr}";
+        "<leader>ld".action = "${cmd}lua vim.lsp.buf.definition()${cr}";
+        "<leader>lD".action = "${cmd}lua vim.lsp.buf.declaration()${cr}";
+        "<leader>lr".action = "${cmd}lua vim.lsp.buf.references()${cr}";
+        "<leader>lh".action = "${cmd}lua vim.lsp.buf.hover()${cr}";
       };
       insert = {
         # Escape insert mode faster
