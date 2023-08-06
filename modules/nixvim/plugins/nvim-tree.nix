@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
-{
+let icons = import ../icons.nix;
+in {
   home.packages = with pkgs;
     [
       trash-cli # Removal command in nvim-tree
@@ -22,6 +23,34 @@
           border = "single";
           width = 40;
           height = 100000;
+        };
+      };
+    };
+    renderer = {
+      icons = {
+        glyphs = {
+          default = icons.ui.File;
+          symlink = icons.ui.FileSymlink;
+          modified = icons.ui.Circle;
+          folder = {
+            arrowClosed = icons.ui.ChevronShortDown;
+            arrowOpen = icons.ui.ChevronShortUp;
+            default = icons.ui.Folder;
+            open = icons.ui.FolderOpen;
+            empty = icons.ui.EmptyFolder;
+            emptyOpen = icons.ui.EmptyFolderOpen;
+            symlink = icons.ui.FileSymlink;
+            symlinkOpen = icons.ui.FileSymlink;
+          };
+          git = {
+            unstaged = icons.git.FileUnstaged;
+            staged = icons.git.FileStaged;
+            unmerged = icons.git.FileUnmerged;
+            renamed = icons.git.FileRenamed;
+            untracked = icons.git.FileUntracked;
+            deleted = icons.git.FileDeleted;
+            ignored = icons.git.FileIgnored;
+          };
         };
       };
     };
