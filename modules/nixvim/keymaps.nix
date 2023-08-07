@@ -37,6 +37,8 @@
         "<leader>ft".action = "${cmd}Telescope live_grep${cr}";
         "<leader>fr".action = "${cmd}Telescope resume${cr}";
         "<leader>fg".action = "${cmd}Telescope git_files${cr}";
+        "<leader>fb".action = "${cmd}Telescope buffers${cr}";
+        "<leader>fd".action = "${cmd}Telescope diagnostics${cr}";
         # Bufferline
         "<S-l>".action = "${cmd}BufferLineCycleNext${cr}";
         "<S-h>".action = "${cmd}BufferLineCyclePrev${cr}";
