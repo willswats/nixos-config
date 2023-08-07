@@ -4,7 +4,6 @@
 
 ### Markdown
 
-- [ ] Add markdownlint to null-ls
 - [ ] Add marksman lsp
 - [ ] Add mkdnflow
 - [ ] Indent markdown by 2
