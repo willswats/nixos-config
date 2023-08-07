@@ -27,7 +27,7 @@
             modes = [ "i" "s" ];
             action = "cmp.mapping.select_prev_item()";
           };
-          "<CR>" = "cmp.mapping.confirm({ select = true })";
+          "<CR>" = "cmp.mapping.confirm({ select = false })";
         };
         sources = [
           { name = "nvim_lsp"; }
