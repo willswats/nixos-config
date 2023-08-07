@@ -13,7 +13,6 @@
       formatting = {
         prettier.enable = true;
         nixfmt.enable = true;
-        markdownlint.enable = true;
       };
     };
   };
