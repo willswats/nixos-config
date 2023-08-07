@@ -14,13 +14,13 @@
     ./gitsigns.nix
     ./illuminate.nix
     ./indent-blankline.nix
-    ./comment-nvim.nix
   ];
 
   programs.nixvim.plugins = {
     treesitter.enable = true;
     which-key.enable = true;
     nvim-autopairs.enable = true;
+    comment-nvim.enable = true;
     ts-autotag.enable = true;
   };
 }
