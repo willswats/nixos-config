@@ -4,20 +4,15 @@
 
 ### Markdown
 
-- [ ] Add marksman lsp
 - [ ] Add mkdnflow
 - [ ] Indent markdown by 2
 
-### Keymaps
-
-- [ ] Change comment key to "/"
-- [ ] Move plugin keymaps into their own files
-
 ### Other
 
+- [ ] Move plugin keymaps into their own files
+- [ ] Fix friendly-snippets
 - [ ] Finish cmp config
 - [ ] Finish lualine config
-- [ ] Add friendly-snippets
 - [ ] Add nvim dap and dap ui
 
 ## Home Manager
