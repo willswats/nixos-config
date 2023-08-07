@@ -2,27 +2,30 @@
 
 ## NixVim
 
+### Markdown
+
 - [ ] Add markdownlint to null-ls
-- [ ] Change comment key to "/"
-- [ ] Add more cmp config
-- [ ] Add more lualine config
-- [ ] Move plugin keymaps into their own files
-- [ ] Add friendly-snippets
 - [ ] Add marksman lsp
 - [ ] Add mkdnflow
 - [ ] Indent markdown by 2
+
+### Keymaps
+
+- [ ] Change comment key to "/"
+- [ ] Move plugin keymaps into their own files
+
+### Other
+
+- [ ] Finish cmp config
+- [ ] Finish lualine config
+- [ ] Add friendly-snippets
 - [ ] Add nvim dap and dap ui
 
 ## Home Manager
 
+- [ ] Move wallpaper
 - [ ] Organise modules
-- [ ] Add global variables:
-  - [ ] user
-  - [ ] hostname
-  - [ ] monitors
-  - [ ] wallpaper
-  - [ ] fontSize
-  - [ ] directoriesToCreate / bookmarks
+- [ ] Add global variables
 
 ## Firefox
 
