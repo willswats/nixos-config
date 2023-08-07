@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   home.packages = with pkgs; [
@@ -12,6 +12,23 @@
   ];
 
   programs.nixvim = {
+    maps =
+      let
+        cr = "<CR>";
+        cmd = "<CMD>";
+      in
+      config.nixvim.helpers.mkMaps { silent = true; } {
+        normal = {
+          "<leader>lj".action = "${cmd}lua vim.diagnostic.goto_next()${cr}";
+          "<leader>lk".action = "${cmd}lua vim.diagnostic.goto_prev()${cr}";
+          "<leader>lf".action = "${cmd}lua vim.diagnostic.open_float()${cr}";
+          "<leader>la".action = "${cmd}lua vim.lsp.buf.code_action()${cr}";
+          "<leader>li".action = "${cmd}lua vim.lsp.buf.implementation()${cr}";
+          "<leader>lr".action = "${cmd}lua vim.lsp.buf.rename()${cr}";
+          "<leader>lR".action = "${cmd}lua vim.lsp.buf.references()${cr}";
+          "<leader>lh".action = "${cmd}lua vim.lsp.buf.hover()${cr}";
+        };
+      };
     plugins.lsp = {
       enable = true;
       servers = {
