@@ -9,7 +9,6 @@
 
 ### Neovim - Other
 
-- [ ] Add diagnostics to bufferline
 - [ ] Fix friendly-snippets
 - [ ] Finish cmp config
 - [ ] Finish lualine config
