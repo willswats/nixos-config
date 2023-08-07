@@ -2,16 +2,11 @@
 
 ## Neovim
 
-### Neovim - Markdown
-
+- [ ] Finish lualine config - [example](https://github.com/GaetanLepage/dotfiles/blob/master/home/modules/tui/neovim/plugins/lualine.nix)
+- [ ] Finish cmp config
+- [ ] Fix friendly-snippets
 - [ ] Add mkdnflow
 - [ ] Indent markdown by 2
-
-### Neovim - Other
-
-- [ ] Fix friendly-snippets
-- [ ] Finish cmp config
-- [ ] Finish lualine config
 - [ ] Add nvim dap and dap ui
 
 ## Home Manager
