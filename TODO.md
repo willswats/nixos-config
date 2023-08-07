@@ -1,13 +1,13 @@
 # TODO
 
-## NixVim
+## Neovim
 
-### Markdown
+### Neovim - Markdown
 
 - [ ] Add mkdnflow
 - [ ] Indent markdown by 2
 
-### Other
+### Neovim - Other
 
 - [ ] Move plugin keymaps into their own files
 - [ ] Fix friendly-snippets
@@ -20,6 +20,7 @@
 - [ ] Move wallpaper
 - [ ] Organise modules
 - [ ] Add global variables
+- [ ] Create development shells
 
 ## Firefox
 
