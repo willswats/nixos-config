@@ -2,6 +2,8 @@
 
 ## NixVim
 
+- [ ] Add markdownlint to null-ls
+- [ ] Change comment key to "/"
 - [ ] Add more cmp config
 - [ ] Add more lualine config
 - [ ] Move plugin keymaps into their own files
