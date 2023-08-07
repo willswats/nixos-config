@@ -29,12 +29,13 @@
     stateVersion = "23.05";
 
     packages = with pkgs; [
-      # Essentials
+      # System
       wget
       zip
       unzip
       killall
       xclip
+      trash-cli
       appimage-run
       # Development
       nodePackages.pnpm
