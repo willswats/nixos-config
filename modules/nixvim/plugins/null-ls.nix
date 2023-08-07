@@ -12,11 +12,7 @@
     # https://github.com/nix-community/nixvim/issues/97
     extraPlugins = with pkgs.vimPlugins; [ null-ls-nvim ];
     extraConfigLua = ''
-      local status_ok_null_ls, null_ls = pcall(require, "null-ls")
-      if not status_ok_null_ls then
-        return
-      end
-
+      local null_ls = require("null-ls")
       local formatting = null_ls.builtins.formatting
       local diagnostics = null_ls.builtins.diagnostics
 

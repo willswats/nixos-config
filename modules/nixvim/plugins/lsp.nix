@@ -23,6 +23,9 @@
       };
     };
     extraConfigLua = ''
+      local lspconfig = require("lspconfig")
+      lspconfig.marksman.setup {}
+
       local signs = {
         { name = "DiagnosticSignError", text = "" },
         { name = "DiagnosticSignWarn",  text = "" },

@@ -11,10 +11,7 @@
       floatOpts = { border = "single"; }; # Floating terminal options
     };
     extraConfigLua = ''
-      local status_ok_toggleterm_terminal, toggleterm_terminal = pcall(require, "toggleterm.terminal")
-      if not status_ok_toggleterm_terminal then
-        return
-      end
+      local toggleterm_terminal = require("toggleterm.terminal")
 
       function LAZYGIT_TOGGLE()
         local Terminal = toggleterm_terminal.Terminal
