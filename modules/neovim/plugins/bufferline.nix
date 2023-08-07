@@ -1,6 +1,7 @@
 { config, ... }:
 
-{
+let icons = import ../icons.nix;
+in {
   programs.nixvim = {
     maps =
       let
@@ -23,6 +24,26 @@
       rightMouseCommand = "confirm bdelete %d";
       showBufferCloseIcons = false;
       alwaysShowBufferline = false;
+      indicator.icon = icons.ui.BoldLineLeft;
+      bufferCloseIcon = icons.ui.Close;
+      modifiedIcon = icons.ui.Circle;
+      closeIcon = icons.ui.BoldClose;
+      leftTruncMarker = icons.ui.ArrowCircleLeft;
+      rightTruncMarker = icons.ui.ArrowCircleRight;
+      diagnostics = "nvim_lsp";
+      diagnosticsIndicator = ''
+        function(count, level)
+          local icon = ""
+          if level:match("error") then
+            icon = ""
+          elseif level:match("warning") then
+            icon = ""
+          elseif level:match("hint") then
+            icon = "󰌶"
+          end
+          return " " .. icon .. " " .. count
+        end
+      '';
     };
   };
 }

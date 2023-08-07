@@ -9,7 +9,7 @@
 
 ### Neovim - Other
 
-- [ ] Move plugin keymaps into their own files
+- [ ] Add diagnostics to bufferline
 - [ ] Fix friendly-snippets
 - [ ] Finish cmp config
 - [ ] Finish lualine config
