@@ -55,9 +55,10 @@ in {
         feh = "feh";
         terminal = "alacritty";
         editor = "nvim";
-        web_browser = "firefox";
-        file_explorer = "pcmanfm";
-        system_monitor = "btm";
+        webBrowser = "firefox";
+        fileExplorer = "pcmanfm";
+        systemMonitor = "btm";
+        musicPlayer = "spotify_player";
         pactl = "pactl";
         playerctl = "playerctl";
         brightnessctl = "brightnessctl";
@@ -191,23 +192,24 @@ in {
             "${mod}+Tab" = "layout toggle all"; # Toggle between layouts
 
             "${mod}+f" = "fullscreen toggle";
-            "${mod}+space" = "floating toggle"; # Toggle floating window
-            "${mod}+Shift+space" = "focus mode_toggle"; # Focus floating window
+            "${mod}+Shift+space" = "floating toggle"; # Toggle floating window
+            "${mod}+space" = "focus mode_toggle"; # Focus floating window
 
-            "${mod}+minus" = "move scratchpad";
-            "${mod}+Shift+minus" = "scratchpad show";
+            "${mod}+Shift+minus" = "move scratchpad";
+            "${mod}+minus" = "scratchpad show";
 
-            "${mod}+q" = "kill";
+            "${mod}+Shift+q" = "kill";
             "${mod}+Shift+r" = "restart";
             "${mod}+Shift+e" = "${exec} i3-msg exit";
-            "${mod}+semicolon" = "${exec} ${lockCmd}";
+            "${mod}+Shift+semicolon" = "${exec} ${lockCmd}";
 
             "${mod}+d" = "${exec} ${menu} -show drun";
             "${mod}+Return" = "${exec} ${terminal}";
-            "${mod}+w" = "${exec} ${web_browser}";
-            "${mod}+e" = "${exec} ${file_explorer}";
+            "${mod}+w" = "${exec} ${webBrowser}";
+            "${mod}+e" = "${exec} ${fileExplorer}";
             "${mod}+t" = "${exec} ${terminal} -e ${editor}";
-            "${mod}+s" = "${exec} ${terminal} -e ${system_monitor} -b";
+            "${mod}+s" = "${exec} ${terminal} -e ${systemMonitor} -b";
+            "${mod}+m" = "${exec} ${terminal} -e ${musicPlayer}";
           };
           modes = {
             resize = {
