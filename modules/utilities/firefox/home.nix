@@ -75,6 +75,10 @@
                 url = "https://www.twitch.tv/";
               }
               {
+                name = "myNoise";
+                url = "https://mynoise.net/";
+              }
+              {
                 name = "AniWave";
                 url = "https://aniwave.to/";
               }
@@ -200,6 +204,10 @@
                 name = "Home Manager";
                 url =
                   "https://nix-community.github.io/home-manager/options.html";
+              }
+              {
+                name = "nixvim docs";
+                url = "https://nix-community.github.io/nixvim/";
               }
             ];
           }
