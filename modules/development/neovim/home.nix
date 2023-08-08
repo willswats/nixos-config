@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./colorscheme.nix
     ./autocommands.nix
     ./keymaps.nix
     ./options.nix

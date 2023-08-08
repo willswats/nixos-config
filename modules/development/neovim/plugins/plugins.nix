@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./colorscheme.nix
     ./lsp.nix
     ./nvim-cmp.nix
     ./null-ls.nix
