@@ -15,8 +15,8 @@
         enable = true;
         snippet.expand = "luasnip";
         mapping = {
-          "<C-d>" = "cmp.mapping.scroll_docs(-4)";
-          "<C-f>" = "cmp.mapping.scroll_docs(4)";
+          "<C-k>" = "cmp.mapping.scroll_docs(-4)";
+          "<C-j>" = "cmp.mapping.scroll_docs(4)";
           "<C-Space>" = "cmp.mapping.complete()";
           "<C-e>" = "cmp.mapping.close()";
           "<Tab>" = {
@@ -29,6 +29,12 @@
           };
           "<CR>" = "cmp.mapping.confirm({ select = false })";
         };
+        formatting.format = ''
+          function(_, vim_item)
+            vim_item.kind = (icons.kind[vim_item.kind] or "") .. " " .. vim_item.kind
+            return vim_item
+          end
+        '';
         sources = [
           { name = "nvim_lsp"; }
           { name = "nvim_lua"; }
@@ -38,5 +44,45 @@
         ];
       };
     };
+    extraConfigLua = ''
+      icons = {
+        kind = {
+          Array = "",
+          Boolean = "",
+          Class = "",
+          Color = "",
+          Constant = "",
+          Constructor = "",
+          Enum = "",
+          EnumMember = "",
+          Event = "",
+          Field = "",
+          File = "",
+          Folder = "󰉋",
+          Function = "",
+          Interface = "",
+          Key = "",
+          Keyword = "",
+          Method = "",
+          Module = "",
+          Namespace = "",
+          Null = "󰟢",
+          Number = "",
+          Object = "",
+          Operator = "",
+          Package = "",
+          Property = "",
+          Reference = "",
+          Snippet = "",
+          String = "",
+          Struct = "",
+          Text = "",
+          TypeParameter = "",
+          Unit = "",
+          Value = "",
+          Variable = "",
+        }
+      }
+    '';
   };
 }
