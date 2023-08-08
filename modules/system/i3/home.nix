@@ -200,7 +200,7 @@ in {
             "${mod}+q" = "kill";
             "${mod}+Shift+r" = "restart";
             "${mod}+Shift+e" = "${exec} i3-msg exit";
-            "${mod}+Shift+#" = "${exec} ${lockCmd}";
+            "${mod}+Shift+semicolon" = "${exec} ${lockCmd}";
 
             "${mod}+d" = "${exec} ${menu} -show drun";
             "${mod}+Return" = "${exec} ${terminal}";
