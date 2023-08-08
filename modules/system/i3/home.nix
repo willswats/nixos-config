@@ -16,7 +16,6 @@ in {
     playerctl
     brightnessctl
     lxde.lxsession
-    autotiling
   ];
 
   services = {
@@ -63,7 +62,6 @@ in {
         playerctl = "playerctl";
         brightnessctl = "brightnessctl";
         lxpolkit = "lxpolkit";
-        autotiling = "autotiling";
         rclone = "rclone";
 
         # https://github.com/catppuccin/i3
@@ -189,19 +187,19 @@ in {
 
             "${mod}+z" = "split v"; # Move split to vertical
             "${mod}+x" = "split h"; # Move split to horizontal
-            "${mod}+Tab" = "layout toggle all"; # Toggle between layouts
+            "${mod}+Tab" = "layout toggle all"; # Toggle layouts
 
             "${mod}+f" = "fullscreen toggle";
-            "${mod}+Shift+space" = "floating toggle"; # Toggle floating window
-            "${mod}+space" = "focus mode_toggle"; # Focus floating window
+            "${mod}+space" = "floating toggle"; # Toggle floating window
+            "${mod}+Shift+space" = "focus mode_toggle"; # Focus floating window
 
-            "${mod}+Shift+minus" = "move scratchpad";
-            "${mod}+minus" = "scratchpad show";
+            "${mod}+minus" = "move scratchpad";
+            "${mod}+Shift+minus" = "scratchpad show";
 
-            "${mod}+Shift+q" = "kill";
+            "${mod}+q" = "kill";
             "${mod}+Shift+r" = "restart";
             "${mod}+Shift+e" = "${exec} i3-msg exit";
-            "${mod}+Shift+semicolon" = "${exec} ${lockCmd}";
+            "${mod}+Shift+#" = "${exec} ${lockCmd}";
 
             "${mod}+d" = "${exec} ${menu} -show drun";
             "${mod}+Return" = "${exec} ${terminal}";
@@ -237,11 +235,6 @@ in {
             {
               command = "${lxpolkit}";
               always = false;
-              notification = false;
-            }
-            {
-              command = "${autotiling}";
-              always = true; # Restarting i3 kills autotiling
               notification = false;
             }
             {
