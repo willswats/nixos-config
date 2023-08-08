@@ -1,5 +1,6 @@
-{ ... }: {
+{ ... }: 
 
+{
   home.file.".steam/steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/autoexec.cfg".text =
     ''
       # Unbindings
