@@ -11,8 +11,6 @@
 
 ## Home Manager
 
-- [ ] Move wallpaper
-- [ ] Organise modules
 - [ ] Add global variables
 - [ ] Create development shells
 
