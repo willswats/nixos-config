@@ -2,7 +2,6 @@
 
 ## Neovim
 
-- [ ] Finish lualine config - [example](https://github.com/GaetanLepage/dotfiles/blob/master/home/modules/tui/neovim/plugins/lualine.nix)
 - [ ] Finish cmp config
 - [ ] Fix friendly-snippets
 - [ ] Add mkdnflow
