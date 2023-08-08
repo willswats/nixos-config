@@ -1,7 +1,6 @@
 { lib, config, pkgs, ... }:
 
-let lockCmd = "i3lock -c 1e1e2e";
-in {
+{
   imports = [
     ./polybar/home.nix
     ./dunst/home.nix
@@ -22,10 +21,7 @@ in {
     picom.enable = true;
     network-manager-applet.enable = true;
     blueman-applet.enable = true;
-    screen-locker = {
-      enable = true;
-      lockCmd = lockCmd;
-    };
+    betterlockscreen.enable = true;
   };
 
   xsession = {
@@ -52,6 +48,7 @@ in {
 
         menu = "${pkgs.rofi}/bin/rofi";
         feh = "${pkgs.feh}/bin/feh";
+        betterlockscreen = "${pkgs.betterlockscreen}/bin/betterlockscreen";
         terminal = "${pkgs.alacritty}/bin/alacritty";
         editor = "nvim"; # ${pkgs.neovim}/bin/nvim - Can't find config
         webBrowser = "${pkgs.firefox}/bin/firefox";
@@ -200,7 +197,7 @@ in {
             "${mod}+q" = "kill";
             "${mod}+Shift+r" = "restart";
             "${mod}+Shift+e" = "${exec} i3-msg exit";
-            "${mod}+Shift+semicolon" = "${exec} ${lockCmd}";
+            "${mod}+Shift+semicolon" = "${exec} ${betterlockscreen} -l";
 
             "${mod}+d" = "${exec} ${menu} -show drun";
             "${mod}+Return" = "${exec} ${terminal}";
@@ -228,6 +225,11 @@ in {
             };
           };
           startup = [
+            {
+              command = "${betterlockscreen} -u ${image}";
+              always = false;
+              notification = false;
+            }
             {
               command = "${feh} --bg-fill ${image} --bg-fill ${image}";
               always = false;
