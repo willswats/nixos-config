@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./icons-lua.nix
     ./autocommands.nix
     ./keymaps.nix
     ./options.nix

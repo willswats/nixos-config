@@ -1,6 +1,7 @@
 { pkgs, config, ... }:
 
-{
+let icons = import ../icons.nix;
+in {
   home.packages = with pkgs; [
     gcc # rustup dependency
     rustup # Provides rust-analyzer
@@ -50,10 +51,10 @@
       lspconfig.marksman.setup {}
 
       local signs = {
-        { name = "DiagnosticSignError", text = icons.diagnostics.BoldError },
-        { name = "DiagnosticSignWarn",  text = icons.diagnostics.BoldWarning },
-        { name = "DiagnosticSignHint",  text = icons.diagnostics.BoldHint },
-        { name = "DiagnosticSignInfo",  text = icons.diagnostics.BoldInformation },
+        { name = "DiagnosticSignError", text = "${icons.diagnostics.BoldError}" },
+        { name = "DiagnosticSignWarn",  text = "${icons.diagnostics.BoldWarning}" },
+        { name = "DiagnosticSignHint",  text = "${icons.diagnostics.BoldHint}" },
+        { name = "DiagnosticSignInfo",  text = "${icons.diagnostics.BoldInformation}" },
       }
 
       for _, sign in pairs(signs) do
