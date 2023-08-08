@@ -4,9 +4,9 @@
   imports = [
     ../configuration.nix
     ./hardware-configuration.nix
-    ../../modules/virt-manager
-    ../../modules/opentabletdriver
-    ../../modules/nvidia
+    ../../modules/utilities/virt-manager
+    ../../modules/system/opentabletdriver
+    ../../modules/system/nvidia
   ];
 
   # Bootloader.
@@ -26,12 +26,14 @@
     "/crypto_keyfile.bin";
 
   # Setup displays
-  services.xserver.displayManager.setupCommands = let
-    monitor-center = "DP-2";
-    monitor-left = "DP-0";
-  in ''
-    ${pkgs.xorg.xrandr}/bin/xrandr --output ${monitor-center} --primary --mode 1920x1080 --rate 144.00 --rotate normal --output ${monitor-left} --mode 1920x1080 --rate 144.00 --rotate right --left-of ${monitor-center}
-  '';
+  services.xserver.displayManager.setupCommands =
+    let
+      monitor-center = "DP-2";
+      monitor-left = "DP-0";
+    in
+    ''
+      ${pkgs.xorg.xrandr}/bin/xrandr --output ${monitor-center} --primary --mode 1920x1080 --rate 144.00 --rotate normal --output ${monitor-left} --mode 1920x1080 --rate 144.00 --rotate right --left-of ${monitor-center}
+    '';
 
   networking.hostName = "will-desktop";
 }

@@ -4,7 +4,7 @@
   imports = [
     ../configuration.nix
     ./hardware-configuration.nix
-    ../../modules/virt-manager
+    ../../modules/utilities/virt-manager
   ];
 
   # Bootloader.

@@ -2,13 +2,13 @@
 
 {
   imports = [
-    ../modules/pipewire
-    ../modules/plymouth
-    ../modules/gtk
-    ../modules/qt
-    ../modules/i3
-    ../modules/pcmanfm
-    ../modules/mullvad-vpn
+    ../modules/system/pipewire
+    ../modules/system/plymouth
+    ../modules/system/i3
+    ../modules/theme/gtk
+    ../modules/theme/qt
+    ../modules/utilities/pcmanfm
+    ../modules/utilities/mullvad-vpn
   ];
 
   time.timeZone = "Europe/London";

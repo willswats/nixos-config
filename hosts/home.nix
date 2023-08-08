@@ -2,23 +2,23 @@
 
 {
   imports = [
-    ../modules/fonts/home.nix
-    ../modules/cursor/home.nix
-    ../modules/gtk/home.nix
-    ../modules/qt/home.nix
-    ../modules/git/home.nix
-    ../modules/gpg/home.nix
-    ../modules/firefox/home.nix
-    ../modules/i3/home.nix
-    ../modules/neovim/home.nix
-    ../modules/mpv/home.nix
-    ../modules/fish/home.nix
-    ../modules/alacritty/home.nix
-    ../modules/bottom/home.nix
-    ../modules/lazygit/home.nix
-    ../modules/rustup/home.nix
-    ../modules/pcmanfm/home.nix
-    ../modules/mullvad-vpn/home.nix
+    ../modules/theme/fonts/home.nix
+    ../modules/theme/cursor/home.nix
+    ../modules/theme/gtk/home.nix
+    ../modules/theme/qt/home.nix
+    ../modules/system/i3/home.nix
+    ../modules/development/git/home.nix
+    ../modules/development/gpg/home.nix
+    ../modules/development/neovim/home.nix
+    ../modules/development/lazygit/home.nix
+    ../modules/development/rustup/home.nix
+    ../modules/utilities/firefox/home.nix
+    ../modules/utilities/mpv/home.nix
+    ../modules/utilities/fish/home.nix
+    ../modules/utilities/alacritty/home.nix
+    ../modules/utilities/bottom/home.nix
+    ../modules/utilities/pcmanfm/home.nix
+    ../modules/utilities/mullvad-vpn/home.nix
   ];
 
   programs.home-manager.enable = true;
