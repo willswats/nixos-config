@@ -7,6 +7,9 @@
     nil # Nix LSP
     lua-language-server # Lua language server and formatter
     marksman # Markdown lsp
+    nodePackages.vscode-html-languageserver-bin # HTML LSP
+    nodePackages.vscode-css-languageserver-bin # CSS LSP
+    nodePackages.vscode-json-languageserver # JSON LSP
     nodePackages.typescript-language-server # TypeScript LSP
     nodePackages.eslint # JS, TS Linter
   ];
@@ -35,6 +38,9 @@
         rust-analyzer.enable = true;
         nil_ls.enable = true;
         lua-ls.enable = true;
+        html.enable = true;
+        cssls.enable = true;
+        jsonls.enable = true;
         tsserver.enable = true;
         eslint.enable = true;
       };
@@ -44,10 +50,10 @@
       lspconfig.marksman.setup {}
 
       local signs = {
-        { name = "DiagnosticSignError", text = "" },
-        { name = "DiagnosticSignWarn",  text = "" },
-        { name = "DiagnosticSignHint",  text = "" },
-        { name = "DiagnosticSignInfo",  text = "" },
+        { name = "DiagnosticSignError", text = icons.diagnostics.BoldError },
+        { name = "DiagnosticSignWarn",  text = icons.diagnostics.BoldWarning },
+        { name = "DiagnosticSignHint",  text = icons.diagnostics.BoldHint },
+        { name = "DiagnosticSignInfo",  text = icons.diagnostics.BoldInformation },
       }
 
       for _, sign in pairs(signs) do

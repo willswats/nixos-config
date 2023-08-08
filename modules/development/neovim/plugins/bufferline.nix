@@ -35,11 +35,11 @@ in {
         function(count, level)
           local icon = ""
           if level:match("error") then
-            icon = ""
+            icon = icons.diagnostics.Error
           elseif level:match("warning") then
-            icon = ""
+            icon = icons.diagnostics.Warning
           elseif level:match("hint") then
-            icon = "󰌶"
+            icon = icons.diagnostics.Hint
           end
           return " " .. icon .. " " .. count
         end

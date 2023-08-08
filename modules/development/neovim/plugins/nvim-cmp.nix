@@ -29,12 +29,15 @@
           };
           "<CR>" = "cmp.mapping.confirm({ select = false })";
         };
-        formatting.format = ''
-          function(_, vim_item)
-            vim_item.kind = (icons.kind[vim_item.kind] or "") .. " " .. vim_item.kind
-            return vim_item
-          end
-        '';
+        formatting = {
+          fields = [ "abbr" "kind" ];
+          format = ''
+            function(_, vim_item)
+              vim_item.kind = (icons.kind[vim_item.kind] or "") .. " " .. vim_item.kind
+              return vim_item
+            end
+          '';
+        };
         sources = [
           { name = "nvim_lsp"; }
           { name = "nvim_lua"; }
@@ -44,45 +47,5 @@
         ];
       };
     };
-    extraConfigLua = ''
-      icons = {
-        kind = {
-          Array = "",
-          Boolean = "",
-          Class = "",
-          Color = "",
-          Constant = "",
-          Constructor = "",
-          Enum = "",
-          EnumMember = "",
-          Event = "",
-          Field = "",
-          File = "",
-          Folder = "󰉋",
-          Function = "",
-          Interface = "",
-          Key = "",
-          Keyword = "",
-          Method = "",
-          Module = "",
-          Namespace = "",
-          Null = "󰟢",
-          Number = "",
-          Object = "",
-          Operator = "",
-          Package = "",
-          Property = "",
-          Reference = "",
-          Snippet = "",
-          String = "",
-          Struct = "",
-          Text = "",
-          TypeParameter = "",
-          Unit = "",
-          Value = "",
-          Variable = "",
-        }
-      }
-    '';
   };
 }
