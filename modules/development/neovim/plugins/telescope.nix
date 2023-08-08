@@ -1,4 +1,7 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, ... }:
+
+let icons = import ../icons.nix;
+in {
 
   home.packages = with pkgs; [
     fd # Telescope dependency
@@ -21,6 +24,12 @@
           "<leader>fd".action = "${cmd}Telescope diagnostics${cr}";
         };
       };
-    plugins.telescope = { enable = true; };
+    plugins.telescope = {
+      enable = true;
+      defaults = {
+        prompt_prefix = "${icons.ui.Telescope} ";
+        selection_caret = "${icons.ui.Forward} ";
+      };
+    };
   };
 }
