@@ -65,6 +65,17 @@ in {
           };
         };
       };
+      diagnostics = {
+        enable = true;
+        showOnDirs = true;
+        showOnOpenDirs = true;
+        icons = {
+          hint = icons.diagnostics.Hint;
+          info = icons.diagnostics.Information;
+          warning = icons.diagnostics.Warning;
+          error = icons.diagnostics.Error;
+        };
+      };
       # Set custom mappings
       onAttach = {
         __raw = ''
