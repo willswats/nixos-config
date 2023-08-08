@@ -90,6 +90,10 @@
                 name = "MangaDex";
                 url = "https://mangadex.org/";
               }
+              {
+                name = "movie-web";
+                url = "https://movie-web.app/";
+              }
             ];
           }
           {
@@ -212,13 +216,6 @@
             bookmarks = [{
               name = "williamwatson.dev";
               url = "https://williamwatson.dev";
-            }];
-          }
-          {
-            name = "Temp";
-            bookmarks = [{
-              name = "Matthias' nixos-config";
-              url = "https://github.com/MatthiasBenaets/nixos-config";
             }];
           }
         ];
