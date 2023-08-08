@@ -2,6 +2,7 @@
 
 ## Neovim
 
+- [ ] Convert lualine and null-ls setups to nix
 - [ ] Finish cmp config
 - [ ] Fix friendly-snippets
 - [ ] Add mkdnflow
