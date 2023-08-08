@@ -75,14 +75,6 @@
                 url = "https://www.twitch.tv/";
               }
               {
-                name = "Spotify";
-                url = "https://open.spotify.com/";
-              }
-              {
-                name = "myNoise";
-                url = "https://mynoise.net/";
-              }
-              {
                 name = "AniWave";
                 url = "https://aniwave.to/";
               }
