@@ -2,10 +2,9 @@
 
 ## Neovim
 
-- [ ] Finish cmp config
 - [ ] Fix friendly-snippets
-- [ ] Add mkdnflow
 - [ ] Indent markdown by 2
+- [ ] Add mkdnflow
 - [ ] Add nvim dap and dap ui
 
 ## spotify-player
