@@ -50,19 +50,19 @@ in {
         ws9 = "9";
         ws10 = "10";
 
-        menu = "rofi";
-        feh = "feh";
-        terminal = "alacritty";
+        menu = "${pkgs.rofi}/bin/rofi";
+        feh = "${pkgs.feh}/bin/feh";
+        terminal = "${pkgs.alacritty}/bin/alacritty";
         editor = "nvim";
-        webBrowser = "firefox";
-        fileExplorer = "pcmanfm";
-        systemMonitor = "btm";
-        musicPlayer = "spotify_player";
-        pactl = "pactl";
-        playerctl = "playerctl";
-        brightnessctl = "brightnessctl";
-        lxpolkit = "lxpolkit";
-        rclone = "rclone";
+        webBrowser = "${pkgs.firefox}/bin/firefox";
+        fileExplorer = "${pkgs.pcmanfm}/bin/pcmanfm";
+        systemMonitor = "${pkgs.bottom}/bin/btm";
+        musicPlayer = "${pkgs.spotify-player}/bin/spotify_player";
+        pactl = "${pkgs.pulseaudio}/bin/pactl";
+        playerctl = "${pkgs.playerctl}/bin/playerctl";
+        brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
+        lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
+        rclone = "${pkgs.rclone}/bin/rclone";
 
         # https://github.com/catppuccin/i3
         mauve = "#cba6f7";
