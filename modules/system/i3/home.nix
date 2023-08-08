@@ -53,7 +53,7 @@ in {
         menu = "${pkgs.rofi}/bin/rofi";
         feh = "${pkgs.feh}/bin/feh";
         terminal = "${pkgs.alacritty}/bin/alacritty";
-        editor = "nvim";
+        editor = "nvim"; # ${pkgs.neovim}/bin/nvim - Can't find config
         webBrowser = "${pkgs.firefox}/bin/firefox";
         fileExplorer = "${pkgs.pcmanfm}/bin/pcmanfm";
         systemMonitor = "${pkgs.bottom}/bin/btm";
@@ -187,7 +187,8 @@ in {
 
             "${mod}+z" = "split v"; # Move split to vertical
             "${mod}+x" = "split h"; # Move split to horizontal
-            "${mod}+Tab" = "layout toggle all"; # Toggle layouts
+            "${mod}+Tab" = "layout tabbed"; # Toggle tabbed
+            "${mod}+Shift+Tab" = "layout toggle splith splitv"; # Toggle between splith and splitv
 
             "${mod}+f" = "fullscreen toggle";
             "${mod}+space" = "floating toggle"; # Toggle floating window
