@@ -24,7 +24,15 @@ in {
       hijackCursor = true; # Keep the cursor on the first letter of the filename
       syncRootWithCwd =
         true; # Changes the tree root directory on DirChanged and refreshes the tree
-      actions.changeDir.global = true; # Use :cd instead of :lcd when changing directories
+      respectBufCwd = true; # Will change cwd of nvim-tree to that of new buffer’s when opening nvim-tree
+      actions.changeDir = {
+        enable = true;
+        global = true; # Use :cd instead of :lcd when changing directories
+      };
+      updateFocusedFile = {
+        enable = true;
+        updateRoot = true; # Update the root directory of the tree if the file is not under current root directory
+      };
       trash.cmd = "trash"; # The command used to trash items
       # Set as floating
       view = {

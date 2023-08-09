@@ -5,12 +5,7 @@
 
   programs.fish = {
     enable = true;
-    shellAliases = 
-    let 
-      notebookDirectory = "~/Drive/Work/Notebook";
-    in
-    {
-      note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
+    shellAliases = {
       key = "ssh-add ~/.ssh/id_ed25519";
     };
     interactiveShellInit = ''

@@ -17,6 +17,7 @@ in {
       config.nixvim.helpers.mkMaps { silent = true; } {
         normal = {
           "<leader>ff".action = "${cmd}Telescope find_files${cr}";
+          "<leader>fo".action = "${cmd}Telescope oldfiles${cr}";
           "<leader>ft".action = "${cmd}Telescope live_grep${cr}";
           "<leader>fr".action = "${cmd}Telescope resume${cr}";
           "<leader>fg".action = "${cmd}Telescope git_files${cr}";
@@ -29,9 +30,6 @@ in {
       defaults = {
         prompt_prefix = "${icons.ui.Telescope} ";
         selection_caret = "${icons.ui.Forward} ";
-      };
-      extensions = {
-        project-nvim.enable = true;
       };
     };
   };

@@ -15,6 +15,7 @@
     ./gitsigns.nix
     ./illuminate.nix
     ./indent-blankline.nix
+    ./project-nvim.nix
   ];
 
   programs.nixvim.plugins = {
@@ -23,6 +24,5 @@
     comment-nvim.enable = true;
     nvim-autopairs.enable = true;
     ts-autotag.enable = true;
-    project-nvim.enable = true;
   };
 }
