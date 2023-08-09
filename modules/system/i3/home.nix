@@ -191,11 +191,11 @@ in {
             "${mod}+Shift+Tab" = "layout toggle splith splitv"; # Toggle between splith and splitv
 
             "${mod}+f" = "fullscreen toggle";
-            "${mod}+space" = "floating toggle"; # Toggle floating window
-            "${mod}+Shift+space" = "focus mode_toggle"; # Focus floating window
+            "${mod}+Shift+space" = "floating toggle"; # Toggle floating window
+            "${mod}+space" = "focus mode_toggle"; # Focus floating window
 
-            "${mod}+minus" = "move scratchpad";
-            "${mod}+Shift+minus" = "scratchpad show";
+            "${mod}+Shift+minus" = "move scratchpad";
+            "${mod}+minus" = "scratchpad show";
 
             "${mod}+q" = "kill";
             "${mod}+Shift+r" = "restart";
