@@ -3,13 +3,19 @@
 let icons = import ../icons.nix;
 in {
   programs.nixvim = {
+    extraPlugins = with pkgs.vimPlugins; [ friendly-snippets ];
     plugins = {
       cmp-nvim-lsp.enable = true;
       cmp-buffer.enable = true;
       cmp-path.enable = true;
       cmp-nvim-lua.enable = true;
       cmp_luasnip.enable = true;
-      luasnip.enable = true;
+      luasnip = {
+        enable = true;
+        fromVscode = [
+          { } # generates: require("luasnip.loaders.from_vscode").lazy_load({})
+        ];
+      };
 
       nvim-cmp = {
         enable = true;
@@ -70,9 +76,5 @@ in {
         ];
       };
     };
-    extraPlugins = with pkgs.vimPlugins; [ friendly-snippets ];
-    extraConfigLua = ''
-      require("luasnip.loaders.from_vscode").lazy_load()
-    '';
   };
 }
