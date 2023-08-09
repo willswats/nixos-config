@@ -2,8 +2,7 @@
 
 ## Neovim
 
-- [ ] Decide on adding or removing project.nvim
-- [ ] Add missing snippets (bash shebang, licenses)
+- [ ] Add missing snippets (bash and licenses)
 - [ ] Set maps with `maps`
 - [ ] Indent markdown by 2
 - [ ] Add mkdnflow
