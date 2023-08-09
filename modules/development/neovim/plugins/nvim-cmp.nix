@@ -1,6 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
-{
+let icons = import ../icons.nix;
+in {
   programs.nixvim = {
     extraPlugins = with pkgs.vimPlugins; [ friendly-snippets ];
     plugins = {
@@ -57,6 +58,7 @@
           fields = [ "abbr" "kind" "menu" ];
           format = ''
             function(_, vim_item)
+              icons = ${config.nixvim.helpers.toLuaObject icons}
               vim_item.kind = (icons.kind[vim_item.kind] or "") .. " " .. vim_item.kind
               return vim_item
             end
@@ -71,54 +73,13 @@
         ];
       };
     };
-    extraConfigLuaPre = ''
+    extraConfigLua = ''
       local function has_words_before()
         local line, col = unpack(vim.api.nvim_win_get_cursor(0))
         return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match "%s" == nil
       end
-    '';
-    extraConfigLuaPost = ''
+
       require("luasnip.loaders.from_vscode").lazy_load()
-    '';
-    extraConfigLua = ''
-      icons = {
-        kind = {
-          Array = "",
-          Boolean = "",
-          Class = "",
-          Color = "",
-          Constant = "",
-          Constructor = "",
-          Enum = "",
-          EnumMember = "",
-          Event = "",
-          Field = "",
-          File = "",
-          Folder = "󰉋",
-          Function = "",
-          Interface = "",
-          Key = "",
-          Keyword = "",
-          Method = "",
-          Module = "",
-          Namespace = "",
-          Null = "󰟢",
-          Number = "",
-          Object = "",
-          Operator = "",
-          Package = "",
-          Property = "",
-          Reference = "",
-          Snippet = "",
-          String = "",
-          Struct = "",
-          Text = "",
-          TypeParameter = "",
-          Unit = "",
-          Value = "",
-          Variable = "",
-        },
-      }
     '';
   };
 }

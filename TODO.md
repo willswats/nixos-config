@@ -5,7 +5,6 @@
 - [ ] Indent markdown by 2
 - [ ] Add mkdnflow
 - [ ] Add nvim dap and dap ui
-- [ ] Remove need for redefining icons in cmp
 
 ## spotify-player
 
