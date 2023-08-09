@@ -11,6 +11,7 @@ in
     nil # Nix LSP
     lua-language-server # Lua language server and formatter
     marksman # Markdown lsp
+    nodePackages.bash-language-server # Bash LSP
     nodePackages.vscode-html-languageserver-bin # HTML LSP
     nodePackages.vscode-css-languageserver-bin # CSS LSP
     nodePackages.vscode-json-languageserver # JSON LSP
@@ -42,6 +43,7 @@ in
         rust-analyzer.enable = true;
         nil_ls.enable = true;
         lua-ls.enable = true;
+        bashls.enable = true;
         html.enable = true;
         cssls.enable = true;
         jsonls.enable = true;
