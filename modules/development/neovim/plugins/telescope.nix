@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 let icons = import ../icons.nix;
 in {
@@ -9,27 +9,40 @@ in {
   ];
 
   programs.nixvim = {
-    maps =
-      let
-        cr = "<CR>";
-        cmd = "<CMD>";
-      in
-      config.nixvim.helpers.mkMaps { silent = true; } {
-        normal = {
-          "<leader>ff".action = "${cmd}Telescope find_files${cr}";
-          "<leader>fo".action = "${cmd}Telescope oldfiles${cr}";
-          "<leader>ft".action = "${cmd}Telescope live_grep${cr}";
-          "<leader>fr".action = "${cmd}Telescope resume${cr}";
-          "<leader>fb".action = "${cmd}Telescope buffers${cr}";
-          "<leader>fd".action = "${cmd}Telescope diagnostics${cr}";
-        };
-      };
     plugins.telescope = {
       enable = true;
       defaults = {
         prompt_prefix = "${icons.ui.Telescope} ";
         selection_caret = "${icons.ui.Forward} ";
       };
+      keymapsSilent = true;
+      keymaps =
+        {
+          "<leader>ff" = {
+            action = "find_files";
+            desc = "Files";
+          };
+          "<leader>fo" = {
+            action = "oldfiles";
+            desc = "Old files";
+          };
+          "<leader>ft" = {
+            action = "live_grep";
+            desc = "Text";
+          };
+          "<leader>fr" = {
+            action = "resume";
+            desc = "Resume";
+          };
+          "<leader>fb" = {
+            action = "buffers";
+            desc = "Buffers";
+          };
+          "<leader>fd" = {
+            action = "diagnostics";
+            desc = "Diagnostics";
+          };
+        };
     };
   };
 }

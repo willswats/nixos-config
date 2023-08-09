@@ -2,8 +2,6 @@
 
 ## Neovim
 
-- [ ] Add missing snippets (bash and licenses)
-- [ ] Set maps with `maps`
 - [ ] Indent markdown by 2
 - [ ] Add mkdnflow
 - [ ] Add nvim dap and dap ui

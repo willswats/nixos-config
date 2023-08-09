@@ -14,8 +14,14 @@ in {
           "<S-h>".action = "${cmd}BufferLineCyclePrev${cr}";
           "<A-l>".action = "${cmd}BufferLineMoveNext${cr}";
           "<A-h>".action = "${cmd}BufferLineMovePrev${cr}";
-          "<leader>bh".action = "${cmd}BufferLineCloseLeft${cr}";
-          "<leader>bl".action = "${cmd}BufferLineCloseRight${cr}";
+          "<leader>bh" = {
+            action = "${cmd}BufferLineCloseLeft${cr}";
+            desc = "Delete left";
+          };
+          "<leader>bl" = {
+            action = "${cmd}BufferLineCloseRight${cr}";
+            desc = "Delete right";
+          };
         };
       };
     plugins.bufferline = {

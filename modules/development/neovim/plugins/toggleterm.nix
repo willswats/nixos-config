@@ -9,17 +9,43 @@
       in
       config.nixvim.helpers.mkMaps { silent = true; } {
         normal = {
-          "<leader>t1".action = "${cmd}ToggleTerm 1${cr}";
-          "<leader>t2".action = "${cmd}ToggleTerm 2${cr}";
-          "<leader>t3".action = "${cmd}ToggleTerm 3${cr}";
-          "<leader>t4".action = "${cmd}ToggleTerm 4${cr}";
-          "<leader>t5".action = "${cmd}ToggleTerm 5${cr}";
-          "<leader>t6".action = "${cmd}ToggleTerm 6${cr}";
-          "<leader>t7".action = "${cmd}ToggleTerm 7${cr}";
-          "<leader>t8".action = "${cmd}ToggleTerm 8${cr}";
-          "<leader>t9".action = "${cmd}ToggleTerm 9${cr}";
-          "<leader>t0".action = "${cmd}ToggleTerm 10${cr}";
-          "<leader>tg".action = "${cmd}lua LAZYGIT_TOGGLE()${cr}";
+          "<leader>t1" = {
+            action = "${cmd}ToggleTerm 1${cr}";
+            desc = "1";
+          };
+          "<leader>t2" = {
+            action = "${cmd}ToggleTerm 2${cr}";
+            desc = "2";
+          };
+          "<leader>t3" = {
+            action = "${cmd}ToggleTerm 3${cr}";
+            desc = "3";
+          };
+          "<leader>t4" = {
+            action = "${cmd}ToggleTerm 4${cr}";
+            desc = "4";
+          };
+          "<leader>t5" = {
+            action = "${cmd}ToggleTerm 5${cr}";
+            desc = "5";
+          };
+          "<leader>t6" = {
+            action = "${cmd}ToggleTerm 6${cr}";
+            desc = "6";
+          };
+          "<leader>t7" = {
+            action = "${cmd}ToggleTerm 7${cr}";
+            desc = "7";
+          };
+          "<leader>t8" = {
+            action = "${cmd}ToggleTerm 8${cr}";
+            desc = "8";
+          };
+          "<leader>t9" = {
+            action = "${cmd}ToggleTerm 9${cr}";
+            desc = "9";
+          };
+          "<leader>tg" = { action = "${cmd}lua LAZYGIT_TOGGLE()${cr}"; desc = "Lazygit"; };
         };
       };
     plugins.toggleterm = {

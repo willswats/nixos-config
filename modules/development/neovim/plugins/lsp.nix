@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 let
   icons = import ../icons.nix;
@@ -20,23 +20,6 @@ in
   ];
 
   programs.nixvim = {
-    maps =
-      let
-        cr = "<CR>";
-        cmd = "<CMD>";
-      in
-      config.nixvim.helpers.mkMaps { silent = true; } {
-        normal = {
-          "<leader>lj".action = "${cmd}lua vim.diagnostic.goto_next()${cr}";
-          "<leader>lk".action = "${cmd}lua vim.diagnostic.goto_prev()${cr}";
-          "<leader>lf".action = "${cmd}lua vim.diagnostic.open_float()${cr}";
-          "<leader>la".action = "${cmd}lua vim.lsp.buf.code_action()${cr}";
-          "<leader>li".action = "${cmd}lua vim.lsp.buf.implementation()${cr}";
-          "<leader>lr".action = "${cmd}lua vim.lsp.buf.rename()${cr}";
-          "<leader>lR".action = "${cmd}lua vim.lsp.buf.references()${cr}";
-          "<leader>lh".action = "${cmd}lua vim.lsp.buf.hover()${cr}";
-        };
-      };
     plugins.lsp = {
       enable = true;
       servers = {
@@ -51,6 +34,45 @@ in
         eslint.enable = true;
       };
       capabilities = capabilities;
+      keymaps = {
+        silent = true;
+        diagnostic = {
+          "<leader>lj" = {
+            action = "goto_next";
+            desc = "Next diagnostic";
+          };
+          "<leader>lk" = {
+            action = "goto_prev";
+            desc = "Previous diagnostic";
+          };
+          "<leader>lf" = {
+            action = "open_float";
+            desc = "Float";
+          };
+        };
+        lspBuf = {
+          "<leader>la" = {
+            action = "code_action";
+            desc = "Action";
+          };
+          "<leader>li" = {
+            action = "implementation";
+            desc = "Implementation";
+          };
+          "<leader>lr" = {
+            action = "rename";
+            desc = "Rename";
+          };
+          "<leader>lR" = {
+            action = "references";
+            desc = "References";
+          };
+          "<leader>lh" = {
+            action = "hover";
+            desc = "Hover";
+          };
+        };
+      };
     };
     extraConfigLua = ''
       local lspconfig = require("lspconfig")

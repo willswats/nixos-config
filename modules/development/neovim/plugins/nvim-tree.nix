@@ -15,7 +15,10 @@ in {
       in
       config.nixvim.helpers.mkMaps { silent = true; } {
         normal = {
-          "<leader>e".action = "${cmd}NvimTreeToggle${cr}";
+          "<leader>e" = {
+            action = "${cmd}NvimTreeToggle${cr}";
+            desc = "Explorer";
+          };
         };
       };
     plugins.nvim-tree = {
