@@ -1,7 +1,10 @@
 { pkgs, config, ... }:
 
-let icons = import ../icons.nix;
-in {
+let
+  icons = import ../icons.nix;
+  capabilities = "require('cmp_nvim_lsp').default_capabilities()";
+in
+{
   home.packages = with pkgs; [
     gcc # rustup dependency
     rustup # Provides rust-analyzer
@@ -45,10 +48,14 @@ in {
         tsserver.enable = true;
         eslint.enable = true;
       };
+      capabilities = capabilities;
     };
     extraConfigLua = ''
       local lspconfig = require("lspconfig")
-      lspconfig.marksman.setup {}
+
+      lspconfig.marksman.setup {
+        capabilities = ${capabilities}
+      }
 
       local signs = {
         { name = "DiagnosticSignError", text = "${icons.diagnostics.BoldError}" },
