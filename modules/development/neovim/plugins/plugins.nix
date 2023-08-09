@@ -23,5 +23,6 @@
     comment-nvim.enable = true;
     nvim-autopairs.enable = true;
     ts-autotag.enable = true;
+    project-nvim.enable = true;
   };
 }
