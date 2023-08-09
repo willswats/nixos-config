@@ -8,7 +8,7 @@
 
 ## spotify-player
 
-- [ ] Remove notifications
+- [ ] Build without image and notifications
 
 ## Firefox
 
