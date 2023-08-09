@@ -18,7 +18,7 @@
     in (config.nixvim.helpers.mkRaw ''
       { 
         ${formatting}.prettier,
-        ${formatting}.nixfmt,
+        ${formatting}.nixpkgs_fmt,
         ${diagnostics}.markdownlint.with({ extra_args = { "--disable", "MD013" } })
       }
     '');

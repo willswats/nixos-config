@@ -24,6 +24,7 @@ in {
       hijackCursor = true; # Keep the cursor on the first letter of the filename
       syncRootWithCwd =
         true; # Changes the tree root directory on DirChanged and refreshes the tree
+      actions.changeDir.global = true; # Use :cd instead of :lcd when changing directories
       trash.cmd = "trash"; # The command used to trash items
       # Set as floating
       view = {
