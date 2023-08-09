@@ -4,6 +4,7 @@
 
 - [ ] Add mkdnflow
 - [ ] Add nvim dap and dap ui
+- [ ] Set `desc` for nested leader keymaps
 
 ## spotify-player
 
