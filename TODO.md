@@ -2,6 +2,7 @@
 
 ## Neovim
 
+- [ ] Fix toggleterm CD through nvim-tree not updating dir
 - [ ] Remove need for redefining icons in cmp
 - [ ] Fix friendly-snippets
 - [ ] Indent markdown by 2
