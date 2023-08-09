@@ -9,6 +9,8 @@
 
   programs.nixvim.plugins.null-ls = {
     enable = true;
+    # Servers are defined in `extraOptions.sources`, because `diagnostics.markdownlint` does not exist in the null-ls module
+    # https://github.com/nix-community/nixvim/issues/97
     extraOptions.sources = let
       null-ls = "require('null-ls')";
       formatting = "${null-ls}.builtins.formatting";
