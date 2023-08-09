@@ -58,8 +58,8 @@ in {
           fields = [ "abbr" "kind" "menu" ];
           format = ''
             function(_, vim_item)
-              icons = ${config.nixvim.helpers.toLuaObject icons}
-              vim_item.kind = (icons.kind[vim_item.kind] or "") .. " " .. vim_item.kind
+              icons_kind = ${config.nixvim.helpers.toLuaObject icons.kind}
+              vim_item.kind = (icons_kind[vim_item.kind] or "") .. " " .. vim_item.kind
               return vim_item
             end
           '';
