@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   home.packages = with pkgs; [
@@ -7,23 +7,18 @@
     nodePackages.markdownlint-cli # Markdown linter
   ];
 
-  programs.nixvim = {
-    # Not defined using the module as `diagnostics.markdownlint` does not exist in it
-    # https://github.com/nix-community/nixvim/issues/97
-    extraPlugins = with pkgs.vimPlugins; [ null-ls-nvim ];
-    extraConfigLua = ''
-      local null_ls = require("null-ls")
-      local formatting = null_ls.builtins.formatting
-      local diagnostics = null_ls.builtins.diagnostics
-
-      null_ls.setup({
-        debug = false,
-        sources = {
-          formatting.prettier,
-          formatting.nixpkgs_fmt,
-          diagnostics.markdownlint.with({ extra_args = { "--disable", "MD013" } })
-        },
-      })
-    '';
+  programs.nixvim.plugins.null-ls = {
+    enable = true;
+    extraOptions.sources = let
+      null-ls = "require('null-ls')";
+      formatting = "${null-ls}.builtins.formatting";
+      diagnostics = "${null-ls}.builtins.diagnostics";
+    in (config.nixvim.helpers.mkRaw ''
+      { 
+        ${formatting}.prettier,
+        ${formatting}.nixfmt,
+        ${diagnostics}.markdownlint.with({ extra_args = { "--disable", "MD013" } })
+      }
+    '');
   };
 }
