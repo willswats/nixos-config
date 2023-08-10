@@ -1,6 +1,6 @@
 { lib, config, pkgs, ... }:
 
-let lockCmd = "i3lock -c 1e1e2e";
+let lockCmd = "${pkgs.i3lock}/bin/i3lock -c 1e1e2e";
 in {
   imports = [
     ./polybar/home.nix
@@ -16,6 +16,7 @@ in {
     playerctl
     brightnessctl
     lxde.lxsession
+    xsecurelock
   ];
 
   services = {
@@ -25,6 +26,12 @@ in {
     screen-locker = {
       enable = true;
       lockCmd = lockCmd;
+      inactiveInterval = 5;
+      xautolock.enable = false;
+      xss-lock = {
+        package = pkgs.xss-lock;
+        screensaverCycle = 5;
+      };
     };
   };
 
