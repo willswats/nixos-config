@@ -8,9 +8,12 @@
 - [ ] Add mkdnflow
 - [ ] Set `desc` for nested leader keymaps
 
+### Spotify-player
+
+- [ ] Build without image and notify features
+
 ### Other (1)
 
-- [ ] spotify-player - build without image and notify features
 - [ ] Setup and test printing
 - [ ] Create development shells
 
