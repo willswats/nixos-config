@@ -12,7 +12,8 @@ let
   red = "#f38ba8";
   mauve = "#cba6f7";
   pink = "#f5c2e7";
-in {
+in
+{
   xsession.windowManager.i3.config.startup = [{
     command = "systemctl --user restart polybar";
     always = true;
@@ -93,7 +94,7 @@ in {
 
       "module/battery" = {
         type = "internal/battery";
-        format-charging = "<ramp-capacity> <label-charging>";
+        format-charging = "<ramp-capacity>  <label-charging>";
         format-charging-foreground = "${green}";
 
         format-discharging = "<ramp-capacity>  <label-discharging>";
