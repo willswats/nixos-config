@@ -26,11 +26,11 @@ in {
     screen-locker = {
       enable = true;
       lockCmd = lockCmd;
-      inactiveInterval = 5; # minutes
-      xautolock.enable = false;
+      inactiveInterval = 5; # Minutes to wait before locking
+      xautolock.enable = false; # Disable xautolock as xss-lock is used 
       xss-lock = {
-        package = pkgs.xss-lock;
-        screensaverCycle = 5; # seconds
+        package = pkgs.xss-lock; # Transfers laptop lid close to lockCmd
+        screensaverCycle = 5; # Seconds to wait after laptop lid is closed before locking
       };
     };
   };
