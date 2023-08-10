@@ -15,6 +15,7 @@
     ./gitsigns.nix
     ./illuminate.nix
     ./indent-blankline.nix
+    ./dap.nix
   ];
 
   programs.nixvim.plugins = {

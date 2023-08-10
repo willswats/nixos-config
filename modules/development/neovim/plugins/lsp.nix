@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 let
   icons = import ../icons.nix;
@@ -19,7 +19,22 @@ in
     nodePackages.eslint # JS, TS Linter
   ];
 
+
+
   programs.nixvim = {
+    maps =
+      let
+        cr = "<CR>";
+        cmd = "<CMD>";
+      in
+      config.nixvim.helpers.mkMaps { silent = true; } {
+        normal = {
+          "<leader>i" = {
+            action = "${cmd}LspInfo${cr}";
+            desc = "LSP Info";
+          };
+        };
+      };
     plugins.lsp = {
       enable = true;
       servers = {
