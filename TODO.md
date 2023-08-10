@@ -4,8 +4,8 @@
 
 ### Neovim
 
-- [ ] Add mkdnflow
 - [ ] Add nvim dap and dap ui
+- [ ] Add mkdnflow
 - [ ] Set `desc` for nested leader keymaps
 
 ### Other (1)
@@ -18,13 +18,13 @@
 
 ## Low Priority
 
-## Theme
+### Theme
 
 - [ ] Fix missing GZDoom icon
 - [ ] Fix missing steam tray icon image
 - [ ] Fix Catppuccin black borders in lightdm
 
-## Other (2)
+### Other (2)
 
 - [ ] Fix can't accept dunst notification (e.g. pairing bluetooth)
 - [ ] Mullvad GUI error - Inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
