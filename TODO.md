@@ -10,13 +10,15 @@
 
 ### Other (1)
 
-- [ ] Firefox - Install extensions from NUR - [example](https://github.com/rhoriguchi/nixos-setup/tree/master)
-- [ ] i3 - Fix laptop locking on wake
 - [ ] spotify-player - build without image and notify features
 - [ ] Setup and test printing
 - [ ] Create development shells
 
 ## Low Priority
+
+### Firefox
+
+- [ ] Install extensions from NUR - [example](https://github.com/rhoriguchi/nixos-setup/blob/master/flake.nix)
 
 ### Theme
 

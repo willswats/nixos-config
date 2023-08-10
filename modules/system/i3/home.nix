@@ -26,11 +26,11 @@ in {
     screen-locker = {
       enable = true;
       lockCmd = lockCmd;
-      inactiveInterval = 5;
+      inactiveInterval = 5; # minutes
       xautolock.enable = false;
       xss-lock = {
         package = pkgs.xss-lock;
-        screensaverCycle = 5;
+        screensaverCycle = 5; # seconds
       };
     };
   };
