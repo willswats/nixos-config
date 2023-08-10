@@ -8,6 +8,10 @@
 - [ ] Add mkdnflow
 - [ ] Set `desc` for nested leader keymaps
 
+### Firefox
+
+- [ ] Install extensions from NUR - [example](https://github.com/rhoriguchi/nixos-setup/blob/master/flake.nix)
+
 ### Spotify-player
 
 - [ ] Build without image and notify features
@@ -18,10 +22,6 @@
 - [ ] Create development shells
 
 ## Low Priority
-
-### Firefox
-
-- [ ] Install extensions from NUR - [example](https://github.com/rhoriguchi/nixos-setup/blob/master/flake.nix)
 
 ### Theme
 
