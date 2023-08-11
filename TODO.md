@@ -1,41 +1,30 @@
 # TODO
 
-## Neovim
+## High Priority
+
+### Neovim
 
 - [ ] Finish dap setup
 - [ ] Add mkdnflow
-- [ ] Set `desc` for nested leader keymaps
+- [ ] Set Neovim `desc` for nested leader keymaps
 
-## Firefox
+### Other (1)
 
-- [ ] Install extensions from NUR - [example](https://github.com/rhoriguchi/nixos-setup/blob/master/flake.nix)
-
-## i3
-
-- [ ] Fix i3lock displaying "locking" upon opening laptop lid after a long period of time
-
-## spotify-player
-
+- [ ] Install firefox extensions from NUR - [example](https://github.com/rhoriguchi/nixos-setup/blob/master/flake.nix)
 - [ ] Overlay spotify-player to be built without image and notify features
+- [ ] Overlay osu version instead of wrapping the AppImage
 
-## osu
+## Low Priority
 
-- [ ] Overlay the version instead of wrapping the AppImage
-
-## dunst
-
-- [ ] Fix can't accept dunst notification (e.g. pairing bluetooth)
-
-## MullvadVPN
-
-- [ ] Fix Inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
-
-## Theme
+### Theme
 
 - [ ] Fix missing GZDoom icon
 - [ ] Fix missing steam tray icon image
 - [ ] Fix Catppuccin black borders in lightdm
 
-## Other
+### Other (2)
 
+- [ ] Fix Mullvad GUI inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
+- [ ] Fix can't accept dunst notification (e.g. pairing bluetooth)
+- [ ] Fix i3lock displaying "locking" upon opening laptop lid after a long period of time
 - [ ] Setup a Yubikey for GPG git commit signing
