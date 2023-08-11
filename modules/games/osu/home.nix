@@ -8,8 +8,8 @@
           user = "ppy";
           project = "osu";
           assetName = "osu.AppImage";
-          version = "2023.803.0"; # Pin the version as each new version will return a different hash
-          hash = "01gjrjakd08kg5g08pkn451q6yw8dgsh0kapb41i31q42bp67vvw"; # nix-prefetch-url https://github.com/ppy/osu/releases/download/2023.803.0/osu.AppImage
+          version = "2023.811.0";
+          hash = "0slry02f89wsjq9ly8jcm9g3h1ikzl6gpwghr952k7rkxsgnf49x"; # nix-prefetch-url https://github.com/ppy/osu/releases/download/2023.811.0/osu.AppImage
         in
         pkgs.appimageTools.wrapType2
           {
