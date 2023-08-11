@@ -35,7 +35,7 @@
           };
 
           "<leader>q" = {
-            action = "${cmd}q${cr}";
+            action = "${cmd}confirm q${cr}";
             desc = "Quit";
           };
 
