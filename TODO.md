@@ -18,6 +18,10 @@
 
 - [ ] Overlay spotify-player to be built without image and notify features
 
+## osu
+
+- [ ] Overlay the version instead of wrapping the AppImage
+
 ## dunst
 
 - [ ] Fix can't accept dunst notification (e.g. pairing bluetooth)
