@@ -6,6 +6,26 @@
 - [ ] Add mkdnflow
 - [ ] Set `desc` for nested leader keymaps
 
+## Firefox
+
+- [ ] Install extensions from NUR - [example](https://github.com/rhoriguchi/nixos-setup/blob/master/flake.nix)
+
+## i3
+
+- [ ] Fix i3lock displaying "locking" upon opening laptop lid after a long period of time
+
+## spotify-player
+
+- [ ] Overlay spotify-player to be built without image and notify features
+
+## dunst
+
+- [ ] Fix can't accept dunst notification (e.g. pairing bluetooth)
+
+## MullvadVPN
+
+- [ ] Fix Inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
+
 ## Theme
 
 - [ ] Fix missing GZDoom icon
@@ -14,9 +34,4 @@
 
 ## Other
 
-- [ ] Overlay spotify-player to be built without image and notify features
-- [ ] Install extensions from NUR - [example](https://github.com/rhoriguchi/nixos-setup/blob/master/flake.nix)
-- [ ] Fix can't accept dunst notification (e.g. pairing bluetooth)
-- [ ] Mullvad GUI error - Inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
-- [ ] Fix i3lock displaying "locking" upon opening laptop lid after a long period of time
 - [ ] Setup a Yubikey for GPG git commit signing
