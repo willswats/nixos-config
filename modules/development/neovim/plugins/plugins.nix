@@ -15,7 +15,6 @@
     ./gitsigns.nix
     ./illuminate.nix
     ./indent-blankline.nix
-    ./mkdnflow.nix
     ./dap.nix
   ];
 

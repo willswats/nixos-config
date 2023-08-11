@@ -4,15 +4,16 @@
 
 ### Neovim
 
-- [ ] Finish dap config
+- [ ] Add nvim dap and dap ui
+- [ ] Add mkdnflow
 - [ ] Set `desc` for nested leader keymaps
 
 ### Other (1)
 
+- [ ] Install extensions from NUR - [example](https://github.com/rhoriguchi/nixos-setup/blob/master/flake.nix)
+- [ ] Build spotify-player without image and notify features
 - [ ] Setup and test printing
 - [ ] Create development shells
-- [ ] Build spotify-player without image and notify features
-- [ ] Install extensions from NUR - [example](https://github.com/rhoriguchi/nixos-setup/blob/master/flake.nix)
 
 ## Low Priority
 
