@@ -19,8 +19,6 @@ in
     nodePackages.eslint # JS, TS Linter
   ];
 
-
-
   programs.nixvim = {
     maps =
       let
