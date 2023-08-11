@@ -3,6 +3,7 @@
 {
   imports = [
     ../modules/system/pipewire
+    ../modules/system/printing
     ../modules/system/plymouth
     ../modules/system/i3
     ../modules/theme/gtk
