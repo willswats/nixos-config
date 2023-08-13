@@ -5,7 +5,7 @@
 ### Neovim
 
 - [ ] Finish dap setup
-- [ ] Add mkdnflow
+- [ ] Setup mkdnflow with nixvim module (must wait for [this](https://github.com/nix-community/nixvim/pull/512))
 - [ ] Set Neovim `desc` for nested leader keymaps
 
 ### Other (1)
