@@ -13,46 +13,68 @@
   };
 
   outputs = { nixpkgs, home-manager, nixvim, ... }: {
-    nixosConfigurations = {
-      desktop = nixpkgs.lib.nixosSystem {
+    nixosConfigurations =
+      let
         system = "x86_64-linux";
-        modules = [
-          ./hosts/desktop
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.will.imports =
-              [ ./hosts/desktop/home.nix nixvim.homeManagerModules.nixvim ];
-          }
-        ];
+        lib = nixpkgs.lib;
+      in
+      {
+        desktop = lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./hosts
+            ./hosts/desktop
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.will.imports = [
+                  ./hosts/desktop/home.nix
+                  nixvim.homeManagerModules.nixvim
+                ];
+              };
+            }
+          ];
+        };
+
+        laptop = lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./hosts
+            ./hosts/laptop
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.will.imports = [
+                  ./hosts/laptop/home.nix
+                  nixvim.homeManagerModules.nixvim
+                ];
+              };
+            }
+          ];
+        };
+
+        virtual = lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./hosts
+            ./hosts/virtual
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.will.imports = [
+                  ./hosts/virtual/home.nix
+                  nixvim.homeManagerModules.nixvim
+                ];
+              };
+            }
+          ];
+        };
       };
-      laptop = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/laptop
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.will.imports =
-              [ ./hosts/laptop/home.nix nixvim.homeManagerModules.nixvim ];
-          }
-        ];
-      };
-      virtual = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/virtual
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.will.imports =
-              [ ./hosts/virtual/home.nix nixvim.homeManagerModules.nixvim ];
-          }
-        ];
-      };
-    };
   };
 }

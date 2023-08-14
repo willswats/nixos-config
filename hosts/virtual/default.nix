@@ -2,7 +2,7 @@
 
 {
   imports =
-    [ ../configuration.nix ./hardware-configuration.nix ../../modules/system/spice ];
+    [ ./hardware-configuration.nix ../../modules/system/spice ];
 
   boot.loader.grub = {
     enable = true;

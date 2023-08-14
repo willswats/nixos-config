@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ../configuration.nix
     ./hardware-configuration.nix
     ../../modules/utilities/virt-manager
   ];
