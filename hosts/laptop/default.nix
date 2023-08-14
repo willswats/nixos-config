@@ -23,7 +23,9 @@
     };
   };
 
-  services.auto-cpufreq.enable = true;
+  # Power management
+  services.thermald.enable = true; # Prevents overheating on intel cpus
+  services.auto-cpufreq.enable = true; # Automatic CPU speed & power optimizer
 
   networking.hostName = "will-laptop";
 }
