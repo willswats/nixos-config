@@ -1,19 +1,8 @@
 { pkgs, ... }:
 
-let
-  mkdnflow = pkgs.vimUtils.buildVimPluginFrom2Nix {
-    name = "mkdnflow";
-    src = pkgs.fetchFromGitHub {
-      owner = "jakewvincent";
-      repo = "mkdnflow.nvim";
-      rev = "a728a3533bb57502fdfd6fdb4e5839fc87430edc";
-      hash = "sha256-U6YiUxt1TikKCD2YKLzcG9KR0c5p716xRFmNk2Tk/6M=";
-    };
-  };
-in
 {
   programs.nixvim = {
-    extraPlugins = [ mkdnflow ];
+    extraPlugins = with pkgs.vimPlugins; [ mkdnflow-nvim ];
     extraConfigLua = ''
       require("mkdnflow").setup({
         modules = {
