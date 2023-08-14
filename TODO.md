@@ -5,12 +5,11 @@
 ### Neovim
 
 - [ ] Finish dap setup
-- [ ] Setup mkdnflow with nixvim module (must wait for [this](https://github.com/nix-community/nixvim/pull/512))
+- [ ] Setup mkdnflow with nixvim module
 - [ ] Set Neovim `desc` for nested leader keymaps
 
 ### Other (1)
 
-- [ ] Fix latest flake causing system to not start
 - [ ] Install firefox extensions from NUR - [example](https://github.com/rhoriguchi/nixos-setup/blob/master/flake.nix)
 - [ ] Overlay spotify-player to be built without image and notify features
 - [ ] Overlay osu version instead of wrapping the AppImage
