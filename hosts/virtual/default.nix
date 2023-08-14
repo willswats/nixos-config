@@ -8,7 +8,7 @@
     enable = true;
     useOSProber = true;
     device = "/dev/vda";
-    configurationLimit = 10; # Limit the amount of configurations
+    configurationLimit = 20; # Limit the amount of configurations
   };
 
   # Set resolution

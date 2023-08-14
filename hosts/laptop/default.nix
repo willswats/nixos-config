@@ -10,7 +10,7 @@
   # Bootloader.
   boot.loader.systemd-boot = {
     enable = true;
-    configurationLimit = 10; # Limit the amount of configurations
+    configurationLimit = 20; # Limit the amount of configurations
   };
   boot.loader.efi.canTouchEfiVariables = true;
 
