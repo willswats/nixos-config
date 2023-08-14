@@ -23,5 +23,7 @@
     };
   };
 
+  services.auto-cpufreq.enable = true;
+
   networking.hostName = "will-laptop";
 }
