@@ -3,9 +3,6 @@
 {
   imports = [ ../home.nix ];
 
-  # Necessary for plymouth to prompt for password (causes issues when used with Nvidia proprietary drivers)
-  boot.initrd.systemd.enable = true;
-
   xsession.windowManager.i3 =
     let
       monitor = "eDP-1";
