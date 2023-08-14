@@ -26,7 +26,7 @@ in {
     screen-locker = {
       enable = true;
       lockCmd = lockCmd;
-      inactiveInterval = 5; # Minutes to wait before locking
+      inactiveInterval = 10; # Minutes to wait before locking
       xautolock.enable = false; # Disable xautolock as xss-lock is used 
       xss-lock.package = pkgs.xss-lock; # Used for locking the screen on inactivity and on events such as a laptop's lid being closed
     };
