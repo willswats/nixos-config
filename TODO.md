@@ -24,6 +24,7 @@
 
 ### Other (2)
 
+- [ ] Plymouth `boot.initrd.systemd.enable` causing `Failed to execute /sbin/init` after entering password to unlock encryption
 - [ ] Fix Mullvad GUI inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
 - [ ] Fix can't accept dunst notification (e.g. pairing bluetooth)
 - [ ] Fix i3lock displaying "locking" upon opening laptop lid after a long period of time
