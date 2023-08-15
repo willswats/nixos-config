@@ -16,7 +16,6 @@ in {
     playerctl
     brightnessctl
     lxde.lxsession
-    xsecurelock
   ];
 
   services = {
