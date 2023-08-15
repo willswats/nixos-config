@@ -15,7 +15,9 @@ My NixOS config.
   - [Build the Config](#build-the-config)
   - [Add the nixos-unstable Channel](#add-the-nixos-unstable-channel)
   - [Delete Bash History](#delete-bash-history)
-- [Non-Declarative Setups](#non-declarative-setups) - [Utilities](#utilities) - [Games](#games)
+- [Non-Declarative Setups](#non-declarative-setups)
+- [Utilities](#utilities)
+- [Games](#games)
 <!--toc:end-->
 
 ## Installing NixOS
