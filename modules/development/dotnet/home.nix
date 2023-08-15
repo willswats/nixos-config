@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     mono
-    dotnet-sdk_7
+    dotnet-sdk
+    omnisharp-roslyn
   ];
 }
