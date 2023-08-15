@@ -6,7 +6,6 @@
 
 - [ ] Fix OmniSharp can't find .NET
 - [ ] Finish dap setup
-- [ ] Setup mkdnflow with nixvim module
 - [ ] Set Neovim `desc` for nested leader keymaps
 
 ### Other (1)
