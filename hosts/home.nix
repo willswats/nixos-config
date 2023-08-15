@@ -42,6 +42,7 @@
       appimage-run
       # Development
       nodePackages.pnpm
+      unityhub
       # Utilities
       gnome.file-roller
       qview
