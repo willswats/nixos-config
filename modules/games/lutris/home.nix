@@ -21,4 +21,15 @@
       migration_version = 12
     '';
   };
+
+  xdg.configFile."lutris/system.yml" =
+    let
+      homeDir = "/home/will/";
+    in
+    {
+      text = ''
+        system:
+          game_path: ${homeDir}Games/Lutris
+      '';
+    };
 }
