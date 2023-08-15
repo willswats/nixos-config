@@ -6,18 +6,7 @@ let
 in
 {
   home.packages = with pkgs; [
-    gcc # rustup dependency
-    rustup # Provides rust-analyzer
-    omnisharp-roslyn # C# LSP
-    nil # Nix LSP
-    lua-language-server # Lua language server and formatter
     marksman # Markdown lsp
-    nodePackages.bash-language-server # Bash LSP
-    nodePackages.vscode-html-languageserver-bin # HTML LSP
-    nodePackages.vscode-css-languageserver-bin # CSS LSP
-    nodePackages.vscode-json-languageserver # JSON LSP
-    nodePackages.typescript-language-server # TypeScript LSP
-    nodePackages.eslint # JS, TS Linter
   ];
 
   programs.nixvim = {
