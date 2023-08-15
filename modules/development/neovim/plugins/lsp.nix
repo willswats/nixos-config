@@ -8,6 +8,7 @@ in
   home.packages = with pkgs; [
     gcc # rustup dependency
     rustup # Provides rust-analyzer
+    omnisharp-roslyn # C# LSP
     nil # Nix LSP
     lua-language-server # Lua language server and formatter
     marksman # Markdown lsp
@@ -37,6 +38,7 @@ in
       enable = true;
       servers = {
         rust-analyzer.enable = true;
+        omnisharp.enable = true;
         nil_ls.enable = true;
         lua-ls.enable = true;
         bashls.enable = true;

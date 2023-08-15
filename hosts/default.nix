@@ -6,6 +6,7 @@
     ../modules/system/printing
     ../modules/desktop/lightdm
     ../modules/desktop/i3
+    ../modules/development/dotnet
     ../modules/theme/gtk
     ../modules/theme/qt
     ../modules/utilities/pcmanfm

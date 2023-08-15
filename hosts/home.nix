@@ -12,6 +12,7 @@
     ../modules/development/neovim/home.nix
     ../modules/development/lazygit/home.nix
     ../modules/development/rustup/home.nix
+    ../modules/development/dotnet/home.nix
     ../modules/utilities/firefox/home.nix
     ../modules/utilities/mpv/home.nix
     ../modules/utilities/spotify-player/home.nix
