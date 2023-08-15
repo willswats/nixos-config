@@ -3,7 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/system/plymouth
+    ../../modules/desktop/plymouth
     ../../modules/utilities/virt-manager
   ];
 

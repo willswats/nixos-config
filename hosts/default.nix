@@ -4,7 +4,8 @@
   imports = [
     ../modules/system/pipewire
     ../modules/system/printing
-    ../modules/system/i3
+    ../modules/desktop/lightdm
+    ../modules/desktop/i3
     ../modules/theme/gtk
     ../modules/theme/qt
     ../modules/utilities/pcmanfm

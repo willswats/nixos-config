@@ -6,7 +6,7 @@
     ../modules/theme/cursor/home.nix
     ../modules/theme/gtk/home.nix
     ../modules/theme/qt/home.nix
-    ../modules/system/i3/home.nix
+    ../modules/desktop/i3/home.nix
     ../modules/development/git/home.nix
     ../modules/development/gpg/home.nix
     ../modules/development/neovim/home.nix
@@ -19,6 +19,7 @@
     ../modules/utilities/alacritty/home.nix
     ../modules/utilities/bottom/home.nix
     ../modules/utilities/pcmanfm/home.nix
+    ../modules/utilities/flameshot/home.nix
     ../modules/utilities/mullvad-vpn/home.nix
   ];
 

@@ -4,7 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
-      ../../modules/system/plymouth
+      ../../modules/desktop/plymouth
       ../../modules/system/spice
     ];
 

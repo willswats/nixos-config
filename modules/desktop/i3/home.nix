@@ -3,11 +3,11 @@
 let lockCmd = "${pkgs.i3lock}/bin/i3lock -c 1e1e2e";
 in {
   imports = [
-    ./polybar/home.nix
-    ./dunst/home.nix
-    ./rofi/home.nix
-    ./redshift/home.nix
-    ./flameshot/home.nix
+    ../polybar/home.nix
+    ../rofi/home.nix
+    ../dunst/home.nix
+    ../redshift/home.nix
+    ../blueman/home.nix
   ];
 
   home.packages = with pkgs; [
@@ -21,7 +21,6 @@ in {
   services = {
     picom.enable = true;
     network-manager-applet.enable = true;
-    blueman-applet.enable = true;
     screen-locker = {
       enable = true;
       lockCmd = lockCmd;
