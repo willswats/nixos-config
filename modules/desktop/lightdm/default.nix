@@ -5,7 +5,7 @@
     displayManager = {
       lightdm = {
         enable = true;
-        background = ../../wallpapers/minimal-desert.png;
+        background = ../../../wallpapers/minimal-desert.png;
         greeters.gtk = {
           enable = true;
           theme = {
