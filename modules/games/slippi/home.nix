@@ -78,7 +78,7 @@
     '';
   };
 
-  # Setup settings (set path to ISO and disable slippi replays)
+  # Setup settings (set path to ISO, disable slippi replays, set audio backend and volume)
   xdg.configFile."SlippiOnline/Config/Dolphin.ini" = {
     text =
       let
@@ -251,8 +251,8 @@
         DumpAudio = False
         DumpAudioSilent = False
         DumpUCode = False
-        Backend = ALSA
-        Volume = 25
+        Backend = OpenAL
+        Volume = 10
         CaptureLog = False
         [Input]
         BackgroundInput = False
