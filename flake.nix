@@ -88,9 +88,9 @@
                 left = "eDP-1";
               };
               font = {
-                polybarSize = 14;
-                rofiSize = 14;
-                i3Size = 14.0;
+                polybarSize = 16;
+                rofiSize = 16;
+                i3Size = 16.0;
                 alacrittySize = 10;
               };
               directories = directories;
