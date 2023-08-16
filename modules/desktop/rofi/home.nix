@@ -1,13 +1,14 @@
-{ pkgs, ... }:
+{ pkgs, lib, host, ... }:
 
 {
-  programs.rofi = let terminal = "${pkgs.alacritty}/bin/alacritty";
-  in {
-    enable = true;
-    terminal = terminal;
-    theme = "~/.config/rofi/themes/catppuccin-mocha.rasi";
-    extraConfig = { show-icons = true; };
-  };
+  programs.rofi =
+    let terminal = "${pkgs.alacritty}/bin/alacritty";
+    in {
+      enable = true;
+      terminal = terminal;
+      theme = "~/.config/rofi/themes/catppuccin-mocha.rasi";
+      extraConfig = { show-icons = true; };
+    };
 
   xdg.configFile."rofi/themes/catppuccin-mocha.rasi" = {
     text = ''
@@ -22,7 +23,7 @@
           grey: #6c7086;
 
           width: 600;
-          font: "Hack Nerd Font 14";
+          font: "Hack Nerd Font ${lib.strings.floatToString host.font.rofiSize}";
       }
 
       element-text, element-icon , mode-switcher {

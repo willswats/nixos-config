@@ -7,7 +7,6 @@
     ../../modules/utilities/virt-manager
   ];
 
-
   boot = {
     initrd = {
       secrets = { "/crypto_keyfile.bin" = null; }; # Setup keyfile
@@ -26,6 +25,4 @@
   # Power management
   services.thermald.enable = true; # Prevents overheating on intel cpus
   services.auto-cpufreq.enable = true; # Automatic CPU speed & power optimizer
-
-  networking.hostName = "will-laptop";
 }

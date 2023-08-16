@@ -1,4 +1,4 @@
-{ lib, config, pkgs, ... }:
+{ lib, config, pkgs, host, globals, ... }:
 
 let lockCmd = "${pkgs.i3lock}/bin/i3lock -c 1e1e2e";
 in {
@@ -38,8 +38,8 @@ in {
         mod = config.xsession.windowManager.i3.config.modifier;
         exec = "exec --no-startup-id";
 
-        directories = "~/Drive ~/Code";
-        image = ../../../wallpapers/minimal-desert.png;
+        directories = host.directories;
+        image = globals.wallpaper;
 
         ws1 = "1";
         ws2 = "2";
@@ -82,7 +82,7 @@ in {
           menu = menu;
           fonts = {
             names = [ "Hack Nerd Font" ];
-            size = 14.0;
+            size = host.font.i3Size;
           };
           window.commands = [{
             command = "border pixel 1";
@@ -253,6 +253,24 @@ in {
             }
           ];
         };
+        extraConfig =
+          let
+            monitorCenter = host.monitors.center;
+            monitorLeft = host.monitors.left;
+          in
+          # Fixes i3 starting on ws10 - https://github.com/nix-community/home-manager/issues/695
+          ''
+            workspace ${ws1} output ${monitorLeft}
+            workspace ${ws2} output ${monitorCenter}
+            workspace ${ws3} output ${monitorCenter}
+            workspace ${ws4} output ${monitorCenter}
+            workspace ${ws5} output ${monitorCenter}
+            workspace ${ws6} output ${monitorCenter}
+            workspace ${ws7} output ${monitorCenter}
+            workspace ${ws8} output ${monitorCenter}
+            workspace ${ws9} output ${monitorCenter}
+            workspace ${ws10} output ${monitorCenter}
+          '';
       };
   };
 }
