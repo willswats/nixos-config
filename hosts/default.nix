@@ -1,4 +1,4 @@
-{ pkgs, host, ... }:
+{ pkgs, host, globals, ... }:
 
 {
   imports = [
@@ -58,9 +58,9 @@
   # Enable polkit
   security.polkit.enable = true;
 
-  users.users.will = {
+  users.users.${globals.user} = {
     isNormalUser = true;
-    description = "will";
+    description = globals.user;
     extraGroups = [ "networkmanager" "wheel" "audio" ];
     shell = pkgs.fish;
   };

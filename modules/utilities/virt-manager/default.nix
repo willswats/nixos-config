@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, globals, ... }:
 
 {
-  users.users.will.extraGroups = [ "libvirtd" ];
+  users.users.${globals.user}.extraGroups = [ "libvirtd" ];
 
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
