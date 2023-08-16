@@ -27,10 +27,8 @@
         lib = nixpkgs.lib;
       in
       {
-        desktop = lib.nixosSystem {
-          inherit system;
-          specialArgs = {
-            inherit globals;
+        desktop =
+          let
             host = {
               hostName = "${user}-desktop";
               monitors = {
@@ -54,54 +52,35 @@
                   "${bookmarkStart}Games Games"
                 ];
             };
-          };
-          modules = [
-            ./hosts
-            ./hosts/desktop
-            home-manager.nixosModules.home-manager
+          in
+          lib.nixosSystem
             {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                extraSpecialArgs = {
-                  inherit globals;
-                  host = {
-                    hostName = "${user}-desktop";
-                    monitors = {
-                      center = "DP-2";
-                      left = "DP-0";
-                    };
-                    font = {
-                      polybarSize = 14;
-                      rofiSize = 14;
-                      i3Size = 14.0;
-                      alacrittySize = 14;
-                    };
-                    directories = "${directories} ~/Games/WADs ~/Games/ROMs ~/Games/pk3";
-                    bookmarks =
-                      let
-                        bookmarkStart = "file://${homeDir}";
-                      in
-                      [
-                        "${bookmarkStart}Downloads Downloads"
-                        "${bookmarkStart}Code Code"
-                        "${bookmarkStart}Games Games"
-                      ];
-                  };
-                };
-                users.will.imports = [
-                  ./hosts/desktop/home.nix
-                  nixvim.homeManagerModules.nixvim
-                ];
+              inherit system;
+              specialArgs = {
+                inherit globals host;
               };
-            }
-          ];
-        };
+              modules = [
+                ./hosts
+                ./hosts/desktop
+                home-manager.nixosModules.home-manager
+                {
+                  home-manager = {
+                    useGlobalPkgs = true;
+                    useUserPackages = true;
+                    extraSpecialArgs = {
+                      inherit globals host;
+                    };
+                    users.will.imports = [
+                      ./hosts/desktop/home.nix
+                      nixvim.homeManagerModules.nixvim
+                    ];
+                  };
+                }
+              ];
+            };
 
-        laptop = lib.nixosSystem {
-          inherit system;
-          specialArgs = {
-            inherit globals;
+        laptop =
+          let
             host = {
               hostName = "${user}-laptop";
               monitors = {
@@ -124,53 +103,34 @@
                   "${bookmarkStart}Code Code"
                 ];
             };
-          };
-          modules = [
-            ./hosts
-            ./hosts/laptop
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                extraSpecialArgs = {
-                  inherit globals;
-                  host = {
-                    hostName = "${user}-laptop";
-                    monitors = {
-                      center = "eDP-1";
-                      left = "eDP-1";
-                    };
-                    font = {
-                      polybarSize = 14;
-                      rofiSize = 14;
-                      i3Size = 14.0;
-                      alacrittySize = 10;
-                    };
-                    directories = directories;
-                    bookmarks =
-                      let
-                        bookmarkStart = "file://${homeDir}";
-                      in
-                      [
-                        "${bookmarkStart}Downloads Downloads"
-                        "${bookmarkStart}Code Code"
-                      ];
+          in
+          lib.nixosSystem {
+            inherit system;
+            specialArgs = {
+              inherit globals host;
+            };
+            modules = [
+              ./hosts
+              ./hosts/laptop
+              home-manager.nixosModules.home-manager
+              {
+                home-manager = {
+                  useGlobalPkgs = true;
+                  useUserPackages = true;
+                  extraSpecialArgs = {
+                    inherit globals host;
                   };
+                  users.${user}.imports = [
+                    ./hosts/home.nix
+                    nixvim.homeManagerModules.nixvim
+                  ];
                 };
-                users.${user}.imports = [
-                  ./hosts/home.nix
-                  nixvim.homeManagerModules.nixvim
-                ];
-              };
-            }
-          ];
-        };
+              }
+            ];
+          };
 
-        virtual = lib.nixosSystem {
-          inherit system;
-          specialArgs = {
-            inherit globals;
+        virtual =
+          let
             host = {
               hostName = "${user}-virtual";
               monitors = {
@@ -193,48 +153,31 @@
                   "${bookmarkStart}Code Code"
                 ];
             };
-          };
-          modules = [
-            ./hosts
-            ./hosts/virtual
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                extraSpecialArgs = {
-                  inherit globals;
-                  host = {
-                    hostName = "${user}-virtual";
-                    monitors = {
-                      center = "Virtual-1";
-                      left = "Virtual-1";
-                    };
-                    font = {
-                      polybarSize = 14;
-                      rofiSize = 14;
-                      i3Size = 14.0;
-                      alacrittySize = 14;
-                    };
-                    directories = directories;
-                    bookmarks =
-                      let
-                        bookmarkStart = "file://${homeDir}";
-                      in
-                      [
-                        "${bookmarkStart}Downloads Downloads"
-                        "${bookmarkStart}Code Code"
-                      ];
+          in
+          lib.nixosSystem {
+            inherit system;
+            specialArgs = {
+              inherit globals host;
+            };
+            modules = [
+              ./hosts
+              ./hosts/virtual
+              home-manager.nixosModules.home-manager
+              {
+                home-manager = {
+                  useGlobalPkgs = true;
+                  useUserPackages = true;
+                  extraSpecialArgs = {
+                    inherit globals host;
                   };
+                  users.will.imports = [
+                    ./hosts/home.nix
+                    nixvim.homeManagerModules.nixvim
+                  ];
                 };
-                users.will.imports = [
-                  ./hosts/home.nix
-                  nixvim.homeManagerModules.nixvim
-                ];
-              };
-            }
-          ];
-        };
+              }
+            ];
+          };
       };
   };
 }
