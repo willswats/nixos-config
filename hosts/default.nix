@@ -36,12 +36,11 @@
     enable = true;
     layout = "gb";
     xkbVariant = "";
-
+    desktopManager = { xterm.enable = false; };
+    excludePackages = [ pkgs.xterm ];
     libinput = {
       enable = true;
-
       mouse = { accelProfile = "flat"; };
-
       touchpad = { accelProfile = "flat"; };
     };
   };
