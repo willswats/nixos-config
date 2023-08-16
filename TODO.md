@@ -4,8 +4,8 @@
 
 ### Neovim
 
-- [ ] Fix OmniSharp can't find .NET
 - [ ] Finish dap setup
+- [ ] Fix OmniSharp can't find .NET - must potentially wait for this [PR](https://github.com/NixOS/nixpkgs/pull/249091)
 - [ ] Set Neovim `desc` for nested leader keymaps
 
 ### Other (1)
