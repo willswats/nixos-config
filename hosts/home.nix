@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, globals, ... }:
 
 {
   imports = [
@@ -27,8 +27,8 @@
   programs.home-manager.enable = true;
 
   home = {
-    username = "will";
-    homeDirectory = "/home/will";
+    username = globals.user;
+    homeDirectory = globals.homeDir;
     stateVersion = "23.05";
 
     packages = with pkgs; [

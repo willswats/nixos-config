@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, host, ... }:
 
 let
   # https://github.com/catppuccin/polybar
@@ -47,7 +47,7 @@ in
         module-margin = "1";
 
         # font-N = <fontconfig pattern>;<vertical offset>
-        font-0 = "Hack Nerd Font:size=14;2";
+        font-0 = "Hack Nerd Font:size=${lib.strings.floatToString host.font.polybarSize};2";
 
         modules-left = "xworkspaces i3 xwindow";
         modules-right = "battery backlight pulseaudio date time";

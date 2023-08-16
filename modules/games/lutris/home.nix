@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, globals, ... }:
 
 {
   home.packages = with pkgs; [
@@ -24,7 +24,7 @@
 
   xdg.configFile."lutris/system.yml" =
     let
-      homeDir = "/home/will/";
+      homeDir = globals.homeDir;
     in
     {
       text = ''

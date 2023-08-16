@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, globals, ... }:
 
 {
   home.packages = [
@@ -82,7 +82,7 @@
   xdg.configFile."SlippiOnline/Config/Dolphin.ini" = {
     text =
       let
-        homeDir = "/home/will/";
+        homeDir = globals.homeDir;
         isoPath = "${homeDir}Games/ROMs/GC/";
         iso = "Super Smash Bros. Melee (USA) (En,Ja) (Rev 2).nkit.iso";
       in

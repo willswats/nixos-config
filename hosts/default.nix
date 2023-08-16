@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, host, ... }:
 
 {
   imports = [
@@ -46,8 +46,11 @@
     };
   };
 
-  # Enable networking
-  networking.networkmanager.enable = true;
+  # Networking
+  networking = {
+    hostName = host.hostName;
+    networkmanager.enable = true;
+  };
 
   # Enable bluetooth 
   hardware.bluetooth.enable = true;

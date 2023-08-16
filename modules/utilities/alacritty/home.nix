@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, host, ... }:
 
 {
   home.packages = with pkgs; [ alacritty ];
@@ -10,6 +10,7 @@
         normal.family = "Hack Nerd Font";
         bold.family = "Hack Nerd Font";
         italic.family = "Hack Nerd Font";
+        size = host.font.alacrittySize;
       };
 
       env.TERM = "xterm-256color";
