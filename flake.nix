@@ -44,7 +44,7 @@
               directories = "${directories} ~/Games/WADs ~/Games/ROMs ~/Games/pk3";
               bookmarks =
                 let
-                  bookmarkStart = "file://${homeDir}";
+                  bookmarkStart = "file://${homeDir}/";
                 in
                 [
                   "${bookmarkStart}Downloads Downloads"
@@ -96,7 +96,7 @@
               directories = directories;
               bookmarks =
                 let
-                  bookmarkStart = "file://${homeDir}";
+                  bookmarkStart = "file://${homeDir}/";
                 in
                 [
                   "${bookmarkStart}Downloads Downloads"
@@ -146,7 +146,7 @@
               directories = directories;
               bookmarks =
                 let
-                  bookmarkStart = "file://${homeDir}";
+                  bookmarkStart = "file://${homeDir}/";
                 in
                 [
                   "${bookmarkStart}Downloads Downloads"

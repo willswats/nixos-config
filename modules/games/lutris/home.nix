@@ -29,7 +29,7 @@
     {
       text = ''
         system:
-          game_path: ${homeDir}Games/Lutris
+          game_path: ${homeDir}/Games/Lutris
       '';
     };
 }

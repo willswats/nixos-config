@@ -83,7 +83,7 @@
     text =
       let
         homeDir = globals.homeDir;
-        isoPath = "${homeDir}Games/ROMs/GC/";
+        isoPath = "${homeDir}/Games/ROMs/GC/";
         iso = "Super Smash Bros. Melee (USA) (En,Ja) (Rev 2).nkit.iso";
       in
       ''
@@ -99,7 +99,7 @@
         WirelessMac = 
         WiiSDCardPath = 
         [Core]
-        SlippiReplayDir = ${homeDir}Slippi
+        SlippiReplayDir = ${homeDir}/Slippi
         SlippiReplayMonthFolders = False
         HLE_BS2 = False
         TimingVariance = 8
@@ -136,8 +136,8 @@
         SlippiLanIp = 
         SlippiPlaybackDisplayFrameIndex = False
         BlockingPipes = False
-        MemcardAPath = ${homeDir}.config/SlippiOnline/GC/MemoryCardA.USA.raw
-        MemcardBPath = ${homeDir}.config/SlippiOnline/GC/MemoryCardB.USA.raw
+        MemcardAPath = ${homeDir}/.config/SlippiOnline/GC/MemoryCardA.USA.raw
+        MemcardBPath = ${homeDir}/.config/SlippiOnline/GC/MemoryCardB.USA.raw
         AgpCartAPath = 
         AgpCartBPath = 
         SlotA = 255

@@ -396,19 +396,19 @@
         # Each file should be on its own line, preceded by Path=
 
         [Doom.AutoExec]
-        Path=${homeDir}.config/gzdoom/autoexec.cfg
+        Path=${homeDir}/.config/gzdoom/autoexec.cfg
 
         [Heretic.AutoExec]
-        Path=${homeDir}.config/gzdoom/autoexec.cfg
+        Path=${homeDir}/.config/gzdoom/autoexec.cfg
 
         [Hexen.AutoExec]
-        Path=${homeDir}.config/gzdoom/autoexec.cfg
+        Path=${homeDir}/.config/gzdoom/autoexec.cfg
 
         [Strife.AutoExec]
-        Path=${homeDir}.config/gzdoom/autoexec.cfg
+        Path=${homeDir}/.config/gzdoom/autoexec.cfg
 
         [Chex.AutoExec]
-        Path=${homeDir}.config/gzdoom/autoexec.cfg
+        Path=${homeDir}/.config/gzdoom/autoexec.cfg
 
         # WAD files to always load. These are loaded after the IWAD but before
         # any files added with -file. Place each file on its own line, preceded
