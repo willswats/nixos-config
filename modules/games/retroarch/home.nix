@@ -13,6 +13,8 @@
           bsnes # - Nintendo - SNES / SFC (bsnes)
           blastem # Sega - Mega Drive - Genesis (BlastEm)
           swanstation # Sony - Playstation (SwanStation)
+          desmume # Nintendo - DS (DeSmuME)
+          citra # Nintendo - 3DS (Citra)
         ];
       })
     ];
