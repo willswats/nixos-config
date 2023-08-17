@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 let
   icons = import ../icons.nix;
@@ -10,19 +10,6 @@ in
   ];
 
   programs.nixvim = {
-    maps =
-      let
-        cr = "<CR>";
-        cmd = "<CMD>";
-      in
-      config.nixvim.helpers.mkMaps { silent = true; } {
-        normal = {
-          "<leader>i" = {
-            action = "${cmd}LspInfo${cr}";
-            desc = "LSP Info";
-          };
-        };
-      };
     plugins.lsp = {
       enable = true;
       servers = {
