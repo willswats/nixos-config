@@ -20,7 +20,7 @@
       font = {
         name = "Hack";
         package = pkgs.nerdfonts.override { fonts = [ "Hack" ]; };
-        size = 10;
+        size = host.font.gtkSize;
       };
       theme = {
         name = "Catppuccin-Mocha-Standard-Blue-dark";
@@ -36,11 +36,6 @@
           accent = "blue";
           flavor = "mocha";
         };
-      };
-      cursorTheme = {
-        name = "Catppuccin-Mocha-Dark-Cursors";
-        package = pkgs.catppuccin-cursors.mochaDark;
-        size = 32; # 24 32 48 64
       };
       gtk2 = { extraConfig = "gtk-error-bell = 0"; };
       gtk3 = {

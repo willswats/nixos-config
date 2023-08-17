@@ -36,6 +36,7 @@
                 left = "DP-0";
               };
               font = {
+                gtkSize = 10;
                 polybarSize = 14;
                 rofiSize = 14;
                 i3Size = 14.0;
@@ -88,6 +89,7 @@
                 left = "eDP-1";
               };
               font = {
+                gtkSize = 10;
                 polybarSize = 16;
                 rofiSize = 16;
                 i3Size = 16.0;
@@ -138,6 +140,7 @@
                 left = "Virtual-1";
               };
               font = {
+                gtkSize = 10;
                 polybarSize = 14;
                 rofiSize = 14;
                 i3Size = 14.0;
