@@ -7,6 +7,9 @@
 - [ ] Fix display on wrong side
 - [ ] Setup special workspace
 - [ ] Setup waybar
+- [ ] Playerctl
+- [ ] Brightnessctl
+- [ ] Redshift alternative
 
 ### Neovim
 
