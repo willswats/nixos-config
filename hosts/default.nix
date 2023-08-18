@@ -1,5 +1,8 @@
 { pkgs, host, globals, ... }:
 
+let
+  user = globals.user;
+in
 {
   imports = [
     ../modules/system/pipewire
@@ -44,9 +47,9 @@
   # Enable polkit
   security.polkit.enable = true;
 
-  users.users.${globals.user} = {
+  users.users.${user} = {
     isNormalUser = true;
-    description = globals.user;
+    description = user;
     extraGroups = [ "networkmanager" "wheel" "audio" ];
     shell = pkgs.fish;
   };

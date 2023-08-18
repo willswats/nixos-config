@@ -8,6 +8,7 @@
 
   services.xserver = {
     enable = true;
+    layout = "gb";
     displayManager.sddm = {
       enable = true;
     };
