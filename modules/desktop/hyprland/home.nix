@@ -1,8 +1,6 @@
 { pkgs, host, ... }:
 
 let
-  monitorCenter = host.monitors.center;
-  monitorLeft = host.monitors.left;
   directories = host.directories;
 
   swaylock = "${pkgs.swaylock}/bin/swaylock";
@@ -51,18 +49,9 @@ in
 
   wayland.windowManager.hyprland = {
     enable = true;
-    enableNvidiaPatches = true;
     xwayland.enable = true;
     settings = {
       source = "~/.config/hypr/mocha.conf";
-
-      env = [
-        "LIBVA_DRIVER_NAME,nvidia"
-        "XDG_SESSION_TYPE,wayland"
-        "GBM_BACKEND,nvidia-drm"
-        "GLX_VENDOR_LIBRARY_NAME,nvidia"
-        "WLR_NO_HARDWARE_CURSORS,1"
-      ];
 
       general = {
         gaps_in = 5;
@@ -75,11 +64,6 @@ in
         kb_layout = "gb";
         accel_profile = "flat";
       };
-
-      monitor = [
-        "${monitorCenter}, 1920x1080@144, 1080x0, 1"
-        "${monitorLeft}, 1920x1080@144, 0x0, 1, transform, 3"
-      ];
 
       exec = [
         "killall .waybar-wrapped; waybar"
