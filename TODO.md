@@ -4,6 +4,7 @@
 
 ### Hyprland
 
+- [ ] Assign workspaces to monitors
 - [ ] Setup special workspace
 - [ ] Setup waybar
 - [ ] Playerctl
