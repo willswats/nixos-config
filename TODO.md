@@ -6,10 +6,12 @@
 
 - [ ] Assign workspaces to monitors
 - [ ] Setup special workspace
+- [ ] Theme hyprland
+- [ ] Add redshift alternative
 - [ ] Setup waybar
-- [ ] Playerctl
-- [ ] Brightnessctl
-- [ ] Redshift alternative
+- [ ] Setup playerctl
+- [ ] Setup brightnessctl
+- [ ] Setup blueman
 
 ### Neovim
 
