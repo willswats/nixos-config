@@ -2,6 +2,12 @@
 
 ## High Priority
 
+### Hyprland
+
+- [ ] Fix display on wrong side
+- [ ] Setup special workspace
+- [ ] Setup waybar
+
 ### Neovim
 
 - [ ] Finish dap setup
