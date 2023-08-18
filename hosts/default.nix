@@ -7,8 +7,8 @@ in
   imports = [
     ../modules/system/pipewire
     ../modules/system/printing
+    ../modules/system/plymouth
     ../modules/desktop/hyprland
-    ../modules/desktop/plymouth
     ../modules/development/dotnet
     ../modules/theme/gtk
     ../modules/theme/qt

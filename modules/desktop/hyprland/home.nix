@@ -6,7 +6,7 @@
     ../swaylock/home.nix
     ../waybar/home.nix
     ../rofi/home.nix
-    ../dunst/home.nix
+    ../mako/home.nix
     ../blueman/home.nix
   ];
 
