@@ -4,7 +4,6 @@
 
 ### Hyprland
 
-- [ ] Fix display on wrong side
 - [ ] Setup special workspace
 - [ ] Setup waybar
 - [ ] Playerctl
