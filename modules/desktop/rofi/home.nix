@@ -5,6 +5,7 @@
     let terminal = "${pkgs.alacritty}/bin/alacritty";
     in {
       enable = true;
+      package = pkgs.rofi-wayland;
       terminal = terminal;
       theme = "~/.config/rofi/themes/catppuccin-mocha.rasi";
       extraConfig = { show-icons = true; };
