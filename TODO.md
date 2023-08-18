@@ -5,7 +5,7 @@
 ### Neovim
 
 - [ ] Finish dap setup
-- [ ] Fix OmniSharp can't find .NET - must potentially wait for this [PR](https://github.com/NixOS/nixpkgs/pull/249091)
+- [ ] Fix OmniSharp can't find .NET - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/249091)
 - [ ] Set Neovim `desc` for nested leader keymaps
 
 ### Other (1)
@@ -20,7 +20,7 @@
 
 - [ ] Fix missing GZDoom icon
 - [ ] Fix missing steam tray icon image
-- [ ] Fix Catppuccin black borders in lightdm
+- [ ] Add Catppuccin SDDM theme - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/240990)
 
 ### Other (2)
 
