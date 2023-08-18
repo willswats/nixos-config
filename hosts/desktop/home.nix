@@ -28,6 +28,7 @@
     {
       enableNvidiaPatches = true;
       settings = {
+        # https://wiki.hyprland.org/Nvidia/#how-to-get-hyprland-to-possibly-work-on-nvidia
         env = [
           "LIBVA_DRIVER_NAME,nvidia"
           "XDG_SESSION_TYPE,wayland"
