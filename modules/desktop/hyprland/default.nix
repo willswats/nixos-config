@@ -3,6 +3,7 @@
 {
   imports = [
     ../blueman
+    ../swaylock
   ];
 
   services.xserver = {

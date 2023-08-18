@@ -3,6 +3,7 @@
 {
   imports = [
     ../hyprpaper/home.nix
+    ../swaylock/home.nix
     ../waybar/home.nix
     ../rofi/home.nix
     ../dunst/home.nix
@@ -81,10 +82,12 @@
           "$mod, t, exec, alacritty -e nvim"
           "$mod, s, exec, alacritty -e btm -b"
           "$mod, m, exec, alacritty -e spotify_player"
+          "$mod SHIFT, semicolon, exec, swaylock -c 1e1e2e"
 
           # Hyprland
           "$mod, q, killactive"
           "$mod, f, fullscreen"
+          "$mod SHIFT, e, exit"
           "$mod SHIFT, s, togglesplit"
           "$mod SHIFT, tab, togglegroup"
           "$mod SHIFT, space, togglefloating"
