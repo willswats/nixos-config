@@ -4,7 +4,6 @@
   imports = [
     ../modules/system/pipewire
     ../modules/system/printing
-    # ../modules/desktop/lightdm
     # ../modules/desktop/i3
     ../modules/desktop/hyprland
     ../modules/development/dotnet
