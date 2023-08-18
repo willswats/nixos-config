@@ -35,7 +35,6 @@
         source = "~/.config/hypr/mocha.conf";
 
         env = [
-          "XCURSOR_SIZE,32"
           "LIBVA_DRIVER_NAME,nvidia"
           "XDG_SESSION_TYPE,wayland"
           "GBM_BACKEND,nvidia-drm"
