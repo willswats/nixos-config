@@ -82,7 +82,7 @@
           "$mod, t, exec, alacritty -e nvim"
           "$mod, s, exec, alacritty -e btm -b"
           "$mod, m, exec, alacritty -e spotify_player"
-          "$mod SHIFT, semicolon, exec, swaylock -c 1e1e2e"
+          "$mod SHIFT, semicolon, exec, swaylock"
 
           # Hyprland
           "$mod, q, killactive"

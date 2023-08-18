@@ -1,4 +1,4 @@
-{ pkgs, host, ... }:
+{ pkgs, globals, host, ... }:
 
 {
   home.packages = with pkgs; [ hyprpaper ];
@@ -7,7 +7,7 @@
     let
       monitorCenter = host.monitors.center;
       monitorLeft = host.monitors.left;
-      wallpaper = "~/Code/nixos-config/wallpapers/minimal-desert.png";
+      wallpaper = globals.wallpaper;
     in
     {
       text = ''
