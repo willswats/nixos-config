@@ -1,7 +1,6 @@
 { pkgs, ... }:
 
 {
-  boot.initrd.systemd.enable = true;
   boot.plymouth = {
     enable = true;
     theme = "catppuccin-mocha";

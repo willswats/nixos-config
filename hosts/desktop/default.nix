@@ -1,4 +1,4 @@
-{ pkgs, host, ... }:
+{ ... }:
 
 {
   imports = [
@@ -22,14 +22,4 @@
       efi.canTouchEfiVariables = true;
     };
   };
-
-  # Setup displays
-  services.xserver.displayManager.setupCommands =
-    let
-      monitorCenter = host.monitors.center;
-      monitorLeft = host.monitors.left;
-    in
-    ''
-      ${pkgs.xorg.xrandr}/bin/xrandr --output ${monitorCenter} --primary --mode 1920x1080 --rate 144.00 --rotate normal --output ${monitorLeft} --mode 1920x1080 --rate 144.00 --rotate right --left-of ${monitorCenter}
-    '';
 }

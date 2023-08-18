@@ -4,7 +4,6 @@
   imports =
     [
       ./hardware-configuration.nix
-      ../../modules/desktop/plymouth
       ../../modules/system/spice
     ];
 
@@ -14,6 +13,9 @@
     device = "/dev/vda";
     configurationLimit = 20; # Limit the amount of configurations
   };
+
+  # Needed for plymouth to work at startup (broken on nvidia)
+  boot.initrd.systemd.enable = true;
 
   # Set resolution
   services.xserver.resolutions = [{

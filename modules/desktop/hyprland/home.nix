@@ -49,6 +49,7 @@ in
 
       input = {
         kb_layout = "gb";
+        accel_profile = "flat";
       };
 
       monitor = [
@@ -57,11 +58,11 @@ in
       ];
 
       exec = [
-        "killall hyprpaper; hyprpaper"
         "killall .waybar-wrapped; waybar"
       ];
 
       exec-once = [
+        "hyprpaper"
         "lxpolkit"
         "rclone mount --vfs-cache-mode writes google-drive: ~/Drive"
         "mkdir -p ${directories}"

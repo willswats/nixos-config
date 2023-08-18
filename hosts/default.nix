@@ -4,8 +4,8 @@
   imports = [
     ../modules/system/pipewire
     ../modules/system/printing
-    # ../modules/desktop/i3
     ../modules/desktop/hyprland
+    ../modules/desktop/plymouth
     ../modules/development/dotnet
     ../modules/theme/gtk
     ../modules/theme/qt
@@ -31,19 +31,6 @@
   };
 
   console.keyMap = "uk";
-
-  services.xserver = {
-    enable = true;
-    layout = "gb";
-    xkbVariant = "";
-    desktopManager = { xterm.enable = false; };
-    excludePackages = [ pkgs.xterm ];
-    libinput = {
-      enable = true;
-      mouse = { accelProfile = "flat"; };
-      touchpad = { accelProfile = "flat"; };
-    };
-  };
 
   # Networking
   networking = {
