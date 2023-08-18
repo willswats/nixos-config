@@ -38,7 +38,6 @@
       zip
       unzip
       killall
-      wl-clipboard
       trash-cli
       appimage-run
       # Development
