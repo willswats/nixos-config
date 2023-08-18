@@ -2,7 +2,6 @@
 
 {
   programs.waybar =
-
     let
       monitorCenter = host.monitors.center;
     in
