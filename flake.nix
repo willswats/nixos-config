@@ -33,7 +33,7 @@
               hostName = "${user}-desktop";
               monitors = {
                 center = "DP-2";
-                left = "DP-0";
+                left = "DP-1";
               };
               font = {
                 gtkSize = 10;
