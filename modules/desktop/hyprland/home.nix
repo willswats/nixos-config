@@ -16,6 +16,7 @@ let
   nvim = "nvim"; # This is broken: "${pkgs.neovim}/bin/nvim";
   btm = "${pkgs.bottom}/bin/btm";
   spotify_player = "${pkgs.spotify-player}/bin/spotify_player";
+  grimshot = "${pkgs.sway-contrib.grimshot}/bin/grimshot";
 in
 {
   imports = [
@@ -34,6 +35,7 @@ in
     # playerctl
     # brightnessctl
     lxde.lxsession
+    sway-contrib.grimshot
   ];
 
   services = {
@@ -87,11 +89,12 @@ in
         # Applications
         "$mod, d, exec, ${rofi} -show drun"
         "$mod, return, exec, ${alacritty}"
-        "$mod, w, exec, ${firefox}"
-        "$mod, e, exec, ${pcmanfm}"
-        "$mod, t, exec, ${alacritty} -e ${nvim}"
-        "$mod, s, exec, ${alacritty} -e ${btm} -b"
-        "$mod, m, exec, ${alacritty} -e ${spotify_player}"
+        "$mod, w, exec, ${firefox}" # Web browser
+        "$mod, e, exec, ${pcmanfm}" # File explorer
+        "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
+        "$mod, p, exec, ${alacritty} -e ${btm} -b" # Process monitor
+        "$mod, m, exec, ${alacritty} -e ${spotify_player}" # Music player
+        "$mod, s, exec, ${grimshot} save area" # Screenshot utility
         "$mod SHIFT, semicolon, exec, ${swaylock}"
 
         # Hyprland

@@ -20,7 +20,6 @@
     ../modules/utilities/alacritty/home.nix
     ../modules/utilities/bottom/home.nix
     ../modules/utilities/pcmanfm/home.nix
-    # ../modules/utilities/flameshot/home.nix
     ../modules/utilities/mullvad-vpn/home.nix
   ];
 
