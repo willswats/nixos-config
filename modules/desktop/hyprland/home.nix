@@ -119,6 +119,8 @@ in
         "$mod, f, fullscreen"
         "$mod SHIFT, e, exit"
         "$mod SHIFT, r, exec, hyprctl reload"
+        "$mod, minus, togglespecialworkspace"
+        "$mod SHIFT, minus, movetoworkspacesilent, special"
         "$mod SHIFT, s, togglesplit"
         "$mod SHIFT, space, togglefloating"
         "$mod SHIFT, tab, togglegroup"
