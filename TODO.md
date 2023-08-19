@@ -4,9 +4,6 @@
 
 ### Hyprland
 
-- [ ] Fix network-manager-applet or replace
-- [ ] Fix blueman-applet or replace
-- [ ] Fix firefox flashing default hyprland background
 - [ ] Setup waybar
 - [ ] Theme hyprland
 
