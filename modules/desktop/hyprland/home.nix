@@ -7,6 +7,7 @@ let
   lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
   hyprpaper = "${pkgs.hyprpaper}/bin/hyprpaper";
   rclone = "${pkgs.rclone}/bin/rclone";
+  hyprctl = "${pkgs.hyprland}/bin/hyprctl";
 
   swaylock = "${pkgs.swaylock}/bin/swaylock";
   firefox = "${pkgs.firefox}/bin/firefox";
@@ -17,6 +18,7 @@ let
   btm = "${pkgs.bottom}/bin/btm";
   spotify_player = "${pkgs.spotify-player}/bin/spotify_player";
   grimshot = "${pkgs.sway-contrib.grimshot}/bin/grimshot";
+  wpctl = "${pkgs.wireplumber}/bin/wpctl";
 in
 {
   imports = [
@@ -25,6 +27,7 @@ in
     ../waybar/home.nix
     ../rofi/home.nix
     ../mako/home.nix
+    ../shader/home.nix
     # ../gammastep/home.nix
     # ../blueman/home.nix
   ];
@@ -32,7 +35,6 @@ in
   home.packages = with pkgs; [
     wl-clipboard
     pavucontrol
-    # playerctl
     # brightnessctl
     lxde.lxsession
     sway-contrib.grimshot
@@ -58,8 +60,6 @@ in
     enable = true;
     xwayland.enable = true;
     settings = {
-      source = "~/.config/hypr/mocha.conf";
-
       general = {
         gaps_in = 5;
         gaps_out = 10;
@@ -74,6 +74,7 @@ in
 
       exec = [
         "killall .waybar-wrapped; ${waybar}"
+        "${hyprctl} keyword decoration:screen_shader ~/.config/hypr/shader.glsl"
       ];
 
       exec-once = [
@@ -94,18 +95,21 @@ in
         "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
         "$mod, p, exec, ${alacritty} -e ${btm} -b" # Process monitor
         "$mod, m, exec, ${alacritty} -e ${spotify_player}" # Music player
-        "$mod, s, exec, ${grimshot} save area" # Screenshot utility
+        ", print, exec, ${grimshot} save area" # Screenshot utility
         "$mod SHIFT, semicolon, exec, ${swaylock}"
 
         # Hyprland
         "$mod, q, killactive"
         "$mod, f, fullscreen"
         "$mod SHIFT, e, exit"
+        "$mod SHIFT, r, exec, hyprctl reload"
         "$mod SHIFT, s, togglesplit"
         "$mod SHIFT, space, togglefloating"
         "$mod SHIFT, tab, togglegroup"
         "$mod ALT, h, changegroupactive, f"
         "$mod ALT, l , changegroupactive, b"
+        "$mod, bracketleft, exec, ${hyprctl} keyword decoration:screen_shader ~/.config/hypr/blank.glsl"
+        "$mod, bracketright, exec, ${hyprctl} keyword decoration:screen_shader ~/.config/hypr/shader.glsl"
 
         # Move focus with mainMod + arrow keys
         "$mod, h, movefocus, l"
@@ -147,77 +151,20 @@ in
         "$mod, mouse_up, workspace, e-1"
       ];
 
+      binde = [
+        # Raise and lower volume (limit to 100%)
+        ", XF86AudioRaiseVolume, exec, ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"
+        ", XF86AudioLowerVolume, exec, ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-"
+        # Mute volume and microphone
+        ", XF86AudioMute, exec, ${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ", XF86AudioMicMute, exec, ${wpctl} set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+      ];
+
       bindm = [
         # Move/resize windows with mod + LMB/RMB and dragging
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
       ];
     };
-  };
-
-  xdg.configFile."hypr/mocha.conf" = {
-    text = ''
-      $rosewaterAlpha = f5e0dc
-      $flamingoAlpha  = f2cdcd
-      $pinkAlpha      = f5c2e7
-      $mauveAlpha     = cba6f7
-      $redAlpha       = f38ba8
-      $maroonAlpha    = eba0ac
-      $peachAlpha     = fab387
-      $yellowAlpha    = f9e2af
-      $greenAlpha     = a6e3a1
-      $tealAlpha      = 94e2d5
-      $skyAlpha       = 89dceb
-      $sapphireAlpha  = 74c7ec
-      $blueAlpha      = 89b4fa
-      $lavenderAlpha  = b4befe
-
-      $textAlpha      = cdd6f4
-      $subtext1Alpha  = bac2de
-      $subtext0Alpha  = a6adc8
-
-      $overlay2Alpha  = 9399b2
-      $overlay1Alpha  = 7f849c
-      $overlay0Alpha  = 6c7086
-
-      $surface2Alpha  = 585b70
-      $surface1Alpha  = 45475a
-      $surface0Alpha  = 313244
-
-      $baseAlpha      = 1e1e2e
-      $mantleAlpha    = 181825
-      $crustAlpha     = 11111b
-
-      $rosewater = 0xfff5e0dc
-      $flamingo  = 0xfff2cdcd
-      $pink      = 0xfff5c2e7
-      $mauve     = 0xffcba6f7
-      $red       = 0xfff38ba8
-      $maroon    = 0xffeba0ac
-      $peach     = 0xfffab387
-      $yellow    = 0xfff9e2af
-      $green     = 0xffa6e3a1
-      $teal      = 0xff94e2d5
-      $sky       = 0xff89dceb
-      $sapphire  = 0xff74c7ec
-      $blue      = 0xff89b4fa
-      $lavender  = 0xffb4befe
-
-      $text      = 0xffcdd6f4
-      $subtext1  = 0xffbac2de
-      $subtext0  = 0xffa6adc8
-
-      $overlay2  = 0xff9399b2
-      $overlay1  = 0xff7f849c
-      $overlay0  = 0xff6c7086
-
-      $surface2  = 0xff585b70
-      $surface1  = 0xff45475a
-      $surface0  = 0xff313244
-
-      $base      = 0xff1e1e2e
-      $mantle    = 0xff181825
-      $crust     = 0xff11111b
-    '';
   };
 }
