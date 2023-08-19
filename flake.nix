@@ -35,13 +35,6 @@
                 center = "DP-2";
                 left = "DP-1";
               };
-              font = {
-                gtkSize = 10;
-                polybarSize = 14;
-                rofiSize = 14;
-                i3Size = 14.0;
-                alacrittySize = 14;
-              };
               directories = "${directories} ~/Games/WADs ~/Games/ROMs ~/Games/pk3";
               bookmarks =
                 let
@@ -88,13 +81,6 @@
                 center = "eDP-1";
                 left = "eDP-1";
               };
-              font = {
-                gtkSize = 10;
-                polybarSize = 16;
-                rofiSize = 16;
-                i3Size = 16.0;
-                alacrittySize = 10;
-              };
               directories = directories;
               bookmarks =
                 let
@@ -123,7 +109,7 @@
                     inherit globals host;
                   };
                   users.${user}.imports = [
-                    ./hosts/home.nix
+                    ./hosts/laptop/home.nix
                     nixvim.homeManagerModules.nixvim
                   ];
                 };
@@ -138,13 +124,6 @@
               monitors = {
                 center = "Virtual-1";
                 left = "Virtual-1";
-              };
-              font = {
-                gtkSize = 10;
-                polybarSize = 14;
-                rofiSize = 14;
-                i3Size = 14.0;
-                alacrittySize = 14;
               };
               directories = directories;
               bookmarks =

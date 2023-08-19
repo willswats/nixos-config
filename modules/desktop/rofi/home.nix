@@ -1,4 +1,4 @@
-{ pkgs, lib, host, ... }:
+{ pkgs, ... }:
 
 {
   programs.rofi =
@@ -24,7 +24,7 @@
           grey: #6c7086;
 
           width: 600;
-          font: "Hack Nerd Font ${lib.strings.floatToString host.font.rofiSize}";
+          font: "Hack Nerd Font 14";
       }
 
       element-text, element-icon , mode-switcher {

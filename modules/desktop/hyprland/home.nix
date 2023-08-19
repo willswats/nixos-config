@@ -33,7 +33,6 @@ in
     ../mako/home.nix
     ../grim/home.nix
     ../shaders/home.nix
-    # ../blueman/home.nix
   ];
 
   home.packages = with pkgs; [

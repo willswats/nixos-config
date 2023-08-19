@@ -22,4 +22,6 @@
       efi.canTouchEfiVariables = true;
     };
   };
+
+  programs.hyprland.enableNvidiaPatches = true;
 }
