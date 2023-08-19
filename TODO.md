@@ -4,19 +4,11 @@
 
 ### Hyprland
 
-- [ ] Fix togglesplit
-- [ ] Add resize with keyboard
-- [ ] Assign workspaces to monitors
-- [ ] Setup special workspace
-- [ ] Theme hyprland
-- [ ] Add redshift alternative
-- [ ] Fix flameshot or replace it
-- [ ] Fix network-manager-applet
-- [ ] Fix blueman-applet
-- [ ] Setup waybar
-- [ ] Setup playerctl
 - [ ] Setup brightnessctl
-- [ ] Setup blueman
+- [ ] Fix network-manager-applet or replace
+- [ ] Fix blueman-applet or replace
+- [ ] Setup waybar
+- [ ] Theme hyprland
 
 ### Neovim
 
