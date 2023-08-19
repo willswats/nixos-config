@@ -81,10 +81,12 @@ in
           accel_profile = "flat";
         };
 
-        # Fix Firefox flashing default hyprland wallpaper on resize.
-        # This has the negative effect of causing black borders around certain parts of Firefox.
-        # https://github.com/hyprwm/Hyprland/issues/2817
-        windowrulev2 = "forcergbx, class:firefox";
+        windowrulev2 = [
+          # Fix Firefox flashing default hyprland wallpaper on resize.
+          # This has the negative effect of causing black borders around certain parts of Firefox.
+          # https://github.com/hyprwm/Hyprland/issues/2817
+          "forcergbx, class:firefox"
+        ];
 
         workspace = [
           "${monitorLeft},1"

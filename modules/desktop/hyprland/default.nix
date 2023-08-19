@@ -2,8 +2,6 @@
 
 {
   imports = [
-    # ../gammastep
-    # ../blueman
     ../swaylock
     ../grim
   ];
