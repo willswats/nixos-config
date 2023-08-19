@@ -60,11 +60,6 @@ in
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    extraConfig = ''
-      dwindle {
-        preserve_split = true 
-      }
-    '';
     settings = {
       general = {
         gaps_in = 5;
@@ -169,5 +164,24 @@ in
         "$mod, mouse:273, resizewindow"
       ];
     };
+    extraConfig = ''
+      dwindle {
+        preserve_split = true 
+      }
+
+      bind=$mod,R,submap,resize
+
+      submap=resize
+
+      binde=,h,resizeactive,10 0
+      binde=,l,resizeactive,-10 0
+      binde=,j,resizeactive,0 -10
+      binde=,k,resizeactive,0 10
+
+      bind=,escape,submap,reset 
+      bind=$mod,R,submap,reset 
+
+      submap=reset
+    '';
   };
 }
