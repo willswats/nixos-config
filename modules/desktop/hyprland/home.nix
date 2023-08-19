@@ -60,6 +60,11 @@ in
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
+    extraConfig = ''
+      dwindle {
+        preserve_split = true 
+      }
+    '';
     settings = {
       general = {
         gaps_in = 5;
@@ -94,7 +99,7 @@ in
         "$mod, w, exec, ${firefox}" # Web browser
         "$mod, e, exec, ${pcmanfm}" # File explorer
         "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
-        "$mod, p, exec, ${alacritty} -e ${btm} -b" # Process monitor
+        "$mod, s, exec, ${alacritty} -e ${btm} -b" # System monitor
         "$mod, m, exec, ${alacritty} -e ${spotify_player}" # Music player
         ", print, exec, ${fish} -c '${grim} -g (${slurp})'" # Screenshot utility
         "$mod SHIFT, semicolon, exec, ${swaylock}"
