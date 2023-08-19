@@ -5,7 +5,6 @@
 ### Hyprland
 
 - [ ] Setup waybar
-- [ ] Theme hyprland
 
 ### Neovim
 
