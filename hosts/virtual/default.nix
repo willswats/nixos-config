@@ -5,6 +5,7 @@
     [
       ./hardware-configuration.nix
       ../../modules/system/spice
+      ../../modules/system/plymouth
     ];
 
   boot.loader.grub = {
@@ -13,9 +14,6 @@
     device = "/dev/vda";
     configurationLimit = 20; # Limit the amount of configurations
   };
-
-  # Needed for plymouth to work at startup (broken on nvidia)
-  boot.initrd.systemd.enable = true;
 
   # Set resolution
   services.xserver.resolutions = [{

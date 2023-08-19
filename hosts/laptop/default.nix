@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/utilities/virt-manager
+    ../../modules/system/plymouth
   ];
 
   boot = {
@@ -20,9 +21,6 @@
       efi.canTouchEfiVariables = true;
     };
   };
-
-  # Needed for plymouth to work at startup (broken on nvidia)
-  boot.initrd.systemd.enable = true;
 
   # Power management
   services.thermald.enable = true; # Prevents overheating on intel cpus
