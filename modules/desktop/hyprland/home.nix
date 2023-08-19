@@ -17,7 +17,9 @@ let
   nvim = "nvim"; # This is broken: "${pkgs.neovim}/bin/nvim";
   btm = "${pkgs.bottom}/bin/btm";
   spotify_player = "${pkgs.spotify-player}/bin/spotify_player";
-  grimshot = "${pkgs.sway-contrib.grimshot}/bin/grimshot";
+  fish = "${pkgs.fish}/bin/fish";
+  grim = "${pkgs.grim}/bin/grim";
+  slurp = "${pkgs.slurp}/bin/slurp";
   wpctl = "${pkgs.wireplumber}/bin/wpctl";
 in
 {
@@ -27,8 +29,8 @@ in
     ../waybar/home.nix
     ../rofi/home.nix
     ../mako/home.nix
-    ../shader/home.nix
-    # ../gammastep/home.nix
+    ../grim/home.nix
+    ../shaders/home.nix
     # ../blueman/home.nix
   ];
 
@@ -37,7 +39,6 @@ in
     pavucontrol
     # brightnessctl
     lxde.lxsession
-    sway-contrib.grimshot
   ];
 
   services = {
@@ -74,7 +75,7 @@ in
 
       exec = [
         "killall .waybar-wrapped; ${waybar}"
-        "${hyprctl} keyword decoration:screen_shader ~/.config/hypr/shader.glsl"
+        "${hyprctl} keyword decoration:screen_shader ~/.config/hypr/shaders/temperature.glsl"
       ];
 
       exec-once = [
@@ -95,7 +96,7 @@ in
         "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
         "$mod, p, exec, ${alacritty} -e ${btm} -b" # Process monitor
         "$mod, m, exec, ${alacritty} -e ${spotify_player}" # Music player
-        ", print, exec, ${grimshot} save area" # Screenshot utility
+        ", print, exec, ${fish} -c '${grim} -g (${slurp})'" # Screenshot utility
         "$mod SHIFT, semicolon, exec, ${swaylock}"
 
         # Hyprland
@@ -108,10 +109,9 @@ in
         "$mod SHIFT, tab, togglegroup"
         "$mod ALT, h, changegroupactive, f"
         "$mod ALT, l , changegroupactive, b"
-        "$mod, bracketleft, exec, ${hyprctl} keyword decoration:screen_shader ~/.config/hypr/blank.glsl"
-        "$mod, bracketright, exec, ${hyprctl} keyword decoration:screen_shader ~/.config/hypr/shader.glsl"
+        "$mod, bracketleft, exec, ${hyprctl} keyword decoration:screen_shader ~/.config/hypr/shaders/blank.glsl"
+        "$mod, bracketright, exec, ${hyprctl} keyword decoration:screen_shader ~/.config/hypr/shaders/temperature.glsl"
 
-        # Move focus with mainMod + arrow keys
         "$mod, h, movefocus, l"
         "$mod, l, movefocus, r"
         "$mod, k, movefocus, u"
@@ -122,7 +122,6 @@ in
         "$mod SHIFT, k, movewindow, u"
         "$mod SHIFT, j, movewindow, d"
 
-        # Switch workspaces with mod + [0-9]
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
         "$mod, 3, workspace, 3"
@@ -134,7 +133,6 @@ in
         "$mod, 9, workspace, 9"
         "$mod, 0, workspace, 10"
 
-        # Move active window to a workspace with mod + SHIFT + [0-9]
         "$mod SHIFT, 1, movetoworkspace, 1"
         "$mod SHIFT, 2, movetoworkspace, 2"
         "$mod SHIFT, 3, movetoworkspace, 3"

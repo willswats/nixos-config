@@ -5,6 +5,7 @@
     # ../gammastep
     # ../blueman
     ../swaylock
+    ../grim
   ];
 
   services.xserver = {

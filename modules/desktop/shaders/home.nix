@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  xdg.configFile."hypr/blank.glsl" = {
+  xdg.configFile."hypr/shaders/blank.glsl" = {
     # https://github.com/hyprwm/Hyprland/issues/1140#issuecomment-1622495967
     text = ''
       precision mediump float;
@@ -15,7 +15,7 @@
     '';
   };
 
-  xdg.configFile."hypr/shader.glsl" = {
+  xdg.configFile."hypr/shaders/temperature.glsl" = {
     # https://github.com/hyprwm/Hyprland/issues/1140#issuecomment-1335128437
     text = ''
       precision mediump float;
