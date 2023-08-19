@@ -4,6 +4,8 @@
 
 ### Hyprland
 
+- [ ] Fix togglesplit
+- [ ] Add resize with keyboard
 - [ ] Assign workspaces to monitors
 - [ ] Setup special workspace
 - [ ] Theme hyprland
