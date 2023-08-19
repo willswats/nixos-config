@@ -69,12 +69,23 @@ in
       enable = true;
       xwayland.enable = true;
       settings = {
-        general = {
-          gaps_in = 5;
-          gaps_out = 10;
-          border_size = 1;
-          layout = "dwindle";
-        };
+        general =
+          let
+            overlay0 = "0xff6c7086";
+            blue = "0xff89b4fa";
+          in
+          {
+            gaps_in = 5;
+            gaps_out = 10;
+            border_size = 1;
+            "col.inactive_border" = overlay0;
+            "col.active_border" = blue;
+            "col.group_border" = overlay0;
+            "col.group_border_active" = blue;
+            "col.group_border_locked" = overlay0;
+            "col.group_border_locked_active" = blue;
+            layout = "dwindle";
+          };
 
         input = {
           kb_layout = "gb";
@@ -86,6 +97,7 @@ in
         };
 
         misc = {
+          groupbar_titles_font_size = 14;
           # Fix Firefox flashing default hyprland wallpaper on resize (still occurs, but it's less noticeable)
           # https://github.com/hyprwm/Hyprland/issues/2817
           disable_hyprland_logo = true;
@@ -138,15 +150,15 @@ in
           # Hyprland
           "$mod, q, killactive"
           "$mod, f, fullscreen"
-          "$mod SHIFT, e, exit"
-          "$mod SHIFT, r, exec, hyprctl reload"
+          "$mod shift, e, exit"
           "$mod, minus, togglespecialworkspace"
-          "$mod SHIFT, minus, movetoworkspacesilent, special"
-          "$mod SHIFT, s, togglesplit"
-          "$mod SHIFT, space, togglefloating"
-          "$mod SHIFT, tab, togglegroup"
-          "$mod ALT, h, changegroupactive, f"
-          "$mod ALT, l , changegroupactive, b"
+          "$mod shift, minus, movetoworkspacesilent, special"
+          "$mod shift, p, movetoworkspacesilent, m+0"
+          "$mod shift, s, togglesplit"
+          "$mod shift, g, togglegroup"
+          "$mod shift, f, togglefloating"
+          "$mod, tab, changegroupactive, f"
+          "$mod shift, tab, changegroupactive, b"
           "$mod, bracketleft, exec, ${hyprctl} keyword decoration:screen_shader ~/.config/hypr/shaders/blank.glsl"
           "$mod, bracketright, exec, ${hyprctl} keyword decoration:screen_shader ~/.config/hypr/shaders/temperature.glsl"
 
@@ -155,10 +167,10 @@ in
           "$mod, k, movefocus, u"
           "$mod, j, movefocus, d"
 
-          "$mod SHIFT, h, movewindow, l"
-          "$mod SHIFT, l, movewindow, r"
-          "$mod SHIFT, k, movewindow, u"
-          "$mod SHIFT, j, movewindow, d"
+          "$mod shift, h, movewindow, l"
+          "$mod shift, l, movewindow, r"
+          "$mod shift, k, movewindow, u"
+          "$mod shift, j, movewindow, d"
 
           "$mod, 1, workspace, 1"
           "$mod, 2, workspace, 2"
