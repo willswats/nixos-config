@@ -8,6 +8,8 @@
 - [ ] Setup special workspace
 - [ ] Theme hyprland
 - [ ] Add redshift alternative
+- [ ] Fix network-manager-applet
+- [ ] Fix blueman-applet
 - [ ] Setup waybar
 - [ ] Setup playerctl
 - [ ] Setup brightnessctl
