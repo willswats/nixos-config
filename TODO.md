@@ -27,14 +27,9 @@
 
 ## Low Priority
 
-### Theme
-
-- [ ] Fix missing GZDoom icon
-- [ ] Fix missing steam tray icon image
-- [ ] Add Catppuccin SDDM theme - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/240990)
-
 ### Other (2)
 
+- [ ] Add Catppuccin SDDM theme - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/240990)
 - [ ] Fix Mullvad GUI inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
 - [ ] Plymouth `boot.initrd.systemd.enable` causing `Failed to execute /sbin/init` after entering password to unlock encryption on nvidia proprietary drivers
 - [ ] Setup a Yubikey for GPG git commit signing
