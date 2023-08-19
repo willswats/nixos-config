@@ -4,8 +4,6 @@
 
 ### Hyprland
 
-- [ ] Fix location to binaries
-- [ ] Setup gammstep on laptop
 - [ ] Fix network-manager-applet or replace
 - [ ] Fix blueman-applet or replace
 - [ ] Setup waybar
