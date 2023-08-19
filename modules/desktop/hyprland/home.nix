@@ -99,10 +99,10 @@ in
         "$mod, f, fullscreen"
         "$mod SHIFT, e, exit"
         "$mod SHIFT, s, togglesplit"
-        "$mod SHIFT, tab, togglegroup"
         "$mod SHIFT, space, togglefloating"
-        "$mod, x, layoutmsg, preselect r"
-        "$mod, z, layoutmsg, preselect d"
+        "$mod SHIFT, tab, togglegroup"
+        "$mod ALT, h, changegroupactive, f"
+        "$mod ALT, l , changegroupactive, b"
 
         # Move focus with mainMod + arrow keys
         "$mod, h, movefocus, l"
