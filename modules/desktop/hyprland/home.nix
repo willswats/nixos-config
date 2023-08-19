@@ -151,6 +151,7 @@ in
           "$mod, q, killactive"
           "$mod, f, fullscreen"
           "$mod shift, e, exit"
+          "$mod shift, r, exec, ${hyprctl} reload"
           "$mod, minus, togglespecialworkspace"
           "$mod shift, minus, movetoworkspacesilent, special"
           "$mod shift, p, movetoworkspacesilent, m+0"
