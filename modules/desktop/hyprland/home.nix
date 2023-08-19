@@ -1,6 +1,8 @@
 { pkgs, host, ... }:
 
 let
+  monitorCenter = host.monitors.center;
+  monitorLeft = host.monitors.left;
   directories = host.directories;
 
   waybar = "${pkgs.waybar}/bin/waybar";
@@ -72,6 +74,19 @@ in
         kb_layout = "gb";
         accel_profile = "flat";
       };
+
+      workspace = [
+        "${monitorLeft},1"
+        "${monitorCenter},2"
+        "${monitorCenter},3"
+        "${monitorCenter},4"
+        "${monitorCenter},5"
+        "${monitorCenter},6"
+        "${monitorCenter},7"
+        "${monitorCenter},8"
+        "${monitorCenter},9"
+        "${monitorCenter},10"
+      ];
 
       exec = [
         "killall .waybar-wrapped; ${waybar}"
