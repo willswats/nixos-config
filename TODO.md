@@ -4,7 +4,6 @@
 
 ### Hyprland
 
-- [ ] Setup brightnessctl
 - [ ] Fix network-manager-applet or replace
 - [ ] Fix blueman-applet or replace
 - [ ] Setup waybar
