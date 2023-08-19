@@ -81,13 +81,18 @@ in
           accel_profile = "flat";
         };
 
-        windowrulev2 = [
-          # Set opacity 
-          "opacity 0.90, class:Alacritty"
-          # Fix Firefox flashing default hyprland wallpaper on resize.
-          # This has the negative effect of causing black borders around certain parts of Firefox.
+        dwindle = {
+          preserve_split = true;
+        };
+
+        misc = {
+          # Fix Firefox flashing default hyprland wallpaper on resize (still occurs, but it's less noticeable)
           # https://github.com/hyprwm/Hyprland/issues/2817
-          "forcergbx, class:firefox"
+          disable_hyprland_logo = true;
+        };
+
+        windowrulev2 = [
+          "opacity 0.90, class:Alacritty"
         ];
 
         workspace = [
@@ -209,10 +214,6 @@ in
         ];
       };
       extraConfig = ''
-        dwindle {
-          preserve_split = true 
-        }
-
         bind=$mod,R,submap,resize
 
         submap=resize
