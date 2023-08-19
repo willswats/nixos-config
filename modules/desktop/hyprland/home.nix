@@ -3,12 +3,17 @@
 let
   directories = host.directories;
 
+  waybar = "${pkgs.waybar}/bin/waybar";
+  lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
+  hyprpaper = "${pkgs.hyprpaper}/bin/hyprpaper";
+  rclone = "${pkgs.rclone}/bin/rclone";
+
   swaylock = "${pkgs.swaylock}/bin/swaylock";
   firefox = "${pkgs.firefox}/bin/firefox";
   pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
   alacritty = "${pkgs.alacritty}/bin/alacritty";
   rofi = "${pkgs.rofi-wayland}/bin/rofi";
-  nvim = "${pkgs.neovim}/bin/nvim";
+  nvim = "nvim"; # This is broken: "${pkgs.neovim}/bin/nvim";
   btm = "${pkgs.bottom}/bin/btm";
   spotify_player = "${pkgs.spotify-player}/bin/spotify_player";
 in
@@ -66,13 +71,13 @@ in
       };
 
       exec = [
-        "waybar"
+        "killall .waybar-wrapped; ${waybar}"
       ];
 
       exec-once = [
-        "hyprpaper"
-        "lxpolkit"
-        "rclone mount --vfs-cache-mode writes google-drive: ~/Drive"
+        "${hyprpaper}"
+        "${lxpolkit}"
+        "${rclone} mount --vfs-cache-mode writes google-drive: ~/Drive"
         "mkdir -p ${directories}"
       ];
 
