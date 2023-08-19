@@ -14,6 +14,7 @@
           height = 30;
           output = [ monitorCenter ];
           modules-left = [ "hyprland/workspaces" "hyprland/window" ];
+          modules-right = [ "pulseaudio" "clock" "tray" ];
         };
       };
     };
