@@ -24,20 +24,20 @@ in
     ../waybar/home.nix
     ../rofi/home.nix
     ../mako/home.nix
-    ../gammastep/home.nix
-    ../blueman/home.nix
+    # ../gammastep/home.nix
+    # ../blueman/home.nix
   ];
 
   home.packages = with pkgs; [
     wl-clipboard
     pavucontrol
-    playerctl
-    brightnessctl
+    # playerctl
+    # brightnessctl
     lxde.lxsession
   ];
 
   services = {
-    network-manager-applet.enable = true;
+    # network-manager-applet.enable = true;
     swayidle = {
       enable = true;
       systemdTarget = "hyprland-session.target";
