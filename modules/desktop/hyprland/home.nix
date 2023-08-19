@@ -82,6 +82,8 @@ in
         };
 
         windowrulev2 = [
+          # Set opacity 
+          "opacity 0.90, class:Alacritty"
           # Fix Firefox flashing default hyprland wallpaper on resize.
           # This has the negative effect of causing black borders around certain parts of Firefox.
           # https://github.com/hyprwm/Hyprland/issues/2817
