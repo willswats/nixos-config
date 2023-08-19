@@ -8,6 +8,7 @@
 - [ ] Setup special workspace
 - [ ] Theme hyprland
 - [ ] Add redshift alternative
+- [ ] Fix flameshot or replace it
 - [ ] Fix network-manager-applet
 - [ ] Fix blueman-applet
 - [ ] Setup waybar
