@@ -66,7 +66,7 @@ in
       };
 
       exec = [
-        "killall .waybar-wrapped; waybar"
+        "waybar"
       ];
 
       exec-once = [
