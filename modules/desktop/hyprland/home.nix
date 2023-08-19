@@ -23,6 +23,8 @@ let
   grim = "${pkgs.grim}/bin/grim";
   slurp = "${pkgs.slurp}/bin/slurp";
   wpctl = "${pkgs.wireplumber}/bin/wpctl";
+  # playerctl = "${pkgs.playerctl}/bin/playerctl";
+  # brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
 in
 {
   imports = [
@@ -38,12 +40,13 @@ in
   home.packages = with pkgs; [
     wl-clipboard
     pavucontrol
-    # brightnessctl
+    brightnessctl
     lxde.lxsession
   ];
 
   services = {
     # network-manager-applet.enable = true;
+    playerctld.enable = true;
     swayidle = {
       enable = true;
       systemdTarget = "hyprland-session.target";
@@ -163,15 +166,26 @@ in
         # Scroll through existing workspaces with mod + scroll
         "$mod, mouse_down, workspace, e+1"
         "$mod, mouse_up, workspace, e-1"
+
+        # Mute volume and microphone
+        ", XF86AudioMute, exec, ${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ", XF86AudioMicMute, exec, ${wpctl} set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+
+        # Setup play, pause, next and previous keys
+        ", XF86AudioPlay, exec, playerctl play-pause"
+        ", XF86AudioPause, exec, playerctl play-pause"
+        ", XF86AudioNext, exec, playerctl next"
+        ", XF86AudioPrev, exec, playerctl previous"
       ];
 
       binde = [
         # Raise and lower volume (limit to 100%)
         ", XF86AudioRaiseVolume, exec, ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"
         ", XF86AudioLowerVolume, exec, ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-"
-        # Mute volume and microphone
-        ", XF86AudioMute, exec, ${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        ", XF86AudioMicMute, exec, ${wpctl} set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+
+        # Set brightness
+        ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
+        ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
       ];
 
       bindm = [
