@@ -4,7 +4,6 @@
 
 ### Hyprland
 
-- [ ] Fix gamescope
 - [ ] Test in vm
 - [ ] Setup waybar
 
