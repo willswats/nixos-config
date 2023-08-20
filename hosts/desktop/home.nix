@@ -18,6 +18,8 @@
     yuzu-mainline
     pcsx2
     rpcs3
+    # Utilities
+    gamescope
   ];
 
   wayland.windowManager.hyprland =
