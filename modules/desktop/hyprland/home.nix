@@ -94,6 +94,10 @@ in
           preserve_split = true;
         };
 
+        gestures = {
+          workspace_swipe = true;
+        };
+
         misc = {
           groupbar_titles_font_size = 14;
           # Fix Firefox flashing default hyprland wallpaper on resize (still occurs, but it's less noticeable)
