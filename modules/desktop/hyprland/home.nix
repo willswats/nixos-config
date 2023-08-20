@@ -43,7 +43,6 @@ in
       monitorLeft = host.monitors.left;
       directories = host.directories;
 
-      waybar = "${pkgs.waybar}/bin/waybar";
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       hyprpaper = "${pkgs.hyprpaper}/bin/hyprpaper";
       rclone = "${pkgs.rclone}/bin/rclone";
@@ -76,7 +75,7 @@ in
           {
             gaps_in = 5;
             gaps_out = 10;
-            border_size = 2;
+            border_size = 1;
             "col.inactive_border" = overlay0;
             "col.active_border" = blue;
             "col.group_border" = overlay0;
@@ -117,10 +116,6 @@ in
           "${monitorCenter},8"
           "${monitorCenter},9"
           "${monitorCenter},10"
-        ];
-
-        exec = [
-          "killall .waybar-wrapped; ${waybar}"
         ];
 
         exec-once = [
