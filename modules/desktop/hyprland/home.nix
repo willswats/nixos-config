@@ -43,6 +43,7 @@ in
       monitorLeft = host.monitors.left;
       directories = host.directories;
 
+      waybar = "${pkgs.waybar}/bin/waybar";
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       hyprpaper = "${pkgs.hyprpaper}/bin/hyprpaper";
       rclone = "${pkgs.rclone}/bin/rclone";
@@ -120,6 +121,10 @@ in
           "${monitorCenter},8"
           "${monitorCenter},9"
           "${monitorCenter},10"
+        ];
+
+        exec = [
+          "killall .waybar-wrapped; ${waybar}"
         ];
 
         exec-once = [
