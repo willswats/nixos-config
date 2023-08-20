@@ -49,7 +49,7 @@ in
   users.users.${user} = {
     isNormalUser = true;
     description = user;
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "input" ];
     shell = pkgs.fish;
   };
 

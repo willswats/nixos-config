@@ -15,11 +15,26 @@
           position = "top";
           height = 40;
           output = [ monitorCenter ];
-          modules-left = [ "hyprland/workspaces" "hyprland/window" "hyprland/submap" ];
+          modules-left = [ "hyprland/workspaces" "hyprland/window" "hyprland/submap" "keyboard-state" ];
           modules-right = [ "battery" "backlight" "pulseaudio" "clock#calendar" "clock" "tray" ];
 
           "hyprland/workspaces" = {
             all-outputs = true; # Display workspaces assigned to other monitors on one bar
+          };
+
+          "hyprland/window" = {
+            max-length = 50;
+          };
+
+          keyboard-state = {
+            capslock = true;
+            format = {
+              capslock = "{icon}";
+            };
+            format-icons = {
+              locked = "󰌎";
+              unlocked = "";
+            };
           };
 
           battery = {
@@ -86,6 +101,12 @@
           }
 
           #submap {
+            color: ${blue};
+            background-color: ${crust};
+            padding: 0 10px;
+          }
+
+          #keyboard-state label.locked {
             color: ${blue};
             background-color: ${crust};
             padding: 0 10px;
