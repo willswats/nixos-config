@@ -18,14 +18,14 @@
     yuzu-mainline
     pcsx2
     rpcs3
-    # Utilities
-    gamescope
   ];
 
   wayland.windowManager.hyprland =
     let
       monitorCenter = host.monitors.center;
       monitorLeft = host.monitors.left;
+
+      xrandr = "${pkgs.xrandr}/bin/xrandr";
     in
     {
       enableNvidiaPatches = true;
@@ -42,6 +42,11 @@
         monitor = [
           "${monitorCenter}, 1920x1080@144, 1080x0, 1"
           "${monitorLeft}, 1920x1080@144, 0x0, 1, transform, 3"
+        ];
+
+        # This ensures that xwindows use the center monitor
+        exec-once = [
+          "${xrandr} --output ${monitorCenter} --primary --mode 1920x1080 --rate 144.0"
         ];
       };
     };
