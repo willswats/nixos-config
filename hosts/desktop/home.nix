@@ -25,7 +25,7 @@
       monitorCenter = host.monitors.center;
       monitorLeft = host.monitors.left;
 
-      xrandr = "${pkgs.xrandr}/bin/xrandr";
+      xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
     in
     {
       enableNvidiaPatches = true;
