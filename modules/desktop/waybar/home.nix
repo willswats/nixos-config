@@ -15,7 +15,7 @@
           position = "top";
           height = 40;
           output = [ monitorCenter ];
-          modules-left = [ "hyprland/workspaces" "hyprland/window" ];
+          modules-left = [ "hyprland/workspaces" "hyprland/window" "hyprland/submap" ];
           modules-right = [ "battery" "backlight" "pulseaudio" "clock#calendar" "clock" "tray" ];
 
           "hyprland/workspaces" = {
@@ -51,6 +51,7 @@
       };
       style =
         let
+          crust = "#11111b";
           overlay0 = "#6c7086";
           blue = "#89b4fa";
           green = "#a6e3a1";
@@ -81,6 +82,13 @@
 
           #window {
             color: ${blue}; 
+            padding: 0 10px;
+          }
+
+          #submap {
+            color: ${blue};
+            background-color: ${crust};
+            padding: 0 10px;
           }
 
           #battery.full, #battery.charging, #battery.plugged {
