@@ -22,47 +22,24 @@
               warning = 25;
               critical = 10;
             };
-            format = "{icon} {capacity}%";
-            format-charging = "  {capacity}%";
-            format-plugged = "  {capacity}%";
-            format-alt = "{icon} {time}";
-            format-time = "{H}h{M}";
+            format = "{icon}  {capacity}%";
             format-icons = [ " " " " " " " " " " ];
           };
 
           backlight = {
-            format = "{icon} {percent}%";
-            format-icons = [ "" ];
+            format = "  {percent}%";
           };
 
           pulseaudio = {
-            # "scroll-step" = 1 // % can be a float;
-            format = "{icon} {volume}% {format_source}";
-            format-bluetooth = "{volume}% {icon} {format_source}";
-            format-bluetooth-muted = "󰝟 {icon} {format_source}";
-            format-muted = "󰝟 {format_source}";
-            format-source = " {volume}%";
-            format-source-muted = "";
-            format-icons = {
-              headphones = "";
-              handsfree = "";
-              headset = "";
-              phone = "";
-              portable = "";
-              car = "";
-              default = [ " " " " " " ];
-            };
-            on-click = "pavucontrol";
+            scroll-step = 5;
+            format = "󰕾  {volume}%";
+            format-muted = "󰖁  0%";
           };
 
           clock = {
             interval = 1;
-            format = "{:%B %d, %H:%M}";
-            tooltip = true;
-            tooltip-format = "{:%H:%M:%S}";
+            format = "󰭦  {:%A %d %B  󱑍  %H:%M}";
           };
-
-          tray = { icon-size = 18; spacing = 10; };
         };
       };
       style =
@@ -70,11 +47,17 @@
           base = "#1e1e2e";
           text = "#cdd6f4";
           blue = "#89b4fa";
+          green = "#a6e3a1";
+          # red = "#f38ba8";
+          yellow = "#f9e2af";
+          # mauve = "#cba6f7";
+          pink = "#f5c2e7";
         in
         ''
           * { 
-            font-size: 14px;    
+            font-size: 18px;    
             font-family: Hack;
+            border-radius: 0;
           }
 
           #window waybar {
@@ -82,12 +65,28 @@
             background-color: ${base};
           }
 
-          #workspaces button.focused {
+           #workspaces button.active {
             background-color: ${blue};
           }
 
           #battery, #backlight, #pulseaudio, #clock, #tray {
             padding: 0 10px;
+          }
+
+          #battery {
+            color: ${green};
+          }
+
+          #xbacklight {
+            color: ${yellow};
+          }
+
+          #pulseaudio{
+            color: ${pink};
+          }
+
+          #clock{
+            color: ${blue};
           }
         '';
     };
