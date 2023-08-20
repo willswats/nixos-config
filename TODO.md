@@ -4,6 +4,7 @@
 
 ### Hyprland
 
+- [ ] Fix gamescope
 - [ ] Setup waybar
 
 ### Neovim
