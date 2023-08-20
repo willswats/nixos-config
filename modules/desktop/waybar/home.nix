@@ -23,13 +23,8 @@
           };
 
           battery = {
-            states = {
-              good = 70;
-              warning = 25;
-              critical = 10;
-            };
-            format = "{icon}  {capacity}%";
-            format-icons = [ " " " " " " " " " " ];
+            interval = 1;
+            format = "   {capacity}%";
           };
 
           backlight = {
@@ -59,7 +54,7 @@
           overlay0 = "#6c7086";
           blue = "#89b4fa";
           green = "#a6e3a1";
-          # red = "#f38ba8";
+          red = "#f38ba8";
           yellow = "#f9e2af";
           rosewater = "#f5e0dc";
           mauve = "#cba6f7";
@@ -88,8 +83,12 @@
             color: ${blue}; 
           }
 
-          #battery {
+          #battery.full, #battery.charging, #battery.plugged {
             color: ${green};
+          }
+
+          #battery.discharging {
+            color: ${red};
           }
 
           #xbacklight {
