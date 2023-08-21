@@ -39,7 +39,8 @@
 
           battery = {
             interval = 1;
-            format = "   {capacity}%";
+            format = "{icon}  {capacity}%";
+            format-icons = [ "" "" "" "" "" ];
           };
 
           backlight = {
@@ -54,11 +55,15 @@
           };
 
           bluetooth = {
-            format = "  {status}";
+            format = "󰂯  {status}";
           };
 
           network = {
-            format = "   {ifname}";
+            format = "{icon}  {ifname}";
+            format-wifi = "{icon}  {essid} {signalStrength}%";
+            format-ethernet = "󰤨  {ifname}";
+            format-disconnected = "{icon}  Disconnected";
+            format-icons = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
           };
 
           "clock#calendar" = {
