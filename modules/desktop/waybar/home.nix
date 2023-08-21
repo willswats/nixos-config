@@ -16,7 +16,7 @@
           height = 40;
           output = [ monitorCenter ];
           modules-left = [ "hyprland/workspaces" "hyprland/window" "hyprland/submap" "keyboard-state" ];
-          modules-right = [ "battery" "backlight" "pulseaudio" "clock#calendar" "clock" "tray" ];
+          modules-right = [ "bluetooth" "network" "battery" "backlight" "pulseaudio" "clock#calendar" "clock" "tray" ];
 
           "hyprland/workspaces" = {
             all-outputs = true; # Display workspaces assigned to other monitors on one bar
@@ -35,6 +35,14 @@
               locked = "󰌎";
               unlocked = "";
             };
+          };
+
+          bluetooth = {
+            format = "  {status}";
+          };
+
+          network = {
+            format = "   {ifname}";
           };
 
           battery = {
@@ -78,6 +86,8 @@
           red = "#f38ba8";
           yellow = "#f9e2af";
           rosewater = "#f5e0dc";
+          sky = "#89dceb";
+          teal = "#94e2d5";
           mauve = "#cba6f7";
           pink = "#f5c2e7";
         in
@@ -88,7 +98,16 @@
             border-radius: 0;
           }
 
-          #window, #submap, #keyboard-state label.locked, #battery, #backlight, #pulseaudio, #clock, #tray {
+          #window, 
+          #submap, 
+          #keyboard-state label.locked, 
+          #bluetooth, 
+          #network, 
+          #battery, 
+          #backlight, 
+          #pulseaudio, 
+          #clock, 
+          #tray {
             padding: 0 10px;
           }
 
@@ -114,7 +133,17 @@
             background-color: ${crust};
           }
 
-          #battery.full, #battery.charging, #battery.plugged {
+          #bluetooth {
+            color: ${teal};
+          }
+
+          #network {
+            color: ${sky};
+          }
+
+          #battery.full, 
+          #battery.charging, 
+          #battery.plugged {
             color: ${green};
           }
 
