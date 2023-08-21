@@ -80,16 +80,23 @@
       style =
         let
           crust = "#11111b";
+
           overlay0 = "#6c7086";
+
           blue = "#89b4fa";
+          lavender = "#b4befe";
+          sapphire = "#74c7ec";
+          sky = "#89dceb";
+          teal = "#94e2d5";
           green = "#a6e3a1";
-          red = "#f38ba8";
           yellow = "#f9e2af";
-          rosewater = "#f5e0dc";
           peach = "#fab387";
           maroon = "#eba0ac";
+          red = "#f38ba8";
           mauve = "#cba6f7";
           pink = "#f5c2e7";
+          flamingo = "#f2cdcd";
+          rosewater = "#f5e0dc";
         in
         ''
           * { 
@@ -144,11 +151,11 @@
           }
 
           #xbacklight {
-            color: ${yellow};
+            color: ${peach};
           }
 
           #pulseaudio{
-            color: ${rosewater};
+            color: ${maroon};
           }
 
           #pulseaudio.muted {
@@ -156,19 +163,19 @@
           }
 
           #bluetooth {
-            color: ${peach};
+            color: ${mauve};
           }
 
           #network {
-            color: ${maroon};
-          }
-
-          #clock.calendar {
             color: ${pink};
           }
 
+          #clock.calendar {
+            color: ${flamingo};
+          }
+
           #clock{
-            color: ${mauve};
+            color: ${rosewater};
           }
         '';
     };
