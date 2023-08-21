@@ -46,6 +46,7 @@ in
       waybar = "${pkgs.waybar}/bin/waybar";
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       hyprpaper = "${pkgs.hyprpaper}/bin/hyprpaper";
+      xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
       rclone = "${pkgs.rclone}/bin/rclone";
       hyprctl = "${pkgs.hyprland}/bin/hyprctl";
 
@@ -131,6 +132,7 @@ in
           "${hyprpaper}"
           "${playerctld}"
           "${lxpolkit}"
+          "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
           "${rclone} mount --vfs-cache-mode writes google-drive: ~/Drive"
           "mkdir -p ${directories}"
         ];
