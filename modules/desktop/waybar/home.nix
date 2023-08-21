@@ -26,10 +26,6 @@
             max-length = 50;
           };
 
-          "hyprland/submap" = {
-            tooltip = false;
-          };
-
           keyboard-state = {
             capslock = true;
             format = {
@@ -44,7 +40,7 @@
           battery = {
             interval = 1;
             format = "{icon}  {capacity}%";
-            format-icons = [ "" "" "" "" "" ];
+            format-icons = [ " " " " " " " " " " ];
           };
 
           backlight = {
@@ -56,7 +52,6 @@
             format = "{format_source}";
             format-source = "  {volume}%";
             format-source-muted = "  0%";
-            tooltip = false;
             on-click = "${wpctl} set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
             on-scroll-up = "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 5%+";
             on-scroll-down = "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 5%-";
@@ -66,7 +61,6 @@
             scroll-step = 5;
             format = "󰕾  {volume}%";
             format-muted = "󰖁  0%";
-            tooltip = false;
             on-click = "${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle";
           };
 
@@ -82,7 +76,6 @@
             format-ethernet = "󰤨  {ifname}";
             format-disconnected = "{icon}  Disconnected";
             format-icons = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
-            tooltip = false;
           };
 
           "clock#calendar" = {
