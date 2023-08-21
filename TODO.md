@@ -5,6 +5,7 @@
 ### Hyprland
 
 - [ ] Test in vm
+- [ ] Set shaders to be applied at specific times
 - [ ] Add Catppuccin SDDM theme manually - [PR](https://github.com/NixOS/nixpkgs/pull/240990)
 
 ### Neovim
