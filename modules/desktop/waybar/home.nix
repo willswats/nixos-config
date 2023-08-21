@@ -68,6 +68,7 @@
             format = "󰂯  {status}";
             format-connected = "  {device_alias}";
             format-connected-battery = "  {device_alias} {device_battery_percentage}%";
+            max-length = 20;
           };
 
           network = {
@@ -76,6 +77,7 @@
             format-ethernet = "󰤨  {ifname}";
             format-disconnected = "{icon}  Disconnected";
             format-icons = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
+            max-length = 20;
           };
 
           "clock#calendar" = {
