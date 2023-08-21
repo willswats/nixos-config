@@ -16,7 +16,7 @@
           height = 40;
           output = [ monitorCenter ];
           modules-left = [ "hyprland/workspaces" "hyprland/window" "hyprland/submap" "keyboard-state" ];
-          modules-right = [ "battery" "backlight" "pulseaudio" "bluetooth" "network" "clock#calendar" "clock" "tray" ];
+          modules-right = [ "battery" "backlight" "pulseaudio#microphone" "pulseaudio" "bluetooth" "network" "clock#calendar" "clock" "tray" ];
 
           "hyprland/workspaces" = {
             all-outputs = true; # Display workspaces assigned to other monitors on one bar
@@ -24,6 +24,10 @@
 
           "hyprland/window" = {
             max-length = 50;
+          };
+
+          "hyprland/submap" = {
+            tooltip = false;
           };
 
           keyboard-state = {
@@ -47,10 +51,22 @@
             format = "  {percent}%";
           };
 
+          "pulseaudio#microphone" = {
+            scroll-step = 5;
+            format = "{format_source}";
+            format-source = "  {volume}%";
+            format-source-muted = "  0%";
+            tooltip = false;
+            on-click = "${wpctl} set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
+            on-scroll-up = "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 5%+";
+            on-scroll-down = "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 5%-";
+          };
+
           pulseaudio = {
             scroll-step = 5;
             format = "󰕾  {volume}%";
             format-muted = "󰖁  0%";
+            tooltip = false;
             on-click = "${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle";
           };
 
@@ -66,6 +82,7 @@
             format-ethernet = "󰤨  {ifname}";
             format-disconnected = "{icon}  Disconnected";
             format-icons = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
+            tooltip = false;
           };
 
           "clock#calendar" = {
@@ -92,6 +109,7 @@
 
           blue = "#89b4fa";
           green = "#a6e3a1";
+          yellow = "#f9e2af";
           peach = "#fab387";
           maroon = "#eba0ac";
           red = "#f38ba8";
@@ -153,15 +171,15 @@
           }
 
           #xbacklight {
+            color: ${yellow};
+          }
+
+          #pulseaudio.microphone {
             color: ${peach};
           }
 
-          #pulseaudio{
+          #pulseaudio {
             color: ${maroon};
-          }
-
-          #pulseaudio.muted {
-            color: ${overlay0};
           }
 
           #bluetooth {
