@@ -3,7 +3,6 @@
 ## Hyprland
 
 - [ ] Test in vm
-- [ ] Set shaders to be applied at specific times
 - [ ] Move to greetd and ReGreet
 
 ## sddm
