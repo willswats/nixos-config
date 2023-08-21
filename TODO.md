@@ -4,7 +4,6 @@
 
 ### Hyprland
 
-- [ ] Setup waybar
 - [ ] Test in vm
 - [ ] Add Catppuccin SDDM theme manually - [PR](https://github.com/NixOS/nixpkgs/pull/240990)
 
