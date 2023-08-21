@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
 {
+
   home = {
     pointerCursor = {
       x11 = {
