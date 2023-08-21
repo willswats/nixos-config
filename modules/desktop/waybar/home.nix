@@ -86,8 +86,6 @@
           red = "#f38ba8";
           yellow = "#f9e2af";
           rosewater = "#f5e0dc";
-          sapphire = "#74c7ec";
-          sky = "#89dceb";
           peach = "#fab387";
           maroon = "#eba0ac";
           mauve = "#cba6f7";
