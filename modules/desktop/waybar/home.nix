@@ -16,7 +16,7 @@
           height = 40;
           output = [ monitorCenter ];
           modules-left = [ "hyprland/workspaces" "hyprland/window" "hyprland/submap" "keyboard-state" ];
-          modules-right = [ "bluetooth" "network" "battery" "backlight" "pulseaudio" "clock#calendar" "clock" "tray" ];
+          modules-right = [ "battery" "backlight" "pulseaudio" "bluetooth" "network" "clock#calendar" "clock" "tray" ];
 
           "hyprland/workspaces" = {
             all-outputs = true; # Display workspaces assigned to other monitors on one bar
@@ -37,14 +37,6 @@
             };
           };
 
-          bluetooth = {
-            format = "  {status}";
-          };
-
-          network = {
-            format = "   {ifname}";
-          };
-
           battery = {
             interval = 1;
             format = "   {capacity}%";
@@ -59,6 +51,14 @@
             format = "󰕾  {volume}%";
             format-muted = "󰖁  0%";
             on-click = "${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle";
+          };
+
+          bluetooth = {
+            format = "  {status}";
+          };
+
+          network = {
+            format = "   {ifname}";
           };
 
           "clock#calendar" = {
@@ -86,8 +86,10 @@
           red = "#f38ba8";
           yellow = "#f9e2af";
           rosewater = "#f5e0dc";
+          sapphire = "#74c7ec";
           sky = "#89dceb";
-          teal = "#94e2d5";
+          peach = "#fab387";
+          maroon = "#eba0ac";
           mauve = "#cba6f7";
           pink = "#f5c2e7";
         in
@@ -101,11 +103,11 @@
           #window, 
           #submap, 
           #keyboard-state label.locked, 
-          #bluetooth, 
-          #network, 
           #battery, 
           #backlight, 
           #pulseaudio, 
+          #bluetooth, 
+          #network, 
           #clock, 
           #tray {
             padding: 0 10px;
@@ -133,14 +135,6 @@
             background-color: ${crust};
           }
 
-          #bluetooth {
-            color: ${teal};
-          }
-
-          #network {
-            color: ${sky};
-          }
-
           #battery.full, 
           #battery.charging, 
           #battery.plugged {
@@ -161,6 +155,14 @@
 
           #pulseaudio.muted {
             color: ${overlay0};
+          }
+
+          #bluetooth {
+            color: ${peach};
+          }
+
+          #network {
+            color: ${maroon};
           }
 
           #clock.calendar {
