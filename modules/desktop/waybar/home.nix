@@ -56,6 +56,8 @@
 
           bluetooth = {
             format = "󰂯  {status}";
+            format-connected = "  {device_alias}";
+            format-connected-battery = "  {device_alias} {device_battery_percentage}%";
           };
 
           network = {
