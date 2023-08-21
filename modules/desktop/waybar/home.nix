@@ -62,6 +62,11 @@
             interval = 1;
             format = "󱑍  {:%H:%M}";
           };
+
+          tray = {
+            icon-size = 18;
+            spacing = 10;
+          };
         };
       };
       style =
