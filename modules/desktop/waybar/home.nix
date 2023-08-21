@@ -88,7 +88,7 @@
             border-radius: 0;
           }
 
-          #battery, #backlight, #pulseaudio, #clock, #tray {
+          #window, #submap, #keyboard-state label.locked, #battery, #backlight, #pulseaudio, #clock, #tray {
             padding: 0 10px;
           }
 
@@ -102,19 +102,16 @@
 
           #window {
             color: ${blue}; 
-            padding: 0 10px;
           }
 
           #submap {
             color: ${blue};
             background-color: ${crust};
-            padding: 0 10px;
           }
 
           #keyboard-state label.locked {
             color: ${blue};
             background-color: ${crust};
-            padding: 0 10px;
           }
 
           #battery.full, #battery.charging, #battery.plugged {
