@@ -228,19 +228,23 @@ in
           "$mod, mouse:273, resizewindow"
         ];
       };
+      # Virtual submap for passing keyboard into virtual machine - https://github.com/hyprwm/Hyprland/issues/501
       extraConfig = ''
-        bind=$mod,R,submap,resize
-
+        bind=$mod,r,submap,resize
         submap=resize
-
         binde=,h,resizeactive,10 0
         binde=,l,resizeactive,-10 0
         binde=,j,resizeactive,0 -10
         binde=,k,resizeactive,0 10
 
         bind=,escape,submap,reset 
-        bind=$mod,R,submap,reset 
+        bind=$mod,r,submap,reset 
+        submap=reset
 
+        bind=$mod,v,submap,virtual
+        submap=virtual
+
+        bind=$mod,v,submap,reset
         submap=reset
       '';
     };
