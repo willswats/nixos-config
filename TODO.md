@@ -3,6 +3,7 @@
 ## Hyprland
 
 - [ ] Test in vm
+- [ ] Setup systemd timer for hyprshade
 
 ## Neovim
 
@@ -18,7 +19,6 @@
 
 ## Other
 
-- [ ] Move ishiiruka desktop entry to package
 - [ ] Install firefox extensions from NUR - [example](https://github.com/rhoriguchi/nixos-setup/blob/master/flake.nix)
 - [ ] Fix Mullvad GUI inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
 - [ ] Plymouth `boot.initrd.systemd.enable` causing `Failed to execute /sbin/init` after entering password to unlock encryption on nvidia proprietary drivers
