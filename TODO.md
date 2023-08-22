@@ -2,6 +2,7 @@
 
 ## Hyprland
 
+- [ ] Start and stop hyprshade at specific times declaratively
 - [ ] Test in vm
 - [ ] Move to greetd and ReGreet
 
