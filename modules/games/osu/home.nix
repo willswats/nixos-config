@@ -1,37 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.packages =
-    [
-      (
-        let
-          user = "ppy";
-          project = "osu";
-          assetName = "osu.AppImage";
-          version = "2023.811.0";
-          hash = "0slry02f89wsjq9ly8jcm9g3h1ikzl6gpwghr952k7rkxsgnf49x"; # nix-prefetch-url https://github.com/ppy/osu/releases/download/2023.811.0/osu.AppImage
-        in
-        pkgs.appimageTools.wrapType2
-          {
-            name = "osu!";
-            extraPkgs = pkgs: with pkgs; [ icu ];
-            src = builtins.fetchurl {
-              url = "https://github.com/${user}/${project}/releases/download/${version}/${assetName}";
-              sha256 = hash;
-            };
-          }
-      )
-    ];
-
-  # Create desktop entry
-  home.file.".local/share/icons/lazer.png".source = ./lazer.png;
-  home.file.".local/share/applications/osu.desktop".text = ''
-    [Desktop Entry]
-    Name=osu!
-    Exec=osu!
-    Type=Application
-    Icon=lazer
-  '';
+  home.packages = with pkgs; [ osu-lazer-bin ];
 
   # Setup tablet
   home.file.".local/share/osu/input.json" = {

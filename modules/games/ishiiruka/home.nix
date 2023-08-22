@@ -1,37 +1,23 @@
 { pkgs, globals, ... }:
 
 {
-  home.packages = [
-    (
-      let
-        user = "project-slippi";
-        project = "Ishiiruka";
-        assetName = "Slippi_Online-x86_64.AppImage";
-        version = "v3.2.1";
-        hash =
-          "1nsl5v7vzd559f9c3q5180834wslsmxfy5zbr874f08m99j7kzmq"; # nix-prefetch-url https://github.com/project-slippi/Ishiiruka/releases/download/v3.2.1/Slippi_Online-x86_64.AppImage
-      in
-      pkgs.appimageTools.wrapType2 {
-        name = "slippi-online";
-        extraPkgs = pkgs: with pkgs; [ gmp mpg123 libmpg123 ];
-        src = builtins.fetchurl {
-          url =
-            "https://github.com/${user}/${project}/releases/download/${version}/${assetName}";
-          sha256 = hash;
-        };
-      }
-    )
+  home.packages = with pkgs; [
+    (callPackage ../../../pkgs/ishiiruka { })
   ];
 
   # Create desktop entry
   home.file.".local/share/icons/slippi.png".source = ./slippi.png;
-  home.file.".local/share/applications/slippi.desktop".text = ''
-    [Desktop Entry]
-    Name=Slippi
-    Exec=slippi-online
-    Type=Application
-    Icon=slippi
-  '';
+  home.file.".local/share/applications/ishiiruka.desktop".text =
+    let
+      version = "v3.2.2";
+    in
+    ''
+      [Desktop Entry]
+      Name=Ishiiruka
+      Exec=Ishiiruka-${version}
+      Type=Application
+      Icon=slippi
+    '';
 
   # Setup controller
   xdg.configFile."SlippiOnline/Config/GCPadNew.ini" = {
