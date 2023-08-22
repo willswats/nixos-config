@@ -1,19 +1,9 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
-  xdg.configFile."hypr/shaders/blank.glsl" = {
-    # https://github.com/hyprwm/Hyprland/issues/1140#issuecomment-1622495967
-    text = ''
-      precision mediump float;
-      varying vec2 v_texcoord;
-      uniform sampler2D tex;
-
-      void main() {
-          vec4 pixColor = texture2D(tex, v_texcoord);
-          gl_FragColor = pixColor;
-      }
-    '';
-  };
+  home.packages = with pkgs; [
+    (python311Packages.callPackage ../../../pkgs/hyprshade { })
+  ];
 
   xdg.configFile."hypr/shaders/temperature.glsl" = {
     # https://github.com/hyprwm/Hyprland/issues/1140#issuecomment-1335128437

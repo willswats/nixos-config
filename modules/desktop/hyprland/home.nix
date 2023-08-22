@@ -12,7 +12,7 @@ in
     ../rofi/home.nix
     ../mako/home.nix
     ../grim/home.nix
-    ../shaders/home.nix
+    ../hyprshade/home.nix
   ];
 
   home.packages = with pkgs; [
@@ -58,6 +58,7 @@ in
       nvim = "nvim"; # This is broken: "${pkgs.neovim}/bin/nvim";
       btm = "${pkgs.bottom}/bin/btm";
       spotify_player = "${pkgs.spotify-player}/bin/spotify_player";
+      hyprshade = "hyprshade"; # Not in pkgs
       fish = "${pkgs.fish}/bin/fish";
       grim = "${pkgs.grim}/bin/grim";
       slurp = "${pkgs.slurp}/bin/slurp";
@@ -149,6 +150,8 @@ in
           "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
           "$mod, s, exec, ${alacritty} -e ${btm} -b" # System monitor
           "$mod, m, exec, ${alacritty} -e ${spotify_player}" # Music player
+          "$mod, bracketleft, exec, ${hyprshade} off"
+          "$mod, bracketright, exec, ${hyprshade} on ~/.config/hypr/shaders/temperature.glsl"
           ", print, exec, ${fish} -c '${grim} -g (${slurp})'" # Screenshot utility
           "$mod SHIFT, semicolon, exec, ${swaylock}"
 
@@ -165,8 +168,6 @@ in
           "$mod shift, f, togglefloating"
           "$mod, tab, changegroupactive, f"
           "$mod shift, tab, changegroupactive, b"
-          "$mod, bracketleft, exec, ${hyprctl} keyword decoration:screen_shader ~/.config/hypr/shaders/blank.glsl"
-          "$mod, bracketright, exec, ${hyprctl} keyword decoration:screen_shader ~/.config/hypr/shaders/temperature.glsl"
 
           "$mod, h, movefocus, l"
           "$mod, l, movefocus, r"
