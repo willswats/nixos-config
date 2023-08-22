@@ -92,6 +92,9 @@ in
         input = {
           kb_layout = "gb";
           accel_profile = "flat";
+          touchpad = {
+            natural_scroll = true;
+          };
         };
 
         dwindle = {
