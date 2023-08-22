@@ -1,9 +1,17 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
+  home.packages = with pkgs;  [
     (python311Packages.callPackage ../../../pkgs/hyprshade { })
   ];
+
+  xdg.configFile."hyprshade/config.toml" = {
+    text = ''
+      [[shades]]
+      name = "temperature"
+      start_time = 00:00:00
+    '';
+  };
 
   xdg.configFile."hypr/shaders/temperature.glsl" = {
     # https://github.com/hyprwm/Hyprland/issues/1140#issuecomment-1335128437

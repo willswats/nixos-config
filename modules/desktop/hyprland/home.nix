@@ -150,9 +150,8 @@ in
           "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
           "$mod, s, exec, ${alacritty} -e ${btm} -b" # System monitor
           "$mod, m, exec, ${alacritty} -e ${spotify_player}" # Music player
-          "$mod, bracketleft, exec, ${hyprshade} off"
-          "$mod, bracketright, exec, ${hyprshade} on ~/.config/hypr/shaders/temperature.glsl"
           ", print, exec, ${fish} -c '${grim} -g (${slurp})'" # Screenshot utility
+          "$mod, semicolon, exec, ${hyprshade} toggle"
           "$mod SHIFT, semicolon, exec, ${swaylock}"
 
           # Hyprland
