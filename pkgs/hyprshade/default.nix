@@ -21,11 +21,10 @@ buildPythonPackage rec {
 
   propagatedBuildInputs = [ pdm pdm-backend more-itertools click ];
 
-  meta = with lib;
-    {
-      homepage = "https://github.com/loqusion/hyprshade";
-      description = "Hyprland shade configuration tool ";
-      license = licenses.mit;
-      # maintainers = with maintainers; [ ];
-    };
+  meta = with lib; {
+    homepage = "https://github.com/loqusion/hyprshade";
+    description = "Hyprland shade configuration tool ";
+    license = licenses.mit;
+    # maintainers = with maintainers; [ ];
+  };
 }
