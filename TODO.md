@@ -2,20 +2,18 @@
 
 ## Hyprland
 
-- [ ] Start and stop hyprshade at specific times declaratively
 - [ ] Test in vm
-- [ ] Move to greetd and ReGreet
+
+## Neovim
+
+- [ ] Fix OmniSharp can't find .NET - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/249091)
+- [ ] Finish dap setup
+- [ ] Set Neovim `desc` for nested leader keymaps
 
 ## sddm
 
 - [ ] Add cursor theme
-- [ ] Add catppuccin-sddm package - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/240990)
-
-## Neovim
-
-- [ ] Finish dap setup
-- [ ] Fix OmniSharp can't find .NET - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/249091)
-- [ ] Set Neovim `desc` for nested leader keymaps
+- [ ] Add nixpkgs catppuccin-sddm package - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/240990)
 
 ## Other
 
