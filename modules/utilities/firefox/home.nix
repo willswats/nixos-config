@@ -137,14 +137,13 @@
           {
             name = "Shopping";
             bookmarks = [
-
               {
                 name = "Amazon";
                 url = "https://www.amazon.co.uk/";
               }
               {
-                name = "https://www.tesco.com/";
-                url = "Tesco";
+                name = "Tesco";
+                url = "https://www.tesco.com/";
               }
               {
                 name = "2Tall";
@@ -173,6 +172,10 @@
             name = "Education";
             bookmarks = [
               {
+                name = "University of Portsmouth Student System";
+                url = "https://student-system.port.ac.uk";
+              }
+              {
                 name = "Harvard Referencing";
                 url =
                   "https://librarydevelopment.group.shef.ac.uk/referencing/harvard.html";
@@ -180,20 +183,6 @@
               {
                 name = "Scribbr";
                 url = "https://www.scribbr.co.uk/referencing/generator/";
-              }
-            ];
-          }
-          {
-            name = "Hosting";
-            bookmarks = [
-
-              {
-                name = "Vercel";
-                url = "https://vercel.com/";
-              }
-              {
-                name = "Hover";
-                url = "https://www.hover.com/";
               }
             ];
           }
@@ -212,6 +201,20 @@
               {
                 name = "nixvim docs";
                 url = "https://nix-community.github.io/nixvim/";
+              }
+            ];
+          }
+          {
+            name = "Hosting";
+            bookmarks = [
+
+              {
+                name = "Vercel";
+                url = "https://vercel.com/";
+              }
+              {
+                name = "Hover";
+                url = "https://www.hover.com/";
               }
             ];
           }
