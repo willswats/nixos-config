@@ -128,6 +128,7 @@ in
 
         exec = [
           "killall .waybar-wrapped; ${waybar}"
+          "${hyprshade} auto"
         ];
 
         exec-once = [
@@ -151,7 +152,8 @@ in
           "$mod, s, exec, ${alacritty} -e ${btm} -b" # System monitor
           "$mod, m, exec, ${alacritty} -e ${spotify_player}" # Music player
           ", print, exec, ${fish} -c '${grim} -g (${slurp})'" # Screenshot utility
-          "$mod, semicolon, exec, ${hyprshade} toggle"
+          "$mod, bracketright, exec, ${hyprshade} on blue-light-filter"
+          "$mod, bracketleft, exec, ${hyprshade} off"
           "$mod SHIFT, semicolon, exec, ${swaylock}"
 
           # Hyprland

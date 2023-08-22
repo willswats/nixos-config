@@ -8,12 +8,13 @@
   xdg.configFile."hyprshade/config.toml" = {
     text = ''
       [[shades]]
-      name = "temperature"
-      start_time = 00:00:00
+      name = "blue-light-filter"
+      start_time = 19:00:00
+      end_time = 06:00:00 
     '';
   };
 
-  xdg.configFile."hypr/shaders/temperature.glsl" = {
+  xdg.configFile."hypr/shaders/blue-light-filter.glsl" = {
     # https://github.com/hyprwm/Hyprland/issues/1140#issuecomment-1335128437
     text = ''
       precision mediump float;
