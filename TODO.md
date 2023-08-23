@@ -3,11 +3,10 @@
 ## Hyprland
 
 - [ ] Test in vm
-- [ ] Setup systemd timer for hyprshade
 
 ## Neovim
 
-- [ ] Fix OmniSharp can't find .NET - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/249091)
+- [ ] Fix OmniSharp can't find .NET - waiting on [PR](https://nixpk.gs/pr-tracker.html?pr=249091)
 - [ ] Finish dap setup
 - [ ] Set Neovim `desc` for nested leader keymaps
 
@@ -19,7 +18,10 @@
 
 ## Other
 
+- [ ] Create PRs for hyprshade and ishiiruka
+- [ ] Overlay GZDoom to add an icon
 - [ ] Install firefox extensions from NUR - [example](https://github.com/rhoriguchi/nixos-setup/blob/master/flake.nix)
 - [ ] Fix Mullvad GUI inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
 - [ ] Plymouth `boot.initrd.systemd.enable` causing `Failed to execute /sbin/init` after entering password to unlock encryption on nvidia proprietary drivers
+- [ ] Replace hyprshade with gammastep - must wait for Nvidia to implement GAMMA_LUT or switch to an AMD GPU
 - [ ] Setup a Yubikey for GPG git commit signing
