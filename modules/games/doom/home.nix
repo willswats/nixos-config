@@ -7,7 +7,7 @@
     text =
       let
         homeDir = globals.homeDir;
-        wadDirectory = "~/Games/WADs";
+        wadDirectory = "~/Games/Doom/WADs";
 
         player = ''
           autoaim=0
@@ -189,7 +189,7 @@
           gl_spriteclip=1
           gl_tonemap=0
           gl_weaponlight=8
-          hud_althud=true
+          hud_althud=false
           hud_althud_forceinternal=false
           hud_althudscale=0
           hud_ammo_order=0
@@ -721,7 +721,7 @@
         snd_efx=true
         snd_enabled=true
         snd_hrtf=-1
-        snd_mastervolume=0.24687500298023224
+        snd_mastervolume=0.1
         snd_mididevice=-5
         snd_midiprecache=false
         snd_musicvolume=0.5
