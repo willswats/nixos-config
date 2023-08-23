@@ -7,15 +7,16 @@
     ../../modules/games/lutris/home.nix
     ../../modules/games/csgo/home.nix
     ../../modules/games/osu/home.nix
-    ../../modules/games/ishiiruka/home.nix
     ../../modules/games/doom/home.nix
     ../../modules/games/theforceengine/home.nix
+    ../../modules/games/ishiiruka/home.nix
     ../../modules/games/retroarch/home.nix
   ];
 
   home.packages = with pkgs; [
     # Games
     steam
+    airshipper
     yuzu-mainline
     pcsx2
     rpcs3
