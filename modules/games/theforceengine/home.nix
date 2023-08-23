@@ -1,0 +1,89 @@
+{ pkgs, globals, ... }:
+
+{
+  home.packages = with pkgs; [
+    theforceengine
+  ];
+
+  home.file.".local/share/TheForceEngine/settings.ini" =
+    let
+      darkForcesSourcePath = "${globals.homeDir}/Games/TheForceEngine/DarkForces";
+    in
+    {
+      text = ''
+        [Window]
+        x=0
+        y=64
+        width=1920
+        height=1080
+        baseWidth=1280
+        baseHeight=720
+        fullscreen=true
+        [Graphics]
+        gameWidth=1440
+        gameHeight=1080
+        widescreen=true
+        asyncFramebuffer=true
+        gpuColorConvert=true
+        colorCorrection=false
+        perspectiveCorrect3DO=false
+        extendAjoinLimits=true
+        vsync=false
+        show_fps=false
+        3doNormalFix=true
+        ignore3doLimits=true
+        frameRateLimit=0
+        brightness=1.000
+        contrast=1.000
+        saturation=1.000
+        gamma=1.000
+        reticleEnable=true
+        reticleIndex=5
+        reticleRed=0.205
+        reticleGreen=1.000
+        reticleBlue=0.205
+        reticleOpacity=1.000
+        reticleScale=0.750
+        renderer=1
+        skyMode=1
+        [Hud]
+        hudScale="Proportional"
+        hudPos="Edge"
+        scale=1.000
+        pixelOffsetLeft=0
+        pixelOffsetRight=0
+        pixelOffsetY=0
+        [Sound]
+        masterVolume=0.200
+        soundFxVolume=0.750
+        musicVolume=0.500
+        cutsceneSoundFxVolume=0.900
+        cutsceneMusicVolume=1.000
+        audioDevice=0
+        midiOutput=0
+        midiType=2
+        use16Channels=false
+        disableSoundInMenus=false
+        [System]
+        gameExitsToMenu=true
+        returnToModLoader=true
+        [Game]
+        game="Dark Forces"
+        [Dark_Forces]
+        sourcePath=${darkForcesSourcePath}
+        emulatorPath=""
+        airControl=0
+        bobaFettFacePlayer=true
+        disableFightMusic=false
+        enableAutoaim=false
+        showSecretFoundMsg=true
+        autorun=true
+        ignoreInfLimit=true
+        pitchLimit=3
+        [Outlaws]
+        sourcePath=""
+        emulatorPath=""
+        [CVar]
+      '';
+    };
+}
