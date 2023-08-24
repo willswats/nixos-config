@@ -4,7 +4,7 @@
   services.mako = {
     enable = true;
     defaultTimeout = 5000; # Milliseconds
-    borderSize = 1;
+    borderSize = 2;
     backgroundColor = "#1e1e2e";
     textColor = "#cdd6f4";
     borderColor = "#89b4fa";

@@ -79,7 +79,7 @@ in
           {
             gaps_in = 5;
             gaps_out = 10;
-            border_size = 1;
+            border_size = 2;
             "col.inactive_border" = overlay0;
             "col.active_border" = blue;
             "col.group_border" = overlay0;

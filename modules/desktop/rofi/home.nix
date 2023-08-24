@@ -34,7 +34,7 @@
 
       window {
           height: 360px;
-          border: 1px;
+          border: 2px;
           border-color: @border-col;
           background-color: @bg-col;
       }
