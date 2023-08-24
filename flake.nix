@@ -35,7 +35,7 @@
                 center = "DP-2";
                 left = "DP-1";
               };
-              directories = "${directories} ~/Games/WADs ~/Games/ROMs ~/Games/pk3";
+              directories = "${directories} ~/Games/Doom/WADs ~/Games/Doom/pk3 ~/Games/TheForceEngine/DarkForces ~/Games/ROMs";
               bookmarks =
                 let
                   bookmarkStart = "file://${homeDir}/";
