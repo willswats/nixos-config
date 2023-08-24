@@ -2,6 +2,6 @@
 
 {
   environment.variables = {
-    GRIM_DEFAULT_DIR = "${globals.homeDir}/Downloads";
+    GRIM_DEFAULT_DIR = "${globals.homeDir}/Pictures";
   };
 }

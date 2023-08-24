@@ -18,7 +18,7 @@
         system = "x86_64-linux";
         user = "will";
         homeDir = "/home/${user}";
-        directories = "~/Drive ~/Code";
+        directories = "~/Downloads ~/Pictures ~/Drive ~/Code";
         globals = {
           user = user;
           homeDir = homeDir;
@@ -35,13 +35,14 @@
                 center = "DP-2";
                 left = "DP-1";
               };
-              directories = "${directories} ~/Games/Doom/WADs ~/Games/Doom/pk3 ~/Games/TheForceEngine/DarkForces ~/Games/ROMs";
+              directories = "${directories} ~/Games/ROMs ~/Games/Doom/WADs ~/Games/Doom/pk3 ~/Games/TheForceEngine/DarkForces";
               bookmarks =
                 let
                   bookmarkStart = "file://${homeDir}/";
                 in
                 [
                   "${bookmarkStart}Downloads Downloads"
+                  "${bookmarkStart}Pictures Pictures"
                   "${bookmarkStart}Code Code"
                   "${bookmarkStart}Games Games"
                 ];
@@ -88,6 +89,7 @@
                 in
                 [
                   "${bookmarkStart}Downloads Downloads"
+                  "${bookmarkStart}Pictures Pictures"
                   "${bookmarkStart}Code Code"
                 ];
             };
@@ -132,6 +134,7 @@
                 in
                 [
                   "${bookmarkStart}Downloads Downloads"
+                  "${bookmarkStart}Pictures Pictures"
                   "${bookmarkStart}Code Code"
                 ];
             };
