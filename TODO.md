@@ -18,7 +18,7 @@
 
 ## Other
 
-- [ ] Create PRs for hyprshade and ishiiruka
+- [ ] Create PRs for all packages in pkgs that are not in nixpkgs
 - [ ] Overlay GZDoom to add an icon
 - [ ] Install firefox extensions from NUR - [example](https://github.com/rhoriguchi/nixos-setup/blob/master/flake.nix)
 - [ ] Fix Mullvad GUI inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
