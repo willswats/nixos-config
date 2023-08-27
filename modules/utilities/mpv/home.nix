@@ -13,10 +13,18 @@
     bindings = {
       # mpv
       MBTN_LEFT = "cycle pause"; # Toggle pause/playback mode
+      "-" = "no-osd add volume -5; script-message-to uosc flash-elements volume";
+      "+" = "no-osd add volume 5; script-message-to uosc flash-elements volume";
+      n = "playlist-next";
+      p = "playlist-prev";
+      l = "no-osd cycle-values loop-playlist yes no; script-message-to uosc flash-elements controls"; # Toggle loop-playlist
+      L = "no-osd cycle-values loop-file yes no; script-message-to uosc flash-elements controls"; # Toggle loop-file
       # uosc
       MBTN_RIGHT = "script-binding uosc/menu";
-      p = "script-binding uosc/items"; # Opens playlist menu when playlist exists, or open-file menu otherwise 
-      s = "script-binding uosc/shuffle";
+      i = "script-binding uosc/items"; # Opens playlist menu when playlist exists, or open-file menu otherwise 
+      j = "script-binding uosc/next";
+      k = "script-binding uosc/prev";
+      s = "script-binding uosc/shuffle; script-message-to uosc flash-elements controls";
     };
     scripts = with pkgs; [
       (callPackage ../../../pkgs/mpv-user-input { })
