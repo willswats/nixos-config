@@ -5,9 +5,18 @@
     enable = true;
     config = {
       volume = 50;
+      keep-open = "yes"; # Keep mpv open when there is nothing left to play
       osc = "no"; # Requirement of uosc
       osd-bar = "no"; # Requirement of uosc
       border = "no"; # Requirement of uosc
+    };
+    bindings = {
+      # mpv
+      MBTN_LEFT = "cycle pause"; # Toggle pause/playback mode
+      # uosc
+      MBTN_RIGHT = "script-binding uosc/menu";
+      p = "script-binding uosc/items"; # Opens playlist menu when playlist exists, or open-file menu otherwise 
+      s = "script-binding uosc/shuffle";
     };
     scripts = with pkgs; [
       (callPackage ../../../pkgs/mpv-user-input { })
