@@ -13,6 +13,7 @@
     ../modules/development/lazygit/home.nix
     ../modules/development/rustup/home.nix
     ../modules/development/dotnet/home.nix
+    ../modules/development/unity/home.nix
     ../modules/utilities/firefox/home.nix
     ../modules/utilities/mpv/home.nix
     ../modules/utilities/spotify-player/home.nix
@@ -40,7 +41,6 @@
       appimage-run
       # Development
       nodePackages.pnpm
-      unityhub
       # Utilities
       gnome.file-roller
       qview
