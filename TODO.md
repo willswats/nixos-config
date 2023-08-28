@@ -6,6 +6,7 @@
 
 ## Neovim
 
+- [ ] Fix OmniSharp Unity
 - [ ] Finish dap setup
 - [ ] Set Neovim `desc` for nested leader keymaps
 
