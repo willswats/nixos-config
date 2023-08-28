@@ -1,10 +1,8 @@
 { pkgs, ... }:
 
 {
-  imports = [ ../vscode/home.nix ];
-
   home.packages = with pkgs; [
     unityhub
-    mono
+    vscode # Needed to generate the project files needed for OmniSharp to find the root dir in Neovim
   ];
 }
