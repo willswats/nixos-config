@@ -6,7 +6,6 @@
 
 ## Neovim
 
-- [ ] Fix OmniSharp can't find .NET - waiting on [PR](https://nixpk.gs/pr-tracker.html?pr=249091)
 - [ ] Finish dap setup
 - [ ] Set Neovim `desc` for nested leader keymaps
 
