@@ -5,6 +5,13 @@
 
   programs.fish = {
     enable = true;
+    shellAliases =
+      let
+        notebookDirectory = "~/Drive/Work/Notebook";
+      in
+      {
+        note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
+      };
     interactiveShellInit = ''
       # Hide fish greeting
       set -g fish_greeting
