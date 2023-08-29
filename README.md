@@ -31,6 +31,7 @@ My NixOS config.
    - Desktop: No desktop
    - Allow unfree packages
    - Erase the disk
+   - Enable swap (virtual)
    - Enable swap with hibernation (desktop and laptop)
    - Enable encryption (desktop and laptop)
 4. Reboot the system.
