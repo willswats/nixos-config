@@ -1,8 +1,8 @@
 # TODO
 
-## Hyprland
+## i3
 
-- [ ] Test in vm
+- [ ] Add back i3 config for virtual
 
 ## Neovim
 
