@@ -111,6 +111,7 @@ in
 
         windowrulev2 = [
           "float, class:steam, title:Friends List"
+          "idleinhibit fullscreen, class:Apprun, title:Dolphin" # Prevent Ishiiruka swayidle lock
         ];
 
         workspace = [
