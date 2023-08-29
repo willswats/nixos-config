@@ -6,13 +6,13 @@ let
 in
 {
   imports = [
-    ../hyprpaper/home.nix
-    ../swaylock/home.nix
-    ../waybar/home.nix
-    ../rofi/home.nix
-    ../mako/home.nix
-    ../grim/home.nix
-    ../hyprshade/home.nix
+    ./hyprpaper/home.nix
+    ./swaylock/home.nix
+    ./waybar/home.nix
+    ./rofi/home.nix
+    ./mako/home.nix
+    ./grim/home.nix
+    ./hyprshade/home.nix
   ];
 
   home.packages = with pkgs; [
@@ -88,6 +88,10 @@ in
             "col.group_border_locked_active" = blue;
             layout = "dwindle";
           };
+
+        monitor = [
+          "${monitorCenter}, highrr, auto, 1"
+        ];
 
         input = {
           kb_layout = "gb";

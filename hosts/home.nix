@@ -6,7 +6,6 @@
     ../modules/theme/cursor/home.nix
     ../modules/theme/gtk/home.nix
     ../modules/theme/qt/home.nix
-    ../modules/desktop/hyprland/home.nix
     ../modules/development/git/home.nix
     ../modules/development/gpg/home.nix
     ../modules/development/neovim/home.nix

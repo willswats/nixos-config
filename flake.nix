@@ -156,7 +156,7 @@
                     inherit globals host;
                   };
                   users.will.imports = [
-                    ./hosts/home.nix
+                    ./hosts/virtual/home.nix
                     nixvim.homeManagerModules.nixvim
                   ];
                 };

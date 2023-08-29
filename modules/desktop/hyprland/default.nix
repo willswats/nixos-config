@@ -2,9 +2,9 @@
 
 {
   imports = [
-    ../sddm
-    ../swaylock
-    ../grim
+    ../all/sddm
+    ./swaylock
+    ./grim
   ];
 
   programs.hyprland = {

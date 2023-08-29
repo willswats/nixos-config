@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs;  [
-    (python311Packages.callPackage ../../../pkgs/hyprshade { })
+    (python311Packages.callPackage ../../../../pkgs/hyprshade { })
   ];
 
   xdg.configFile."hyprshade/config.toml" = {

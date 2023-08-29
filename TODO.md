@@ -1,9 +1,5 @@
 # TODO
 
-## i3
-
-- [ ] Add back i3 config for virtual
-
 ## Neovim
 
 - [ ] Fix OmniSharp Unity

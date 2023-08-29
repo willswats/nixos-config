@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    (callPackage ../../../pkgs/catppuccin-sddm { })
+    (callPackage ../../../../pkgs/catppuccin-sddm { })
   ];
 
   services.xserver = {

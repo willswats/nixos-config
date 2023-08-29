@@ -3,6 +3,7 @@
 {
   imports = [
     ../home.nix
+    ../../modules/desktop/hyprland/home.nix
     ../../modules/system/opentabletdriver/home.nix
     ../../modules/games/lutris/home.nix
     ../../modules/games/csgo/home.nix

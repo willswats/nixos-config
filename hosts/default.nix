@@ -7,7 +7,6 @@ in
   imports = [
     ../modules/system/pipewire
     ../modules/system/printing
-    ../modules/desktop/hyprland
     ../modules/development/dotnet
     ../modules/theme/gtk
     ../modules/theme/qt

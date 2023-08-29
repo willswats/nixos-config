@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ../../modules/desktop/hyprland
     ../../modules/utilities/virt-manager
     ../../modules/system/opentabletdriver
     ../../modules/system/nvidia
