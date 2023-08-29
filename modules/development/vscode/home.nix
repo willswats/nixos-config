@@ -4,23 +4,28 @@
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
+    enableUpdateCheck = false;
+    enableExtensionUpdateCheck = false;
     userSettings = {
-      "workbench.colorTheme" = "Catppuccin Mocha";
+      # General
       "window.zoomLevel" = 1;
       "editor.formatOnSave" = true;
+      "security.workspace.trust.enabled" = false;
+      "window.openFilesInNewWindow" = "default";
+      "files.hotExit" = "off";
+      "workbench.startupEditor" = "none";
+      "window.restoreWindows" = "none";
+      # Catppuccin
+      "workbench.colorTheme" = "Catppuccin Mocha";
+      # Vim
       "vim.useCtrlKeys" = true;
-      "vim.useSystemClipboard" = false;
+      "vim.useSystemClipboard" = true;
       "vim.insertModeKeyBindings" = [
         {
           "before" = [ "j" "k" ];
           "after" = [ "<Esc>" ];
         }
       ];
-      "omnisharp.useModernNet" = false;
-      "omnisharp.path" = "${pkgs.omnisharp-roslyn}/bin/OmniSharp";
-      "omnisharp.sdkPath" = "${pkgs.dotnet-sdk}";
-      "omnisharp.dotnetPath" = "${pkgs.dotnet-sdk}/bin/dotnet";
-      "omnisharp.monoPath" = "${pkgs.mono}/bin/mono";
     };
     keybindings = [
       {
@@ -37,7 +42,6 @@
     extensions = with pkgs.vscode-extensions; [
       catppuccin.catppuccin-vsc
       vscodevim.vim
-      ms-dotnettools.csharp
     ];
   };
 }
