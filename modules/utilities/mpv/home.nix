@@ -22,8 +22,6 @@
       # uosc
       MBTN_RIGHT = "script-binding uosc/menu";
       i = "script-binding uosc/items"; # Opens playlist menu when playlist exists, or open-file menu otherwise 
-      j = "script-binding uosc/next";
-      k = "script-binding uosc/prev";
       s = "script-binding uosc/shuffle; script-message-to uosc flash-elements controls";
     };
     scripts = with pkgs; [
