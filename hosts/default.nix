@@ -5,6 +5,7 @@ let
 in
 {
   imports = [
+    ../modules/system/sddm
     ../modules/system/pipewire
     ../modules/system/printing
     ../modules/development/dotnet

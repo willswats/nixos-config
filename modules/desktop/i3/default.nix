@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ../all/sddm
     ./redshift
   ];
 

@@ -19,6 +19,15 @@
         user = "will";
         homeDir = "/home/${user}";
         directories = "~/Downloads ~/Pictures ~/Drive ~/Code";
+        bookmarks =
+          let
+            bookmarkStart = "file://${homeDir}/";
+          in
+          [
+            "${bookmarkStart}Downloads Downloads"
+            "${bookmarkStart}Pictures Pictures"
+            "${bookmarkStart}Code Code"
+          ];
         globals = {
           user = user;
           homeDir = homeDir;
@@ -83,15 +92,7 @@
                 left = "eDP-1";
               };
               directories = directories;
-              bookmarks =
-                let
-                  bookmarkStart = "file://${homeDir}/";
-                in
-                [
-                  "${bookmarkStart}Downloads Downloads"
-                  "${bookmarkStart}Pictures Pictures"
-                  "${bookmarkStart}Code Code"
-                ];
+              bookmarks = bookmarks;
             };
           in
           lib.nixosSystem {
@@ -119,24 +120,16 @@
             ];
           };
 
-        virtual =
+        virtual-desktop =
           let
             host = {
-              hostName = "${user}-virtual";
+              hostName = "${user}-virtual-desktop";
               monitors = {
                 center = "Virtual-1";
                 left = "Virtual-1";
               };
               directories = directories;
-              bookmarks =
-                let
-                  bookmarkStart = "file://${homeDir}/";
-                in
-                [
-                  "${bookmarkStart}Downloads Downloads"
-                  "${bookmarkStart}Pictures Pictures"
-                  "${bookmarkStart}Code Code"
-                ];
+              bookmarks = bookmarks;
             };
           in
           lib.nixosSystem {
@@ -146,7 +139,44 @@
             };
             modules = [
               ./hosts
-              ./hosts/virtual
+              ./hosts/virtual/desktop
+              home-manager.nixosModules.home-manager
+              {
+                home-manager = {
+                  useGlobalPkgs = true;
+                  useUserPackages = true;
+                  extraSpecialArgs = {
+                    inherit globals host;
+                  };
+                  users.will.imports = [
+                    ./hosts/virtual/home.nix
+                    nixvim.homeManagerModules.nixvim
+                  ];
+                };
+              }
+            ];
+          };
+
+        virtual-laptop =
+          let
+            host = {
+              hostName = "${user}-virtual-laptop";
+              monitors = {
+                center = "Virtual-1";
+                left = "Virtual-1";
+              };
+              directories = directories;
+              bookmarks = bookmarks;
+            };
+          in
+          lib.nixosSystem {
+            inherit system;
+            specialArgs = {
+              inherit globals host;
+            };
+            modules = [
+              ./hosts
+              ./hosts/virtual/laptop
               home-manager.nixosModules.home-manager
               {
                 home-manager = {
