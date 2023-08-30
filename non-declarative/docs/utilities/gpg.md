@@ -44,7 +44,7 @@ Run the following command with the GPG key real name appended:
 gpg --with-keygrip -k
 ```
 
-Add the keygrip to `~/.gnupg/sshcontrol`.
+Add the public keygrip to `~/.gnupg/sshcontrol`.
 
 ### Adding the SSH Key to GitHub
 
