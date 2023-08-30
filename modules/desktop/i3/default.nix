@@ -4,7 +4,6 @@
   imports = [
     ../all/sddm
     ./redshift
-    ./blueman
   ];
 
   services.xserver = {

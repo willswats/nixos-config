@@ -82,7 +82,7 @@ in {
           menu = menu;
           fonts = {
             names = [ "Hack Nerd Font" ];
-            size = host.font.i3Size;
+            size = 14.0;
           };
           window.commands = [{
             command = "border pixel 1";
@@ -233,6 +233,11 @@ in {
             {
               command = "${feh} --bg-fill ${image} --bg-fill ${image}";
               always = false;
+              notification = false;
+            }
+            {
+              command = "systemctl --user restart polybar";
+              always = true;
               notification = false;
             }
             {

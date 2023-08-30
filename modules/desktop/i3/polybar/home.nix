@@ -1,4 +1,4 @@
-{ pkgs, lib, host, ... }:
+{ pkgs, ... }:
 
 let
   # https://github.com/catppuccin/polybar
@@ -14,11 +14,6 @@ let
   pink = "#f5c2e7";
 in
 {
-  xsession.windowManager.i3.config.startup = [{
-    command = "systemctl --user restart polybar";
-    always = true;
-    notification = false;
-  }];
   services.polybar = {
     enable = true;
     package = pkgs.polybar.override {
@@ -47,7 +42,7 @@ in
         module-margin = "1";
 
         # font-N = <fontconfig pattern>;<vertical offset>
-        font-0 = "Hack Nerd Font:size=${lib.strings.floatToString host.font.polybarSize};2";
+        font-0 = "Hack Nerd Font:size=14;2";
 
         modules-left = "xworkspaces i3 xwindow";
         modules-right = "battery backlight pulseaudio date time";
