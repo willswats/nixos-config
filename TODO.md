@@ -35,5 +35,4 @@
 ## Other
 
 - [ ] Create PRs for all packages in pkgs that are not in nixpkgs
-- [ ] Replace `virtual-desktop` and `virtual-laptop` with `virtual` by naming partitions with specific names, allowing for only needing one `hardware-configuration.nix` for all virtual machines
 - [ ] Setup a Yubikey for GPG git commit signing
