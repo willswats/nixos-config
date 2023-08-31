@@ -96,7 +96,7 @@ rm -rf ./.git
 Run (replace `host` with your desired host):
 
 ```bash
-sudo nixos-rebuild switch --flake .#host
+sudo nixos-rebuild boot --flake .#host
 ```
 
 Reboot the system:
