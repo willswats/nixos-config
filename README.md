@@ -15,11 +15,9 @@ My NixOS config.
   - [Build the Config](#build-the-config)
 - [Post-installation](#post-installation)
   - [Add the nixos-unstable Channel](#add-the-nixos-unstable-channel)
-  - [Delete Bash History](#delete-bash-history)
-- [Non-Declarative Setups](#non-declarative-setups)
-  - [Utilities](#utilities)
-  - [Games](#games)
-  <!--toc:end-->
+  - [Delete Bash History (desktop and laptop)](#delete-bash-history-desktop-and-laptop)
+- [Non-Declarative Setups](#non-declarative-setups) - [Utilities](#utilities) - [Games](#games)
+<!--toc:end-->
 
 ## Installing NixOS
 
@@ -116,7 +114,7 @@ sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 sudo nix-channel --update
 ```
 
-### Delete Bash History
+### Delete Bash History (desktop and laptop)
 
 Delete `.bash_history` to ensure the Wi-Fi password is removed from it:
 
