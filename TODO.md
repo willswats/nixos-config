@@ -34,5 +34,4 @@
 
 ## Other
 
-- [ ] Create PRs for all packages in pkgs that are not in nixpkgs
 - [ ] Setup a Yubikey for GPG git commit signing
