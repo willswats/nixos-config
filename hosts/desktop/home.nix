@@ -15,6 +15,8 @@
   ];
 
   home.packages = with pkgs; [
+    # Utilities
+    mangohud
     # Games
     steam
     airshipper
