@@ -38,6 +38,7 @@
       trash-cli
       appimage-run
       # Development
+      python311
       nodePackages.pnpm
       # Utilities
       gnome.file-roller
