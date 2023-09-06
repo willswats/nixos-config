@@ -17,6 +17,7 @@ in
         omnisharp.enable = true;
         nil_ls.enable = true;
         lua-ls.enable = true;
+        pylsp.enable = true;
         bashls.enable = true;
         html.enable = true;
         cssls.enable = true;
