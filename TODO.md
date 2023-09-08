@@ -27,6 +27,10 @@
 
 - [ ] Overlay GZDoom to add an icon
 
+## OpenMW
+
+- [ ] Add nixpkgs openmw package - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/245433)
+
 ## Nvidia Issues
 
 - [ ] Plymouth `boot.initrd.systemd.enable` causing `Failed to execute /sbin/init` after entering password to unlock encryption on nvidia proprietary drivers
