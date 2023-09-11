@@ -169,24 +169,6 @@
             ];
           }
           {
-            name = "Education";
-            bookmarks = [
-              {
-                name = "University of Portsmouth Student System";
-                url = "https://student-system.port.ac.uk";
-              }
-              {
-                name = "Harvard Referencing";
-                url =
-                  "https://librarydevelopment.group.shef.ac.uk/referencing/harvard.html";
-              }
-              {
-                name = "Scribbr";
-                url = "https://www.scribbr.co.uk/referencing/generator/";
-              }
-            ];
-          }
-          {
             name = "Nix";
             bookmarks = [
               {
@@ -215,6 +197,33 @@
               {
                 name = "Hover";
                 url = "https://www.hover.com/";
+              }
+            ];
+          }
+          {
+            name = "Education";
+            bookmarks = [
+              {
+                name = "Harvard Referencing";
+                url =
+                  "https://librarydevelopment.group.shef.ac.uk/referencing/harvard.html";
+              }
+              {
+                name = "Scribbr";
+                url = "https://www.scribbr.co.uk/referencing/generator/";
+              }
+            ];
+          }
+          {
+            name = "University";
+            bookmarks = [
+              {
+                name = "Student System";
+                url = "https://student-system.port.ac.uk";
+              }
+              {
+                name = "Timetable";
+                url = "https://portal.myport.ac.uk/student/timetable";
               }
             ];
           }
