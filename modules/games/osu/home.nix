@@ -1,7 +1,9 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ osu-lazer-bin ];
+  home.packages = with pkgs; [
+    (callPackage ../../../pkgs/osu-lazer-bin { })
+  ];
 
   # Setup tablet
   home.file.".local/share/osu/input.json" = {
