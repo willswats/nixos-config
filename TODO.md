@@ -19,22 +19,17 @@
 
 - [ ] Add binding for selecting next and previous in MPV uosc playlist and file explorer
 
-## Mullvad VPN
-
-- [ ] Fix Mullvad GUI inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
-
-## GZDoom
-
-- [ ] Overlay GZDoom to add an icon
-
 ## OpenMW
 
 - [ ] Add nixpkgs openmw package - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/245433)
 
+## Mullvad VPN
+
+- [ ] Fix Mullvad GUI inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
+
 ## Nvidia Issues
 
 - [ ] Plymouth `boot.initrd.systemd.enable` causing `Failed to execute /sbin/init` after entering password to unlock encryption on nvidia proprietary drivers
-- [ ] Replace hyprshade with gammastep - must wait for Nvidia to implement GAMMA_LUT or switch to an AMD GPU
 
 ## Other
 
