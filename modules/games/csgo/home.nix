@@ -18,8 +18,7 @@
       bind v +voicerecord
 
       bind alt noclip
-      bind [ "sv_cheats 1; bot_kick; mp_warmup_end; mp_freezetime 0; mp_roundtime_defuse 60; sv_grenade_trajectory 1; sv_grenade_trajectory_time 10; sv_showimpacts 1; ammo_grenade_limit_total 5; sv_infinite_ammo 1;"
-      bind ] "mp_buy_anywhere 1; mp_maxmoney 50000; mp_startmoney 50000; mp_buytime 9999; mp_restartgame 1;"
+      bind / "exec nade"
 
       # Crosshair
       cl_crosshair_drawoutline "1"
@@ -66,5 +65,11 @@
       cl_radar_scale 0.25
 
       host_writeconfig
+    '';
+
+  home.file.".steam/steam/steamapps/common/Counter-Strike Global Offensive/csgo/cfg/nade.cfg".text =
+    ''
+      sv_cheats 1; bot_kick; mp_warmup_end; mp_freezetime 0; mp_roundtime_defuse 60; sv_grenade_trajectory 1; sv_grenade_trajectory_time 10; sv_showimpacts 1; ammo_grenade_limit_total 5; sv_infinite_ammo 1;
+      mp_buy_anywhere 1; mp_maxmoney 50000; mp_startmoney 50000; mp_buytime 9999; mp_restartgame 1;
     '';
 }
