@@ -3,7 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/desktop/hyprland
+    ../../modules/desktop/i3
     ../../modules/utilities/virt-manager
     ../../modules/system/plymouth
   ];

@@ -21,6 +21,7 @@ in {
 
   services = {
     picom.enable = true;
+    network-manager-applet.enable = true;
     screen-locker = {
       enable = true;
       lockCmd = lockCmd;
@@ -85,7 +86,7 @@ in {
             size = 14.0;
           };
           window.commands = [{
-            command = "border pixel 1";
+            command = "border pixel 2";
             criteria = { class = "^.*"; };
           }];
           gaps = { inner = 10; };
