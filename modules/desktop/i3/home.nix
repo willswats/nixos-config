@@ -21,6 +21,7 @@ in {
 
   services = {
     picom.enable = true;
+    network-manager-applet.enable = true;
     screen-locker = {
       enable = true;
       lockCmd = lockCmd;
