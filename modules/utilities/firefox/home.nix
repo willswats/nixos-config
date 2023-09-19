@@ -187,16 +187,19 @@
             ];
           }
           {
-            name = "Hosting";
+            name = "University";
             bookmarks = [
-
               {
-                name = "Vercel";
-                url = "https://vercel.com/";
+                name = "Student System";
+                url = "https://student-system.port.ac.uk";
               }
               {
-                name = "Hover";
-                url = "https://www.hover.com/";
+                name = "Timetable";
+                url = "https://portal.myport.ac.uk/student/timetable";
+              }
+              {
+                name = "Moodle";
+                url = "https://moodle.port.ac.uk";
               }
             ];
           }
@@ -215,15 +218,16 @@
             ];
           }
           {
-            name = "University";
+            name = "Hosting";
             bookmarks = [
+
               {
-                name = "Student System";
-                url = "https://student-system.port.ac.uk";
+                name = "Vercel";
+                url = "https://vercel.com/";
               }
               {
-                name = "Timetable";
-                url = "https://portal.myport.ac.uk/student/timetable";
+                name = "Hover";
+                url = "https://www.hover.com/";
               }
             ];
           }
