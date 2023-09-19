@@ -18,6 +18,7 @@ in
   home.packages = with pkgs; [
     wl-clipboard
     pavucontrol
+    networkmanagerapplet
     playerctl
     brightnessctl
     lxde.lxsession
@@ -48,6 +49,7 @@ in
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       hyprpaper = "${pkgs.hyprpaper}/bin/hyprpaper";
       xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
+      nm-applet = "${pkgs.networkmanagerapplet}/bin/nm-applet";
       rclone = "${pkgs.rclone}/bin/rclone";
       hyprctl = "${pkgs.hyprland}/bin/hyprctl";
 
@@ -141,6 +143,7 @@ in
           "${playerctld}"
           "${lxpolkit}"
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
+          "${nm-applet} --indicator"
           "${rclone} mount --vfs-cache-mode writes google-drive: ~/Drive"
           "mkdir -p ${directories}"
         ];
