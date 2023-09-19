@@ -10,7 +10,6 @@
     ../../modules/games/osu/home.nix
     ../../modules/games/doom/home.nix
     ../../modules/games/theforceengine/home.nix
-    ../../modules/games/openmw/home.nix
     ../../modules/games/ishiiruka/home.nix
     ../../modules/games/retroarch/home.nix
   ];
