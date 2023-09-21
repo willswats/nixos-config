@@ -25,7 +25,7 @@
       enable = true;
       toDo = {
         symbols = [ " " "x" " " ];
-        updateParents = true;
+        updateParents = false;
         notStarted = " ";
         inProgress = " ";
         complete = "x";
