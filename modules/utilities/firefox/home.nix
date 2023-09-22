@@ -201,6 +201,10 @@
                 name = "Moodle";
                 url = "https://moodle.port.ac.uk";
               }
+              {
+                name = "Virtual Machine";
+                url = "https://uop-1-server-per-student-prod.appspot.com/instance/get";
+              }
             ];
           }
           {
