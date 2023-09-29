@@ -42,6 +42,7 @@
       python311
       nodePackages.pnpm
       # Utilities
+      brave
       gnome.file-roller
       qview
       obs-studio
