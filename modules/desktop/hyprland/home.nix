@@ -29,7 +29,7 @@ in
       enable = true;
       systemdTarget = "hyprland-session.target";
       timeouts = [{
-        timeout = 600; # Seconds
+        timeout = 3600; # 3600 seconds == 1 hour
         command = swaylock;
       }];
       events = [
