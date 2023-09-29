@@ -9,10 +9,10 @@
     ../modules/development/git/home.nix
     ../modules/development/gpg/home.nix
     ../modules/development/neovim/home.nix
+    ../modules/development/vscode/home.nix
     ../modules/development/lazygit/home.nix
     ../modules/development/rustup/home.nix
     ../modules/development/dotnet/home.nix
-    ../modules/development/unity/home.nix
     ../modules/utilities/firefox/home.nix
     ../modules/utilities/mpv/home.nix
     ../modules/utilities/spotify-player/home.nix
