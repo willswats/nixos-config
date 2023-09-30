@@ -62,6 +62,8 @@
       "text/html" = [ "nvim.desktop" ];
       "text/css" = [ "nvim.desktop" ];
       "text/vnd.trolltech.linguist" = [ "nvim.desktop" ]; # .ts
+      # PCmanFm
+      "inode/directory" = [ "pcmanfm.desktop" ];
       # qView
       "image/png" = [ "com.interversehq.qView.desktop" ];
       "image/jpg" = [ "com.interversehq.qView.desktop" ];
