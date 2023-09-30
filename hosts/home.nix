@@ -42,7 +42,6 @@
       python311
       nodePackages.pnpm
       # Utilities
-      brave
       gnome.file-roller
       qview
       obs-studio
@@ -53,5 +52,19 @@
       rclone-browser
       popsicle
     ];
+  };
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      # Neovim
+      "text/plain" = [ "nvim.desktop" ];
+      "text/html" = [ "nvim.desktop" ];
+      "text/css" = [ "nvim.desktop" ];
+      "text/vnd.trolltech.linguist" = [ "nvim.desktop" ]; # .ts
+      # qView
+      "image/png" = [ "com.interversehq.qView.desktop" ];
+      "image/jpg" = [ "com.interversehq.qView.desktop" ];
+    };
   };
 }
