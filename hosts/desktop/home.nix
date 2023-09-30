@@ -41,9 +41,10 @@
           "WLR_NO_HARDWARE_CURSORS,1"
         ];
 
+        # bitdepth 10 fixes https://github.com/hyprwm/xdg-desktop-portal-hyprland/issues/99
         monitor = [
-          "${monitorCenter}, 1920x1080@144, 1080x0, 1"
-          "${monitorLeft}, 1920x1080@144, 0x0, 1, transform, 3"
+          "${monitorCenter}, 1920x1080@144, 1080x0, 1, bitdepth,10"
+          "${monitorLeft}, 1920x1080@144, 0x0, 1, transform, 3, bitdepth,10"
         ];
       };
     };
