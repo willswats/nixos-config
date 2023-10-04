@@ -51,6 +51,7 @@
       rclone
       rclone-browser
       popsicle
+      zotero
     ];
   };
 
