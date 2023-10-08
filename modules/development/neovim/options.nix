@@ -38,7 +38,7 @@
       wrap = false; # Display lines as one long line
       linebreak = false; # Companion to wrap, don't split words
       spell = false; # Spell check
-      spelllang = "en"; # Spell check language
+      spelllang = "en_gb"; # Spell check language
       scrolloff =
         8; # Minimal number of screen lines to keep above and below the cursor
       sidescrolloff =
