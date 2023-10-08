@@ -39,7 +39,7 @@
       trash-cli
       appimage-run
       # Development
-      python311
+      python311Full
       nodePackages.pnpm
       # Utilities
       gnome.file-roller
@@ -55,19 +55,22 @@
     ];
   };
 
+  # Use `xdg-mime query filetype` to find a file's MIME type
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
       # Neovim
-      "text/plain" = [ "nvim.desktop" ];
-      "text/html" = [ "nvim.desktop" ];
-      "text/css" = [ "nvim.desktop" ];
-      "text/vnd.trolltech.linguist" = [ "nvim.desktop" ]; # .ts
+      "text/plain" = [ "nvim.desktop" ]; # plain text
+      "text/html" = [ "nvim.desktop" ]; # html
+      "text/css" = [ "nvim.desktop" ]; # css
+      "text/vnd.trolltech.linguist" = [ "nvim.desktop" ]; # ts
       # PCmanFm
-      "inode/directory" = [ "pcmanfm.desktop" ];
+      "inode/directory" = [ "pcmanfm.desktop" ]; # Directories
       # qView
-      "image/png" = [ "com.interversehq.qView.desktop" ];
-      "image/jpg" = [ "com.interversehq.qView.desktop" ];
+      "image/png" = [ "com.interversehq.qView.desktop" ]; # jpg
+      "image/jpg" = [ "com.interversehq.qView.desktop" ]; # png
+      # Firefox
+      "application/pdf" = [ "firefox.desktop" ]; # pdf
     };
   };
 }
