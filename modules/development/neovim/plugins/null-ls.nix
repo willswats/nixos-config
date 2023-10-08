@@ -23,8 +23,8 @@
         { 
           ${formatting}.prettier,
           ${formatting}.nixpkgs_fmt,
-          ${formatting}.black,
           ${diagnostics}.flake8,
+          ${formatting}.black.with({ extra_args = { "--preview", "-l", "80" } }),
           ${diagnostics}.markdownlint.with({ extra_args = { "--disable", "MD013" } })
         }
       '');
