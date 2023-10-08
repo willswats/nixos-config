@@ -17,12 +17,12 @@
     ./indent-blankline.nix
     ./mkdnflow.nix
     ./multicursors.nix
+    ./markdown-preview.nix
     ./dap.nix
   ];
 
   programs.nixvim.plugins = {
     treesitter.enable = true;
-    markdown-preview.enable = true;
     which-key.enable = true;
     comment-nvim.enable = true;
     nvim-autopairs.enable = true;
