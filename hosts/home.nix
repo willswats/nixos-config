@@ -56,7 +56,7 @@
   };
 
   # Use `xdg-mime query filetype` to find a file's MIME type
-  # Use `nix-store --query $(which firefox)` (replacing `firefox`)to find the location of the .destkop file and it's name
+  # Use `nix-store --query $(which firefox)` (replacing `firefox`) to find the location of the `.destkop` file and it's name
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
