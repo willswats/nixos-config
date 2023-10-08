@@ -11,6 +11,7 @@
 - [BetterTTV](https://addons.mozilla.org/en-US/firefox/addon/betterttv)
 - [Mal Sync](https://addons.mozilla.org/en-US/firefox/addon/mal-sync)
 - [TWP - Translate Web Pages](https://addons.mozilla.org/en-US/firefox/addon/traduzir-paginas-web)
+- [Zotero Connector](https://www.zotero.org/download/connectors)
 
 ## Extension Settings
 
