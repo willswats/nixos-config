@@ -3,6 +3,7 @@
 ## Neovim
 
 - [ ] Finish dap setup
+- [ ] Fix `smartindent` being unable to indent comments
 - [ ] Set Neovim `desc` for nested leader keymaps
 
 ## sddm
