@@ -25,6 +25,8 @@
           "<C-Left>".action = ":vertical resize -2${cr}";
           "<C-Right>".action = ":vertical resize +2${cr}";
 
+          #test
+          # Write and write format
           "<leader>w" = {
             action = "${cmd}w!${cr}";
             desc = "Write format";
@@ -47,6 +49,11 @@
           "<leader>h" = {
             action = "${cmd}nohlsearch${cr}";
             desc = "No highlight";
+          };
+
+          # Remove man bind
+          "K" = {
+            action = "<Nop>";
           };
         };
         insert = {
