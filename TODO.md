@@ -3,7 +3,6 @@
 ## Neovim
 
 - [ ] Finish dap setup
-- [ ] Fix `smartindent` being unable to indent comments
 - [ ] Set Neovim `desc` for nested leader keymaps
 
 ## sddm
@@ -27,10 +26,6 @@
 ## Mullvad VPN
 
 - [ ] Fix Mullvad GUI inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
-
-## Nvidia Issues
-
-- [ ] Plymouth `boot.initrd.systemd.enable` causing `Failed to execute /sbin/init` after entering password to unlock encryption on nvidia proprietary drivers
 
 ## Other
 
