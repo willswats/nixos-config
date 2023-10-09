@@ -12,7 +12,7 @@ in
     ./rofi/home.nix
     ./mako/home.nix
     ./grim/home.nix
-    ./hyprshade/home.nix
+    ./gammastep/home.nix
   ];
 
   home.packages = with pkgs; [

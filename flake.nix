@@ -41,8 +41,8 @@
             host = {
               hostName = "${user}-desktop";
               monitors = {
-                center = "DP-2";
-                left = "DP-1";
+                center = "DP-1";
+                left = "DP-2";
               };
               directories = "${directories} ~/Games/ROMs ~/Games/Doom/WADs ~/Games/Doom/pk3 ~/Games/TheForceEngine/DarkForces";
               bookmarks =

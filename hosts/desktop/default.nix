@@ -6,7 +6,7 @@
     ../../modules/desktop/hyprland
     ../../modules/utilities/virt-manager
     ../../modules/system/opentabletdriver
-    ../../modules/system/nvidia
+    ../../modules/system/amd
   ];
 
   boot = {
@@ -23,6 +23,4 @@
       efi.canTouchEfiVariables = true;
     };
   };
-
-  programs.hyprland.enableNvidiaPatches = true;
 }

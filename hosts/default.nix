@@ -6,6 +6,7 @@ in
 {
   imports = [
     ../modules/system/sddm
+    ../modules/system/plymouth
     ../modules/system/pipewire
     ../modules/system/printing
     ../modules/development/dotnet
