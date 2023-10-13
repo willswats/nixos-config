@@ -35,16 +35,16 @@
       mm_dedicated_search_maxping 100
 
       # Hud
-      cl_hud_color 9
+      cl_hud_color 5
 
       # Item
-      cl_sniper_auto_rezoom false
       viewmodel_presetpos 3 # Viewmodel Position Classic
 
       # Radar
       cl_radar_scale 0.25
 
       # Crosshair
+      cl_crosshair_recoil true
       cl_crosshair_drawoutline 1
       cl_crosshair_dynamic_maxdist_splitratio 0.35
       cl_crosshair_dynamic_splitalpha_innermod 1
@@ -57,9 +57,9 @@
       cl_crosshair_t 0
       cl_crosshairalpha 255
       cl_crosshaircolor 5
-      cl_crosshaircolor_b 0
-      cl_crosshaircolor_g 255
-      cl_crosshaircolor_r 0
+      cl_crosshaircolor_r 255
+      cl_crosshaircolor_g 0
+      cl_crosshaircolor_b 255
       cl_crosshairdot 0
       cl_crosshairgap -2
       cl_crosshairgap_useweaponvalue 0
