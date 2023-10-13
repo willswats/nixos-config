@@ -44,7 +44,6 @@
       cl_radar_scale 0.25
 
       # Crosshair
-      cl_crosshair_recoil true
       cl_crosshair_drawoutline 1
       cl_crosshair_dynamic_maxdist_splitratio 0.35
       cl_crosshair_dynamic_splitalpha_innermod 1
