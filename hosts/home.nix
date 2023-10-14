@@ -46,6 +46,7 @@
       qview
       obs-studio
       gimp
+      krita
       shotcut
       fragments
       rclone
