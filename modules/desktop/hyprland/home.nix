@@ -60,10 +60,11 @@ in
       nvim = "nvim"; # This is broken: "${pkgs.neovim}/bin/nvim";
       btm = "${pkgs.bottom}/bin/btm";
       spotify_player = "${pkgs.spotify-player}/bin/spotify_player";
-      hyprshade = "hyprshade"; # Not in pkgs
+      hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
       fish = "${pkgs.fish}/bin/fish";
       grim = "${pkgs.grim}/bin/grim";
       slurp = "${pkgs.slurp}/bin/slurp";
+      screenshotCommand = "${fish} -c '${grim} -g (${slurp})'";
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
       playerctld = "${pkgs.playerctl}/bin/playerctld";
@@ -159,7 +160,7 @@ in
           "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
           "$mod, s, exec, ${alacritty} -e ${btm} -b" # System monitor
           "$mod, m, exec, ${alacritty} -e ${spotify_player}" # Music player
-          ", print, exec, ${fish} -c '${grim} -g (${slurp})'" # Screenshot utility
+          ", print, exec, ${hyprshade} off; ${screenshotCommand} ;${hyprshade} auto" # Screenshot utility
           "$mod, bracketright, exec, ${hyprshade} on blue-light-filter"
           "$mod, bracketleft, exec, ${hyprshade} off"
           "$mod SHIFT, semicolon, exec, ${swaylock}"
