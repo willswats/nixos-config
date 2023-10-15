@@ -83,8 +83,8 @@
                 url = "https://aniwave.to/";
               }
               {
-                name = "MangaDex";
-                url = "https://mangadex.org/";
+                name = "MangaSee";
+                url = "https://mangasee123.com";
               }
               {
                 name = "movie-web";
