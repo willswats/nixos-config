@@ -2,52 +2,84 @@
 
 {
   programs.nixvim = {
-    maps =
+    keymaps =
       let
         cr = "<CR>";
         cmd = "<CMD>";
+
+        normal =
+          let
+            mode = "n";
+          in
+          [
+            {
+              inherit mode;
+              key = "<leader>t1";
+              action = "${cmd}ToggleTerm 1${cr}";
+              options.desc = "1";
+            }
+            {
+              inherit mode;
+              key = "<leader>t2";
+              action = "${cmd}ToggleTerm 2${cr}";
+              options.desc = "2";
+            }
+            {
+              inherit mode;
+              key = "<leader>t3";
+              action = "${cmd}ToggleTerm 3${cr}";
+              options.desc = "3";
+            }
+            {
+              inherit mode;
+              key = "<leader>t4";
+              action = "${cmd}ToggleTerm 4${cr}";
+              options.desc = "4";
+            }
+            {
+              inherit mode;
+              key = "<leader>t5";
+              action = "${cmd}ToggleTerm 5${cr}";
+              options.desc = "5";
+            }
+            {
+              inherit mode;
+              key = "<leader>t6";
+              action = "${cmd}ToggleTerm 6${cr}";
+              options.desc = "6";
+            }
+            {
+              inherit mode;
+              key = "<leader>t7";
+              action = "${cmd}ToggleTerm 7${cr}";
+              options.desc = "7";
+            }
+            {
+              inherit mode;
+              key = "<leader>t8";
+              action = "${cmd}ToggleTerm 8${cr}";
+              options.desc = "8";
+            }
+            {
+              inherit mode;
+              key = "<leader>t9";
+              action = "${cmd}ToggleTerm 9${cr}";
+              options.desc = "9";
+            }
+            {
+              inherit mode;
+              key = "<leader>tg";
+              action = "${cmd}lua LAZYGIT_TOGGLE()${cr}";
+              options.desc = "Lazygit";
+            }
+          ];
       in
-      config.nixvim.helpers.mkMaps { silent = true; } {
-        normal = {
-          "<leader>t1" = {
-            action = "${cmd}ToggleTerm 1${cr}";
-            desc = "1";
-          };
-          "<leader>t2" = {
-            action = "${cmd}ToggleTerm 2${cr}";
-            desc = "2";
-          };
-          "<leader>t3" = {
-            action = "${cmd}ToggleTerm 3${cr}";
-            desc = "3";
-          };
-          "<leader>t4" = {
-            action = "${cmd}ToggleTerm 4${cr}";
-            desc = "4";
-          };
-          "<leader>t5" = {
-            action = "${cmd}ToggleTerm 5${cr}";
-            desc = "5";
-          };
-          "<leader>t6" = {
-            action = "${cmd}ToggleTerm 6${cr}";
-            desc = "6";
-          };
-          "<leader>t7" = {
-            action = "${cmd}ToggleTerm 7${cr}";
-            desc = "7";
-          };
-          "<leader>t8" = {
-            action = "${cmd}ToggleTerm 8${cr}";
-            desc = "8";
-          };
-          "<leader>t9" = {
-            action = "${cmd}ToggleTerm 9${cr}";
-            desc = "9";
-          };
-          "<leader>tg" = { action = "${cmd}lua LAZYGIT_TOGGLE()${cr}"; desc = "Lazygit"; };
-        };
-      };
+      config.nixvim.helpers.keymaps.mkKeymaps
+        {
+          options.silent = true;
+        }
+        (normal);
+
     plugins.toggleterm = {
       enable = true;
       autochdir =

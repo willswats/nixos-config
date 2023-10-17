@@ -2,25 +2,41 @@
 
 {
   programs.nixvim = {
-    maps =
+    keymaps =
       let
         cr = "<CR>";
         cmd = "<CMD>";
+
+        normal =
+          let
+            mode = "n";
+          in
+          [
+            {
+              inherit mode;
+              key = "<leader>m";
+              action = "${cmd}MCstart${cr}";
+              options.desc = "Multicursor";
+            }
+          ];
+        visual =
+          let
+            mode = "n";
+          in
+          [
+            {
+              inherit mode;
+              key = "<leader>m";
+              action = "${cmd}MCstart${cr}";
+              options.desc = "Multicursor";
+            }
+          ];
       in
-      config.nixvim.helpers.mkMaps { silent = true; } {
-        normal = {
-          "<leader>m" = {
-            action = "${cmd}MCstart${cr}";
-            desc = "Multicursor";
-          };
-        };
-        visual = {
-          "<leader>m" = {
-            action = "${cmd}MCstart${cr}";
-            desc = "Multicursor";
-          };
-        };
-      };
+      config.nixvim.helpers.keymaps.mkKeymaps
+        {
+          options.silent = true;
+        }
+        (normal ++ visual);
     plugins = {
       multicursors.enable = true;
     };

@@ -8,19 +8,29 @@ in {
     ];
 
   programs.nixvim = {
-    maps =
+    keymaps =
       let
         cr = "<CR>";
         cmd = "<CMD>";
+
+        normal =
+          let mode = "n";
+          in
+          [
+            {
+              inherit mode;
+              key = "<leader>e";
+              action = "${cmd}NvimTreeToggle${cr}";
+              options.desc = "Explorer";
+            }
+          ];
       in
-      config.nixvim.helpers.mkMaps { silent = true; } {
-        normal = {
-          "<leader>e" = {
-            action = "${cmd}NvimTreeToggle${cr}";
-            desc = "Explorer";
-          };
-        };
-      };
+      config.nixvim.helpers.keymaps.mkKeymaps
+        {
+          options.silent = true;
+        }
+        (normal);
+
     plugins.nvim-tree = {
       enable = true;
       disableNetrw = true; # Disable default neovim explorer
