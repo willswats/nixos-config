@@ -7,7 +7,6 @@
 - [Bitwarden](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager)
 - [Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader)
 - [Tridactyl](https://addons.mozilla.org/en-US/firefox/addon/tridactyl-vim/)
-- [SponsorBlock](https://addons.mozilla.org/en-US/firefox/addon/sponsorblock)
 - [BetterTTV](https://addons.mozilla.org/en-US/firefox/addon/betterttv)
 - [Mal Sync](https://addons.mozilla.org/en-US/firefox/addon/mal-sync)
 - [TWP - Translate Web Pages](https://addons.mozilla.org/en-US/firefox/addon/traduzir-paginas-web)
