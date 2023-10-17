@@ -9,11 +9,11 @@
 
 - [ ] Set correct monitor resolution and refresh rate
 - [ ] Add cursor theme
-- [ ] Add nixpkgs catppuccin-sddm package - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/240990)
+- [ ] Add nixpkgs catppuccin-sddm package - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/255808)
 
 ## Firefox
 
-- [ ] Install firefox extensions from NUR - [example](https://github.com/rhoriguchi/nixos-setup/blob/master/flake.nix)
+- [ ] Install Firefox extensions from NUR - [example](https://github.com/rhoriguchi/nixos-setup/blob/master/flake.nix)
 
 ## MPV
 
