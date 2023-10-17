@@ -7,9 +7,10 @@
 - [Bitwarden](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager)
 - [Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader)
 - [Tridactyl](https://addons.mozilla.org/en-US/firefox/addon/tridactyl-vim/)
-- [BetterTTV](https://addons.mozilla.org/en-US/firefox/addon/betterttv)
 - [Mal Sync](https://addons.mozilla.org/en-US/firefox/addon/mal-sync)
 - [TWP - Translate Web Pages](https://addons.mozilla.org/en-US/firefox/addon/traduzir-paginas-web)
+- [BetterTTV](https://addons.mozilla.org/en-US/firefox/addon/betterttv)
+- [TTV LOL PRO](https://addons.mozilla.org/en-US/firefox/addon/ttv-lol-pro/)
 - [Zotero Connector](https://www.zotero.org/download/connectors)
 
 ## Extension Settings
