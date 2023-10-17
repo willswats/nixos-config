@@ -16,7 +16,12 @@
         };
       };
     plugins = {
-      markdown-preview.enable = true;
+      markdown-preview = {
+        enable = true;
+        previewOptions = {
+          disable_sync_scroll = true;
+        };
+      };
     };
   };
 }
