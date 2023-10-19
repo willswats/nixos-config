@@ -9,6 +9,7 @@
 - [Tridactyl](https://addons.mozilla.org/en-US/firefox/addon/tridactyl-vim/)
 - [Mal Sync](https://addons.mozilla.org/en-US/firefox/addon/mal-sync)
 - [TWP - Translate Web Pages](https://addons.mozilla.org/en-US/firefox/addon/traduzir-paginas-web)
+- [SponsorBlock](https://addons.mozilla.org/en-US/firefox/addon/sponsorblock)
 - [BetterTTV](https://addons.mozilla.org/en-US/firefox/addon/betterttv)
 - [TTV LOL PRO](https://addons.mozilla.org/en-US/firefox/addon/ttv-lol-pro/)
 - [Zotero Connector](https://www.zotero.org/download/connectors)

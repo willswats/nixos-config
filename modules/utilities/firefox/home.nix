@@ -67,8 +67,8 @@
             name = "Media";
             bookmarks = [
               {
-                name = "Piped";
-                url = "https://piped.video/feed";
+                name = "YouTube";
+                url = "https://www.youtube.com/feed/subscriptions";
               }
               {
                 name = "Twitch";
