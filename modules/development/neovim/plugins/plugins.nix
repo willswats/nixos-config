@@ -16,7 +16,7 @@
     ./illuminate.nix
     ./indent-blankline.nix
     ./mkdnflow.nix
-    ./multicursors.nix
+    ./vim-visual-multi.nix
     ./markdown-preview.nix
     ./dap.nix
   ];
