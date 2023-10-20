@@ -289,6 +289,7 @@
         "general.autoScroll" = true; # Enable auto scroll
         "accessibility.typeaheadfind.enablesound" =
           false; # Disable sound effect on failed "Find in page"
+        "layout.css.has-selector.enabled" = true; # Required by Enhancer for YouTube's "Hide Shorts" setting
       };
     };
   };

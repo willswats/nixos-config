@@ -9,6 +9,7 @@
 - [Tridactyl](https://addons.mozilla.org/en-US/firefox/addon/tridactyl-vim/)
 - [Mal Sync](https://addons.mozilla.org/en-US/firefox/addon/mal-sync)
 - [TWP - Translate Web Pages](https://addons.mozilla.org/en-US/firefox/addon/traduzir-paginas-web)
+- [Enhancer for YouTube](https://addons.mozilla.org/en-US/firefox/addon/enhancer-for-youtube)
 - [SponsorBlock](https://addons.mozilla.org/en-US/firefox/addon/sponsorblock)
 - [BetterTTV](https://addons.mozilla.org/en-US/firefox/addon/betterttv)
 - [TTV LOL PRO](https://addons.mozilla.org/en-US/firefox/addon/ttv-lol-pro/)
@@ -33,3 +34,11 @@
 
 - Notifications (Anime): Disabled
 - Notifications (Manga): Disabled
+
+### Enhancer for YouTube
+
+- Import the [settings file](./enhancer-for-youtube.json).
+
+### BetterTTV
+
+- Import the [settings file](./bttv_settings.backup).
