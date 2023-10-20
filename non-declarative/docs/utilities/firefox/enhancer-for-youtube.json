@@ -22,7 +22,7 @@
     "cinemamode": false,
     "cinemamodewideplayer": true,
     "controlbar": {
-      "active": true,
+      "active": false,
       "autohide": false,
       "centered": true,
       "position": "absolute"
