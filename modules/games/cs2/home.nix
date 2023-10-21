@@ -35,7 +35,7 @@
       mm_dedicated_search_maxping 100
 
       # Hud
-      cl_hud_color 5
+      cl_hud_color 9
 
       # Item
       viewmodel_presetpos 3 # Viewmodel Position Classic
@@ -56,9 +56,9 @@
       cl_crosshair_t 0
       cl_crosshairalpha 255
       cl_crosshaircolor 5
-      cl_crosshaircolor_r 255
-      cl_crosshaircolor_g 0
-      cl_crosshaircolor_b 255
+      cl_crosshaircolor_r 0
+      cl_crosshaircolor_g 255
+      cl_crosshaircolor_b 0
       cl_crosshairdot 0
       cl_crosshairgap -2
       cl_crosshairgap_useweaponvalue 0
