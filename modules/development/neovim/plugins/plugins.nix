@@ -5,7 +5,7 @@
     ./colorscheme.nix
     ./lsp.nix
     ./nvim-cmp.nix
-    ./null-ls.nix
+    ./none-ls.nix
     ./nvim-tree.nix
     ./bufferline.nix
     ./lualine.nix

@@ -9,7 +9,7 @@
     nodePackages.markdownlint-cli # Markdown linter
   ];
 
-  programs.nixvim.plugins.null-ls = {
+  programs.nixvim.plugins.none-ls = {
     enable = true;
     # Servers are defined in `extraOptions.sources`, because `diagnostics.markdownlint` does not exist in the null-ls module
     # https://github.com/nix-community/nixvim/issues/97
