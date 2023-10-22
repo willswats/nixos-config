@@ -2,19 +2,30 @@
 
 {
   programs.nixvim = {
-    maps =
+    keymaps =
       let
         cr = "<CR>";
         cmd = "<CMD>";
+
+        normal =
+          let
+            mode = "n";
+          in
+          [
+            {
+              inherit mode;
+              key = "<leader>p";
+              action = "${cmd}MarkdownPreview${cr}";
+              options.desc = "Markdown preview";
+            }
+          ];
       in
-      config.nixvim.helpers.mkMaps { silent = true; } {
-        normal = {
-          "<leader>p" = {
-            action = "${cmd}MarkdownPreview${cr}";
-            desc = "Markdown preview";
-          };
-        };
-      };
+      config.nixvim.helpers.keymaps.mkKeymaps
+        {
+          options.silent = true;
+        }
+        (normal);
+
     plugins = {
       markdown-preview = {
         enable = true;

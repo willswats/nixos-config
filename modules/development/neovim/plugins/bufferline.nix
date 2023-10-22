@@ -3,27 +3,56 @@
 let icons = import ../icons.nix;
 in {
   programs.nixvim = {
-    maps =
+    keymaps =
       let
         cr = "<CR>";
         cmd = "<CMD>";
+
+        normal =
+          let
+            mode = "n";
+          in
+          [
+            {
+              inherit mode;
+              key = "<S-h>";
+              action = "${cmd}BufferLineCyclePrev${cr}";
+            }
+            {
+              inherit mode;
+              key = "<S-l>";
+              action = "${cmd}BufferLineCycleNext${cr}";
+            }
+            {
+              inherit mode;
+              key = "<A-l>";
+              action = "${cmd}BufferLineMoveNext${cr}";
+            }
+            {
+              inherit mode;
+              key = "<A-h>";
+              action = "${cmd}BufferLineMovePrev${cr}";
+            }
+            {
+              inherit mode;
+              key = "<leader>bh";
+              action = "${cmd}BufferLineCloseLeft${cr}";
+              options.desc = "Delete left";
+            }
+            {
+              inherit mode;
+              key = "<leader>bl";
+              action = "${cmd}BufferLineCloseRight${cr}";
+              options.desc = "Delete right";
+            }
+          ];
       in
-      config.nixvim.helpers.mkMaps { silent = true; } {
-        normal = {
-          "<S-l>".action = "${cmd}BufferLineCycleNext${cr}";
-          "<S-h>".action = "${cmd}BufferLineCyclePrev${cr}";
-          "<A-l>".action = "${cmd}BufferLineMoveNext${cr}";
-          "<A-h>".action = "${cmd}BufferLineMovePrev${cr}";
-          "<leader>bh" = {
-            action = "${cmd}BufferLineCloseLeft${cr}";
-            desc = "Delete left";
-          };
-          "<leader>bl" = {
-            action = "${cmd}BufferLineCloseRight${cr}";
-            desc = "Delete right";
-          };
-        };
-      };
+      config.nixvim.helpers.keymaps.mkKeymaps
+        {
+          options.silent = true;
+        }
+        (normal);
+
     plugins.bufferline = {
       enable = true;
       closeCommand = "confirm bdelete %d";

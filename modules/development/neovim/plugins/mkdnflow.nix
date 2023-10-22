@@ -2,25 +2,44 @@
 
 {
   programs.nixvim = {
-    maps =
+    keymaps =
       let
         cr = "<CR>";
         cmd = "<CMD>";
+
+        normal =
+          let
+            mode = "n";
+          in
+          [
+            {
+              inherit mode;
+              key = "<leader>c";
+              action = "${cmd}MkdnToggleToDo${cr}";
+              options.desc = "Checkbox toggle";
+            }
+          ];
+
+        visual =
+
+          let
+            mode = "v";
+          in
+          [
+            {
+              inherit mode;
+              key = "<leader>c";
+              action = "${cmd}MkdnToggleToDo${cr}";
+              options.desc = "Checkbox toggle";
+            }
+          ];
       in
-      config.nixvim.helpers.mkMaps { silent = true; } {
-        normal = {
-          "<leader>c" = {
-            action = "${cmd}MkdnToggleToDo${cr}";
-            desc = "Checkbox toggle";
-          };
-        };
-        visual = {
-          "<leader>c" = {
-            action = "${cmd}MkdnToggleToDo${cr}";
-            desc = "Checkbox toggle";
-          };
-        };
-      };
+      config.nixvim.helpers.keymaps.mkKeymaps
+        {
+          options.silent = true;
+        }
+        (normal ++ visual);
+
     plugins.mkdnflow = {
       enable = true;
       toDo = {
