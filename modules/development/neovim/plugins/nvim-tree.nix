@@ -47,6 +47,7 @@ in {
         updateRoot = true; # Update the root directory of the tree if the file is not under current root directory
       };
       trash.cmd = "trash"; # The command used to trash items
+      git.ignore = false;
       # Set as floating
       view = {
         float = {
