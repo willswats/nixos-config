@@ -27,5 +27,6 @@
     comment-nvim.enable = true;
     nvim-autopairs.enable = true;
     ts-autotag.enable = true;
+    nvim-colorizer.enable = true;
   };
 }
