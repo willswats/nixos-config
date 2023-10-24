@@ -41,6 +41,7 @@
       # Development
       python311Full
       nodePackages.pnpm
+      nodePackages.live-server
       # Utilities
       gnome.file-roller
       qview
