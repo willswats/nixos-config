@@ -43,7 +43,6 @@
       nodePackages.pnpm
       nodePackages.live-server
       # Utilities
-      gnome.file-roller
       qview
       obs-studio
       gimp

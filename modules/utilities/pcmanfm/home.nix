@@ -1,7 +1,10 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ pcmanfm ];
+  home.packages = with pkgs; [
+    pcmanfm
+    gnome.file-roller
+  ];
 
   xdg.configFile."pcmanfm/default/pcmanfm.conf" = {
     force = true;
