@@ -17,10 +17,6 @@
 
 - [ ] Add binding for selecting next and previous in MPV uosc playlist and file explorer
 
-## OpenMW
-
-- [ ] Add nixpkgs openmw package - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/245433)
-
 ## Mullvad VPN
 
 - [ ] Fix Mullvad GUI inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
