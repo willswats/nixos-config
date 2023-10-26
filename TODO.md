@@ -7,8 +7,6 @@
 
 ## sddm
 
-- [ ] Set correct monitor resolution and refresh rate
-- [ ] Add cursor theme
 - [ ] Add nixpkgs catppuccin-sddm package - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/255808)
 
 ## Firefox
