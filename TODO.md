@@ -19,7 +19,7 @@
 
 ## Mullvad VPN
 
-- [ ] Fix Mullvad GUI inconsistent version {"guiVersion":"2023.4","daemonVersion":"2023.3"}
+- [ ] Add nixpkgs mullvad-vpn - [mullvad is broken on 2023.05](https://github.com/mullvad/mullvadvpn-app/issues/5075)
 
 ## Other
 
