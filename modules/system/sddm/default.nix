@@ -6,7 +6,6 @@
       themeConfig = {
         CustomBackground = true;
         Background = globals.wallpaper;
-        ClockEnabled = false;
       };
     })
     catppuccin-cursors.mochaDark
