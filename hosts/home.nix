@@ -45,6 +45,7 @@
       # Utilities
       qview
       obs-studio
+      (callPackage ../pkgs/gpu-screen-recorder { })
       gimp
       krita
       shotcut

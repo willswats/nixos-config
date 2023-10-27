@@ -62,9 +62,19 @@ in
       spotify_player = "${pkgs.spotify-player}/bin/spotify_player";
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
       fish = "${pkgs.fish}/bin/fish";
+
       grim = "${pkgs.grim}/bin/grim";
       slurp = "${pkgs.slurp}/bin/slurp";
       screenshotCommand = "${fish} -c '${grim} -g (${slurp})'";
+
+      gpu-screen-recorder = "gpu-screen-recorder"; # Not in pgks
+      date = "${pkgs.coreutils-full}/bin/date";
+      speakers = "$(${wpctl} inspect @DEFAULT_AUDIO_SINK@ | grep node.name | cut -d \\\" -f2).monitor";
+      microphone = "$(${wpctl} inspect @DEFAULT_AUDIO_SOURCE@ | grep node.name | cut -d \\\" -f2)";
+      recordCommand = "${gpu-screen-recorder} -w \"${monitorCenter}\" -c mp4 -f 60 -a \"${speakers}|${microphone}\" -o ~/Videos/\"$(${date})\".mp4";
+      replayCommand = "${gpu-screen-recorder} -w \"${monitorCenter}\" -c mp4 -f 60 -a \"${speakers}|${microphone}\" -r 300 -o ~/Videos";
+      replaySaveCommand = "kill -SIGUSR1 $(pidof ${gpu-screen-recorder})";
+
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
       playerctld = "${pkgs.playerctl}/bin/playerctld";
@@ -163,6 +173,9 @@ in
           "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
           "$mod, s, exec, ${alacritty} -e ${btm} -b" # System monitor
           "$mod, m, exec, ${alacritty} -e ${spotify_player}" # Music player
+          "$mod SHIFT, F1, exec, ${alacritty} -e ${recordCommand}"
+          "$mod SHIFT, F2, exec, ${alacritty} -e ${replayCommand}"
+          "$mod SHIFT, F3, exec, ${alacritty} -e ${replaySaveCommand}"
           ", print, exec, ${hyprshade} off; ${screenshotCommand} ;${hyprshade} auto" # Screenshot utility
           "$mod, bracketright, exec, ${hyprshade} on blue-light-filter"
           "$mod, bracketleft, exec, ${hyprshade} off"
