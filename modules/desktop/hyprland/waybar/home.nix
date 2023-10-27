@@ -15,7 +15,7 @@
           position = "top";
           height = 40;
           output = [ monitorCenter ];
-          modules-left = [ "hyprland/workspaces" "hyprland/window" "hyprland/submap" "keyboard-state" ];
+          modules-left = [ "hyprland/workspaces" "hyprland/window" "hyprland/submap" ];
           modules-right = [ "battery" "backlight" "pulseaudio#microphone" "pulseaudio" "bluetooth" "network" "clock#calendar" "clock" "tray" ];
 
           "hyprland/workspaces" = {
@@ -24,17 +24,6 @@
 
           "hyprland/window" = {
             max-length = 50;
-          };
-
-          keyboard-state = {
-            capslock = true;
-            format = {
-              capslock = "{icon}";
-            };
-            format-icons = {
-              locked = "󰌎";
-              unlocked = "";
-            };
           };
 
           battery = {
@@ -122,7 +111,6 @@
 
           #window, 
           #submap, 
-          #keyboard-state label.locked, 
           #battery, 
           #backlight, 
           #pulseaudio, 
@@ -148,12 +136,7 @@
           #submap {
             color: ${blue};
             background-color: ${crust};
-          }
-
-          #keyboard-state label.locked {
-            color: ${blue};
-            background-color: ${crust};
-          }
+          } 
 
           #battery.full, 
           #battery.charging, 
