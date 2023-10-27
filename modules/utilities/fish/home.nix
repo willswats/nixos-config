@@ -8,11 +8,9 @@
     shellAliases =
       let
         notebookDirectory = "~/Drive/Work/Notebook";
-        universityDirectory = "~/Drive/Work/Education/University";
       in
       {
         note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
-        uni = "cd ${universityDirectory}; nvim";
       };
     interactiveShellInit = ''
       # Hide fish greeting
