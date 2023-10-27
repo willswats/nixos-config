@@ -48,7 +48,7 @@
       (callPackage ../pkgs/gpu-screen-recorder { })
       gimp
       krita
-      shotcut
+      kdenlive
       fragments
       rclone
       rclone-browser
