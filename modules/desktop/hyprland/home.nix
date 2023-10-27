@@ -118,6 +118,9 @@ in
 
         windowrulev2 = [
           "float, class:steam, title:Friends List"
+          "float, class:steam, title:Steam Settings"
+          "float, class:steam, title:Game Servers"
+          "float, class:steam, title:Screenshot Manager"
           "idleinhibit fullscreen, class:Apprun, title:Dolphin" # Prevent Ishiiruka swayidle lock
         ];
 
