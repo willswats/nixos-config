@@ -26,6 +26,7 @@
           [
             "${bookmarkStart}Downloads Downloads"
             "${bookmarkStart}Pictures Pictures"
+            "${bookmarkStart}Videos Videos"
             "${bookmarkStart}Code Code"
           ];
         globals = {
@@ -52,6 +53,7 @@
                 [
                   "${bookmarkStart}Downloads Downloads"
                   "${bookmarkStart}Pictures Pictures"
+                  "${bookmarkStart}Videos Videos"
                   "${bookmarkStart}Code Code"
                   "${bookmarkStart}Games Games"
                 ];
