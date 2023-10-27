@@ -71,8 +71,8 @@ in
       date = "${pkgs.coreutils-full}/bin/date";
       speakers = "$(${wpctl} inspect @DEFAULT_AUDIO_SINK@ | grep node.name | cut -d \\\" -f2).monitor";
       microphone = "$(${wpctl} inspect @DEFAULT_AUDIO_SOURCE@ | grep node.name | cut -d \\\" -f2)";
-      recordCommand = "${gpu-screen-recorder} -w \"${monitorCenter}\" -c mp4 -f 60 -a \"${speakers}|${microphone}\" -o ~/Videos/\"$(${date})\".mp4";
-      replayCommand = "${gpu-screen-recorder} -w \"${monitorCenter}\" -c mp4 -f 60 -a \"${speakers}|${microphone}\" -r 300 -o ~/Videos";
+      recordCommand = "${gpu-screen-recorder} -w \"${monitorCenter}\" -c mp4 -f 60 -fm cfr -a \"${speakers}|${microphone}\" -o ~/Videos/\"$(${date})\".mp4";
+      replayCommand = "${gpu-screen-recorder} -w \"${monitorCenter}\" -c mp4 -f 60 -fm cfr -a \"${speakers}|${microphone}\" -r 300 -o ~/Videos";
       replaySaveCommand = "kill -SIGUSR1 $(pidof ${gpu-screen-recorder})";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
