@@ -173,9 +173,9 @@ in
           "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
           "$mod, s, exec, ${alacritty} -e ${btm} -b" # System monitor
           "$mod, m, exec, ${alacritty} -e ${spotify_player}" # Music player
-          "$mod SHIFT, F1, exec, ${alacritty} -e ${recordCommand}"
-          "$mod SHIFT, F2, exec, ${alacritty} -e ${replayCommand}"
-          "$mod SHIFT, F3, exec, ${alacritty} -e ${replaySaveCommand}"
+          "$mod SHIFT, F1, exec, ${hyprshade} off; ${alacritty} -e ${recordCommand}; ${hyprshade} auto"
+          "$mod SHIFT, F2, exec, ${hyprshade} off; ${alacritty} -e ${replayCommand}; ${hyprshade} auto"
+          "$mod SHIFT, F3, exec, ${alacritty} -e ${replaySaveCommand};"
           ", print, exec, ${hyprshade} off; ${screenshotCommand} ;${hyprshade} auto" # Screenshot utility
           "$mod, bracketright, exec, ${hyprshade} on blue-light-filter"
           "$mod, bracketleft, exec, ${hyprshade} off"
