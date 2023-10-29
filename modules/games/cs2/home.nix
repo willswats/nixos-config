@@ -32,7 +32,7 @@
       snd_mute_mvp_music_live_players true
 
       # Game
-      mm_dedicated_search_maxping 100
+      mm_dedicated_search_maxping 50
 
       # Hud
       cl_hud_color 9
