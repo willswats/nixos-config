@@ -7,6 +7,7 @@ in
 {
   home.packages = with pkgs; [
     marksman # Markdown lsp
+    (callPackage ../../../../pkgs/sql-language-server { }) # SQL lsp
   ];
 
   programs.nixvim = {
