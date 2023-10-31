@@ -7,6 +7,7 @@
     ../../modules/system/opentabletdriver/home.nix
     ../../modules/games/lutris/home.nix
     ../../modules/games/cs2/home.nix
+    ../../modules/games/tf2/home.nix
     ../../modules/games/osu/home.nix
     ../../modules/games/doom/home.nix
     ../../modules/games/theforceengine/home.nix
