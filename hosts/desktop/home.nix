@@ -5,7 +5,6 @@
     ../home.nix
     ../../modules/desktop/hyprland/home.nix
     ../../modules/system/opentabletdriver/home.nix
-    ../../modules/games/lutris/home.nix
     ../../modules/games/cs2/home.nix
     ../../modules/games/tf2/home.nix
     ../../modules/games/osu/home.nix
@@ -13,6 +12,7 @@
     ../../modules/games/theforceengine/home.nix
     ../../modules/games/ishiiruka/home.nix
     ../../modules/games/retroarch/home.nix
+    ../../modules/games/heroic/home.nix
   ];
 
   home.packages = with pkgs; [
