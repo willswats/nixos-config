@@ -202,6 +202,10 @@
                 url = "https://moodle.port.ac.uk";
               }
               {
+                name = "Learning Catalytics";
+                url = "https://learningcatalytics.com/class_sessions";
+              }
+              {
                 name = "Virtual Machine";
                 url = "https://uop-1-server-per-student-prod.appspot.com/instance/get";
               }
