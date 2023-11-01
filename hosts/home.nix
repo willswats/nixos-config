@@ -68,6 +68,7 @@
       "text/html" = [ "nvim.desktop" ]; # html
       "text/css" = [ "nvim.desktop" ]; # css
       "text/vnd.trolltech.linguist" = [ "nvim.desktop" ]; # ts
+      "text/csv" = [ "nvim.desktop" ]; #csv
       # PCmanFm
       "inode/directory" = [ "pcmanfm.desktop" ]; # Directories
       # qView
