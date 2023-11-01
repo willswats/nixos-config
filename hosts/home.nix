@@ -38,6 +38,7 @@
       killall
       trash-cli
       appimage-run
+      yt-dlp
       # Development
       python311Full
       nodePackages.pnpm
