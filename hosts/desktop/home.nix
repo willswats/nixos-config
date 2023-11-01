@@ -20,6 +20,7 @@
     mangohud
     # Games
     steam
+    prismlauncher
     airshipper
     yuzu-mainline
     pcsx2
