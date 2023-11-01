@@ -38,7 +38,6 @@
       killall
       trash-cli
       appimage-run
-      yt-dlp
       # Development
       python311Full
       nodePackages.pnpm
@@ -53,6 +52,7 @@
       fragments
       rclone
       rclone-browser
+      yt-dlp
       popsicle
       zotero
     ];
