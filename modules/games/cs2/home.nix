@@ -9,19 +9,27 @@
       unbind v # Chat Wheel 2
       unbind mouse3 # Player Ping
       unbind mouse4 # Use Mic
+      unbind mwheelup
+      unbind mwheeldown
 
       # Binds
       bind mwheeldown +jump
       bind mwheelup +jump
+      bind mouse5 +turnleft
+      bind mouse4 +turnright
         
       bind z voice_modenable_toggle
       bind c player_ping
       bind v +voicerecord
+      bind h "say !r"
 
-      bind alt noclip
-      bind hash "exec nade"
+
+      bind [ kill
+      bind alt noclip      
+      bind / "exec nade"
  
       # Music
+      snd_menumusic_volume 0
       snd_roundstart_volume 0
       snd_roundaction_volume 0
       snd_roundend_volume 0
@@ -33,6 +41,7 @@
 
       # Game
       mm_dedicated_search_maxping 50
+      con_enable "true"
 
       # Hud
       cl_hud_color 9
@@ -50,6 +59,7 @@
       cl_crosshair_dynamic_splitalpha_outermod 0.5
       cl_crosshair_dynamic_splitdist 7
       cl_crosshair_friendly_warning 0
+      cl_crosshair_recoil false
       cl_crosshair_outlinethickness 1
       cl_crosshair_sniper_show_normal_inaccuracy 0
       cl_crosshair_sniper_width 1
