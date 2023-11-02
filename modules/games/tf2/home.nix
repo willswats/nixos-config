@@ -14,6 +14,8 @@
       alias -chargejump "-jump; -attack2"
       bind alt "+chargejump"
 
+      bind / kill # the funny one
+
       # Other
       cl_yawspeed 230
       tf_use_min_viewmodels 1
