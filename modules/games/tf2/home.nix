@@ -22,6 +22,11 @@
       bind alt noclip
       bind / "exec practice"
 
+      # Game
+      cl_yawspeed 230
+      fov_desired 90.000000
+      cl_autorezoom 0 # Disable autorezoom sniper
+
       # Crosshair
       cl_crosshair_red 0.000000
       cl_crosshair_green 255.000000
@@ -38,8 +43,12 @@
       tf_use_min_viewmodels 1
       viewmodel_fov 70.000000
 
-      # Game
+      # Hud
       hud_fastswitch 1
+      hud_combattext_batching 1
+      hud_combattext_red 1.000000
+      hud_combattext_green 255.000000
+      hud_combattext_blue 1.000000
 
       # Hints
       tf_find_a_match_hint_viewed 1
@@ -47,14 +56,17 @@
       tf_training_has_prompted_for_offline_practice 1
       tf_training_has_prompted_for_forums 1
       tf_training_has_prompted_for_options 1
+      tf_training_has_prompted_for_loadout 1
+      tf_show_preset_explanation_in_class_loadout 0
+      tf_show_taunt_explanation_in_class_loadout 0
       tf_explanations_store 1
+      tf_explanations_charinfopanel 1
       cl_hud_playerclass_playermodel_showed_confirm_dialog 1
 
       # Other
-      fov_desired 90.000000
-      cl_yawspeed 230
-      cl_spraydisable 0
       con_enable 1  
+      cl_spraydisable 0
+      cl_disablehtmlmotd 1
 
       host_writeconfig
     '';
