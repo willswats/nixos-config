@@ -14,8 +14,12 @@
       bind mouse5 +left
       bind mouse4 +right
 
-      bind h "impulse 101; say !r"
-      bind semicolon show_quest_log 
+      alias +chargejump "+jump; +attack2"
+      alias -chargejump "-jump; -attack2"
+      bind c "+chargejump"
+      bind v +voicerecord
+      bind b "impulse 101; say !r"
+      bindtoggle - voice_enable
 
       bind [ kill
       bind ] explode
@@ -36,7 +40,13 @@
 
       # Sound
       tf_dingalingaling 1
+      tf_dingaling_volume "0.490000"
+      tf_dingaling_pitchmindmg "128.259995"
+      tf_dingaling_pitchmaxdmg "28.500000"
       tf_dingalingaling_lasthit 1
+      tf_dingaling_lasthit_volume "0.490000"
+      tf_dingaling_lasthit_pitchmindmg "128.529999"
+      tf_dingaling_lasthit_pitchmaxdmg "27.570000"         
       tf_sniper_fullcharge_bell 1
 
       # Viewmodel
@@ -49,6 +59,7 @@
       hud_combattext_red 1.000000
       hud_combattext_green 255.000000
       hud_combattext_blue 1.000000
+      tf_scoreboard_ping_as_text "1"
 
       # Hints
       tf_find_a_match_hint_viewed 1
@@ -74,6 +85,6 @@
 
   home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/practice.cfg".text =
     ''
-      sv_cheats 1; ent_fire team_round_timer disable
+      sv_cheats 1; buddha; ent_fire team_round_timer disable
     '';
 }

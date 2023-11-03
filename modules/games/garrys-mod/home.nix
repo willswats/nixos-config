@@ -6,6 +6,7 @@
     unbind k # voice chat   
     unbind v # noclip
     unbind alt # walk
+    unbind b # zoom
     unbind mwheelup
     unbind mwheeldown
 
@@ -17,7 +18,8 @@
 
     bind x +walk
     bind v +voicerecord
-    bind h "say !r"
+    bind b "say !r"
+    bindtoggle - voice_enable
 
     bind [ kill
     bind alt noclip

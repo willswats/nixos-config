@@ -18,13 +18,11 @@
       bind mouse5 +turnleft
       bind mouse4 +turnright
         
-      bind z voice_modenable_toggle
       bind c player_ping
       bind v +voicerecord
-      bind h "say !r"
+      bind b "say !r"
+      bind - voice_modenable_toggle
 
-
-      bind [ kill
       bind alt noclip      
       bind / "exec nade"
  
