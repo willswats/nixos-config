@@ -29,7 +29,6 @@
       cl_crosshair_file crosshair7
       cl_crosshair_scale 19.029999
 
-      
       # Sound
       tf_dingalingaling 1
       tf_dingalingaling_lasthit 1
@@ -42,10 +41,13 @@
       # Game
       hud_fastswitch 1
 
-
       # Hints
       tf_find_a_match_hint_viewed 1
       tf_training_has_prompted_for_training 1
+      tf_training_has_prompted_for_offline_practice 1
+      tf_training_has_prompted_for_forums 1
+      tf_training_has_prompted_for_options 1
+      tf_explanations_store 1
       cl_hud_playerclass_playermodel_showed_confirm_dialog 1
 
       # Other
