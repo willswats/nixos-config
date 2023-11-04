@@ -18,7 +18,7 @@
       alias -chargejump "-jump; -attack2"
       bind c "+chargejump"
       bind v +voicerecord
-      bind b "impulse 101; say !r"
+      bind semicolon "impulse 101; say !r"
       bindtoggle - voice_enable
 
       bind [ kill

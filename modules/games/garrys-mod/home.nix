@@ -10,22 +10,21 @@
     unbind mwheelup
     unbind mwheeldown
 
-    # Binds
-    bind mwheeldown +jump
-    bind mwheelup +jump 
-    bind mouse5 +left
-    bind mouse4 +right
+    alias mwheelinv "bind mwheelup invnext; bind mwheeldown invprev; bind / mwheeljump"
+    alias mwheeljump "bind mwheelup +jump; bind mwheeldown +jump; bind / mwheelinv"
+    bind / mwheeljump 
+    mwheeljump
 
     bind x +walk
     bind v +voicerecord
-    bind b "say !r"
+    bind semicolon "say !r"
     bindtoggle - voice_enable
 
     bind [ kill
     bind alt noclip
 
     # Other
-    cl_yawspeed 230
+    physgun_wheelspeed 50
 
     host_writeconfig
   '';

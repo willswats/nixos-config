@@ -15,12 +15,10 @@
       # Binds
       bind mwheeldown +jump
       bind mwheelup +jump
-      bind mouse5 +turnleft
-      bind mouse4 +turnright
         
       bind c player_ping
       bind v +voicerecord
-      bind b "say !r"
+      bind semicolon "say !r"
       bind - voice_modenable_toggle
 
       bind alt noclip      
