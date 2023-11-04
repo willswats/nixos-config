@@ -39,6 +39,7 @@
 
       # Game
       con_enable true
+      cl_debounce_zoom false # hold to scope in twice
       mm_dedicated_search_maxping 50
 
       # Hud
