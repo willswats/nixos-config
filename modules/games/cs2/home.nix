@@ -15,6 +15,8 @@
       # Binds
       bind mwheeldown +jump
       bind mwheelup +jump
+      bind mouse5 +turnleft
+      bind mouse4 +turnright
         
       bind c player_ping
       bind v +voicerecord
@@ -36,43 +38,47 @@
       snd_mute_mvp_music_live_players true
 
       # Game
+      con_enable true
       mm_dedicated_search_maxping 50
-      con_enable "true"
 
       # Hud
       cl_hud_color 9
 
-      # Item
-      viewmodel_presetpos 3 # Viewmodel Position Classic
-
       # Radar
       cl_radar_scale 0.25
 
+      # Viewmodel
+      viewmodel_fov	68
+      viewmodel_offset_x 0
+      viewmodel_offset_y 2
+      viewmodel_offset_z -2
+      viewmodel_presetpos	0
+
       # Crosshair
+      cl_crosshair_recoil false
+      cl_crosshair_friendly_warning 0
       cl_crosshair_drawoutline 1
-      cl_crosshair_dynamic_maxdist_splitratio 0.35
+      cl_crosshair_dynamic_maxdist_splitratio 0.3
       cl_crosshair_dynamic_splitalpha_innermod 1
       cl_crosshair_dynamic_splitalpha_outermod 0.5
       cl_crosshair_dynamic_splitdist 7
-      cl_crosshair_friendly_warning 0
-      cl_crosshair_recoil false
       cl_crosshair_outlinethickness 1
       cl_crosshair_sniper_show_normal_inaccuracy 0
       cl_crosshair_sniper_width 1
       cl_crosshair_t 0
       cl_crosshairalpha 255
-      cl_crosshaircolor 5
+      cl_crosshaircolor 1
       cl_crosshaircolor_r 0
       cl_crosshaircolor_g 255
       cl_crosshaircolor_b 0
       cl_crosshairdot 0
-      cl_crosshairgap -2
+      cl_crosshairgap -3
       cl_crosshairgap_useweaponvalue 0
       cl_crosshairsize 1.5
       cl_crosshairstyle 4
-      cl_crosshairthickness 0.8
+      cl_crosshairthickness 0.5
       cl_crosshairusealpha 1
-      cl_fixedcrosshairgap -1
+      cl_fixedcrosshairgap -4.5
 
       host_writeconfig
     '';

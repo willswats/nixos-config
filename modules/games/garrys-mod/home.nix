@@ -14,6 +14,8 @@
     alias mwheeljump "bind mwheelup +jump; bind mwheeldown +jump; bind / mwheelinv"
     bind / mwheeljump 
     mwheeljump
+    bind mouse5 +left
+    bind mouse4 +right
 
     bind x +walk
     bind v +voicerecord
@@ -24,6 +26,7 @@
     bind alt noclip
 
     # Other
+    cl_yawspeed 230
     physgun_wheelspeed 50
 
     host_writeconfig
