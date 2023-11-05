@@ -79,8 +79,8 @@
                 url = "https://mynoise.net/";
               }
               {
-                name = "AniWave";
-                url = "https://aniwave.to/";
+                name = "AniWatch";
+                url = "https://aniwatch.to";
               }
               {
                 name = "MangaDex";
@@ -195,7 +195,7 @@
               }
               {
                 name = "Timetable";
-                url = "https://portal.myport.ac.uk/student/timetable";
+                url = "https://timetabling.port.ac.uk";
               }
               {
                 name = "Moodle";
