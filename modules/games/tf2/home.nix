@@ -56,8 +56,8 @@
       # Hud
       hud_fastswitch 1
       hud_combattext_batching 1
-      hud_combattext_red 1.000000
-      hud_combattext_green 255.000000
+      hud_combattext_red 255.000000
+      hud_combattext_green 1.000000
       hud_combattext_blue 1.000000
       tf_scoreboard_ping_as_text "1"
 
