@@ -14,7 +14,7 @@
         note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
         prog1 = "cd ${universityDirectory}/FirstYear/Programming";
         net1 = "cd ${universityDirectory}/FirstYear/Networks";
-        data1 = "cd ${universityDirectory}/FirstYear/DatabaseSystemsDevelopment";
+        dsd1 = "cd ${universityDirectory}/FirstYear/DatabaseSystemsDevelopment";
         ccc1 = "cd ${universityDirectory}/FirstYear/CoreComputingConcepts";
         aos1 = "cd ${universityDirectory}/FirstYear/ArchitectureAndOperatingSystems";
         aosm1 = "cd ${universityDirectory}/FirstYear/ArchitectureAndOperatingSystemsMaths";
