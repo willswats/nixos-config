@@ -90,7 +90,7 @@
     "speed": 1,
     "speedvariation": 0.1,
     "stopvideos": false,
-    "theatermode": true,
+    "theatermode": false,
     "theme": "youtube-deep-dark-custom",
     "themevariant": "youtube-deep-dark-firefox-quantum-dark.css",
     "update": 0,
