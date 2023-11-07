@@ -21,10 +21,14 @@
       bind semicolon "impulse 101; say !r"
       bindtoggle - voice_enable
 
-      bind [ kill
-      bind ] explode
       bind alt noclip
       bind / "exec practice"
+
+      # Quick switch loadout
+      bind leftarrow "load_itempreset 0"
+      bind uparrow "load_itempreset 1"
+      bind downarrow "load_itempreset 2"
+      bind rightarrow "load_itempreset 3"
 
       # Game
       cl_yawspeed 230
@@ -85,6 +89,6 @@
 
   home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/practice.cfg".text =
     ''
-      sv_cheats 1; buddha; ent_fire team_round_timer disable
+      sv_cheats 1; buddha; ent_fire team_round_timer disable; sv_allow_point_servercommand always; mp_teams_unbalance_limit 0
     '';
 }

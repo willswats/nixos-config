@@ -23,6 +23,7 @@
       bind semicolon "say !r"
       bind - voice_modenable_toggle
 
+      bind [ kill
       bind alt noclip      
       bind / "exec nade"
  
