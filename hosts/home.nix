@@ -48,13 +48,12 @@
       obs-studio
       (callPackage ../pkgs/gpu-screen-recorder { })
       gimp
-      krita
       kdenlive
       fragments
+      popsicle
       rclone
       rclone-browser
       yt-dlp
-      popsicle
       zotero
     ];
   };
