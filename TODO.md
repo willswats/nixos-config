@@ -23,4 +23,5 @@
 
 ## Other
 
+- [ ] Format disk with [disko](https://github.com/nix-community/disko)
 - [ ] Setup a Yubikey for GPG git commit signing
