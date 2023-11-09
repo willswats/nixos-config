@@ -11,6 +11,7 @@
 - [TWP - Translate Web Pages](https://addons.mozilla.org/en-US/firefox/addon/traduzir-paginas-web)
 - [Enhancer for YouTube](https://addons.mozilla.org/en-US/firefox/addon/enhancer-for-youtube)
 - [SponsorBlock](https://addons.mozilla.org/en-US/firefox/addon/sponsorblock)
+- [Return YouTube Dislike](https://addons.mozilla.org/en-US/firefox/addon/return-youtube-dislikes/)
 - [BetterTTV](https://addons.mozilla.org/en-US/firefox/addon/betterttv)
 - [TTV LOL PRO](https://addons.mozilla.org/en-US/firefox/addon/ttv-lol-pro/)
 - [Zotero Connector](https://www.zotero.org/download/connectors)
