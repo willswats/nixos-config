@@ -18,7 +18,7 @@
       # Catppuccin
       "workbench.colorTheme" = "Catppuccin Mocha";
       # Vim
-      "vim.useCtrlKeys" = true;
+      "vim.useCtrlKeys" = false;
       "vim.useSystemClipboard" = true;
       "vim.insertModeKeyBindings" = [
         {
