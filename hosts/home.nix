@@ -14,6 +14,7 @@
     ../modules/development/rustup/home.nix
     ../modules/development/dotnet/home.nix
     ../modules/utilities/firefox/home.nix
+    ../modules/utilities/chromium/home.nix
     ../modules/utilities/mpv/home.nix
     ../modules/utilities/spotify-player/home.nix
     ../modules/utilities/fish/home.nix
