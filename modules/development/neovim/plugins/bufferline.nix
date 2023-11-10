@@ -15,22 +15,22 @@ in {
           [
             {
               inherit mode;
-              key = "<S-h>";
+              key = "<S-j>";
               action = "${cmd}BufferLineCyclePrev${cr}";
             }
             {
               inherit mode;
-              key = "<S-l>";
+              key = "<S-k>";
               action = "${cmd}BufferLineCycleNext${cr}";
             }
             {
               inherit mode;
-              key = "<A-l>";
+              key = "<A-k>";
               action = "${cmd}BufferLineMoveNext${cr}";
             }
             {
               inherit mode;
-              key = "<A-h>";
+              key = "<A-j>";
               action = "${cmd}BufferLineMovePrev${cr}";
             }
             {
