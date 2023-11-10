@@ -2,6 +2,7 @@
 
 ## Neovim
 
+- [ ] Fix sqlfluff formatting
 - [ ] Finish dap setup
 - [ ] Set Neovim `desc` for nested leader keymaps
 
