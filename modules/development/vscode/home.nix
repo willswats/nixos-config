@@ -38,6 +38,27 @@
         "command" = "workbench.action.previousEditor";
         "when" = "!activeEditorGroupEmpty";
       }
+      # Use tab for completion
+      {
+        "key" = "tab";
+        "command" = "selectNextSuggestion";
+        "when" = "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus";
+      }
+      {
+        "key" = "down";
+        "command" = "-selectNextSuggestion";
+        "when" = "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus";
+      }
+      {
+        "key" = "shift+tab";
+        "command" = "selectPrevSuggestion";
+        "when" = "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus";
+      }
+      {
+        "key" = "up";
+        "command" = "-selectPrevSuggestion";
+        "when" = "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus";
+      }
     ];
     extensions = with pkgs.vscode-extensions; [
       catppuccin.catppuccin-vsc
