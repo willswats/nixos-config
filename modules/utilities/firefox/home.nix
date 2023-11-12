@@ -187,6 +187,20 @@
             ];
           }
           {
+            name = "Hosting";
+            bookmarks = [
+
+              {
+                name = "Vercel";
+                url = "https://vercel.com/";
+              }
+              {
+                name = "Hover";
+                url = "https://www.hover.com/";
+              }
+            ];
+          }
+          {
             name = "University";
             bookmarks = [
               {
@@ -208,20 +222,6 @@
               {
                 name = "Virtual Machine";
                 url = "https://uop-1-server-per-student-prod.appspot.com/instance/get";
-              }
-            ];
-          }
-          {
-            name = "Hosting";
-            bookmarks = [
-
-              {
-                name = "Vercel";
-                url = "https://vercel.com/";
-              }
-              {
-                name = "Hover";
-                url = "https://www.hover.com/";
               }
             ];
           }
