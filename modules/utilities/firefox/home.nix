@@ -75,8 +75,8 @@
                 url = "https://www.twitch.tv/";
               }
               {
-                name = "myNoise";
-                url = "https://mynoise.net/";
+                name = "ChatReplay";
+                url = "https://chatreplay.stream/";
               }
               {
                 name = "AniWatch";
@@ -208,20 +208,6 @@
               {
                 name = "Virtual Machine";
                 url = "https://uop-1-server-per-student-prod.appspot.com/instance/get";
-              }
-            ];
-          }
-          {
-            name = "Education";
-            bookmarks = [
-              {
-                name = "Harvard Referencing";
-                url =
-                  "https://librarydevelopment.group.shef.ac.uk/referencing/harvard.html";
-              }
-              {
-                name = "Scribbr";
-                url = "https://www.scribbr.co.uk/referencing/generator/";
               }
             ];
           }
