@@ -74,9 +74,14 @@
       "inode/directory" = [ "pcmanfm.desktop" ]; # Directories
       # qView
       "image/png" = [ "com.interversehq.qView.desktop" ]; # jpg
-      "image/jpg" = [ "com.interversehq.qView.desktop" ]; # png
+      "image/jpeg" = [ "com.interversehq.qView.desktop" ]; # png
       # Firefox
       "application/pdf" = [ "firefox.desktop" ]; # pdf
+      # Set firefox as the default browser
+      "x-scheme-handler/http" = [ "firefox.desktop" ];
+      "x-scheme-handler/https" = [ "firefox.desktop" ];
+      "x-scheme-handler/about" = [ "firefox.desktop" ];
+      "x-scheme-handler/unknown" = [ "firefox.desktop" ];
     };
   };
 }
