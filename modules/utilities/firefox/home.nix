@@ -79,8 +79,8 @@
                 url = "https://chatreplay.stream/";
               }
               {
-                name = "AniWatch";
-                url = "https://aniwatch.to";
+                name = "YugenAnime";
+                url = "https://yugenanime.tv";
               }
               {
                 name = "MangaDex";
