@@ -14,6 +14,9 @@
     '';
   };
 
+  # HACK: for use in the systemd service
+  wayland.windowManager.hyprland.settings.exec-once = [ "echo $(printenv HYPRLAND_INSTANCE_SIGNATURE) > ~/.hyprland-instance-signature" ];
+
   xdg.configFile."hypr/shaders/blue-light-filter.glsl" = {
     # https://github.com/hyprwm/Hyprland/issues/1140#issuecomment-1335128437
     text = ''
