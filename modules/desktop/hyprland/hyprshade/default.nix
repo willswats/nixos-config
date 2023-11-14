@@ -1,5 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, globals, ... }:
 
+let
+  user = globals.user;
+in
 {
   systemd.timers."hyprshade" = {
     wantedBy = [ "timers.target" ];
@@ -14,13 +17,13 @@
 
   systemd.services."hyprshade" = {
     script = ''
-      export HYPRLAND_INSTANCE_SIGNATURE=$(cat /home/will/.hyprland-instance-signature)
+      export HYPRLAND_INSTANCE_SIGNATURE=$(cat /home/${user}/.hyprland-instance-signature)
       ${pkgs.hyprshade}/bin/hyprshade auto
     '';
     path = with pkgs; [ hyprland ];
     serviceConfig = {
       Type = "oneshot";
-      User = "will";
+      User = "${user}";
     };
   };
 }
