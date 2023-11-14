@@ -79,6 +79,14 @@
                 url = "https://chatreplay.stream/";
               }
               {
+                name = "Spotify";
+                url = "https://open.spotify.com/";
+              }
+              {
+                name = "myNoise";
+                url = "https://mynoise.net/";
+              }
+              {
                 name = "YugenAnime";
                 url = "https://yugenanime.tv";
               }
