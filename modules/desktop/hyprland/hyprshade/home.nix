@@ -10,7 +10,7 @@
       [[shades]]
       name = "blue-light-filter"
       start_time = 18:00:00
-      end_time = 07:00:00 
+      end_time = 09:00:00 
     '';
   };
 

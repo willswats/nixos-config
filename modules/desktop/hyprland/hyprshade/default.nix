@@ -8,7 +8,7 @@ in
     wantedBy = [ "timers.target" ];
     timerConfig = {
       OnCalendar = [
-        "*-*-* 07:00:00"
+        "*-*-* 09:00:00"
         "*-*-* 18:00:00"
       ];
       Unit = "hyprshade.service";
