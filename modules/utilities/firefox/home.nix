@@ -248,6 +248,7 @@
           false; # Disable autofill credit cards
         "browser.contentblocking.category" = "strict"; # Content blocking strict
         "browser.tabs.firefox-view" = false; # Disable firefox view
+        "browser.tabs.firefox-view-next" = false; # Disable new firefox view
         "browser.aboutConfig.showWarning" =
           false; # Disable about config warning
         "browser.toolbars.bookmarks.visibility" =
