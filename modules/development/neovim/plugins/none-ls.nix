@@ -6,7 +6,6 @@
     nixpkgs-fmt # Nix formatter
     python311Packages.black # Python formatting
     sqlfluff # SQL formatter and linter
-    python311Packages.flake8 # Python diagnostics
     nodePackages.markdownlint-cli # Markdown linter
   ];
 
