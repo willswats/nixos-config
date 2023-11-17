@@ -20,6 +20,7 @@
     ./markdown-preview.nix
     ./dap.nix
     ./nvim-colorizer.nix
+    ./inc-rename.nix
   ];
 
   programs.nixvim.plugins = {
