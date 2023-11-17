@@ -79,28 +79,22 @@ in
       playerctl = "${pkgs.playerctl}/bin/playerctl";
       playerctld = "${pkgs.playerctl}/bin/playerctld";
       brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
+
+      overlay0 = "0xff6c7086";
+      blue = "0xff89b4fa";
     in
     {
       enable = true;
       xwayland.enable = true;
       settings = {
-        general =
-          let
-            overlay0 = "0xff6c7086";
-            blue = "0xff89b4fa";
-          in
-          {
-            gaps_in = 5;
-            gaps_out = 10;
-            border_size = 2;
-            "col.inactive_border" = overlay0;
-            "col.active_border" = blue;
-            "col.group_border" = overlay0;
-            "col.group_border_active" = blue;
-            "col.group_border_locked" = overlay0;
-            "col.group_border_locked_active" = blue;
-            layout = "dwindle";
-          };
+        general = {
+          gaps_in = 5;
+          gaps_out = 10;
+          border_size = 2;
+          "col.inactive_border" = overlay0;
+          "col.active_border" = blue;
+          layout = "dwindle";
+        };
 
         monitor = [
           "${monitorCenter}, highrr, auto, 1"
@@ -119,8 +113,17 @@ in
           workspace_swipe = true;
         };
 
+        group = {
+          "col.border_active" = blue;
+          "col.border_inactive" = overlay0;
+          "col.border_locked_active" = blue;
+          "col.border_locked_inactive" = overlay0;
+          groupbar = {
+            font_size = 14;
+          };
+        };
+
         misc = {
-          groupbar_titles_font_size = 14;
           # Fix Firefox flashing default hyprland wallpaper on resize (still occurs, but it's less noticeable)
           # https://github.com/hyprwm/Hyprland/issues/2817
           disable_hyprland_logo = true;
