@@ -91,8 +91,8 @@ in
           gaps_in = 5;
           gaps_out = 10;
           border_size = 2;
-          "col.inactive_border" = overlay0;
           "col.active_border" = blue;
+          "col.inactive_border" = overlay0;
           layout = "dwindle";
         };
 
@@ -120,6 +120,10 @@ in
           "col.border_locked_inactive" = overlay0;
           groupbar = {
             font_size = 14;
+            "col.active" = blue;
+            "col.inactive" = overlay0;
+            "col.locked_active" = blue;
+            "col.locked_inactive" = overlay0;
           };
         };
 
