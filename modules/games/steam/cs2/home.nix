@@ -15,8 +15,6 @@
       # Binds
       bind mwheeldown +jump
       bind mwheelup +jump
-      bind mouse5 +turnleft
-      bind mouse4 +turnright
         
       bind c player_ping
       bind v +voicerecord
