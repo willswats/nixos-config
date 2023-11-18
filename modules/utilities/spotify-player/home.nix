@@ -5,6 +5,9 @@
 
   xdg.configFile."spotify-player/app.toml".text = ''
     theme = "Catppuccin-mocha"
+
+    [device]
+    volume = 50
   '';
 
   xdg.configFile."spotify-player/theme.toml".text = ''
