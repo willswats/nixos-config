@@ -11,6 +11,7 @@ let
     bind F1 "save quick"
     bind F4 "load quick"
 
+    default_fov 110
     fps_override 1
     fps_max 300
   '';
