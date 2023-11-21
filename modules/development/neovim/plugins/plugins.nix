@@ -21,6 +21,7 @@
     ./dap.nix
     ./nvim-colorizer.nix
     ./inc-rename.nix
+    ./venv-selector.nix
   ];
 
   programs.nixvim.plugins = {
