@@ -17,16 +17,8 @@ in
         omnisharp.enable = true;
         nil_ls.enable = true;
         lua-ls.enable = true;
-        pylsp = {
-          enable = true;
-          settings = {
-            plugins = {
-              flake8.enabled = true;
-              isort.enabled = true;
-              pylsp_mypy.enabled = true;
-            };
-          };
-        };
+        pyright.enable = true;
+        ruff-lsp.enable = true;
         bashls.enable = true;
         html.enable = true;
         cssls.enable = true;

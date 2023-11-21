@@ -4,8 +4,8 @@
   home.packages = with pkgs; [
     nodePackages.prettier # Code formatter for many languages
     nixpkgs-fmt # Nix formatter
+    taplo # TOML formatter
     sqlfluff # SQL formatter and linter
-    python311Packages.black # Python formatting
     nodePackages.markdownlint-cli # Markdown linter
   ];
 
@@ -23,9 +23,9 @@
         { 
           ${formatting}.prettier,
           ${formatting}.nixpkgs_fmt,
+          ${formatting}.taplo,
           ${formatting}.sqlfluff,
           ${diagnostics}.sqlfluff,
-          ${formatting}.black.with({ extra_args = { "--preview", "-l", "80" } }),
           ${diagnostics}.markdownlint.with({ extra_args = { "--disable", "MD013" } })
         }
       '');
