@@ -21,7 +21,6 @@ in
           enable = true;
           settings = {
             plugins = {
-              black.enabled = true;
               flake8.enabled = true;
               isort.enabled = true;
               pylsp_mypy.enabled = true;

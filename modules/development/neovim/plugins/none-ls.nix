@@ -5,6 +5,7 @@
     nodePackages.prettier # Code formatter for many languages
     nixpkgs-fmt # Nix formatter
     sqlfluff # SQL formatter and linter
+    python311Packages.black # Python formatting
     nodePackages.markdownlint-cli # Markdown linter
   ];
 
@@ -24,6 +25,7 @@
           ${formatting}.nixpkgs_fmt,
           ${formatting}.sqlfluff,
           ${diagnostics}.sqlfluff,
+          ${formatting}.black.with({ extra_args = { "--preview", "-l", "80" } }),
           ${diagnostics}.markdownlint.with({ extra_args = { "--disable", "MD013" } })
         }
       '');
