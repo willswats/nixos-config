@@ -14,7 +14,7 @@
           [
             {
               inherit mode;
-              key = "<leader>c";
+              key = "<leader>mc";
               action = "${cmd}MkdnToggleToDo${cr}";
               options.desc = "Checkbox toggle";
             }
@@ -28,7 +28,7 @@
           [
             {
               inherit mode;
-              key = "<leader>c";
+              key = "<leader>mc";
               action = "${cmd}MkdnToggleToDo${cr}";
               options.desc = "Checkbox toggle";
             }

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 let
   venv-selctor = pkgs.vimUtils.buildVimPlugin {
@@ -25,5 +25,34 @@ in
           parents = 0 -- Stop venv-select from searching two directories above (slow) 
         })
     '';
+    keymaps =
+      let
+        cr = "<CR>";
+        cmd = "<CMD>";
+
+        normal =
+          let
+            mode = "n";
+          in
+          [
+            {
+              inherit mode;
+              key = "<leader>vs";
+              action = "${cmd}VenvSelect${cr}";
+              options.desc = "Select";
+            }
+            {
+              inherit mode;
+              key = "<leader>vc";
+              action = "${cmd}VenvSelectCached${cr}";
+              options.desc = "Cached";
+            }
+          ];
+      in
+      config.nixvim.helpers.keymaps.mkKeymaps
+        {
+          options.silent = true;
+        }
+        (normal);
   };
 }

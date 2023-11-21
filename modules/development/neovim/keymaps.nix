@@ -99,6 +99,12 @@
               action = "${cmd}nohlsearch${cr}";
               options.desc = "No highlight";
             }
+            {
+              inherit mode;
+              key = "<leader>r";
+              action = "${ cmd}checktime${ cr}";
+              options. desc = "Refresh";
+            }
           ];
 
         insert =
