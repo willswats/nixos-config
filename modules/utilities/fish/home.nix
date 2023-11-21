@@ -7,10 +7,12 @@
     enable = true;
     shellAliases =
       let
+        codeDirectory = "~/Code";
         notebookDirectory = "~/Drive/Work/Notebook";
         universityDirectory = "~/Drive/Work/Education/University";
       in
       {
+        code = "cd ${codeDirectory}";
         note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
         uni = "cd ${universityDirectory}";
       };
