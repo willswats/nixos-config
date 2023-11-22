@@ -47,6 +47,12 @@ in
               action = "${cmd}VenvSelectCached${cr}";
               options.desc = "Cached";
             }
+            {
+              inherit mode;
+              key = "<leader>vC";
+              action = "${cmd}VenvSelectCurrent${cr}";
+              options.desc = "Current";
+            }
           ];
       in
       config.nixvim.helpers.keymaps.mkKeymaps
