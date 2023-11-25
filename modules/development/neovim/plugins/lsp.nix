@@ -13,7 +13,11 @@ in
     plugins.lsp = {
       enable = true;
       servers = {
-        rust-analyzer.enable = true;
+        rust-analyzer = {
+          enable = true;
+          installCargo = true;
+          installRustc = true;
+        };
         omnisharp.enable = true;
         nil_ls.enable = true;
         lua-ls.enable = true;
