@@ -17,8 +17,8 @@
            "startMinimized": true,
            "unpinnedWindow": true,
            "browsedForSplitTunnelingApplications": [],
-           "changelogDisplayedForVersion": "2023.3"
-      }
+           "changelogDisplayedForVersion": "2023.4"
+         }
     '';
   };
 }
