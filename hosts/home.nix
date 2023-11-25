@@ -41,16 +41,16 @@
       appimage-run
       # Development
       python311Full
+      nodejs_20
       nodePackages.pnpm
       nodePackages.live-server
       # Utilities
       qview
       obs-studio
-      (callPackage ../pkgs/gpu-screen-recorder { })
+      gpu-screen-recorder
       gimp
       kdenlive
       fragments
-      popsicle
       rclone
       rclone-browser
       yt-dlp
