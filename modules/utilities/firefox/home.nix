@@ -234,7 +234,11 @@
             bookmarks = [{
               name = "williamwatson.dev";
               url = "https://williamwatson.dev";
-            }];
+            }
+              {
+                name = "Spotify Dedup";
+                url = "https://spotify-dedup.com/";
+              }];
           }
         ];
       }];
