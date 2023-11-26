@@ -75,8 +75,12 @@
                 url = "https://www.twitch.tv/";
               }
               {
-                name = "ChatReplay";
-                url = "https://chatreplay.stream/";
+                name = "Spotify";
+                url = "https://open.spotify.com";
+              }
+              {
+                name = "myNoise";
+                url = "https://mynoise.net";
               }
               {
                 name = "AniWave";

@@ -16,7 +16,6 @@
     ../modules/utilities/firefox/home.nix
     ../modules/utilities/chromium/home.nix
     ../modules/utilities/mpv/home.nix
-    ../modules/utilities/spotify-player/home.nix
     ../modules/utilities/fish/home.nix
     ../modules/utilities/alacritty/home.nix
     ../modules/utilities/bottom/home.nix

@@ -60,7 +60,7 @@ in {
         webBrowser = "${pkgs.firefox}/bin/firefox";
         fileExplorer = "${pkgs.pcmanfm}/bin/pcmanfm";
         systemMonitor = "${pkgs.bottom}/bin/btm";
-        musicPlayer = "${pkgs.spotify-player}/bin/spotify_player";
+        musicPlayer = "${pkgs.firefox}/bin/firefox --new-window open.spotify.com";
         pactl = "${pkgs.pulseaudio}/bin/pactl";
         playerctl = "${pkgs.playerctl}/bin/playerctl";
         brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
@@ -211,7 +211,7 @@ in {
             "${mod}+e" = "${exec} ${fileExplorer}";
             "${mod}+t" = "${exec} ${terminal} -e ${editor}";
             "${mod}+s" = "${exec} ${terminal} -e ${systemMonitor} -b";
-            "${mod}+m" = "${exec} ${terminal} -e ${musicPlayer}";
+            "${mod}+m" = "${exec} ${musicPlayer}";
           };
           modes = {
             resize = {

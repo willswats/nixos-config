@@ -59,7 +59,7 @@ in
       rofi = "${pkgs.rofi-wayland}/bin/rofi";
       nvim = "nvim"; # This is broken: "${pkgs.neovim}/bin/nvim";
       btm = "${pkgs.bottom}/bin/btm";
-      spotify_player = "${pkgs.spotify-player}/bin/spotify_player";
+      spotify = "${pkgs.firefox}/bin/firefox --new-window open.spotify.com";
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
       fish = "${pkgs.fish}/bin/fish";
 
@@ -179,7 +179,7 @@ in
           "$mod, e, exec, ${pcmanfm}" # File explorer
           "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
           "$mod, s, exec, ${alacritty} -e ${btm} -b" # System monitor
-          "$mod, m, exec, ${alacritty} -e ${spotify_player}" # Music player
+          "$mod, m, exec, ${spotify}" # Music player
           "$mod SHIFT, F1, exec, ${hyprshade} off; ${alacritty} -e ${recordCommand}; ${hyprshade} auto"
           "$mod SHIFT, F2, exec, ${hyprshade} off; ${alacritty} -e ${replayCommand}; ${hyprshade} auto"
           "$mod SHIFT, F3, exec, ${alacritty} -e ${replaySaveCommand};"
