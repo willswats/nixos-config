@@ -79,10 +79,6 @@
                 url = "https://open.spotify.com";
               }
               {
-                name = "myNoise";
-                url = "https://mynoise.net";
-              }
-              {
                 name = "AniWave";
                 url = "https://aniwave.to";
               }
@@ -231,14 +227,16 @@
           }
           {
             name = "Other";
-            bookmarks = [{
-              name = "williamwatson.dev";
-              url = "https://williamwatson.dev";
-            }
+            bookmarks = [
+              {
+                name = "williamwatson.dev";
+                url = "https://williamwatson.dev";
+              }
               {
                 name = "Spotify Dedup";
                 url = "https://spotify-dedup.com/";
-              }];
+              }
+            ];
           }
         ];
       }];
