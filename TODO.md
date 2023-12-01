@@ -2,7 +2,11 @@
 
 ## Neovim
 
+- [ ] Add persistence.nvim
+- [ ] Disable html lsp format
+- [ ] Setup for dart
 - [ ] Fix sqlfluff formatting
+- [ ] Add sql-language server
 - [ ] Finish dap setup
 - [ ] Set Neovim `desc` for nested leader keymaps
 
@@ -24,5 +28,6 @@
 
 ## Other
 
+- [ ] Lock laptop on lid close
 - [ ] Format disk with [disko](https://github.com/nix-community/disko)
 - [ ] Setup a Yubikey for GPG git commit signing
