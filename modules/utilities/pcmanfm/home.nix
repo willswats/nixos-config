@@ -37,4 +37,10 @@
       pathbar_mode_buttons=0
     '';
   };
+
+  xdg.mimeApps = {
+    defaultApplications = {
+      "inode/directory" = [ "pcmanfm.desktop" ]; # Directories
+    };
+  };
 }

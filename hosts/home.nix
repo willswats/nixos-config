@@ -16,6 +16,7 @@
     ../modules/utilities/firefox/home.nix
     ../modules/utilities/chromium/home.nix
     ../modules/utilities/mpv/home.nix
+    ../modules/utilities/qview/home.nix
     ../modules/utilities/fish/home.nix
     ../modules/utilities/alacritty/home.nix
     ../modules/utilities/bottom/home.nix
@@ -44,7 +45,6 @@
       nodePackages.pnpm
       nodePackages.live-server
       # Utilities
-      qview
       obs-studio
       gpu-screen-recorder
       gimp
@@ -58,29 +58,7 @@
   };
 
   # Use `xdg-mime query filetype` to find a file's MIME type
-  # Use `nix-store --query $(which firefox)` (replacing `firefox`) to find the location of the `.destkop` file and it's name
+  # Use `nix-store --query $(which firefox)` (replacing `firefox`) to find the location of the `.desktop` file and it's name
+  xdg.mimeApps.enable = true;
   xdg.configFile."mimeapps.list".force = true;
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      # Neovim
-      "text/plain" = [ "nvim.desktop" ]; # plain text
-      "text/html" = [ "nvim.desktop" ]; # html
-      "text/css" = [ "nvim.desktop" ]; # css
-      "text/vnd.trolltech.linguist" = [ "nvim.desktop" ]; # ts
-      "text/csv" = [ "nvim.desktop" ]; #csv
-      # PCmanFm
-      "inode/directory" = [ "pcmanfm.desktop" ]; # Directories
-      # qView
-      "image/png" = [ "com.interversehq.qView.desktop" ]; # jpg
-      "image/jpeg" = [ "com.interversehq.qView.desktop" ]; # png
-      # Firefox
-      "application/pdf" = [ "firefox.desktop" ]; # pdf
-      # Set firefox as the default browser
-      "x-scheme-handler/http" = [ "firefox.desktop" ];
-      "x-scheme-handler/https" = [ "firefox.desktop" ];
-      "x-scheme-handler/about" = [ "firefox.desktop" ];
-      "x-scheme-handler/unknown" = [ "firefox.desktop" ];
-    };
-  };
 }
