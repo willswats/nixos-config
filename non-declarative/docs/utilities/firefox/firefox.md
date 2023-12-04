@@ -9,9 +9,7 @@
 - [Tridactyl](https://addons.mozilla.org/en-US/firefox/addon/tridactyl-vim/)
 - [Mal Sync](https://addons.mozilla.org/en-US/firefox/addon/mal-sync)
 - [TWP - Translate Web Pages](https://addons.mozilla.org/en-US/firefox/addon/traduzir-paginas-web)
-- [Enhancer for YouTube](https://addons.mozilla.org/en-US/firefox/addon/enhancer-for-youtube)
-- [SponsorBlock](https://addons.mozilla.org/en-US/firefox/addon/sponsorblock)
-- [Return YouTube Dislike](https://addons.mozilla.org/en-US/firefox/addon/return-youtube-dislikes/)
+- [YouTube Alternative Switch](https://addons.mozilla.org/en-US/firefox/addon/youtube-alternative-switch/)
 - [BetterTTV](https://addons.mozilla.org/en-US/firefox/addon/betterttv)
 - [TTV LOL PRO](https://addons.mozilla.org/en-US/firefox/addon/ttv-lol-pro/)
 - [Zotero Connector](https://www.zotero.org/download/connectors)
@@ -26,6 +24,7 @@
 ### uBlock
 
 - Run in Private Windows: Allow
+- Sign in and subscribe to your [letsblock.it](https://letsblock.it/help/use-list) list (block YouTube shorts).
 
 ### Consent-O-Matic
 
@@ -35,10 +34,6 @@
 
 - Notifications (Anime): Disabled
 - Notifications (Manga): Disabled
-
-### Enhancer for YouTube
-
-- Import the [settings file](./enhancer-for-youtube.json).
 
 ### BetterTTV
 
