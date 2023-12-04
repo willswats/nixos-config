@@ -17,6 +17,7 @@
   home.packages = with pkgs; [
     # Utilities
     mangohud
+    r2modman
     # Games
     airshipper
     prismlauncher
