@@ -141,6 +141,12 @@
               key = ">";
               action = ">gv";
             }
+            # Remove man bind
+            {
+              inherit mode;
+              key = "K";
+              action = "<Nop>";
+            }
           ];
 
         terminal =
