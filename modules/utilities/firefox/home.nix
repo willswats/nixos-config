@@ -125,10 +125,6 @@
                 url = "https://discord.com/app";
               }
               {
-                name = "Element";
-                url = "https://app.element.io";
-              }
-              {
                 name = "GitHub";
                 url = "https://github.com/";
               }
