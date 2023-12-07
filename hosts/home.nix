@@ -22,6 +22,7 @@
     ../modules/utilities/bottom/home.nix
     ../modules/utilities/pcmanfm/home.nix
     ../modules/utilities/mullvad-vpn/home.nix
+    ../modules/utilities/vesktop/home.nix
   ];
 
   programs.home-manager.enable = true;
@@ -53,7 +54,6 @@
       rclone
       rclone-browser
       spotify
-      vesktop
       yt-dlp
       zotero
     ];
