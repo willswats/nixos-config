@@ -56,10 +56,6 @@ in
             action = "implementation";
             desc = "Implementation";
           };
-          "<leader>lr" = {
-            action = "rename";
-            desc = "Rename";
-          };
           "<leader>lR" = {
             action = "references";
             desc = "References";
