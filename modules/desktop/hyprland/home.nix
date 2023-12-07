@@ -59,7 +59,7 @@ in
       rofi = "${pkgs.rofi-wayland}/bin/rofi";
       nvim = "nvim"; # This is broken: "${pkgs.neovim}/bin/nvim";
       btm = "${pkgs.bottom}/bin/btm";
-      spotify = "${pkgs.firefox}/bin/firefox --new-window open.spotify.com";
+      spotify = "${pkgs.spotify}/bin/spotify";
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
       fish = "${pkgs.fish}/bin/fish";
 

@@ -75,10 +75,6 @@
                 url = "https://www.twitch.tv/";
               }
               {
-                name = "Spotify";
-                url = "https://open.spotify.com";
-              }
-              {
                 name = "myNoise";
                 url = "https://mynoise.net";
               }
@@ -231,10 +227,6 @@
               {
                 name = "williamwatson.dev";
                 url = "https://williamwatson.dev";
-              }
-              {
-                name = "Spotify Dedup";
-                url = "https://spotify-dedup.com/";
               }
             ];
           }

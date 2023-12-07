@@ -52,6 +52,8 @@
       fragments
       rclone
       rclone-browser
+      spotify
+      vesktop
       yt-dlp
       zotero
     ];

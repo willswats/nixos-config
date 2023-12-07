@@ -60,7 +60,7 @@ in {
         webBrowser = "${pkgs.firefox}/bin/firefox";
         fileExplorer = "${pkgs.pcmanfm}/bin/pcmanfm";
         systemMonitor = "${pkgs.bottom}/bin/btm";
-        musicPlayer = "${pkgs.firefox}/bin/firefox --new-window open.spotify.com";
+        musicPlayer = "${pkgs.spotify}/bin/spotify";
         pactl = "${pkgs.pulseaudio}/bin/pactl";
         playerctl = "${pkgs.playerctl}/bin/playerctl";
         brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
