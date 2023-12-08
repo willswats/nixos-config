@@ -115,7 +115,7 @@ in
 
         animations = {
           # Speed up animations
-          animation = "global, 1, 5, default";
+          animation = "global, 1, 3, default";
         };
 
         group = {
