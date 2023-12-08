@@ -79,7 +79,15 @@
                   "enabled": false
               },
               "BetterFolders": {
-                  "enabled": false
+                  "enabled": false,
+                  "sidebar": true,
+                  "showFolderIcon": 1,
+                  "closeAllHomeButton": false,
+                  "keepIcons": false,
+                  "closeOthers": false,
+                  "sidebarAnim": true,
+                  "closeAllFolders": false,
+                  "forceOpen": false
               },
               "BetterGifAltText": {
                   "enabled": false
@@ -167,8 +175,8 @@
                   "enabled": false
               },
               "FixSpotifyEmbeds": {
-                  "enabled": false,
-                  "volume": 5.28169014084507
+                  "enabled": true,
+                  "volume": 5.0
               },
               "ForceOwnerCrown": {
                   "enabled": false
@@ -246,10 +254,47 @@
                   "enabled": false
               },
               "MoreUserTags": {
-                  "enabled": false
+                  "enabled": true,
+                  "tagSettings": {
+                      "WEBHOOK": {
+                          "text": "Webhook",
+                          "showInChat": true,
+                          "showInNotChat": true
+                      },
+                      "OWNER": {
+                          "text": "Owner",
+                          "showInChat": true,
+                          "showInNotChat": true
+                      },
+                      "ADMINISTRATOR": {
+                          "text": "Admin",
+                          "showInChat": true,
+                          "showInNotChat": true
+                      },
+                      "MODERATOR_STAFF": {
+                          "text": "Staff",
+                          "showInChat": true,
+                          "showInNotChat": true
+                      },
+                      "MODERATOR": {
+                          "text": "Mod",
+                          "showInChat": true,
+                          "showInNotChat": true
+                      },
+                      "VOICE_MODERATOR": {
+                          "text": "VC Mod",
+                          "showInChat": true,
+                          "showInNotChat": true
+                      }
+                  }
               },
               "Moyai": {
-                  "enabled": false
+                  "enabled": false,
+                  "volume": 0.5,
+                  "quality": "Normal",
+                  "triggerWhenUnfocused": true,
+                  "ignoreBots": true,
+                  "ignoreBlocked": true
               },
               "MuteNewGuild": {
                   "enabled": false
@@ -300,7 +345,10 @@
                   "enabled": false
               },
               "OpenInApp": {
-                  "enabled": false
+                  "enabled": false,
+                  "spotify": true,
+                  "steam": true,
+                  "epic": true
               },
               "Party mode 🎉": {
                   "enabled": false
@@ -311,7 +359,9 @@
                   "onboarding": true
               },
               "PermissionsViewer": {
-                  "enabled": false
+                  "enabled": true,
+                  "permissionsSortOrder": 0,
+                  "defaultPermissionsDropdownState": false
               },
               "petpet": {
                   "enabled": false
@@ -360,7 +410,10 @@
                   "enabled": false
               },
               "RoleColorEverywhere": {
-                  "enabled": false
+                  "enabled": true,
+                  "chatMentions": true,
+                  "memberList": true,
+                  "voiceUsers": true
               },
               "SearchReply": {
                   "enabled": false
@@ -372,7 +425,8 @@
                   "enabled": false
               },
               "ServerListIndicators": {
-                  "enabled": false
+                  "enabled": false,
+                  "mode": 2
               },
               "ServerProfile": {
                   "enabled": true
@@ -386,10 +440,15 @@
                   "enabled": false
               },
               "ShowConnections": {
-                  "enabled": false
+                  "enabled": false,
+                  "iconSpacing": 1,
+                  "iconSize": 32
               },
               "ShowHiddenChannels": {
-                  "enabled": false
+                  "enabled": false,
+                  "showMode": 0,
+                  "hideUnreads": true,
+                  "defaultAllowedUsersAndRolesDropdownState": true
               },
               "ShowMeYourName": {
                   "enabled": false
@@ -436,16 +495,21 @@
                   "enabled": false
               },
               "Translate": {
-                  "enabled": false,
+                  "enabled": true,
                   "autoTranslate": false,
                   "receivedInput": "auto",
-                  "receivedOutput": "en"
+                  "receivedOutput": "en",
+                  "sentInput": "en",
+                  "sentOutput": "en"
               },
               "TypingIndicator": {
                   "enabled": false
               },
               "TypingTweaks": {
-                  "enabled": false
+                  "enabled": true,
+                  "alternativeFormatting": true,
+                  "showRoleColors": true,
+                  "showAvatars": true
               },
               "Unindent": {
                   "enabled": false
@@ -483,7 +547,9 @@
                   "enabled": false
               },
               "VoiceMessages": {
-                  "enabled": false
+                  "enabled": true,
+                  "echoCancellation": true,
+                  "noiseSuppression": true
               },
               "WebContextMenus": {
                   "enabled": true,
@@ -493,7 +559,7 @@
                   "enabled": true
               },
               "WhoReacted": {
-                  "enabled": false
+                  "enabled": true
               },
               "Wikisearch": {
                   "enabled": false
@@ -509,7 +575,7 @@
               "authenticated": false,
               "url": "https://api.vencord.dev/",
               "settingsSync": false,
-              "settingsSyncVersion": 1701991401678
+              "settingsSyncVersion": 1702036518932
           }
       }
     '';
