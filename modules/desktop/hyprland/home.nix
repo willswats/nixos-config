@@ -113,6 +113,11 @@ in
           workspace_swipe = true;
         };
 
+        animations = {
+          # Speed up animations
+          animation = "global, 1, 5, default";
+        };
+
         group = {
           "col.border_active" = blue;
           "col.border_inactive" = overlay0;
