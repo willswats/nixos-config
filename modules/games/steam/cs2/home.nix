@@ -3,6 +3,7 @@
 {
   home.file.".steam/steam/steamapps/common/Counter-Strike Global Offensive/game/csgo/cfg/autoexec.cfg".text =
     ''
+      echo "autoexec.cfg executed"
       # Unbind defaults
       unbind z # Radio Message
       unbind c # Chat Wheel 1

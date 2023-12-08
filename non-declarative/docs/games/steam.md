@@ -4,7 +4,7 @@
 
 ### Notifications
 
-Play a sound when a a notification toast is displayed: Disabled
+Play a sound when a notification toast is displayed: Disabled
 
 When a friend joins a game: Disabled
 
