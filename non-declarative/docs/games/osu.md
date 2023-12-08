@@ -2,8 +2,6 @@
 
 ## Options
 
-Add `non-declarative/configs/osu/game.ini` to `.local/share/osu`.
-
 ### Keybindings
 
 #### Global
