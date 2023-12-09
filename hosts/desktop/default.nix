@@ -7,6 +7,7 @@
     ../../modules/utilities/virt-manager
     ../../modules/system/opentabletdriver
     ../../modules/system/amd
+    ../../modules/games/steam
   ];
 
   boot = {
