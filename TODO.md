@@ -29,5 +29,6 @@
 ## Other
 
 - [ ] Lock laptop on lid close
+- [ ] Make colours global in flake
 - [ ] Format disk with [disko](https://github.com/nix-community/disko)
 - [ ] Setup a Yubikey for GPG git commit signing
