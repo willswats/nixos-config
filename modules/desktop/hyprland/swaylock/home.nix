@@ -21,8 +21,6 @@ in
       # See https://strftime.org/
       timestr = "%H:%M";
       datestr = "%a %d %b";
-      screenshots = true;
-      effect-blur = "7x5";
       ring-color = overlay0;
       key-hl-color = blue;
     };
