@@ -5,7 +5,7 @@ let
   blue = "#89b4fa";
   overlay0 = "#6c7086";
   green = "#a6e3a1";
-  yellow = "#f9e2af";
+  peach = "#fab387";
   red = "#f38ba8";
 in
 {
@@ -43,7 +43,7 @@ in
       inside-color = base;
 
       # Caps lock
-      text-caps-lock-color = blue;
+      text-caps-lock-color = peach;
       ring-caps-lock-color = overlay0;
       inside-caps-lock-color = base;
 
@@ -58,8 +58,8 @@ in
       inside-clear-color = base;
 
       # Verifying
-      text-ver-color = yellow;
-      ring-ver-color = yellow;
+      text-ver-color = peach;
+      ring-ver-color = peach;
       inside-ver-color = base;
     };
   };
