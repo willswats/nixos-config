@@ -2,7 +2,7 @@
 
 
 let
-  swaylock = "${pkgs.swaylock}/bin/swaylock";
+  swaylock = "${pkgs.swaylock-effects}/bin/swaylock";
 in
 {
   imports = [
@@ -11,7 +11,7 @@ in
     ./waybar/home.nix
     ./rofi/home.nix
     ./mako/home.nix
-    ./grim/home.nix
+    ./grimblast/home.nix
     ./hyprshade/home.nix
   ];
 
@@ -52,22 +52,18 @@ in
       nm-applet = "${pkgs.networkmanagerapplet}/bin/nm-applet";
       rclone = "${pkgs.rclone}/bin/rclone";
       hyprctl = "${pkgs.hyprland}/bin/hyprctl";
-
+      hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
+      grimblast = "${pkgs.grimblast}/bin/grimblast";
       firefox = "${pkgs.firefox}/bin/firefox";
       pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
       alacritty = "${pkgs.alacritty}/bin/alacritty";
       rofi = "${pkgs.rofi-wayland}/bin/rofi";
-      nvim = "nvim"; # This is broken: "${pkgs.neovim}/bin/nvim";
+      nvim = "nvim"; # This is broken (nixvim): "${pkgs.neovim}/bin/nvim";
       btm = "${pkgs.bottom}/bin/btm";
       spotify = "${pkgs.spotify}/bin/spotify";
-      hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
-      fish = "${pkgs.fish}/bin/fish";
 
-      grim = "${pkgs.grim}/bin/grim";
-      slurp = "${pkgs.slurp}/bin/slurp";
-      screenshotCommand = "${fish} -c '${grim} -g (${slurp})'";
-
-      gpu-screen-recorder = "gpu-screen-recorder"; # Not in pgks
+      # gpu-screen-recorder commands
+      gpu-screen-recorder = "${pkgs.gpu-screen-recorder}/bin/gpu-screen-recorder";
       date = "${pkgs.coreutils-full}/bin/date";
       speakers = "$(${wpctl} inspect @DEFAULT_AUDIO_SINK@ | grep node.name | cut -d \\\" -f2).monitor";
       microphone = "$(${wpctl} inspect @DEFAULT_AUDIO_SOURCE@ | grep node.name | cut -d \\\" -f2)";
@@ -118,8 +114,7 @@ in
         };
 
         animations = {
-          # Speed up animations
-          animation = "global, 1, 3, default";
+          animation = "global, 1, 3, default"; # Speed up animations
         };
 
         group = {
@@ -192,7 +187,8 @@ in
           "$mod SHIFT, F1, exec, ${hyprshade} off; ${alacritty} -e ${recordCommand}; ${hyprshade} auto"
           "$mod SHIFT, F2, exec, ${hyprshade} off; ${alacritty} -e ${replayCommand}; ${hyprshade} auto"
           "$mod SHIFT, F3, exec, ${alacritty} -e ${replaySaveCommand};"
-          ", print, exec, ${hyprshade} off; ${screenshotCommand} ;${hyprshade} auto" # Screenshot utility
+          ", print, exec, ${hyprshade} off; ${grimblast} save output; ${hyprshade} auto" # Screenshot active monitor
+          "SHIFT, print, exec, ${hyprshade} off; ${grimblast} save area; ${hyprshade} auto" # Screenshot manually selected area
           "$mod, bracketright, exec, ${hyprshade} on blue-light-filter"
           "$mod, bracketleft, exec, ${hyprshade} off"
           "$mod SHIFT, semicolon, exec, ${swaylock}"

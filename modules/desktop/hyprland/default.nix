@@ -3,7 +3,7 @@
 {
   imports = [
     ./swaylock
-    ./grim
+    ./grimblast
     ./hyprshade
   ];
 
