@@ -71,7 +71,7 @@
 
           "clock#calendar" = {
             interval = 1;
-            format = "󰭦  {:%A %d %B}";
+            format = "󰭦  {:%a %d %b}";
           };
 
           clock = {
