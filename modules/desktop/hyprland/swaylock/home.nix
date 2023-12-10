@@ -1,4 +1,4 @@
-{ pkgs, globals, ... }:
+{ pkgs, ... }:
 
 let
   base = "#1e1e2e";
@@ -14,10 +14,6 @@ in
     package = pkgs.swaylock-effects;
     settings = {
       color = base;
-      image = "${globals.wallpaper}";
-
-      effect-blur = "10x2";
-      effect-scale = "0.1";
 
       font = "Hack Nerd Font";
       font-size = 40;
