@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, globals, ... }:
 
 let
   base = "#1e1e2e";
@@ -14,10 +14,20 @@ in
     package = pkgs.swaylock-effects;
     settings = {
       color = base;
+      image = "${globals.wallpaper}";
+
+      effect-blur = "10x2";
+      effect-scale = "0.1";
+
       font = "Hack Nerd Font";
       font-size = 40;
+
       indicator-radius = 125;
+
       daemonize = true; # Fix screen locking multiple times - https://github.com/swaywm/swaylock/issues/86
+
+      ignore-empty-password = true; # Don't allow empty password
+      disable-caps-lock-text = true; # Disable caps lock
 
       clock = true;
       indicator = true; # Always show indicator
