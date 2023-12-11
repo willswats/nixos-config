@@ -84,9 +84,5 @@ in
     allowUnfree = true;
   };
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-25.9.0"
-  ];
-
   system = { stateVersion = "23.05"; };
 }

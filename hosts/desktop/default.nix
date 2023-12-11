@@ -8,6 +8,7 @@
     ../../modules/system/opentabletdriver
     ../../modules/system/amd
     ../../modules/games/steam
+    ../../modules/games/r2modman
   ];
 
   boot = {

@@ -12,12 +12,12 @@
     ../../modules/games/doom/home.nix
     ../../modules/games/theforceengine/home.nix
     ../../modules/games/retroarch/home.nix
+    ../../modules/games/r2modman/home.nix
   ];
 
   home.packages = with pkgs; [
     # Utilities
     mangohud
-    r2modman
     # Games
     airshipper
     prismlauncher
