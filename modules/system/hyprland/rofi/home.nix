@@ -14,13 +14,13 @@
   # Modified version of: https://github.com/catppuccin/rofi/blob/main/basic/.local/share/rofi/themes/catppuccin-mocha.rasi
   xdg.configFile."rofi/themes/catppuccin-mocha.rasi" =
     let
-      font = globals.font;
+      fontName = globals.font.name;
 
-      red = globals.colours.red;
-      blue = globals.colours.blue;
-      text = globals.colours.text;
-      overlay0 = globals.colours.overlay0;
-      base = globals.colours.base;
+      red = "#${globals.colours.red}";
+      blue = "#${globals.colours.blue}";
+      text = "#${globals.colours.text}";
+      overlay0 = "#${globals.colours.overlay0}";
+      base = "#${globals.colours.base}";
     in
     {
       text = ''
@@ -35,7 +35,7 @@
             grey: ${overlay0};
 
             width: 600;
-            font: "${font} 14";
+            font: "${fontName} 14";
         }
 
         element-text, element-icon , mode-switcher {

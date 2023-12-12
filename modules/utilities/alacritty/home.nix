@@ -1,23 +1,23 @@
 { pkgs, globals, ... }:
 
 let
-  font = globals.font;
+  fontName = globals.font.name;
 
-  rosewater = globals.colours.rosewater;
-  pink = globals.colours.pink;
-  red = globals.colours.red;
-  peach = globals.colours.peach;
-  yellow = globals.colours.yellow;
-  green = globals.colours.green;
-  teal = globals.colours.teal;
-  blue = globals.colours.blue;
-  lavender = globals.colours.lavender;
-  text = globals.colours.text;
-  subtext1 = globals.colours.subtext1;
-  subtext0 = globals.colours.subtext0;
-  surface2 = globals.colours.surface2;
-  surface1 = globals.colours.surface1;
-  base = globals.colours.base;
+  rosewater = "#${globals.colours.rosewater}";
+  pink = "#${globals.colours.pink}";
+  red = "#${globals.colours.red}";
+  peach = "#${globals.colours.peach}";
+  yellow = "#${globals.colours.yellow}";
+  green = "#${globals.colours.green}";
+  teal = "#${globals.colours.teal}";
+  blue = "#${globals.colours.blue}";
+  lavender = "#${globals.colours.lavender}";
+  text = "#${globals.colours.text}";
+  subtext1 = "#${globals.colours.subtext1}";
+  subtext0 = "#${globals.colours.subtext0}";
+  surface2 = "#${globals.colours.surface2}";
+  surface1 = "#${globals.colours.surface1}";
+  base = "#${globals.colours.base}";
 in
 {
   home.packages = with pkgs; [ alacritty ];
@@ -26,9 +26,9 @@ in
     enable = true;
     settings = {
       font = {
-        normal.family = font;
-        bold.family = font;
-        italic.family = font;
+        normal.family = fontName;
+        bold.family = fontName;
+        italic.family = fontName;
         size = 14;
       };
 

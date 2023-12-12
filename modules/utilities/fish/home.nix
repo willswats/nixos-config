@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, globals, ... }:
 
 {
   home.packages = with pkgs; [ fish ];
@@ -25,33 +25,49 @@
   };
 
   # Taken from: https://github.com/catppuccin/fish/blob/main/themes/Catppuccin%20Mocha.theme
-  xdg.configFile."fish/themes/Catppuccin Mocha.theme" = {
-    text = ''
-      fish_color_normal cdd6f4
-      fish_color_command 89b4fa
-      fish_color_param f2cdcd
-      fish_color_keyword f38ba8
-      fish_color_quote a6e3a1
-      fish_color_redirection f5c2e7
-      fish_color_end fab387
-      fish_color_comment 7f849c
-      fish_color_error f38ba8
-      fish_color_gray 6c7086
-      fish_color_selection --background=313244
-      fish_color_search_match --background=313244
-      fish_color_operator f5c2e7
-      fish_color_escape eba0ac
-      fish_color_autosuggestion 6c7086
-      fish_color_cancel f38ba8
-      fish_color_cwd f9e2af
-      fish_color_user 94e2d5
-      fish_color_host 89b4fa
-      fish_color_host_remote a6e3a1
-      fish_color_status f38ba8
-      fish_pager_color_progress 6c7086
-      fish_pager_color_prefix f5c2e7
-      fish_pager_color_completion cdd6f4
-      fish_pager_color_description 6c7086
-    '';
-  };
+  xdg.configFile."fish/themes/Catppuccin Mocha.theme" =
+    let
+      flamingo = globals.colours.flamingo;
+      pink = globals.colours.pink;
+      red = globals.colours.red;
+      maroon = globals.colours.maroon;
+      peach = globals.colours.peach;
+      yellow = globals.colours.yellow;
+      green = globals.colours.green;
+      teal = globals.colours.teal;
+      blue = globals.colours.blue;
+      text = globals.colours.text;
+      overlay0 = globals.colours.overlay0;
+      overlay1 = globals.colours.overlay1;
+      surface0 = globals.colours.surface0;
+    in
+    {
+      text = ''
+        fish_color_normal ${text}
+        fish_color_command ${blue}
+        fish_color_param ${flamingo}
+        fish_color_keyword ${red}
+        fish_color_quote ${green}
+        fish_color_redirection ${pink}
+        fish_color_end ${peach}
+        fish_color_comment ${overlay1}
+        fish_color_error ${red}
+        fish_color_gray ${overlay0}
+        fish_color_selection --background=${surface0}
+        fish_color_search_match --background=${surface0}
+        fish_color_operator ${pink}
+        fish_color_escape ${maroon}
+        fish_color_autosuggestion ${overlay0}
+        fish_color_cancel ${red}
+        fish_color_cwd ${yellow}
+        fish_color_user ${teal}
+        fish_color_host ${blue}
+        fish_color_host_remote ${green}
+        fish_color_status ${red}
+        fish_pager_color_progress ${overlay0}
+        fish_pager_color_prefix ${pink}
+        fish_pager_color_completion ${text}
+        fish_pager_color_description ${overlay0}
+      '';
+    };
 }

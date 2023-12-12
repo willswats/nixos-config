@@ -9,21 +9,21 @@
       # Taken from and converted to nix: https://github.com/catppuccin/bottom
       colors =
         let
-          rosewater = globals.colours.rosewater;
-          flamingo = globals.colours.flamingo;
-          pink = globals.colours.pink;
-          mauve = globals.colours.mauve;
-          red = globals.colours.red;
-          maroon = globals.colours.maroon;
-          peach = globals.colours.peach;
-          yellow = globals.colours.yellow;
-          green = globals.colours.green;
-          sky = globals.colours.sky;
-          sapphire = globals.colours.sapphire;
-          text = globals.colours.text;
-          subtext0 = globals.colours.subtext0;
-          surface2 = globals.colours.surface2;
-          crust = globals.colours.crust;
+          rosewater = "#${globals.colours.rosewater}";
+          flamingo = "#${globals.colours.flamingo}";
+          pink = "#${globals.colours.pink}";
+          mauve = "#${globals.colours.mauve}";
+          red = "#${globals.colours.red}";
+          maroon = "#${globals.colours.maroon}";
+          peach = "#${globals.colours.peach}";
+          yellow = "#${globals.colours.yellow}";
+          green = "#${globals.colours.green}";
+          sky = "#${globals.colours.sky}";
+          sapphire = "#${globals.colours.sapphire}";
+          text = "#${globals.colours.text}";
+          subtext0 = "#${globals.colours.subtext0}";
+          surface2 = "#${globals.colours.surface2}";
+          crust = "#${globals.colours.crust}";
         in
         {
           table_header_color = rosewater;

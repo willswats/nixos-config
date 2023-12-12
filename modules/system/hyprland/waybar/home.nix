@@ -87,26 +87,26 @@
       };
       style =
         let
-          font = globals.font;
+          fontName = globals.font.name;
 
-          rosewater = globals.colours.rosewater;
-          flamingo = globals.colours.flamingo;
-          pink = globals.colours.pink;
-          mauve = globals.colours.mauve;
-          red = globals.colours.red;
-          maroon = globals.colours.maroon;
-          peach = globals.colours.peach;
-          yellow = globals.colours.yellow;
-          green = globals.colours.green;
-          blue = globals.colours.blue;
-          overlay0 = globals.colours.overlay0;
-          base = globals.colours.base;
-          crust = globals.colours.crust;
+          rosewater = "#${globals.colours.rosewater}";
+          flamingo = "#${globals.colours.flamingo}";
+          pink = "#${globals.colours.pink}";
+          mauve = "#${globals.colours.mauve}";
+          red = "#${globals.colours.red}";
+          maroon = "#${globals.colours.maroon}";
+          peach = "#${globals.colours.peach}";
+          yellow = "#${globals.colours.yellow}";
+          green = "#${globals.colours.green}";
+          blue = "#${globals.colours.blue}";
+          overlay0 = "#${globals.colours.overlay0}";
+          base = "#${globals.colours.base}";
+          crust = "#${globals.colours.crust}";
         in
         ''
           * { 
             font-size: 20px;    
-            font-family: ${font};
+            font-family: ${fontName};
             border-radius: 0;
           }
 

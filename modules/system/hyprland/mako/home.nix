@@ -3,17 +3,17 @@
 {
   services.mako =
     let
-      font = globals.font;
+      fontName = globals.font.name;
 
-      peach = globals.colours.peach;
-      blue = globals.colours.blue;
-      text = globals.colours.text;
-      surface0 = globals.colours.surface0;
-      base = globals.colours.base;
+      peach = "#${globals.colours.peach}";
+      blue = "#${globals.colours.blue}";
+      text = "#${globals.colours.text}";
+      surface0 = "#${globals.colours.surface0}";
+      base = "#${globals.colours.base}";
     in
     {
       enable = true;
-      font = font;
+      font = fontName;
       defaultTimeout = 5000; # Milliseconds
       borderSize = 2;
       textColor = text;

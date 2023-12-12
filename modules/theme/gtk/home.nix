@@ -14,12 +14,14 @@
           border-radius: 0px;
         }
       '';
+      fontName = globals.font.name;
+      fontPackage = globals.font.package;
     in
     {
       enable = true;
       font = {
-        name = globals.font;
-        package = pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; };
+        name = fontName;
+        package = pkgs.nerdfonts.override { fonts = [ fontPackage ]; };
         size = 12;
       };
       theme = {

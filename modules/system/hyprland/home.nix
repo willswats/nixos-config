@@ -1,4 +1,4 @@
-{ pkgs, host, ... }:
+{ pkgs, globals, host, ... }:
 
 
 let
@@ -76,9 +76,10 @@ in
       playerctld = "${pkgs.playerctl}/bin/playerctld";
       brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
 
-      mauve = "0xffcba6f7";
-      blue = "0xff89b4fa";
-      overlay0 = "0xff6c7086";
+      colours_start = "0xff";
+      mauve = "${colours_start}${globals.colours.mauve}";
+      blue = "${colours_start}${globals.colours.blue}";
+      overlay0 = "${colours_start}${globals.colours.overlay0}";
     in
     {
       enable = true;
