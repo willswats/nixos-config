@@ -178,32 +178,42 @@ in
         bind = [
           # Applications
           "$mod, d, exec, ${rofi} -show drun"
+
           "$mod, return, exec, ${alacritty}"
           "$mod, w, exec, ${firefox}" # Web browser
           "$mod, e, exec, ${pcmanfm}" # File explorer
           "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
-          "$mod, s, exec, ${alacritty} -e ${btm} -b" # System monitor
+          "$mod, p, exec, ${alacritty} -e ${btm} -b" # Process monitor
           "$mod, m, exec, ${spotify}" # Music player
+
           "$mod SHIFT, F1, exec, ${hyprshade} off; ${alacritty} -e ${recordCommand}; ${hyprshade} auto"
           "$mod SHIFT, F2, exec, ${hyprshade} off; ${alacritty} -e ${replayCommand}; ${hyprshade} auto"
           "$mod SHIFT, F3, exec, ${alacritty} -e ${replaySaveCommand};"
+
           ", print, exec, ${hyprshade} off; ${grimblast} save output; ${hyprshade} auto" # Screenshot active monitor
           "SHIFT, print, exec, ${hyprshade} off; ${grimblast} save area; ${hyprshade} auto" # Screenshot manually selected area
+
           "$mod, bracketright, exec, ${hyprshade} on blue-light-filter"
           "$mod, bracketleft, exec, ${hyprshade} off"
+
           "$mod SHIFT, semicolon, exec, ${swaylock}"
 
           # Hyprland
           "$mod, q, killactive"
           "$mod, f, fullscreen"
+
           "$mod shift, e, exit"
           "$mod shift, r, exec, ${hyprctl} reload"
-          "$mod, minus, togglespecialworkspace"
-          "$mod shift, minus, movetoworkspacesilent, special"
-          "$mod shift, p, movetoworkspacesilent, m+0"
-          "$mod shift, s, togglesplit"
-          "$mod shift, g, togglegroup"
+
           "$mod shift, f, togglefloating"
+          "$mod shift, s, togglesplit"
+
+          "$mod, s, togglespecialworkspace"
+          "$mod shift, minus, movetoworkspacesilent, special"
+          "$mod, minus, movetoworkspacesilent, m+0"
+
+          "$mod shift, g, togglegroup"
+          "$mod, g, moveoutofgroup"
           "$mod, tab, changegroupactive, f"
           "$mod shift, tab, changegroupactive, b"
 
