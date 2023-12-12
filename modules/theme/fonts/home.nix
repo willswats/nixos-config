@@ -2,5 +2,5 @@
 
 {
   fonts.fontconfig.enable = true;
-  home.packages = [ (pkgs.nerdfonts.override { fonts = [ "Hack" ]; }) ];
+  home.packages = [ (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; }) ];
 }

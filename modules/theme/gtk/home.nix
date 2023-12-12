@@ -19,7 +19,7 @@
       enable = true;
       font = {
         name = globals.font;
-        package = pkgs.nerdfonts.override { fonts = [ "Hack" ]; };
+        package = pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; };
         size = 12;
       };
       theme = {

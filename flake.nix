@@ -33,7 +33,7 @@
           user = user;
           homeDir = homeDir;
           wallpaper = ./wallpapers/minimal-desert.png;
-          font = "Hack Nerd Font";
+          font = "JetBrains Mono Nerd Font";
           colours = {
             rosewater = "#f5e0dc";
             flamingo = "#f2cdcd";
