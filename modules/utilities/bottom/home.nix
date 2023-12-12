@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, globals, ... }:
 
 {
   home.packages = with pkgs; [ bottom ];
@@ -6,32 +6,50 @@
   programs.bottom = {
     enable = true;
     settings = {
-      # Catppuccin Mocha Theme
-      colors = {
-        table_header_color = "#f5e0dc";
-        all_cpu_color = "#f5e0dc";
-        avg_cpu_color = "#eba0ac";
-        cpu_core_colors =
-          [ "#f38ba8" "#fab387" "#f9e2af" "#a6e3a1" "#74c7ec" "#cba6f7" ];
-        ram_color = "#a6e3a1";
-        swap_color = "#fab387";
-        rx_color = "#a6e3a1";
-        tx_color = "#f38ba8";
-        widget_title_color = "#f2cdcd";
-        border_color = "#585b70";
-        highlighted_border_color = "#f5c2e7";
-        text_color = "#cdd6f4";
-        graph_color = "#a6adc8";
-        cursor_color = "#f5c2e7";
-        selected_text_color = "#11111b";
-        selected_bg_color = "#cba6f7";
-        high_battery_color = "#a6e3a1";
-        medium_battery_color = "#f9e2af";
-        low_battery_color = "#f38ba8";
-        gpu_core_colors =
-          [ "#74c7ec" "#cba6f7" "#f38ba8" "#fab387" "#f9e2af" "#a6e3a1" ];
-        arc_color = "#89dceb";
-      };
+      # Taken from and converted to nix: https://github.com/catppuccin/bottom
+      colors =
+        let
+          rosewater = globals.colours.rosewater;
+          flamingo = globals.colours.flamingo;
+          pink = globals.colours.pink;
+          mauve = globals.colours.mauve;
+          red = globals.colours.red;
+          maroon = globals.colours.maroon;
+          peach = globals.colours.peach;
+          yellow = globals.colours.yellow;
+          green = globals.colours.green;
+          sky = globals.colours.sky;
+          sapphire = globals.colours.sapphire;
+          text = globals.colours.text;
+          subtext0 = globals.colours.subtext0;
+          surface2 = globals.colours.surface2;
+          crust = globals.colours.crust;
+        in
+        {
+          table_header_color = rosewater;
+          all_cpu_color = rosewater;
+          avg_cpu_color = maroon;
+          cpu_core_colors =
+            [ red peach yellow green sapphire mauve ];
+          ram_color = green;
+          swap_color = peach;
+          rx_color = green;
+          tx_color = red;
+          widget_title_color = flamingo;
+          border_color = surface2;
+          highlighted_border_color = pink;
+          text_color = text;
+          graph_color = subtext0;
+          cursor_color = pink;
+          selected_text_color = crust;
+          selected_bg_color = mauve;
+          high_battery_color = green;
+          medium_battery_color = yellow;
+          low_battery_color = red;
+          gpu_core_colors =
+            [ sapphire mauve red peach yellow green ];
+          arc_color = sky;
+        };
     };
   };
 }

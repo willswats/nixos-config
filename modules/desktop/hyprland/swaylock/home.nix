@@ -1,12 +1,13 @@
-{ pkgs, ... }:
+{ pkgs, globals, ... }:
 
 let
-  base = "#1e1e2e";
-  blue = "#89b4fa";
-  overlay0 = "#6c7086";
-  green = "#a6e3a1";
-  peach = "#fab387";
-  red = "#f38ba8";
+  font = globals.font;
+  red = globals.colours.red;
+  peach = globals.colours.peach;
+  green = globals.colours.green;
+  blue = globals.colours.blue;
+  overlay0 = globals.colours.overlay0;
+  base = globals.colours.base;
 in
 {
   programs.swaylock = {
@@ -15,7 +16,7 @@ in
     settings = {
       color = base;
 
-      font = "Hack Nerd Font";
+      font = font;
       font-size = 40;
 
       indicator-radius = 125;

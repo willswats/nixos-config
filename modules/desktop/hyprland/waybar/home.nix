@@ -1,4 +1,4 @@
-{ pkgs, host, ... }:
+{ pkgs, globals, host, ... }:
 
 {
   programs.waybar =
@@ -28,19 +28,19 @@
 
           battery = {
             interval = 1;
-            format = "{icon}  {capacity}%";
+            format = "{icon} {capacity}%";
             format-icons = [ " " " " " " " " " " ];
           };
 
           backlight = {
-            format = "  {percent}%";
+            format = " {percent}%";
           };
 
           "pulseaudio#microphone" = {
             scroll-step = 5;
             format = "{format_source}";
-            format-source = "  {volume}%";
-            format-source-muted = "  0%";
+            format-source = " {volume}%";
+            format-source-muted = " 0%";
             on-click = "${wpctl} set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
             on-scroll-up = "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 5%+";
             on-scroll-down = "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 5%-";
@@ -48,35 +48,35 @@
 
           pulseaudio = {
             scroll-step = 5;
-            format = "󰕾  {volume}%";
-            format-muted = "󰖁  0%";
+            format = "󰕾 {volume}%";
+            format-muted = "󰖁 0%";
             on-click = "${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle";
           };
 
           bluetooth = {
-            format = "󰂯  {status}";
-            format-connected = "  {device_alias}";
-            format-connected-battery = "  {device_alias} {device_battery_percentage}%";
+            format = "󰂯 {status}";
+            format-connected = " {device_alias}";
+            format-connected-battery = " {device_alias} {device_battery_percentage}%";
             max-length = 20;
           };
 
           network = {
-            format = "{icon}  {ifname}";
-            format-wifi = "{icon}  {essid} {signalStrength}%";
-            format-ethernet = "󰤨  {ifname}";
-            format-disconnected = "{icon}  Disconnected";
+            format = "{icon} {ifname}";
+            format-wifi = "{icon} {essid} {signalStrength}%";
+            format-ethernet = "󰤨 {ifname}";
+            format-disconnected = "{icon} Disconnected";
             format-icons = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
             max-length = 20;
           };
 
           "clock#calendar" = {
             interval = 1;
-            format = "󰭦  {:%a %d %b}";
+            format = "󰭦 {:%a %d %b}";
           };
 
           clock = {
             interval = 1;
-            format = "󱑍  {:%H:%M}";
+            format = "󱑍 {:%H:%M}";
           };
 
           tray = {
@@ -87,25 +87,26 @@
       };
       style =
         let
-          crust = "#11111b";
+          font = globals.font;
 
-          overlay0 = "#6c7086";
-
-          blue = "#89b4fa";
-          green = "#a6e3a1";
-          yellow = "#f9e2af";
-          peach = "#fab387";
-          maroon = "#eba0ac";
-          red = "#f38ba8";
-          mauve = "#cba6f7";
-          pink = "#f5c2e7";
-          flamingo = "#f2cdcd";
-          rosewater = "#f5e0dc";
+          rosewater = globals.colours.rosewater;
+          flamingo = globals.colours.flamingo;
+          pink = globals.colours.pink;
+          mauve = globals.colours.mauve;
+          red = globals.colours.red;
+          maroon = globals.colours.maroon;
+          peach = globals.colours.peach;
+          yellow = globals.colours.yellow;
+          green = globals.colours.green;
+          blue = globals.colours.blue;
+          overlay0 = globals.colours.overlay0;
+          base = globals.colours.base;
+          crust = globals.colours.crust;
         in
         ''
           * { 
             font-size: 18px;    
-            font-family: Hack;
+            font-family: ${font};
             border-radius: 0;
           }
 
@@ -131,6 +132,7 @@
 
           #window {
             color: ${blue}; 
+            background-color: ${base};
           }
 
           #submap {

@@ -1,17 +1,30 @@
-{ ... }:
+{ globals, ... }:
 
 {
-  services.mako = {
-    enable = true;
-    defaultTimeout = 5000; # Milliseconds
-    borderSize = 2;
-    backgroundColor = "#1e1e2e";
-    textColor = "#cdd6f4";
-    borderColor = "#89b4fa";
-    progressColor = "over #313244";
-    extraConfig = '' 
+  services.mako =
+    let
+      font = globals.font;
+
+      peach = globals.colours.peach;
+      blue = globals.colours.blue;
+      text = globals.colours.text;
+      surface0 = globals.colours.surface0;
+      base = globals.colours.base;
+    in
+    {
+      enable = true;
+      font = font;
+      defaultTimeout = 5000; # Milliseconds
+      borderSize = 2;
+      textColor = text;
+      backgroundColor = base;
+      borderColor = blue;
+      # To draw the progress indicator on top of the background color, use the over attribute. 
+      # To replace the background color, use the source attribute.
+      progressColor = "over ${surface0}";
+      extraConfig = '' 
       [urgency=high]
-      border-color=#fab387
+      border-color=${peach}
     '';
-  };
+    };
 }

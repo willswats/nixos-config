@@ -1,4 +1,4 @@
-{ pkgs, host, ... }:
+{ pkgs, host, globals, ... }:
 
 {
   gtk =
@@ -18,7 +18,7 @@
     {
       enable = true;
       font = {
-        name = "Hack";
+        name = globals.font;
         package = pkgs.nerdfonts.override { fonts = [ "Hack" ]; };
         size = 10;
       };

@@ -24,12 +24,9 @@
     '';
   };
 
+  # Taken from: https://github.com/catppuccin/fish/blob/main/themes/Catppuccin%20Mocha.theme
   xdg.configFile."fish/themes/Catppuccin Mocha.theme" = {
     text = ''
-      # name: 'Catppuccin mocha'
-      # url: 'https://github.com/catppuccin/fish'
-      # preferred_background: 1e1e2e
-
       fish_color_normal cdd6f4
       fish_color_command 89b4fa
       fish_color_param f2cdcd
@@ -56,6 +53,5 @@
       fish_pager_color_completion cdd6f4
       fish_pager_color_description 6c7086
     '';
-
   };
 }

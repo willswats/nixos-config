@@ -33,6 +33,35 @@
           user = user;
           homeDir = homeDir;
           wallpaper = ./wallpapers/minimal-desert.png;
+          font = "Hack Nerd Font";
+          colours = {
+            rosewater = "#f5e0dc";
+            flamingo = "#f2cdcd";
+            pink = "#f5c2e7";
+            mauve = "#cba6f7";
+            red = "#f38ba8";
+            maroon = "#eba0ac";
+            peach = "#fab387";
+            yellow = "#f9e2af";
+            green = "#a6e3a1";
+            teal = "#94e2d5";
+            sky = "#89dceb";
+            sapphire = "#74c7ec";
+            blue = "#89b4fa";
+            lavender = "#b4befe";
+            text = "#cdd6f4";
+            subtext1 = "#bac2de";
+            subtext0 = "#a6adc8";
+            overlay2 = "#9399b2";
+            overlay1 = "#7f849c";
+            overlay0 = "#6c7086";
+            surface2 = "#585b70";
+            surface1 = "#45475a";
+            surface0 = "#313244";
+            base = "#1e1e2e";
+            mantle = "#181825";
+            crust = "#11111b";
+          };
         };
         lib = nixpkgs.lib;
       in
@@ -115,80 +144,6 @@
                   };
                   users.${user}.imports = [
                     ./hosts/laptop/home.nix
-                    nixvim.homeManagerModules.nixvim
-                  ];
-                };
-              }
-            ];
-          };
-
-        virtual-desktop =
-          let
-            host = {
-              hostName = "${user}-virtual-desktop";
-              monitors = {
-                center = "Virtual-1";
-                left = "Virtual-1";
-              };
-              directories = directories;
-              bookmarks = bookmarks;
-            };
-          in
-          lib.nixosSystem {
-            inherit system;
-            specialArgs = {
-              inherit globals host;
-            };
-            modules = [
-              ./hosts
-              ./hosts/virtual/desktop
-              home-manager.nixosModules.home-manager
-              {
-                home-manager = {
-                  useGlobalPkgs = true;
-                  useUserPackages = true;
-                  extraSpecialArgs = {
-                    inherit globals host;
-                  };
-                  users.will.imports = [
-                    ./hosts/virtual/home.nix
-                    nixvim.homeManagerModules.nixvim
-                  ];
-                };
-              }
-            ];
-          };
-
-        virtual-laptop =
-          let
-            host = {
-              hostName = "${user}-virtual-laptop";
-              monitors = {
-                center = "Virtual-1";
-                left = "Virtual-1";
-              };
-              directories = directories;
-              bookmarks = bookmarks;
-            };
-          in
-          lib.nixosSystem {
-            inherit system;
-            specialArgs = {
-              inherit globals host;
-            };
-            modules = [
-              ./hosts
-              ./hosts/virtual/laptop
-              home-manager.nixosModules.home-manager
-              {
-                home-manager = {
-                  useGlobalPkgs = true;
-                  useUserPackages = true;
-                  extraSpecialArgs = {
-                    inherit globals host;
-                  };
-                  users.will.imports = [
-                    ./hosts/virtual/home.nix
                     nixvim.homeManagerModules.nixvim
                   ];
                 };
