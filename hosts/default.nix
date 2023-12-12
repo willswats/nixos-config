@@ -67,6 +67,10 @@ in
     shells = with pkgs; [ fish ];
   };
 
+  # Use the first portal implementation found in lexicographical order:
+  # https://github.com/flatpak/xdg-desktop-portal/blob/1.18.1/doc/portals.conf.rst.in
+  xdg.portal.config.common.default = "*";
+
   nix = {
     # Setup flakes
     package = pkgs.nixFlakes;
