@@ -222,9 +222,12 @@ in
 
           "$mod, tab, changegroupactive, f"
           "$mod shift, tab, changegroupactive, b"
-          "$mod, Next, movegroupwindow, f"
-          "$mod, Prior, movegroupwindow, b"
+          "$mod, Next, changegroupactive, f"
+          "$mod, Prior, changegroupactive, b"
+          "$mod shift, Next, movegroupwindow, f"
+          "$mod shift, Prior, movegroupwindow, b"
 
+          # Could remove this by using movewindoworgroup instead of movewindow below, but it's currently buggy
           "$mod, Left, moveintogroup, l"
           "$mod, Right, moveintogroup, r"
           "$mod, Up, moveintogroup, u"
