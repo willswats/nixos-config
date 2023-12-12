@@ -76,8 +76,9 @@ in
       playerctld = "${pkgs.playerctl}/bin/playerctld";
       brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
 
-      overlay0 = "0xff6c7086";
+      mauve = "0xffcba6f7";
       blue = "0xff89b4fa";
+      overlay0 = "0xff6c7086";
     in
     {
       enable = true;
@@ -120,13 +121,14 @@ in
         group = {
           "col.border_active" = blue;
           "col.border_inactive" = overlay0;
-          "col.border_locked_active" = blue;
+          "col.border_locked_active" = mauve;
           "col.border_locked_inactive" = overlay0;
           groupbar = {
             font_size = 14;
+            gradients = false;
             "col.active" = blue;
             "col.inactive" = overlay0;
-            "col.locked_active" = blue;
+            "col.locked_active" = mauve;
             "col.locked_inactive" = overlay0;
           };
         };
@@ -198,7 +200,7 @@ in
 
           "$mod SHIFT, semicolon, exec, ${swaylock}"
 
-          # Hyprland
+          # Special
           "$mod, q, killactive"
           "$mod, f, fullscreen"
 
@@ -212,11 +214,22 @@ in
           "$mod shift, minus, movetoworkspacesilent, special"
           "$mod, minus, movetoworkspacesilent, m+0"
 
-          "$mod shift, g, togglegroup"
-          "$mod, g, moveoutofgroup"
+          # Group
+          "$mod, g, togglegroup"
+          "$mod shift, g, lockactivegroup, toggle"
+          "$mod, o, moveoutofgroup"
+
           "$mod, tab, changegroupactive, f"
           "$mod shift, tab, changegroupactive, b"
+          "$mod, Next, movegroupwindow, f"
+          "$mod, Prior, movegroupwindow, b"
 
+          "$mod, Left, moveintogroup, l"
+          "$mod, Right, moveintogroup, r"
+          "$mod, Up, moveintogroup, u"
+          "$mod, Down, moveintogroup, d"
+
+          # General
           "$mod, h, movefocus, l"
           "$mod, l, movefocus, r"
           "$mod, k, movefocus, u"
