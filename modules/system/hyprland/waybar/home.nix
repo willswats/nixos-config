@@ -105,7 +105,7 @@
         in
         ''
           * { 
-            font-size: 20px;    
+            font-size: 18px;    
             font-family: ${fontName};
             border-radius: 0;
           }

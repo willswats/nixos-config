@@ -22,7 +22,7 @@
       font = {
         name = fontName;
         package = pkgs.nerdfonts.override { fonts = [ fontPackage ]; };
-        size = 12;
+        size = 10;
       };
       theme = {
         name = "Catppuccin-Mocha-Standard-Blue-Dark";
