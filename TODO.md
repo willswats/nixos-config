@@ -7,6 +7,7 @@
 - [ ] Setup for dart
 - [ ] Fix sqlfluff formatting
 - [ ] Add sql-language server
+- [ ] Fix cmp and autopairs occasionally crashing
 - [ ] Finish dap setup
 - [ ] Set Neovim `desc` for nested leader keymaps
 
