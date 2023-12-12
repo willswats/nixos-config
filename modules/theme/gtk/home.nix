@@ -20,7 +20,7 @@
       font = {
         name = globals.font;
         package = pkgs.nerdfonts.override { fonts = [ "Hack" ]; };
-        size = 10;
+        size = 12;
       };
       theme = {
         name = "Catppuccin-Mocha-Standard-Blue-Dark";
