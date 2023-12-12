@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../modules/system/hyprland/home.nix
     ../modules/theme/fonts/home.nix
     ../modules/theme/cursor/home.nix
     ../modules/theme/gtk/home.nix

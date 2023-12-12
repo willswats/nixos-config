@@ -5,6 +5,7 @@ let
 in
 {
   imports = [
+    ../modules/system/hyprland
     ../modules/system/sddm
     ../modules/system/plymouth
     ../modules/system/pipewire
@@ -14,6 +15,7 @@ in
     ../modules/theme/qt
     ../modules/utilities/pcmanfm
     ../modules/utilities/mullvad-vpn
+    ../modules/utilities/virt-manager
   ];
 
   time.timeZone = "Europe/London";

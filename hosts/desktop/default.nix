@@ -3,10 +3,8 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/desktop/hyprland
-    ../../modules/utilities/virt-manager
-    ../../modules/system/opentabletdriver
     ../../modules/system/amd
+    ../../modules/system/opentabletdriver
     ../../modules/games/steam
     ../../modules/games/r2modman
   ];

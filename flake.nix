@@ -143,7 +143,7 @@
                     inherit globals host;
                   };
                   users.${user}.imports = [
-                    ./hosts/laptop/home.nix
+                    ./hosts/home.nix
                     nixvim.homeManagerModules.nixvim
                   ];
                 };
