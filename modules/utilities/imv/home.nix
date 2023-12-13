@@ -24,6 +24,14 @@
       Keywords=photo;picture;
     '';
 
+  xdg.configFile."imv/config" = {
+    text = ''
+      [binds]
+      n = next
+      p = prev
+    '';
+  };
+
   xdg.mimeApps = {
     defaultApplications = {
       "image/png" = [ "imv-dir.desktop" ]; # jpg
