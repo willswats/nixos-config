@@ -12,6 +12,7 @@
 
   xdg.mimeApps = {
     defaultApplications = {
+      "text/markdown" = [ "nvim.desktop" ]; # markdown
       "text/plain" = [ "nvim.desktop" ]; # plain text
       "text/html" = [ "nvim.desktop" ]; # html
       "text/css" = [ "nvim.desktop" ]; # css

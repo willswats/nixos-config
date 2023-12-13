@@ -17,11 +17,11 @@
     ../modules/utilities/firefox/home.nix
     ../modules/utilities/chromium/home.nix
     ../modules/utilities/mpv/home.nix
-    ../modules/utilities/qview/home.nix
+    ../modules/utilities/imv/home.nix
     ../modules/utilities/fish/home.nix
     ../modules/utilities/alacritty/home.nix
     ../modules/utilities/bottom/home.nix
-    ../modules/utilities/pcmanfm/home.nix
+    ../modules/utilities/lf/home.nix
     ../modules/utilities/mullvad-vpn/home.nix
     ../modules/utilities/vesktop/home.nix
   ];

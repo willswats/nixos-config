@@ -55,7 +55,7 @@ in
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
       grimblast = "${pkgs.grimblast}/bin/grimblast";
       firefox = "${pkgs.firefox}/bin/firefox";
-      pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
+      lf = "${pkgs.lf}/bin/lf";
       alacritty = "${pkgs.alacritty}/bin/alacritty";
       rofi = "${pkgs.rofi-wayland}/bin/rofi";
       nvim = "nvim"; # This is broken (nixvim): "${pkgs.neovim}/bin/nvim";
@@ -126,7 +126,6 @@ in
           "col.border_locked_inactive" = overlay0;
           groupbar = {
             font_size = 14;
-            gradients = false;
             "col.active" = blue;
             "col.inactive" = overlay0;
             "col.locked_active" = mauve;
@@ -184,7 +183,7 @@ in
 
           "$mod, return, exec, ${alacritty}"
           "$mod, w, exec, ${firefox}" # Web browser
-          "$mod, e, exec, ${pcmanfm}" # File explorer
+          "$mod, e, exec, ${alacritty} -e ${lf}" # File explorer
           "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
           "$mod, p, exec, ${alacritty} -e ${btm} -b" # Process monitor
           "$mod, m, exec, ${spotify}" # Music player
