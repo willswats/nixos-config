@@ -1,6 +1,12 @@
 { pkgs, ... }:
 
 {
+  xdg.mimeApps = {
+    defaultApplications = {
+      "inode/directory" = [ "lf.desktop" ]; # Directories
+    };
+  };
+
   home.packages = with pkgs; [
     trash-cli
     wl-clipboard
