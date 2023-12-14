@@ -55,7 +55,7 @@ in
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
       grimblast = "${pkgs.grimblast}/bin/grimblast";
       firefox = "${pkgs.firefox}/bin/firefox";
-      lf = "${pkgs.lf}/bin/lf";
+      pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
       alacritty = "${pkgs.alacritty}/bin/alacritty";
       rofi = "${pkgs.rofi-wayland}/bin/rofi";
       nvim = "nvim"; # This is broken (nixvim): "${pkgs.neovim}/bin/nvim";
@@ -171,6 +171,7 @@ in
           "${lxpolkit}"
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
           "${nm-applet} --indicator"
+          "${pcmanfm} --daemon-mode" # Run as dameon to prevent pcmanfm from opening slowly on first launch (bug)
           "${rclone} mount --vfs-cache-mode writes google-drive: ~/Drive"
           "mkdir -p ${directories}"
         ];
@@ -183,7 +184,7 @@ in
 
           "$mod, return, exec, ${alacritty}"
           "$mod, w, exec, ${firefox}" # Web browser
-          "$mod, e, exec, ${alacritty} -e ${lf}" # File explorer
+          "$mod, e, exec, ${pcmanfm}" # File explorer
           "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
           "$mod, p, exec, ${alacritty} -e ${btm} -b" # Process monitor
           "$mod, m, exec, ${spotify}" # Music player
