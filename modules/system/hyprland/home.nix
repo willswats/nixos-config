@@ -234,6 +234,8 @@ in
           "$mod, Down, moveintogroup, d"
 
           # General
+          "$mod, space, cyclenext" # To select floating windows
+
           "$mod, h, movefocus, l"
           "$mod, l, movefocus, r"
           "$mod, k, movefocus, u"
