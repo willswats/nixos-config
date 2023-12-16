@@ -55,7 +55,6 @@
       rclone
       rclone-browser
       spotify
-      soundux
       yt-dlp
       zotero
     ];
