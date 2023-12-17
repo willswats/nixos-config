@@ -99,6 +99,8 @@ in
         ];
 
         input = {
+          follow_mouse = 1; # fix steam hover
+          mouse_refocus = false; # fix steam hover 
           kb_layout = "gb";
           accel_profile = "flat";
           touchpad = {
