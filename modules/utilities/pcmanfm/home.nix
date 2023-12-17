@@ -6,6 +6,12 @@
     gnome.file-roller
   ];
 
+  xdg.mimeApps = {
+    defaultApplications = {
+      "inode/directory" = [ "pcmanfm.desktop" ]; # Directories
+    };
+  };
+
   xdg.configFile."pcmanfm/default/pcmanfm.conf" = {
     force = true;
     text = ''
