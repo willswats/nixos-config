@@ -21,7 +21,7 @@
         system = "x86_64-linux";
         user = "will";
         homeDir = "/home/${user}";
-        directories = "~/Downloads ~/Pictures ~/Videos ~/Drive ~/Code";
+        directories = "~/Downloads ~/Pictures ~/Videos ~/Audio ~/Scripts ~/Code ~/Drive";
         bookmarks =
           let
             bookmarkStart = "file://${homeDir}/";
@@ -30,6 +30,8 @@
             "${bookmarkStart}Downloads Downloads"
             "${bookmarkStart}Pictures Pictures"
             "${bookmarkStart}Videos Videos"
+            "${bookmarkStart}Audio Audio"
+            "${bookmarkStart}Scripts Scripts"
             "${bookmarkStart}Code Code"
           ];
         globals = {
