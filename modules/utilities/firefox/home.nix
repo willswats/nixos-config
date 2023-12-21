@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  home.packages = with pkgs; [ web-ext ];
+
   programs.firefox = {
     enable = true;
     package = pkgs.firefox.override {
