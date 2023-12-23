@@ -42,8 +42,8 @@
             format-source = " {volume}%";
             format-source-muted = " 0%";
             on-click = "${wpctl} set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
-            on-scroll-up = "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 5%+";
-            on-scroll-down = "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 5%-";
+            on-scroll-up = "";
+            on-scroll-down = "";
           };
 
           pulseaudio = {
