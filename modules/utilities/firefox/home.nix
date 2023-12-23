@@ -6,10 +6,10 @@
   programs.firefox = {
     enable = true;
     package = pkgs.firefox.override {
-      cfg = {
+      nativeMessagingHosts = [
         # Tridactyl native connector
-        enableTridactylNative = true;
-      };
+        pkgs.tridactyl-native
+      ];
     };
     profiles.default = {
       id = 0;
@@ -176,7 +176,7 @@
               {
                 name = "Home Manager";
                 url =
-                  "https://nix-community.github.io/home-manager/options.html";
+                  "https://nix-community.github.io/home-manager/options.xhtml";
               }
               {
                 name = "nixvim docs";
