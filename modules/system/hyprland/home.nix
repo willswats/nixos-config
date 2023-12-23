@@ -175,6 +175,7 @@ in
           "${nm-applet} --indicator"
           "${pcmanfm} --daemon-mode" # Run as dameon to prevent pcmanfm from opening slowly on first launch (bug)
           "${rclone} mount --vfs-cache-mode writes google-drive: ~/Drive"
+          "while sleep 0.1; do ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 100%; done" # Prevent microphone from being auto adjusted to lower than 100
           "mkdir -p ${directories}"
         ];
 
