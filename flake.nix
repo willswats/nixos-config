@@ -91,6 +91,8 @@
                   "${bookmarkStart}Downloads Downloads"
                   "${bookmarkStart}Pictures Pictures"
                   "${bookmarkStart}Videos Videos"
+                  "${bookmarkStart}Audio Audio"
+                  "${bookmarkStart}Scripts Scripts"
                   "${bookmarkStart}Code Code"
                   "${bookmarkStart}Games Games"
                 ];
