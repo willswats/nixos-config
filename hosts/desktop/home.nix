@@ -6,6 +6,7 @@
     ../../modules/system/opentabletdriver/home.nix
     ../../modules/games/steam/home.nix
     ../../modules/games/heroic/home.nix
+    ../../modules/games/lutris/home.nix
     ../../modules/games/r2modman/home.nix
     ../../modules/games/osu/home.nix
     ../../modules/games/ishiiruka/home.nix
