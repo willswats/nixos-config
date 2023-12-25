@@ -46,6 +46,7 @@ in
 
   # Enable bluetooth 
   hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
 
   # Enable polkit
   security.polkit.enable = true;
