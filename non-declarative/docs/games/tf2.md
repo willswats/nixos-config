@@ -11,5 +11,5 @@ git clone https://github.com/rbjaxter/budhud.git ~/.steam/steam/steamapps/common
 TF2 is currently broken on Linux, and the `LD_PRELOAD` launch option fixes it.
 
 ```text
--novid LD_PRELOAD=$LD_PRELOAD:/run/current-system/sw/lib/libtcmalloc_minimal.so %command%
+LD_PRELOAD=$LD_PRELOAD:/run/current-system/sw/lib/libtcmalloc_minimal.so %command% -novid
 ```
