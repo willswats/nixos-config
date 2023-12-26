@@ -19,10 +19,32 @@
       Icon=slippi
     '';
 
-  # Setup controller
+  # Setup controllers
   xdg.configFile."SlippiOnline/Config/GCPadNew.ini" = {
     text = ''
       [GCPad1]
+      Device = evdev/0/DualSense Wireless Controller
+      Buttons/A = `Button 3`
+      Buttons/B = `Button 2`
+      Buttons/X = `Button 1`
+      Buttons/Y = `Button 0`
+      Buttons/Z = `Button 5`
+      Buttons/Start = `Button 9`
+      Main Stick/Up = `Axis 1-`
+      Main Stick/Down = `Axis 1+`
+      Main Stick/Left = `Axis 0-`
+      Main Stick/Right = `Axis 0+`
+      C-Stick/Up = `Axis 4-`
+      C-Stick/Down = `Axis 4+`
+      C-Stick/Left = `Axis 3-`
+      C-Stick/Right = `Axis 3+`
+      Triggers/L = `Button 6`
+      Triggers/R = `Button 7`
+      D-Pad/Up = `Axis 7-`
+      D-Pad/Down = `Axis 7+`
+      D-Pad/Left = `Axis 6-`
+      D-Pad/Right = `Axis 6+`
+      [GCPad2]
       Device = evdev/0/Xbox 360 Wireless Receiver
       Buttons/A = `Button 2`
       Buttons/B = `Button 3`
@@ -48,19 +70,12 @@
       D-Pad/Right = `Button 12`
       Main Stick/Dead Zone = 50.000000000000000
       C-Stick/Dead Zone = 50.000000000000000
-      [GCPad2]
-      Main Stick/Dead Zone = 7.2296936792042858e+225
-      C-Stick/Radius = 7.0634461777875856e-302
-      Triggers/Threshold = 1.8526784551501365e-68
       [GCPad3]
-      Buttons/Threshold = 6.9338065469619433e-308
-      Main Stick/Radius = 3.7261370281373367e+235
+      Main Stick/Radius = 1.8526784551501365e-68
+      Microphone/Threshold = 3.7261370281373367e+235
+      D-Pad/Threshold = 1.8526784551501365e-68
       [GCPad4]
-      Main Stick/Dead Zone = 6.3043380986191605e-30
-      C-Stick/Radius = 7.0632744700283157e-302
-      Triggers/Threshold = 1.0268840610555240e-310
-      Microphone/Threshold = 9.6196565225512093e-35
-      D-Pad/Threshold = 9.6196565225512093e-35
+      Main Stick/Radius = 6.2197924154954527e-318
     '';
   };
 
