@@ -1,7 +1,9 @@
 { ... }:
 
 {
-  programs.gpg = { enable = true; };
+  programs.gpg = {
+    enable = true;
+  };
 
   services.gpg-agent = {
     enable = true;
@@ -11,6 +13,6 @@
     maxCacheTtl = 86400; # 86400 seconds - 24 hours
     defaultCacheTtlSsh = 86400; # 86400 seconds - 24 hours
     maxCacheTtlSsh = 86400; # 86400 seconds - 24 hours
-    pinentryFlavor = "gnome3"; # null or one of "curses", "tty", "emacs", "gnome3", "qt"
+    pinentryFlavor = "qt";
   };
 }
