@@ -9,6 +9,11 @@
 - [ ] Finish dap setup
 - [ ] Set Neovim `desc` for nested leader keymaps
 
+## Hyprland
+
+- [ ] Use `hyprctl dpms off` and `hyprctl dpms on` to turn on and off the display when idle
+- [ ] Replace temp exit script - waiting for [fix](https://github.com/hyprwm/Hyprland/issues/3558)
+
 ## MPV
 
 - [ ] Add binding for selecting next and previous in MPV uosc playlist and file explorer
@@ -20,6 +25,5 @@
 
 ## Other
 
-- [ ] Use `hyprctl dpms off` and `hyprctl dpms on` to turn on and off the display when idle
 - [ ] Format disk with [disko](https://github.com/nix-community/disko)
 - [ ] Setup a Yubikey for GPG git commit signing
