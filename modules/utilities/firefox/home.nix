@@ -106,6 +106,10 @@
                 url = "https://www.themoviedb.org/";
               }
               {
+                name = "Goodreads";
+                url = "https://www.goodreads.com/";
+              }
+              {
                 name = "AlternativeTo";
                 url = "https://alternativeto.net/";
               }
