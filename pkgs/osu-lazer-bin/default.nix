@@ -8,13 +8,13 @@
 
 let
   pname = "osu-lazer-bin";
-  version = "2023.1229.0";
+  version = "2023.1229.1";
   name = "${pname}-${version}";
 
   osu-lazer-bin-src = {
     x86_64-linux = {
       url = "https://github.com/ppy/osu/releases/download/${version}/osu.AppImage";
-      sha256 = "sha256-lRdRPwa6xix5Nvt3szPeposmqU8D826iFmE6S1uPBF8=";
+      sha256 = "sha256-x2LqBbQCswwJ5iENjad17dzWV95lY03P7FXGQwMRNE8=";
     };
   }.${stdenv.system} or (throw "${pname}-${version}: ${stdenv.system} is unsupported.");
 
