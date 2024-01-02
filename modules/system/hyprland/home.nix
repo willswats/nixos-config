@@ -102,8 +102,6 @@ in
         ];
 
         input = {
-          follow_mouse = 1; # fix steam hover
-          mouse_refocus = false; # fix steam hover 
           kb_layout = "gb";
           accel_profile = "flat";
           touchpad = {
@@ -149,6 +147,9 @@ in
           "float, class:steam, title:Steam Settings"
           "float, class:steam, title:Game Servers"
           "float, class:steam, title:Screenshot Manager"
+          # https://github.com/hyprwm/Hyprland/issues/2661
+          "stayfocused, title:^()$,class:^(steam)$" # Fix steam context menus
+          "minsize 1 1, title:^()$,class:^(steam)$" # Fix steam context menus
           "idleinhibit fullscreen, class:Apprun, title:Dolphin" # Prevent Ishiiruka swayidle lock
         ];
 

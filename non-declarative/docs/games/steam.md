@@ -12,6 +12,8 @@ When a friend joins a game: Disabled
 
 Start Up Location: Library
 
+Enable context menu focus compatibility mode: Enabled
+
 ### Compatability
 
 Enable Steam Play for all other titles: Enabled
