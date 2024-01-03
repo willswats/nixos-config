@@ -15,15 +15,15 @@
             "Filters": [],
             "AbsoluteModeSettings": {
               "Display": {
-                "Width": 3000.0,
-                "Height": 1920.0,
-                "X": 1500.0,
-                "Y": 960.0,
+                "Width": 1920.0,
+                "Height": 1080.0,
+                "X": 2040.0,
+                "Y": 540.0,
                 "Rotation": 0.0
               },
               "Tablet": {
-                "Width": 254.0,
-                "Height": 158.75,
+                "Width": 180.42426,
+                "Height": 101.48864,
                 "X": 127.0,
                 "Y": 79.375,
                 "Rotation": 0.0
