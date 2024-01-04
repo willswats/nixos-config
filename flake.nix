@@ -82,7 +82,7 @@
                 center = "DP-1";
                 left = "DP-2";
               };
-              directories = "${directories} ~/Games/Heroic ~/Games/Bottles ~/Games/ROMs ~/Games/Doom/WADs ~/Games/Doom/pk3 ~/Games/TheForceEngine/DarkForces";
+              directories = "${directories} ~/Games/ROMs ~/Games/Heroic ~/Games/Lutris ~/Games/Doom/WADs ~/Games/Doom/pk3 ~/Games/TheForceEngine/DarkForces";
               bookmarks =
                 let
                   bookmarkStart = "file://${homeDir}/";
