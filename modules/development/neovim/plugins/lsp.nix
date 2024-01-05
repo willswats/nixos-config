@@ -6,7 +6,8 @@ let
 in
 {
   home.packages = with pkgs; [
-    marksman # Markdown lsp
+    marksman # Markdown LSP
+    sqls # SQL LSP
   ];
 
   programs.nixvim = {
@@ -23,8 +24,15 @@ in
         lua-ls.enable = true;
         pyright.enable = true;
         ruff-lsp.enable = true;
+        dartls.enable = true;
         bashls.enable = true;
-        html.enable = true;
+        html = {
+          enable = true;
+          onAttach.function = ''
+            client.server_capabilities.documentFormattingProvider = false
+            client.server_capabilities.documentRangeFormattingProvider = false
+          '';
+        };
         cssls.enable = true;
         jsonls.enable = true;
         tsserver.enable = true;
@@ -72,6 +80,15 @@ in
 
       lspconfig.marksman.setup {
         capabilities = ${capabilities}
+      }
+
+      lspconfig.sqls.setup {
+        capabilities = ${capabilities},
+        settings = {
+          sqls = {
+            connections = {},
+          },
+        },
       }
 
       local signs = {

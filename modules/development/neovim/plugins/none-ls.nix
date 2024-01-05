@@ -24,8 +24,8 @@
           ${formatting}.prettier,
           ${formatting}.nixpkgs_fmt,
           ${formatting}.taplo,
-          ${formatting}.sqlfluff,
-          ${diagnostics}.sqlfluff,
+          ${formatting}.sqlfluff.with({ extra_args = { "--dialect", "postgres" } }),
+          ${diagnostics}.sqlfluff.with({ extra_args = { "--dialect", "postgres" } }),
           ${diagnostics}.markdownlint.with({ extra_args = { "--disable", "MD013" } })
         }
       '');
