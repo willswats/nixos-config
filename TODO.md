@@ -4,6 +4,7 @@
 
 - [ ] Finish dap setup
 - [ ] Set Neovim `desc` for nested leader keymaps
+- [ ] Switch from `sqls` to `sql-language-server` - [needs to be packaged](https://github.com/NixOS/nixpkgs/issues/203887)
 
 ## Hyprland
 
