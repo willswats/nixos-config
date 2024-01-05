@@ -3,9 +3,9 @@
 ## Neovim
 
 - [ ] Finish dap setup
-- [ ] Set Neovim `desc` for nested leader keymaps
-- [ ] Fix or move from sqlfluff formatting (never works) and linting (works sometimes)
 - [ ] Switch from `sqls` to `sql-language-server` - [needs to be packaged](https://github.com/NixOS/nixpkgs/issues/203887)
+- [ ] Fix sqlfluff linter crashing (index out of range)
+- [ ] Set Neovim `desc` for nested leader keymaps
 
 ## Hyprland
 
