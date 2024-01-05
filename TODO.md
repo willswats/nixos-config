@@ -2,10 +2,6 @@
 
 ## Neovim
 
-- [ ] Setup for dart
-- [ ] Disable html lsp format
-- [ ] Fix sqlfluff formatting
-- [ ] Add sql-language server
 - [ ] Finish dap setup
 - [ ] Set Neovim `desc` for nested leader keymaps
 
