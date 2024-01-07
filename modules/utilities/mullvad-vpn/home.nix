@@ -1,10 +1,8 @@
 { pkgs, ... }:
 
 {
-  # Mullvad is broken on 2023.5
-  # https://github.com/mullvad/mullvadvpn-app/issues/5075
   home.packages = with pkgs; [
-    (callPackage ../../../pkgs/mullvad-vpn { })
+    mullvad-vpn
   ];
 
   xdg.configFile."Mullvad VPN/gui_settings.json" = {
@@ -17,7 +15,7 @@
            "startMinimized": true,
            "unpinnedWindow": true,
            "browsedForSplitTunnelingApplications": [],
-           "changelogDisplayedForVersion": "2023.4"
+           "changelogDisplayedForVersion": "2023.6"
          }
     '';
   };
