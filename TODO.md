@@ -19,7 +19,6 @@
 ## Add pkgs
 
 - [ ] Add nixpkgs catppuccin-sddm package - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/255808)
-- [ ] Add nixpkgs mullvad-vpn - [mullvad is broken on 2023.05](https://github.com/mullvad/mullvadvpn-app/issues/5075)
 
 ## Other
 
