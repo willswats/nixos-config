@@ -10,6 +10,7 @@
 - [Mal Sync](https://addons.mozilla.org/en-US/firefox/addon/mal-sync)
 - [TWP - Translate Web Pages](https://addons.mozilla.org/en-US/firefox/addon/traduzir-paginas-web)
 - [SponsorBlock](https://addons.mozilla.org/en-US/firefox/addon/sponsorblock)
+- [Return YouTube Dislike](https://addons.mozilla.org/en-US/firefox/addon/return-youtube-dislikes/)
 - [YouTube Alternative Switch](https://addons.mozilla.org/en-US/firefox/addon/youtube-alternative-switch/)
 - [BetterTTV](https://addons.mozilla.org/en-US/firefox/addon/betterttv)
 - [TTV LOL PRO](https://addons.mozilla.org/en-US/firefox/addon/ttv-lol-pro/)
