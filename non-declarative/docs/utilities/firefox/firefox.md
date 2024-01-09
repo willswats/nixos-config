@@ -9,6 +9,7 @@
 - [Tridactyl](https://addons.mozilla.org/en-US/firefox/addon/tridactyl-vim/)
 - [Mal Sync](https://addons.mozilla.org/en-US/firefox/addon/mal-sync)
 - [TWP - Translate Web Pages](https://addons.mozilla.org/en-US/firefox/addon/traduzir-paginas-web)
+- [Redirector](https://addons.mozilla.org/en-US/firefox/addon/redirector)
 - [SponsorBlock](https://addons.mozilla.org/en-US/firefox/addon/sponsorblock)
 - [Return YouTube Dislike](https://addons.mozilla.org/en-US/firefox/addon/return-youtube-dislikes/)
 - [YouTube Alternative Switch](https://addons.mozilla.org/en-US/firefox/addon/youtube-alternative-switch/)
@@ -36,6 +37,10 @@
 
 - Notifications (Anime): Disabled
 - Notifications (Manga): Disabled
+
+### Redirector
+
+- Import the [settings file](./Redirector.json).
 
 ### BetterTTV
 
