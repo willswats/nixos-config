@@ -55,6 +55,7 @@
       rclone
       rclone-browser
       spotify
+      foliate
       yt-dlp
       zotero
     ];
