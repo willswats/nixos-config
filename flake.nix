@@ -21,7 +21,7 @@
         system = "x86_64-linux";
         user = "will";
         homeDir = "/home/${user}";
-        directories = "~/Downloads ~/Pictures ~/Videos ~/Audio ~/Scripts ~/Code ~/Drive";
+        directories = "~/Downloads ~/Pictures ~/Videos ~/Audio ~/Books ~/Scripts ~/Code ~/Drive";
         bookmarks =
           let
             bookmarkStart = "file://${homeDir}/";
@@ -31,6 +31,7 @@
             "${bookmarkStart}Pictures Pictures"
             "${bookmarkStart}Videos Videos"
             "${bookmarkStart}Audio Audio"
+            "${bookmarkStart}Books Books"
             "${bookmarkStart}Scripts Scripts"
             "${bookmarkStart}Code Code"
           ];
@@ -82,7 +83,7 @@
                 center = "DP-1";
                 left = "DP-2";
               };
-              directories = "${directories} ~/Games/Heroic ~/Games/Lutris ~Games/Bottles ~/Games/ROMs ~/Games/Doom/WADs ~/Games/Doom/pk3 ~/Games/TheForceEngine/DarkForces";
+              directories = "${directories} ~/Games/Heroic ~/Games/Bottles ~/Games/ROMs ~/Games/Doom/WADs ~/Games/Doom/pk3";
               bookmarks =
                 let
                   bookmarkStart = "file://${homeDir}/";
@@ -92,6 +93,7 @@
                   "${bookmarkStart}Pictures Pictures"
                   "${bookmarkStart}Videos Videos"
                   "${bookmarkStart}Audio Audio"
+                  "${bookmarkStart}Books Books"
                   "${bookmarkStart}Scripts Scripts"
                   "${bookmarkStart}Code Code"
                   "${bookmarkStart}Games Games"
