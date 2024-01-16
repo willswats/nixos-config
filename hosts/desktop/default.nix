@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ../../modules/system/amd
     ../../modules/system/opentabletdriver
+    ../../modules/system/wooting
     ../../modules/games/steam
     ../../modules/games/r2modman
   ];

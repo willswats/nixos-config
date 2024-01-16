@@ -1,0 +1,5 @@
+{ ... }:
+
+{
+  hardware.wooting.enable = true;
+}
