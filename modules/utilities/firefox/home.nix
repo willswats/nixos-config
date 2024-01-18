@@ -55,16 +55,16 @@
                 url = "https://www.dropbox.com/home";
               }
               {
-                name = "PayPal";
-                url = "https://www.paypal.com/myaccount/profile/";
-              }
-              {
                 name = "Bitwarden";
                 url = "https://vault.bitwarden.com/";
               }
               {
                 name = "AnonAddy";
                 url = "https://app.anonaddy.com/";
+              }
+              {
+                name = "PayPal";
+                url = "https://www.paypal.com/myaccount/profile/";
               }
               {
                 name = "Reactive Resume";
