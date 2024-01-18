@@ -21,7 +21,7 @@
         system = "x86_64-linux";
         user = "will";
         homeDir = "/home/${user}";
-        directories = "~/Downloads ~/Pictures ~/Videos ~/Books ~/Scripts ~/Code ~/Drive";
+        directories = "~/Downloads ~/Pictures ~/Videos ~/Audio ~/Books ~/Scripts ~/Code ~/Drive";
         bookmarks =
           let
             bookmarkStart = "file://${homeDir}/";
@@ -30,6 +30,7 @@
             "${bookmarkStart}Downloads Downloads"
             "${bookmarkStart}Pictures Pictures"
             "${bookmarkStart}Videos Videos"
+            "${bookmarkStart}Audio Audio"
             "${bookmarkStart}Books Books"
             "${bookmarkStart}Scripts Scripts"
             "${bookmarkStart}Code Code"
@@ -91,6 +92,7 @@
                   "${bookmarkStart}Downloads Downloads"
                   "${bookmarkStart}Pictures Pictures"
                   "${bookmarkStart}Videos Videos"
+                  "${bookmarkStart}Audio Audio"
                   "${bookmarkStart}Books Books"
                   "${bookmarkStart}Scripts Scripts"
                   "${bookmarkStart}Code Code"

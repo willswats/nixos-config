@@ -17,6 +17,7 @@
     # Utilities
     mangohud
     bottles
+    soundux
     # Games
     airshipper
     prismlauncher
