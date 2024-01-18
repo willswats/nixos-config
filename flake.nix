@@ -21,18 +21,16 @@
         system = "x86_64-linux";
         user = "will";
         homeDir = "/home/${user}";
-        directories = "~/Downloads ~/Pictures ~/Videos ~/Audio ~/Books ~/Scripts ~/Code ~/Drive";
+        directories = "~/Drive ~/Downloads ~/Pictures ~/Videos ~/Code";
         bookmarks =
           let
             bookmarkStart = "file://${homeDir}/";
           in
           [
+            "${bookmarkStart}Drive Drive"
             "${bookmarkStart}Downloads Downloads"
             "${bookmarkStart}Pictures Pictures"
             "${bookmarkStart}Videos Videos"
-            "${bookmarkStart}Audio Audio"
-            "${bookmarkStart}Books Books"
-            "${bookmarkStart}Scripts Scripts"
             "${bookmarkStart}Code Code"
           ];
         globals = {
@@ -83,18 +81,16 @@
                 center = "DP-1";
                 left = "DP-2";
               };
-              directories = "${directories} ~/Games/Heroic ~/Games/Bottles ~/Games/ROMs ~/Games/Doom/WADs ~/Games/Doom/pk3";
+              directories = "${directories} ~/Games/Lutris ~/Games/Heroic ~/Games/Bottles";
               bookmarks =
                 let
                   bookmarkStart = "file://${homeDir}/";
                 in
                 [
+                  "${bookmarkStart}Drive Drive"
                   "${bookmarkStart}Downloads Downloads"
                   "${bookmarkStart}Pictures Pictures"
                   "${bookmarkStart}Videos Videos"
-                  "${bookmarkStart}Audio Audio"
-                  "${bookmarkStart}Books Books"
-                  "${bookmarkStart}Scripts Scripts"
                   "${bookmarkStart}Code Code"
                   "${bookmarkStart}Games Games"
                 ];

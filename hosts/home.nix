@@ -52,10 +52,9 @@
       gimp
       kdenlive
       fragments
-      rclone
-      rclone-browser
-      spotify
+      maestral-gui
       foliate
+      spotify
       yt-dlp
       zotero
     ];
