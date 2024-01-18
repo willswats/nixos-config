@@ -34,7 +34,6 @@
                 name = "Gmail";
                 url = "https://mail.google.com/";
               }
-
               {
                 name = "Calendar";
                 url = "https://calendar.google.com/";
@@ -50,6 +49,14 @@
               {
                 name = "Drive";
                 url = "https://drive.google.com/";
+              }
+              {
+                name = "Dropbox";
+                url = "https://www.dropbox.com/home";
+              }
+              {
+                name = "PayPal";
+                url = "https://www.paypal.com/myaccount/profile/";
               }
               {
                 name = "Bitwarden";
