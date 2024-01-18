@@ -21,13 +21,13 @@
         system = "x86_64-linux";
         user = "will";
         homeDir = "/home/${user}";
-        directories = "~/Drive ~/Downloads ~/Pictures ~/Videos ~/Code";
+        directories = "~/Dropbox ~/Downloads ~/Pictures ~/Videos ~/Code";
         bookmarks =
           let
             bookmarkStart = "file://${homeDir}/";
           in
           [
-            "${bookmarkStart}Drive Drive"
+            "${bookmarkStart}Dropbox DropboDropboxx"
             "${bookmarkStart}Downloads Downloads"
             "${bookmarkStart}Pictures Pictures"
             "${bookmarkStart}Videos Videos"
@@ -87,7 +87,7 @@
                   bookmarkStart = "file://${homeDir}/";
                 in
                 [
-                  "${bookmarkStart}Drive Drive"
+                  "${bookmarkStart}Dropbox Dropbox"
                   "${bookmarkStart}Downloads Downloads"
                   "${bookmarkStart}Pictures Pictures"
                   "${bookmarkStart}Videos Videos"

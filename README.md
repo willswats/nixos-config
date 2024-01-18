@@ -128,7 +128,7 @@ rm ~/.bash_history
 
 1. [Firefox](./non-declarative/docs/utilities/firefox/firefox.md)
 2. [GPG](./non-declarative/docs/utilities/gpg.md)
-3. [Maestral](./non-declarative/docs/utilities/maestral.md)
+3. [Dropbox](./non-declarative/docs/utilities/dropbox.md)
 4. [virt-manager](./non-declarative/docs/utilities/virt-manager.md)
 
 ### Games

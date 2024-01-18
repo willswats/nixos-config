@@ -52,7 +52,7 @@
       gimp
       kdenlive
       fragments
-      maestral-gui
+      dropbox
       foliate
       spotify
       yt-dlp

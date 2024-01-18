@@ -84,7 +84,7 @@
     text =
       let
         homeDir = globals.homeDir;
-        isoPath = "${homeDir}/Drive/Games/Emulation/ROMs/GC/";
+        isoPath = "${homeDir}/Dropbox/Games/Emulation/ROMs/GC/";
         iso = "Super Smash Bros. Melee (USA) (En,Ja) (Rev 2).nkit.iso";
       in
       ''

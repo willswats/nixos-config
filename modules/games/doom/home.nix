@@ -7,7 +7,7 @@
     text =
       let
         homeDir = globals.homeDir;
-        wadDirectory = "~/Drive/Games/Doom/WADs";
+        wadDirectory = "~/Dropbox/Games/Doom/WADs";
 
         player = ''
           autoaim=0

@@ -8,8 +8,8 @@
     shellAliases =
       let
         codeDirectory = "~/Code";
-        notebookDirectory = "~/Drive/Work/Notebook";
-        universityDirectory = "~/Drive/Work/Education/University";
+        notebookDirectory = "~/Dropbox/Work/Notebook";
+        universityDirectory = "~/Dropbox/Work/Education/University";
       in
       {
         code = "cd ${codeDirectory}";

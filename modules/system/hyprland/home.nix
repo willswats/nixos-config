@@ -50,7 +50,7 @@ in
       hyprpaper = "${pkgs.hyprpaper}/bin/hyprpaper";
       xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
       nm-applet = "${pkgs.networkmanagerapplet}/bin/nm-applet";
-      maestral-gui = "${pkgs.maestral-gui}/bin/maestral_qt";
+      dropbox = "${pkgs.dropbox}/bin/dropbox";
       hyprctl = "${pkgs.hyprland}/bin/hyprctl";
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
       grimblast = "${pkgs.grimblast}/bin/grimblast";
@@ -178,7 +178,7 @@ in
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
           "${nm-applet} --indicator"
           "${pcmanfm} --daemon-mode" # Run as dameon to prevent pcmanfm from opening slowly on first launch (bug)
-          "${maestral-gui}"
+          "${dropbox}"
           "while sleep 0.1; do ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 100%; done" # Prevent microphone from being auto adjusted to lower than 100
           "mkdir -p ${directories}"
         ];
