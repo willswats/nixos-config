@@ -21,7 +21,7 @@
         system = "x86_64-linux";
         user = "will";
         homeDir = "/home/${user}";
-        directories = "~/Dropbox ~/Downloads ~/Pictures ~/Videos ~/Code";
+        directories = "~/Downloads ~/Pictures ~/Videos ~/Code";
         bookmarks =
           let
             bookmarkStart = "file://${homeDir}/";
