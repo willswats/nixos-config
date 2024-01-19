@@ -63,12 +63,12 @@
                 url = "https://app.anonaddy.com/";
               }
               {
-                name = "PayPal";
-                url = "https://www.paypal.com/myaccount/profile/";
-              }
-              {
                 name = "Reactive Resume";
                 url = "https://rxresu.me/dashboard";
+              }
+              {
+                name = "PayPal";
+                url = "https://www.paypal.com/myaccount/profile/";
               }
             ];
           }
