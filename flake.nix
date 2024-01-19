@@ -27,7 +27,7 @@
             bookmarkStart = "file://${homeDir}/";
           in
           [
-            "${bookmarkStart}Dropbox DropboDropboxx"
+            "${bookmarkStart}Dropbox Dropbox"
             "${bookmarkStart}Downloads Downloads"
             "${bookmarkStart}Pictures Pictures"
             "${bookmarkStart}Videos Videos"
