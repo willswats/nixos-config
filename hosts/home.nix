@@ -53,7 +53,6 @@
       kdenlive
       fragments
       dropbox
-      foliate
       spotify
       yt-dlp
       zotero

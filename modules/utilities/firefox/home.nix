@@ -84,6 +84,10 @@
                 url = "https://www.twitch.tv/";
               }
               {
+                name = "Google Play Books";
+                url = "https://play.google.com/books";
+              }
+              {
                 name = "myNoise";
                 url = "https://mynoise.net";
               }
