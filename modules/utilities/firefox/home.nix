@@ -63,8 +63,8 @@
                 url = "https://app.anonaddy.com/";
               }
               {
-                name = "PayPal";
-                url = "https://www.paypal.com/myaccount/profile/";
+                name = "draw.io";
+                url = "https://app.diagrams.net";
               }
               {
                 name = "Reactive Resume";

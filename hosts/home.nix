@@ -50,6 +50,7 @@
       obs-studio
       gpu-screen-recorder
       gimp
+      krita
       kdenlive
       fragments
       dropbox
