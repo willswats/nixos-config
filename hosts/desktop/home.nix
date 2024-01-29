@@ -18,6 +18,7 @@
     # Utilities
     soundux
     mangohud
+    gamemode
     # Games
     airshipper
     prismlauncher
