@@ -16,9 +16,8 @@
 
   home.packages = with pkgs; [
     # Utilities
-    mangohud
-    bottles
     soundux
+    mangohud
     # Games
     airshipper
     prismlauncher

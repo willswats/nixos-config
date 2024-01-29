@@ -81,7 +81,7 @@
                 center = "DP-1";
                 left = "DP-2";
               };
-              directories = "${directories} ~/Games/Lutris ~/Games/Heroic ~/Games/Bottles";
+              directories = "${directories} ~/Games/Lutris ~/Games/Heroic";
               bookmarks =
                 let
                   bookmarkStart = "file://${homeDir}/";
