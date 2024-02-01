@@ -9,12 +9,11 @@
 - [Tridactyl](https://addons.mozilla.org/en-US/firefox/addon/tridactyl-vim/)
 - [Mal Sync](https://addons.mozilla.org/en-US/firefox/addon/mal-sync)
 - [TWP - Translate Web Pages](https://addons.mozilla.org/en-US/firefox/addon/traduzir-paginas-web)
-- [Redirector](https://addons.mozilla.org/en-US/firefox/addon/redirector)
 - [SponsorBlock](https://addons.mozilla.org/en-US/firefox/addon/sponsorblock)
 - [Return YouTube Dislike](https://addons.mozilla.org/en-US/firefox/addon/return-youtube-dislikes/)
 - [YouTube Alternative Switch](https://addons.mozilla.org/en-US/firefox/addon/youtube-alternative-switch/)
 - [BetterTTV](https://addons.mozilla.org/en-US/firefox/addon/betterttv)
-- [TTV LOL PRO](https://addons.mozilla.org/en-US/firefox/addon/ttv-lol-pro/)
+- [Mute Twitch Ads](https://addons.mozilla.org/en-US/firefox/addon/mute-twitch-ads)
 - [Zotero Connector](https://www.zotero.org/download/connectors)
 
 ## Extension Settings
@@ -37,10 +36,6 @@
 
 - Notifications (Anime): Disabled
 - Notifications (Manga): Disabled
-
-### Redirector
-
-- Import the [settings file](./Redirector.json).
 
 ### BetterTTV
 
