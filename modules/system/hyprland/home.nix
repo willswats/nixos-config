@@ -6,7 +6,7 @@ let
 in
 {
   imports = [
-    ./hyprpaper/home.nix
+    ./swaybg/home.nix
     ./swaylock/home.nix
     ./waybar/home.nix
     ./rofi/home.nix
@@ -41,13 +41,15 @@ in
 
   wayland.windowManager.hyprland =
     let
+      wallpaper = globals.wallpaper;
+
       monitorCenter = host.monitors.center;
       monitorLeft = host.monitors.left;
       directories = host.directories;
 
       waybar = "${pkgs.waybar}/bin/waybar";
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
-      hyprpaper = "${pkgs.hyprpaper}/bin/hyprpaper";
+      swaybg = "${pkgs.swaybg}/bin/swaybg";
       xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
       nm-applet = "${pkgs.networkmanagerapplet}/bin/nm-applet";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
@@ -172,7 +174,7 @@ in
         ];
 
         exec-once = [
-          "${hyprpaper}"
+          "${swaybg} --i ${wallpaper} -m fill"
           "${playerctld}"
           "${lxpolkit}"
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
