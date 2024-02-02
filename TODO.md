@@ -22,6 +22,7 @@
 
 ## Other
 
+- [ ] Soundux and citra core failing to build
 - [ ] Airshipper will not launch without setting `WINIT_UNIX_BACKEND=x11`, however, setting this system wide causes Alacritty to always open in floating window mode
 - [ ] Format disk with [disko](https://github.com/nix-community/disko)
 - [ ] Setup a Yubikey for GPG git commit signing
