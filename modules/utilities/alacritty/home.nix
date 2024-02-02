@@ -46,26 +46,27 @@ in
         cursor = {
           text = base;
           cursor = rosewater;
-          vi_mode_cursor = {
-            text = base;
-            cursor = lavender;
-          };
+        };
+
+        vi_mode_cursor = {
+          text = base;
+          cursor = lavender;
         };
 
         search = {
           matches = {
             foreground = base;
             background = subtext0;
-            focused_match = {
-
-              foreground = base;
-              background = green;
-            };
-            footer_bar = {
-              foreground = base;
-              background = subtext0;
-            };
           };
+          focused_match = {
+            foreground = base;
+            background = green;
+          };
+        };
+
+        footer_bar = {
+          foreground = base;
+          background = subtext0;
         };
 
         hints = {

@@ -16,7 +16,7 @@
 
   home.packages = with pkgs; [
     # Utilities
-    soundux
+    # soundux
     mangohud
     gamemode
     # Games
