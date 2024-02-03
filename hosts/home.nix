@@ -49,6 +49,7 @@
       # Utilities
       obs-studio
       gpu-screen-recorder
+      gpu-screen-recorder-gtk
       gimp
       krita
       kdenlive

@@ -64,15 +64,6 @@ in
       btm = "${pkgs.bottom}/bin/btm";
       spotify = "${pkgs.spotify}/bin/spotify";
 
-      # gpu-screen-recorder commands
-      gpu-screen-recorder = "${pkgs.gpu-screen-recorder}/bin/gpu-screen-recorder";
-      date = "${pkgs.coreutils-full}/bin/date";
-      speakers = "$(${wpctl} inspect @DEFAULT_AUDIO_SINK@ | grep node.name | cut -d \\\" -f2).monitor";
-      microphone = "$(${wpctl} inspect @DEFAULT_AUDIO_SOURCE@ | grep node.name | cut -d \\\" -f2)";
-      recordCommand = "${gpu-screen-recorder} -w \"${monitorCenter}\" -c mp4 -f 60 -fm cfr -a \"${speakers}|${microphone}\" -o ~/Videos/\"$(${date})\".mp4";
-      replayCommand = "${gpu-screen-recorder} -w \"${monitorCenter}\" -c mp4 -f 60 -fm cfr -a \"${speakers}|${microphone}\" -r 300 -o ~/Videos";
-      replaySaveCommand = "kill -SIGUSR1 $(pidof ${gpu-screen-recorder})";
-
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
       playerctld = "${pkgs.playerctl}/bin/playerctld";
@@ -197,10 +188,6 @@ in
           "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
           "$mod, p, exec, ${alacritty} -e ${btm} -b" # Process monitor
           "$mod, m, exec, ${spotify}" # Music player
-
-          "$mod SHIFT, F1, exec, ${hyprshade} off; ${alacritty} -e ${recordCommand}; ${hyprshade} auto"
-          "$mod SHIFT, F2, exec, ${hyprshade} off; ${alacritty} -e ${replayCommand}; ${hyprshade} auto"
-          "$mod SHIFT, F3, exec, ${alacritty} -e ${replaySaveCommand};"
 
           ", print, exec, ${hyprshade} off; ${grimblast} save output; ${hyprshade} auto" # Screenshot active monitor
           "SHIFT, print, exec, ${hyprshade} off; ${grimblast} save area; ${hyprshade} auto" # Screenshot manually selected area
