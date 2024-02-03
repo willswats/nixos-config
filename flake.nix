@@ -13,9 +13,14 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprland = {
+      url = "github:hyprwm/Hyprland?ref=v0.34.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, nixvim, ... }: {
+  outputs = { nixpkgs, home-manager, hyprland, nixvim, ... }: {
     nixosConfigurations =
       let
         system = "x86_64-linux";
@@ -106,6 +111,7 @@
                 ./hosts
                 ./hosts/desktop
                 home-manager.nixosModules.home-manager
+                hyprland.nixosModules.default
                 {
                   home-manager = {
                     useGlobalPkgs = true;
@@ -143,6 +149,7 @@
               ./hosts
               ./hosts/laptop
               home-manager.nixosModules.home-manager
+              hyprland.nixosModules.default
               {
                 home-manager = {
                   useGlobalPkgs = true;
