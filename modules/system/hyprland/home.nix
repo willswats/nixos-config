@@ -186,7 +186,7 @@ in
           "$mod, w, exec, ${firefox}" # Web browser
           "$mod, e, exec, ${pcmanfm}" # File explorer
           "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
-          "$mod, p, exec, ${alacritty} -e ${btm} -b" # Process monitor
+          "$mod, s, exec, ${alacritty} -e ${btm} -b" # Process monitor
           "$mod, m, exec, ${spotify}" # Music player
 
           ", print, exec, ${hyprshade} off; ${grimblast} save output; ${hyprshade} auto" # Screenshot active monitor
@@ -208,7 +208,7 @@ in
           "$mod shift, f, togglefloating"
           "$mod shift, s, togglesplit"
 
-          "$mod, s, togglespecialworkspace"
+          "$mod, p, togglespecialworkspace"
           "$mod shift, minus, movetoworkspacesilent, special"
           "$mod, minus, movetoworkspacesilent, m+0"
 
