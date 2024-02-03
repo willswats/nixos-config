@@ -56,6 +56,7 @@ in
       hyprctl = "${pkgs.hyprland}/bin/hyprctl";
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
       grimblast = "${pkgs.grimblast}/bin/grimblast";
+      swappy = "${pkgs.swappy}/bin/swappy";
       firefox = "${pkgs.firefox}/bin/firefox";
       pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
       alacritty = "${pkgs.alacritty}/bin/alacritty";
@@ -190,7 +191,7 @@ in
           "$mod, m, exec, ${spotify}" # Music player
 
           ", print, exec, ${hyprshade} off; ${grimblast} save output; ${hyprshade} auto" # Screenshot active monitor
-          "SHIFT, print, exec, ${hyprshade} off; ${grimblast} save area; ${hyprshade} auto" # Screenshot manually selected area
+          "SHIFT, print, exec, ${hyprshade} off; ${grimblast} --freeze save area - | ${swappy} -f -; ${hyprshade} auto" # Screenshot manually selected area
 
           "$mod, bracketright, exec, ${hyprshade} on blue-light-filter"
           "$mod, bracketleft, exec, ${hyprshade} off"
