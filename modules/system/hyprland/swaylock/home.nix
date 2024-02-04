@@ -26,7 +26,6 @@ in
       daemonize = true; # Fix screen locking multiple times - https://github.com/swaywm/swaylock/issues/86
 
       ignore-empty-password = true; # Don't allow empty password
-      disable-caps-lock-text = true; # Disable caps lock
 
       clock = true;
       indicator = true; # Always show indicator
