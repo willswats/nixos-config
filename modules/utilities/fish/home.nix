@@ -8,11 +8,13 @@
     shellAliases =
       let
         codeDirectory = "~/Code";
+        nixosConfigDirectory = "~/Code/nixos-config";
         notebookDirectory = "~/Dropbox/Work/Notebook";
         universityDirectory = "~/Dropbox/Work/Education/University";
       in
       {
         code = "cd ${codeDirectory}";
+        conf = "cd ${nixosConfigDirectory}";
         note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
         uni = "cd ${universityDirectory}";
       };
