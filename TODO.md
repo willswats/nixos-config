@@ -14,6 +14,7 @@
 
 ## Hyprland
 
+- [ ] Floating windows are in fullscreen by default (Steam, Bitwarden)
 - [ ] Replace temp exit script - waiting for [fix](https://github.com/hyprwm/Hyprland/issues/3558)
 
 ## MPV
