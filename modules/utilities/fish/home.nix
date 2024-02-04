@@ -14,7 +14,7 @@
       in
       {
         code = "cd ${codeDirectory}";
-        conf = "cd ${nixosConfigDirectory}";
+        conf = "cd ${nixosConfigDirectory}; nvim";
         note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
         uni = "cd ${universityDirectory}";
       };
