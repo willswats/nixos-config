@@ -8,7 +8,11 @@
     ./plugins/plugins.nix
   ];
 
-  programs.nixvim.enable = true;
+  programs.nixvim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
+  };
 
   xdg.mimeApps = {
     defaultApplications = {
