@@ -24,4 +24,16 @@
       efi.canTouchEfiVariables = true;
     };
   };
+
+  programs.gamemode.enable = true;
+  programs.gamescope = {
+    enable = true;
+    args = [
+      "-w 1920"
+      "-h 1080"
+      "-W 1920"
+      "-H 1080"
+      "-f" # Fullscreen by default
+    ];
+  };
 }
