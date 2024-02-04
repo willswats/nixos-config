@@ -197,7 +197,7 @@ in
           "$mod, s, exec, ${alacritty} -e ${btm} -b" # Process monitor
           "$mod, m, exec, ${spotify}" # Music player
 
-          ", print, exec, ${hyprshade} off; ${grimblast} save output; ${hyprshade} auto" # Screenshot active monitor
+          ", print, exec, ${hyprshade} off; ${grimblast} save output - | ${swappy} -f -; ${hyprshade} auto" # Screenshot active monitor
           "SHIFT, print, exec, ${hyprshade} off; ${grimblast} --freeze save area - | ${swappy} -f -; ${hyprshade} auto" # Screenshot manually selected area
 
           "$mod, bracketright, exec, ${hyprshade} on blue-light-filter"
