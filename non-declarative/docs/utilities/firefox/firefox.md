@@ -13,7 +13,6 @@
 - [Return YouTube Dislike](https://addons.mozilla.org/en-US/firefox/addon/return-youtube-dislikes/)
 - [YouTube Alternative Switch](https://addons.mozilla.org/en-US/firefox/addon/youtube-alternative-switch/)
 - [BetterTTV](https://addons.mozilla.org/en-US/firefox/addon/betterttv)
-- [Mute Twitch Ads](https://addons.mozilla.org/en-US/firefox/addon/mute-twitch-ads)
 - [Zotero Connector](https://www.zotero.org/download/connectors)
 
 ## Extension Settings
