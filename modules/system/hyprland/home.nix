@@ -3,6 +3,7 @@
 
 let
   swaylock = "${pkgs.swaylock-effects}/bin/swaylock";
+  hyprctl = "${pkgs.hyprland}/bin/hyprctl";
 in
 {
   imports = [
@@ -28,10 +29,17 @@ in
     swayidle = {
       enable = true;
       systemdTarget = "hyprland-session.target";
-      timeouts = [{
-        timeout = 3600; # 3600 seconds == 1 hour
-        command = swaylock;
-      }];
+      timeouts = [
+        {
+          timeout = 3600; # 3600 seconds = 1 hour
+          command = swaylock;
+        }
+        {
+          timeout = 3600; # 3600 seconds = 1 hour
+          command = "${hyprctl} dispatch dpms off";
+          resumeCommand = "${hyprctl} dispatch dpms on";
+        }
+      ];
       events = [
         { event = "before-sleep"; command = swaylock; }
         { event = "lock"; command = swaylock; }
@@ -53,7 +61,6 @@ in
       xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
       nm-applet = "${pkgs.networkmanagerapplet}/bin/nm-applet";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
-      hyprctl = "${pkgs.hyprland}/bin/hyprctl";
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
       grimblast = "${pkgs.grimblast}/bin/grimblast";
       swappy = "${pkgs.swappy}/bin/swappy";
