@@ -222,8 +222,8 @@ in
           "$mod, minus, movetoworkspacesilent, m+0"
 
           # Group
-          "$mod, g, togglegroup"
-          "$mod shift, g, lockactivegroup, toggle"
+          "$mod shift, g, togglegroup"
+          "$mod, g, lockactivegroup, toggle"
           "$mod, o, moveoutofgroup"
 
           "$mod, tab, changegroupactive, f"
