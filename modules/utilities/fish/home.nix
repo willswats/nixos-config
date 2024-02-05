@@ -13,10 +13,10 @@
         universityDirectory = "~/Dropbox/Work/Education/University";
       in
       {
-        code = "cd ${codeDirectory}";
+        code = "cd ${codeDirectory}; nvim";
         conf = "cd ${nixosConfigDirectory}; nvim";
         note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
-        uni = "cd ${universityDirectory}";
+        uni = "cd ${universityDirectory}; nvim";
       };
     interactiveShellInit = ''
       # Hide fish greeting
