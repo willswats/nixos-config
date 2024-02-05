@@ -33,6 +33,7 @@
           in
           [
             "${bookmarkStart}Dropbox Dropbox"
+            "${bookmarkStart}Dropbox/Work/Education/University University"
             "${bookmarkStart}Downloads Downloads"
             "${bookmarkStart}Pictures Pictures"
             "${bookmarkStart}Videos Videos"
@@ -93,6 +94,7 @@
                 in
                 [
                   "${bookmarkStart}Dropbox Dropbox"
+                  "${bookmarkStart}Dropbox/Work/Education/University University"
                   "${bookmarkStart}Downloads Downloads"
                   "${bookmarkStart}Pictures Pictures"
                   "${bookmarkStart}Videos Videos"
