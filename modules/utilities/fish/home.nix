@@ -13,6 +13,7 @@
         universityDirectory = "~/Dropbox/Work/Education/University";
       in
       {
+        nv = "nvim";
         code = "cd ${codeDirectory}; nvim";
         conf = "cd ${nixosConfigDirectory}; nvim";
         note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
