@@ -33,8 +33,18 @@
 
 ### MAL-Sync
 
+#### MAL-Sync Notifications
+
 - Notifications (Anime): Disabled
 - Notifications (Manga): Disabled
+
+#### MAL-Sync Extension popup
+
+- Open in separate window: Enabled
+
+#### MAL-Sync Onsite
+
+- Hide miniMAL floating menu button: Enabled
 
 ### BetterTTV
 
