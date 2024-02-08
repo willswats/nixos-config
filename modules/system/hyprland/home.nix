@@ -147,11 +147,14 @@ in
           "float, class:steam, title:Steam Settings"
           "float, class:steam, title:Game Servers"
           "float, class:steam, title:Screenshot Manager"
+          "nomaximizerequest, class:steam" # Fix Steam maximizing certain windows (Friends List)
+          "nomaximizerequest, class:firefox" # Fix Firefox maximizing certain windows (extensions)
           # https://github.com/hyprwm/Hyprland/issues/2661
           "stayfocused, title:^()$,class:^(steam)$" # Fix steam context menus
           "minsize 1 1, title:^()$,class:^(steam)$" # Fix steam context menus
           "idleinhibit fullscreen, class:Apprun, title:Dolphin" # Prevent Ishiiruka swayidle lock
         ];
+
 
         workspace = [
           "${monitorLeft},1"
