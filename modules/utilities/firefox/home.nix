@@ -196,20 +196,20 @@
             ];
           }
           {
-            name = "Nix";
+            name = "Docs";
             bookmarks = [
-              {
-                name = "NixOS Search";
-                url = "https://search.nixos.org/packages";
-              }
               {
                 name = "Home Manager";
                 url =
                   "https://nix-community.github.io/home-manager/options.xhtml";
               }
               {
-                name = "nixvim docs";
+                name = "nixvim";
                 url = "https://nix-community.github.io/nixvim/";
+              }
+              {
+                name = "Hyprland";
+                url = "https://wiki.hyprland.org/";
               }
             ];
           }
@@ -255,6 +255,11 @@
           {
             name = "Other";
             bookmarks = [
+              {
+                name = "NixOS Search";
+                url = "https://search.nixos.org/packages";
+              }
+
               {
                 name = "williamwatson.dev";
                 url = "https://williamwatson.dev";
