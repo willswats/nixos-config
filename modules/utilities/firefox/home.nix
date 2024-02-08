@@ -63,10 +63,6 @@
                 url = "https://app.anonaddy.com/";
               }
               {
-                name = "draw.io";
-                url = "https://app.diagrams.net";
-              }
-              {
                 name = "Reactive Resume";
                 url = "https://rxresu.me/dashboard";
               }
@@ -92,8 +88,8 @@
                 url = "https://mynoise.net";
               }
               {
-                name = "AniWave";
-                url = "https://aniwave.to";
+                name = "Animeflix";
+                url = "https://animeflix.live";
               }
               {
                 name = "MangaDex";
