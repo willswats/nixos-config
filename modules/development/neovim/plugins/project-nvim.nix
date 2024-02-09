@@ -22,7 +22,7 @@
               inherit mode;
               key = "<leader>fp";
               action = "${cmd}Telescope projects${cr}";
-              options.desc = "Telescope Projects";
+              options.desc = "Projects";
             }
           ];
       in
