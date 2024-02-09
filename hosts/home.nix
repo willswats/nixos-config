@@ -40,6 +40,7 @@
       zip
       unzip
       killall
+      fzf
       trash-cli
       appimage-run
       # Development
