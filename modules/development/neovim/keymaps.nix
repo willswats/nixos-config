@@ -103,7 +103,7 @@
               inherit mode;
               key = "<leader>c";
               action = "${cmd}checktime${cr}";
-              options. desc = "Checktime refresh)";
+              options. desc = "Check time (refresh)";
             }
           ];
 
