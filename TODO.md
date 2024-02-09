@@ -2,19 +2,12 @@
 
 ## Neovim
 
-### Neovim - General
-
 - [ ] Finish dap setup
 - [ ] Set Neovim `desc` for nested leader keymaps
-
-### Neovim - SQL
-
-- [ ] Fix sqlfluff linter crashing (index out of range)
 - [ ] Switch from `sqls` to `sql-language-server` - [needs to be packaged](https://github.com/NixOS/nixpkgs/issues/203887)
 
 ## Hyprland
 
-- [ ] Floating windows are in fullscreen by default (Steam, Bitwarden)
 - [ ] Replace temp exit script - waiting for [fix](https://github.com/hyprwm/Hyprland/issues/3558)
 
 ## MPV
