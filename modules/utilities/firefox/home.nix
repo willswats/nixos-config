@@ -88,8 +88,8 @@
                 url = "https://mynoise.net";
               }
               {
-                name = "Animeflix";
-                url = "https://animeflix.live";
+                name = "Aniwave";
+                url = "https://aniwave.to";
               }
               {
                 name = "MangaDex";
