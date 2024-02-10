@@ -61,7 +61,7 @@ in {
               inherit mode;
               key = "<leader>bP";
               action = "${cmd}BufferLinePickClose${cr}";
-              options.desc = "Pick";
+              options.desc = "Pick close";
             }
           ];
       in
