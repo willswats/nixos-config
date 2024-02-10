@@ -3,7 +3,6 @@
 ## Neovim
 
 - [ ] Finish dap setup
-- [ ] Switch from `sqls` to `sql-language-server` - [needs to be packaged](https://github.com/NixOS/nixpkgs/issues/203887)
 
 ## Hyprland
 
