@@ -10,14 +10,6 @@
 
 - [ ] Replace temp exit script - waiting for [fix](https://github.com/hyprwm/Hyprland/issues/3558)
 
-## MPV
-
-- [ ] Add binding for selecting next and previous in MPV uosc playlist and file explorer
-
-## Retroarch
-
-- [ ] citra core fails to build to due to an issue with webkitgtk
-
 ## Soundux
 
 - [ ] Soundux fails to build to due to an issue with webkitgtk
