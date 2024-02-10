@@ -1,0 +1,19 @@
+{ ... }:
+
+{
+  programs.nixvim.plugins = {
+    which-key = {
+      enable = true;
+      registrations = {
+        "<leader>b" = "Buffers (Menu)";
+        "<leader>d" = "Debug (Menu)";
+        "<leader>f" = "Find (Menu)";
+        "<leader>g" = "Git (Menu)";
+        "<leader>l" = "LSP (Menu)";
+        "<leader>m" = "Markdown (Menu)";
+        "<leader>t" = "Terminal (Menu)";
+        "<leader>v" = "Venv (Menu)";
+      };
+    };
+  };
+}

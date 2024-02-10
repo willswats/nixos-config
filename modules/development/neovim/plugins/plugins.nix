@@ -10,6 +10,7 @@
     ./bufferline.nix
     ./lualine.nix
     ./telescope.nix
+    ./which-key.nix
     ./noice.nix
     ./toggleterm.nix
     ./gitsigns.nix
@@ -27,7 +28,6 @@
 
   programs.nixvim.plugins = {
     treesitter.enable = true;
-    which-key.enable = true;
     comment-nvim.enable = true;
     nvim-autopairs.enable = true;
     ts-autotag.enable = true;
