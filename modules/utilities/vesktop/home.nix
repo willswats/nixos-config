@@ -3,6 +3,24 @@
 {
   home.packages = with pkgs; [ vesktop ];
 
+  xdg.configFile."vesktop/settings.json" = {
+    text = ''
+      {
+          "discordBranch": "stable",
+          "arRPC": "on",
+          "splashColor": "rgb(219, 222, 225)",
+          "splashBackground": "rgb(30, 30, 46)",
+          "minimizeToTray": false,
+          "tray": false,
+          "enableMenu": false,
+          "disableSmoothScroll": false,
+          "splashTheming": true,
+          "checkUpdates": false,
+          "appBadge": true
+      }
+    '';
+  };
+
   xdg.configFile."vesktop/settings/settings.json" = {
     text = ''
       {
