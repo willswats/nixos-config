@@ -14,10 +14,10 @@
       in
       {
         nv = "nvim";
-        code = "cd ${codeDirectory}; nvim";
         conf = "cd ${nixosConfigDirectory}; nvim";
         note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
-        uni = "cd ${universityDirectory}; nvim";
+        code = "cd ${codeDirectory}";
+        uni = "cd ${universityDirectory}";
       };
     interactiveShellInit = ''
       # Hide fish greeting
