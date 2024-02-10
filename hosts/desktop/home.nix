@@ -11,6 +11,7 @@
     ../../modules/games/osu/home.nix
     ../../modules/games/ishiiruka/home.nix
     ../../modules/games/doom/home.nix
+    ../../modules/games/airshipper/home.nix
     ../../modules/games/retroarch/home.nix
   ];
 
@@ -19,7 +20,6 @@
     # soundux
     mangohud
     # Games
-    airshipper
     prismlauncher
     # Emulators
     yuzu-mainline

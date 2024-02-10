@@ -14,10 +14,6 @@
 
 - [ ] Add binding for selecting next and previous in MPV uosc playlist and file explorer
 
-## Airshipper
-
-- [ ] Airshipper will not launch without setting `WINIT_UNIX_BACKEND=x11`, setting this system wide causes Alacritty to always open as a floating window
-
 ## Retroarch
 
 - [ ] citra core fails to build to due to an issue with webkitgtk
