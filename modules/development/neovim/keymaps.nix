@@ -88,9 +88,9 @@
             # Delete buffer
             {
               inherit mode;
-              key = "<leader>bd";
+              key = "<leader>c";
               action = "${cmd}confirm bd${cr}";
-              options.desc = "Delete";
+              options.desc = "Close buffer";
             }
             # Remove highlight
             {
@@ -101,9 +101,9 @@
             }
             {
               inherit mode;
-              key = "<leader>c";
+              key = "<leader>r";
               action = "${cmd}checktime${cr}";
-              options. desc = "Check time (refresh)";
+              options. desc = "Refresh";
             }
           ];
 

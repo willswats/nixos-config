@@ -14,7 +14,7 @@
           [
             {
               inherit mode;
-              key = "<leader>r";
+              key = "<leader>p";
               action = "${cmd}ProjectRoot${cr}";
               options.desc = "Project Root";
             }

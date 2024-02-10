@@ -37,13 +37,31 @@ in {
               inherit mode;
               key = "<leader>bh";
               action = "${cmd}BufferLineCloseLeft${cr}";
-              options.desc = "Delete left";
+              options.desc = "Close left";
             }
             {
               inherit mode;
               key = "<leader>bl";
               action = "${cmd}BufferLineCloseRight${cr}";
-              options.desc = "Delete right";
+              options.desc = "Close right";
+            }
+            {
+              inherit mode;
+              key = "<leader>bo";
+              action = "${cmd}BufferLineCloseOthers${cr}";
+              options.desc = "Close others";
+            }
+            {
+              inherit mode;
+              key = "<leader>bp";
+              action = "${cmd}BufferLinePick${cr}";
+              options.desc = "Pick";
+            }
+            {
+              inherit mode;
+              key = "<leader>bP";
+              action = "${cmd}BufferLinePickClose${cr}";
+              options.desc = "Pick";
             }
           ];
       in
