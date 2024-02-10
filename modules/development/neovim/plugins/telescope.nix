@@ -43,13 +43,6 @@ in {
             desc = "Diagnostics";
           };
         };
-      extraOptions = {
-        pickers = {
-          buffers = {
-            initial_mode = "normal";
-          };
-        };
-      };
     };
   };
 }
