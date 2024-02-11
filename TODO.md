@@ -8,10 +8,6 @@
 
 - [ ] Replace temp exit script - waiting for [fix](https://github.com/hyprwm/Hyprland/issues/3558)
 
-## Citra
-
-- [ ] Citra fails to build
-
 ## Add pkgs
 
 - [ ] Add nixpkgs catppuccin-sddm package - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/255808)
