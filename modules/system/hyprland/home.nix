@@ -124,6 +124,7 @@ in
         };
 
         group = {
+          insert_after_current = false;
           "col.border_active" = blue;
           "col.border_inactive" = overlay0;
           "col.border_locked_active" = mauve;
