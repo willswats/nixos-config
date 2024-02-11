@@ -15,14 +15,14 @@
       MBTN_LEFT = "cycle pause"; # Toggle pause/playback mode
       "-" = "no-osd add volume -5; script-message-to uosc flash-elements volume";
       "+" = "no-osd add volume 5; script-message-to uosc flash-elements volume";
-      n = "playlist-next";
-      p = "playlist-prev";
       l = "no-osd cycle-values loop-playlist yes no; script-message-to uosc flash-elements controls"; # Toggle loop-playlist
       L = "no-osd cycle-values loop-file yes no; script-message-to uosc flash-elements controls"; # Toggle loop-file
       # uosc
       MBTN_RIGHT = "script-binding uosc/menu";
       i = "script-binding uosc/items"; # Opens playlist menu when playlist exists, or open-file menu otherwise 
       s = "script-binding uosc/shuffle; script-message-to uosc flash-elements controls";
+      n = "script-binding uosc/next";
+      p = "script-binding uosc/prev";
     };
     scripts = with pkgs; [
       (callPackage ../../../pkgs/mpv-user-input { })
