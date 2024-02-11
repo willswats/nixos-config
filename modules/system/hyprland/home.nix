@@ -31,11 +31,11 @@ in
       systemdTarget = "hyprland-session.target";
       timeouts = [
         {
-          timeout = 1800; # 1800 seconds = 30 minutes
+          timeout = 3600; # 3600 seconds = 1 hour
           command = swaylock;
         }
         {
-          timeout = 600; # 600 seconds = 10 minutes
+          timeout = 3600; # 3600 seconds = 1 hour 
           command = "${hyprctl} dispatch dpms off";
           resumeCommand = "${hyprctl} dispatch dpms on";
         }
@@ -43,6 +43,7 @@ in
       events = [
         { event = "before-sleep"; command = swaylock; }
         { event = "lock"; command = swaylock; }
+        { event = "after-resume"; command = "${hyprctl} dispatch dpms on"; }
       ];
     };
   };
