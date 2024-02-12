@@ -7,17 +7,13 @@
     enable = true;
     shellAliases =
       let
-        codeDirectory = "~/Code";
         nixosConfigDirectory = "~/Code/nixos-config";
         notebookDirectory = "~/Dropbox/Work/Notebook";
-        universityDirectory = "~/Dropbox/Work/Education/University";
       in
       {
         nv = "nvim";
         conf = "cd ${nixosConfigDirectory}; nvim";
         note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
-        code = "cd ${codeDirectory}";
-        uni = "cd ${universityDirectory}";
       };
     interactiveShellInit = ''
       # Hide fish greeting
