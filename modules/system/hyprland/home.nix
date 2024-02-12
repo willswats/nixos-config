@@ -66,6 +66,7 @@ in
       grimblast = "${pkgs.grimblast}/bin/grimblast";
       firefox = "${pkgs.firefox}/bin/firefox";
       pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
+      yazi = "${pkgs.yazi}/bin/yazi";
       alacritty = "${pkgs.alacritty}/bin/alacritty";
       rofi = "${pkgs.rofi-wayland}/bin/rofi";
       nvim = "nvim"; # This is broken (nixvim): "${pkgs.neovim}/bin/nvim";
@@ -196,7 +197,7 @@ in
 
           "$mod, return, exec, ${alacritty}"
           "$mod, w, exec, ${firefox}" # Web browser
-          "$mod, e, exec, ${pcmanfm}" # File explorer
+          "$mod, e, exec, ${alacritty} -e ${yazi}" # File explorer
           "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
           "$mod, s, exec, ${alacritty} -e ${btm} -b" # Process monitor
           "$mod, m, exec, ${spotify}" # Music player
