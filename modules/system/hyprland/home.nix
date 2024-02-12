@@ -221,7 +221,7 @@ in
           "$mod shift, f, togglefloating"
           "$mod shift, s, togglesplit"
 
-          "$mod, p, togglespecialworkspace"
+          "$mod, equal, togglespecialworkspace"
           "$mod shift, minus, movetoworkspacesilent, special"
           "$mod, minus, movetoworkspacesilent, m+0"
 
