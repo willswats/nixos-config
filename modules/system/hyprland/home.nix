@@ -67,7 +67,7 @@ in
       firefox = "${pkgs.firefox}/bin/firefox";
       pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
       yazi = "${pkgs.yazi}/bin/yazi";
-      alacritty = "${pkgs.alacritty}/bin/alacritty";
+      wezterm = "${pkgs.wezterm}/bin/wezterm";
       rofi = "${pkgs.rofi-wayland}/bin/rofi";
       nvim = "nvim"; # This is broken (nixvim): "${pkgs.neovim}/bin/nvim";
       btm = "${pkgs.bottom}/bin/btm";
@@ -195,11 +195,11 @@ in
           # Applications
           "$mod, d, exec, ${rofi} -show drun"
 
-          "$mod, return, exec, ${alacritty}"
+          "$mod, return, exec, ${wezterm}"
           "$mod, w, exec, ${firefox}" # Web browser
-          "$mod, e, exec, ${alacritty} -e ${yazi}" # File explorer
-          "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
-          "$mod, s, exec, ${alacritty} -e ${btm} -b" # Process monitor
+          "$mod, e, exec, ${wezterm} -e ${yazi}" # File explorer
+          "$mod, t, exec, ${wezterm} -e ${nvim}" # Text editor
+          "$mod, s, exec, ${wezterm} -e ${btm} -b" # Process monitor
           "$mod, m, exec, ${spotify}" # Music player
 
           ", print, exec, ${hyprshade} off; ${grimblast} save output; ${hyprshade} auto" # Screenshot active monitor
