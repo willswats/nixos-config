@@ -1,6 +1,30 @@
 { pkgs, ... }:
 
 {
+  xdg.mimeApps = {
+    defaultApplications = {
+      "inode/directory" = [ "yazi.desktop" ]; # Directories
+    };
+  };
+
+  # Currently not included with the nix package
+  # Modified terminal=false and using alacritty -e to make inode/directory work
+  home.file.".local/share/icons/yazi.png".source = ./yazi.png;
+  home.file.".local/share/applications/yazi.desktop".text =
+    ''
+      [Desktop Entry]
+      Name=Yazi
+      Icon=yazi
+      Comment=Blazing fast terminal file manager written in Rust, based on async I/O
+      Terminal=false
+      TryExec=yazi
+      Exec=alacritty -e yazi %u
+      Type=Application
+      MimeType=inode/directory
+      Categories=Utility;Core;System;FileTools;FileManager;ConsoleOnly
+      Keywords=File;Manager;Explorer;Browser;Launcher
+    '';
+
   home.packages = with pkgs;
     [
       ueberzugpp
