@@ -4,6 +4,10 @@
 
 - [ ] Finish dap setup
 
+## Yazi
+
+- [ ] Make yazi open nvim in a new terminal
+
 ## Hyprland
 
 - [ ] Replace temp exit script - waiting for [fix](https://github.com/hyprwm/Hyprland/issues/3558)
