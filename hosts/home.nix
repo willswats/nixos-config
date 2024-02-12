@@ -21,6 +21,7 @@
     ../modules/utilities/fish/home.nix
     ../modules/utilities/alacritty/home.nix
     ../modules/utilities/bottom/home.nix
+    ../modules/utilities/yazi/home.nix
     ../modules/utilities/pcmanfm/home.nix
     ../modules/utilities/libreoffice/home.nix
     ../modules/utilities/mullvad-vpn/home.nix
