@@ -29,6 +29,12 @@
           exec = "plugin --sync smart-enter";
           desc = "Enter the child directory, or open the file";
         }
+        # overwrites "go to temp directory"
+        {
+          on = [ "g" "t" ];
+          exec = "cd ~/.local/share/Trash/files";
+          desc = "Go to trash directory";
+        }
       ];
       manager.append_keymap = [
         {
