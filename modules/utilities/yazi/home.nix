@@ -11,25 +11,29 @@
     enableFishIntegration = true;
     keymap = {
       manager.prepend_keymap = [
+        # Close tab to the right of the current one to not lose position
         {
           on = [ "T" ];
-          exec = "tab_close";
+          exec = "tab_close 1";
         }
+        # Open shell
         {
           on = [ "<C-s>" ];
           exec = "shell \"$SHELL\" --block --confirm";
           desc = "Open shell here";
         }
+        # Yank into system clipboard
         {
           on = [ "y" ];
           exec = [ "yank" "shell --confirm 'for path in \"$@\"; do echo \"file://$path\"; done | wl-copy -t text/uri-list'" ];
         }
+        # Enter a directory or open the file
         {
           on = [ "l" ];
           exec = "plugin --sync smart-enter";
           desc = "Enter the child directory, or open the file";
         }
-        # overwrites "go to temp directory"
+        # Overwrites "go to temp directory"
         {
           on = [ "g" "t" ];
           exec = "cd ~/.local/share/Trash/files";
@@ -46,6 +50,7 @@
     };
   };
 
+  # Enter a directory or open the file plugin
   xdg.configFile."yazi/plugins/smart-enter.yazi/init.lua" = {
     text = ''
       return {
