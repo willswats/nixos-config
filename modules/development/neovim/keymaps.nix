@@ -95,10 +95,16 @@
             # Remove highlight
             {
               inherit mode;
+              key = "<esc>";
+              action = "${cmd}nohlsearch${cr}";
+            }
+            {
+              inherit mode;
               key = "<leader>h";
               action = "${cmd}nohlsearch${cr}";
               options.desc = "No highlight";
             }
+            # Refresh file
             {
               inherit mode;
               key = "<leader>r";
