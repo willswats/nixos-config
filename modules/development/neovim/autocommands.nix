@@ -51,5 +51,16 @@
         '';
       };
     }
+    {
+      event = [ "FileType" ];
+      pattern = [ "sql" ];
+      callback = {
+        __raw = ''
+          function()
+            vim.opt_local.shiftwidth = 4
+          end
+        '';
+      };
+    }
   ];
 }
