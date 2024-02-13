@@ -51,6 +51,7 @@
         '';
       };
     }
+    # Set shiftwidth for sql (default is 2)
     {
       event = [ "FileType" ];
       pattern = [ "sql" ];
