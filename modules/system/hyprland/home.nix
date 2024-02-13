@@ -197,9 +197,9 @@ in
 
           "$mod, return, exec, ${wezterm}"
           "$mod, w, exec, ${firefox}" # Web browser
-          "$mod, e, exec, ${wezterm} -e ${yazi}" # File explorer
-          "$mod, t, exec, ${wezterm} -e ${nvim}" # Text editor
-          "$mod, s, exec, ${wezterm} -e ${btm} -b" # Process monitor
+          "$mod, e, exec, ${wezterm} start -- ${yazi}" # File explorer
+          "$mod, t, exec, ${wezterm} start -- ${nvim}" # Text editor
+          "$mod, s, exec, ${wezterm} start -- ${btm} -b" # Process monitor
           "$mod, m, exec, ${spotify}" # Music player
 
           ", print, exec, ${hyprshade} off; ${grimblast} save output; ${hyprshade} auto" # Screenshot active monitor
