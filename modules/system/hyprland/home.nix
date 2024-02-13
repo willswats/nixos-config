@@ -71,6 +71,7 @@ in
       rofi = "${pkgs.rofi-wayland}/bin/rofi";
       nvim = "nvim"; # This is broken (nixvim): "${pkgs.neovim}/bin/nvim";
       btm = "${pkgs.bottom}/bin/btm";
+      bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
       spotify = "${pkgs.spotify}/bin/spotify";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
@@ -200,6 +201,7 @@ in
           "$mod, e, exec, ${wezterm} start -- ${yazi}" # File explorer
           "$mod, t, exec, ${wezterm} start -- ${nvim}" # Text editor
           "$mod, s, exec, ${wezterm} start -- ${btm} -b" # Process monitor
+          "$mod, b, exec, ${wezterm} start -- ${bluetuith}" # Bluetooth manager
           "$mod, m, exec, ${spotify}" # Music player
 
           ", print, exec, ${hyprshade} off; ${grimblast} save output; ${hyprshade} auto" # Screenshot active monitor
