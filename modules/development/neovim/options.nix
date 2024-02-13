@@ -18,7 +18,6 @@
         false; # If in Insert, Replace or Visual mode put a message on the last line
       smartcase =
         true; # Override the 'ignorecase' option if the search pattern contains upper case characters.
-      smartindent = true; # Do smart autoindenting when starting a new line
       splitbelow =
         true; # When on, splitting a window will put the new window below the current one
       splitright =
