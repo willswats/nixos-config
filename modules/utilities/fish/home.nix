@@ -12,6 +12,7 @@
         notebookDirectory = "~/Dropbox/Work/Notebook";
       in
       {
+        c = "clear";
         nv = "nvim";
         rsd = "${rebuildSwitchCommand} ${nixosConfigDirectory}#desktop";
         rsl = "${rebuildSwitchCommand} ${nixosConfigDirectory}#laptop";
