@@ -59,6 +59,7 @@
       dropbox
       spotify
       yt-dlp
+      onlyoffice-bin
       zotero
     ];
   };
