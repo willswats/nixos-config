@@ -147,7 +147,7 @@ in
         };
 
         windowrulev2 = [
-          "tile, class:DesktopEditors" # Fix onlyoffice starting as float
+          "tile, class:ONLYOFFICE Desktop Editors" # Fix onlyoffice starting as float
           "float, class:steam, title:Friends List"
           "float, class:steam, title:Steam Settings"
           "float, class:steam, title:Game Servers"
