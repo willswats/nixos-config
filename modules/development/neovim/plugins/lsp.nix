@@ -26,6 +26,7 @@ in
         ruff-lsp.enable = true;
         dartls.enable = true;
         bashls.enable = true;
+        hls.enable = true;
         html = {
           enable = true;
           onAttach.function = ''
