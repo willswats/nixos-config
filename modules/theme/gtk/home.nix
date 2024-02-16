@@ -1,4 +1,4 @@
-{ pkgs, globals, ... }:
+{ pkgs, host, globals, ... }:
 
 {
   gtk =
@@ -41,6 +41,7 @@
       };
       gtk2 = { extraConfig = "gtk-error-bell = 0"; };
       gtk3 = {
+        bookmarks = host.bookmarks;
         extraConfig = extraConfig;
         extraCss = extraCss;
       };
