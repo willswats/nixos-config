@@ -69,7 +69,7 @@ in
       yazi = "${pkgs.yazi}/bin/yazi";
       wezterm = "${pkgs.wezterm}/bin/wezterm";
       rofi = "${pkgs.rofi-wayland}/bin/rofi";
-      nvim = "nvim"; # This is broken (nixvim): "${pkgs.neovim}/bin/nvim";
+      nvim = "nvim"; # Both of these break neovim (nixvim): "${pkgs.neovim}/bin/nvim" "${config.programs.nixvim.package}/bin/nvim"
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
       spotify = "${pkgs.spotify}/bin/spotify";
