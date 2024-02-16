@@ -1,4 +1,4 @@
-{ pkgs, host, globals, ... }:
+{ pkgs, globals, ... }:
 
 {
   gtk =
@@ -16,6 +16,18 @@
       '';
       fontName = globals.font.name;
       fontPackage = globals.font.package;
+      bookmarks =
+        let
+          bookmarkStart = "file://${globals.homeDir}/";
+        in
+        [
+          "${bookmarkStart}Dropbox Dropbox"
+          "${bookmarkStart}Dropbox/Work/Education/University University"
+          "${bookmarkStart}Downloads Downloads"
+          "${bookmarkStart}Pictures Pictures"
+          "${bookmarkStart}Videos Videos"
+          "${bookmarkStart}Code Code"
+        ];
     in
     {
       enable = true;
@@ -41,7 +53,7 @@
       };
       gtk2 = { extraConfig = "gtk-error-bell = 0"; };
       gtk3 = {
-        bookmarks = host.bookmarks;
+        bookmarks = bookmarks;
         extraConfig = extraConfig;
         extraCss = extraCss;
       };

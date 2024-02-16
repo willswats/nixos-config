@@ -27,18 +27,6 @@
         user = "will";
         homeDir = "/home/${user}";
         directories = "~/Downloads ~/Pictures ~/Videos ~/Code";
-        bookmarks =
-          let
-            bookmarkStart = "file://${homeDir}/";
-          in
-          [
-            "${bookmarkStart}Dropbox Dropbox"
-            "${bookmarkStart}Dropbox/Work/Education/University University"
-            "${bookmarkStart}Downloads Downloads"
-            "${bookmarkStart}Pictures Pictures"
-            "${bookmarkStart}Videos Videos"
-            "${bookmarkStart}Code Code"
-          ];
         globals = {
           user = user;
           homeDir = homeDir;
@@ -88,19 +76,6 @@
                 left = "DP-2";
               };
               directories = "${directories} ~/Games/Lutris ~/Games/Heroic";
-              bookmarks =
-                let
-                  bookmarkStart = "file://${homeDir}/";
-                in
-                [
-                  "${bookmarkStart}Dropbox Dropbox"
-                  "${bookmarkStart}Dropbox/Work/Education/University University"
-                  "${bookmarkStart}Downloads Downloads"
-                  "${bookmarkStart}Pictures Pictures"
-                  "${bookmarkStart}Videos Videos"
-                  "${bookmarkStart}Code Code"
-                  "${bookmarkStart}Games Games"
-                ];
             };
           in
           lib.nixosSystem
@@ -139,7 +114,6 @@
                 left = "eDP-1";
               };
               directories = directories;
-              bookmarks = bookmarks;
             };
           in
           lib.nixosSystem {
