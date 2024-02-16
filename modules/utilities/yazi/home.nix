@@ -61,9 +61,29 @@
       ];
       manager.append_keymap = [
         {
+          on = [ "g" "D" ];
+          exec = "cd ~/Dropbox";
+          desc = "Go to Dropbox directory";
+        }
+        {
           on = [ "g" "u" ];
           exec = "cd ~/Dropbox/Work/Education/University";
           desc = "Go to University directory";
+        }
+        {
+          on = [ "g" "p" ];
+          exec = "cd ~/Pictures";
+          desc = "Go to the pictures directory";
+        }
+        {
+          on = [ "g" "v" ];
+          exec = "cd ~/Videos";
+          desc = "Go to the videos directory";
+        }
+        {
+          on = [ "g" "C" ];
+          exec = "cd ~/Code";
+          desc = "Go to Code directory";
         }
       ];
     };
