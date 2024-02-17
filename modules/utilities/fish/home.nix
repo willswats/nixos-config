@@ -15,11 +15,15 @@
       {
         c = "clear";
         nv = "nvim";
-        rsd = "${rebuildSwitchCommand} ${nixosConfigDirectory}#desktop";
-        rsl = "${rebuildSwitchCommand} ${nixosConfigDirectory}#laptop";
         code = "cd ${codeDirectory}; nvim";
         conf = "cd ${nixosConfigDirectory}; nvim";
         note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
+        # Rebuild Switch Laptop and Desktop
+        rsl = "${rebuildSwitchCommand} ${nixosConfigDirectory}#laptop";
+        rsd = "${rebuildSwitchCommand} ${nixosConfigDirectory}#desktop";
+        # Pull Rebuild Switch Laptop and Desktop
+        prsl = "cd ${nixosConfigDirectory}; git pull; ${rebuildSwitchCommand} ${nixosConfigDirectory}#laptop";
+        prsd = "cd ${nixosConfigDirectory}; git pull; ${rebuildSwitchCommand} ${nixosConfigDirectory}#desktop";
       };
     interactiveShellInit = ''
       # Hide fish greeting
