@@ -140,6 +140,9 @@ in
         };
 
         misc = {
+          # These options are here, because sometimes the swayidle resumeCommand doesn't run
+          mouse_move_enables_dpms = true;
+          key_press_enables_dpms = true;
           # Fix Firefox flashing default hyprland wallpaper on resize (still occurs, but it's less noticeable)
           # https://github.com/hyprwm/Hyprland/issues/2817
           disable_hyprland_logo = true;
