@@ -9,6 +9,7 @@
       osc = "no"; # Requirement of uosc
       osd-bar = "no"; # Requirement of uosc
       border = "no"; # Requirement of uosc
+      player-operation-mode = "pseudo-gui"; # Always open mpv as GUI (prevents mpv opening in terminal when using yazi)
     };
     bindings = {
       # mpv
