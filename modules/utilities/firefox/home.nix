@@ -80,6 +80,10 @@
                 url = "https://www.twitch.tv/";
               }
               {
+                name = "ChatReplay";
+                url = "https://chatreplay.stream/";
+              }
+              {
                 name = "Google Play Books";
                 url = "https://play.google.com/books";
               }
@@ -129,10 +133,6 @@
           {
             name = "Social";
             bookmarks = [
-              {
-                name = "Discord";
-                url = "https://discord.com/app";
-              }
               {
                 name = "GitHub";
                 url = "https://github.com/";
