@@ -121,7 +121,7 @@ in
         };
 
         animations = {
-          animation = "global, 1, 3, default"; # Speed up animations
+          animation = "global, 0"; # Disable animations
         };
 
         group = {
