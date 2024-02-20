@@ -224,8 +224,8 @@ in
           "$mod shift, s, togglesplit"
 
           "$mod, equal, togglespecialworkspace"
+          "$mod shift, equal, movetoworkspacesilent, m+0"
           "$mod shift, minus, movetoworkspacesilent, special"
-          "$mod, minus, movetoworkspacesilent, m+0"
 
           # Group
           "$mod shift, g, togglegroup"
