@@ -72,12 +72,6 @@
               action = "${cmd}lua LAZYGIT_TOGGLE()${cr}";
               options.desc = "Lazygit";
             }
-            {
-              inherit mode;
-              key = "<leader>ty";
-              action = "${cmd}lua YAZI_TOGGLE()${cr}";
-              options.desc = "Yazi";
-            }
           ];
       in
       config.nixvim.helpers.keymaps.mkKeymaps
@@ -104,15 +98,6 @@
           count = 100
         })
         lazygit:toggle()
-      end
-
-      function YAZI_TOGGLE()
-        local Terminal = toggleterm_terminal.Terminal
-        local yazi = Terminal:new({
-          cmd = "yazi",
-          count = 101
-        })
-        yazi:toggle()
       end
     '';
   };
