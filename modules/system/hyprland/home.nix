@@ -64,7 +64,6 @@ in
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
       grimblast = "${pkgs.grimblast}/bin/grimblast";
       firefox = "${pkgs.firefox}/bin/firefox";
-      pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
       yazi = "${pkgs.yazi}/bin/yazi";
       wezterm = "${pkgs.wezterm}/bin/wezterm";
       rofi = "${pkgs.rofi-wayland}/bin/rofi";
@@ -186,7 +185,6 @@ in
           "${lxpolkit}"
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
           "${nm-applet} --indicator"
-          "${pcmanfm} --daemon-mode" # Run as dameon to prevent pcmanfm from opening slowly on first launch (bug)
           "${dropbox}"
           "while sleep 0.1; do ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 100%; done" # Prevent microphone from being auto adjusted to lower than 100
           "mkdir -p ${directories}"
