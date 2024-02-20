@@ -34,11 +34,11 @@ in
           timeout = 1800; # 1800 seconds = 30 minutes
           command = swaylock;
         }
-        {
-          timeout = 600; # 600 seconds = 10 minutes
-          command = "${hyprctl} dispatch dpms off";
-          resumeCommand = "${hyprctl} dispatch dpms on";
-        }
+        # {
+        #   timeout = 600; # 600 seconds = 10 minutes
+        #   command = "${hyprctl} dispatch dpms off";
+        #   resumeCommand = "${hyprctl} dispatch dpms on";
+        # }
       ];
       events = [
         { event = "before-sleep"; command = swaylock; }
@@ -141,7 +141,7 @@ in
 
         misc = {
           # mouse_move_enables_dpms = true; # This seems to prevent dpms turning off, and mouse move seems to already enable dpms with key_press_enables_dpms = true;
-          key_press_enables_dpms = true; #  This options was added, because sometimes the swayidle resumeCommand doesn't seem to run
+          # key_press_enables_dpms = true; #  This options was added, because sometimes the swayidle resumeCommand doesn't seem to run
           # Fix Firefox flashing default hyprland wallpaper on resize (still occurs, but it's less noticeable)
           # https://github.com/hyprwm/Hyprland/issues/2817
           disable_hyprland_logo = true;
