@@ -76,15 +76,15 @@
         # Mode on startup (off/brief/full)
         mode = brief
         # Display scheme for the "full" mode: position = content
-        full.topleft = name,format,filesize,imagesize,exif
+        full.topleft = scale,frame
         full.topright = index
-        full.bottomleft = scale,frame
+        full.bottomleft = name,format,filesize,imagesize,exif 
         full.bottomright = status
         # Display scheme for the "brief" mode: position = content
-        brief.topleft = none
+        brief.topleft = scale,frame
         brief.topright = index
-        brief.bottomleft = scale,frame
-        brief.bottomright = status
+        brief.bottomleft = none
+        brief.bottomright = none
 
         ################################################################################
         # Key binding section: key = action [parameters]
