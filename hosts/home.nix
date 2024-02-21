@@ -18,7 +18,7 @@
     ../modules/utilities/firefox/home.nix
     ../modules/utilities/chromium/home.nix
     ../modules/utilities/mpv/home.nix
-    ../modules/utilities/qview/home.nix
+    ../modules/utilities/swayimg/home.nix
     ../modules/utilities/fish/home.nix
     ../modules/utilities/wezterm/home.nix
     ../modules/utilities/bottom/home.nix
