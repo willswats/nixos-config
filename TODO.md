@@ -10,6 +10,7 @@
 
 ## Hyprland
 
+- [ ] Re-enable swayidle dpms off and misc dpms options - waiting for [fix](https://github.com/hyprwm/Hyprland/issues/4670)
 - [ ] Replace temp exit script - waiting for [fix](https://github.com/hyprwm/Hyprland/issues/3558)
 
 ## Add pkgs
