@@ -50,7 +50,7 @@
         # Default order (none/alpha/random)
         order = alpha
         # Looping list of images (yes/no)
-        loop = yes
+        loop = no
         # Read directories recursively (yes/no)
         recursive = no
         # Open all files in the start directory (yes/no)
