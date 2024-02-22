@@ -24,6 +24,7 @@
     ../modules/utilities/bottom/home.nix
     ../modules/utilities/yazi/home.nix
     ../modules/utilities/bluetuith/home.nix
+    ../modules/utilities/gnome-keyring/home.nix
     ../modules/utilities/mullvad-vpn/home.nix
     ../modules/utilities/vesktop/home.nix
   ];
