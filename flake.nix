@@ -87,7 +87,7 @@
             {
               inherit system;
               specialArgs = {
-                inherit globals host;
+                inherit inputs globals host;
               };
               modules = [
                 ./hosts
@@ -124,7 +124,7 @@
           lib.nixosSystem {
             inherit system;
             specialArgs = {
-              inherit globals host;
+              inherit inputs globals host;
             };
             modules = [
               ./hosts
