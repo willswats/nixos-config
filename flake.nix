@@ -18,9 +18,14 @@
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, nixvim, ... }: {
+  outputs = { nixpkgs, home-manager, hyprland, nixvim, ... }@inputs: {
     nixosConfigurations =
       let
         system = "x86_64-linux";
@@ -94,7 +99,7 @@
                     useGlobalPkgs = true;
                     useUserPackages = true;
                     extraSpecialArgs = {
-                      inherit globals host;
+                      inherit inputs globals host;
                     };
                     users.will.imports = [
                       ./hosts/desktop/home.nix
@@ -131,7 +136,7 @@
                   useGlobalPkgs = true;
                   useUserPackages = true;
                   extraSpecialArgs = {
-                    inherit globals host;
+                    inherit inputs globals host;
                   };
                   users.${user}.imports = [
                     ./hosts/home.nix
