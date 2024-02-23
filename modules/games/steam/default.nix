@@ -1,6 +1,11 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
+
 
 {
+  imports = [
+    inputs.nix-gaming.nixosModules.steamCompat
+  ];
+
   programs.steam = {
     enable = true;
     gamescopeSession = {
@@ -16,6 +21,9 @@
     };
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    extraCompatPackages = [
+      inputs.nix-gaming.packages.${pkgs.system}.proton-ge
+    ];
   };
 
   # Fix gamescope on steam https://github.com/ValveSoftware/gamescope/issues/905#issuecomment-1660112668
