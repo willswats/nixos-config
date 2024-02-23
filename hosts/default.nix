@@ -37,6 +37,9 @@ in
 
   console.keyMap = "uk";
 
+  # Set the kernel to xanmod (better performance)
+  # boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
+
   # Networking
   networking = {
     hostName = host.hostName;
@@ -77,8 +80,14 @@ in
     package = pkgs.nixFlakes;
     extraOptions = "experimental-features = nix-command flakes";
 
-    # Setup automatic garbage collection
-    settings.auto-optimise-store = true;
+    settings = {
+      # Setup automatic garbage collection
+      auto-optimise-store = true;
+      # Setup nix-gaming cachix
+      substituters = [ "https://nix-gaming.cachix.org" ];
+      trusted-public-keys = [ "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4=" ];
+    };
+
     gc = {
       automatic = true;
       dates = "weekly";
