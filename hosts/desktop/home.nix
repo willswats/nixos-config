@@ -21,7 +21,7 @@
     # Games
     prismlauncher
     # Emulators
-    yuzu-mainline
+    yuzuPackages.early-access
     pcsx2
     rpcs3
   ];
