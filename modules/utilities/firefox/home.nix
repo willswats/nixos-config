@@ -85,24 +85,24 @@
                 url = "https://chatreplay.stream/";
               }
               {
-                name = "Google Play Books";
-                url = "https://play.google.com/books";
-              }
-              {
-                name = "myNoise";
-                url = "https://mynoise.net";
-              }
-              {
-                name = "Aniwave";
-                url = "https://aniwave.to";
+                name = "Aniwatch";
+                url = "https://aniwatch.to/home";
               }
               {
                 name = "MangaDex";
                 url = "https://mangadex.org";
               }
               {
-                name = "movie-web";
-                url = "https://movie-web.app/";
+                name = "Google Play Books";
+                url = "https://play.google.com/books";
+              }
+              {
+                name = "Anna's Archive";
+                url = "https://annas-archive.org/";
+              }
+              {
+                name = "myNoise";
+                url = "https://mynoise.net";
               }
             ];
           }
@@ -141,6 +141,10 @@
               {
                 name = "LinkedIn";
                 url = "https://www.linkedin.com/";
+              }
+              {
+                name = "Lemmy";
+                url = "https://lemmy.world/";
               }
             ];
           }
