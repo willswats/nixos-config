@@ -19,14 +19,15 @@
     ../modules/utilities/chromium/home.nix
     ../modules/utilities/mpv/home.nix
     ../modules/utilities/swayimg/home.nix
+    ../modules/utilities/mullvad-vpn/home.nix
+    ../modules/utilities/vesktop/home.nix
+    ../modules/utilities/fragments/home.nix
     ../modules/utilities/fish/home.nix
     ../modules/utilities/wezterm/home.nix
     ../modules/utilities/bottom/home.nix
     ../modules/utilities/yazi/home.nix
     ../modules/utilities/bluetuith/home.nix
     ../modules/utilities/gnome-keyring/home.nix
-    ../modules/utilities/mullvad-vpn/home.nix
-    ../modules/utilities/vesktop/home.nix
   ];
 
   programs.home-manager.enable = true;
@@ -57,7 +58,6 @@
       gimp
       krita
       kdenlive
-      fragments
       dropbox
       spotify
       yt-dlp
