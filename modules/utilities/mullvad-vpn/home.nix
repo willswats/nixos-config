@@ -9,7 +9,7 @@
     text = ''
       {
            "preferredLocale": "system",
-           "autoConnect": true,
+           "autoConnect": false,
            "enableSystemNotifications": true,
            "monochromaticIcon": true,
            "startMinimized": true,
