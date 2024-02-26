@@ -50,6 +50,11 @@
       # Binds "jk" to switch to normal mode in vi-mode
       bind -M insert -m default jk cancel repaint-mode
 
+      # Copy to clipboard with vi key bindings
+      bind yy fish_clipboard_copy
+      bind Y fish_clipboard_copy
+      bind p fish_clipboard_paste
+
       # Make fish wait 500ms for the "k"
       set -g fish_sequence_key_delay_ms 500
 
