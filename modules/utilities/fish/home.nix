@@ -7,17 +7,22 @@
     enable = true;
     shellAliases =
       let
-        rebuildSwitchCommand = "sudo nixos-rebuild switch --flake";
+        universityDirectory = "~/Dropbox/Work/Education/University";
         codeDirectory = "~/Code";
         nixosConfigDirectory = "~/Code/nixos-config";
         notebookDirectory = "~/Dropbox/Work/Notebook";
+
+        rebuildSwitchCommand = "sudo nixos-rebuild switch --flake";
       in
       {
         c = "clear";
         nv = "nvim";
-        code = "cd ${codeDirectory}; nvim";
+
+        uni = "cd ${universityDirectory}";
+        code = "cd ${codeDirectory}";
         conf = "cd ${nixosConfigDirectory}; nvim";
         note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
+
         # Rebuild Switch Laptop and Desktop
         rsl = "${rebuildSwitchCommand} ${nixosConfigDirectory}#laptop";
         rsd = "${rebuildSwitchCommand} ${nixosConfigDirectory}#desktop";
