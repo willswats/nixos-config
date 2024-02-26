@@ -34,6 +34,25 @@
       # Hide fish greeting
       set -g fish_greeting
 
+      # Set vi key bindings
+      set -g fish_key_bindings fish_vi_key_bindings
+
+      # Fix vi cursors on WezTerm https://github.com/wez/wezterm/issues/2781#issuecomment-1324143452
+      set -g fish_vi_force_cursor 1 
+
+      # Set vi cursors
+      set -g fish_cursor_default block
+      set -g fish_cursor_insert line
+      set -g fish_cursor_replace_one underscore
+      set -g fish_cursor_replace underscore
+      set -g fish_cursor_external line
+
+      # Binds "jk" to switch to normal mode in vi-mode
+      bind -M insert -m default jk cancel repaint-mode
+
+      # Make fish wait 500ms for the "k"
+      set -g fish_sequence_key_delay_ms 500
+
       fish_config theme choose "Catppuccin Mocha"
     '';
   };
