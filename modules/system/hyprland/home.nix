@@ -60,7 +60,7 @@ in
       swaybg = "${pkgs.swaybg}/bin/swaybg";
       xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
       nm-applet = "${pkgs.networkmanagerapplet}/bin/nm-applet";
-      mullvad-gui = "${pkgs.mullvad}/bin/mullvad-gui";
+      mullvad-gui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
       grimblast = "${pkgs.grimblast}/bin/grimblast";
