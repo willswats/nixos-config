@@ -85,8 +85,8 @@
                 url = "https://chatreplay.stream/";
               }
               {
-                name = "Aniwave";
-                url = "https://aniwave.to/";
+                name = "Animeflix";
+                url = "https://animeflix.live";
               }
               {
                 name = "MangaDex";
