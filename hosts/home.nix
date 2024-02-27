@@ -52,7 +52,6 @@
       nodePackages.pnpm
       nodePackages.live-server
       # Utilities 
-      bitwarden
       obs-studio
       gpu-screen-recorder-gtk
       gimp
