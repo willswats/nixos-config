@@ -26,9 +26,6 @@
         # Rebuild Switch Laptop and Desktop
         rsl = "${rebuildSwitchCommand} ${nixosConfigDirectory}#laptop";
         rsd = "${rebuildSwitchCommand} ${nixosConfigDirectory}#desktop";
-        # Pull Rebuild Switch Laptop and Desktop
-        prsl = "cd ${nixosConfigDirectory}; git pull; ${rebuildSwitchCommand} ${nixosConfigDirectory}#laptop";
-        prsd = "cd ${nixosConfigDirectory}; git pull; ${rebuildSwitchCommand} ${nixosConfigDirectory}#desktop";
       };
     interactiveShellInit = ''
       # Hide fish greeting
