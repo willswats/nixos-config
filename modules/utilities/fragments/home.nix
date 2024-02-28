@@ -10,7 +10,7 @@
       [Desktop Entry]
       Name=Fragments
       Icon=de.haeckerfelix.Fragments
-      Exec=bash -c "fragments;mullvad connect"
+      Exec=bash -c "mullvad connect; fragments"
       Terminal=false
       Type=Application
       StartupNotify=true

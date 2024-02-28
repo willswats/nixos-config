@@ -8,7 +8,7 @@
     ''
       [Desktop Entry]
       Name=Miru
-      Exec=bash -c "mullvad connect;miru --no-sandbox %U"
+      Exec=bash -c "mullvad connect; miru %U"
       Terminal=false
       Type=Application
       Icon=miru
