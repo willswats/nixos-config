@@ -57,6 +57,7 @@
       krita
       kdenlive
       fragments
+      miru
       dropbox
       spotify
       yt-dlp
