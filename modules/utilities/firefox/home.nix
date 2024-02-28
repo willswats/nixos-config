@@ -85,20 +85,12 @@
                 url = "https://chatreplay.stream/";
               }
               {
-                name = "Animeflix";
-                url = "https://animeflix.live";
-              }
-              {
                 name = "MangaDex";
                 url = "https://mangadex.org";
               }
               {
                 name = "Google Play Books";
                 url = "https://play.google.com/books";
-              }
-              {
-                name = "Anna's Archive";
-                url = "https://annas-archive.org/";
               }
               {
                 name = "myNoise";
@@ -215,6 +207,19 @@
               {
                 name = "Hyprland";
                 url = "https://wiki.hyprland.org/";
+              }
+            ];
+          }
+          {
+            name = "Downloads";
+            bookmarks = [
+              {
+                name = "Vimm's Lair";
+                url = "https://vimm.net/";
+              }
+              {
+                name = "Anna's Archive";
+                url = "https://annas-archive.org/";
               }
             ];
           }
