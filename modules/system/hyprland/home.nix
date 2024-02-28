@@ -211,7 +211,6 @@ in
           "SHIFT, print, exec, ${hyprshade} off; ${grimblast} --freeze save area; ${hyprshade} auto" # Screenshot manually selected area
 
           "$mod shift, b, exec, ${hyprshade} toggle blue-light-filter" # Toggle blue light filter
-          "$mod, v, exec, ${mullvad} disconnect" # Disconnect VPN
           "$mod shift, v, exec, ${mullvad} connect" # Connect to VPN
 
           "$mod SHIFT, semicolon, exec, ${swaylock}"
