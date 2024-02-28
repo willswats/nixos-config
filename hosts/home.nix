@@ -21,7 +21,6 @@
     ../modules/utilities/swayimg/home.nix
     ../modules/utilities/mullvad-vpn/home.nix
     ../modules/utilities/vesktop/home.nix
-    ../modules/utilities/fragments/home.nix
     ../modules/utilities/fish/home.nix
     ../modules/utilities/wezterm/home.nix
     ../modules/utilities/bottom/home.nix
@@ -57,6 +56,7 @@
       gimp
       krita
       kdenlive
+      fragments
       dropbox
       spotify
       yt-dlp
