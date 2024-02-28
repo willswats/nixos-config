@@ -13,6 +13,11 @@
     pulse.enable = true;
     jack.enable = true;
     wireplumber.enable = true;
-    lowLatency.enable = true; # provided by nix-gaming 
+    # provided by nix-gaming
+    lowLatency = {
+      enable = true;
+      quantum = 64;
+      rate = 48000;
+    };
   };
 }
