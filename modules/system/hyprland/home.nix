@@ -71,6 +71,7 @@ in
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
       spotify = "${pkgs.spotify}/bin/spotify";
+      mullvad = "${pkgs.mullvad}/bin/mullvad";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
@@ -207,8 +208,9 @@ in
           ", print, exec, ${hyprshade} off; ${grimblast} save output; ${hyprshade} auto" # Screenshot active monitor
           "SHIFT, print, exec, ${hyprshade} off; ${grimblast} --freeze save area; ${hyprshade} auto" # Screenshot manually selected area
 
-          "$mod, bracketright, exec, ${hyprshade} on blue-light-filter"
-          "$mod, bracketleft, exec, ${hyprshade} off"
+          "$mod shift, b, exec, ${hyprshade} toggle blue-light-filter" # Toggle blue light filter
+          "$mod, v, exec, ${mullvad} disconnect" # Disconnect VPN
+          "$mod shift, v, exec, ${mullvad} connect" # Connect to VPN
 
           "$mod SHIFT, semicolon, exec, ${swaylock}"
 
@@ -296,7 +298,7 @@ in
         ];
 
         binde = [
-          # Raise and lower volume (limit to 100%)
+          # Raise and lower
           ", XF86AudioRaiseVolume, exec, ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"
           ", XF86AudioLowerVolume, exec, ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-"
 
@@ -311,7 +313,7 @@ in
           "$mod, mouse:273, resizewindow"
         ];
       };
-      # Virtual submap for passing keyboard into virtual machine - https://github.com/hyprwm/Hyprland/issues/501
+      # virtualmachine submap for passing keyboard into virtual machine - https://github.com/hyprwm/Hyprland/issues/501
       extraConfig = ''
         bind=$mod,r,submap,resize
         submap=resize
@@ -324,10 +326,10 @@ in
         bind=$mod,r,submap,reset 
         submap=reset
 
-        bind=$mod,v,submap,virtual
-        submap=virtual
+        bind=$mod SHIFT,m,submap,virtualmachine
+        submap=virtualmachine
 
-        bind=$mod,v,submap,reset
+        bind=$mod SHIFT,m,submap,reset
         submap=reset
       '';
     };
