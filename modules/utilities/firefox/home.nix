@@ -85,6 +85,10 @@
                 url = "https://chatreplay.stream/";
               }
               {
+                name = "Animeflix";
+                url = "https://animeflix.live/";
+              }
+              {
                 name = "MangaDex";
                 url = "https://mangadex.org";
               }
