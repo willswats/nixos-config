@@ -60,7 +60,6 @@ in
       swaybg = "${pkgs.swaybg}/bin/swaybg";
       xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
       nm-applet = "${pkgs.networkmanagerapplet}/bin/nm-applet";
-      mullvad-gui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
       grimblast = "${pkgs.grimblast}/bin/grimblast";
@@ -72,7 +71,8 @@ in
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
       spotify = "${pkgs.spotify}/bin/spotify";
-      mullvad = "${pkgs.mullvad}/bin/mullvad";
+      mullvad = "${pkgs.mullvad-vpn}/bin/mullvad";
+      mullvad-gui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
