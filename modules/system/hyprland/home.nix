@@ -73,6 +73,7 @@ in
       spotify = "${pkgs.spotify}/bin/spotify";
       mullvad = "${pkgs.mullvad-vpn}/bin/mullvad";
       mullvad-gui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
+      mullvadToggle = "if ${mullvad} status | grep 'Connected'; then ${mullvad} disconnect; else ${mullvad} connect; fi";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
@@ -211,7 +212,7 @@ in
           "SHIFT, print, exec, ${hyprshade} off; ${grimblast} --freeze save area; ${hyprshade} auto" # Screenshot manually selected area
 
           "$mod shift, b, exec, ${hyprshade} toggle blue-light-filter" # Toggle blue light filter
-          "$mod shift, v, exec, ${mullvad} connect" # Connect to VPN
+          "$mod shift, v, exec, ${mullvadToggle}" # Toggle VPN
 
           "$mod SHIFT, semicolon, exec, ${swaylock}"
 
