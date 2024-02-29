@@ -14,15 +14,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    hyprland.url = "github:hyprwm/Hyprland";
 
-    nix-gaming = {
-      url = "github:fufexan/nix-gaming";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nix-gaming.url = "github:fufexan/nix-gaming";
   };
 
   outputs = { nixpkgs, home-manager, hyprland, nixvim, ... }@inputs: {
