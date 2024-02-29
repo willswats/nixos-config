@@ -9,9 +9,9 @@ in
     ./grimblast/home.nix
     ./hyprshade/home.nix
     ./waybar/home.nix
-    ../wayland/swaylock/home.nix
-    ../wayland/rofi/home.nix
-    ../wayland/mako/home.nix
+    ./swaylock/home.nix
+    ./rofi/home.nix
+    ./mako/home.nix
   ];
 
   home.packages = with pkgs; [

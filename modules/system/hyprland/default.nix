@@ -4,7 +4,7 @@
   imports = [
     ./grimblast
     ./hyprshade
-    ../wayland/swaylock
+    ./swaylock
   ];
 
   programs.hyprland = {
