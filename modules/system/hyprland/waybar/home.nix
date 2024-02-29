@@ -100,7 +100,6 @@
           green = "#${globals.colours.green}";
           blue = "#${globals.colours.blue}";
           overlay0 = "#${globals.colours.overlay0}";
-          base = "#${globals.colours.base}";
           crust = "#${globals.colours.crust}";
         in
         ''
@@ -128,11 +127,11 @@
 
           #workspaces button.active {
             color: ${blue};
+            background-color: ${crust};
           }
 
           #window {
             color: ${blue}; 
-            background-color: ${base};
           }
 
           #submap {
