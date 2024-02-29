@@ -1,4 +1,4 @@
-{ pkgs, globals, host, ... }:
+{ inputs, pkgs, globals, host, ... }:
 
 
 let
@@ -91,6 +91,7 @@ in
     {
       enable = true;
       xwayland.enable = true;
+      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
       settings = {
         general = {
           gaps_in = 5;
