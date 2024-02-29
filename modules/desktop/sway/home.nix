@@ -48,7 +48,6 @@ in
       mod = config.wayland.windowManager.sway.config.modifier;
 
       wallpaper = globals.wallpaper;
-      monitorCenter = host.monitors.center;
       monitorLeft = host.monitors.left;
       directories = host.directories;
 
@@ -65,7 +64,6 @@ in
 
       waybar = "${pkgs.waybar}/bin/waybar";
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
-      xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
       nm-applet = "${pkgs.networkmanagerapplet}/bin/nm-applet";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
       firefox = "${pkgs.firefox}/bin/firefox";
@@ -107,7 +105,7 @@ in
           criteria = { class = "^.*"; };
         }];
         gaps = { inner = 10; };
-        bars = [ ];
+        bars = [{ command = waybar; }];
         input = {
           "*" = {
             xkb_layout = "gb";
@@ -267,10 +265,7 @@ in
           };
         };
         startup = [
-          {
-            command = "killall .waybar-wrapped; ${waybar}";
-            always = true;
-          }
+          # Daemons
           {
             command = "${playerctld}";
             always = false;
@@ -279,6 +274,7 @@ in
             command = "${lxpolkit}";
             always = false;
           }
+          # Applets
           {
             command = "${nm-applet} --indicator";
             always = false;
@@ -291,16 +287,14 @@ in
             command = "${dropbox}";
             always = false;
           }
-          {
-            command = "${xrandr} --output ${monitorCenter} --primary"; # Ensures that xwindows (especially steam games) use the center monitor
-            always = false;
-          }
-          {
-            command = "while sleep 0.1; do ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 100%; done"; # Prevent microphone from being auto adjusted to lower than 100"
-            always = false;
-          }
+          # Misc
           {
             command = "mkdir -p ${directories}";
+            always = false;
+          }
+          {
+            # Prevent microphone from being auto adjusted to lower than 100 (by Discord)
+            command = "while sleep 0.1; do ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 100%; done";
             always = false;
           }
         ];
