@@ -20,6 +20,7 @@
 
           "sway/workspaces" = {
             all-outputs = true; # Display workspaces assigned to other monitors on one bar
+            disable-scroll = true;
           };
 
           "sway/window" = {
@@ -100,7 +101,6 @@
           green = "#${globals.colours.green}";
           blue = "#${globals.colours.blue}";
           overlay0 = "#${globals.colours.overlay0}";
-          base = "#${globals.colours.base}";
           crust = "#${globals.colours.crust}";
         in
         ''
@@ -111,6 +111,7 @@
           }
 
           #window, 
+          #mode,
           #submap, 
           #battery, 
           #backlight, 
@@ -124,21 +125,22 @@
 
           #workspaces button {
             color: ${overlay0};
+            padding: 0 5px;
           }
 
-          #workspaces button.active {
+          #workspaces button.focused {
             color: ${blue};
+            background-color: ${crust};
           }
 
           #window {
             color: ${blue}; 
-            background-color: ${base};
           }
 
-          #submap {
+          #mode {
             color: ${blue};
             background-color: ${crust};
-          } 
+          }
 
           #battery.full, 
           #battery.charging, 
