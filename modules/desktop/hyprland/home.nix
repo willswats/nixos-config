@@ -1,22 +1,21 @@
 { inputs, pkgs, globals, host, ... }:
 
-
 let
   swaylock = "${pkgs.swaylock-effects}/bin/swaylock";
   hyprctl = "${pkgs.hyprland}/bin/hyprctl";
 in
 {
   imports = [
-    ./swaybg/home.nix
-    ./swaylock/home.nix
-    ./waybar/home.nix
-    ./rofi/home.nix
-    ./mako/home.nix
     ./grimblast/home.nix
     ./hyprshade/home.nix
+    ./waybar/home.nix
+    ../wayland/swaylock/home.nix
+    ../wayland/rofi/home.nix
+    ../wayland/mako/home.nix
   ];
 
   home.packages = with pkgs; [
+    swaybg
     wl-clipboard
     pavucontrol
     networkmanagerapplet
