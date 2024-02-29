@@ -1,9 +1,10 @@
 { inputs, ... }:
 
 {
-  imports = [
-    inputs.nix-gaming.nixosModules.pipewireLowLatency
-  ];
+  # Currently broken https://github.com/fufexan/nix-gaming/issues/161
+  # imports = [
+  #   inputs.nix-gaming.nixosModules.pipewireLowLatency
+  # ];
 
   security.rtkit.enable = true;
   services.pipewire = {
@@ -14,10 +15,10 @@
     jack.enable = true;
     wireplumber.enable = true;
     # provided by nix-gaming
-    lowLatency = {
-      enable = true;
-      quantum = 64;
-      rate = 48000;
-    };
+    # lowLatency = {
+    #   enable = true;
+    #   quantum = 64;
+    #   rate = 48000;
+    # };
   };
 }
