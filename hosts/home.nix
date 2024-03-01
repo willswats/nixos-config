@@ -22,7 +22,7 @@
     ../modules/utilities/mullvad-vpn/home.nix
     ../modules/utilities/vesktop/home.nix
     ../modules/utilities/fish/home.nix
-    ../modules/utilities/wezterm/home.nix
+    ../modules/utilities/alacritty/home.nix
     ../modules/utilities/bottom/home.nix
     ../modules/utilities/yazi/home.nix
     ../modules/utilities/bluetuith/home.nix

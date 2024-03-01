@@ -64,7 +64,7 @@ in
       grimblast = "${pkgs.grimblast}/bin/grimblast";
       firefox = "${pkgs.firefox}/bin/firefox";
       yazi = "${pkgs.yazi}/bin/yazi";
-      wezterm = "${pkgs.wezterm}/bin/wezterm";
+      alacritty = "${pkgs.alacritty}/bin/alacritty";
       rofi = "${pkgs.rofi-wayland}/bin/rofi";
       nvim = "nvim"; # Both of these break neovim (nixvim): "${pkgs.neovim}/bin/nvim" "${config.programs.nixvim.package}/bin/nvim"
       btm = "${pkgs.bottom}/bin/btm";
@@ -200,12 +200,12 @@ in
           # Applications
           "$mod, d, exec, ${rofi} -show drun"
 
-          "$mod, return, exec, ${wezterm}"
+          "$mod, return, exec, ${alacritty}"
           "$mod, w, exec, ${firefox}" # Web browser
-          "$mod, e, exec, ${wezterm} start -- ${yazi}" # File explorer
-          "$mod, t, exec, ${wezterm} start -- ${nvim}" # Text editor
-          "$mod, s, exec, ${wezterm} start -- ${btm} -b" # Process monitor
-          "$mod, b, exec, ${wezterm} start -- ${bluetuith}" # Bluetooth manager
+          "$mod, e, exec, ${alacritty} -e ${yazi}" # File explorer
+          "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
+          "$mod, s, exec, ${alacritty} -e ${btm} -b" # Process monitor
+          "$mod, b, exec, ${alacritty} -e ${bluetuith}" # Bluetooth manager
           "$mod, m, exec, ${spotify}" # Music player
 
           ", print, exec, ${hyprshade} off; ${grimblast} save output; ${hyprshade} auto" # Screenshot active monitor
