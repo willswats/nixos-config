@@ -3,6 +3,7 @@
 
 let
   swaylock = "${pkgs.swaylock-effects}/bin/swaylock";
+  swaymsg = "${pkgs.sway}/bin/swaymsg";
 in
 {
   imports = [
@@ -32,8 +33,8 @@ in
         }
         {
           timeout = 600; # 600 seconds = 10 minutes
-          command = "swaymsg 'output * power off'";
-          resumeCommand = "swaymsg 'output * power on'";
+          command = "${swaymsg} 'output * power off'";
+          resumeCommand = "${swaymsg} 'output * power on'";
         }
       ];
       events = [
