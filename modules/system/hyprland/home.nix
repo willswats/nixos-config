@@ -2,9 +2,9 @@
 
 {
   imports = [
-    ./grimblast/home.nix
-    ./hyprshade/home.nix
     ./hypridle/home.nix
+    ./hyprshade/home.nix
+    ./grimblast/home.nix
     ./waybar/home.nix
     ./swaylock/home.nix
     ./rofi/home.nix
@@ -30,39 +30,44 @@
       monitorLeft = host.monitors.left;
       directories = host.directories;
 
+      xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
 
       swaylock = "${pkgs.swaylock-effects}/bin/swaylock";
-      hyprctl = "${pkgs.hyprland}/bin/hyprctl";
-      waybar = "${pkgs.waybar}/bin/waybar";
-      lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       swaybg = "${pkgs.swaybg}/bin/swaybg";
+
+      hyprctl = "${pkgs.hyprland}/bin/hyprctl";
       hypridle = "${pkgs.hypridle}/bin/hypridle";
-      xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
-      nm-applet = "${pkgs.networkmanagerapplet}/bin/nm-applet";
-      dropbox = "${pkgs.dropbox}/bin/dropbox";
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
       grimblast = "${pkgs.grimblast}/bin/grimblast";
-      firefox = "${pkgs.firefox}/bin/firefox";
-      yazi = "${pkgs.yazi}/bin/yazi";
-      foot = "${pkgs.foot}/bin/foot";
+
       rofi = "${pkgs.rofi-wayland}/bin/rofi";
+      waybar = "${pkgs.waybar}/bin/waybar";
+
+      firefox = "${pkgs.firefox}/bin/firefox";
+      spotify = "${pkgs.spotify}/bin/spotify";
+
+      foot = "${pkgs.foot}/bin/foot";
+      yazi = "${pkgs.yazi}/bin/yazi";
       nvim = "nvim"; # Both of these break neovim (nixvim): "${pkgs.neovim}/bin/nvim" "${config.programs.nixvim.package}/bin/nvim"
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
-      spotify = "${pkgs.spotify}/bin/spotify";
+
+      lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
+      nmApplet = "${pkgs.networkmanagerapplet}/bin/nm-applet";
       mullvad = "${pkgs.mullvad-vpn}/bin/mullvad";
-      mullvad-gui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
+      mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       mullvadToggle = "if ${mullvad} status | grep 'Connected'; then ${mullvad} disconnect; else ${mullvad} connect; fi";
+      dropbox = "${pkgs.dropbox}/bin/dropbox";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
       playerctld = "${pkgs.playerctl}/bin/playerctld";
       brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
 
-      colours_start = "0xff";
-      mauve = "${colours_start}${globals.colours.mauve}";
-      blue = "${colours_start}${globals.colours.blue}";
-      overlay0 = "${colours_start}${globals.colours.overlay0}";
+      coloursStart = "0xff";
+      mauve = "${coloursStart}${globals.colours.mauve}";
+      blue = "${coloursStart}${globals.colours.blue}";
+      overlay0 = "${coloursStart}${globals.colours.overlay0}";
     in
     {
       enable = true;
@@ -135,7 +140,7 @@
           # https://github.com/hyprwm/Hyprland/issues/2661
           "stayfocused, title:^()$,class:^(steam)$" # Fix steam context menus
           "minsize 1 1, title:^()$,class:^(steam)$" # Fix steam context menus
-          "idleinhibit fullscreen, class:Apprun, title:Dolphin" # Prevent Ishiiruka swayidle lock
+          "idleinhibit fullscreen, class:Apprun, title:Dolphin" # Prevent Ishiiruka idle lock
         ];
 
 
@@ -165,13 +170,13 @@
           "${playerctld}"
           "${lxpolkit}"
           # Applets
-          "${nm-applet} --indicator"
-          "${mullvad-gui}"
+          "${nmApplet} --indicator"
+          "${mullvadGui}"
           "${dropbox}"
           # Misc
+          "mkdir -p ${directories}"
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
           "while sleep 0.1; do ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 100%; done" # Prevent microphone from being auto adjusted to lower than 100
-          "mkdir -p ${directories}"
         ];
 
         "$mod" = "SUPER";
