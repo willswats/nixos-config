@@ -13,7 +13,6 @@
 
   home.packages = with pkgs; [
     swaybg
-    hypridle
     wl-clipboard
     networkmanagerapplet
     playerctl
