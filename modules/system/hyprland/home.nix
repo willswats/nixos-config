@@ -33,11 +33,11 @@ in
           timeout = 1800; # 1800 seconds = 30 minutes
           command = swaylock;
         }
-        # {
-        #   timeout = 600; # 600 seconds = 10 minutes
-        #   command = "${hyprctl} dispatch dpms off";
-        #   resumeCommand = "${hyprctl} dispatch dpms on";
-        # }
+        {
+          timeout = 600; # 600 seconds = 10 minutes
+          command = "${hyprctl} dispatch dpms off";
+          resumeCommand = "${hyprctl} dispatch dpms on";
+        }
       ];
       events = [
         { event = "before-sleep"; command = swaylock; }
@@ -142,8 +142,8 @@ in
         };
 
         misc = {
-          # mouse_move_enables_dpms = true; 
-          # key_press_enables_dpms = true; 
+          mouse_move_enables_dpms = true;
+          key_press_enables_dpms = true;
           # Fix Firefox flashing default hyprland wallpaper on resize (still occurs, but it's less noticeable)
           # https://github.com/hyprwm/Hyprland/issues/2817
           disable_hyprland_logo = true;
@@ -155,8 +155,8 @@ in
           "float, class:steam, title:Steam Settings"
           "float, class:steam, title:Game Servers"
           "float, class:steam, title:Screenshot Manager"
-          "nomaximizerequest, class:steam" # Fix Steam maximizing certain windows (Friends List)
-          "nomaximizerequest, class:firefox" # Fix Firefox maximizing certain windows (extensions)
+          "suppressevent maximize, class:steam" # Fix Steam maximizing certain windows (Friends List)
+          "suppressevent maximize, class:firefox" # Fix Firefox maximizing certain windows (extensions)
           # https://github.com/hyprwm/Hyprland/issues/2661
           "stayfocused, title:^()$,class:^(steam)$" # Fix steam context menus
           "minsize 1 1, title:^()$,class:^(steam)$" # Fix steam context menus
