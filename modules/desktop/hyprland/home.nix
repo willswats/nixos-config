@@ -16,6 +16,7 @@ in
 
   home.packages = with pkgs; [
     swaybg
+    hypridle
     wl-clipboard
     pavucontrol
     networkmanagerapplet
@@ -24,26 +25,21 @@ in
     lxde.lxsession
   ];
 
-  services = {
-    swayidle = {
-      enable = true;
-      systemdTarget = "hyprland-session.target";
-      timeouts = [
-        {
-          timeout = 1800; # 1800 seconds = 30 minutes
-          command = swaylock;
-        }
-        {
-          timeout = 600; # 600 seconds = 10 minutes
-          command = "${hyprctl} dispatch dpms off";
-          resumeCommand = "${hyprctl} dispatch dpms on";
-        }
-      ];
-      events = [
-        { event = "before-sleep"; command = swaylock; }
-        { event = "lock"; command = swaylock; }
-      ];
-    };
+  xdg.configFile."hypr/hypridle.conf" = {
+    # 1800 = 30 minutes
+    # 600 = 10 minutes
+    text = ''
+      listener {
+          timeout = 1800
+          on-timeout = ${swaylock}
+      }
+
+      listener {
+          timeout = 600
+          on-timeout = ${hyprctl} dispatch dpms off
+          on-resume = ${hyprctl} dispatch dpms on
+      }
+    '';
   };
 
   wayland.windowManager.hyprland =
@@ -57,6 +53,7 @@ in
       waybar = "${pkgs.waybar}/bin/waybar";
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       swaybg = "${pkgs.swaybg}/bin/swaybg";
+      hypridle = "${pkgs.hypridle}/bin/hypridle";
       xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
       nm-applet = "${pkgs.networkmanagerapplet}/bin/nm-applet";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
@@ -139,8 +136,6 @@ in
         };
 
         misc = {
-          # mouse_move_enables_dpms = true; # Seems to cause dpms to never turn off
-          key_press_enables_dpms = true;
           # Fix Firefox flashing default hyprland wallpaper on resize (still occurs, but it's less noticeable)
           # https://github.com/hyprwm/Hyprland/issues/2817
           disable_hyprland_logo = true;
@@ -183,6 +178,7 @@ in
           # Wallpaper
           "${swaybg} --i ${wallpaper} -m fill"
           # Daemons
+          "${hypridle}"
           "${playerctld}"
           "${lxpolkit}"
           # Applets
