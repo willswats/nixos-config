@@ -198,7 +198,6 @@ in
         "$mod" = "SUPER";
 
         bind = [
-          # Applications
           "$mod, d, exec, ${rofi} -show drun"
 
           "$mod, return, exec, ${foot}"
@@ -217,7 +216,6 @@ in
 
           "$mod SHIFT, semicolon, exec, ${swaylock}"
 
-          # Special
           "$mod, q, killactive"
           "$mod, f, fullscreen"
 
@@ -231,7 +229,6 @@ in
           "$mod shift, equal, movetoworkspacesilent, m+0"
           "$mod shift, minus, movetoworkspacesilent, special"
 
-          # Group
           "$mod shift, g, togglegroup"
           "$mod, g, lockactivegroup, toggle"
           "$mod, o, moveoutofgroup"
@@ -243,13 +240,14 @@ in
           "$mod shift, Next, movegroupwindow, f"
           "$mod shift, Prior, movegroupwindow, b"
 
-          # Could remove this by using movewindoworgroup instead of movewindow below, but it's currently buggy
+          # Could remove this by using movewindoworgroup instead of movewindow below, however,
+          # both are currently buggy, therefore, it's on a seperate key for now
+          # https://github.com/hyprwm/Hyprland/issues/4205
           "$mod, Left, moveintogroup, l"
           "$mod, Right, moveintogroup, r"
           "$mod, Up, moveintogroup, u"
           "$mod, Down, moveintogroup, d"
 
-          # General
           "$mod, space, cyclenext" # To select floating windows
 
           "$mod, h, movefocus, l"
