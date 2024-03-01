@@ -1,46 +1,26 @@
 { inputs, pkgs, globals, host, ... }:
 
-let
-  swaylock = "${pkgs.swaylock-effects}/bin/swaylock";
-  hyprctl = "${pkgs.hyprland}/bin/hyprctl";
-in
 {
   imports = [
     ./grimblast/home.nix
     ./hyprshade/home.nix
+    ./hypridle/home.nix
     ./waybar/home.nix
-    ../wayland/swaylock/home.nix
-    ../wayland/rofi/home.nix
-    ../wayland/mako/home.nix
+    ./swaylock/home.nix
+    ./rofi/home.nix
+    ./mako/home.nix
   ];
 
   home.packages = with pkgs; [
     swaybg
     hypridle
     wl-clipboard
-    pavucontrol
     networkmanagerapplet
     playerctl
     brightnessctl
     lxde.lxsession
+    pavucontrol
   ];
-
-  xdg.configFile."hypr/hypridle.conf" = {
-    # 1800 = 30 minutes
-    # 600 = 10 minutes
-    text = ''
-      listener {
-          timeout = 1800
-          on-timeout = ${swaylock}
-      }
-
-      listener {
-          timeout = 600
-          on-timeout = ${hyprctl} dispatch dpms off
-          on-resume = ${hyprctl} dispatch dpms on
-      }
-    '';
-  };
 
   wayland.windowManager.hyprland =
     let
@@ -50,6 +30,9 @@ in
       monitorLeft = host.monitors.left;
       directories = host.directories;
 
+
+      swaylock = "${pkgs.swaylock-effects}/bin/swaylock";
+      hyprctl = "${pkgs.hyprland}/bin/hyprctl";
       waybar = "${pkgs.waybar}/bin/waybar";
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       swaybg = "${pkgs.swaybg}/bin/swaybg";
