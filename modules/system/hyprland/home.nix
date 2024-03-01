@@ -192,7 +192,8 @@
           "$mod, m, exec, ${spotify}" # Music player
 
           ", print, exec, ${hyprshade} off; ${grimblast} save output; ${hyprshade} auto" # Screenshot active monitor
-          "SHIFT, print, exec, ${hyprshade} off; ${grimblast} --freeze save area; ${hyprshade} auto" # Screenshot manually selected area
+          "SHIFT, print, exec, ${hyprshade} off; killall slurp; ${grimblast} --freeze save area; ${hyprshade} auto" # Screenshot manually selected area
+
 
           "$mod shift, b, exec, ${hyprshade} toggle blue-light-filter" # Toggle blue light filter
           "$mod shift, v, exec, ${mullvadToggle}" # Toggle VPN
