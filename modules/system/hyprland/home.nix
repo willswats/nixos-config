@@ -62,19 +62,32 @@
 
       mullvad = "${pkgs.mullvad-vpn}/bin/mullvad";
       mullvadToggle = pkgs.writeShellScript "mullvadToggle.sh" ''
-        if ${mullvad} status | grep 'Connected'; then ${mullvad} disconnect; else ${mullvad} connect; fi
+        #!/bin/sh
+        if ${mullvad} status | grep 'Connected'; then
+        	 ${mullvad} disconnect
+        else
+        	${mullvad} connect
+        fi
       '';
 
       grimblast = "${pkgs.grimblast}/bin/grimblast";
       grimblastSaveOutput = pkgs.writeShellScript "grimblastSaveOutput.sh" ''
-        ${hyprshade} off; ${grimblast} save output; ${hyprshade} auto
+        #!/bin/sh
+        ${hyprshade} off
+        ${grimblast} save output
+        ${hyprshade} auto
       '';
       grimblastSaveArea = pkgs.writeShellScript "grimblastScreenshotArea.sh" ''
-        ${hyprshade} off; killall slurp; ${grimblast} --freeze save area; ${hyprshade} auto
+        #!/bin/sh
+        ${hyprshade} off
+        killall slurp # Prevent overlapping slurp windows
+        ${grimblast} --freeze save area
+        ${hyprshade} auto
       '';
 
       # Prevent microphone from being auto adjusted to lower than 100
       preventMicrophoneAutoAdjust = pkgs.writeShellScript "preventMicrophoneAutoAdjust.sh" ''
+        #!/bin/sh
         while sleep 0.1; do ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 100%; done
       '';
 
