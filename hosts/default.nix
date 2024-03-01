@@ -64,7 +64,7 @@ in
 
   environment = {
     variables = {
-      TERMINAL = "alacritty";
+      TERMINAL = "foot";
       EDITOR = "nvim";
     };
     # Add shells to /etc/shells

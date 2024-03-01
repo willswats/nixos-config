@@ -18,7 +18,7 @@
       Comment=Blazing fast terminal file manager written in Rust, based on async I/O
       Terminal=false
       TryExec=yazi
-      Exec=alacritty -e yazi %u
+      Exec=foot yazi %u
       Type=Application
       MimeType=inode/directory
       Categories=Utility;Core;System;FileTools;FileManager;ConsoleOnly

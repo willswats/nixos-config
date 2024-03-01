@@ -64,7 +64,7 @@ in
       grimblast = "${pkgs.grimblast}/bin/grimblast";
       firefox = "${pkgs.firefox}/bin/firefox";
       yazi = "${pkgs.yazi}/bin/yazi";
-      alacritty = "${pkgs.alacritty}/bin/alacritty";
+      foot = "${pkgs.foot}/bin/foot";
       rofi = "${pkgs.rofi-wayland}/bin/rofi";
       nvim = "nvim"; # Both of these break neovim (nixvim): "${pkgs.neovim}/bin/nvim" "${config.programs.nixvim.package}/bin/nvim"
       btm = "${pkgs.bottom}/bin/btm";
@@ -183,13 +183,17 @@ in
         ];
 
         exec-once = [
+          # Wallpaper
           "${swaybg} --i ${wallpaper} -m fill"
+          # Daemons
           "${playerctld}"
           "${lxpolkit}"
-          "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
+          # Applets
           "${nm-applet} --indicator"
           "${mullvad-gui}"
           "${dropbox}"
+          # Misc
+          "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
           "while sleep 0.1; do ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 100%; done" # Prevent microphone from being auto adjusted to lower than 100
           "mkdir -p ${directories}"
         ];
@@ -200,12 +204,12 @@ in
           # Applications
           "$mod, d, exec, ${rofi} -show drun"
 
-          "$mod, return, exec, ${alacritty}"
+          "$mod, return, exec, ${foot}"
           "$mod, w, exec, ${firefox}" # Web browser
-          "$mod, e, exec, ${alacritty} -e ${yazi}" # File explorer
-          "$mod, t, exec, ${alacritty} -e ${nvim}" # Text editor
-          "$mod, s, exec, ${alacritty} -e ${btm} -b" # Process monitor
-          "$mod, b, exec, ${alacritty} -e ${bluetuith}" # Bluetooth manager
+          "$mod, e, exec, ${foot} ${yazi}" # File explorer
+          "$mod, t, exec, ${foot} ${nvim}" # Text editor
+          "$mod, s, exec, ${foot} ${btm} -b" # Process monitor
+          "$mod, b, exec, ${foot} ${bluetuith}" # Bluetooth manager
           "$mod, m, exec, ${spotify}" # Music player
 
           ", print, exec, ${hyprshade} off; ${grimblast} save output; ${hyprshade} auto" # Screenshot active monitor

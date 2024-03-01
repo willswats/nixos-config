@@ -2,11 +2,11 @@
 
 {
   programs.rofi =
-    let alacritty = "${pkgs.alacritty}/bin/alacritty";
+    let foot = "${pkgs.foot}/bin/foot";
     in {
       enable = true;
       package = pkgs.rofi-wayland;
-      terminal = alacritty;
+      terminal = foot;
       theme = "~/.config/rofi/themes/catppuccin-mocha.rasi";
       extraConfig = { show-icons = true; };
     };
