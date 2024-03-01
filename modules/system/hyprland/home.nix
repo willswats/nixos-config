@@ -37,7 +37,6 @@
       hyprctl = "${pkgs.hyprland}/bin/hyprctl";
       hypridle = "${pkgs.hypridle}/bin/hypridle";
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
-      grimblast = "${pkgs.grimblast}/bin/grimblast";
 
       rofi = "${pkgs.rofi-wayland}/bin/rofi";
       waybar = "${pkgs.waybar}/bin/waybar";
@@ -53,15 +52,31 @@
 
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       nmApplet = "${pkgs.networkmanagerapplet}/bin/nm-applet";
-      mullvad = "${pkgs.mullvad-vpn}/bin/mullvad";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
-      mullvadToggle = "if ${mullvad} status | grep 'Connected'; then ${mullvad} disconnect; else ${mullvad} connect; fi";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
       playerctld = "${pkgs.playerctl}/bin/playerctld";
       brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
+
+      mullvad = "${pkgs.mullvad-vpn}/bin/mullvad";
+      mullvadToggle = pkgs.writeShellScript "mullvadToggle.sh" ''
+        if ${mullvad} status | grep 'Connected'; then ${mullvad} disconnect; else ${mullvad} connect; fi
+      '';
+
+      grimblast = "${pkgs.grimblast}/bin/grimblast";
+      grimblastSaveOutput = pkgs.writeShellScript "grimblastSaveOutput.sh" ''
+        ${hyprshade} off; ${grimblast} save output; ${hyprshade} auto
+      '';
+      grimblastSaveArea = pkgs.writeShellScript "grimblastScreenshotArea.sh" ''
+        ${hyprshade} off; killall slurp; ${grimblast} --freeze save area; ${hyprshade} auto
+      '';
+
+      # Prevent microphone from being auto adjusted to lower than 100
+      preventMicrophoneAutoAdjust = pkgs.writeShellScript "preventMicrophoneAutoAdjust.sh" ''
+        while sleep 0.1; do ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 100%; done
+      '';
 
       coloursStart = "0xff";
       mauve = "${coloursStart}${globals.colours.mauve}";
@@ -174,8 +189,8 @@
           "${dropbox}"
           # Misc
           "mkdir -p ${directories}"
+          "${preventMicrophoneAutoAdjust}"
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
-          "while sleep 0.1; do ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 100%; done" # Prevent microphone from being auto adjusted to lower than 100
         ];
 
         "$mod" = "SUPER";
@@ -191,8 +206,8 @@
           "$mod, b, exec, ${foot} ${bluetuith}" # Bluetooth manager
           "$mod, m, exec, ${spotify}" # Music player
 
-          ", print, exec, ${hyprshade} off; ${grimblast} save output; ${hyprshade} auto" # Screenshot active monitor
-          "SHIFT, print, exec, ${hyprshade} off; killall slurp; ${grimblast} --freeze save area; ${hyprshade} auto" # Screenshot manually selected area
+          ", print, exec, ${grimblastSaveOutput}" # Screenshot active monitor
+          "SHIFT, print, exec, ${grimblastSaveArea}" # Screenshot manually selected area
 
 
           "$mod shift, b, exec, ${hyprshade} toggle blue-light-filter" # Toggle blue light filter
