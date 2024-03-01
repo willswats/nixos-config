@@ -164,7 +164,7 @@
 
         exec-once = [
           # Wallpaper
-          "${swaybg} --i ${wallpaper} -m fill"
+          "${swaybg} --image ${wallpaper} --mode fill"
           # Daemons
           "${hypridle}"
           "${playerctld}"
