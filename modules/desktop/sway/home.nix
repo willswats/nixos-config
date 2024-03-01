@@ -25,7 +25,6 @@ in
   services = {
     swayidle = {
       enable = true;
-      systemdTarget = "hyprland-session.target";
       timeouts = [
         {
           timeout = 1800; # 1800 seconds = 30 minutes
