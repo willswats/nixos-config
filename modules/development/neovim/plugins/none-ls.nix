@@ -5,6 +5,7 @@
     nodePackages.prettier # Code formatter for many languages
     nixpkgs-fmt # Nix formatter
     taplo # TOML formatter
+    shfmt # shell formatter
     sqlfluff # SQL formatter and linter
     nodePackages.markdownlint-cli # Markdown linter
   ];
@@ -24,6 +25,7 @@
           ${formatting}.prettier,
           ${formatting}.nixpkgs_fmt,
           ${formatting}.taplo,
+          ${formatting}.shfmt,
           ${formatting}.sqlfluff.with({ extra_args = { "--dialect", "postgres" } }),
           ${diagnostics}.sqlfluff.with({ extra_args = { "--dialect", "postgres" } }),
           ${diagnostics}.markdownlint.with({ extra_args = { "--disable", "MD013" } })
