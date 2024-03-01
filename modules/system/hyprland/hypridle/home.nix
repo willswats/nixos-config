@@ -1,29 +1,23 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    hypridle
-  ];
-
-  xdg.configFile."hypr/hypridle.conf" =
+  services.hypridle =
     let
       swaylock = "${pkgs.swaylock-effects}/bin/swaylock";
       hyprctl = "${pkgs.hyprland}/bin/hyprctl";
     in
     {
-      # 1800 = 30 minutes
-      # 600 = 10 minutes
-      text = ''
-        listener {
-            timeout = 1800
-            on-timeout = ${swaylock}
+      enable = true;
+      listeners = [
+        {
+          timeout = 1800;
+          onTimeout = swaylock;
         }
-
-        listener {
-            timeout = 600
-            on-timeout = ${hyprctl} dispatch dpms off
-            on-resume = ${hyprctl} dispatch dpms on
+        {
+          timeout = 600;
+          onTimeout = "${hyprctl} dispatch dpms off";
+          onResume = "${hyprctl} dispatch dpms on";
         }
-      '';
+      ];
     };
 }
