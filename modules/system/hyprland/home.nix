@@ -79,9 +79,6 @@ in
       playerctld = "${pkgs.playerctl}/bin/playerctld";
       brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
 
-      # Temporary exit script
-      exit = "kill -9 $(pidof Hyprland)";
-
       colours_start = "0xff";
       mauve = "${colours_start}${globals.colours.mauve}";
       blue = "${colours_start}${globals.colours.blue}";
@@ -224,8 +221,7 @@ in
           "$mod, q, killactive"
           "$mod, f, fullscreen"
 
-          # Temporary exit script instead of "$mod shift, e, exit" until this issue is fixed: https://github.com/hyprwm/Hyprland/issues/3558
-          "$mod shift, e, exec, ${exit}"
+          "$mod shift, e, exec, ${hyprctl} dispatch exit"
           "$mod shift, r, exec, ${hyprctl} reload"
 
           "$mod shift, f, togglefloating"
