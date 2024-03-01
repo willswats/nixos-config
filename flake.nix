@@ -141,6 +141,7 @@
                   users.${user}.imports = [
                     ./hosts/home.nix
                     nixvim.homeManagerModules.nixvim
+                    hypridle.homeManagerModules.default
                   ];
                 };
               }
