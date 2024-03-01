@@ -139,7 +139,7 @@ in
         };
 
         misc = {
-          mouse_move_enables_dpms = true;
+          # mouse_move_enables_dpms = true; # Seems to cause dpms to never turn off
           key_press_enables_dpms = true;
           # Fix Firefox flashing default hyprland wallpaper on resize (still occurs, but it's less noticeable)
           # https://github.com/hyprwm/Hyprland/issues/2817
