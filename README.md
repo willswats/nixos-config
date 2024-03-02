@@ -138,3 +138,10 @@ rm ~/.bash_history
 3. [osu](./non-declarative/docs/games/osu.md)
 4. [RetroArch](./non-declarative/docs/games/retroarch.md)
 5. [Yuzu](./non-declarative/docs/games/yuzu.md)
+
+## Acknowledgements
+
+Other configurations from where I learned and copied:
+
+- [MatthiasBenaets/nixos-config](https://github.com/MatthiasBenaets/nixos-config)
+- [fufexan/dotfiles](https://github.com/fufexan/dotfiles)
