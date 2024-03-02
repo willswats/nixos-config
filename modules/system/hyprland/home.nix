@@ -46,7 +46,6 @@
 
       foot = "${pkgs.foot}/bin/foot";
       yazi = "${pkgs.yazi}/bin/yazi";
-      nvim = "nvim"; # Both of these break neovim (nixvim): "${pkgs.neovim}/bin/nvim" "${config.programs.nixvim.package}/bin/nvim"
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
 
@@ -214,7 +213,7 @@
           "$mod, return, exec, ${foot}"
           "$mod, w, exec, ${firefox}" # Web browser
           "$mod, e, exec, ${foot} ${yazi}" # File explorer
-          "$mod, t, exec, ${foot} ${nvim}" # Text editor
+          "$mod, t, exec, ${foot} nvim" # Text editor (not specifying the binary as it doesn't load my config)
           "$mod, s, exec, ${foot} ${btm} -b" # Process monitor
           "$mod, b, exec, ${foot} ${bluetuith}" # Bluetooth manager
           "$mod, m, exec, ${spotify}" # Music player
