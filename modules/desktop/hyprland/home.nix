@@ -159,9 +159,6 @@
           "float, class:steam, title:Screenshot Manager"
           "suppressevent maximize, class:steam" # Fix Steam maximizing certain windows (Friends List)
           "suppressevent maximize, class:firefox" # Fix Firefox maximizing certain windows (extensions)
-          # https://github.com/hyprwm/Hyprland/issues/2661
-          "stayfocused, title:^()$,class:^(steam)$" # Fix steam context menus
-          "minsize 1 1, title:^()$,class:^(steam)$" # Fix steam context menus
           "idleinhibit fullscreen, class:Apprun, title:Dolphin" # Prevent Ishiiruka idle lock
         ];
 
