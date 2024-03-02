@@ -5,7 +5,7 @@ let
 in
 {
   imports = [
-    ../modules/system/hyprland
+    ../modules/desktop/hyprland
     ../modules/system/sddm
     ../modules/system/plymouth
     ../modules/system/pipewire

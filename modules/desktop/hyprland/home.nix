@@ -6,9 +6,9 @@
     ./hyprshade/home.nix
     ./grimblast/home.nix
     ./waybar/home.nix
-    ./swaylock/home.nix
-    ./rofi/home.nix
-    ./mako/home.nix
+    ../wayland/swaylock/home.nix
+    ../wayland/rofi/home.nix
+    ../wayland/mako/home.nix
   ];
 
   home.packages = with pkgs; [
