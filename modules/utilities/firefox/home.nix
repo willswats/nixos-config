@@ -82,11 +82,11 @@
               }
               {
                 name = "ChatReplay";
-                url = "https://chatreplay.stream/";
+                url = "https://chatreplay.stream/subscriptions";
               }
               {
-                name = "Animeflix";
-                url = "https://animeflix.live/";
+                name = "Aniwave";
+                url = "https://aniwave.to";
               }
               {
                 name = "MangaDex";
