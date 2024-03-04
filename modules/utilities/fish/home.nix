@@ -20,16 +20,25 @@
         notifySend = "${pkgs.libnotify}/bin/notify-send";
         hostname = "${pkgs.hostname}/bin/hostname";
 
+        # Rebuild command that's dependent upon the host name for choosing the flake
         rebuildSwitchFlake = pkgs.writeShellScript "rebuildSwitchFlake.sh" ''
           HOST=$(${hostname})
           if [ "$HOST" = "${desktopHostName}" ]; then
             ${notifySend} "${desktopHostName} - Starting Flake Rebuild..."
             ${rebuildSwitchCommand} ${nixosConfigDirectory}#desktop
-            ${notifySend} "${desktopHostName} - Flake Rebuild Complete"
-          elif [ "$HOST" = "${laptopHostName}" ];then
+            if [ $? = 0 ]; then
+              ${notifySend} "${desktopHostName} - Flake Rebuild Completed"
+            else
+              ${notifySend} "${desktopHostName} - Flake Rebuild Failed"
+            fi
+          elif [ "$HOST" = "${laptopHostName}" ]; then
             ${notifySend} "${laptopHostName} - Starting Flake Rebuild..."
             ${rebuildSwitchCommand} ${nixosConfigDirectory}#laptop
-            ${notifySend} "${laptopHostName} - Flake Rebuild Complete"
+            if [ $? = 0 ]; then
+              ${notifySend} "${laptopHostName} - Flake Rebuild Completed"
+            else
+              ${notifySend} "${laptopHostName} - Flake Rebuild Failed"
+            fi
           fi
         '';
       in
