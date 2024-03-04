@@ -55,7 +55,7 @@
       gpu-screen-recorder-gtk
       gimp
       krita
-      kdenlive
+      shotcut
       fragments
       dropbox
       spotify
