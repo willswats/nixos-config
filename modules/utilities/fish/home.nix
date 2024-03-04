@@ -53,7 +53,7 @@
         note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
 
         rsf = rebuildSwitchFlake.outPath;
-        prsf = "cd ${nixosConfigDirectory}; git pull; ${rebuildSwitchFlake.outPath}";
+        prsf = "git -C ${nixosConfigDirectory} pull; ${rebuildSwitchFlake.outPath}";
       };
     interactiveShellInit = ''
       # Hide fish greeting
