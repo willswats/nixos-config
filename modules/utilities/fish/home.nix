@@ -22,23 +22,24 @@
 
         # Rebuild command that's dependent upon the host name for choosing the flake
         rebuildSwitchFlake = pkgs.writeShellScript "rebuildSwitchFlake.sh" ''
-          HOST=$(${hostname})
-          if [ "$HOST" = "${desktopHostName}" ]; then
-            ${notifySend} "${desktopHostName} - Starting Flake Rebuild..."
-            ${rebuildSwitchCommand} ${nixosConfigDirectory}#desktop
-            if [ $? = 0 ]; then
-              ${notifySend} "${desktopHostName} - Flake Rebuild Completed"
+          rebuild_switch_command() {
+            ${rebuildSwitchCommand} ${nixosConfigDirectory}"$1"
+          }
+
+          rebuild_switch_flake() {
+            ${notifySend} "$1 - Starting Flake Rebuild..."
+            if rebuild_switch_command "$2"; then
+              ${notifySend} "$1 - Flake Rebuild Completed"
             else
-              ${notifySend} "${desktopHostName} - Flake Rebuild Failed"
+              ${notifySend} "$1 - Flake Rebuild Failed"
             fi
-          elif [ "$HOST" = "${laptopHostName}" ]; then
-            ${notifySend} "${laptopHostName} - Starting Flake Rebuild..."
-            ${rebuildSwitchCommand} ${nixosConfigDirectory}#laptop
-            if [ $? = 0 ]; then
-              ${notifySend} "${laptopHostName} - Flake Rebuild Completed"
-            else
-              ${notifySend} "${laptopHostName} - Flake Rebuild Failed"
-            fi
+          }
+
+          host=$(${hostname})
+          if [ "$host" = "${desktopHostName}" ]; then
+            rebuild_switch_flake "${desktopHostName}" "#desktop"
+          elif [ "$host" = "${laptopHostName}" ]; then
+            rebuild_switch_flake "${laptopHostName}" "#laptop"
           fi
         '';
       in
