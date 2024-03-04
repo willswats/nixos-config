@@ -13,6 +13,25 @@
         notebookDirectory = "~/Dropbox/Work/Notebook";
 
         rebuildSwitchCommand = "sudo nixos-rebuild switch --flake";
+
+        desktopHostName = globals.hostNames.desktop;
+        laptopHostName = globals.hostNames.laptop;
+
+        notifySend = "${pkgs.libnotify}/bin/notify-send";
+        hostname = "${pkgs.hostname}/bin/hostname";
+
+        rebuildSwitchFlake = pkgs.writeShellScript "rebuildSwitchFlake.sh" ''
+          HOST=$(${hostname})
+          if [ "$HOST" = "${desktopHostName}" ]; then
+            ${notifySend} "${desktopHostName} - Starting Flake Rebuild..."
+            ${rebuildSwitchCommand} ${nixosConfigDirectory}#desktop
+            ${notifySend} "${desktopHostName} - Flake Rebuild Complete"
+          elif [ "$HOST" = "${laptopHostName}" ];then
+            ${notifySend} "${laptopHostName} - Starting Flake Rebuild..."
+            ${rebuildSwitchCommand} ${nixosConfigDirectory}#laptop
+            ${notifySend} "${laptopHostName} - Flake Rebuild Complete"
+          fi
+        '';
       in
       {
         c = "clear";
@@ -23,9 +42,7 @@
         conf = "cd ${nixosConfigDirectory}; nvim";
         note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
 
-        # Rebuild Switch Laptop and Desktop
-        rsl = "${rebuildSwitchCommand} ${nixosConfigDirectory}#laptop";
-        rsd = "${rebuildSwitchCommand} ${nixosConfigDirectory}#desktop";
+        rsf = rebuildSwitchFlake.outPath;
       };
     interactiveShellInit = ''
       # Hide fish greeting

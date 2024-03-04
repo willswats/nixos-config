@@ -31,9 +31,14 @@
         user = "will";
         homeDir = "/home/${user}";
         directories = "~/Downloads ~/Pictures ~/Videos ~/Code";
+        hostNames = {
+          desktop = "${user}-desktop";
+          laptop = "${user}-laptop";
+        };
         globals = {
           user = user;
           homeDir = homeDir;
+          hostNames = hostNames;
           wallpaper = ./wallpapers/minimal-desert.png;
           font = {
             package = "JetBrainsMono";
@@ -74,7 +79,7 @@
         desktop =
           let
             host = {
-              hostName = "${user}-desktop";
+              hostName = hostNames.desktop;
               monitors = {
                 center = "DP-1";
                 left = "DP-2";
@@ -113,7 +118,7 @@
         laptop =
           let
             host = {
-              hostName = "${user}-laptop";
+              hostName = hostNames.laptop;
               monitors = {
                 center = "eDP-1";
                 left = "eDP-1";
