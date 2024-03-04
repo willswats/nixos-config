@@ -12,8 +12,6 @@
         nixosConfigDirectory = "~/Code/nixos-config";
         notebookDirectory = "~/Dropbox/Work/Notebook";
 
-        rebuildSwitchCommand = "sudo nixos-rebuild switch --flake";
-
         desktopHostName = globals.hostNames.desktop;
         laptopHostName = globals.hostNames.laptop;
 
@@ -23,7 +21,7 @@
         # Rebuild command that's dependent upon the host name for choosing the flake
         rebuildSwitchFlake = pkgs.writeShellScript "rebuildSwitchFlake.sh" ''
           rebuild_switch_command() {
-            ${rebuildSwitchCommand} ${nixosConfigDirectory}"$1"
+            nixos-rebuild switch --flake ${nixosConfigDirectory}"$1"
           }
 
           rebuild_switch_flake() {
@@ -42,6 +40,19 @@
             rebuild_switch_flake "${laptopHostName}" "#laptop"
           fi
         '';
+
+        flakeUpdate = pkgs.writeShellScript "flakeUpdate.sh" ''
+          flake_update() {
+            nix flake update ${nixosConfigDirectory}
+          }
+
+          ${notifySend} "Updating flake..."
+          if flake_update; then
+            ${notifySend} "Flake Update Completed"
+          else
+            ${notifySend} "Flake Update Failed"
+          fi
+        '';
       in
       {
         c = "clear";
@@ -54,6 +65,8 @@
 
         rsf = rebuildSwitchFlake.outPath;
         prsf = "git -C ${nixosConfigDirectory} pull; ${rebuildSwitchFlake.outPath}";
+
+        fu = flakeUpdate.outPath;
       };
     interactiveShellInit = ''
       # Hide fish greeting
