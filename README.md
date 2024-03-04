@@ -6,18 +6,23 @@ My NixOS config.
 
 <!--toc:start-->
 
-- [Installing NixOS](#installing-nixos)
-- [Installing nixos-config](#installing-nixos-config)
-  - [Connect to Wi-Fi (desktop and laptop)](#connect-to-wi-fi-desktop-and-laptop)
-  - [Clone the Repository](#clone-the-repository)
-  - [Add hardware-configuration.nix](#add-hardware-configurationnix)
-  - [Add boot.initrd.luks.devices Information (desktop and laptop)](#add-bootinitrdluksdevices-information-desktop-and-laptop)
-  - [Build the Config](#build-the-config)
-- [Post-installation](#post-installation)
-  - [Add the nixos-unstable Channel](#add-the-nixos-unstable-channel)
-  - [Delete Bash History (desktop and laptop)](#delete-bash-history-desktop-and-laptop)
-- [Non-Declarative Setups](#non-declarative-setups) - [Utilities](#utilities) - [Games](#games)
-<!--toc:end-->
+- [NixOS Config](#nixos-config)
+  - [Table of Contents](#table-of-contents)
+  - [Installing NixOS](#installing-nixos)
+  - [Installing nixos-config](#installing-nixos-config)
+    - [Connect to Wi-Fi (desktop and laptop)](#connect-to-wi-fi-desktop-and-laptop)
+    - [Clone the Repository](#clone-the-repository)
+    - [Add hardware-configuration.nix](#add-hardware-configurationnix)
+    - [Add boot.initrd.luks.devices Information (desktop and laptop)](#add-bootinitrdluksdevices-information-desktop-and-laptop)
+    - [Build the Config](#build-the-config)
+  - [Post-installation](#post-installation)
+    - [Add the nixos-unstable Channel](#add-the-nixos-unstable-channel)
+    - [Delete Bash History (desktop and laptop)](#delete-bash-history-desktop-and-laptop)
+  - [Non-Declarative Setups](#non-declarative-setups)
+    - [Utilities](#utilities)
+    - [Games](#games)
+  - [Acknowledgements](#acknowledgements)
+  <!--toc:end-->
 
 ## Installing NixOS
 
