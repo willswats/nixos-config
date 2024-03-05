@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   xdg.mimeApps = {
@@ -8,7 +8,7 @@
   };
 
   # Currently not included with the nix package
-  # Modified terminal=false and using wezterm -e to make inode/directory work
+  # Added foot and set Terminal=false as it does not open inode/directory otherwise (tested with Steam)
   home.file.".local/share/icons/yazi.png".source = ./yazi.png;
   home.file.".local/share/applications/yazi.desktop".text =
     ''
@@ -17,15 +17,13 @@
       Icon=yazi
       Comment=Blazing fast terminal file manager written in Rust, based on async I/O
       Terminal=false
-      TryExec=yazi
+      TryExec=foot yazi
       Exec=foot yazi %u
       Type=Application
       MimeType=inode/directory
       Categories=Utility;Core;System;FileTools;FileManager;ConsoleOnly
       Keywords=File;Manager;Explorer;Browser;Launcher
     '';
-
-  home.packages = with pkgs; [ ueberzugpp ];
 
   programs.yazi = {
     enable = true;
