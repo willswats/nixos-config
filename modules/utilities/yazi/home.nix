@@ -17,7 +17,7 @@
       Icon=yazi
       Comment=Blazing fast terminal file manager written in Rust, based on async I/O
       Terminal=false
-      TryExec=foot yazi
+      TryExec=yazi
       Exec=foot yazi %u
       Type=Application
       MimeType=inode/directory
