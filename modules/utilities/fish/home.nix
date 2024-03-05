@@ -40,32 +40,6 @@
             rebuild_switch_flake "${laptopHostName}" "#laptop"
           fi
         '';
-
-        flakeUpdateCommand = "nix flake update ${nixosConfigDirectory}";
-        flakeUpdateNotify = ''
-          ${notifySend} "Updating flake..."
-          if flake_update; then
-            ${notifySend} "Flake Update Completed"
-          else
-            ${notifySend} "Flake Update Failed"
-          fi
-        '';
-
-        flakeUpdate = pkgs.writeShellScript "flakeUpdate.sh" ''
-          flake_update() {
-            ${flakeUpdateCommand} 
-          }   
-
-          ${flakeUpdateNotify}
-        '';
-
-        flakeUpdateSudo = pkgs.writeShellScript "flakeUpdateSudo.sh" ''
-          flake_update() {
-            sudo ${flakeUpdateCommand}
-          }
-
-          ${flakeUpdateNotify}
-        '';
       in
       {
         c = "clear";
@@ -78,10 +52,7 @@
 
         rsf = rebuildSwitchFlake.outPath;
         prsf = "git -C ${nixosConfigDirectory} pull; ${rebuildSwitchFlake.outPath}";
-
-        fu = flakeUpdate.outPath;
-        # Use sudo at the start as its needed later for rebuildSwitchFlake
-        fursf = "${flakeUpdateSudo.outPath}; git -C ${nixosConfigDirectory} add flake.lock; ${rebuildSwitchFlake.outPath}";
+        fursf = "sudo nix flake update ${nixosConfigDirectory}; git -C ${nixosConfigDirectory} add flake.lock; ${rebuildSwitchFlake.outPath}";
       };
     interactiveShellInit = ''
       # Hide fish greeting
