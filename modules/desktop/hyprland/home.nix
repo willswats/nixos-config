@@ -42,6 +42,7 @@
       waybar = "${pkgs.waybar}/bin/waybar";
 
       firefox = "${pkgs.firefox}/bin/firefox";
+      bitwarden = "${pkgs.bitwarden}/bin/bitwarden";
       spotify = "${pkgs.spotify}/bin/spotify";
 
       foot = "${pkgs.foot}/bin/foot";
@@ -209,6 +210,7 @@
           "$mod, t, exec, ${foot} nvim" # Text editor (not specifying the binary as it doesn't load my config)
           "$mod, s, exec, ${foot} ${btm} -b" # Process monitor
           "$mod, b, exec, ${foot} ${bluetuith}" # Bluetooth manager
+          "$mod, p, exec, ${bitwarden}" # Password manager
           "$mod, m, exec, ${spotify}" # Music player
 
           ", print, exec, ${grimblastSaveOutput}" # Screenshot active monitor
