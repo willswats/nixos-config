@@ -21,7 +21,7 @@
         # Rebuild command that's dependent upon the host name for choosing the flake
         rebuildSwitchFlake = pkgs.writeShellScript "rebuildSwitchFlake.sh" ''
           rebuild_switch_command() {
-            nixos-rebuild switch --flake ${nixosConfigDirectory}"$1"
+            sudo nixos-rebuild switch --flake ${nixosConfigDirectory}"$1"
           }
 
           rebuild_switch_flake() {
@@ -41,17 +41,30 @@
           fi
         '';
 
-        flakeUpdate = pkgs.writeShellScript "flakeUpdate.sh" ''
-          flake_update() {
-            nix flake update ${nixosConfigDirectory}
-          }
-
+        flakeUpdateCommand = "nix flake update ${nixosConfigDirectory}";
+        flakeUpdateNotify = ''
           ${notifySend} "Updating flake..."
           if flake_update; then
             ${notifySend} "Flake Update Completed"
           else
             ${notifySend} "Flake Update Failed"
           fi
+        '';
+
+        flakeUpdate = pkgs.writeShellScript "flakeUpdate.sh" ''
+          flake_update() {
+            ${flakeUpdateCommand} 
+          }   
+
+          ${flakeUpdateNotify}
+        '';
+
+        flakeUpdateSudo = pkgs.writeShellScript "flakeUpdateSudo.sh" ''
+          flake_update() {
+            sudo ${flakeUpdateCommand}
+          }
+
+          ${flakeUpdateNotify}
         '';
       in
       {
@@ -67,6 +80,8 @@
         prsf = "git -C ${nixosConfigDirectory} pull; ${rebuildSwitchFlake.outPath}";
 
         fu = flakeUpdate.outPath;
+        # Use sudo at the start as its needed later for rebuildSwitchFlake
+        fursf = "${flakeUpdateSudo.outPath}; git -C ${nixosConfigDirectory} add flake.lock; ${rebuildSwitchFlake.outPath}";
       };
     interactiveShellInit = ''
       # Hide fish greeting
