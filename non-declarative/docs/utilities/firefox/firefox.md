@@ -1,20 +1,5 @@
 # Firefox
 
-## Install Extensions
-
-- [uBlock](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin)
-- [Consent-O-Matic](https://addons.mozilla.org/en-US/firefox/addon/consent-o-matic)
-- [Bitwarden](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager)
-- [Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader)
-- [Tridactyl](https://addons.mozilla.org/en-US/firefox/addon/tridactyl-vim/)
-- [Mal Sync](https://addons.mozilla.org/en-US/firefox/addon/mal-sync)
-- [TWP - Translate Web Pages](https://addons.mozilla.org/en-US/firefox/addon/traduzir-paginas-web)
-- [SponsorBlock](https://addons.mozilla.org/en-US/firefox/addon/sponsorblock)
-- [Return YouTube Dislike](https://addons.mozilla.org/en-US/firefox/addon/return-youtube-dislikes/)
-- [YouTube Alternative Switch](https://addons.mozilla.org/en-US/firefox/addon/youtube-alternative-switch/)
-- [BetterTTV](https://addons.mozilla.org/en-US/firefox/addon/betterttv)
-- [Zotero Connector](https://www.zotero.org/download/connectors)
-
 ## Extension Settings
 
 ### Bitwarden

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   home.packages = with pkgs;
@@ -14,6 +14,20 @@
     };
     profiles.default = {
       id = 0;
+      # Find extensions here: https://nur.nix-community.org/repos/rycee/
+      # Request new extensions here: https://gitlab.com/rycee/nur-expressions/
+      extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
+        ublock-origin
+        consent-o-matic
+        sponsorblock
+        darkreader
+        tridactyl
+        bitwarden
+        translate-web-pages
+        mal-sync
+        return-youtube-dislikes
+        betterttv
+      ];
       search = {
         force = true;
         default = "DuckDuckGo";
@@ -22,7 +36,6 @@
           "Bing".metaData.hidden = true;
           "Amazon.co.uk".metaData.hidden = true;
           "eBay".metaData.hidden = true;
-          "Wikipedia (en)".metaData.hidden = true;
         };
       };
       bookmarks = [{
