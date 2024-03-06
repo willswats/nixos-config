@@ -9,6 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nur.url = "github:nix-community/NUR";
+
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,14 +24,9 @@
     };
 
     nix-gaming.url = "github:fufexan/nix-gaming";
-
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { nixpkgs, home-manager, nixvim, hyprland, hypridle, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, nur, nixvim, hyprland, hypridle, ... }@inputs: {
     nixosConfigurations =
       let
         system = "x86_64-linux";
@@ -102,6 +99,7 @@
                 ./hosts
                 ./hosts/desktop
                 home-manager.nixosModules.home-manager
+                nur.nixosModules.nur
                 hyprland.nixosModules.default
                 {
                   home-manager = {
@@ -112,6 +110,7 @@
                     };
                     users.will.imports = [
                       ./hosts/desktop/home.nix
+                      nur.hmModules.nur
                       nixvim.homeManagerModules.nixvim
                       hypridle.homeManagerModules.default
                     ];
@@ -119,7 +118,6 @@
                 }
               ];
             };
-
         laptop =
           let
             host = {
@@ -140,6 +138,7 @@
               ./hosts
               ./hosts/laptop
               home-manager.nixosModules.home-manager
+              nur.nixosModules.nur
               hyprland.nixosModules.default
               {
                 home-manager = {
@@ -150,6 +149,7 @@
                   };
                   users.${user}.imports = [
                     ./hosts/home.nix
+                    nur.hmModules.nur
                     nixvim.homeManagerModules.nixvim
                     hypridle.homeManagerModules.default
                   ];

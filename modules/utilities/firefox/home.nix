@@ -1,8 +1,7 @@
-{ pkgs, inputs, ... }:
+{ pkgs, config, ... }:
 
 {
-  home.packages = with pkgs;
-    [ web-ext ];
+  home.packages = with pkgs; [ web-ext ];
 
   programs.firefox = {
     enable = true;
@@ -16,7 +15,7 @@
       id = 0;
       # Find extensions here: https://nur.nix-community.org/repos/rycee/
       # Request new extensions here: https://gitlab.com/rycee/nur-expressions/
-      extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
+      extensions = with config.nur.repos.rycee.firefox-addons; [
         ublock-origin
         consent-o-matic
         sponsorblock
