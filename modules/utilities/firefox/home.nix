@@ -46,6 +46,7 @@
           "Bing".metaData.hidden = true;
           "Amazon.co.uk".metaData.hidden = true;
           "eBay".metaData.hidden = true;
+          "Wikipedia (en)".metaData.hidden = true;
         };
       };
       bookmarks = [{
