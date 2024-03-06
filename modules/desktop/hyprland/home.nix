@@ -42,6 +42,7 @@
       waybar = "${pkgs.waybar}/bin/waybar";
 
       firefox = "${pkgs.firefox}/bin/firefox";
+      pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
       bitwarden = "${pkgs.bitwarden}/bin/bitwarden";
       spotify = "${pkgs.spotify}/bin/spotify";
 
@@ -205,17 +206,19 @@
           "$mod, d, exec, ${rofi} -show drun"
 
           "$mod, return, exec, ${foot}"
+
           "$mod, w, exec, ${firefox}" # Web browser
+          "$mod, a, exec, ${pavucontrol}" # Audio manager 
+          "$mod, p, exec, ${bitwarden}" # Password manager
+          "$mod, m, exec, ${spotify}" # Music player
+
           "$mod, e, exec, ${foot} ${yazi}" # File explorer
           "$mod, t, exec, ${foot} nvim" # Text editor (not specifying the binary as it doesn't load my config)
           "$mod, s, exec, ${foot} ${btm} -b" # Process monitor
           "$mod, b, exec, ${foot} ${bluetuith}" # Bluetooth manager
-          "$mod, p, exec, ${bitwarden}" # Password manager
-          "$mod, m, exec, ${spotify}" # Music player
 
           ", print, exec, ${grimblastSaveOutput}" # Screenshot active monitor
           "SHIFT, print, exec, ${grimblastSaveArea}" # Screenshot manually selected area
-
 
           "$mod shift, b, exec, ${hyprshade} toggle blue-light-filter" # Toggle blue light filter
           "$mod shift, v, exec, ${mullvadToggle}" # Toggle VPN
