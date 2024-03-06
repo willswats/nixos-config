@@ -26,6 +26,17 @@
         mal-sync
         return-youtube-dislikes
         betterttv
+        (
+          buildFirefoxXpiAddon
+            {
+              pname = "zotero-connector";
+              version = "5.0.114";
+              addonId = "zotero@chnm.gmu.edu";
+              url = "https://download.zotero.org/connector/firefox/release/Zotero_Connector-5.0.114.xpi";
+              sha256 = "1g9d991m4vfj5x6r86sw754bx7r4qi8g5ddlqp7rcw6wrgydhrhw";
+              meta = { };
+            }
+        )
       ];
       search = {
         force = true;
