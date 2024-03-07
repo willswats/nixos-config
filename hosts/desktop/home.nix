@@ -12,7 +12,6 @@
     ../../modules/games/ishiiruka/home.nix
     ../../modules/games/doom/home.nix
     ../../modules/games/retroarch/home.nix
-    ../../modules/games/ryujinx/home.nix
   ];
 
   home.packages = with pkgs; [
