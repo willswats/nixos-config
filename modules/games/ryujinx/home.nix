@@ -3,7 +3,6 @@
 {
   home.packages = with pkgs; [
     ryujinx
-    (callPackage ../../../pkgs/evdevhook2 { })
   ];
 
   # The default Ryujinx.desktop launches Ryujinx.sh which does not exist
