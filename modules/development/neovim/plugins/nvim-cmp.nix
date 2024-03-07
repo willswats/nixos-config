@@ -17,16 +17,20 @@ in {
         ];
       };
 
-      nvim-cmp = {
+      cmp = {
         enable = true;
-        snippet.expand = "luasnip";
-        mapping = {
-          "<C-k>" = "cmp.mapping.scroll_docs(-4)";
-          "<C-j>" = "cmp.mapping.scroll_docs(4)";
-          "<C-Space>" = "cmp.mapping.complete()";
-          "<C-e>" = "cmp.mapping.close()";
-          "<Tab>" = {
-            action = ''
+        settings = {
+          snippet.expand = ''
+            function(args)
+              require('luasnip').lsp_expand(args.body)
+            end
+          '';
+          mapping = {
+            "<C-k>" = "cmp.mapping.scroll_docs(-4)";
+            "<C-j>" = "cmp.mapping.scroll_docs(4)";
+            "<C-Space>" = "cmp.mapping.complete()";
+            "<C-e>" = "cmp.mapping.close()";
+            "<Tab>" = ''
               function(fallback)
                 local luasnip = require("luasnip")
                 if cmp.visible() then
@@ -38,10 +42,7 @@ in {
                 end
               end
             '';
-            modes = [ "i" "s" ];
-          };
-          "<S-Tab>" = {
-            action = ''
+            "<S-Tab>" = ''
               function(fallback)
                 local luasnip = require("luasnip")
                 if cmp.visible() then
@@ -53,27 +54,26 @@ in {
                 end
               end
             '';
-            modes = [ "i" "s" ];
+            "<CR>" = "cmp.mapping.confirm({ select = false })";
           };
-          "<CR>" = "cmp.mapping.confirm({ select = false })";
+          formatting = {
+            fields = [ "abbr" "kind" "menu" ];
+            format = ''
+              function(_, vim_item)
+                icons_kind = ${config.nixvim.helpers.toLuaObject icons.kind}
+                vim_item.kind = (icons_kind[vim_item.kind] or "") .. " " .. vim_item.kind
+                return vim_item
+              end
+            '';
+          };
+          sources = [
+            { name = "nvim_lsp"; }
+            { name = "nvim_lua"; }
+            { name = "luasnip"; }
+            { name = "buffer"; }
+            { name = "path"; }
+          ];
         };
-        formatting = {
-          fields = [ "abbr" "kind" "menu" ];
-          format = ''
-            function(_, vim_item)
-              icons_kind = ${config.nixvim.helpers.toLuaObject icons.kind}
-              vim_item.kind = (icons_kind[vim_item.kind] or "") .. " " .. vim_item.kind
-              return vim_item
-            end
-          '';
-        };
-        sources = [
-          { name = "nvim_lsp"; }
-          { name = "nvim_lua"; }
-          { name = "luasnip"; }
-          { name = "buffer"; }
-          { name = "path"; }
-        ];
       };
     };
     # Insert `(` after selecting a function or method item

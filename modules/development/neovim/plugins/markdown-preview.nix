@@ -29,8 +29,10 @@
     plugins = {
       markdown-preview = {
         enable = true;
-        previewOptions = {
-          disable_sync_scroll = true;
+        settings = {
+          preview_options = {
+            disable_sync_scroll = true;
+          };
         };
       };
     };
