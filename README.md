@@ -143,6 +143,7 @@ rm ~/.bash_history
 3. [osu](./non-declarative/docs/games/osu.md)
 4. [RetroArch](./non-declarative/docs/games/retroarch.md)
 5. [Yuzu](./non-declarative/docs/games/yuzu.md)
+6. [Ryujinx](./non-declarative/docs/games/ryujinx.md)
 
 ## Acknowledgements
 
