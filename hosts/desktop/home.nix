@@ -11,7 +11,6 @@
     ../../modules/games/osu/home.nix
     ../../modules/games/ishiiruka/home.nix
     ../../modules/games/doom/home.nix
-    ../../modules/games/airshipper/home.nix
     ../../modules/games/retroarch/home.nix
     ../../modules/games/ryujinx/home.nix
   ];
@@ -20,6 +19,7 @@
     # Utilities
     mangohud
     # Games
+    (callPackage ../../pkgs/airshipper { })
     prismlauncher
     # Emulators
     yuzuPackages.early-access
