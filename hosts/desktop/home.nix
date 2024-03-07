@@ -21,7 +21,6 @@
     (callPackage ../../pkgs/airshipper { })
     prismlauncher
     # Emulators
-    yuzuPackages.early-access
     pcsx2
     rpcs3
   ];
