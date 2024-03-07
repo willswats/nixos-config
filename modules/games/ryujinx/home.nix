@@ -2,9 +2,30 @@
 
 {
   home.packages = with pkgs; [
-    (callPackage ../../../pkgs/ryujinx { })
-    # (callPackage ../../../pkgs/evdevhook2 { })
+    ryujinx
+    (callPackage ../../../pkgs/evdevhook2 { })
   ];
+
+  # The default Ryujinx.desktop launches Ryujinx.sh which does not exist
+  # The pull request to fix Ryujinx.desktop is here: https://github.com/NixOS/nixpkgs/pull/278605
+  # https://github.com/Ryujinx/Ryujinx/blob/master/distribution/linux/Ryujinx.desktop
+  home.file.".local/share/applications/Ryujinx.desktop".text =
+    ''
+      [Desktop Entry]
+      Version=1.0
+      Name=Ryujinx
+      Type=Application
+      Icon=Ryujinx
+      Exec=ryujinx %f
+      Comment=A Nintendo Switch Emulator
+      GenericName=Nintendo Switch Emulator
+      Terminal=false
+      Categories=Game;Emulator;
+      MimeType=application/x-nx-nca;application/x-nx-nro;application/x-nx-nso;application/x-nx-nsp;application/x-nx-xci;
+      Keywords=Switch;Nintendo;Emulator;
+      StartupWMClass=Ryujinx
+      PrefersNonDefaultGPU=true
+    '';
 
   xdg.configFile."Ryujinx/Config.json" =
     let
