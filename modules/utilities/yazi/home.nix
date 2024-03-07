@@ -38,13 +38,20 @@
         # Open shell
         {
           on = [ "<C-s>" ];
-          exec = "shell \"$SHELL\" --block --confirm";
+          exec = ''
+            shell "$SHELL" --block --confirm
+          '';
           desc = "Open shell here";
         }
         # Yank into system clipboard
         {
           on = [ "y" ];
-          exec = [ "yank" "shell --confirm 'for path in \"$@\"; do echo \"file://$path\"; done | wl-copy -t text/uri-list'" ];
+          exec = [
+            "yank"
+            ''
+              shell --confirm 'for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list'
+            ''
+          ];
         }
         # Enter a directory or open the file
         {
