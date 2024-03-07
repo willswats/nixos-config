@@ -161,7 +161,6 @@
           "float, class:steam, title:Screenshot Manager"
           "suppressevent maximize, class:steam" # Fix Steam maximizing certain windows (Friends List)
           "suppressevent maximize, class:firefox" # Fix Firefox maximizing certain windows (extensions)
-          "idleinhibit fullscreen, class:Apprun, title:Dolphin" # Prevent Ishiiruka idle lock
         ];
 
 
