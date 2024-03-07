@@ -10,6 +10,7 @@
 
 ## Yazi
 
+- [ ] Copy between two terminals
 - [ ] Make yazi open nvim in a new terminal
 
 ## Add pkgs
