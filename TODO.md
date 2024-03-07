@@ -10,11 +10,12 @@
 
 ## Yazi
 
-- [ ] Copy between two terminals
+- [ ] Add ability to copy files between two terminals
 - [ ] Make yazi open nvim in a new terminal
 
 ## Add pkgs
 
+- [ ] Add nixpkgs airshipper package - If [PR](https://github.com/NixOS/nixpkgs/pull/294041) gets merged
 - [ ] Add nixpkgs catppuccin-sddm package - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/255808)
 
 ## Other
