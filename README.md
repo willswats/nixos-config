@@ -18,9 +18,10 @@ My NixOS config.
   - [Post-installation](#post-installation)
     - [Add the nixos-unstable Channel](#add-the-nixos-unstable-channel)
     - [Delete Bash History (desktop and laptop)](#delete-bash-history-desktop-and-laptop)
-  - [Non-Declarative Setups](#non-declarative-setups)
+  - [Non-Declarative Set-ups](#non-declarative-set-ups)
     - [Utilities](#utilities)
     - [Games](#games)
+    - [Emulators](#emulators)
   - [Acknowledgements](#acknowledgements)
   <!--toc:end-->
 
@@ -127,23 +128,25 @@ Delete `.bash_history` to ensure the Wi-Fi password is removed from it:
 rm ~/.bash_history
 ```
 
-## Non-Declarative Setups
+## Non-Declarative Set-ups
 
 ### Utilities
 
 1. [Firefox](./non-declarative/docs/utilities/firefox/firefox.md)
-2. [GPG](./non-declarative/docs/utilities/gpg.md)
-3. [Dropbox](./non-declarative/docs/utilities/dropbox.md)
+2. [Dropbox](./non-declarative/docs/utilities/dropbox.md)
+3. [GPG](./non-declarative/docs/utilities/gpg.md)
 4. [virt-manager](./non-declarative/docs/utilities/virt-manager.md)
 
 ### Games
 
 1. [steam](./non-declarative/docs/games/steam.md)
 2. [TF2](./non-declarative/docs/games/tf2.md)
-3. [osu](./non-declarative/docs/games/osu.md)
-4. [RetroArch](./non-declarative/docs/games/retroarch.md)
-5. [Yuzu](./non-declarative/docs/games/yuzu.md)
-6. [Ryujinx](./non-declarative/docs/games/ryujinx.md)
+
+### Emulators
+
+1. [RetroArch](./non-declarative/docs/games/retroarch.md)
+2. [Yuzu](./non-declarative/docs/emulators/yuzu.md)
+3. [Ryujinx](./non-declarative/docs/emulators/ryujinx.md)
 
 ## Acknowledgements
 
