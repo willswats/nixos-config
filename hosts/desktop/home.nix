@@ -9,10 +9,10 @@
     ../../modules/games/lutris/home.nix
     ../../modules/games/r2modman/home.nix
     ../../modules/games/osu/home.nix
-    ../../modules/games/ishiiruka/home.nix
-    ../../modules/games/doom/home.nix
-    ../../modules/games/retroarch/home.nix
-    ../../modules/games/ryujinx/home.nix
+    ../../modules/games/gzdoom/home.nix
+    ../../modules/emulators/ishiiruka/home.nix
+    ../../modules/emulators/retroarch/home.nix
+    ../../modules/emulators/ryujinx/home.nix
   ];
 
   home.packages = with pkgs; [

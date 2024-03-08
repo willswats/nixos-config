@@ -1,7 +1,7 @@
 { pkgs, globals, ... }:
 
 {
-  home.packages = with pkgs; [ gzdoom ];
+  home.packages = with pkgs; [ gzdoom zandronum ];
 
   xdg.configFile."gzdoom/gzdoom.ini" = {
     text =

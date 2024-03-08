@@ -38,20 +38,8 @@
     stateVersion = "23.05";
 
     packages = with pkgs; [
-      # System
-      wget
-      zip
-      unzip
-      killall
-      fzf
-      trash-cli
-      appimage-run
-      # Development
-      python311Full
-      nodejs_20
-      nodePackages.pnpm
-      nodePackages.live-server
       # Utilities 
+      ## GUI
       bitwarden
       obs-studio
       gpu-screen-recorder-gtk
@@ -61,9 +49,22 @@
       fragments
       dropbox
       spotify
-      yt-dlp
       onlyoffice-bin_latest
       zotero
+      ## CLI
+      wget
+      zip
+      unzip
+      killall
+      fzf
+      appimage-run
+      trash-cli
+      yt-dlp
+      # Development
+      python311Full
+      nodejs_20
+      nodePackages.pnpm
+      nodePackages.live-server
     ];
   };
 
