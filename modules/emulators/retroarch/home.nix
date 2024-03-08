@@ -12,6 +12,7 @@
           mupen64plus # Nintendo - Nintendo 64 (Mupen64Plus-Next)
           bsnes # - Nintendo - SNES / SFC (bsnes)
           blastem # Sega - Mega Drive - Genesis (BlastEm)
+          beetle-saturn # Sega - Saturn (Beetle Saturn)
           swanstation # Sony - Playstation (SwanStation)
           pcsx2 # Sony - Playstation 2 (LRPS2)
           desmume # Nintendo - DS (DeSmuME)
