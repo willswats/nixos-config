@@ -15,29 +15,32 @@ in
       enable = true;
       servers = {
         rust-analyzer = {
-          enable = true;
+          enable = true; # Rust
           installCargo = true;
           installRustc = true;
         };
-        omnisharp.enable = true;
-        nil_ls.enable = true;
-        lua-ls.enable = true;
-        pyright.enable = true;
-        ruff-lsp.enable = true;
-        dartls.enable = true;
-        bashls.enable = true;
-        hls.enable = true;
+        omnisharp.enable = true; # C#
+        nil_ls.enable = true; # Nix
+        lua-ls.enable = true; # Lua 
+        pyright.enable = true; # Python
+        ruff-lsp.enable = true; # Python (Format & Lint)
+        dartls.enable = true; # Dart
+        bashls.enable = true; # Bash
+        taplo.enable = true; # TOML
+        hls.enable = true; # Haskell
         html = {
           enable = true;
+          # Disable formatting (conflicts with Prettier)
           onAttach.function = ''
             client.server_capabilities.documentFormattingProvider = false
             client.server_capabilities.documentRangeFormattingProvider = false
           '';
         };
-        cssls.enable = true;
-        jsonls.enable = true;
-        tsserver.enable = true;
-        eslint.enable = true;
+        marksman.enable = true; # Markdown
+        cssls.enable = true; # CSS
+        jsonls.enable = true; # JSON
+        tsserver.enable = true; # TypeScript
+        eslint.enable = true; # JavaScript Linter
       };
       capabilities = capabilities;
       keymaps = {
@@ -78,10 +81,6 @@ in
     };
     extraConfigLua = ''
       local lspconfig = require("lspconfig")
-
-      lspconfig.marksman.setup {
-        capabilities = ${capabilities}
-      }
 
       lspconfig.sqls.setup {
         capabilities = ${capabilities},
