@@ -16,6 +16,7 @@
           pcsx2 # Sony - Playstation 2 (LRPS2)
           desmume # Nintendo - DS (DeSmuME)
           citra # Nintendo - 3DS (Citra)
+          fbneo # Arcade (FinalBurn Neo)
         ];
       })
     ];
