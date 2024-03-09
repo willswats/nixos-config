@@ -63,7 +63,7 @@
       yt-dlp
       # Development
       python311Full
-      nodejs_20
+      nodePackages.nodejs
       nodePackages.pnpm
       nodePackages.live-server
     ];
