@@ -62,7 +62,7 @@
       trash-cli
       yt-dlp
       # Development
-      python311Full
+      python3Full
       nodePackages.nodejs
       nodePackages.pnpm
       nodePackages.live-server
