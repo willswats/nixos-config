@@ -47,6 +47,7 @@
       krita
       shotcut
       fragments
+      popsicle
       dropbox
       spotify
       onlyoffice-bin_latest
