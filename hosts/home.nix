@@ -55,6 +55,7 @@
       wget
       zip
       unzip
+      _7zz
       killall
       fzf
       appimage-run
