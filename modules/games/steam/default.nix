@@ -2,10 +2,6 @@
 
 
 {
-  imports = [
-    inputs.nix-gaming.nixosModules.steamCompat
-  ];
-
   programs.steam = {
     enable = true;
     gamescopeSession = {
