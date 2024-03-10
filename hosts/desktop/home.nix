@@ -12,7 +12,6 @@
     ../../modules/games/gzdoom/home.nix
     ../../modules/emulators/ishiiruka/home.nix
     ../../modules/emulators/retroarch/home.nix
-    ../../modules/emulators/ryujinx/home.nix
   ];
 
   home.packages = with pkgs; [
