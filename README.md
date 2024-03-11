@@ -144,7 +144,7 @@ rm ~/.bash_history
 
 ### Emulators
 
-1. [RetroArch](./non-declarative/docs/games/retroarch.md)
+1. [RetroArch](./non-declarative/docs/emulators/retroarch.md)
 2. [Yuzu](./non-declarative/docs/emulators/yuzu.md)
 3. [Ryujinx](./non-declarative/docs/emulators/ryujinx.md)
 
