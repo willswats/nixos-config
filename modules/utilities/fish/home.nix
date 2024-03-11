@@ -44,6 +44,7 @@
       {
         c = "clear";
         nv = "nvim";
+        lg = "lazygit";
 
         uni = "cd ${universityDirectory}";
         code = "cd ${codeDirectory}";

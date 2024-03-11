@@ -23,7 +23,7 @@
     ../modules/utilities/mullvad-vpn/home.nix
     ../modules/utilities/vesktop/home.nix
     ../modules/utilities/fish/home.nix
-    ../modules/utilities/foot/home.nix
+    ../modules/utilities/kitty/home.nix
     ../modules/utilities/bottom/home.nix
     ../modules/utilities/yazi/home.nix
     ../modules/utilities/bluetuith/home.nix
