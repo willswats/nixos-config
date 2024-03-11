@@ -23,7 +23,8 @@ in
       placement_strategy = "top-left";
       tab_bar_min_tabs = 2;
       tab_bar_edge = "top";
-      tab_bar_style = "powerline";
+      tab_bar_style = "separator";
+      tab_separator = "|";
       tab_title_template = "{title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}";
     };
   };
