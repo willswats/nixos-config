@@ -33,7 +33,7 @@ in {
 
     plugins.nvim-tree = {
       enable = true;
-      disableNetrw = true; # Disable default neovim explorer
+      disableNetrw = false; # Don't disableNetrw (breaks gx)
       hijackCursor = true; # Keep the cursor on the first letter of the filename
       syncRootWithCwd =
         true; # Changes the tree root directory on DirChanged and refreshes the tree
