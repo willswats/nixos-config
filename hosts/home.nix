@@ -55,8 +55,7 @@
       ## CLI
       wget
       zip
-      unzip
-      _7zz
+      unar
       killall
       fzf
       appimage-run
