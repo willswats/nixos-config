@@ -46,7 +46,7 @@
       bitwarden = "${pkgs.bitwarden}/bin/bitwarden";
       spotify = "${pkgs.spotify}/bin/spotify";
 
-      wezterm = "${pkgs.wezterm}/bin/wezterm";
+      foot = "${pkgs.foot}/bin/foot";
       yazi = "${pkgs.yazi}/bin/yazi";
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
@@ -204,17 +204,17 @@
         bind = [
           "$mod, d, exec, ${rofi} -show drun"
 
-          "$mod, return, exec, ${wezterm}"
+          "$mod, return, exec, ${foot}"
 
           "$mod, w, exec, ${firefox}" # Web browser
           "$mod, a, exec, ${pavucontrol}" # Audio manager 
           "$mod, p, exec, ${bitwarden}" # Password manager
           "$mod, m, exec, ${spotify}" # Music player
 
-          "$mod, e, exec, ${wezterm} -e ${yazi}" # File explorer
-          "$mod, t, exec, ${wezterm} -e nvim" # Text editor (not specifying the binary as it doesn't load my config)
-          "$mod, s, exec, ${wezterm} -e ${btm} -b" # Process monitor
-          "$mod, b, exec, ${wezterm} -e ${bluetuith}" # Bluetooth manager
+          "$mod, e, exec, ${foot} ${yazi}" # File explorer
+          "$mod, t, exec, ${foot} nvim" # Text editor (not specifying the binary as it doesn't load my config)
+          "$mod, s, exec, ${foot} ${btm} -b" # Process monitor
+          "$mod, b, exec, ${foot} ${bluetuith}" # Bluetooth manager
 
           ", print, exec, ${grimblastSaveOutput}" # Screenshot active monitor
           "SHIFT, print, exec, ${grimblastSaveArea}" # Screenshot manually selected area

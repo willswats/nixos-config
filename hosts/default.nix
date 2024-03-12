@@ -64,7 +64,7 @@ in
 
   environment = {
     variables = {
-      TERMINAL = "wezterm";
+      TERMINAL = "foot";
       EDITOR = "nvim";
     };
     # Add shells to /etc/shells
