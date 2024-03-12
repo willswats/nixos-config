@@ -3,6 +3,7 @@
 {
   services.hypridle =
     let
+      playerctl = "${pkgs.playerctl}/bin/playerctl";
       swaylock = "${pkgs.swaylock-effects}/bin/swaylock";
       hyprctl = "${pkgs.hyprland}/bin/hyprctl";
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
@@ -19,6 +20,7 @@
         ${streamsActive}
 
         if ! streams_active; then 
+          ${playerctl} --all-players pause
           ${swaylock}
         fi
       '';
@@ -26,6 +28,7 @@
         ${streamsActive}
 
         if ! streams_active; then 
+          ${playerctl} --all-players pause
           ${hyprctl} dispatch dpms off
         fi
       '';
