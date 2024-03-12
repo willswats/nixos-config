@@ -18,8 +18,6 @@ in
     settings = {
       enable_audio_bell = false;
       confirm_os_window_close = 0;
-      window_padding_width = 0;
-      window_margin_width = 0;
       placement_strategy = "top-left";
       tab_bar_edge = "top";
       tab_bar_style = "separator";
