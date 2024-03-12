@@ -2,11 +2,11 @@
 
 {
   programs.rofi =
-    let foot = "${pkgs.foot}/bin/foot";
+    let wezterm = "${pkgs.wezterm}/bin/wezterm";
     in {
       enable = true;
       package = pkgs.rofi-wayland;
-      terminal = foot;
+      terminal = wezterm;
       theme = "~/.config/rofi/themes/catppuccin-mocha.rasi";
       extraConfig = { show-icons = true; };
     };
