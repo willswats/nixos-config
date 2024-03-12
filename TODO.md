@@ -8,6 +8,10 @@
 
 - [ ] Add YouTube Alternative Switch - waiting on [issue](https://gitlab.com/rycee/nur-expressions/-/issues/196)
 
+## Foot
+
+- [ ] Fix Foot not creating a terminal in the CWD when using Yazi
+
 ## Yazi
 
 - [ ] Add ability to copy files between two terminals
