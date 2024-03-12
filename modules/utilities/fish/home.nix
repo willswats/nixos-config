@@ -62,10 +62,8 @@
       # Set vi key bindings
       set -g fish_key_bindings fish_vi_key_bindings
 
-      # Fix vi cursors on WezTerm https://github.com/wez/wezterm/issues/2781#issuecomment-1324143452
-      set -g fish_vi_force_cursor 1 
-
       # Set vi cursors
+      set -g fish_vi_force_cursor 1 
       set -g fish_cursor_default block
       set -g fish_cursor_insert line
       set -g fish_cursor_replace_one underscore
