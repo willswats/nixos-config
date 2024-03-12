@@ -2,11 +2,11 @@
 
 {
   programs.rofi =
-    let foot = "${pkgs.foot}/bin/foot";
+    let kitty = "${pkgs.kitty}/bin/kitty";
     in {
       enable = true;
       package = pkgs.rofi-wayland;
-      terminal = foot;
+      terminal = kitty;
       theme = "~/.config/rofi/themes/catppuccin-mocha.rasi";
       extraConfig = { show-icons = true; };
     };
