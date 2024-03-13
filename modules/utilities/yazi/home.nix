@@ -1,6 +1,8 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
+  home.packages = with pkgs; [ ripdrag ];
+
   xdg.mimeApps = {
     defaultApplications = {
       "inode/directory" = [ "yazi.desktop" ]; # Directories
