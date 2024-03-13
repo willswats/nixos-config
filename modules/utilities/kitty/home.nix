@@ -29,7 +29,7 @@ in
       "ctrl+shift+n" = "new_os_window_with_cwd";
       "ctrl+shift+enter" = "new_window_with_cwd";
       # Open programs
-      "ctrl+shift+v" = "new_os_window_with_cwd nvim";
+      "ctrl+shift+o" = "new_os_window_with_cwd $EDITOR";
     };
   };
 
