@@ -1,7 +1,8 @@
-{ globals, ... }:
+{ globals, pkgs, ... }:
 
 let
   fontName = globals.font.name;
+  yazi = "${pkgs.yazi}/bin/yazi";
 in
 {
   programs.kitty = {
@@ -29,8 +30,8 @@ in
       "ctrl+shift+n" = "new_os_window_with_cwd";
       "ctrl+shift+enter" = "new_window_with_cwd";
       # Open programs
-      "ctrl+shift+o" = "new_os_window_with_cwd $EDITOR";
-      "ctrl+shift+f" = "new_os_window_with_cwd yazi";
+      "ctrl+shift+o" = "new_os_window_with_cwd nvim";
+      "ctrl+shift+f" = "new_os_window_with_cwd ${yazi}";
     };
   };
 
