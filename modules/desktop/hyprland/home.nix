@@ -163,6 +163,9 @@
           "suppressevent maximize, class:firefox" # Fix Firefox maximizing certain windows (extensions)
         ];
 
+        env = [
+          "HYPRCURSOR_SIZE,32"
+        ];
 
         workspace = [
           "${monitorLeft},1"
