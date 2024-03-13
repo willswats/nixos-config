@@ -1,4 +1,4 @@
-{ ... }:
+{ globals, ... }:
 
 {
   imports = [
@@ -24,6 +24,9 @@
       efi.canTouchEfiVariables = true;
     };
   };
+
+
+  users.users.${globals.user}.extraGroups = [ "gamemode" ];
 
   programs.gamemode.enable = true;
   programs.gamescope = {
