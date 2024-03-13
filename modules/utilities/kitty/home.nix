@@ -30,6 +30,7 @@ in
       "ctrl+shift+enter" = "new_window_with_cwd";
       # Open programs
       "ctrl+shift+o" = "new_os_window_with_cwd $EDITOR";
+      "ctrl+shift+f" = "new_os_window_with_cwd yazi";
     };
   };
 
