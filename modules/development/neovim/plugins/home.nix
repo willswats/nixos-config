@@ -23,6 +23,7 @@
     ./nvim-colorizer.nix
     ./inc-rename.nix
     ./venv-selector.nix
+    ./project-nvim.nix
     ./auto-session.nix
   ];
 
