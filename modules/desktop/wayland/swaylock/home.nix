@@ -14,7 +14,7 @@ in
 {
   programs.swaylock = {
     enable = true;
-    package = pkgs.swaylock-effects;
+    package = pkgs.swaylock;
     settings = {
       color = base;
 
