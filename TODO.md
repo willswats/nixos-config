@@ -4,10 +4,6 @@
 
 - [ ] Finish dap setup
 
-## Firefox
-
-- [ ] Add YouTube Alternative Switch - waiting on [issue](https://gitlab.com/rycee/nur-expressions/-/issues/196)
-
 ## Yazi
 
 - [ ] Add ability to copy files between two terminals
