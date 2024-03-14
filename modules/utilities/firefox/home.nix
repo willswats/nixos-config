@@ -26,6 +26,7 @@
         mal-sync
         return-youtube-dislikes
         betterttv
+        youtube-alternative-switch
         (
           buildFirefoxXpiAddon
             {
