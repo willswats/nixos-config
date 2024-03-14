@@ -19,6 +19,7 @@ in
           installCargo = true;
           installRustc = true;
         };
+        clangd.enable = true; # C, C++ 
         omnisharp.enable = true; # C#
         nil_ls.enable = true; # Nix
         lua-ls.enable = true; # Lua 
