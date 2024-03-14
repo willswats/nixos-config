@@ -6,6 +6,11 @@
     package = pkgs.vscodium;
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
+    extensions = with pkgs.vscode-extensions; [
+      catppuccin.catppuccin-vsc
+      catppuccin.catppuccin-vsc-icons
+      vscodevim.vim
+    ];
     userSettings = {
       # General
       "window.zoomLevel" = 1;
@@ -17,6 +22,7 @@
       "window.restoreWindows" = "none";
       # Catppuccin
       "workbench.colorTheme" = "Catppuccin Mocha";
+      "workbench.iconTheme" = "catppuccin-mocha";
       # Vim
       "vim.useCtrlKeys" = false;
       "vim.useSystemClipboard" = true;
@@ -59,10 +65,6 @@
         "command" = "-selectPrevSuggestion";
         "when" = "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus";
       }
-    ];
-    extensions = with pkgs.vscode-extensions; [
-      catppuccin.catppuccin-vsc
-      vscodevim.vim
     ];
   };
 
