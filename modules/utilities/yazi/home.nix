@@ -71,6 +71,11 @@
       ];
       manager.append_keymap = [
         {
+          on = [ "g" "l" ];
+          run = "cd ~/.local";
+          desc = "Go to the local directory";
+        }
+        {
           on = [ "g" "D" ];
           run = "cd ~/Dropbox";
           desc = "Go to Dropbox directory";
