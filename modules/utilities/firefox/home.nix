@@ -23,6 +23,7 @@
         tridactyl
         bitwarden
         translate-web-pages
+        wayback-machine
         mal-sync
         return-youtube-dislikes
         betterttv
