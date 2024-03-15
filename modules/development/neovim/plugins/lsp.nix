@@ -8,6 +8,7 @@ in
   home.packages = with pkgs; [
     marksman # Markdown LSP
     sqls # SQL LSP
+    rustfmt # Rust format
   ];
 
   programs.nixvim = {

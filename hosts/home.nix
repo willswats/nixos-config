@@ -12,7 +12,7 @@
     ../modules/development/neovim/home.nix
     ../modules/development/vscode/home.nix
     ../modules/development/lazygit/home.nix
-    ../modules/development/rustup/home.nix
+    ../modules/development/rust/home.nix
     ../modules/development/dotnet/home.nix
     ../modules/development/haskell/home.nix
     ../modules/development/flutter/home.nix
