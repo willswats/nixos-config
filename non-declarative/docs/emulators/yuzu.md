@@ -2,7 +2,7 @@
 
 ## Keys
 
-Add `title.keys` and `prod.keys` (stored in my personal drive) to `~/.local/share/yuzu/keys`.
+Add `prod.keys` (stored in my personal drive) to `~/.local/share/yuzu/keys`.
 
 ## Firmware
 
