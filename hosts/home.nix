@@ -46,7 +46,7 @@
       gimp
       krita
       shotcut
-      fragments
+      deluge
       popsicle
       dropbox
       spotify
