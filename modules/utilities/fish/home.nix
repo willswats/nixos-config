@@ -7,14 +7,17 @@
     enable = true;
     shellAliases =
       let
+        notebookDirectory = "~/Dropbox/Work/Notebook";
         universityDirectory = "~/Dropbox/Work/Education/University";
+        emulatorsDirectory = "~/Dropbox/Games/Emulation/Emulators";
+
         codeDirectory = "~/Code";
         nixosConfigDirectory = "~/Code/nixos-config";
-        notebookDirectory = "~/Dropbox/Work/Notebook";
 
         desktopHostName = globals.hostNames.desktop;
         laptopHostName = globals.hostNames.laptop;
 
+        appimageRun = "${pkgs.appimage-run}/bin/appimage-run";
         notifySend = "${pkgs.libnotify}/bin/notify-send";
         hostname = "${pkgs.hostname}/bin/hostname";
 
@@ -54,6 +57,9 @@
         rsf = rebuildSwitchFlake.outPath;
         prsf = "git -C ${nixosConfigDirectory} pull; ${rebuildSwitchFlake.outPath}";
         fursf = "sudo nix flake update ${nixosConfigDirectory}; git -C ${nixosConfigDirectory} add flake.lock; ${rebuildSwitchFlake.outPath}";
+
+        yuzu = "${appimageRun} ${emulatorsDirectory}/Yuzu/Linux-Yuzu-EA-4176.AppImage";
+        citra = "${appimageRun} ${emulatorsDirectory}/Citra/citra-qt.AppImage";
       };
     interactiveShellInit = ''
       # Hide fish greeting
