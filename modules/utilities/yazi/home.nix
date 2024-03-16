@@ -37,11 +37,6 @@
       enableFishIntegration = true;
       keymap = {
         manager.prepend_keymap = [
-          # Close tab to the right of the current one to not lose position
-          {
-            on = [ "T" ];
-            run = "tab_close 1";
-          }
           # Open shell
           {
             on = [ "<C-s>" ];
@@ -75,21 +70,6 @@
         ];
         manager.append_keymap = [
           {
-            on = [ "g" "l" ];
-            run = "cd ~/.local";
-            desc = "Go to the local directory";
-          }
-          {
-            on = [ "g" "D" ];
-            run = "cd ${driveDir}";
-            desc = "Go to Drive directory";
-          }
-          {
-            on = [ "g" "u" ];
-            run = "cd ${driveDir}/Work/Education/University";
-            desc = "Go to University directory";
-          }
-          {
             on = [ "g" "p" ];
             run = "cd ~/Pictures";
             desc = "Go to the pictures directory";
@@ -100,9 +80,24 @@
             desc = "Go to the videos directory";
           }
           {
+            on = [ "g" "l" ];
+            run = "cd ~/.local";
+            desc = "Go to the local directory";
+          }
+          {
+            on = [ "g" "D" ];
+            run = "cd ${driveDir}";
+            desc = "Go to Drive directory";
+          }
+          {
             on = [ "g" "C" ];
             run = "cd ~/Code";
             desc = "Go to Code directory";
+          }
+          {
+            on = [ "g" "U" ];
+            run = "cd ${driveDir}/Work/Education/University";
+            desc = "Go to University directory";
           }
         ];
       };
