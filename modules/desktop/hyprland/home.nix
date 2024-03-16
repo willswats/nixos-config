@@ -3,10 +3,10 @@
 {
   imports = [
     ./hypridle/home.nix
+    ./hyprlock/home.nix
     ./hyprshade/home.nix
     ./grimblast/home.nix
     ./waybar/home.nix
-    ../wayland/swaylock/home.nix
     ../wayland/rofi/home.nix
     ../wayland/mako/home.nix
   ];
@@ -31,11 +31,11 @@
 
       xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
 
-      swaylock = "${pkgs.swaylock-effects}/bin/swaylock";
       swaybg = "${pkgs.swaybg}/bin/swaybg";
 
       hyprctl = "${pkgs.hyprland}/bin/hyprctl";
       hypridle = "${pkgs.hypridle}/bin/hypridle";
+      hyprlock = "${inputs.hyprlock.packages.${pkgs.system}.hyprlock}/bin/hyprlock";
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
 
       rofi = "${pkgs.rofi-wayland}/bin/rofi";
@@ -225,7 +225,7 @@
           "$mod shift, b, exec, ${hyprshade} toggle blue-light-filter" # Toggle blue light filter
           "$mod shift, v, exec, ${mullvadToggle}" # Toggle VPN
 
-          "$mod SHIFT, semicolon, exec, ${playerctl} --all-players pause; ${swaylock}"
+          "$mod SHIFT, semicolon, exec, ${playerctl} --all-players pause; ${hyprlock}"
 
           "$mod, q, killactive"
           "$mod, f, fullscreen"

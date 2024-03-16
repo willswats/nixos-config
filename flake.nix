@@ -18,6 +18,7 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
     hypridle.url = "github:hyprwm/hypridle";
+    hyprlock.url = "github:hyprwm/hyprlock";
     hyprland-contrib = {
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,7 +27,7 @@
     nix-gaming.url = "github:fufexan/nix-gaming";
   };
 
-  outputs = { nixpkgs, home-manager, nur, nixvim, hyprland, hypridle, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, nur, nixvim, hyprland, hypridle, hyprlock, ... }@inputs: {
     nixosConfigurations =
       let
         system = "x86_64-linux";
@@ -113,6 +114,7 @@
                       nur.hmModules.nur
                       nixvim.homeManagerModules.nixvim
                       hypridle.homeManagerModules.default
+                      hyprlock.homeManagerModules.default
                     ];
                   };
                 }

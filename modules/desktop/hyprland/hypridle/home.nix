@@ -1,10 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   services.hypridle =
     let
       playerctl = "${pkgs.playerctl}/bin/playerctl";
-      swaylock = "${pkgs.swaylock-effects}/bin/swaylock";
+      hyprlock = "${inputs.hyprlock.packages.${pkgs.system}.hyprlock}/bin/hyprlock";
       hyprctl = "${pkgs.hyprland}/bin/hyprctl";
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       rg = "${pkgs.ripgrep}/bin/rg";
@@ -21,7 +21,7 @@
 
         if ! streams_active; then 
           ${playerctl} --all-players pause
-          ${swaylock}
+          ${hyprlock}
         fi
       '';
       dpmsOff = pkgs.writeShellScript "dpmsOff" ''
