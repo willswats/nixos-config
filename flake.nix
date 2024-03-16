@@ -154,6 +154,7 @@
                     nur.hmModules.nur
                     nixvim.homeManagerModules.nixvim
                     hypridle.homeManagerModules.default
+                    hyprlock.homeManagerModules.default
                   ];
                 };
               }
