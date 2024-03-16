@@ -8,7 +8,7 @@
 
   xdg.configFile."lutris/system.yml" =
     let
-      homeDir = globals.homeDir;
+      homeDir = globals.directories.home;
     in
     {
       text = ''

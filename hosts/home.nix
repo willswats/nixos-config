@@ -34,7 +34,7 @@
 
   home = {
     username = globals.user;
-    homeDirectory = globals.homeDir;
+    homeDirectory = globals.directories.home;
     stateVersion = "23.05";
 
     packages = with pkgs; [

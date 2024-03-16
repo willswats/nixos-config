@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ globals, pkgs, ... }:
 
 {
   home.packages = with pkgs; [ ripdrag ];
@@ -27,82 +27,86 @@
       Keywords=File;Manager;Explorer;Browser;Launcher
     '';
 
-  programs.yazi = {
-    enable = true;
-    enableBashIntegration = true;
-    enableFishIntegration = true;
-    keymap = {
-      manager.prepend_keymap = [
-        # Close tab to the right of the current one to not lose position
-        {
-          on = [ "T" ];
-          run = "tab_close 1";
-        }
-        # Open shell
-        {
-          on = [ "<C-s>" ];
-          run = ''
-            shell "$SHELL" --block --confirm
-          '';
-          desc = "Open shell here";
-        }
-        # Yank into system clipboard
-        {
-          on = [ "y" ];
-          run = [
-            "yank"
-            ''
-              shell --confirm 'for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list'
-            ''
-          ];
-        }
-        # Enter a directory or open the file
-        {
-          on = [ "l" ];
-          run = "plugin --sync smart-enter";
-          desc = "Enter the child directory, or open the file";
-        }
-        # Overwrites "go to temp directory"
-        {
-          on = [ "g" "t" ];
-          run = "cd ~/.local/share/Trash/files";
-          desc = "Go to trash directory";
-        }
-      ];
-      manager.append_keymap = [
-        {
-          on = [ "g" "l" ];
-          run = "cd ~/.local";
-          desc = "Go to the local directory";
-        }
-        {
-          on = [ "g" "D" ];
-          run = "cd ~/Dropbox";
-          desc = "Go to Dropbox directory";
-        }
-        {
-          on = [ "g" "u" ];
-          run = "cd ~/Dropbox/Work/Education/University";
-          desc = "Go to University directory";
-        }
-        {
-          on = [ "g" "p" ];
-          run = "cd ~/Pictures";
-          desc = "Go to the pictures directory";
-        }
-        {
-          on = [ "g" "v" ];
-          run = "cd ~/Videos";
-          desc = "Go to the videos directory";
-        }
-        {
-          on = [ "g" "C" ];
-          run = "cd ~/Code";
-          desc = "Go to Code directory";
-        }
-      ];
+  programs.yazi =
+    let
+      driveDir = globals.directories.drive;
+    in
+    {
+      enable = true;
+      enableBashIntegration = true;
+      enableFishIntegration = true;
+      keymap = {
+        manager.prepend_keymap = [
+          # Close tab to the right of the current one to not lose position
+          {
+            on = [ "T" ];
+            run = "tab_close 1";
+          }
+          # Open shell
+          {
+            on = [ "<C-s>" ];
+            run = ''
+              shell "$SHELL" --block --confirm
+            '';
+            desc = "Open shell here";
+          }
+          # Yank into system clipboard
+          {
+            on = [ "y" ];
+            run = [
+              "yank"
+              ''
+                shell --confirm 'for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list'
+              ''
+            ];
+          }
+          # Enter a directory or open the file
+          {
+            on = [ "l" ];
+            run = "plugin --sync smart-enter";
+            desc = "Enter the child directory, or open the file";
+          }
+          # Overwrites "go to temp directory"
+          {
+            on = [ "g" "t" ];
+            run = "cd ~/.local/share/Trash/files";
+            desc = "Go to trash directory";
+          }
+        ];
+        manager.append_keymap = [
+          {
+            on = [ "g" "l" ];
+            run = "cd ~/.local";
+            desc = "Go to the local directory";
+          }
+          {
+            on = [ "g" "D" ];
+            run = "cd ${driveDir}";
+            desc = "Go to Drive directory";
+          }
+          {
+            on = [ "g" "u" ];
+            run = "cd ${driveDir}/Work/Education/University";
+            desc = "Go to University directory";
+          }
+          {
+            on = [ "g" "p" ];
+            run = "cd ~/Pictures";
+            desc = "Go to the pictures directory";
+          }
+          {
+            on = [ "g" "v" ];
+            run = "cd ~/Videos";
+            desc = "Go to the videos directory";
+          }
+          {
+            on = [ "g" "C" ];
+            run = "cd ~/Code";
+            desc = "Go to Code directory";
+          }
+        ];
+      };
     };
-  };
 
   # Enter a directory or open the file plugin
   xdg.configFile."yazi/plugins/smart-enter.yazi/init.lua" = {

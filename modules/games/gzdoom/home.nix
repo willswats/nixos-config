@@ -6,8 +6,8 @@
   xdg.configFile."gzdoom/gzdoom.ini" = {
     text =
       let
-        homeDir = globals.homeDir;
-        wadDirectory = "~/Dropbox/Games/Doom/WADs";
+        homeDir = globals.directories.home;
+        wadDirectory = "${globals.directories.drive}/Games/Doom/WADs";
 
         player = ''
           autoaim=0

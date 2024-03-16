@@ -83,8 +83,8 @@
   xdg.configFile."SlippiOnline/Config/Dolphin.ini" = {
     text =
       let
-        homeDir = globals.homeDir;
-        isoPath = "${homeDir}/Dropbox/Games/Emulation/ROMs/GC/";
+        homeDir = globals.directories.home;
+        isoPath = "${globals.directories.drive}/Games/Emulation/ROMs/GC/";
         iso = "Super Smash Bros. Melee (USA) (En,Ja) (Rev 2).nkit.iso";
       in
       ''

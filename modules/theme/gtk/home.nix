@@ -18,10 +18,10 @@
       fontPackage = globals.font.package;
       bookmarks =
         let
-          bookmarkStart = "file://${globals.homeDir}/";
+          bookmarkStart = "file://${globals.directories.home}/";
         in
         [
-          "${bookmarkStart}Dropbox Dropbox"
+          "${bookmarkStart}Dropbox Drive"
           "${bookmarkStart}Dropbox/Work/Education/University University"
           "${bookmarkStart}Downloads Downloads"
           "${bookmarkStart}Pictures Pictures"

@@ -32,15 +32,18 @@
       let
         system = "x86_64-linux";
         user = "will";
-        homeDir = "/home/${user}";
-        directories = "~/Downloads ~/Pictures ~/Videos ~/Code";
+        directories = {
+          home = "/home/${user}";
+          drive = "/home/${user}/Dropbox";
+        };
+        directoriesToCreate = "~/Downloads ~/Pictures ~/Videos ~/Code";
         hostNames = {
           desktop = "${user}-desktop";
           laptop = "${user}-laptop";
         };
         globals = {
           user = user;
-          homeDir = homeDir;
+          directories = directories;
           hostNames = hostNames;
           wallpaper = ./wallpapers/minimal-desert.png;
           font = {
@@ -87,7 +90,7 @@
                 center = "DP-1";
                 left = "DP-2";
               };
-              directories = "${directories} ~/Games/Lutris ~/Games/Heroic";
+              directoriesToCreate = "${directoriesToCreate} ~/Games/Lutris ~/Games/Heroic";
             };
           in
           lib.nixosSystem
@@ -128,7 +131,7 @@
                 center = "eDP-1";
                 left = "eDP-1";
               };
-              directories = directories;
+              directoriesToCreate = directoriesToCreate;
             };
           in
           lib.nixosSystem {

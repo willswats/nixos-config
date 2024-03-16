@@ -27,7 +27,7 @@
 
       monitorCenter = host.monitors.center;
       monitorLeft = host.monitors.left;
-      directories = host.directories;
+      directoriesToCreate = host.directoriesToCreate;
 
       xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
 
@@ -197,7 +197,7 @@
           "${mullvadGui}"
           "${dropbox}"
           # Misc
-          "mkdir -p ${directories}"
+          "mkdir -p ${directoriesToCreate}"
           "${preventMicrophoneAutoAdjust}"
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
         ];

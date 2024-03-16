@@ -7,9 +7,10 @@
     enable = true;
     shellAliases =
       let
-        notebookDirectory = "~/Dropbox/Work/Notebook";
-        universityDirectory = "~/Dropbox/Work/Education/University";
-        emulatorsDirectory = "~/Dropbox/Games/Emulation/Emulators";
+        driveDir = globals.directories.drive;
+        notebookDirectory = "${driveDir}/Work/Notebook";
+        universityDirectory = "${driveDir}/Work/Education/University";
+        emulatorsDirectory = "${driveDir}/Games/Emulation/Emulators";
 
         codeDirectory = "~/Code";
         nixosConfigDirectory = "~/Code/nixos-config";
