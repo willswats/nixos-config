@@ -57,6 +57,7 @@
         rsf = rebuildSwitchFlake.outPath;
         prsf = "git -C ${nixosConfigDirectory} pull; ${rebuildSwitchFlake.outPath}";
         fursf = "sudo nix flake update ${nixosConfigDirectory}; git -C ${nixosConfigDirectory} add flake.lock; ${rebuildSwitchFlake.outPath}";
+        nix-shell = "nix-shell --command fish";
 
         yuzu = "${appimageRun} ${emulatorsDirectory}/Yuzu/Linux-Yuzu-EA-4176.AppImage";
         citra = "${appimageRun} ${emulatorsDirectory}/Citra/citra-qt.AppImage";
