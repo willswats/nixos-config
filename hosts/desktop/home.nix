@@ -18,6 +18,7 @@
   home.packages = with pkgs; [
     # Utilities
     mangohud
+    (callPackage ../../pkgs/config-backup-cli { })
     # Games
     (callPackage ../../pkgs/airshipper { })
     prismlauncher
