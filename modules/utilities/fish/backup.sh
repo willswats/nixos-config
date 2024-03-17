@@ -1,9 +1,5 @@
 #!/bin/sh
 
-# OPTIONS
-# Backup: depending on the platform chosen, trash the directory inside of CLOUD_CONFIG_DEST, then copy the local config dir to the CLOUD_CONFIG_DEST
-# Download: depending on the platform chosen, trash the local config dir, then copy the cloud config to the local config dir
-
 # To use this script, change CLOUD_CONFIG_DEST to your desired destination
 CLOUD_CONFIG_DEST="$HOME/Dropbox/Games/Backups/"
 
@@ -21,6 +17,17 @@ trash_and_copy() {
 	cp -r "$2" "$3"
 }
 
+get_confirmation() {
+	printf "This will trash %s and copy %s to %s" "$1" "$2" "$3"
+	printf "\nAre you sure? y/n"
+	printf "\n"
+	read -r confirmation
+	if [ ! "$confirmation" = "y" ] && [ ! "$confirmation" = "Y" ]; then
+		printf "Aborted"
+		exit
+	fi
+}
+
 backup_or_download() {
 	printf "Select an option:"
 	printf "\n1. Backup"
@@ -29,12 +36,16 @@ backup_or_download() {
 	read -r option
 
 	if [ "$option" = "1" ]; then
+		get_confirmation "$CLOUD_CONFIG_DEST$1" "$2" "$CLOUD_CONFIG_DEST"
+
 		printf "Backing up..."
-		trash_and_copy "${CLOUD_CONFIG_DEST}$1" "$2" "$CLOUD_CONFIG_DEST"
+		trash_and_copy "$CLOUD_CONFIG_DEST$1" "$2" "$CLOUD_CONFIG_DEST"
 		printf "\nDone!"
 	elif [ "$option" = "2" ]; then
+		get_confirmation "$2" "$CLOUD_CONFIG_DEST$1" "$3"
+
 		printf "Downloading..."
-		trash_and_copy "$2" "${CLOUD_CONFIG_DEST}$1" "$3"
+		trash_and_copy "$2" "$CLOUD_CONFIG_DEST$1" "$3"
 		printf "\nDone!"
 	else
 		printf "Error: Invalid option"
@@ -42,11 +53,11 @@ backup_or_download() {
 }
 
 backup_or_download_to_config() {
-	backup_or_download "$1" "${CONFIG}$1" "$CONFIG"
+	backup_or_download "$1" "$CONFIG$1" "$CONFIG"
 }
 
 backup_or_download_to_local() {
-	backup_or_download "$1" "${LOCAL_SHARE}$1" "$LOCAL_SHARE"
+	backup_or_download "$1" "$LOCAL_SHARE$1" "$LOCAL_SHARE"
 }
 
 printf "Select a platform:"
