@@ -142,11 +142,6 @@ rm ~/.bash_history
 1. [steam](./non-declarative/docs/games/steam.md)
 2. [TF2](./non-declarative/docs/games/tf2.md)
 
-### Emulators
-
-1. [RetroArch](./non-declarative/docs/emulators/retroarch.md)
-2. [Yuzu](./non-declarative/docs/emulators/yuzu.md)
-
 ## Acknowledgements
 
 Other configurations from where I learned and copied:
