@@ -2,13 +2,13 @@
 
 stdenvNoCC.mkDerivation rec {
   pname = "config-backup-cli";
-  version = "v1.1";
+  version = "v1.3";
 
   src = fetchFromGitHub {
     owner = "willswats";
     repo = "config-backup-cli";
     rev = version;
-    hash = "sha256-u/Sx/io29ZCnsgs62inBIkp29WgRublkw5vc3Ms8Tig=";
+    hash = "sha256-YhrKstxWNLXLwOQzxsRQT+Wfat3LG1bJy/kmiVij8gM=";
   };
 
   nativeBuildInputs = [ makeWrapper ];
@@ -27,7 +27,7 @@ stdenvNoCC.mkDerivation rec {
 
   meta = with lib; {
     homepage = "https://github.com/willswats/config-backup-cli";
-    description = "A bash script made for backing up configs to cloud storage.";
+    description = "A shell script made for backing up configs to cloud storage.";
     license = licenses.mit;
     platforms = platforms.unix;
   };
