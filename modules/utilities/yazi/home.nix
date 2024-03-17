@@ -1,4 +1,4 @@
-{ globals, pkgs, ... }:
+{ globals, inputs, pkgs, ... }:
 
 {
   home.packages = with pkgs; [ ripdrag ];
@@ -33,6 +33,7 @@
     in
     {
       enable = true;
+      package = inputs.yazi.packages.${pkgs.system}.yazi;
       enableBashIntegration = true;
       enableFishIntegration = true;
       keymap = {

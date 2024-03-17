@@ -10,11 +10,13 @@
     };
 
     nur.url = "github:nix-community/NUR";
+    nix-gaming.url = "github:fufexan/nix-gaming";
 
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    yazi.url = "github:sxyazi/yazi";
 
     hyprland.url = "github:hyprwm/Hyprland";
     hypridle.url = "github:hyprwm/hypridle";
@@ -23,11 +25,9 @@
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nix-gaming.url = "github:fufexan/nix-gaming";
   };
 
-  outputs = { nixpkgs, home-manager, nur, nixvim, hyprland, hypridle, hyprlock, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, nur, nixvim, yazi, hyprland, hypridle, hyprlock, ... }@inputs: {
     nixosConfigurations =
       let
         system = "x86_64-linux";
