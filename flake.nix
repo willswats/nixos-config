@@ -27,7 +27,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, nur, nixvim, yazi, hyprland, hypridle, hyprlock, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, nur, nixvim, hyprland, hypridle, hyprlock, ... }@inputs: {
     nixosConfigurations =
       let
         system = "x86_64-linux";
