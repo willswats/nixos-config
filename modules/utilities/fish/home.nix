@@ -62,6 +62,8 @@
 
         yuzu = "${appimageRun} ${emulatorsDirectory}/Yuzu/Linux-Yuzu-EA-4176.AppImage";
         citra = "${appimageRun} ${emulatorsDirectory}/Citra/citra-qt.AppImage";
+
+        backup = "${./backup.sh}";
       };
     interactiveShellInit = ''
       # Hide fish greeting
