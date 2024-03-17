@@ -3,30 +3,6 @@
 {
   home.packages = with pkgs; [ ripdrag ];
 
-  xdg.mimeApps = {
-    defaultApplications = {
-      "inode/directory" = [ "yazi.desktop" ]; # Directories
-    };
-  };
-
-  # Currently not included with the nix package
-  # Added kitty and set Terminal=false as it does not open inode/directory otherwise (tested with Steam)
-  home.file.".local/share/icons/yazi.png".source = ./yazi.png;
-  home.file.".local/share/applications/yazi.desktop".text =
-    ''
-      [Desktop Entry]
-      Name=Yazi
-      Icon=yazi
-      Comment=Blazing fast terminal file manager written in Rust, based on async I/O
-      Terminal=false
-      TryExec=yazi
-      Exec=kitty yazi %u
-      Type=Application
-      MimeType=inode/directory
-      Categories=Utility;Core;System;FileTools;FileManager;ConsoleOnly
-      Keywords=File;Manager;Explorer;Browser;Launcher
-    '';
-
   programs.yazi =
     let
       driveDir = globals.directories.drive;

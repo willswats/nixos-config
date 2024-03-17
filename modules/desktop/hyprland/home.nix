@@ -44,6 +44,7 @@
       firefox = "${pkgs.firefox}/bin/firefox";
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
       bitwarden = "${pkgs.bitwarden}/bin/bitwarden";
+      pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
       spotify = "${pkgs.spotify}/bin/spotify";
 
       kitty = "${pkgs.kitty}/bin/kitty";
@@ -195,6 +196,7 @@
           # Applets
           "${nmApplet} --indicator"
           "${mullvadGui}"
+          "${pcmanfm} --daemon-mode" # Run as dameon to prevent pcmanfm from opening slowly on first launch (bug)
           "${dropbox}"
           # Misc
           "mkdir -p ${directoriesToCreate}"

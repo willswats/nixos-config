@@ -13,6 +13,7 @@ in
     ../modules/development/dotnet
     ../modules/theme/gtk
     ../modules/theme/qt
+    ../modules/utilities/pcmanfm
     ../modules/utilities/mullvad-vpn
     ../modules/utilities/virt-manager
     ../modules/utilities/docker
