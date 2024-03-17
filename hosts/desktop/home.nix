@@ -12,6 +12,7 @@
     ../../modules/games/gzdoom/home.nix
     ../../modules/emulators/ishiiruka/home.nix
     ../../modules/emulators/retroarch/home.nix
+    ../../modules/emulators/yuzu/home.nix
   ];
 
   home.packages = with pkgs; [

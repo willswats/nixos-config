@@ -10,7 +10,6 @@
         driveDir = globals.directories.drive;
         notebookDirectory = "${driveDir}/Work/Notebook";
         universityDirectory = "${driveDir}/Work/Education/University";
-        emulatorsDirectory = "${driveDir}/Games/Emulation/Emulators";
 
         codeDirectory = "~/Code";
         nixosConfigDirectory = "~/Code/nixos-config";
@@ -18,7 +17,6 @@
         desktopHostName = globals.hostNames.desktop;
         laptopHostName = globals.hostNames.laptop;
 
-        appimageRun = "${pkgs.appimage-run}/bin/appimage-run";
         notifySend = "${pkgs.libnotify}/bin/notify-send";
         hostname = "${pkgs.hostname}/bin/hostname";
 
@@ -59,9 +57,6 @@
         prsf = "git -C ${nixosConfigDirectory} pull; ${rebuildSwitchFlake.outPath}";
         fursf = "sudo nix flake update ${nixosConfigDirectory}; git -C ${nixosConfigDirectory} add flake.lock; ${rebuildSwitchFlake.outPath}";
         nix-shell = "nix-shell --command fish";
-
-        yuzu = "${appimageRun} ${emulatorsDirectory}/Yuzu/Linux-Yuzu-EA-4176.AppImage";
-        citra = "${appimageRun} ${emulatorsDirectory}/Citra/citra-qt.AppImage";
 
         backup = "${./backup.sh}";
       };
