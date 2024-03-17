@@ -21,7 +21,6 @@
     (callPackage ../../pkgs/airshipper { })
     prismlauncher
     # Emulators
-    pcsx2
     rpcs3
   ];
 
