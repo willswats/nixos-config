@@ -15,6 +15,7 @@
 
 ## Other
 
+- [ ] Create and use flake for config-backup-cli
 - [ ] Fix audio crackling (e.g. when launching osu! when another program is outputting sound)
 - [ ] Add back pipewire lowLatency - waiting on [issue](https://github.com/fufexan/nix-gaming/issues/161)
 - [ ] Format disk with [disko](https://github.com/nix-community/disko)
