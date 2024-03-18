@@ -2,13 +2,13 @@
 
 stdenvNoCC.mkDerivation rec {
   pname = "config-backup-cli";
-  version = "v1.3";
+  version = "v1.5";
 
   src = fetchFromGitHub {
     owner = "willswats";
     repo = "config-backup-cli";
     rev = version;
-    hash = "sha256-YhrKstxWNLXLwOQzxsRQT+Wfat3LG1bJy/kmiVij8gM=";
+    hash = "sha256-dFtFXPQYy2WCAeDvqFEL9Rw2AbxJTgfwTdCPqrnIwP4=";
   };
 
   nativeBuildInputs = [ makeWrapper ];
