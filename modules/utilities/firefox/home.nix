@@ -82,6 +82,10 @@
                 url = "https://www.dropbox.com/home";
               }
               {
+                name = "Paypal";
+                url = "https://www.paypal.com/myaccount/summary";
+              }
+              {
                 name = "AnonAddy";
                 url = "https://app.anonaddy.com/";
               }
