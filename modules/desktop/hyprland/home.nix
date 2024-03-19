@@ -45,12 +45,12 @@
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
       bitwarden = "${pkgs.bitwarden}/bin/bitwarden";
       pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
-      spotify = "${pkgs.spotify}/bin/spotify";
 
       kitty = "${pkgs.kitty}/bin/kitty";
       yazi = "${pkgs.yazi}/bin/yazi";
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
+      spotifyPlayer = "${pkgs.spotify-player}/bin/spotify_player";
 
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       nmApplet = "${pkgs.networkmanagerapplet}/bin/nm-applet";
@@ -214,12 +214,12 @@
           "$mod, w, exec, ${firefox}" # Web browser
           "$mod, a, exec, ${pavucontrol}" # Audio manager 
           "$mod, p, exec, ${bitwarden}" # Password manager
-          "$mod, m, exec, ${spotify}" # Music player
 
           "$mod, e, exec, ${kitty} ${yazi}" # File explorer
           "$mod, t, exec, ${kitty} nvim" # Text editor (not specifying the binary as it doesn't load my config)
           "$mod, s, exec, ${kitty} ${btm} -b" # Process monitor
           "$mod, b, exec, ${kitty} ${bluetuith}" # Bluetooth manager
+          "$mod, m, exec, ${kitty} ${spotifyPlayer}" # Music player
 
           ", print, exec, ${grimblastSaveOutput}" # Screenshot active monitor
           "SHIFT, print, exec, ${grimblastSaveArea}" # Screenshot manually selected area

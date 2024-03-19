@@ -119,6 +119,14 @@
                 url = "https://play.google.com/books";
               }
               {
+                name = "Spotify";
+                url = "https://open.spotify.com";
+              }
+              {
+                name = "Spotify Dedup";
+                url = "https://spotify-dedup.com/";
+              }
+              {
                 name = "myNoise";
                 url = "https://mynoise.net";
               }
