@@ -1,14 +1,14 @@
 { fetchFromGitHub, stdenvNoCC, lib, makeWrapper, trash-cli, }:
 
 stdenvNoCC.mkDerivation rec {
-  pname = "config-backup-cli";
-  version = "v1.5";
+  pname = "quick-backup-cli";
+  version = "v1.6";
 
   src = fetchFromGitHub {
     owner = "willswats";
-    repo = "config-backup-cli";
+    repo = "quick-backup-cli";
     rev = version;
-    hash = "sha256-dFtFXPQYy2WCAeDvqFEL9Rw2AbxJTgfwTdCPqrnIwP4=";
+    hash = "sha256-2Q8e5I6XzOpZ94IQFDyX9LaNjStNL03Ujq+FaQbujYM=";
   };
 
   nativeBuildInputs = [ makeWrapper ];
@@ -17,17 +17,17 @@ stdenvNoCC.mkDerivation rec {
   installPhase = ''
     runHook preInstall
 
-    install -Dm755 config-backup-cli $out/bin/config-backup-cli
+    install -Dm755 quick-backup-cli $out/bin/quick-backup-cli
 
-    wrapProgram $out/bin/config-backup-cli \
+    wrapProgram $out/bin/quick-backup-cli \
        --prefix PATH : ${lib.makeBinPath runtimeDependencies}
 
     runHook postInstall
   '';
 
   meta = with lib; {
-    homepage = "https://github.com/willswats/config-backup-cli";
-    description = "A shell script made for backing up configs to cloud storage.";
+    homepage = "https://github.com/willswats/quick-backup-cli";
+    description = "Quickly copy config directories to a specified location, and vice versa.";
     license = licenses.mit;
     platforms = platforms.unix;
   };
