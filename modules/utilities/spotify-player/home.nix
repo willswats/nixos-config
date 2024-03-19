@@ -17,7 +17,7 @@
     [themes.palette]
     background = "#1E1E2E"
     foreground = "#CDD6F4"
-    black = "#1E1E2E"
+    black = "#6c7086"
     blue = "#89B4FA"
     cyan = "#89DCEB"
     green = "#A6E3A1"
@@ -25,7 +25,7 @@
     red = "#F38BA8"
     white = "#CDD6F4"
     yellow = "#F9E2AF"
-    bright_black = "#1E1E2E"
+    bright_black = "#6c7086"
     bright_blue = "#89B4FA"
     bright_cyan = "#89DCEB"
     bright_green = "#A6E3A1"
