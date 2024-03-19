@@ -4,19 +4,23 @@
 
 - [ ] Finish dap setup
 
-## Yazi
+## Other
 
-- [ ] Add ability to copy files between two terminals
+- [ ] Fix audio crackling (e.g. when launching osu! when another program is outputting sound)
+- [ ] Format disk with [disko](https://github.com/nix-community/disko)
+- [ ] Setup a Yubikey for GPG git commit signing
 
-## Add pkgs
+## Waiting
+
+### Waiting - Yazi
+
+- [ ] Add ability to copy files between two terminals - waiting on [PR](https://github.com/sxyazi/yazi/pull/826)
+
+### Waiting - nix-gaming
+
+- [ ] Add back pipewire lowLatency - waiting on [issue](https://github.com/fufexan/nix-gaming/issues/161)
+
+### Waiting - Add pkgs
 
 - [ ] Add nixpkgs airshipper package - If [PR](https://github.com/NixOS/nixpkgs/pull/294041) gets merged
 - [ ] Add nixpkgs catppuccin-sddm package - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/255808)
-
-## Other
-
-- [ ] Create and use flake for quick-backup-cli
-- [ ] Fix audio crackling (e.g. when launching osu! when another program is outputting sound)
-- [ ] Add back pipewire lowLatency - waiting on [issue](https://github.com/fufexan/nix-gaming/issues/161)
-- [ ] Format disk with [disko](https://github.com/nix-community/disko)
-- [ ] Setup a Yubikey for GPG git commit signing
