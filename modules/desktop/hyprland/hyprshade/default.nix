@@ -9,7 +9,7 @@ in
     timerConfig = {
       OnCalendar = [
         "*-*-* 08:00:00"
-        "*-*-* 19:00:00"
+        "*-*-* 18:00:00"
       ];
       Unit = "hyprshade.service";
     };
