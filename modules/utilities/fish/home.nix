@@ -17,6 +17,7 @@
         desktopHostName = globals.hostNames.desktop;
         laptopHostName = globals.hostNames.laptop;
 
+        yt-dlp = "${pkgs.yt-dlp}/bin/yt-dlp";
         notifySend = "${pkgs.libnotify}/bin/notify-send";
         hostname = "${pkgs.hostname}/bin/hostname";
 
@@ -59,6 +60,9 @@
         nix-shell = "nix-shell --command fish";
 
         backup = "quick-backup-cli ${driveDir}/Games/Backups/";
+
+        dlmp3 = "${yt-dlp} -x --audio-format mp3";
+        dlmp4 = "${yt-dlp} -f mp4";
       };
     interactiveShellInit = ''
       # Hide fish greeting
