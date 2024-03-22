@@ -6,10 +6,10 @@
     config = {
       volume = 50;
       keep-open = "yes"; # Keep mpv open when there is nothing left to play
+      player-operation-mode = "pseudo-gui"; # Always open mpv as GUI (prevents mpv opening in terminal when using yazi)
       osc = "no"; # Requirement of uosc
       osd-bar = "no"; # Requirement of uosc
       border = "no"; # Requirement of uosc
-      player-operation-mode = "pseudo-gui"; # Always open mpv as GUI (prevents mpv opening in terminal when using yazi)
     };
     bindings = {
       # mpv
@@ -24,6 +24,7 @@
       s = "script-binding uosc/shuffle; script-message-to uosc flash-elements controls";
       n = "script-binding uosc/next";
       p = "script-binding uosc/prev";
+      tab = "script-binding uosc/toggle-ui";
     };
     scripts = with pkgs; [
       (callPackage ../../../pkgs/mpv-user-input { })
