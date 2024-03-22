@@ -48,7 +48,7 @@
       mpv = "${pkgs.mpv}/bin/mpv";
 
       kitty = "${pkgs.kitty}/bin/kitty";
-      yazi = "${pkgs.yazi}/bin/yazi";
+      yazi = inputs.yazi.packages.${pkgs.system}.yazi;
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
       spotifyPlayer = "${pkgs.spotify-player}/bin/spotify_player";
