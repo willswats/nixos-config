@@ -64,12 +64,11 @@
           args = { "wl-paste", "--no-newline" },
           capture_stdout = true
         }.stdout
-        mp.commandv("loadfile", clipboard)
-        mp.osd_message("Pasted", opts.osd_message_duration)
+        mp.commandv("loadfile", clipboard, "append-play")
+        mp.osd_message("Pasted into playlist", opts.osd_message_duration)
       end
 
       mp.add_key_binding(opts.key_paste, "paste", paste)
     '';
-
   };
 }
