@@ -7,25 +7,65 @@
       volume = 50;
       keep-open = "yes"; # Keep mpv open when there is nothing left to play
       player-operation-mode = "pseudo-gui"; # Always open mpv as GUI (prevents mpv opening in terminal when using yazi)
-      osc = "no"; # Requirement of uosc
-      osd-bar = "no"; # Requirement of uosc
-      border = "no"; # Requirement of uosc
+      no-input-default-bindings = ""; # Disable default bindings
+      osd-bar = "no"; # Replaced by uosc
+      border = "no"; # Replaced by uosc
     };
-    bindings = {
-      # mpv
-      MBTN_LEFT = "cycle pause"; # Toggle pause/playback mode
-      "-" = "no-osd add volume -5; script-message-to uosc flash-elements volume";
-      "+" = "no-osd add volume 5; script-message-to uosc flash-elements volume";
-      l = "no-osd cycle-values loop-playlist yes no; script-message-to uosc flash-elements controls"; # Toggle loop-playlist
-      L = "no-osd cycle-values loop-file yes no; script-message-to uosc flash-elements controls"; # Toggle loop-file
-      # uosc
-      MBTN_RIGHT = "script-binding uosc/menu";
-      i = "script-binding uosc/items"; # Opens playlist menu when playlist exists, or open-file menu otherwise 
-      s = "script-binding uosc/shuffle; script-message-to uosc flash-elements controls";
-      n = "script-binding uosc/next";
-      p = "script-binding uosc/prev";
-      tab = "script-binding uosc/toggle-ui";
-    };
+    bindings =
+      let
+        uoscFlashTimeline = "script-binding uosc/flash-timeline;";
+        uoscFlashVolume = "script-binding uosc/flash-volume";
+        uoscFlashSpeed = "script-binding uosc/flash-speed";
+        uoscFlashElementsControls = "script-message-to uosc flash-elements controls";
+      in
+      {
+        # mpv
+        q = "quit";
+        f = "cycle fullscreen";
+        z = "add sub-delay -0.1";
+        x = "add sub-delay +0.1";
+        "`" = "script-binding console/enable";
+
+        MBTN_LEFT = "cycle pause";
+        space = "cycle pause";
+
+        # uosc
+        "+" = "no-osd add volume 5; ${uoscFlashVolume}";
+        "-" = "no-osd add volume -5; ${uoscFlashVolume}";
+
+        m = "no-osd cycle mute; ${uoscFlashVolume}";
+        l = "no-osd cycle-values loop-playlist yes no; ${uoscFlashElementsControls}";
+        L = "no-osd cycle-values loop-file yes no; ${uoscFlashElementsControls}";
+
+        right = "seek 5; ${uoscFlashTimeline}";
+        left = "seek -5; ${uoscFlashTimeline}";
+        up = "seek 60; ${uoscFlashTimeline}";
+        down = "seek -60; ${uoscFlashTimeline}";
+        "shift+right" = "seek 1; ${uoscFlashTimeline}";
+        "shift+left" = "seek -1; ${uoscFlashTimeline}";
+        "ctrl+right" = "seek 90; ${uoscFlashTimeline}";
+        "ctrl+left" = "seek -90; ${uoscFlashTimeline}";
+
+        "[" = "no-osd add speed -0.10; ${uoscFlashSpeed}";
+        "]" = "no-osd add speed  0.10; ${uoscFlashSpeed}";
+
+        MBTN_RIGHT = "script-binding uosc/menu";
+        tab = "script-binding uosc/menu";
+        i = "script-binding uosc/items"; # Opens playlist menu when playlist exists, or open-file menu otherwise 
+        s = "script-binding uosc/shuffle; ${uoscFlashElementsControls}";
+        S = "script-binding uosc/subtitles";
+        r = "script-binding uosc/stream-quality";
+        n = "script-binding uosc/next;";
+        p = "script-binding uosc/prev;";
+
+        # mpv-youtube-search
+        "alt+s" = "script-binding youtube_search_replace";
+        "alt+a" = "script-binding youtube_search_append";
+        "alt+r" = "script-binding search_results_update";
+
+        # paste
+        "ctrl+v" = "script-binding paste";
+      };
     scripts = with pkgs; [
       (callPackage ../../../pkgs/mpv-user-input { })
       (callPackage ../../../pkgs/mpv-youtube-search {
@@ -39,6 +79,7 @@
       mpvScripts.thumbfast # Required for thumbnails in uosc
       mpvScripts.mpris # Allows control of the player using standard media keys
       mpvScripts.webtorrent-mpv-hook # Stream torrents in mpv using webtorrent-cli 
+      mpvScripts.sponsorblock # Script for mpv to skip sponsored segments of YouTube videos
     ];
     scriptOpts = {
       thumbfast = {
@@ -53,7 +94,7 @@
 
       local opts = {
         -- Key used for pasting
-        key_paste = "Ctrl+v",
+        key_paste = "ctrl+v",
         -- Duration of osd messages
         osd_message_duration = 5
       }
