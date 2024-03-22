@@ -9,7 +9,6 @@
       git = {
         disableForcePushing = true; # To ensure that a force push is not fat fingered
         overrideGpg = true; # To not get booted to shell on each commit
-        autoFetch = false; # To stop being prompted by gpg pinentry
       };
       gui.theme = {
         lightTheme = false;
