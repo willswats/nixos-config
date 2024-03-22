@@ -162,6 +162,7 @@
           "float, class:steam, title:Screenshot Manager"
           "suppressevent maximize, class:steam" # Fix Steam maximizing certain windows (Friends List)
           "suppressevent maximize, class:firefox" # Fix Firefox maximizing certain windows (extensions)
+          "suppressevent maximize, class:mpv" # Stop mpv from maximizing when adding a video
         ];
 
         env = [
