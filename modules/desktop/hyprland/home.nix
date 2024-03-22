@@ -47,7 +47,7 @@
       pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
 
       kitty = "${pkgs.kitty}/bin/kitty";
-      yazi = inputs.yazi.packages.${pkgs.system}.yazi;
+      yazi = "${inputs.yazi.packages.${pkgs.system}.yazi}/bin/yazi";
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
       spotifyPlayer = "${pkgs.spotify-player}/bin/spotify_player";
