@@ -214,13 +214,13 @@
           "$mod, w, exec, ${firefox}" # Web browser
           "$mod, a, exec, ${pavucontrol}" # Audio manager 
           "$mod, p, exec, ${bitwarden}" # Password manager
-          "$mod shift, m, exec, mpv" # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
+          "$mod, m, exec, mpv" # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
 
           "$mod, e, exec, ${kitty} ${yazi}" # File explorer
           "$mod, t, exec, ${kitty} nvim" # Text editor (not specifying the binary as it doesn't load my config)
           "$mod, s, exec, ${kitty} ${btm} -b" # Process monitor
           "$mod, b, exec, ${kitty} ${bluetuith}" # Bluetooth manager
-          "$mod, m, exec, ${kitty} ${spotifyPlayer}" # Music player
+          "$mod shift, m, exec, ${kitty} ${spotifyPlayer}" # Music player
 
           ", print, exec, ${grimblastSaveOutput}" # Screenshot active monitor
           "shift, print, exec, ${grimblastSaveArea}" # Screenshot manually selected area
