@@ -37,6 +37,7 @@
       mpvScripts.uosc # Proximity-based UI
       mpvScripts.thumbfast # Required for thumbnails in uosc
       mpvScripts.mpris # Allows control of the player using standard media keys
+      mpvScripts.webtorrent-mpv-hook # Stream torrents in mpv using webtorrent-cli 
     ];
     scriptOpts = {
       thumbfast = {
