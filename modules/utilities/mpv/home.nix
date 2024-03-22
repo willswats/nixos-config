@@ -7,7 +7,8 @@
       volume = 50;
       keep-open = "yes"; # Keep mpv open when there is nothing left to play
       player-operation-mode = "pseudo-gui"; # Always open mpv as GUI (prevents mpv opening in terminal when using yazi)
-      no-input-default-bindings = ""; # Disable default bindings
+      no-input-default-bindings = ""; # Disable default bindings, see https://github.com/mpv-player/mpv/blob/master/etc/input.conf for defaults
+      screenshot-directory = "~/Pictures";
       osd-bar = "no"; # Replaced by uosc
       border = "no"; # Replaced by uosc
     };
@@ -21,13 +22,20 @@
       {
         # mpv
         q = "quit";
+
         f = "cycle fullscreen";
+        "ESC" = "set fullscreen no";
+
         z = "add sub-delay -0.1";
         x = "add sub-delay +0.1";
+
         "`" = "script-binding console/enable";
 
-        MBTN_LEFT = "cycle pause";
-        space = "cycle pause";
+        MBTN_LEFT = "cycle pause; ${uoscFlashTimeline}";
+        space = "cycle pause; ${uoscFlashTimeline}";
+
+        "Ctrl+s" = "screenshot"; # Take a screenshot of the video in its original resolution with subtitles
+        "Shift+s" = "screenshot video"; # Take a screenshot of the video in its original resolution without subtitles
 
         # uosc
         "+" = "no-osd add volume 5; ${uoscFlashVolume}";
@@ -37,20 +45,19 @@
         l = "no-osd cycle-values loop-playlist yes no; ${uoscFlashElementsControls}";
         L = "no-osd cycle-values loop-file yes no; ${uoscFlashElementsControls}";
 
-        right = "seek 5; ${uoscFlashTimeline}";
-        left = "seek -5; ${uoscFlashTimeline}";
-        up = "seek 60; ${uoscFlashTimeline}";
-        down = "seek -60; ${uoscFlashTimeline}";
-        "shift+right" = "seek 1; ${uoscFlashTimeline}";
-        "shift+left" = "seek -1; ${uoscFlashTimeline}";
-        "ctrl+right" = "seek 90; ${uoscFlashTimeline}";
-        "ctrl+left" = "seek -90; ${uoscFlashTimeline}";
+        RIGHT = "seek 5 exact; ${uoscFlashTimeline}";
+        LEFT = "seek -5 exact; ${uoscFlashTimeline}";
+        "Shift+RIGHT" = "seek 1 exact; ${uoscFlashTimeline}";
+        "Shift+LEFT" = "seek -1 exact; ${uoscFlashTimeline}";
+        "Ctrl+RIGHT" = "seek 90; ${uoscFlashTimeline}";
+        "Ctrl+LEFT" = "seek -90; ${uoscFlashTimeline}";
 
         "[" = "no-osd add speed -0.10; ${uoscFlashSpeed}";
         "]" = "no-osd add speed  0.10; ${uoscFlashSpeed}";
 
         MBTN_RIGHT = "script-binding uosc/menu";
         tab = "script-binding uosc/menu";
+        t = "script-binding uosc/toggle-ui";
         i = "script-binding uosc/items"; # Opens playlist menu when playlist exists, or open-file menu otherwise 
         s = "script-binding uosc/shuffle; ${uoscFlashElementsControls}";
         S = "script-binding uosc/subtitles";
@@ -59,12 +66,12 @@
         p = "script-binding uosc/prev;";
 
         # mpv-youtube-search
-        "alt+s" = "script-binding youtube_search_replace";
-        "alt+a" = "script-binding youtube_search_append";
-        "alt+r" = "script-binding search_results_update";
+        "Alt+s" = "script-binding youtube_search_replace";
+        "Alt+a" = "script-binding youtube_search_append";
+        "Alt+r" = "script-binding search_results_update";
 
         # paste
-        "ctrl+v" = "script-binding paste";
+        "Ctrl+v" = "script-binding paste";
       };
     scripts = with pkgs; [
       (callPackage ../../../pkgs/mpv-user-input { })
@@ -94,7 +101,7 @@
 
       local opts = {
         -- Key used for pasting
-        key_paste = "ctrl+v",
+        key_paste = "Ctrl+v",
         -- Duration of osd messages
         osd_message_duration = 5
       }
