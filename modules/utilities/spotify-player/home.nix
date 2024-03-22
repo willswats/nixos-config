@@ -3,8 +3,11 @@
 {
   home.packages = with pkgs; [ spotify-player ];
 
+  # See for client_id: https://developer.spotify.com/dashboard
+  # Specifying a client_id allows selection of the spotify_player device with 'D'
   xdg.configFile."spotify-player/app.toml".text = ''
     theme = "Catppuccin-mocha"
+    client_id = "389315eebd084fa8a9e377f598218b67"
 
     [device]
     volume = 50
