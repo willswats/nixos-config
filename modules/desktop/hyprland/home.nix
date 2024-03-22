@@ -45,7 +45,6 @@
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
       bitwarden = "${pkgs.bitwarden}/bin/bitwarden";
       pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
-      mpv = "${pkgs.mpv}/bin/mpv";
 
       kitty = "${pkgs.kitty}/bin/kitty";
       yazi = inputs.yazi.packages.${pkgs.system}.yazi;
@@ -215,7 +214,7 @@
           "$mod, w, exec, ${firefox}" # Web browser
           "$mod, a, exec, ${pavucontrol}" # Audio manager 
           "$mod, p, exec, ${bitwarden}" # Password manager
-          "$mod shift, m, exec, ${mpv}" # Media player
+          "$mod shift, m, exec, mpv" # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
 
           "$mod, e, exec, ${kitty} ${yazi}" # File explorer
           "$mod, t, exec, ${kitty} nvim" # Text editor (not specifying the binary as it doesn't load my config)
