@@ -45,6 +45,7 @@
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
       bitwarden = "${pkgs.bitwarden}/bin/bitwarden";
       pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
+      mpv = "${pkgs.mpv}/bin/mpv";
 
       kitty = "${pkgs.kitty}/bin/kitty";
       yazi = "${pkgs.yazi}/bin/yazi";
@@ -214,6 +215,7 @@
           "$mod, w, exec, ${firefox}" # Web browser
           "$mod, a, exec, ${pavucontrol}" # Audio manager 
           "$mod, p, exec, ${bitwarden}" # Password manager
+          "$mod shift, m, exec, ${mpv}" # Media player
 
           "$mod, e, exec, ${kitty} ${yazi}" # File explorer
           "$mod, t, exec, ${kitty} nvim" # Text editor (not specifying the binary as it doesn't load my config)
@@ -222,12 +224,12 @@
           "$mod, m, exec, ${kitty} ${spotifyPlayer}" # Music player
 
           ", print, exec, ${grimblastSaveOutput}" # Screenshot active monitor
-          "SHIFT, print, exec, ${grimblastSaveArea}" # Screenshot manually selected area
+          "shift, print, exec, ${grimblastSaveArea}" # Screenshot manually selected area
 
           "$mod shift, b, exec, ${hyprshade} toggle blue-light-filter" # Toggle blue light filter
           "$mod shift, v, exec, ${mullvadToggle}" # Toggle VPN
 
-          "$mod SHIFT, semicolon, exec, ${playerctl} --all-players pause; ${hyprlock}"
+          "$mod shift, semicolon, exec, ${playerctl} --all-players pause; ${hyprlock}"
 
           "$mod, q, killactive"
           "$mod, f, fullscreen"
@@ -284,16 +286,16 @@
           "$mod, 9, workspace, 9"
           "$mod, 0, workspace, 10"
 
-          "$mod SHIFT, 1, movetoworkspace, 1"
-          "$mod SHIFT, 2, movetoworkspace, 2"
-          "$mod SHIFT, 3, movetoworkspace, 3"
-          "$mod SHIFT, 4, movetoworkspace, 4"
-          "$mod SHIFT, 5, movetoworkspace, 5"
-          "$mod SHIFT, 6, movetoworkspace, 6"
-          "$mod SHIFT, 7, movetoworkspace, 7"
-          "$mod SHIFT, 8, movetoworkspace, 8"
-          "$mod SHIFT, 9, movetoworkspace, 9"
-          "$mod SHIFT, 0, movetoworkspace, 10"
+          "$mod shift, 1, movetoworkspace, 1"
+          "$mod shift, 2, movetoworkspace, 2"
+          "$mod shift, 3, movetoworkspace, 3"
+          "$mod shift, 4, movetoworkspace, 4"
+          "$mod shift, 5, movetoworkspace, 5"
+          "$mod shift, 6, movetoworkspace, 6"
+          "$mod shift, 7, movetoworkspace, 7"
+          "$mod shift, 8, movetoworkspace, 8"
+          "$mod shift, 9, movetoworkspace, 9"
+          "$mod shift, 0, movetoworkspace, 10"
 
           # Scroll through existing workspaces with mod + scroll
           "$mod, mouse_down, workspace, e+1"
@@ -326,7 +328,7 @@
           "$mod, mouse:273, resizewindow"
         ];
       };
-      # virtualmachine submap for passing keyboard into virtual machine - https://github.com/hyprwm/Hyprland/issues/501
+      # virtual submap for passing keyboard into virtual machine - https://github.com/hyprwm/Hyprland/issues/501
       extraConfig = ''
         bind=$mod,r,submap,resize
         submap=resize
@@ -339,10 +341,10 @@
         bind=$mod,r,submap,reset 
         submap=reset
 
-        bind=$mod SHIFT,m,submap,virtualmachine
-        submap=virtualmachine
+        bind=$mod,v,submap,virtual
+        submap=virtual
 
-        bind=$mod SHIFT,m,submap,reset
+        bind=$mod shift,m,submap,reset
         submap=reset
       '';
     };
