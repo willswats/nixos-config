@@ -17,7 +17,8 @@
         desktopHostName = globals.hostNames.desktop;
         laptopHostName = globals.hostNames.laptop;
 
-        yt-dlp = "${pkgs.yt-dlp}/bin/yt-dlp";
+        ytDlp = "${pkgs.yt-dlp}/bin/yt-dlp";
+        webtorrentCli = "${pkgs.nodePackages_latest.webtorrent-cli}/bin/webtorrent";
         notifySend = "${pkgs.libnotify}/bin/notify-send";
         hostname = "${pkgs.hostname}/bin/hostname";
 
@@ -61,8 +62,10 @@
 
         backup = "quick-backup-cli ${driveDir}/Games/Backups/";
 
-        dlmp3 = "${yt-dlp} -x --audio-format mp3";
-        dlmp4 = "${yt-dlp} -f mp4";
+        dlmp3 = "${ytDlp} -x --audio-format mp3";
+        dlmp4 = "${ytDlp} -f mp4";
+
+        tm = "${webtorrentCli} --mpv";
       };
     interactiveShellInit = ''
       # Hide fish greeting
