@@ -34,8 +34,8 @@
         MBTN_LEFT = "cycle pause; ${uoscFlashTimeline}";
         space = "cycle pause; ${uoscFlashTimeline}";
 
-        "Ctrl+s" = "screenshot"; # Take a screenshot of the video in its original resolution with subtitles
-        "Shift+s" = "screenshot video"; # Take a screenshot of the video in its original resolution without subtitles
+        "Ctrl+s" = "screenshot"; # Screenshot with subtitles
+        "Shift+s" = "screenshot video"; # Screenshot without subtitles
 
         # uosc
         "+" = "no-osd add volume 5; ${uoscFlashVolume}";
@@ -60,7 +60,7 @@
         t = "script-binding uosc/toggle-ui";
         i = "script-binding uosc/items"; # Opens playlist menu when playlist exists, or open-file menu otherwise 
         s = "script-binding uosc/shuffle; ${uoscFlashElementsControls}";
-        S = "script-binding uosc/subtitles";
+        c = "script-binding uosc/subtitles";
         r = "script-binding uosc/stream-quality";
         n = "script-binding uosc/next;";
         p = "script-binding uosc/prev;";
