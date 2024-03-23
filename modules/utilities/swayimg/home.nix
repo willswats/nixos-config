@@ -26,7 +26,7 @@
         fullscreen = no
 
         # Anti-aliasing (yes/no)
-        antialiasing = no
+        antialiasing = yes
 
         # Background for transparent images (none/grid/RGB, e.g. #112233)
         transparency = grid
