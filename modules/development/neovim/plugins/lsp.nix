@@ -6,8 +6,6 @@ let
 in
 {
   home.packages = with pkgs; [
-    marksman # Markdown LSP
-    sqls # SQL LSP
     rustfmt # Rust format
   ];
 
@@ -30,6 +28,13 @@ in
         bashls.enable = true; # Bash
         taplo.enable = true; # TOML
         hls.enable = true; # Haskell
+        sqls = {
+          enable = true;
+          onAttach.function = ''
+            client.server_capabilities.documentFormattingProvider = false
+            client.server_capabilities.documentRangeFormattingProvider = false
+          '';
+        };
         html = {
           enable = true;
           # Disable formatting (conflicts with Prettier)
@@ -83,14 +88,6 @@ in
     };
     extraConfigLua = ''
       local lspconfig = require("lspconfig")
-
-      lspconfig.sqls.setup {
-        capabilities = ${capabilities},
-        on_attach = function(client)
-          client.server_capabilities.documentFormattingProvider = false
-          client.server_capabilities.documentRangeFormattingProvider = false
-        end,
-      }
 
       local signs = {
         { name = "DiagnosticSignError", text = "${icons.diagnostics.BoldError}" },
