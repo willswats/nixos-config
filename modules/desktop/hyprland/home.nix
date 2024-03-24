@@ -170,16 +170,16 @@
         ];
 
         workspace = [
-          "${monitorLeft},1"
-          "${monitorCenter},2"
-          "${monitorCenter},3"
-          "${monitorCenter},4"
-          "${monitorCenter},5"
-          "${monitorCenter},6"
-          "${monitorCenter},7"
-          "${monitorCenter},8"
-          "${monitorCenter},9"
-          "${monitorCenter},10"
+          "1, monitor:${monitorLeft}"
+          "2, monitor:${monitorCenter},2"
+          "3, monitor:${monitorCenter}"
+          "4, monitor:${monitorCenter}"
+          "5, monitor:${monitorCenter}"
+          "6, monitor:${monitorCenter}"
+          "7, monitor:${monitorCenter}"
+          "8, monitor:${monitorCenter}"
+          "9, monitor:${monitorCenter}"
+          "10, monitor:${monitorCenter}"
         ];
 
         exec = [
@@ -344,7 +344,7 @@
         bind=$mod,v,submap,virtual
         submap=virtual
 
-        bind=$mod shift,m,submap,reset
+        bind=$mod,v,submap,reset
         submap=reset
       '';
     };
