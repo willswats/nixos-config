@@ -8,7 +8,6 @@
 
 - [ ] Fix audio crackling (e.g. when launching osu! when another program is outputting sound)
 - [ ] Format disk with [disko](https://github.com/nix-community/disko)
-- [ ] Setup a Yubikey for GPG git commit signing
 
 ## Waiting
 
@@ -22,5 +21,6 @@
 
 ### Waiting - Add pkgs
 
+- [ ] Uncomment RPCS3 - Build Failure
 - [ ] Add nixpkgs airshipper package - If [PR](https://github.com/NixOS/nixpkgs/pull/294041) gets merged
 - [ ] Add nixpkgs catppuccin-sddm package - waiting on [PR](https://github.com/NixOS/nixpkgs/pull/255808)
