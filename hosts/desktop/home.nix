@@ -23,7 +23,7 @@
     (callPackage ../../pkgs/airshipper { })
     prismlauncher
     # Emulators
-    rpcs3
+    # rpcs3
   ];
 
   wayland.windowManager.hyprland =
