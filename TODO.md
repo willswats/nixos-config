@@ -19,7 +19,7 @@
 
 - [ ] Add back pipewire lowLatency - waiting on [issue](https://github.com/fufexan/nix-gaming/issues/161)
 
-### Waiting - Add pkgs
+### Waiting - nixpkgs
 
 - [ ] Uncomment RPCS3 - Build Failure
 - [ ] Add nixpkgs airshipper package - If [PR](https://github.com/NixOS/nixpkgs/pull/294041) gets merged
