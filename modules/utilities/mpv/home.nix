@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, globals, ... }:
 
 {
   programs.mpv = {
@@ -61,9 +61,12 @@
         i = "script-binding uosc/items"; # Opens playlist menu when playlist exists, or open-file menu otherwise 
         s = "script-binding uosc/shuffle; ${uoscFlashElementsControls}";
         c = "script-binding uosc/subtitles";
-        r = "script-binding uosc/stream-quality";
+        v = "script-binding uosc/stream-quality";
         n = "script-binding uosc/next;";
         p = "script-binding uosc/prev;";
+
+        # SimpleHistory
+        r = "script-binding open-list";
 
         # mpv-youtube-search
         "Alt+s" = "script-binding youtube_search_replace";
@@ -74,14 +77,15 @@
         "Ctrl+v" = "script-binding paste";
       };
     scripts = with pkgs; [
-      (callPackage ../../../pkgs/mpv-user-input { })
-      (callPackage ../../../pkgs/mpv-youtube-search {
+      (callPackage ../../../pkgs/mpvScripts/mpv-user-input { })
+      (callPackage ../../../pkgs/mpvScripts/mpv-youtube-search {
         mpv-user-input = {
           src = {
-            outPath = (callPackage ../../../pkgs/mpv-user-input { });
+            outPath = (callPackage ../../../pkgs/mpvScripts/mpv-user-input { });
           };
         };
       })
+      (callPackage ../../../pkgs/mpvScripts/SimpleHistory { })
       mpvScripts.uosc # Proximity-based UI
       mpvScripts.thumbfast # Required for thumbnails in uosc
       mpvScripts.mpris # Allows control of the player using standard media keys
@@ -90,6 +94,9 @@
     scriptOpts = {
       thumbfast = {
         network = "yes"; # Enable on network playback
+      };
+      SimpleHistory = {
+        log_path = "${globals.directories.drive}/.mpvlogs/";
       };
     };
   };
