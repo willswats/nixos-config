@@ -29,7 +29,7 @@
 
   programs.nixvim.plugins = {
     treesitter.enable = true;
-    comment-nvim.enable = true;
+    comment.enable = true;
     nvim-autopairs.enable = true;
     ts-autotag.enable = true;
   };
