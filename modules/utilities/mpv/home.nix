@@ -66,7 +66,11 @@
         n = "script-binding uosc/next;";
         p = "script-binding uosc/prev;";
 
+        # recent-menu
         h = "script-binding recentmenu/open";
+
+        # webtorrent-mpv-hook
+        w = "script-binding webtorrent/toggle-info";
 
         # mpv-youtube-search
         "Alt+s" = "script-binding youtube_search_replace";
@@ -86,11 +90,11 @@
         };
       })
       (callPackage ../../../pkgs/mpvScripts/recent-menu { })
-      # (callPackage ../../../pkgs/mpvScripts/memo { })
       mpvScripts.uosc # Proximity-based UI
       mpvScripts.thumbfast # Required for thumbnails in uosc
       mpvScripts.mpris # Allows control of the player using standard media keys
       mpvScripts.sponsorblock # Script for mpv to skip sponsored segments of YouTube videos
+      mpvScripts.webtorrent-mpv-hook # Adds a hook that allows mpv to stream torrents 
     ];
     scriptOpts = {
       thumbfast = {
@@ -99,6 +103,9 @@
       recentmenu = {
         path = "${globals.directories.drive}/.mpv/recent.json"; # Where the history is stored
         ignore_same_series = "yes"; # Similar file names - only record the most recent one
+      };
+      webtorrent = {
+        path = "/home/will/Downloads/"; # Path to save downloaded files in. Can be set to "memory" to store all files in RAM.
       };
     };
   };
