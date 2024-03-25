@@ -8,7 +8,8 @@
       keep-open = "yes"; # Keep mpv open when there is nothing left to play
       player-operation-mode = "pseudo-gui"; # Always open mpv as GUI (prevents mpv opening in terminal when using yazi)
       no-input-default-bindings = ""; # Disable default bindings, see https://github.com/mpv-player/mpv/blob/master/etc/input.conf for defaults
-      screenshot-directory = "~/Pictures";
+      save-position-on-quit = "yes"; # Save last position
+      screenshot-directory = "~/Pictures"; # Screenshot dir
       osd-bar = "no"; # Replaced by uosc
       border = "no"; # Replaced by uosc
     };
@@ -61,12 +62,11 @@
         i = "script-binding uosc/items"; # Opens playlist menu when playlist exists, or open-file menu otherwise 
         s = "script-binding uosc/shuffle; ${uoscFlashElementsControls}";
         c = "script-binding uosc/subtitles";
-        v = "script-binding uosc/stream-quality";
+        r = "script-binding uosc/stream-quality";
         n = "script-binding uosc/next;";
         p = "script-binding uosc/prev;";
 
-        # SimpleHistory
-        r = "script-binding open-list";
+        h = "script-binding recentmenu/open";
 
         # mpv-youtube-search
         "Alt+s" = "script-binding youtube_search_replace";
@@ -85,7 +85,8 @@
           };
         };
       })
-      (callPackage ../../../pkgs/mpvScripts/SimpleHistory { })
+      (callPackage ../../../pkgs/mpvScripts/recent-menu { })
+      # (callPackage ../../../pkgs/mpvScripts/memo { })
       mpvScripts.uosc # Proximity-based UI
       mpvScripts.thumbfast # Required for thumbnails in uosc
       mpvScripts.mpris # Allows control of the player using standard media keys
@@ -95,8 +96,9 @@
       thumbfast = {
         network = "yes"; # Enable on network playback
       };
-      SimpleHistory = {
-        log_path = "${globals.directories.drive}/.mpvlogs/";
+      recentmenu = {
+        path = "${globals.directories.drive}/.mpv/recent.json"; # Where the history is stored
+        ignore_same_series = "yes"; # Similar file names - only record the most recent one
       };
     };
   };
