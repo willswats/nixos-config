@@ -9,6 +9,7 @@
       player-operation-mode = "pseudo-gui"; # Always open mpv as GUI (prevents mpv opening in terminal when using yazi)
       no-input-default-bindings = ""; # Disable default bindings, see https://github.com/mpv-player/mpv/blob/master/etc/input.conf for defaults
       screenshot-directory = "~/Pictures"; # Screenshot dir
+      watch-later-dir = "${globals.directories.drive}/.mpv/watch_later/"; # The directory in which to store the "watch later" temporary files.
       osd-bar = "no"; # Replaced by uosc
       border = "no"; # Replaced by uosc
     };
