@@ -66,8 +66,9 @@
         n = "script-binding uosc/next;";
         p = "script-binding uosc/prev;";
 
-        # recent-menu
-        h = "script-binding recentmenu/open";
+        # memo
+        h = "script-binding memo-history";
+        H = "script-binding memo-log"; # To log history manually
 
         # webtorrent-mpv-hook
         w = "script-binding webtorrent/toggle-info";
@@ -89,7 +90,7 @@
           };
         };
       })
-      (callPackage ../../../pkgs/mpvScripts/recent-menu { })
+      (callPackage ../../../pkgs/mpvScripts/memo { })
       mpvScripts.uosc # Proximity-based UI
       mpvScripts.thumbfast # Required for thumbnails in uosc
       mpvScripts.mpris # Allows control of the player using standard media keys
@@ -100,9 +101,9 @@
       thumbfast = {
         network = "yes"; # Enable on network playback
       };
-      recentmenu = {
-        path = "${globals.directories.drive}/.mpv/recent.json"; # Where the history is stored
-        ignore_same_series = "yes"; # Similar file names - only record the most recent one
+      memo = {
+        enabled = "no"; # Manual history
+        history_path = "${globals.directories.drive}/.mpv/memo.log"; # Where the history is stored
       };
       webtorrent = {
         path = "/home/will/Downloads/"; # Path to save downloaded files in. Can be set to "memory" to store all files in RAM.
