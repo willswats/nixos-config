@@ -69,6 +69,8 @@
         # memo
         h = "script-binding memo-history";
         H = "script-binding memo-log"; # To log history manually
+        "Alt+RIGHT" = "script-binding memo-next"; # Next history page
+        "Alt+LEFT" = "script-binding memo-prev"; # Prev history page
 
         # webtorrent-mpv-hook
         w = "script-binding webtorrent/toggle-info";
@@ -106,7 +108,7 @@
         history_path = "${globals.directories.drive}/.mpv/memo.log"; # Where the history is stored
       };
       webtorrent = {
-        path = "/home/will/Downloads/"; # Path to save downloaded files in. Can be set to "memory" to store all files in RAM.
+        path = "${globals.directories.home}/Downloads/"; # Path to save downloaded files in. Can be set to "memory" to store all files in RAM.
       };
     };
   };
