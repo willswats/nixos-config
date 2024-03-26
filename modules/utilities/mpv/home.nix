@@ -103,6 +103,9 @@
       thumbfast = {
         network = "yes"; # Enable on network playback
       };
+      sponsorblock = {
+        skip_categories = "sponsor,interaction,selfpromo";
+      };
       memo = {
         enabled = "no"; # Manual history
         history_path = "${globals.directories.drive}/.mpv/memo.log"; # Where the history is stored
