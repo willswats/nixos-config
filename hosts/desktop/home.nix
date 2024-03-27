@@ -4,6 +4,7 @@
   imports = [
     ../home.nix
     ../../modules/system/opentabletdriver/home.nix
+    ../../modules/utilities/quick-backup-cli/home.nix
     ../../modules/games/steam/home.nix
     ../../modules/games/heroic/home.nix
     ../../modules/games/lutris/home.nix
@@ -18,7 +19,6 @@
   home.packages = with pkgs; [
     # Utilities
     mangohud
-    (callPackage ../../pkgs/quick-backup-cli { })
     # Games
     (callPackage ../../pkgs/airshipper { })
     prismlauncher

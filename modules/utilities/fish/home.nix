@@ -59,8 +59,6 @@
         fursf = "sudo nix flake update ${nixosConfigDirectory}; git -C ${nixosConfigDirectory} add flake.lock; ${rebuildSwitchFlake.outPath}";
         nix-shell = "nix-shell --command fish";
 
-        backup = "quick-backup-cli ${driveDir}/Games/Backups/";
-
         dlmp3 = "${ytDlp} -x --audio-format mp3";
         dlmp4 = "${ytDlp} -f mp4";
       };

@@ -2,13 +2,13 @@
 
 stdenvNoCC.mkDerivation rec {
   pname = "quick-backup-cli";
-  version = "v1.6";
+  version = "v3.0";
 
   src = fetchFromGitHub {
     owner = "willswats";
     repo = "quick-backup-cli";
     rev = version;
-    hash = "sha256-2Q8e5I6XzOpZ94IQFDyX9LaNjStNL03Ujq+FaQbujYM=";
+    hash = "sha256-3o3ZP0N/Qvs374fLec+/uWKKJ9wn+tWEs9QaWg5U3tA=";
   };
 
   nativeBuildInputs = [ makeWrapper ];
@@ -27,7 +27,7 @@ stdenvNoCC.mkDerivation rec {
 
   meta = with lib; {
     homepage = "https://github.com/willswats/quick-backup-cli";
-    description = "Quickly copy config directories to a specified location, and vice versa.";
+    description = "Quickly copy directories to a specified location, and vice versa.";
     license = licenses.mit;
     platforms = platforms.unix;
   };
