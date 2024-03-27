@@ -49,6 +49,7 @@
       krita
       shotcut
       deluge
+      miru
       popsicle
       dropbox
       onlyoffice-bin_latest
