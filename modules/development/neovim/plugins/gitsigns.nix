@@ -59,7 +59,7 @@ in {
 
     plugins.gitsigns = {
       enable = true;
-      signs = {
+      settings.signs = {
         add.text = icons.ui.LineLeft;
         change.text = icons.ui.LineLeft;
         delete.text = icons.ui.TriangleShortArrowRight;

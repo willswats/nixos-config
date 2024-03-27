@@ -6,8 +6,10 @@ in
 {
   programs.nixvim.plugins.indent-blankline = {
     enable = true;
-    scope.enabled = false;
-    indent.char = icons.ui.LineLeft;
-    scope.char = icons.ui.LineLeft;
+    settings = {
+      scope.enabled = false;
+      indent.char = icons.ui.LineLeft;
+      scope.char = icons.ui.LineLeft;
+    };
   };
 }
