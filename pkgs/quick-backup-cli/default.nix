@@ -2,13 +2,13 @@
 
 stdenvNoCC.mkDerivation rec {
   pname = "quick-backup-cli";
-  version = "v3.0";
+  version = "v3.1";
 
   src = fetchFromGitHub {
     owner = "willswats";
     repo = "quick-backup-cli";
     rev = version;
-    hash = "sha256-3o3ZP0N/Qvs374fLec+/uWKKJ9wn+tWEs9QaWg5U3tA=";
+    hash = "sha256-ZjIKxWbWk+a9gGcYaMqbfR5/PLJdz6GRTp/D2rKPXjU=";
   };
 
   nativeBuildInputs = [ makeWrapper ];
