@@ -111,24 +111,12 @@
                 url = "https://chatreplay.stream/subscriptions";
               }
               {
-                name = "Aniwave";
-                url = "https://aniwave.to";
-              }
-              {
                 name = "MangaDex";
                 url = "https://mangadex.org";
               }
               {
                 name = "Google Play Books";
                 url = "https://play.google.com/books";
-              }
-              {
-                name = "Spotify";
-                url = "https://open.spotify.com";
-              }
-              {
-                name = "Spotify Dedup";
-                url = "https://spotify-dedup.com/";
               }
               {
                 name = "myNoise";
@@ -263,6 +251,10 @@
                 name = "Anna's Archive";
                 url = "https://annas-archive.org/";
               }
+              {
+                name = "Nyaa";
+                url = "https://nyaa.si/";
+              }
             ];
           }
           {
@@ -310,6 +302,10 @@
               {
                 name = "williamwatson.dev";
                 url = "https://williamwatson.dev";
+              }
+              {
+                name = "Spotify Dedup";
+                url = "https://spotify-dedup.com/";
               }
             ];
           }
