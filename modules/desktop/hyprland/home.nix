@@ -44,13 +44,13 @@
       firefox = "${pkgs.firefox}/bin/firefox";
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
       bitwarden = "${pkgs.bitwarden}/bin/bitwarden";
+      spotify = "${pkgs.spotify}/bin/spotify";
       pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
 
       kitty = "${pkgs.kitty}/bin/kitty";
       yazi = "${inputs.yazi.packages.${pkgs.system}.yazi}/bin/yazi";
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
-      spotifyPlayer = "${pkgs.spotify-player}/bin/spotify_player";
 
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       nmApplet = "${pkgs.networkmanagerapplet}/bin/nm-applet";
@@ -216,12 +216,12 @@
           "$mod, a, exec, ${pavucontrol}" # Audio manager 
           "$mod, p, exec, ${bitwarden}" # Password manager
           "$mod, m, exec, mpv" # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
+          "$mod shift, m, exec, ${spotify}" # Music player
 
           "$mod, e, exec, ${kitty} ${yazi}" # File explorer
           "$mod, t, exec, ${kitty} nvim" # Text editor (not specifying the binary as it doesn't load my config)
           "$mod, s, exec, ${kitty} ${btm} -b" # Process monitor
           "$mod, b, exec, ${kitty} ${bluetuith}" # Bluetooth manager
-          "$mod shift, m, exec, ${kitty} ${spotifyPlayer}" # Music player
 
           ", print, exec, ${grimblastSaveOutput}" # Screenshot active monitor
           "shift, print, exec, ${grimblastSaveArea}" # Screenshot manually selected area

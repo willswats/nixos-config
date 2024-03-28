@@ -25,7 +25,6 @@
     ../modules/utilities/fish/home.nix
     ../modules/utilities/kitty/home.nix
     ../modules/utilities/bottom/home.nix
-    ../modules/utilities/spotify-player/home.nix
     ../modules/utilities/pcmanfm/home.nix
     ../modules/utilities/yazi/home.nix
     ../modules/utilities/bluetuith/home.nix
@@ -52,6 +51,7 @@
       miru
       popsicle
       dropbox
+      spotify
       onlyoffice-bin_latest
       zotero
       ## CLI
