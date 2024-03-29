@@ -111,6 +111,10 @@
                 url = "https://chatreplay.stream/subscriptions";
               }
               {
+                name = "Aniwave";
+                url = "https://aniwave.to/";
+              }
+              {
                 name = "MangaDex";
                 url = "https://mangadex.org";
               }
