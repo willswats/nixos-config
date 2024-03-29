@@ -2,20 +2,26 @@
 
 {
   home.packages = with pkgs;  [
-    hyprshade
+    (python311Packages.callPackage ../../../../pkgs/hyprshade { })
   ];
 
   xdg.configFile."hyprshade/config.toml" = {
     text = ''
       [[shades]]
       name = "blue-light-filter"
-      start_time = 18:00:00
+      start_time = 19:00:00
       end_time = 08:00:00 
     '';
   };
 
-  # HACK: for use in the systemd service
-  wayland.windowManager.hyprland.settings.exec-once = [ "echo $(printenv HYPRLAND_INSTANCE_SIGNATURE) > ~/.hyprland-instance-signature" ];
+  # Required by the hyprshade service
+  wayland.windowManager.hyprland.settings.exec-once = [ "dbus-update-activation-environment --systemd HYPRLAND_INSTANCE_SIGNATURE" ];
+
+  # Keeps the systemd service in sync with the config.toml
+  wayland.windowManager.hyprland.settings.exec = [
+    "hyprshade install"
+    "systemctl --user enable --now hyprshade.timer"
+  ];
 
   xdg.configFile."hypr/shaders/blue-light-filter.glsl" = {
     # https://github.com/loqusion/hyprshade/blob/main/shaders/blue-light-filter.glsl

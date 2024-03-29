@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./hyprshade
+    # ./hyprshade
     ./grimblast
   ];
 
