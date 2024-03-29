@@ -48,7 +48,6 @@
       krita
       shotcut
       deluge
-      miru
       popsicle
       dropbox
       spotify
