@@ -140,8 +140,8 @@
                 url = "https://anilist.co/";
               }
               {
-                name = "TMDB";
-                url = "https://www.themoviedb.org/";
+                name = "Simkl";
+                url = "https://simkl.com/";
               }
               {
                 name = "Goodreads";
