@@ -36,7 +36,7 @@
       hyprctl = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl";
       hypridle = "${inputs.hypridle.packages.${pkgs.system}.hypridle}/bin/hypridle";
       hyprlock = "${inputs.hyprlock.packages.${pkgs.system}.hyprlock}/bin/hyprlock";
-      hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
+      hyprshade = "${(pkgs.python311Packages.callPackage ../../../pkgs/hyprshade { })}/bin/hyprshade";
 
       rofi = "${pkgs.rofi-wayland}/bin/rofi";
       waybar = "${pkgs.waybar}/bin/waybar";

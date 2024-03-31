@@ -30,6 +30,8 @@ buildPythonPackage rec {
   postFixup = ''
     wrapProgram $out/bin/hyprshade \
       --prefix PATH : ${lib.makeBinPath [ hyprland ]}
+    wrapProgram $out/bin/hyprshade \
+      --set HYPRSHADE_SHADERS_DIR $out/share/hyprshade/shaders
   '';
 
   meta = with lib; {
