@@ -111,6 +111,10 @@
                 url = "https://chatreplay.stream/subscriptions";
               }
               {
+                name = "Binged";
+                url = "https://binged.in/";
+              }
+              {
                 name = "Aniwave";
                 url = "https://aniwave.to/";
               }
