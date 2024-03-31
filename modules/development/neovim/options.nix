@@ -5,7 +5,7 @@
     globals = {
       markdown_recommended_style = 0; # Removes `shiftwidth = 4` and `tabstop = 4` in markdown files
     };
-    options = {
+    opts = {
       backup = false; # Creates a backup file
       swapfile = false; # Creates a swapfile
       writebackup =
