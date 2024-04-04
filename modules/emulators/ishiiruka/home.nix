@@ -9,7 +9,7 @@
   home.file.".local/share/icons/slippi.png".source = ./slippi.png;
   home.file.".local/share/applications/ishiiruka.desktop".text =
     let
-      version = "v3.3.1";
+      version = "v3.4.0";
     in
     ''
       [Desktop Entry]
