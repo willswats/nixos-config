@@ -1,4 +1,4 @@
-{ globals, ... }:
+{ ... }:
 
 {
   imports = [
@@ -10,11 +10,10 @@
     ../../modules/games/r2modman
   ];
 
+
   boot = {
     initrd = {
-      secrets = { "/crypto_keyfile.bin" = null; }; # Setup keyfile
-      luks.devices."luks-1bb26d75-1e56-449f-9a51-bb94ea8183e7".device = "/dev/disk/by-uuid/1bb26d75-1e56-449f-9a51-bb94ea8183e7";
-      luks.devices."luks-1bb26d75-1e56-449f-9a51-bb94ea8183e7".keyFile = "/crypto_keyfile.bin";
+      luks.devices."luks-418efaa8-2d4d-49f9-adb0-e8a37fb859ba".device = "/dev/disk/by-uuid/418efaa8-2d4d-49f9-adb0-e8a37fb859ba";
     };
     loader = {
       systemd-boot = {
@@ -23,20 +22,5 @@
       };
       efi.canTouchEfiVariables = true;
     };
-  };
-
-
-  users.users.${globals.user}.extraGroups = [ "gamemode" ];
-
-  programs.gamemode.enable = true;
-  programs.gamescope = {
-    enable = true;
-    args = [
-      "-w 1920"
-      "-h 1080"
-      "-W 1920"
-      "-H 1080"
-      "-f" # Fullscreen by default
-    ];
   };
 }
