@@ -129,15 +129,16 @@ rm ~/.bash_history
 
 ### Utilities
 
-1. [Dropbox](./non-declarative/docs/utilities/dropbox.md)
-2. [Firefox](./non-declarative/docs/utilities/firefox/firefox.md)
-3. [GPG](./non-declarative/docs/utilities/gpg.md)
-4. [virt-manager](./non-declarative/docs/utilities/virt-manager.md)
+1. [Dropbox](./docs/utilities/dropbox.md)
+2. [Firefox](./docs/utilities/firefox/firefox.md)
+3. [GPG](./docs/utilities/gpg.md)
+4. [virt-manager](./docs/utilities/virt-manager.md)
 
 ### Games
 
-1. [steam](./non-declarative/docs/games/steam.md)
-2. [TF2](./non-declarative/docs/games/tf2.md)
+1. [steam](./docs/games/steam.md)
+2. [TF2](./docs/games/tf2.md)
+3. [osu](./docs/games/osu.md)
 
 ## Acknowledgements
 
