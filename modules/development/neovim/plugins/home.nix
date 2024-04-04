@@ -19,7 +19,7 @@
     ./mkdnflow.nix
     ./vim-visual-multi.nix
     ./markdown-preview.nix
-    ./dap.nix
+    # ./dap.nix
     ./nvim-colorizer.nix
     ./inc-rename.nix
     ./venv-selector.nix
