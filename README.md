@@ -6,44 +6,41 @@ My NixOS config.
 
 <!--toc:start-->
 
-- [NixOS Config](#nixos-config)
-  - [Table of Contents](#table-of-contents)
-  - [Installing NixOS](#installing-nixos)
-  - [Installing nixos-config](#installing-nixos-config)
-    - [Connect to Wi-Fi (desktop and laptop)](#connect-to-wi-fi-desktop-and-laptop)
-    - [Clone the Repository](#clone-the-repository)
-    - [Add hardware-configuration.nix](#add-hardware-configurationnix)
-    - [Add boot.initrd.luks.devices Information (desktop and laptop)](#add-bootinitrdluksdevices-information-desktop-and-laptop)
-    - [Build the Config](#build-the-config)
-  - [Post-installation](#post-installation)
-    - [Add the nixos-unstable Channel](#add-the-nixos-unstable-channel)
-    - [Delete Bash History (desktop and laptop)](#delete-bash-history-desktop-and-laptop)
-  - [Non-Declarative Set-ups](#non-declarative-set-ups)
-    - [Utilities](#utilities)
-    - [Games](#games)
-    - [Emulators](#emulators)
-  - [Acknowledgements](#acknowledgements)
-  <!--toc:end-->
+- [Installing NixOS](#installing-nixos)
+- [Installing nixos-config](#installing-nixos-config)
+  - [Connect to Wi-Fi](#connect-to-wi-fi)
+  - [Clone the Repository](#clone-the-repository)
+  - [Add hardware-configuration.nix](#add-hardware-configurationnix)
+  - [Add boot.initrd.luks.devices Information](#add-bootinitrdluksdevices-information)
+  - [Build the Config](#build-the-config)
+- [Post-installation](#post-installation)
+  - [Add the nixos-unstable Channel](#add-the-nixos-unstable-channel)
+  - [Delete Bash History](#delete-bash-history)
+- [Non-Declarative Set-ups](#non-declarative-set-ups)
+  - [Utilities](#utilities)
+  - [Games](#games)
+- [Acknowledgements](#acknowledgements)
+<!--toc:end-->
 
 ## Installing NixOS
 
-1. Download the NixOS Plasma ISO from [here](https://nixos.org/download.html).
-2. Write the NixOS Plasma ISO to a USB and boot into it.
-3. Run the installer and set the following:
+1. Set CSM support to disabled in your bios to ensure that you boot into UEFI (otherwise NixOS will use grub instead of systemd boot).
+2. Download the NixOS Plasma ISO from [here](https://nixos.org/download.html).
+3. Write the NixOS Plasma ISO to a USB and boot into it.
+4. Run the installer and set the following:
    - Language
    - Username and password
    - Use the same password for the administrator account
    - Desktop: No desktop
    - Allow unfree packages
    - Erase the disk
-   - Enable swap (virtual)
-   - Enable swap with hibernation (desktop and laptop)
-   - Enable encryption (desktop and laptop)
-4. Reboot the system.
+   - Enable swap with hibernation
+   - Enable encryption
+5. Reboot the system.
 
 ## Installing nixos-config
 
-### Connect to Wi-Fi (desktop and laptop)
+### Connect to Wi-Fi
 
 To list Wi-Fi access points:
 
@@ -79,7 +76,7 @@ Add the `hardware-configuration.nix` to your chosen host (replace `host` with th
 cp /etc/nixos/hardware-configuration.nix ~/Code/nixos-config/hosts/host/
 ```
 
-### Add boot.initrd.luks.devices Information (desktop and laptop)
+### Add boot.initrd.luks.devices Information
 
 Copy the text that starts with `boot.initrd.luks.devices` from `/etc/nixos/configuration.nix` to `~/Code/nixos-config/hosts/host/default.nix`, with `host` being your desired host.
 
@@ -120,7 +117,7 @@ sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 sudo nix-channel --update
 ```
 
-### Delete Bash History (desktop and laptop)
+### Delete Bash History
 
 Delete `.bash_history` to ensure the Wi-Fi password is removed from it:
 
