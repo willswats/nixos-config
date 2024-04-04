@@ -8,7 +8,6 @@
 ## uBlock
 
 - Run in Private Windows: Allow
-- Sign in and subscribe to your [letsblock.it](https://letsblock.it/help/use-list) list (block YouTube shorts).
 
 ## Consent-O-Matic
 
@@ -20,14 +19,6 @@
 
 - Notifications (Anime): Disabled
 - Notifications (Manga): Disabled
-
-### MAL-Sync Extension popup
-
-- Open in separate window: Enabled
-
-### MAL-Sync Onsite
-
-- Hide miniMAL floating menu button: Enabled
 
 ## BetterTTV
 
