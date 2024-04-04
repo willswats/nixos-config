@@ -41,7 +41,7 @@
           onTimeout = lock.outPath;
         }
         {
-          timeout = 300;
+          timeout = 600;
           onTimeout = dpmsOff.outPath;
           onResume = "${hyprctl} dispatch dpms on";
         }
