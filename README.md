@@ -129,8 +129,8 @@ rm ~/.bash_history
 
 ### Utilities
 
-1. [Firefox](./non-declarative/docs/utilities/firefox/firefox.md)
-2. [Dropbox](./non-declarative/docs/utilities/dropbox.md)
+1. [Dropbox](./non-declarative/docs/utilities/dropbox.md)
+2. [Firefox](./non-declarative/docs/utilities/firefox/firefox.md)
 3. [GPG](./non-declarative/docs/utilities/gpg.md)
 4. [virt-manager](./non-declarative/docs/utilities/virt-manager.md)
 
