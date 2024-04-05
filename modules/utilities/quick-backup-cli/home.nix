@@ -13,7 +13,7 @@
     {
       text = ''
         Retroarch,${homeDir}.config/retroarch/,${backupsDir}retroarch/
-        Yuzu,${homeDir}.config/yuzu/,${backupsDir}yuzu/
+        Yuzu,${homeDir}.local/share/yuzu/,${backupsDir}yuzu/
         RPCS3,${homeDir}.config/rpcs3/,${backupsDir}rpcs3/
         osu!,${homeDir}.local/share/osu/,${backupsDir}osu/
       '';
