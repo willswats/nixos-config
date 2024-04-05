@@ -16,17 +16,20 @@
       # Find extensions here: https://nur.nix-community.org/repos/rycee/
       # Request new extensions here: https://gitlab.com/rycee/nur-expressions/
       extensions = with config.nur.repos.rycee.firefox-addons; [
+        # Block annoyances
         ublock-origin
         consent-o-matic
-        sponsorblock
+        # QoL
         darkreader
         tridactyl
+        mal-sync
         bitwarden
         translate-web-pages
-        wayback-machine
-        mal-sync
-        return-youtube-dislikes
+        # YouTube / Twitch
         betterttv
+        sponsorblock
+        return-youtube-dislikes
+        youtube-shorts-block
         youtube-alternative-switch
         (
           buildFirefoxXpiAddon
