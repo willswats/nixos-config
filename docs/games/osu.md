@@ -1,5 +1,9 @@
 # osu
 
+## Input
+
+Disable clicks during gameplay: enabled
+
 ## Gameplay
 
 Hit lighting: disabled
