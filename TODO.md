@@ -16,10 +16,6 @@
 
 - [ ] Add ability to copy files between two terminals - waiting on [PR](https://github.com/sxyazi/yazi/pull/826)
 
-### Waiting - nix-gaming
-
-- [ ] Add back pipewire lowLatency - waiting on [issue](https://github.com/fufexan/nix-gaming/issues/161)
-
 ### Waiting - nixpkgs
 
 - [ ] Uncomment RPCS3 - Build Failure
