@@ -1,8 +1,8 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  home.packages = [
-    inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
+  home.packages = with pkgs; [
+    osu-lazer-bin
   ];
 
   # Setup tablet

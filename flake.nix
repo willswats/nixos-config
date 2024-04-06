@@ -10,7 +10,6 @@
     };
 
     nur.url = "github:nix-community/NUR";
-    nix-gaming.url = "github:fufexan/nix-gaming";
 
     nixvim = {
       url = "github:nix-community/nixvim";
