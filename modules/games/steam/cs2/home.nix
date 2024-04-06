@@ -4,16 +4,25 @@
   home.file.".steam/steam/steamapps/common/Counter-Strike Global Offensive/game/csgo/cfg/autoexec.cfg".text =
     ''
       echo "autoexec.cfg executed"
-      # Unbind defaults
-      unbind z # Radio Message
-      unbind c # Chat Wheel 1
-      unbind v # Chat Wheel 2
-      unbind mouse3 # Player Ping
-      unbind mouse4 # Use Mic
+
+      # -- UNBIND DEFAULTS --
+
+      # Radio message
+      unbind z 
+      # Chat Wheel 1
+      unbind c 
+      # Chat Wheel 2
+      unbind v 
+      # Player Ping
+      unbind mouse3 
+      # Use mic
+      unbind mouse4 
+      # Change weapons
       unbind mwheelup
       unbind mwheeldown
 
-      # Binds
+      # -- BINDS --
+
       bind mwheeldown +jump
       bind mwheelup +jump
         
@@ -22,10 +31,11 @@
       bind semicolon "say !r"
       bind - voice_modenable_toggle
 
-      bind [ kill
       bind alt noclip      
       bind / "exec nade"
  
+      # -- SETTINGS --
+
       # Music
       snd_menumusic_volume 0
       snd_roundstart_volume 0

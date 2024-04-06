@@ -3,12 +3,17 @@
 {
   home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/autoexec.cfg".text =
     ''
-      # Unbind defaults
-      unbind k # voice chat
+      # -- UNBIND DEFAULTS --
+
+      # Voice chat
+      unbind k 
+
+      # Change weapons
       unbind mwheelup
       unbind mwheeldown
 
-      # Binds
+      # -- BINDS --
+
       bind mwheeldown +jump
       bind mwheelup +jump      
       bind mouse5 +left
@@ -17,12 +22,15 @@
       alias +chargejump "+jump; +attack2"
       alias -chargejump "-jump; -attack2"
       bind c "+chargejump"
+
       bind v +voicerecord
       bind semicolon "impulse 101; say !r"
       bindtoggle - voice_enable
 
       bind alt noclip
       bind / "exec practice"
+
+      # -- SETTINGS --
 
       # Quick switch loadout
       bind leftarrow "load_itempreset 0"
