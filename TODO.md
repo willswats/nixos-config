@@ -6,7 +6,6 @@
 
 ## Other
 
-- [ ] Fix audio crackling (e.g. when launching osu! when another program is outputting sound)
 - [ ] Unlock default keyring on login
 - [ ] Format disk with [disko](https://github.com/nix-community/disko)
 
