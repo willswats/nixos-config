@@ -11,7 +11,7 @@ in {
   programs.nixvim = {
     plugins.telescope = {
       enable = true;
-      defaults = {
+      settings.defaults = {
         prompt_prefix = "${icons.ui.Telescope} ";
         selection_caret = "${icons.ui.Forward} ";
       };
@@ -20,27 +20,27 @@ in {
         {
           "<leader>ff" = {
             action = "find_files";
-            desc = "Files";
+            options.desc = "Files";
           };
           "<leader>fo" = {
             action = "oldfiles";
-            desc = "Old files";
+            options.desc = "Old files";
           };
           "<leader>ft" = {
             action = "live_grep";
-            desc = "Text";
+            options.desc = "Text";
           };
           "<leader>fr" = {
             action = "resume";
-            desc = "Resume";
+            options.desc = "Resume";
           };
           "<leader>fb" = {
             action = "buffers";
-            desc = "Buffers";
+            options.desc = "Buffers";
           };
           "<leader>fd" = {
             action = "diagnostics";
-            desc = "Diagnostics";
+            options.desc = "Diagnostics";
           };
         };
     };
