@@ -29,7 +29,7 @@
           battery = {
             interval = 1;
             format = "{icon} {capacity}%";
-            format-icons = [ " " " " " " " " " " ];
+            format-icons = [ "" "" "" "" "" ];
           };
 
           backlight = {
