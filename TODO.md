@@ -18,6 +18,4 @@
 ### Waiting - nixpkgs
 
 - [ ] Uncomment RPCS3 - Build Failure
-- [ ] Add hyprshade package - [PR](https://github.com/NixOS/nixpkgs/pull/299984)
-- [ ] Add nixpkgs airshipper package - [PR](https://github.com/NixOS/nixpkgs/pull/294041)
-- [ ] Add nixpkgs catppuccin-sddm package - [PR](https://github.com/NixOS/nixpkgs/pull/255808)
+- [ ] Add nixpkgs catppuccin-sddm package - [PR](https://github.com/NixOS/nixpkgs/pull/296682)
