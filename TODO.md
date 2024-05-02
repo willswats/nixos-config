@@ -17,5 +17,4 @@
 
 ### Waiting - nixpkgs
 
-- [ ] Uncomment RPCS3 - Build Failure
 - [ ] Add nixpkgs catppuccin-sddm package - [PR](https://github.com/NixOS/nixpkgs/pull/296682)
