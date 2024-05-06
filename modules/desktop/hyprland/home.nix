@@ -156,6 +156,7 @@
 
         windowrulev2 = [
           "tile, class:ONLYOFFICE Desktop Editors" # Fix onlyoffice starting as float
+          "tile, class:Godot" # Fix Godot starting as float
           "float, class:steam, title:Friends List"
           "float, class:steam, title:Steam Settings"
           "float, class:steam, title:Game Servers"

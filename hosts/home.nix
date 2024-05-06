@@ -67,6 +67,7 @@
       nodePackages.nodejs
       nodePackages.pnpm
       nodePackages.live-server
+      godot_4
     ];
   };
 
