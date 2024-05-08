@@ -183,6 +183,28 @@
             ];
           }
           {
+            name = "Gaming";
+            bookmarks = [
+              {
+                name = "SteamDB";
+                url = "https://steamdb.info/";
+              }
+              {
+                name = "osu!";
+                url = "https://osu.ppy.sh/home";
+              }
+              {
+                name = "TETR.IO";
+                url =
+                  "https://tetr.io/";
+              }
+              {
+                name = "lichess.org";
+                url = "https://lichess.org/";
+              }
+            ];
+          }
+          {
             name = "Social";
             bookmarks = [
               {
@@ -196,24 +218,6 @@
               {
                 name = "Lemmy";
                 url = "https://lemmy.world/";
-              }
-            ];
-          }
-          {
-            name = "Gaming";
-            bookmarks = [
-              {
-                name = "osu!";
-                url = "https://osu.ppy.sh/home";
-              }
-              {
-                name = "TETR.IO";
-                url =
-                  "https://tetr.io/";
-              }
-              {
-                name = "lichess.org";
-                url = "https://lichess.org/";
               }
             ];
           }
