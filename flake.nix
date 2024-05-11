@@ -89,7 +89,7 @@
                 center = "DP-1";
                 left = "DP-2";
               };
-              directoriesToCreate = "${directoriesToCreate} ~/Games/Lutris ~/Games/Heroic";
+              directoriesToCreate = "${directoriesToCreate} ~/Games/Heroic";
             };
           in
           lib.nixosSystem
