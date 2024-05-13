@@ -7,17 +7,13 @@
 
   # Create desktop entry
   home.file.".local/share/icons/slippi.png".source = ./slippi.png;
-  home.file.".local/share/applications/ishiiruka.desktop".text =
-    let
-      version = "v3.4.0";
-    in
-    ''
-      [Desktop Entry]
-      Name=Ishiiruka
-      Exec=Ishiiruka-${version}
-      Type=Application
-      Icon=slippi
-    '';
+  home.file.".local/share/applications/ishiiruka.desktop".text = ''
+    [Desktop Entry]
+    Name=Ishiiruka
+    Exec=Ishiiruka
+    Type=Application
+    Icon=slippi
+  '';
 
   # Setup controllers
   xdg.configFile."SlippiOnline/Config/GCPadNew.ini" = {

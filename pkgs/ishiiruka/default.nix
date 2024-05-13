@@ -14,6 +14,5 @@ appimageTools.wrapType2 rec {
   meta = with lib; {
     homepage = "https://github.com/project-slippi/Ishiiruka";
     license = licenses.gpl2Plus;
-    # maintainers = with maintainers; [ ];
   };
 }
