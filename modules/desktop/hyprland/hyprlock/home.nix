@@ -1,4 +1,4 @@
-{ globals, host, ... }:
+{ globals, host, pkgs, inputs, ... }:
 
 {
   programs.hyprlock =
@@ -16,81 +16,83 @@
     in
     {
       enable = true;
-
-      general = {
-        no_fade_in = true;
-        no_fade_out = true;
-      };
-
-      backgrounds = [{
-        monitor = "";
-        path = "${wallpaper}";
-        color = base;
-
-        blur_passes = 1;
-      }];
-
-      input-fields = [{
-        monitor = monitorCenter;
-
-        size = {
-          width = 300;
-          height = 50;
+      package = inputs.hyprlock.packages.${pkgs.system}.hyprlock;
+      settings = {
+        general = {
+          no_fade_in = true;
+          no_fade_out = true;
         };
 
-        outline_thickness = 2;
+        background = [{
+          monitor = "";
+          path = "${wallpaper}";
+          color = base;
 
-        outer_color = blue;
-        inner_color = base;
-        font_color = text;
+          blur_passes = 1;
+        }];
 
-        check_color = peach;
-        fail_color = red;
-        fail_text = "";
-        fail_transition = 0;
-        capslock_color = peach;
-
-        fade_on_empty = false;
-        fade_timeout = 0;
-        placeholder_text = "";
-        rounding = 0;
-
-        dots_spacing = 0.3;
-        dots_center = true;
-        dots_rounding = 0;
-      }];
-
-      labels = [
-        {
+        input-fields = [{
           monitor = monitorCenter;
-          text = "$TIME";
-          font_size = 60;
-          font_family = "${fontName} Bold";
-          color = blue;
 
-          position = {
-            x = 0;
-            y = 80;
+          size = {
+            width = 300;
+            height = 50;
           };
 
-          valign = "center";
-          halign = "center";
-        }
-        {
-          monitor = monitorCenter;
-          text = "cmd[update:1000] echo \"$(date +'%a %d %b')\"";
-          font_size = 20;
-          font_family = fontName;
-          color = blue;
+          outline_thickness = 2;
 
-          position = {
-            x = 0;
-            y = 10;
-          };
+          outer_color = blue;
+          inner_color = base;
+          font_color = text;
 
-          valign = "center";
-          halign = "center";
-        }
-      ];
+          check_color = peach;
+          fail_color = red;
+          fail_text = "";
+          fail_transition = 0;
+          capslock_color = peach;
+
+          fade_on_empty = false;
+          fade_timeout = 0;
+          placeholder_text = "";
+          rounding = 0;
+
+          dots_spacing = 0.3;
+          dots_center = true;
+          dots_rounding = 0;
+        }];
+
+        labels = [
+          {
+            monitor = monitorCenter;
+            text = "$TIME";
+            font_size = 60;
+            font_family = "${fontName} Bold";
+            color = blue;
+
+            position = {
+              x = 0;
+              y = 80;
+            };
+
+            valign = "center";
+            halign = "center";
+          }
+          {
+            monitor = monitorCenter;
+            text = "cmd[update:1000] echo \"$(date +'%a %d %b')\"";
+            font_size = 20;
+            font_family = fontName;
+            color = blue;
+
+            position = {
+              x = 0;
+              y = 10;
+            };
+
+            valign = "center";
+            halign = "center";
+          }
+        ];
+      };
     };
 }

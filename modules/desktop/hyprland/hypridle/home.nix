@@ -35,16 +35,19 @@
     in
     {
       enable = true;
-      listeners = [
-        {
-          timeout = 1800;
-          onTimeout = lock.outPath;
-        }
-        {
-          timeout = 600;
-          onTimeout = dpmsOff.outPath;
-          onResume = "${hyprctl} dispatch dpms on";
-        }
-      ];
+      package = inputs.hypridle.packages.${pkgs.system}.hypridle;
+      settings = {
+        listener = [
+          {
+            timeout = 1800;
+            onTimeout = lock.outPath;
+          }
+          {
+            timeout = 600;
+            onTimeout = dpmsOff.outPath;
+            onResume = "${hyprctl} dispatch dpms on";
+          }
+        ];
+      };
     };
 }

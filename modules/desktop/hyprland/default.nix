@@ -3,6 +3,7 @@
 {
   imports = [
     ./grimblast
+    ./hyprlock
   ];
 
   programs.hyprland = {
