@@ -85,14 +85,6 @@ in
     settings = {
       # Setup automatic garbage collection
       auto-optimise-store = true;
-      substituters = [
-        # hyprland cachix
-        "https://hyprland.cachix.org"
-      ];
-      trusted-public-keys = [
-        # hyprland cachix
-        "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-      ];
     };
 
     gc = {
