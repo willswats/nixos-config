@@ -17,7 +17,7 @@
     };
     yazi.url = "github:sxyazi/yazi";
 
-    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.url = "github:hyprwm/Hyprland?ref=v0.39.1";
     hypridle = {
       url = "github:hyprwm/hypridle";
       inputs.hyprlang.follows = "hyprland/hyprlang";
