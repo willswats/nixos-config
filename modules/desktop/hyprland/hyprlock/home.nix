@@ -1,4 +1,4 @@
-{ globals, host, pkgs, inputs, ... }:
+{ globals, host, inputs, pkgs, ... }:
 
 {
   programs.hyprlock =
@@ -31,13 +31,10 @@
           blur_passes = 1;
         }];
 
-        input-fields = [{
+        input-field = [{
           monitor = monitorCenter;
 
-          size = {
-            width = 300;
-            height = 50;
-          };
+          size = "300, 50";
 
           outline_thickness = 2;
 
@@ -61,18 +58,16 @@
           dots_rounding = 0;
         }];
 
-        labels = [
+        label = [
           {
             monitor = monitorCenter;
             text = "$TIME";
+            text_align = "center";
             font_size = 60;
             font_family = "${fontName} Bold";
             color = blue;
 
-            position = {
-              x = 0;
-              y = 80;
-            };
+            position = "0, 80";
 
             valign = "center";
             halign = "center";
@@ -80,14 +75,12 @@
           {
             monitor = monitorCenter;
             text = "cmd[update:1000] echo \"$(date +'%a %d %b')\"";
+            text_align = "center";
             font_size = 20;
             font_family = fontName;
             color = blue;
 
-            position = {
-              x = 0;
-              y = 10;
-            };
+            position = "0, 30";
 
             valign = "center";
             halign = "center";
