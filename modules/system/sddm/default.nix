@@ -14,15 +14,16 @@
   services.xserver = {
     enable = true;
     xkb.layout = "gb";
-    libinput = {
-      enable = true;
-      mouse = { accelProfile = "flat"; };
-      touchpad = { accelProfile = "flat"; };
-    };
     excludePackages = [ pkgs.xterm ];
     displayManager.setupCommands = ''
       ${pkgs.xorg.xrandr}/bin/xrandr --output ${host.monitors.center} --primary --mode 1920x1080 --rate 144.00 --rotate normal --output ${host.monitors.left} --mode 1920x1080 --rate 144.00 --rotate right --left-of ${host.monitors.center}
     '';
+  };
+
+  services.libinput = {
+    enable = true;
+    mouse = { accelProfile = "flat"; };
+    touchpad = { accelProfile = "flat"; };
   };
 
   services.displayManager = {
