@@ -34,7 +34,6 @@
       swaybg = "${pkgs.swaybg}/bin/swaybg";
 
       hyprctl = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl";
-      hypridle = "${inputs.hypridle.packages.${pkgs.system}.hypridle}/bin/hypridle";
       hyprlock = "${inputs.hyprlock.packages.${pkgs.system}.hyprlock}/bin/hyprlock";
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
 
@@ -192,7 +191,6 @@
           # Wallpaper
           "${swaybg} --image ${wallpaper} --mode fill"
           # Daemons
-          "${hypridle}"
           "${playerctld}"
           "${lxpolkit}"
           # Applets
