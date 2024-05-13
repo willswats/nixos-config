@@ -387,35 +387,6 @@
         "type": "github"
       }
     },
-    "hyprpaper": {
-      "inputs": {
-        "hyprlang": [
-          "hyprland",
-          "hyprlang"
-        ],
-        "nixpkgs": [
-          "hyprland",
-          "nixpkgs"
-        ],
-        "systems": [
-          "hyprland",
-          "systems"
-        ]
-      },
-      "locked": {
-        "lastModified": 1714910693,
-        "narHash": "sha256-kkgjq8ZCnxYgqPX7O2kUHdzBm08bRlESCukSzE7XE2g=",
-        "owner": "hyprwm",
-        "repo": "hyprpaper",
-        "rev": "1e1fc79d84c35a673c52cfa0be1ea9df1aed8442",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hyprwm",
-        "repo": "hyprpaper",
-        "type": "github"
-      }
-    },
     "hyprwayland-scanner": {
       "inputs": {
         "nixpkgs": [
@@ -540,11 +511,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1715550322,
-        "narHash": "sha256-Vse7J0PjDFJJIhhJrffKS7Eh12I7c5EGp0l8xxFTuY0=",
+        "lastModified": 1715560915,
+        "narHash": "sha256-oYvDbqFOf8oA9NFZVvvxRKamr+CNb4ASsOVezAZ98Og=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "2a59491fd5daee23e838cda3e80155286af38a63",
+        "rev": "b6f27dfbbcb991d350d862ce31bd4be3f57f474f",
         "type": "github"
       },
       "original": {
@@ -588,7 +559,6 @@
         "hyprland": "hyprland",
         "hyprland-contrib": "hyprland-contrib",
         "hyprlock": "hyprlock",
-        "hyprpaper": "hyprpaper",
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
         "nur": "nur",
