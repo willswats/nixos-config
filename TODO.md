@@ -9,4 +9,4 @@
 
 ### Waiting - nixpkgs
 
-- [ ] Add nixpkgs catppuccin-sddm package - [PR](https://github.com/NixOS/nixpkgs/pull/296682)
+- [ ] Add nixpkgs `catppuccin-sddm` package, currently broken for me due to missing `sddm-greeter-qt6` - [Issue](https://github.com/NixOS/nixpkgs/issues/292761)
