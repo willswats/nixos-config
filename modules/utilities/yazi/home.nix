@@ -3,6 +3,12 @@
 {
   home.packages = with pkgs; [ ripdrag ];
 
+  # Cachix
+  nix.settings = {
+    extra-substituters = [ "https://yazi.cachix.org" ];
+    extra-trusted-public-keys = [ "yazi.cachix.org-1:Dcdz63NZKfvUCbDGngQDAZq6kOroIrFoyO064uvLh8k=" ];
+  };
+
   programs.yazi =
     let
       driveDir = globals.directories.drive;
