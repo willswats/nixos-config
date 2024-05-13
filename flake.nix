@@ -18,15 +18,31 @@
     yazi.url = "github:sxyazi/yazi";
 
     hyprland.url = "github:hyprwm/Hyprland";
-    hypridle.url = "github:hyprwm/hypridle";
-    hyprlock.url = "github:hyprwm/hyprlock";
+    hypridle = {
+      url = "github:hyprwm/hypridle";
+      inputs.hyprlang.follows = "hyprland/hyprlang";
+      inputs.nixpkgs.follows = "hyprland/nixpkgs";
+      inputs.systems.follows = "hyprland/systems";
+    };
+    hyprlock = {
+      url = "github:hyprwm/hyprlock";
+      inputs.hyprlang.follows = "hyprland/hyprlang";
+      inputs.nixpkgs.follows = "hyprland/nixpkgs";
+      inputs.systems.follows = "hyprland/systems";
+    };
+    hyprpaper = {
+      url = "github:hyprwm/hyprpaper";
+      inputs.hyprlang.follows = "hyprland/hyprlang";
+      inputs.nixpkgs.follows = "hyprland/nixpkgs";
+      inputs.systems.follows = "hyprland/systems";
+    };
     hyprland-contrib = {
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, home-manager, nur, nixvim, hyprland, hypridle, hyprlock, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, nur, nixvim, hyprland, ... }@inputs: {
     nixosConfigurations =
       let
         system = "x86_64-linux";
@@ -115,8 +131,6 @@
                       ./hosts/desktop/home.nix
                       nur.hmModules.nur
                       nixvim.homeManagerModules.nixvim
-                      hypridle.homeManagerModules.default
-                      hyprlock.homeManagerModules.default
                     ];
                   };
                 }
@@ -155,8 +169,6 @@
                     ./hosts/home.nix
                     nur.hmModules.nur
                     nixvim.homeManagerModules.nixvim
-                    hypridle.homeManagerModules.default
-                    hyprlock.homeManagerModules.default
                   ];
                 };
               }
