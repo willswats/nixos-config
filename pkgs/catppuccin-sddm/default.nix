@@ -1,4 +1,4 @@
-# https://github.com/NixOS/nixpkgs/pull/240990
+# https://github.com/NixOS/nixpkgs/pull/255808
 { lib
 , stdenv
 , fetchFromGitHub
