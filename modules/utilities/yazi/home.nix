@@ -86,6 +86,15 @@
       };
     };
 
+  # Enable built-in session plugin to allow yanking between terminals
+  xdg.configFile."yazi/init.lua" = {
+    text = ''
+      require("session"):setup {
+      	sync_yanked = true,
+      }
+    '';
+  };
+
   # Enter a directory or open the file plugin
   xdg.configFile."yazi/plugins/smart-enter.yazi/init.lua" = {
     text = ''
