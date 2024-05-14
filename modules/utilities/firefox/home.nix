@@ -115,8 +115,8 @@
                 url = "https://chatreplay.stream/subscriptions";
               }
               {
-                name = "Binged";
-                url = "https://binged.in/";
+                name = "Braflix";
+                url = "https://www.braflix.video/";
               }
               {
                 name = "Aniwave";
@@ -162,33 +162,15 @@
             ];
           }
           {
-            name = "Development";
-            bookmarks = [
-              {
-                name = "NixOS Search";
-                url = "https://search.nixos.org/packages";
-              }
-              {
-                name = "Home Manager";
-                url =
-                  "https://nix-community.github.io/home-manager/options.xhtml";
-              }
-              {
-                name = "nixvim";
-                url = "https://nix-community.github.io/nixvim/";
-              }
-              {
-                name = "Hyprland";
-                url = "https://wiki.hyprland.org/";
-              }
-            ];
-          }
-          {
             name = "Gaming";
             bookmarks = [
               {
                 name = "SteamDB";
                 url = "https://steamdb.info/";
+              }
+              {
+                name = "IsThereAnyDeal";
+                url = "https://isthereanydeal.com";
               }
               {
                 name = "osu!";
@@ -206,6 +188,27 @@
             ];
           }
           {
+            name = "Development";
+            bookmarks = [
+              {
+                name = "NixOS Search";
+                url = "https://search.nixos.org/packages";
+              }
+              {
+                name = "Home Manager";
+                url = "https://nix-community.github.io/home-manager/options.xhtml";
+              }
+              {
+                name = "nixvim";
+                url = "https://nix-community.github.io/nixvim/";
+              }
+              {
+                name = "Hyprland";
+                url = "https://wiki.hyprland.org/";
+              }
+            ];
+          }
+          {
             name = "Social";
             bookmarks = [
               {
@@ -213,12 +216,46 @@
                 url = "https://github.com/";
               }
               {
+                name = "Lemmy";
+                url = "https://lemmy.world/";
+              }
+              {
                 name = "LinkedIn";
                 url = "https://www.linkedin.com/";
               }
+            ];
+          }
+          {
+            name = "Downloads";
+            bookmarks = [
               {
-                name = "Lemmy";
-                url = "https://lemmy.world/";
+                name = "Nyaa";
+                url = "https://nyaa.si/";
+              }
+              {
+                name = "Vimm's Lair";
+                url = "https://vimm.net/";
+              }
+              {
+                name = "Anna's Archive";
+                url = "https://annas-archive.org/";
+              }
+            ];
+          }
+          {
+            name = "Megathreads";
+            bookmarks = [
+              {
+                name = "dbzer0 Megathread";
+                url = "https://rentry.co/megathread";
+              }
+              {
+                name = "/r/Roms Megathread";
+                url = "https://r-roms.github.io/";
+              }
+              {
+                name = "The Index";
+                url = "https://theindex.moe/";
               }
             ];
           }
@@ -257,26 +294,8 @@
             ];
           }
           {
-            name = "Downloads";
-            bookmarks = [
-              {
-                name = "Vimm's Lair";
-                url = "https://vimm.net/";
-              }
-              {
-                name = "Anna's Archive";
-                url = "https://annas-archive.org/";
-              }
-              {
-                name = "Nyaa";
-                url = "https://nyaa.si/";
-              }
-            ];
-          }
-          {
             name = "Hosting";
             bookmarks = [
-
               {
                 name = "Vercel";
                 url = "https://vercel.com/";
