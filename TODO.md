@@ -4,9 +4,3 @@
 
 - [ ] Unlock "Default keyring" on login (currently "Login" is unlocked, which holds the password for the "Default keyring", however, I still need to manually unlock it, I just don't need to type the password)
 - [ ] Format disk with [disko](https://github.com/nix-community/disko)
-
-## Waiting
-
-### Waiting - nixpkgs
-
-- [ ] Add nixpkgs `catppuccin-sddm` package, currently broken for me due to missing `sddm-greeter-qt6` - [Issue](https://github.com/NixOS/nixpkgs/issues/292761)
