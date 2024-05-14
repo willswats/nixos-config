@@ -1,12 +1,19 @@
 { pkgs, host, globals, ... }:
 
+let
+  fontName = globals.font.name;
+  wallpaper = globals.wallpaper;
+in
 {
   environment.systemPackages = with pkgs; [
-    (libsForQt5.callPackage ../../../pkgs/catppuccin-sddm {
-      themeConfig = {
-        CustomBackground = true;
-        Background = globals.wallpaper;
-      };
+    # When changing SDDM themes, keep in mind that some of them don't seem to
+    # apply until after a reboot
+    (catppuccin-sddm.override {
+      flavor = "mocha";
+      font = fontName;
+      fontSize = "10";
+      background = "${wallpaper}";
+      loginBackground = false;
     })
     catppuccin-cursors.mochaDark
   ];
@@ -29,6 +36,7 @@
   services.displayManager = {
     sddm = {
       enable = true;
+      package = pkgs.kdePackages.sddm; # pkgs.kdePackages.sddm is needed for catppuccin-sddm as it needs sddm-greeter-qt6
       theme = "catppuccin-mocha";
       settings = {
         Theme = {
