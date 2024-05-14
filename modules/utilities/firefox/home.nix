@@ -25,6 +25,7 @@
         mal-sync
         bitwarden
         translate-web-pages
+        wayback-machine
         # YouTube / Twitch
         betterttv
         sponsorblock
