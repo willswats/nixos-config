@@ -770,7 +770,7 @@
         vid_hdr=false
         vid_maxfps=200
         vid_preferbackend=1
-        vid_rendermode=0
+        vid_rendermode=4
         vid_saturation=1
         vid_scale_customheight=200
         vid_scale_custompixelaspect=1
