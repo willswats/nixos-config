@@ -14,6 +14,8 @@ Start Up Location: Library
 
 Enable context menu focus compatibility mode: Enabled
 
+Notify me about additions or changes to my games, new releases and upcoming releases: Disabled
+
 ### In Game
 
 In-game FPS counter: Top-right
