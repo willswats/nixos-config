@@ -5,6 +5,17 @@
     swayimg
   ];
 
+
+  xdg.mimeApps = {
+    defaultApplications = {
+      "image/png" = [ "swayimg.desktop" ]; # jpg
+      "image/jpeg" = [ "swayimg.desktop" ]; # png
+      "image/webp" = [ "swayimg.desktop" ]; # webp
+      "image/svg" = [ "swayimg.desktop" ]; # svg
+      "image/gif" = [ "swayimg.desktop" ]; # gif
+    };
+  };
+
   # https://github.com/artemsen/swayimg/blob/master/extra/swayimgrc
   xdg.configFile."swayimg/config" =
     let
@@ -152,11 +163,4 @@
         Alt+ScrollDown = next_frame
       '';
     };
-
-  xdg.mimeApps = {
-    defaultApplications = {
-      "image/png" = [ "swayimg.desktop" ]; # jpg
-      "image/jpeg" = [ "swayimg.desktop" ]; # png
-    };
-  };
 }
