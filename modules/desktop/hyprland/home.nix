@@ -173,7 +173,7 @@
 
         workspace = [
           "1, monitor:${monitorLeft}"
-          "2, monitor:${monitorCenter},2"
+          "2, monitor:${monitorCenter}"
           "3, monitor:${monitorCenter}"
           "4, monitor:${monitorCenter}"
           "5, monitor:${monitorCenter}"
@@ -297,10 +297,6 @@
           "$mod shift, 8, movetoworkspace, 8"
           "$mod shift, 9, movetoworkspace, 9"
           "$mod shift, 0, movetoworkspace, 10"
-
-          # Scroll through existing workspaces with mod + scroll
-          "$mod, mouse_down, workspace, e+1"
-          "$mod, mouse_up, workspace, e-1"
 
           # Mute volume and microphone
           ", XF86AudioMute, exec, ${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle"
