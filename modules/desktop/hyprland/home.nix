@@ -12,10 +12,13 @@
   ];
 
   home.packages = with pkgs; [
+    # Utilities
+    ## GUI
     waypaper
     pavucontrol
+    ## CLI
     wl-clipboard
-    swaybg
+    inputs.swww.packages.${pkgs.system}.swww
   ];
 
   services.network-manager-applet.enable = true;
@@ -30,7 +33,8 @@
 
       xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
 
-      swaybg = "${pkgs.swaybg}/bin/swaybg";
+      swww = "${inputs.swww.packages.${pkgs.system}.swww}/bin/swww";
+      swww-daemon = "${inputs.swww.packages.${pkgs.system}.swww}/bin/swww-daemon";
 
       hyprctl = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl";
       hyprlock = "${inputs.hyprlock.packages.${pkgs.system}.hyprlock}/bin/hyprlock";
@@ -187,9 +191,10 @@
 
         exec-once = [
           # Wallpaper
-          "${swaybg} --image ${wallpaper} --mode fill"
+          "${swww-daemon}"
+          "${swww} img --transition-type none ${wallpaper}"
           # Daemons
-          "${playerctld}"
+          "${playerctld}" # The home manager service doesn't seem to start playerctld
           "${lxpolkit}"
           # Applets
           "${mullvadGui}"
