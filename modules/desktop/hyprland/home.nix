@@ -12,14 +12,13 @@
   ];
 
   home.packages = with pkgs; [
-    swaybg
-    wl-clipboard
-    networkmanagerapplet
-    playerctl
-    brightnessctl
-    lxde.lxsession
+    waypaper
     pavucontrol
+    wl-clipboard
+    swaybg
   ];
+
+  services.network-manager-applet.enable = true;
 
   wayland.windowManager.hyprland =
     let
@@ -52,7 +51,6 @@
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
 
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
-      nmApplet = "${pkgs.networkmanagerapplet}/bin/nm-applet";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
 
@@ -83,7 +81,7 @@
         ${hyprshade} auto
       '';
 
-      # Prevent microphone from being auto adjusted to lower than 100
+      # Prevent microphone from being auto adjusted to lower than 100 (Discord)
       preventMicrophoneAutoAdjust = pkgs.writeShellScript "preventMicrophoneAutoAdjust.sh" ''
         while sleep 0.1; do ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 100%; done
       '';
@@ -194,7 +192,6 @@
           "${playerctld}"
           "${lxpolkit}"
           # Applets
-          "${nmApplet} --indicator"
           "${mullvadGui}"
           "${pcmanfm} --daemon-mode" # Run as dameon to prevent pcmanfm from opening slowly on first launch (bug)
           "${dropbox}"
