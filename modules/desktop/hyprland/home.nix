@@ -37,6 +37,7 @@
       swww-daemon = "${inputs.swww.packages.${pkgs.system}.swww}/bin/swww-daemon";
 
       hyprctl = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl";
+      hypridle = "${inputs.hypridle.packages.${pkgs.system}.hypridle}/bin/hypridle";
       hyprlock = "${inputs.hyprlock.packages.${pkgs.system}.hyprlock}/bin/hyprlock";
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
 
@@ -194,6 +195,7 @@
           "${swww-daemon}"
           "${swww} img --transition-type none ${wallpaper}"
           # Daemons
+          "${hypridle}"
           "${playerctld}" # The home manager service doesn't seem to start playerctld
           "${lxpolkit}"
           # Applets
