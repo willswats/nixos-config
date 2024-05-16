@@ -36,7 +36,8 @@
       swww = "${inputs.swww.packages.${pkgs.system}.swww}/bin/swww";
       swww-daemon = "${inputs.swww.packages.${pkgs.system}.swww}/bin/swww-daemon";
 
-      hyprctl = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl";
+      # hyprctl = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl";
+      hyprctl = "${pkgs.hyprland}/bin/hyprctl";
       hypridle = "${inputs.hypridle.packages.${pkgs.system}.hypridle}/bin/hypridle";
       hyprlock = "${inputs.hyprlock.packages.${pkgs.system}.hyprlock}/bin/hyprlock";
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
@@ -99,7 +100,7 @@
     {
       enable = true;
       xwayland.enable = true;
-      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+      # package = inputs.hyprland.packages.${pkgs.system}.hyprland;
       settings = {
         general = {
           gaps_in = 5;
