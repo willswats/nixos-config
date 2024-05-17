@@ -66,4 +66,7 @@ ssh git@github.com -v
 
 ## Adding the SSH key to Gnome Keyring with Login Auto Unlock
 
-When prompted to input your SSH key (e.g. on `git pull`) by the pinentry program, select "Save in password manager". After entering you ssh key, you will be prompted to set the password for the "Default Keyring", set the password for it to the same one that you used to login.
+1. Open seahorse and check if "Login" exists under "Passwords", if it does not, restart your device.
+2. Right click "Login" and click "Set as default".
+3. Run `git pull` on a repository that you've cloned with SSH.
+4. When prompted to input your SSH key, select "Save in password manager".
