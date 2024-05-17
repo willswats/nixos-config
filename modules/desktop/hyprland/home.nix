@@ -36,8 +36,7 @@
       swww = "${inputs.swww.packages.${pkgs.system}.swww}/bin/swww";
       swww-daemon = "${inputs.swww.packages.${pkgs.system}.swww}/bin/swww-daemon";
 
-      # hyprctl = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl";
-      hyprctl = "${pkgs.hyprland}/bin/hyprctl";
+      hyprctl = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl";
       hyprlock = "${inputs.hyprlock.packages.${pkgs.system}.hyprlock}/bin/hyprlock";
       hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
 

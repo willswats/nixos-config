@@ -18,7 +18,7 @@
     yazi.url = "github:sxyazi/yazi";
     swww.url = "github:LGFae/swww";
 
-    # hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.url = "github:hyprwm/Hyprland?ref=v0.39.1";
     hypridle.url = "github:hyprwm/hypridle";
     hyprlock.url = "github:hyprwm/hyprlock";
     hyprland-contrib = {
@@ -32,7 +32,7 @@
     , home-manager
     , nur
     , nixvim
-      # , hyprland
+    , hyprland
     , ...
     }@inputs: {
       nixosConfigurations =
@@ -111,7 +111,7 @@
                   ./hosts/desktop
                   home-manager.nixosModules.home-manager
                   nur.nixosModules.nur
-                  # hyprland.nixosModules.default
+                  hyprland.nixosModules.default
                   {
                     home-manager = {
                       useGlobalPkgs = true;
@@ -149,7 +149,7 @@
                 ./hosts/laptop
                 home-manager.nixosModules.home-manager
                 nur.nixosModules.nur
-                # hyprland.nixosModules.default
+                hyprland.nixosModules.default
                 {
                   home-manager = {
                     useGlobalPkgs = true;

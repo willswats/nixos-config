@@ -5,8 +5,7 @@
     let
       playerctl = "${pkgs.playerctl}/bin/playerctl";
       hyprlock = "${inputs.hyprlock.packages.${pkgs.system}.hyprlock}/bin/hyprlock";
-      # hyprctl = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl";
-      hyprctl = "${pkgs.hyprland}/bin/hyprctl";
+      hyprctl = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl";
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       rg = "${pkgs.ripgrep}/bin/rg";
       # Both of these scripts check if there are no audio streams with "active"
