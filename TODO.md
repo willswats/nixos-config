@@ -2,8 +2,7 @@
 
 ## Bug Fix
 
-- [ ] Fix hypridle not turning dpms off
-- [ ] Fix audio stutters (commonly occurs watching a video while also playing a video game)
+- [ ] Fix audio stutters (commonly occurs when watching a video whilst also playing a video game)
 
 ## Other
 
