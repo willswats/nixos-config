@@ -63,3 +63,7 @@ Run this to ensure that you can connect to GitHub (this will add it to `~/.ssh/k
 ```bash
 ssh git@github.com -v
 ```
+
+## Adding the SSH key to Gnome Keyring with Login Auto Unlock
+
+When prompted to input your SSH key (e.g. on `git pull`) by the pinentry program, select "Save in password manager". After entering you ssh key, you will be prompted to set the password for the "Default Keyring", set the password for it to the same one that you used to login.
