@@ -8,9 +8,3 @@
 ### osu
 
 Add the beatmaps and skins to osu.
-
-### Retroarch, Yuzu, RPCS3
-
-1. Run `quick-backup-cli`.
-2. Select download.
-3. Select the program.
