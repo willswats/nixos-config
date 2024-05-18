@@ -29,7 +29,6 @@
 
       monitorCenter = host.monitors.center;
       monitorLeft = host.monitors.left;
-      directoriesToCreate = host.directoriesToCreate;
 
       xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
 
@@ -89,6 +88,26 @@
       preventMicrophoneAutoAdjust = pkgs.writeShellScript "preventMicrophoneAutoAdjust.sh" ''
         while sleep 0.1; do ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 100%; done
       '';
+
+      # Create directories and symlinks from drive
+      ensureExists =
+        let
+          directoriesToCreate = host.directoriesToCreate;
+          drive = globals.directories.drive;
+
+          desktopHostName = globals.hostNames.desktop;
+          hostname = "${pkgs.hostname}/bin/hostname";
+        in
+        pkgs.writeShellScript "ensureExists.sh" ''
+          mkdir -p ${directoriesToCreate}
+
+          host=$(${hostname})
+          if [ "$host" = "${desktopHostName}" ]; then
+            ln -s ${drive}/Games/Configs/retroarch ~/.config/retroarch
+            ln -s ${drive}/Games/Configs/rpcs3 ~/.config/rpcs3
+            ln -s ${drive}/Games/Configs/yuzu ~/.local/share/yuzu
+          fi
+        '';
 
       coloursStart = "0xff";
       mauve = "${coloursStart}${globals.colours.mauve}";
@@ -201,7 +220,7 @@
           "${pcmanfm} --daemon-mode" # Run as dameon to prevent pcmanfm from opening slowly on first launch (bug)
           "${dropbox}"
           # Misc
-          "mkdir -p ${directoriesToCreate}"
+          "${ensureExists}"
           "${preventMicrophoneAutoAdjust}"
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
         ];
