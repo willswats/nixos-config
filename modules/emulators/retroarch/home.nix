@@ -15,7 +15,6 @@
           beetle-saturn # Sega - Saturn (Beetle Saturn)
           flycast # Sega - Dreamcast/Naomi (Flycast)
           swanstation # Sony - Playstation (SwanStation)
-          pcsx2 # Sony - Playstation 2 (LRPS2)
           ppsspp # Sony - PlayStation Portable (PPSSPP)
           desmume # Nintendo - DS (DeSmuME)
           citra # Nintendo - 3DS (Citra)

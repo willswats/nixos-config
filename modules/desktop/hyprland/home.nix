@@ -105,6 +105,7 @@
           if [ "$host" = "${desktopHostName}" ]; then
             ln -s ${drive}/Games/Configs/retroarch ~/.config/retroarch
             ln -s ${drive}/Games/Configs/rpcs3 ~/.config/rpcs3
+            ln -s ${drive}/Games/Configs/PCSX2 ~/.config/PCSX2
             ln -s ${drive}/Games/Configs/yuzu ~/.local/share/yuzu
           fi
         '';

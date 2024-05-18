@@ -21,6 +21,7 @@
     prismlauncher
     # Emulators
     rpcs3
+    pcsx2
   ];
 
   wayland.windowManager.hyprland =
