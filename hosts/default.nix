@@ -10,7 +10,6 @@ in
     ../modules/system/plymouth
     ../modules/system/pipewire
     ../modules/system/printing
-    ../modules/system/uxplay
     ../modules/development/dotnet
     ../modules/theme/gtk
     ../modules/theme/qt
