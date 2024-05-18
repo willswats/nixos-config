@@ -4,7 +4,6 @@
   imports = [
     ../home.nix
     ../../modules/system/opentabletdriver/home.nix
-    ../../modules/utilities/quick-backup-cli/home.nix
     ../../modules/games/steam/home.nix
     ../../modules/games/heroic/home.nix
     ../../modules/games/r2modman/home.nix
