@@ -3,7 +3,6 @@
 {
   services.hypridle =
     let
-      playerctl = "${pkgs.playerctl}/bin/playerctl";
       hyprlock = "${inputs.hyprlock.packages.${pkgs.system}.hyprlock}/bin/hyprlock";
       hyprctl = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl";
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
@@ -19,7 +18,6 @@
         ${streamsActive}
 
         if ! streams_active; then 
-          ${playerctl} --all-players pause
           ${hyprlock}
         fi
       '';
@@ -27,7 +25,6 @@
         ${streamsActive}
 
         if ! streams_active; then 
-          ${playerctl} --all-players pause
           ${hyprctl} dispatch dpms off
         fi
       '';
