@@ -11,6 +11,7 @@
     ../../modules/games/gzdoom/home.nix
     ../../modules/emulators/ishiiruka/home.nix
     ../../modules/emulators/retroarch/home.nix
+    ../../modules/emulators/yuzu/home.nix
   ];
 
   home.packages = with pkgs; [
@@ -20,7 +21,6 @@
     (callPackage ../../pkgs/airshipper { })
     prismlauncher
     # Emulators
-    (callPackage ../../pkgs/ryujinx { })
     rpcs3
     pcsx2
   ];
