@@ -2,7 +2,7 @@
 
 ## Bug Fix
 
-- [ ] Fix audio stutters (commonly occurs when watching a video whilst also playing a video game)
+- [ ] Find out what is causing programs to core dumps (e.g. yuzu, dolphin) on the latest flake
 
 ## Other
 
