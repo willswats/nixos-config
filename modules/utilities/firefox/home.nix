@@ -237,6 +237,14 @@
                 url = "https://vimm.net/";
               }
               {
+                name = "hShop";
+                url = "https://hshop.erista.me/";
+              }
+              {
+                name = "Myrient";
+                url = "https://myrient.erista.me";
+              }
+              {
                 name = "Anna's Archive";
                 url = "https://annas-archive.org/";
               }
