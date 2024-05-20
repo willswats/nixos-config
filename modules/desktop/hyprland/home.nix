@@ -37,7 +37,7 @@
 
       hyprctl = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl";
       hyprlock = "${inputs.hyprlock.packages.${pkgs.system}.hyprlock}/bin/hyprlock";
-      hyprshade = "${pkgs.hyprshade}/bin/hyprshade";
+      hyprshade = "${(pkgs.hyprshade.override { hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland; })}/bin/hyprshade";
 
       rofi = "${pkgs.rofi-wayland}/bin/rofi";
       waybar = "${pkgs.waybar}/bin/waybar";
@@ -118,7 +118,7 @@
     {
       enable = true;
       xwayland.enable = true;
-      # package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
       settings = {
         general = {
           gaps_in = 5;

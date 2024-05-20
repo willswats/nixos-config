@@ -1,8 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   home.packages = with pkgs; [
-    hyprshade
+    (hyprshade.override {
+      hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    })
   ];
 
   xdg.configFile."hyprshade/config.toml" = {
