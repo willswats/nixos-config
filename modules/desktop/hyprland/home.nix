@@ -250,7 +250,7 @@
           "$mod shift, b, exec, ${hyprshade} toggle blue-light-filter" # Toggle blue light filter
           "$mod shift, v, exec, ${mullvadToggle}" # Toggle VPN
 
-          "$mod shift, semicolon, exec, ${playerctl} --all-players pause; ${hyprlock}"
+          "$mod shift, semicolon, exec, ${hyprlock}"
 
           "$mod, q, killactive"
           "$mod, f, fullscreen"
