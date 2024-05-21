@@ -18,7 +18,7 @@
     yazi.url = "github:sxyazi/yazi";
     swww.url = "github:LGFae/swww";
 
-    hyprland.url = "github:hyprwm/Hyprland?ref=v0.39.1";
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     hypridle.url = "github:hyprwm/hypridle";
     hyprlock.url = "github:hyprwm/hyprlock";
     hyprland-contrib = {

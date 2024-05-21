@@ -39,9 +39,6 @@ in
 
   console.keyMap = "uk";
 
-  # Set the kernel to xanmod (better performance)
-  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
-
   # Networking
   networking = {
     hostName = host.hostName;
