@@ -203,6 +203,10 @@
                 url = "https://nix-community.github.io/nixvim/";
               }
               {
+                name = "NixOS Wiki";
+                url = "wiki.nixos.org";
+              }
+              {
                 name = "Hyprland";
                 url = "https://wiki.hyprland.org/";
               }
