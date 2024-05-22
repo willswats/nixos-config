@@ -176,14 +176,14 @@
         };
 
         windowrulev2 = [
-          "tile, class:Godot_Engine" # Fix Godot starting as float
-          "float, class:steam, title:Friends List"
-          "float, class:steam, title:Steam Settings"
-          "float, class:steam, title:Game Servers"
-          "float, class:steam, title:Screenshot Manager"
-          "suppressevent maximize, class:steam" # Fix Steam maximizing certain windows (Friends List)
-          "suppressevent maximize, class:firefox" # Fix Firefox maximizing certain windows (extensions)
-          "suppressevent maximize, class:mpv" # Stop mpv from maximizing when adding a video
+          "tile, initialClass:Godot_Engine" # Fix Godot starting as float
+          "float, initialClass:steam, title:Friends List"
+          "float, initialClass:steam, title:Steam Settings"
+          "float, initialClass:steam, title:Game Servers"
+          "float, initialClass:steam, title:Screenshot Manager"
+          "suppressevent maximize, initialClass:steam" # Fix Steam maximizing certain windows (Friends List)
+          "suppressevent maximize, initialClass:firefox" # Fix Firefox maximizing certain windows (extensions)
+          "suppressevent maximize, initialClass:mpv" # Stop mpv from maximizing when adding a video
         ];
 
         env = [
