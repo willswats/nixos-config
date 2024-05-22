@@ -204,7 +204,7 @@
               }
               {
                 name = "NixOS Wiki";
-                url = "wiki.nixos.org";
+                url = "https://wiki.nixos.org/";
               }
               {
                 name = "Hyprland";
