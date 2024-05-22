@@ -176,7 +176,6 @@
         };
 
         windowrulev2 = [
-          "tile, class:ONLYOFFICE Desktop Editors" # Fix onlyoffice starting as float
           "tile, class:Godot_Engine" # Fix Godot starting as float
           "float, class:steam, title:Friends List"
           "float, class:steam, title:Steam Settings"

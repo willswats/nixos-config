@@ -26,6 +26,7 @@
     ../modules/utilities/kitty/home.nix
     ../modules/utilities/bottom/home.nix
     ../modules/utilities/pcmanfm/home.nix
+    ../modules/utilities/libreoffice/home.nix
     ../modules/utilities/yazi/home.nix
     ../modules/utilities/bluetuith/home.nix
     ../modules/utilities/gnome-keyring/home.nix
@@ -51,7 +52,6 @@
       popsicle
       dropbox
       spotify
-      onlyoffice-bin_latest
       zotero
       ## CLI
       wget
