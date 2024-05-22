@@ -2,7 +2,11 @@
 
 ## Bug Fix
 
-- [ ] Find out what is causing programs to core dumps (e.g. yuzu, dolphin) on the latest flake
+- [ ] Dolphin Emulator (includes; Dolphin, Retroarch, Wii, GC) causes amdgpu gfxhub page fault after playing for a period of time (occurs on RADV and AMDVLK)
+  - [drm/amd/issues/31331](https://gitlab.freedesktop.org/drm/amd/-/issues/3131)
+  - [drm/amd/issues/3067](https://gitlab.freedesktop.org/drm/amd/-/issues/3067)
+  - [mesa/mesa/issues/10260](https://gitlab.freedesktop.org/mesa/mesa/-/issues/10260)
+  - [drm/amd/issues/3176](https://gitlab.freedesktop.org/drm/amd/-/issues/3176)
 
 ## Other
 
