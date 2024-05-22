@@ -5,14 +5,12 @@
     (callPackage ../../../pkgs/ishiiruka { })
   ];
 
-  # Create desktop entry
-  home.file.".local/share/icons/slippi.png".source = ./slippi.png;
   home.file.".local/share/applications/ishiiruka.desktop".text = ''
     [Desktop Entry]
-    Name=Ishiiruka
+    Name=Slippi
     Exec=Ishiiruka
     Type=Application
-    Icon=slippi
+    Icon=dolphin-emu
   '';
 
   # Setup controllers
