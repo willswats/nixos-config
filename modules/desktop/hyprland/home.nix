@@ -7,7 +7,7 @@
     ./hyprshade/home.nix
     ./grimblast/home.nix
     ./waybar/home.nix
-    ../wayland/rofi/home.nix
+    ../wayland/fuzzel/home.nix
     ../wayland/mako/home.nix
   ];
 
@@ -39,7 +39,7 @@
       hyprlock = "${inputs.hyprlock.packages.${pkgs.system}.hyprlock}/bin/hyprlock";
       hyprshade = "${(pkgs.hyprshade.override { hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland; })}/bin/hyprshade";
 
-      rofi = "${pkgs.rofi-wayland}/bin/rofi";
+      fuzzel = "${pkgs.fuzzel}/bin/fuzzel";
       waybar = "${pkgs.waybar}/bin/waybar";
 
       firefox = "${pkgs.firefox}/bin/firefox";
@@ -228,7 +228,7 @@
         "$mod" = "SUPER";
 
         bind = [
-          "$mod, d, exec, ${rofi} -show drun"
+          "$mod, d, exec, ${fuzzel}"
 
           "$mod, return, exec, ${kitty}"
 
