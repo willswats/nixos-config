@@ -114,6 +114,7 @@
       mauve = "${coloursStart}${globals.colours.mauve}";
       blue = "${coloursStart}${globals.colours.blue}";
       overlay0 = "${coloursStart}${globals.colours.overlay0}";
+      crust = "${coloursStart}${globals.colours.crust}";
     in
     {
       enable = true;
@@ -173,6 +174,7 @@
           # Fix Firefox flashing default hyprland wallpaper on resize (still occurs, but it's less noticeable)
           # https://github.com/hyprwm/Hyprland/issues/2817
           disable_hyprland_logo = true;
+          background_color = crust;
         };
 
         windowrulev2 = [
