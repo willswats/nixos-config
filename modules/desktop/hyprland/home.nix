@@ -176,6 +176,7 @@
         };
 
         windowrulev2 = [
+          "opacity 0.9, initialClass:kitty"
           "tile, initialClass:Godot_Engine" # Fix Godot starting as float
           "float, initialClass:steam, title:Friends List"
           "float, initialClass:steam, title:Steam Settings"

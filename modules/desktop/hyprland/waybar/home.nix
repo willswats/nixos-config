@@ -100,13 +100,18 @@
           green = "#${globals.colours.green}";
           blue = "#${globals.colours.blue}";
           overlay0 = "#${globals.colours.overlay0}";
-          crust = "#${globals.colours.crust}";
+          base = "rgba(30, 30, 46, 0.9)";
+          crust = "rgba(17, 17, 27, 0.9)";
         in
         ''
           * { 
             font-size: 18px;    
             font-family: ${fontName};
             border-radius: 0;
+          }
+          
+          window#waybar {
+            background-color: ${base};
           }
 
           #window, 

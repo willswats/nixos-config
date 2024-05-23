@@ -9,7 +9,7 @@
       blue = "#${globals.colours.blue}";
       text = "#${globals.colours.text}";
       surface0 = "#${globals.colours.surface0}";
-      base = "#${globals.colours.base}";
+      base = "#${globals.colours.base}e6"; # 0.9
     in
     {
       enable = true;

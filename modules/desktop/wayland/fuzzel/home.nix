@@ -2,7 +2,7 @@
 
 let
   fontName = globals.font.name;
-  base = "${globals.colours.base}dd";
+  base = "${globals.colours.base}e6"; # 0.9
   text = "${globals.colours.text}ff";
   red = "${globals.colours.red}ff";
   surface2 = "${globals.colours.surface2}ff";
