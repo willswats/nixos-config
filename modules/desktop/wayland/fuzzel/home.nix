@@ -19,6 +19,7 @@ in
         width = 40;
         lines = 10;
         line-height = 25;
+        dpi-aware = "no";
       };
 
       # All colors must be specified as a RGBA quadruple, in hex format, without a leading '0x'
