@@ -20,6 +20,7 @@ My NixOS config.
   - [Utilities](#utilities)
   - [Games](#games)
 - [Acknowledgements](#acknowledgements)
+- [License](#license)
 <!--toc:end-->
 
 ## Installing NixOS
@@ -146,3 +147,9 @@ Other configurations from where I learned and copied:
 
 - [MatthiasBenaets/nixos-config](https://github.com/MatthiasBenaets/nixos-config)
 - [fufexan/dotfiles](https://github.com/fufexan/dotfiles)
+
+## License
+
+All code is MIT licensed.
+
+The wallpaper is under the artist's copyright and can be found [here](https://www.pixiv.net/en/artworks/69227626).
