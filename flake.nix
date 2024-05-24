@@ -52,7 +52,7 @@
             user = user;
             directories = directories;
             hostNames = hostNames;
-            wallpaper = /home/will/Dropbox/Media/Pictures/Wallpapers/night-girl.jpg;
+            wallpaper = ./wallpaper.jpg;
             font = {
               package = "JetBrainsMono";
               name = "JetBrains Mono Nerd Font";
