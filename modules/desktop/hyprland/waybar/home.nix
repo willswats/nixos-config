@@ -1,11 +1,9 @@
-{ pkgs, globals, host, ... }:
+{ globals, host, ... }:
 
 {
   programs.waybar =
     let
       monitorCenter = host.monitors.center;
-
-      wpctl = "${pkgs.wireplumber}/bin/wpctl";
     in
     {
       enable = true;
@@ -41,16 +39,20 @@
             format = "{format_source}";
             format-source = " {volume}%";
             format-source-muted = " 0%";
-            on-click = "${wpctl} set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
-            on-scroll-up = "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 5%+";
-            on-scroll-down = "${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 5%-";
+            on-click = "";
+            on-scroll-up = "";
+            on-scroll-down = "";
+            tooltip = false;
           };
 
           pulseaudio = {
             scroll-step = 5;
             format = "󰕾 {volume}%";
             format-muted = "󰖁 0%";
-            on-click = "${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle";
+            on-click = "";
+            on-scroll-up = "";
+            on-scroll-down = "";
+            tooltip = false;
           };
 
           bluetooth = {
