@@ -132,6 +132,14 @@
             color: ${overlay0};
           }
 
+          #workspaces button:hover {
+            box-shadow: inherit;
+            text-shadow: inherit;
+            color: ${blue};
+            background-color: ${crust};
+            border: ${crust};
+          }
+
           #workspaces button.active {
             color: ${blue};
             background-color: ${crust};
