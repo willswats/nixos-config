@@ -47,13 +47,52 @@
       search = {
         force = true;
         default = "DuckDuckGo";
+        privateDefault = "DuckDuckGo";
         engines = {
+          # Defaults
           "Google".metaData.hidden = true;
           "Bing".metaData.hidden = true;
           "Amazon.co.uk".metaData.hidden = true;
           "eBay".metaData.hidden = true;
-          "Wikipedia (en)".metaData.hidden = true;
+          "Wikipedia (en)".metaData.hidden = false;
+          # Custom
+          "Dictionary" = {
+            urls = [{ template = "https://www.dictionary.com/browse/{searchTerms}"; }];
+            iconUpdateURL = "https://www.dictionary.com/94e56a525da4e9fe0cda.png";
+            updateInterval = 24 * 60 * 60 * 1000; # every day
+            definedAliases = [ "@d" ];
+          };
+          "Thesaurus" = {
+            urls = [{ template = "https://www.thesaurus.com/browse/{searchTerms}"; }];
+            iconUpdateURL = "https://www.thesaurus.com/0d297be7e698b98c9da8.png";
+            updateInterval = 24 * 60 * 60 * 1000; # every day
+            definedAliases = [ "@t" ];
+          };
+          "Nix Packages" = {
+            urls = [{
+              template = "https://search.nixos.org/packages";
+              params = [
+                { name = "type"; value = "packages"; }
+                { name = "query"; value = "{searchTerms}"; }
+              ];
+            }];
+            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            definedAliases = [ "@np" ];
+          };
+          "NixOS Wiki" = {
+            urls = [{ template = "https://wiki.nixos.org/w/index.php?search={searchTerms}"; }];
+            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            definedAliases = [ "@nw" ];
+          };
         };
+        order = [
+          "DuckDuckGo"
+          "Wikipedia (en)"
+          "Dictionary"
+          "Thesaurus"
+          "Nix Packages"
+          "NixOS Wiki"
+        ];
       };
       bookmarks = [{
         toolbar = true;
@@ -162,6 +201,23 @@
             ];
           }
           {
+            name = "Social";
+            bookmarks = [
+              {
+                name = "GitHub";
+                url = "https://github.com/";
+              }
+              {
+                name = "Lemmy";
+                url = "https://lemmy.world/";
+              }
+              {
+                name = "LinkedIn";
+                url = "https://www.linkedin.com/";
+              }
+            ];
+          }
+          {
             name = "Gaming";
             bookmarks = [
               {
@@ -191,10 +247,6 @@
             name = "Development";
             bookmarks = [
               {
-                name = "NixOS Search";
-                url = "https://search.nixos.org/packages";
-              }
-              {
                 name = "Home Manager";
                 url = "https://nix-community.github.io/home-manager/options.xhtml";
               }
@@ -203,29 +255,8 @@
                 url = "https://nix-community.github.io/nixvim/";
               }
               {
-                name = "NixOS Wiki";
-                url = "https://wiki.nixos.org/";
-              }
-              {
                 name = "Hyprland";
                 url = "https://wiki.hyprland.org/";
-              }
-            ];
-          }
-          {
-            name = "Social";
-            bookmarks = [
-              {
-                name = "GitHub";
-                url = "https://github.com/";
-              }
-              {
-                name = "Lemmy";
-                url = "https://lemmy.world/";
-              }
-              {
-                name = "LinkedIn";
-                url = "https://www.linkedin.com/";
               }
             ];
           }
@@ -285,23 +316,6 @@
               {
                 name = "2Tall";
                 url = "https://www.2tall.com/";
-              }
-            ];
-          }
-          {
-            name = "Learn";
-            bookmarks = [
-              {
-                name = "Wikipedia";
-                url = "https://www.wikipedia.org/";
-              }
-              {
-                name = "Dictionary";
-                url = "https://www.dictionary.com/";
-              }
-              {
-                name = "Thesaurus";
-                url = "https://www.thesaurus.com/";
               }
             ];
           }
