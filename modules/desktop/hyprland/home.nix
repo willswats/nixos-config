@@ -180,7 +180,9 @@
         windowrulev2 = [
           # Opacity rules
           "opacity 0.9, initialClass:kitty"
+          "opacity 0.9, initialClass:com.chatterino."
           # Floats
+          "float, initialClass:com.chatterino."
           "float, initialClass:steam, title:Friends List"
           "float, initialClass:steam, title:Steam Settings"
           "float, initialClass:steam, title:Game Servers"

@@ -19,7 +19,3 @@
 
 - Notifications (Anime): Disabled
 - Notifications (Manga): Disabled
-
-## BetterTTV
-
-- Import the [settings file](./bttv_settings.backup).

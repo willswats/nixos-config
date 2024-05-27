@@ -28,7 +28,6 @@
         wayback-machine
         zotero-connector
         # YouTube / Twitch
-        betterttv
         sponsorblock
         return-youtube-dislikes
         youtube-shorts-block

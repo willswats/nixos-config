@@ -30,6 +30,7 @@
     ../modules/utilities/yazi/home.nix
     ../modules/utilities/bluetuith/home.nix
     ../modules/utilities/gnome-keyring/home.nix
+    ../modules/utilities/twitch/home.nix
   ];
 
   programs.home-manager.enable = true;
