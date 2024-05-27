@@ -144,12 +144,12 @@
                 url = "https://chatreplay.stream/subscriptions";
               }
               {
-                name = "Braflix";
-                url = "https://www.braflix.video/";
-              }
-              {
                 name = "Aniwave";
                 url = "https://aniwave.to/";
+              }
+              {
+                name = "Braflix";
+                url = "https://www.braflix.video/";
               }
               {
                 name = "MangaDex";
