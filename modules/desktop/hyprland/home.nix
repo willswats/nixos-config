@@ -178,19 +178,23 @@
         };
 
         windowrulev2 = [
-          # Opacity rules
+          # Kitty
           "opacity 0.9, initialClass:kitty"
+          # Chatterino
           "opacity 0.9, initialClass:com.chatterino."
-          # Floats
           "float, initialClass:com.chatterino."
+          "size 400 600, initialClass:com.chatterino."
+          # Steam
           "float, initialClass:steam, title:Friends List"
           "float, initialClass:steam, title:Steam Settings"
           "float, initialClass:steam, title:Game Servers"
           "float, initialClass:steam, title:Screenshot Manager"
-          # Fixes
-          "tile, initialClass:Godot_Engine" # Fix Godot starting as float
           "suppressevent maximize, initialClass:steam" # Fix Steam maximizing certain windows (Friends List)
+          # Firefox
           "suppressevent maximize, initialClass:firefox" # Fix Firefox maximizing certain windows (extensions)
+          # Godot
+          "tile, initialClass:Godot_Engine" # Fix Godot starting as float
+          # MPV
           "suppressevent maximize, initialClass:mpv" # Stop mpv from maximizing when adding a video
         ];
 
