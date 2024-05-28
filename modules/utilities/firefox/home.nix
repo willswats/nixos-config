@@ -27,10 +27,6 @@
         translate-web-pages
         wayback-machine
         zotero-connector
-        # YouTube / Twitch
-        sponsorblock
-        return-youtube-dislikes
-        youtube-shorts-block
         youtube-alternative-switch
       ];
       search = {
@@ -131,12 +127,8 @@
             name = "Media";
             bookmarks = [
               {
-                name = "YouTube";
-                url = "https://www.youtube.com/feed/subscriptions";
-              }
-              {
-                name = "Twitch";
-                url = "https://www.twitch.tv/";
+                name = "Piped";
+                url = "https://piped.video/feed";
               }
               {
                 name = "ChatReplay";
