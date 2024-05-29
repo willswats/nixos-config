@@ -30,6 +30,7 @@
     ../modules/utilities/yazi/home.nix
     ../modules/utilities/bluetuith/home.nix
     ../modules/utilities/gnome-keyring/home.nix
+    ../modules/utilities/dropbox/home.nix
     ../modules/utilities/twitch/home.nix
   ];
 
@@ -51,7 +52,6 @@
       shotcut
       deluge
       popsicle
-      dropbox
       spotify
       zotero
       ## CLI
