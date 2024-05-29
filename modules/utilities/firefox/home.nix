@@ -151,8 +151,12 @@
                 url = "https://play.google.com/books";
               }
               {
-                name = "myNoise";
-                url = "https://mynoise.net";
+                name = "GitHub";
+                url = "https://github.com/";
+              }
+              {
+                name = "LinkedIn";
+                url = "https://www.linkedin.com/";
               }
             ];
           }
@@ -182,19 +186,19 @@
             ];
           }
           {
-            name = "Social";
+            name = "Development";
             bookmarks = [
               {
-                name = "GitHub";
-                url = "https://github.com/";
+                name = "Home Manager";
+                url = "https://nix-community.github.io/home-manager/options.xhtml";
               }
               {
-                name = "Lemmy";
-                url = "https://lemmy.world/";
+                name = "nixvim";
+                url = "https://nix-community.github.io/nixvim/";
               }
               {
-                name = "LinkedIn";
-                url = "https://www.linkedin.com/";
+                name = "Hyprland";
+                url = "https://wiki.hyprland.org/";
               }
             ];
           }
@@ -221,23 +225,6 @@
               {
                 name = "lichess.org";
                 url = "https://lichess.org/";
-              }
-            ];
-          }
-          {
-            name = "Development";
-            bookmarks = [
-              {
-                name = "Home Manager";
-                url = "https://nix-community.github.io/home-manager/options.xhtml";
-              }
-              {
-                name = "nixvim";
-                url = "https://nix-community.github.io/nixvim/";
-              }
-              {
-                name = "Hyprland";
-                url = "https://wiki.hyprland.org/";
               }
             ];
           }
