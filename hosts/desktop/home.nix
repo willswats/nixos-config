@@ -16,13 +16,15 @@
   home.packages = with pkgs; [
     # Utilities
     mangohud
-    # Games
-    (callPackage ../../pkgs/airshipper { })
-    prismlauncher
-    heroic
     # Emulators
     rpcs3
     pcsx2
+    # Launchers 
+    (callPackage ../../pkgs/airshipper { })
+    prismlauncher
+    heroic
+    # Games
+    nxengine-evo
   ];
 
   wayland.windowManager.hyprland =
