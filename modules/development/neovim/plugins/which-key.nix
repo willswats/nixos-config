@@ -12,7 +12,6 @@
         "<leader>l" = "LSP (Menu)";
         "<leader>m" = "Markdown (Menu)";
         "<leader>t" = "Terminal (Menu)";
-        "<leader>v" = "Venv (Menu)";
       };
     };
   };

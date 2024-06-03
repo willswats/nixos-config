@@ -6,8 +6,8 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "linux-cultist";
       repo = "venv-selector.nvim";
-      rev = "c259dacb20a00fb84ec6006e9a24b4085b27120a";
-      hash = "sha256-52DojadTx7iBp8x5VFhqOIJP5B/DaqT+K55b70v3dr0=";
+      rev = "f202a8375919dd643d9d186fbc8dbe14dcb2e5a9"; # https://github.com/linux-cultist/venv-selector.nvim/commit/f202a8375919dd643d9d186fbc8dbe14dcb2e5a9
+      hash = "sha256-2+Xi7zUv2VcRjSs7lWvJP73nJ48vWBNw7KMIKpMMwcY=";
     };
   };
 in
@@ -17,13 +17,7 @@ in
   programs.nixvim = {
     extraPlugins = [ venv-selctor ];
     extraConfigLua = ''
-      require("venv-selector").setup({
-          auto_refresh = true,
-          search_venv_managers = false,
-          search_workspace = true,
-          search =  true,
-          parents = 0 -- Stop venv-select from searching two directories above (slow) 
-        })
+      require("venv-selector").setup()
     '';
     keymaps =
       let
@@ -37,21 +31,9 @@ in
           [
             {
               inherit mode;
-              key = "<leader>vs";
+              key = "<leader>v";
               action = "${cmd}VenvSelect${cr}";
-              options.desc = "Select";
-            }
-            {
-              inherit mode;
-              key = "<leader>vc";
-              action = "${cmd}VenvSelectCached${cr}";
-              options.desc = "Cached";
-            }
-            {
-              inherit mode;
-              key = "<leader>vC";
-              action = "${cmd}VenvSelectCurrent${cr}";
-              options.desc = "Current";
+              options.desc = "Venv";
             }
           ];
       in
