@@ -16,6 +16,7 @@
     ../modules/development/dotnet/home.nix
     ../modules/development/haskell/home.nix
     ../modules/development/flutter/home.nix
+    ../modules/development/python/home.nix
     ../modules/utilities/firefox/home.nix
     ../modules/utilities/chromium/home.nix
     ../modules/utilities/mpv/home.nix
@@ -64,7 +65,6 @@
       trash-cli
       yt-dlp
       # Development
-      python3Full
       nodePackages.nodejs
       nodePackages.pnpm
       nodePackages.live-server
