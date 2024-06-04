@@ -29,6 +29,8 @@
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs =
@@ -37,6 +39,7 @@
     , nur
     , nixvim
     , hyprland
+    , catppuccin
     , ...
     }@inputs: {
       nixosConfigurations =
@@ -116,6 +119,7 @@
                   home-manager.nixosModules.home-manager
                   nur.nixosModules.nur
                   hyprland.nixosModules.default
+                  catppuccin.nixosModules.catppuccin
                   {
                     home-manager = {
                       useGlobalPkgs = true;
@@ -127,6 +131,7 @@
                         ./hosts/desktop/home.nix
                         nur.hmModules.nur
                         nixvim.homeManagerModules.nixvim
+                        catppuccin.homeManagerModules.catppuccin
                       ];
                     };
                   }
@@ -154,6 +159,7 @@
                 home-manager.nixosModules.home-manager
                 nur.nixosModules.nur
                 hyprland.nixosModules.default
+                catppuccin.nixosModules.catppuccin
                 {
                   home-manager = {
                     useGlobalPkgs = true;
@@ -165,6 +171,7 @@
                       ./hosts/home.nix
                       nur.hmModules.nur
                       nixvim.homeManagerModules.nixvim
+                      catppuccin.homeManagerModules.catppuccin
                     ];
                   };
                 }

@@ -6,15 +6,6 @@ let
 in
 {
   environment.systemPackages = with pkgs; [
-    # When changing SDDM themes, keep in mind that some of them don't seem to
-    # apply until after a reboot
-    (catppuccin-sddm.override {
-      flavor = "mocha";
-      font = fontName;
-      fontSize = "10";
-      background = "${wallpaper}";
-      loginBackground = false;
-    })
     catppuccin-cursors.mochaDark
   ];
 
@@ -37,7 +28,13 @@ in
     sddm = {
       enable = true;
       package = pkgs.kdePackages.sddm; # pkgs.kdePackages.sddm is needed for catppuccin-sddm as it needs sddm-greeter-qt6
-      theme = "catppuccin-mocha";
+      catppuccin = {
+        enable = true;
+        font = fontName;
+        fontSize = "10";
+        background = "${wallpaper}";
+        loginBackground = false;
+      };
       settings = {
         Theme = {
           CursorTheme = "catppuccin-mocha-dark-cursors";

@@ -36,21 +36,6 @@
         package = pkgs.nerdfonts.override { fonts = [ fontPackage ]; };
         size = 10;
       };
-      theme = {
-        name = "Catppuccin-Mocha-Standard-Blue-Dark";
-        package = pkgs.catppuccin-gtk.override {
-          accents = [ "blue" ];
-          size = "standard";
-          variant = "mocha";
-        };
-      };
-      iconTheme = {
-        name = "Papirus-Dark";
-        package = pkgs.catppuccin-papirus-folders.override {
-          accent = "blue";
-          flavor = "mocha";
-        };
-      };
       gtk2 = { extraConfig = "gtk-error-bell = 0"; };
       gtk3 = {
         bookmarks = bookmarks;
@@ -61,8 +46,12 @@
         extraConfig = extraConfig;
         extraCss = extraCss;
       };
-    };
 
-  # GTK4 Theme
-  home.sessionVariables.GTK_THEME = "Catppuccin-Mocha-Standard-Blue-Dark";
+      catppuccin = {
+        enable = true;
+        size = "standard";
+        tweaks = [ "normal" ];
+        icon.enable = true;
+      };
+    };
 }
