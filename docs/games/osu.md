@@ -22,4 +22,4 @@ HUD overlay visibility mode: Hide during gameplay
 
 Always show gameplay leaderboard: disabled
 
-Gameplay cursor size: 0.6
+Adjust gameplay cursor size based on current beatmap: enabled
