@@ -199,6 +199,7 @@
         ];
 
         env = [
+          "HYPRCURSOR_THEME,Catppuccin-Mocha-Dark"
           "HYPRCURSOR_SIZE,32"
         ];
 
