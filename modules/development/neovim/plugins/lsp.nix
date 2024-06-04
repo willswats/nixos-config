@@ -20,7 +20,7 @@ in
         };
         clangd.enable = true; # C, C++ 
         omnisharp.enable = true; # C#
-        nil_ls.enable = true; # Nix
+        nil-ls.enable = true; # Nix
         lua-ls.enable = true; # Lua 
         pyright.enable = true; # Python
         ruff-lsp.enable = true; # Python (Format & Lint)
