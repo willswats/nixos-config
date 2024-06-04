@@ -11,10 +11,4 @@
       defaultCursor = "Catppuccin-Mocha-Dark";
     };
   };
-
-  gtk = {
-    enable = true;
-    catppuccin.cursor.enable = true;
-    cursorTheme.size = 32;
-  };
 }

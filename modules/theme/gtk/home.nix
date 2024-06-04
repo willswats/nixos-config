@@ -46,7 +46,6 @@
         extraConfig = extraConfig;
         extraCss = extraCss;
       };
-
       catppuccin = {
         enable = true;
         size = "standard";
