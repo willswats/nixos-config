@@ -197,6 +197,10 @@
                 url = "https://nix-community.github.io/nixvim/";
               }
               {
+                name = "catppuccin/nix";
+                url = "https://nix.catppuccin.com/";
+              }
+              {
                 name = "Hyprland";
                 url = "https://wiki.hyprland.org/";
               }
