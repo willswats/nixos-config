@@ -1,0 +1,5 @@
+{ ... }:
+
+{
+  console.catppuccin.enable = true;
+}

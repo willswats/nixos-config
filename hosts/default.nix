@@ -7,6 +7,7 @@ in
   imports = [
     ../modules/desktop/hyprland
     ../modules/system/sddm
+    ../modules/system/console
     ../modules/system/plymouth
     ../modules/system/pipewire
     ../modules/system/printing
