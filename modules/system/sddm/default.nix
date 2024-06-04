@@ -40,7 +40,7 @@ in
       theme = "catppuccin-mocha";
       settings = {
         Theme = {
-          CursorTheme = "Catppuccin-Mocha-Dark-Cursors";
+          CursorTheme = "catppuccin-mocha-dark-cursors";
         };
       };
     };
