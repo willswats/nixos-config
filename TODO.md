@@ -2,6 +2,7 @@
 
 ## Bug Fix
 
+- [ ] SDDM no longer displays the catppuccin cursor since `v0.2.1` (updated name doesn't fix it, waiting to see if `v0.3.0` fixes it)
 - [ ] Dolphin Emulator (includes; Dolphin, Retroarch, Wii, GC) causes page fault after playing for a period of time (it occurs faster if fast forward is on, occurs on RADV `24.0.6`, `24.0.7`, AMDVLK `2023.Q4.2`, as well as kernels `6.6.31` and `6.9.1`) - [logs](./logs.txt)
   - Tried:
     - BIOS AMD Core Performance boost off
