@@ -16,7 +16,7 @@
            "unpinnedWindow": true,
            "browsedForSplitTunnelingApplications": [],
            "changelogDisplayedForVersion": "2024.3"
-         }
+      }
     '';
   };
 }
