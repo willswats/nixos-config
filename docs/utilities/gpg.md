@@ -131,6 +131,10 @@ Open `public.gpg` in a text editor and add the contents to GitHub [here](https:/
 
 Name the key in the following way for clarity: `{host-name}-revoked-{date}`, e.g. `will-desktop-revoked-2024-06-05`.
 
+### Saving the Revoked Key
+
+You may need the revoked key to ensure that git commits are verified on another git hosting site, therefore, save the `public.gpg` key somewhere under the format: `{host-name}-revoked-{date}`.
+
 ## Add an SSH key to Gnome Keyring with Login Auto Unlock
 
 1. Open seahorse and check if "Login" exists under "Passwords", if it does not, restart your device.
