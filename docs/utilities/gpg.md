@@ -1,5 +1,24 @@
 # GPG
 
+<!--toc:start-->
+
+- [Generating a GPG Key](#generating-a-gpg-key)
+- [Adding the GPG Key to a GitHub](#adding-the-gpg-key-to-a-github)
+  - [Obtaining the GPG Secret Key ID](#obtaining-the-gpg-secret-key-id)
+  - [Exporting and Adding the Key to GitHub](#exporting-and-adding-the-key-to-github)
+- [GPG SSH Authentication](#gpg-ssh-authentication)
+  - [Add the Keygrip](#add-the-keygrip)
+  - [Adding the SSH Key to GitHub](#adding-the-ssh-key-to-github)
+  - [Connecting to GitHub](#connecting-to-github)
+- [Revoking a GPG key](#revoking-a-gpg-key)
+  - [Obtaining the GPG Public Key ID](#obtaining-the-gpg-public-key-id)
+  - [Generate `revoke.asc`](#generate-revokeasc)
+  - [Import `revoke.asc`](#import-revokeasc)
+  - [Export the Revoked Key](#export-the-revoked-key)
+  - [Adding the Revoked Key to GitHub](#adding-the-revoked-key-to-github)
+- [Add an SSH key to Gnome Keyring with Login Auto Unlock](#add-an-ssh-key-to-gnome-keyring-with-login-auto-unlock)
+<!--toc:end-->
+
 ## Generating a GPG Key
 
 Run:
@@ -8,13 +27,13 @@ Run:
 gpg --full-generate-key
 ```
 
-1. Accept the defaults until prompted to set how long the key should be valid, then input `2y` for two years.
-2. Once prompted to enter your user ID information, input your full name and your GitHub email address.
-3. Once prompted to set a passphrase, set it and save it somewhere.
+1. Accept all the defaults.
+2. Input your name and email address.
+3. Set the passphrase and save it somewhere.
 
-## Adding the GPG Key to GitHub
+## Adding the GPG Key to a GitHub
 
-### Obtaining the GPG Key ID
+### Obtaining the GPG Secret Key ID
 
 Run this command to obtain the long form of the GPG key ID:
 
@@ -22,11 +41,11 @@ Run this command to obtain the long form of the GPG key ID:
 gpg --list-secret-keys --keyid-format=long
 ```
 
-The key can be found next to `sec` after the `/`.
+The secret key can be found next to `sec` after the `/`.
 
 ### Exporting and Adding the Key to GitHub
 
-Run the following command with the GPG key ID you'd like to use:
+Run the following command with the GPG secret key ID:
 
 ```bash
 gpg --armor --export
@@ -34,11 +53,13 @@ gpg --armor --export
 
 Copy all of the output and add it to GitHub [here](https://github.com/settings/gpg/new).
 
+Name the key in the following way for clarity: `{host-name}-{date}`, e.g. `will-desktop-2024-06-05`.
+
 ## GPG SSH Authentication
 
 ### Add the Keygrip
 
-Run the following command with the GPG key real name appended:
+Run the following command with the GPG key real name (e.g. William Watson) appended:
 
 ```bash
 gpg --with-keygrip -k
@@ -56,6 +77,10 @@ ssh-add -L
 
 Copy all of the output and add it to GitHub [here](https://github.com/settings/ssh/new).
 
+Name the key in the following way for clarity: `{host-name}-{date}`, e.g. `will-desktop-2024-06-05`.
+
+Select "Key type" as "Authentication Key".
+
 ### Connecting to GitHub
 
 Run this to ensure that you can connect to GitHub (this will add it to `~/.ssh/known_hosts` as well):
@@ -64,7 +89,49 @@ Run this to ensure that you can connect to GitHub (this will add it to `~/.ssh/k
 ssh git@github.com -v
 ```
 
-## Adding the SSH key to Gnome Keyring with Login Auto Unlock
+## Revoking a GPG key
+
+### Obtaining the GPG Public Key ID
+
+The public key ID can be found next to `pub` after the `/`.
+
+```bash
+gpg --list-keys
+```
+
+### Generate `revoke.asc`
+
+Replace `KEY-ID` with your GPG public key ID:
+
+```bash
+gpg --output revoke.asc --gen-revoke KEY-ID
+```
+
+Select the reason, but note that selecting `Key has been compromised` will likely result in the commits becoming unverified on GitHub.
+
+### Import `revoke.asc`
+
+This will revoke the key specified by the key ID:
+
+```bash
+gpg --import revoke.asc
+```
+
+### Export the Revoked Key
+
+Replace `KEY-ID` with your GPG public key ID:
+
+```bash
+gpg --output public.pgp --armor --export KEY-ID
+```
+
+### Adding the Revoked Key to GitHub
+
+Open `public.gpg` in a text editor and add the contents to GitHub [here](https://github.com/settings/gpg/new).
+
+Name the key in the following way for clarity: `{host-name}-revoked-{date}`, e.g. `will-desktop-revoked-2024-06-05`.
+
+## Add an SSH key to Gnome Keyring with Login Auto Unlock
 
 1. Open seahorse and check if "Login" exists under "Passwords", if it does not, restart your device.
 2. Right click "Login" and click "Set as default".
