@@ -129,7 +129,9 @@ gpg --output public.pgp --armor --export KEY-ID
 
 Open `public.gpg` in a text editor and add the contents to GitHub [here](https://github.com/settings/gpg/new).
 
-Name the key in the following way for clarity: `{host-name}-revoked-{date}`, e.g. `will-desktop-revoked-2024-06-05`.
+Name the key in the following way for clarity on GitHub: `{host-name}-revoked-{date}`, e.g. `will-desktop-revoked-2024-06-05`.
+
+You can now delete the old GPG key on GitHub, as well as the local GPG key and SSH key (with seahorse).
 
 ### Saving the Revoked Key
 
