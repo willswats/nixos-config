@@ -1,7 +1,9 @@
 { ... }:
 
-let email = "willswats@users.noreply.github.com";
-in {
+let
+  email = "william@williamwatson.dev";
+in
+{
   programs.git = {
     enable = true;
     userName = "willswats";
