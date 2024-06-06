@@ -85,7 +85,7 @@
       settings = {
         direction = "float"; # Floating terminal
         float_opts = {
-          border = "single";
+          border = "curved";
         }; # Floating terminal options
         open_mapping = "[[<c-t>]]"; # Mapping to open the terminal
         autochdir = true; # When neovim changes it current directory the terminal will change it’s own when next it’s opened
