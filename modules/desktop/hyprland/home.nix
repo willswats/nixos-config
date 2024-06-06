@@ -130,6 +130,10 @@
           layout = "dwindle";
         };
 
+        decoration = {
+          rounding = 10;
+        };
+
         monitor = [
           "${monitorCenter}, highrr, auto, 1"
         ];
