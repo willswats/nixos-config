@@ -156,7 +156,11 @@
         };
 
         animations = {
-          animation = "global, 0"; # Disable animations
+          enabled = false;
+          animation = [
+            # NAME,ONOFF,SPEED,CURVE[,STYLE]
+            "global, 1, 3, default"
+          ];
         };
 
         group = {
