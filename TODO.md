@@ -13,7 +13,8 @@
     - [mesa/mesa/issues/10260](https://gitlab.freedesktop.org/mesa/mesa/-/issues/10260)
     - [drm/amd/issues/3176](https://gitlab.freedesktop.org/drm/amd/-/issues/3176)
 
-## Other
+## Refactor
 
+- [ ] Move programming languages and package managers into flakes
 - [ ] Format disk with [disko](https://github.com/nix-community/disko)
 - [ ] Remove need for unlocking drive encryption - Yubikey or [secure boot and TPM 2.0](https://jnsgr.uk/2024/04/nixos-secure-boot-tpm-fde/)
