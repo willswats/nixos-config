@@ -168,7 +168,7 @@
 
           #submap {
             color: ${blue};
-            background-color: ${crust};
+            background-color: ${mantle};
           } 
 
           #battery.full, 
