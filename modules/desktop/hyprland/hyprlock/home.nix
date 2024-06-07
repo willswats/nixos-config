@@ -53,7 +53,8 @@
           placeholder_text = "";
           rounding = 10;
 
-          dots_spacing = 0.3;
+          dots_size = 0.3;
+          dots_spacing = 0.2;
           dots_center = true;
           dots_rounding = 2;
         }];
