@@ -51,7 +51,7 @@
           fade_on_empty = false;
           fade_timeout = 0;
           placeholder_text = "";
-          rounding = 10;
+          rounding = 5;
 
           dots_size = 0.3;
           dots_spacing = 0.2;
