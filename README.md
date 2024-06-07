@@ -152,4 +152,4 @@ Other configurations from where I learned and copied:
 
 All code is MIT licensed.
 
-The wallpaper is under the artist's copyright and can be found [here](https://www.pixiv.net/en/artworks/69227626).
+The wallpaper is under the artist's copyright and can be found [here](https://www.pixiv.net/en/artworks/64495434).
