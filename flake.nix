@@ -16,7 +16,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     yazi.url = "github:sxyazi/yazi";
-    swww.url = "github:LGFae/swww";
 
     hyprland = {
       type = "git";
