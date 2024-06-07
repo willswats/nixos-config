@@ -117,6 +117,8 @@
             background-color: ${base};
           }
 
+
+          #workspaces,
           #window, 
           #submap, 
           #battery, 
@@ -124,18 +126,31 @@
           #pulseaudio, 
           #bluetooth, 
           #network, 
-          #clock, 
+          #clock,
           #tray {
-            padding: 0 10px;
-            margin: 4px 2px 4px 2px;
             border-radius: 5px;
             background-color: ${mantle};
+            margin: 4px 2px 4px 2px;
+          }
+
+          #window, 
+          #submap, 
+          #battery, 
+          #backlight, 
+          #pulseaudio, 
+          #bluetooth, 
+          #network, 
+          #clock,
+          #tray {
+            padding: 0 10px;
+          }
+
+          #tray {
+            margin-right: 4px;
           }
 
           #workspaces { 
-            margin: 4px 2px 4px 2px;
-            border-radius: 5px;
-            background-color: ${mantle};
+            margin-left: 4px;
           }
 
           #workspaces button {
