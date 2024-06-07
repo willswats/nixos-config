@@ -5,13 +5,13 @@
     let
       # Disable error sound
       extraConfig = { gtk-error-bell = 0; };
-      # Remove black borders https://github.com/catppuccin/gtk/issues/6#issuecomment-1443573299
+      # Set border radius to a specific value, this can render as black on some compositors, set it to 0 if needed
       extraCss = ''
         menu,
         .csd .menu,
         .csd .dropdown,
         .csd .context-menu {
-          border-radius: 0px;
+          border-radius: 5px;
         }
       '';
       fontName = globals.font.name;
