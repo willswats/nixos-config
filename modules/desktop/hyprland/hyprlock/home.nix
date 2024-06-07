@@ -51,11 +51,11 @@
           fade_on_empty = false;
           fade_timeout = 0;
           placeholder_text = "";
-          rounding = 0;
+          rounding = 10;
 
           dots_spacing = 0.3;
           dots_center = true;
-          dots_rounding = 0;
+          dots_rounding = 2;
         }];
 
         label = [
