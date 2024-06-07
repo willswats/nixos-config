@@ -103,6 +103,7 @@
           blue = "#${globals.colours.blue}";
           overlay0 = "#${globals.colours.overlay0}";
           base = "rgba(30, 30, 46, 0.9)";
+          mantle = "rgba(24,24,37, 0.9)";
           crust = "rgba(17, 17, 27, 0.9)";
         in
         ''
@@ -113,7 +114,7 @@
           }
           
           window#waybar {
-            background-color: transparent;
+            background-color: ${base};
           }
 
           #window, 
@@ -128,13 +129,13 @@
             padding: 0 10px;
             margin: 2px;
             border-radius: 5px;
-            background-color: ${base};
+            background-color: ${mantle};
           }
 
           #workspaces { 
             margin: 2px;
             border-radius: 5px;
-            background-color: ${base};
+            background-color: ${mantle};
           }
 
           #workspaces button {
