@@ -127,13 +127,13 @@
           #clock, 
           #tray {
             padding: 0 10px;
-            margin: 2px;
+            margin: 4px 2px 4px 2px;
             border-radius: 5px;
             background-color: ${mantle};
           }
 
           #workspaces { 
-            margin: 2px;
+            margin: 4px 2px 4px 2px;
             border-radius: 5px;
             background-color: ${mantle};
           }
