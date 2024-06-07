@@ -21,7 +21,7 @@
           };
 
           "hyprland/window" = {
-            max-length = 50;
+            max-length = 40;
           };
 
           battery = {
@@ -113,7 +113,7 @@
           }
           
           window#waybar {
-            background-color: ${base};
+            background-color: transparent;
           }
 
           #window, 
@@ -126,10 +126,20 @@
           #clock, 
           #tray {
             padding: 0 10px;
+            margin: 2px;
+            border-radius: 5px;
+            background-color: ${base};
+          }
+
+          #workspaces { 
+            margin: 2px;
+            border-radius: 5px;
+            background-color: ${base};
           }
 
           #workspaces button {
             color: ${overlay0};
+            border-radius: 5px;
           }
 
           #workspaces button:hover {
@@ -147,6 +157,12 @@
 
           #window {
             color: ${blue}; 
+          }
+
+          window#waybar.empty #window {
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
           }
 
           #submap {
