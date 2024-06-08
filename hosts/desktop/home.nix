@@ -35,8 +35,8 @@
     {
       settings = {
         monitor = [
-          "${monitorCenter}, 1920x1080@144, 1080x0, 1"
-          "${monitorLeft}, 1920x1080@144, 0x0, 1, transform, 3"
+          "${monitorCenter}, 1920x1080@144, 1920x0, 1"
+          "${monitorLeft}, 1920x1080@144, 0x0, 1"
         ];
       };
     };

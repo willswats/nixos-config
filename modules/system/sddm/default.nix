@@ -14,7 +14,7 @@ in
     xkb.layout = "gb";
     excludePackages = [ pkgs.xterm ];
     displayManager.setupCommands = ''
-      ${pkgs.xorg.xrandr}/bin/xrandr --output ${host.monitors.center} --primary --mode 1920x1080 --rate 144.00 --rotate normal --output ${host.monitors.left} --mode 1920x1080 --rate 144.00 --rotate right --left-of ${host.monitors.center}
+      ${pkgs.xorg.xrandr}/bin/xrandr --output ${host.monitors.center} --primary --mode 1920x1080 --rate 144.00 --output ${host.monitors.left} --mode 1920x1080 --rate 144.00 --left-of ${host.monitors.center}
     '';
   };
 
