@@ -1,12 +1,10 @@
-{ globals, host, inputs, pkgs, ... }:
+{ globals, inputs, pkgs, ... }:
 
 {
   programs.hyprlock =
     let
       fontName = globals.font.name;
       wallpaper = globals.wallpaper;
-
-      monitorCenter = host.monitors.center;
 
       blue = "rgb(137, 180, 250)";
       text = "rgb(205, 214, 244)";
@@ -32,7 +30,7 @@
         }];
 
         input-field = [{
-          monitor = monitorCenter;
+          monitor = "";
 
           size = "300, 50";
 
@@ -61,7 +59,7 @@
 
         label = [
           {
-            monitor = monitorCenter;
+            monitor = "";
             text = "$TIME";
             text_align = "center";
             font_size = 60;
@@ -74,7 +72,7 @@
             halign = "center";
           }
           {
-            monitor = monitorCenter;
+            monitor = "";
             text = "cmd[update:1000] echo \"$(date +'%a %d %b')\"";
             text_align = "center";
             font_size = 20;
