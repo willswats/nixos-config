@@ -66,6 +66,7 @@
       trash-cli
       yt-dlp
       # Development
+      gh
       nodePackages.nodejs
       nodePackages.pnpm
       nodePackages.live-server
