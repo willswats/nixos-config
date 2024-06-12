@@ -11,8 +11,8 @@
       "image/png" = [ "swayimg.desktop" ]; # jpg
       "image/jpeg" = [ "swayimg.desktop" ]; # png
       "image/webp" = [ "swayimg.desktop" ]; # webp
-      "image/svg" = [ "swayimg.desktop" ]; # svg
       "image/gif" = [ "swayimg.desktop" ]; # gif
+      "image/svg+xml" = [ "swayimg.desktop" ]; # svg
     };
   };
 
