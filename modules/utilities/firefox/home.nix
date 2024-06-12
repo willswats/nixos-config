@@ -1,7 +1,33 @@
 { pkgs, config, ... }:
 
 {
-  home.packages = with pkgs; [ web-ext ];
+  home.packages = with pkgs; [
+    web-ext
+    open-in-mpv
+  ];
+
+  xdg.mimeApps = {
+    defaultApplications = {
+      "application/pdf" = [ "firefox.desktop" ]; # pdf
+      # Set firefox as the default browser
+      "x-scheme-handler/http" = [ "firefox.desktop" ];
+      "x-scheme-handler/https" = [ "firefox.desktop" ];
+      "x-scheme-handler/about" = [ "firefox.desktop" ];
+      "x-scheme-handler/unknown" = [ "firefox.desktop" ];
+      # Open in MPV
+      "x-scheme-handler/mpv" = [ "open-in-mpv.desktop" ];
+    };
+  };
+
+  home.file.".local/share/applications/open-in-mpv.desktop".text = ''
+    [Desktop Entry]
+    Name=open-in-mpv
+    Exec=open-in-mpv %u
+    Type=Application
+    Terminal=false
+    NoDisplay=true
+    MimeType=x-scheme-handler/mpv
+  '';
 
   programs.firefox = {
     enable = true;
@@ -28,6 +54,7 @@
         wayback-machine
         zotero-connector
         youtube-alternative-switch
+        iina-open-in-mpv
       ];
       search = {
         force = true;
@@ -398,17 +425,6 @@
         "general.autoScroll" = true; # Enable auto scroll
         "accessibility.typeaheadfind.enablesound" = false; # Disable sound effect on failed "Find in page"
       };
-    };
-  };
-
-  xdg.mimeApps = {
-    defaultApplications = {
-      "application/pdf" = [ "firefox.desktop" ]; # pdf
-      # Set firefox as the default browser
-      "x-scheme-handler/http" = [ "firefox.desktop" ];
-      "x-scheme-handler/https" = [ "firefox.desktop" ];
-      "x-scheme-handler/about" = [ "firefox.desktop" ];
-      "x-scheme-handler/unknown" = [ "firefox.desktop" ];
     };
   };
 }
