@@ -53,6 +53,7 @@
       shotcut
       deluge
       popsicle
+      freetube
       spotify
       dropbox
       zotero

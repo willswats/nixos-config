@@ -103,12 +103,14 @@
         pkgs.writeShellScript "ensureExists.sh" ''
           mkdir -p ${directoriesToCreate}
 
+          ln -s ${drive}/.dots/FreeTube/ ~/.config/FreeTube
+
           host=$(${hostname})
           if [ "$host" = "${desktopHostName}" ]; then
-            ln -s ${drive}/Games/Configs/retroarch ~/.config
-            ln -s ${drive}/Games/Configs/rpcs3 ~/.config
-            ln -s ${drive}/Games/Configs/PCSX2 ~/.config
-            ln -s ${drive}/Games/Configs/yuzu ~/.local/share
+            ln -s ${drive}/.dots/retroarch/ ~/.config/retroarch/
+            ln -s ${drive}/.dots/PCSX2/ ~/.config/PCSX2/
+            ln -s ${drive}/.dots/rpcs3/ ~/.config/rpcs3/
+            ln -s ${drive}/.dots/yuzu/ ~/.local/share/yuzu/
           fi
         '';
 
