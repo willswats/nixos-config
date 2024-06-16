@@ -166,10 +166,6 @@
             name = "Media";
             bookmarks = [
               {
-                name = "Piped";
-                url = "https://piped.video/feed";
-              }
-              {
                 name = "ChatReplay";
                 url = "https://chatreplay.stream/subscriptions";
               }
