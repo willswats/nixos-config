@@ -99,6 +99,9 @@
 
           desktopHostName = globals.hostNames.desktop;
           hostname = "${pkgs.hostname}/bin/hostname";
+
+          eldenRingSeamlessCoopSteamId = "4003086771";
+          eldenRingSeamlessCoopSaveDirectory = "~/.local/share/Steam/steamapps/compatdata/${eldenRingSeamlessCoopSteamId}/pfx/drive_c/users/steamuser/AppData/Roaming/EldenRing/";
         in
         pkgs.writeShellScript "ensureExists.sh" ''
           mkdir -p ${directoriesToCreate}
@@ -111,6 +114,8 @@
             ln -s ${drive}/.dots/PCSX2/ ~/.config/
             ln -s ${drive}/.dots/rpcs3/ ~/.config/
             ln -s ${drive}/.dots/yuzu/ ~/.local/share/
+
+            ln -s ${drive}/Games/Saves/EldenRingSeamlessCoop/* ${eldenRingSeamlessCoopSaveDirectory}
           fi
         '';
 
