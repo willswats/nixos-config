@@ -48,6 +48,7 @@
           directories = {
             home = "/home/${user}";
             drive = "/home/${user}/Dropbox";
+            flake = "/home/${user}/Code/nixos-config";
           };
           directoriesToCreate = "~/Downloads ~/Pictures ~/Videos ~/Code";
           hostNames = {

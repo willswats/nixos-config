@@ -15,6 +15,7 @@ in
     ../modules/theme/gtk
     ../modules/theme/qt
     ../modules/theme/catppuccin
+    ../modules/utilities/nh
     ../modules/utilities/gnome-keyring
     ../modules/utilities/pcmanfm
     ../modules/utilities/mullvad-vpn
