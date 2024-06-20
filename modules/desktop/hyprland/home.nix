@@ -100,8 +100,10 @@
           desktopHostName = globals.hostNames.desktop;
           hostname = "${pkgs.hostname}/bin/hostname";
 
-          eldenRingSeamlessCoopSteamId = "4003086771";
-          eldenRingSeamlessCoopSaveDirectory = "~/.local/share/Steam/steamapps/compatdata/${eldenRingSeamlessCoopSteamId}/pfx/drive_c/users/steamuser/AppData/Roaming/EldenRing/";
+          compatDataDirectory = "~/.local/share/Steam/steamapps/compatdata/";
+          saveDirectory = "/pfx/drive_c/users/steamuser/AppData/Roaming/";
+          darkSouls3SaveDirectory = "${compatDataDirectory}374320${saveDirectory}DarkSoulsIII";
+          eldenRingSeamlessCoopSaveDirectory = "${compatDataDirectory}4003086771${saveDirectory}EldenRing/"; # The ID for seamless co-op will change as it is added as a non-steam game
         in
         pkgs.writeShellScript "ensureExists.sh" ''
           mkdir -p ${directoriesToCreate}
@@ -115,6 +117,7 @@
             ln -s ${drive}/.dots/rpcs3/ ~/.config/
             ln -s ${drive}/.dots/yuzu/ ~/.local/share/
 
+            ln -s ${drive}/Games/Saves/DarkSouls3/* ${darkSouls3SaveDirectory}
             ln -s ${drive}/Games/Saves/EldenRingSeamlessCoop/* ${eldenRingSeamlessCoopSaveDirectory}
           fi
         '';
