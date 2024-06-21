@@ -37,12 +37,8 @@
         size = 10;
       };
       theme = {
-        name = "Catppuccin-Mocha-Standard-Blue-Dark";
-        package = pkgs.catppuccin-gtk.override {
-          accents = [ "blue" ];
-          size = "standard";
-          variant = "mocha";
-        };
+        name = "Colloid-Dark-Catppuccin";
+        package = pkgs.colloid-gtk-theme.override { tweaks = [ "catppuccin" ]; };
       };
       iconTheme = {
         name = "Papirus-Dark";
@@ -64,5 +60,5 @@
     };
 
   # GTK4 Theme
-  home.sessionVariables.GTK_THEME = "Catppuccin-Mocha-Standard-Blue-Dark";
+  home.sessionVariables.GTK_THEME = "Colloid-Dark-Catppuccin";
 }
