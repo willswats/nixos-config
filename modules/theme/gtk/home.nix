@@ -38,7 +38,14 @@
       };
       theme = {
         name = "Colloid-Dark-Catppuccin";
-        package = pkgs.colloid-gtk-theme.override { tweaks = [ "catppuccin" ]; };
+        package = pkgs.colloid-gtk-theme.override {
+          colorVariants = [ "dark" ]; # Only download dark variant
+          tweaks = [
+            "catppuccin" # Catppuccin colors
+            "black" # Darker catppuccin
+            "normal" # Use normal window button style instead of mac style
+          ];
+        };
       };
       iconTheme = {
         name = "Papirus-Dark";
