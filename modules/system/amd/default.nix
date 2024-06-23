@@ -2,10 +2,8 @@
 
 {
   boot.initrd.kernelModules = [ "amdgpu" ];
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    # Vulkan
-    driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
 }
