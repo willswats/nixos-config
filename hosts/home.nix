@@ -54,6 +54,7 @@
       deluge
       popsicle
       freetube
+      miru
       spotify
       dropbox
       zotero
