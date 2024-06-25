@@ -174,8 +174,8 @@
                 url = "https://aniwave.to/";
               }
               {
-                name = "Braflix";
-                url = "https://www.braflix.video/";
+                name = "FMovies";
+                url = "ttps://fmovies24.to";
               }
               {
                 name = "MangaDex";
