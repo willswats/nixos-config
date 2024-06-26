@@ -1,4 +1,4 @@
-{ ... }:
+{ host, ... }:
 
 {
   imports = [
@@ -9,7 +9,6 @@
     ../../modules/games/steam
     ../../modules/games/r2modman
   ];
-
 
   boot = {
     initrd = {
@@ -22,5 +21,14 @@
       };
       efi.canTouchEfiVariables = true;
     };
+    kernelParams =
+      let
+        monitorCenter = host.monitors.center;
+        monitorLeft = host.monitors.left;
+      in
+      [
+        "video=${monitorCenter}:1920x1080@144"
+        "video=${monitorLeft}:1920x1080@144"
+      ];
   };
 }
