@@ -112,7 +112,6 @@
           background-color: ${base};
         }
 
-
         #workspaces,
         #window, 
         #submap, 
