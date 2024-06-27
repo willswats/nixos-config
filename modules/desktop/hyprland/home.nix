@@ -249,9 +249,9 @@
           "${lxpolkit}"
           # Applets
           "${mullvadGui}"
-          "${pcmanfm} --daemon-mode" # Run as dameon to prevent pcmanfm from opening slowly on first launch (bug)
           "${dropbox}"
           # Misc
+          "${pcmanfm} --daemon-mode" # Run as dameon to prevent pcmanfm from opening slowly on first launch (bug)
           "${ensureExists}"
           "${preventMicrophoneAutoAdjust}"
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
