@@ -17,6 +17,7 @@ in
     waypaper
     pavucontrol
     wl-clipboard
+    wev
   ];
 
   services = {
@@ -275,8 +276,8 @@ in
 
           "${mod}+z" = "split v"; # Move split to vertical
           "${mod}+x" = "split h"; # Move split to horizontal
-          "${mod}+Shift+t" = "layout tabbed"; # Toggle tabbed
-          "${mod}+Shift+s" = "layout toggle splith splitv"; # Toggle between splith and splitv
+          "${mod}+tab" = "layout tabbed"; # Toggle tabbed
+          "${mod}+Shift+tab" = "layout toggle splith splitv"; # Toggle between splith and splitv
 
           "${mod}+f" = "fullscreen toggle";
           "${mod}+Shift+f" = "floating toggle";

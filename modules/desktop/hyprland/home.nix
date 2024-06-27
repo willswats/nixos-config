@@ -18,6 +18,7 @@
     pavucontrol
     ## CLI
     wl-clipboard
+    wev
     swaybg
   ];
 
