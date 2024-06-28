@@ -72,6 +72,15 @@
         fi
       '';
 
+      gammastep = "${pkgs.gammastep}/bin/gammastep";
+      gammastepToggle = pkgs.writeShellScript "gammastepToggle.sh" ''
+        if pgrep gammastep; then
+          killall .gammastep-wrap
+        else
+          ${gammastep}
+        fi
+      '';
+
       # Prevent microphone from being auto adjusted to lower than 100 (Discord)
       # This uses the "node.name" from wpctl inspect ID with pw-cli, it does not use the ID from wpctl as it changes when unplugged.
       # The way to use the name with pw-cli was found here https://gitlab.freedesktop.org/pipewire/wireplumber/-/issues/395
@@ -266,6 +275,7 @@
           ", print, exec, ${grimblast} --notify save output" # Screenshot active monitor
           "shift, print, exec, killall slurp; ${grimblast} --notify --freeze save area" # Screenshot manually selected area - killall to prevent overlap
 
+          "$mod shift, b, exec, ${gammastepToggle}" # Toggle Gammastep
           "$mod shift, v, exec, ${mullvadToggle}" # Toggle VPN
 
           "$mod shift, semicolon, exec, ${hyprlock}"

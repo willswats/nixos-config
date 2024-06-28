@@ -78,6 +78,15 @@
         fi
       '';
 
+      gammastep = "${pkgs.gammastep}/bin/gammastep";
+      gammastepToggle = pkgs.writeShellScript "gammastepToggle.sh" ''
+        if pgrep gammastep; then
+          killall .gammastep-wrap
+        else
+          ${gammastep}
+        fi
+      '';
+
       # Prevent microphone from being auto adjusted to lower than 100 (Discord)
       # This uses the "node.name" from wpctl inspect ID with pw-cli, it does not use the ID from wpctl as it changes when unplugged.
       # The way to use the name with pw-cli was found here https://gitlab.freedesktop.org/pipewire/wireplumber/-/issues/395
@@ -282,6 +291,7 @@
           "${mod}+s" = "exec ${kitty} ${btm} -b"; # Process monitor
           "${mod}+b" = "exec ${kitty} ${bluetuith}"; # Bluetooth manager
           "${mod}+m" = "exec ${spotify}"; # Music player
+          "${mod}+Shift+b" = "exec ${gammastepToggle}"; # Toggle Gammastep
           "${mod}+Shift+v" = "exec ${mullvadToggle}"; # VPN
 
           "${mod}+Print" = "exec ${grimshot} --notify save output";
