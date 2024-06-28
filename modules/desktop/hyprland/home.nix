@@ -4,12 +4,12 @@
   imports = [
     ./hypridle/home.nix
     ./hyprlock/home.nix
-    ./hyprshade/home.nix
     ./grimblast/home.nix
     ./waybar/home.nix
     ../wayland/waybar/home.nix
     ../wayland/fuzzel/home.nix
     ../wayland/mako/home.nix
+    ../wayland/gammastep/home.nix
   ];
 
   home.packages = with pkgs; [
@@ -38,7 +38,6 @@
 
       hyprctl = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl";
       hyprlock = "${inputs.hyprlock.packages.${pkgs.system}.hyprlock}/bin/hyprlock";
-      hyprshade = "${(pkgs.hyprshade.override { hyprland = inputs.hyprland.packages.${pkgs.system}.hyprland; })}/bin/hyprshade";
 
       fuzzel = "${pkgs.fuzzel}/bin/fuzzel";
       waybar = "${pkgs.waybar}/bin/waybar";
@@ -53,6 +52,7 @@
       yazi = "${inputs.yazi.packages.${pkgs.system}.yazi}/bin/yazi";
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
+      grimblast = "${inputs.hyprland-contrib.packages.${pkgs.system}.grimblast}/bin/grimblast";
 
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
@@ -70,19 +70,6 @@
         else
         	${mullvad} connect
         fi
-      '';
-
-      grimblast = "${inputs.hyprland-contrib.packages.${pkgs.system}.grimblast}/bin/grimblast";
-      grimblastSaveOutput = pkgs.writeShellScript "grimblastSaveOutput.sh" ''
-        ${hyprshade} off
-        ${grimblast} save output
-        ${hyprshade} auto
-      '';
-      grimblastSaveArea = pkgs.writeShellScript "grimblastScreenshotArea.sh" ''
-        ${hyprshade} off
-        killall slurp # Prevent overlapping slurp windows
-        ${grimblast} --freeze save area
-        ${hyprshade} auto
       '';
 
       # Prevent microphone from being auto adjusted to lower than 100 (Discord)
@@ -240,7 +227,6 @@
 
         exec = [
           "killall .waybar-wrapped; ${waybar}"
-          "${hyprshade} auto"
         ];
 
         exec-once = [
@@ -277,10 +263,9 @@
           "$mod, s, exec, ${kitty} ${btm} -b" # Process monitor
           "$mod, b, exec, ${kitty} ${bluetuith}" # Bluetooth manager
 
-          ", print, exec, ${grimblastSaveOutput}" # Screenshot active monitor
-          "shift, print, exec, ${grimblastSaveArea}" # Screenshot manually selected area
+          ", print, exec, ${grimblast} --notify save output" # Screenshot active monitor
+          "shift, print, exec, killall slurp; ${grimblast} --notify --freeze save area" # Screenshot manually selected area - killall to prevent overlap
 
-          "$mod shift, b, exec, ${hyprshade} toggle blue-light-filter" # Toggle blue light filter
           "$mod shift, v, exec, ${mullvadToggle}" # Toggle VPN
 
           "$mod shift, semicolon, exec, ${hyprlock}"
