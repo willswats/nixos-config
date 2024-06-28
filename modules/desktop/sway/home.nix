@@ -4,6 +4,7 @@
   imports = [
     ./swaylock/home.nix
     ./waybar/home.nix
+    ./grimshot/home.nix
     ../wayland/waybar/home.nix
     ../wayland/fuzzel/home.nix
     ../wayland/mako/home.nix
@@ -56,6 +57,7 @@
       yazi = "${inputs.yazi.packages.${pkgs.system}.yazi}/bin/yazi";
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
+      grimshot = "${pkgs.sway-contrib.grimshot}/bin/grimshot";
 
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
@@ -281,6 +283,9 @@
           "${mod}+b" = "exec ${kitty} ${bluetuith}"; # Bluetooth manager
           "${mod}+m" = "exec ${spotify}"; # Music player
           "${mod}+Shift+v" = "exec ${mullvadToggle}"; # VPN
+
+          "${mod}+Print" = "exec ${grimshot} --notify save output";
+          "${mod}+Shift+Print" = "exec ${grimshot} --notify save area";
         };
         modes = {
           resize = {

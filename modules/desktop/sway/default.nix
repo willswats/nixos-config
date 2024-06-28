@@ -2,7 +2,8 @@
 
 {
   imports = [
-    ../wayland/swaylock
+    ./swaylock
+    ./grimshot
   ];
 
   programs.sway = {
