@@ -1,47 +1,25 @@
 { lib, config, pkgs, inputs, host, globals, ... }:
 
-
-let
-  swaylock = "${pkgs.swaylock-effects}/bin/swaylock";
-  swaymsg = "${pkgs.sway}/bin/swaymsg";
-in
 {
   imports = [
+    ./swaylock/home.nix
     ./waybar/home.nix
-    ../wayland/swaylock/home.nix
+    ../wayland/waybar/home.nix
     ../wayland/fuzzel/home.nix
     ../wayland/mako/home.nix
+    ../wayland/gammastep/home.nix
   ];
 
   home.packages = with pkgs; [
+    # Utilities
+    ## GUI
     waypaper
     pavucontrol
+    ## CLI
     wl-clipboard
+    swaybg
     wev
   ];
-
-  services = {
-    swayidle = {
-      enable = true;
-      timeouts = [
-        {
-          timeout = 1800; # 1800 seconds = 30 minutes
-          command = swaylock;
-        }
-        {
-          timeout = 600; # 600 seconds = 10 minutes
-          command = "${swaymsg} 'output * power off'";
-          resumeCommand = "${swaymsg} 'output * power on'";
-        }
-      ];
-      events = [
-        { event = "before-sleep"; command = swaylock; }
-        { event = "lock"; command = swaylock; }
-      ];
-    };
-  };
-
-  services.network-manager-applet.enable = true;
 
   wayland.windowManager.sway =
     let
@@ -65,6 +43,7 @@ in
       xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
 
       fuzzel = "${pkgs.fuzzel}/bin/fuzzel";
+      swaylock = "${pkgs.swaylock-effects}/bin/swaylock";
       waybar = "${pkgs.waybar}/bin/waybar";
 
       firefox = "${pkgs.firefox}/bin/firefox";
@@ -81,6 +60,7 @@ in
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
+      nmApplet = "${pkgs.networkmanagerapplet}/bin/nm-applet";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
@@ -136,7 +116,6 @@ in
         '';
 
       mauve = "#${globals.colours.mauve}";
-      red = "#${globals.colours.red}";
       blue = "#${globals.colours.blue}";
       text = "#${globals.colours.text}";
       overlay0 = "#${globals.colours.overlay0}";
@@ -192,23 +171,23 @@ in
           focusedInactive = {
             background = "${base}";
             text = "${text}";
-            indicator = "${base}";
-            border = "${base}";
-            childBorder = "${base}";
+            indicator = "${overlay0}";
+            border = "${overlay0}";
+            childBorder = "${overlay0}";
           };
           unfocused = {
             background = "${base}";
             text = "${text}";
-            indicator = "${base}";
-            border = "${base}";
-            childBorder = "${base}";
+            indicator = "${overlay0}";
+            border = "${overlay0}";
+            childBorder = "${overlay0}";
           };
           urgent = {
             background = "${base}";
-            text = "${red}";
+            text = "${text}";
             indicator = "${overlay0}";
-            border = "${red}";
-            childBorder = "${red}";
+            border = "${overlay0}";
+            childBorder = "${overlay0}";
           };
           placeholder = {
             background = "${base}";
@@ -331,6 +310,10 @@ in
             always = false;
           }
           # Applets
+          {
+            command = "${nmApplet}"; # The home manager service doesn't seem to start nm-applet on Sway
+            always = false;
+          }
           {
             command = "${mullvadGui}";
             always = false;

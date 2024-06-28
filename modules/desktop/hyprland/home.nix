@@ -7,6 +7,7 @@
     ./hyprshade/home.nix
     ./grimblast/home.nix
     ./waybar/home.nix
+    ../wayland/waybar/home.nix
     ../wayland/fuzzel/home.nix
     ../wayland/mako/home.nix
   ];
