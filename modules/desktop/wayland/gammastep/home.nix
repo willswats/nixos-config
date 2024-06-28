@@ -3,7 +3,6 @@
 {
   services.gammastep = {
     enable = true;
-    tray = true;
     dawnTime = "08:00";
     duskTime = "18:00";
     temperature = {
