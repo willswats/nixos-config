@@ -44,6 +44,7 @@
             "catppuccin" # Catppuccin colors
             "black" # Darker catppuccin
             "normal" # Use normal window button style instead of mac style
+            "rimless" # Removes the 1px border - fixes Sway borders on GTK windows
           ];
         };
       };
