@@ -105,7 +105,6 @@
 
         #workspaces,
         #window, 
-        #submap, 
         #battery, 
         #backlight, 
         #pulseaudio, 
@@ -119,7 +118,6 @@
         }
 
         #window, 
-        #submap, 
         #battery, 
         #backlight, 
         #pulseaudio, 
@@ -141,7 +139,6 @@
         #workspaces button {
           color: ${overlay0};
           border-radius: 5px;
-          padding: 4px;
         }
 
         #workspaces button:hover {
@@ -150,11 +147,6 @@
           color: ${blue};
           background-color: ${crust};
           border: ${crust};
-        }
-
-        #workspaces button.active {
-          color: ${blue};
-          background-color: ${crust};
         }
 
         #window {
