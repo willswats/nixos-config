@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./swayidle/home.nix
     ./swaylock/home.nix
     ./waybar/home.nix
     ./grimshot/home.nix
@@ -21,6 +22,8 @@
     swaybg
     wev
   ];
+
+  services.network-manager-applet.enable = true;
 
   wayland.windowManager.sway =
     let
@@ -62,7 +65,6 @@
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
-      nmApplet = "${pkgs.networkmanagerapplet}/bin/nm-applet";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
@@ -325,10 +327,6 @@
             always = false;
           }
           # Applets
-          {
-            command = "${nmApplet}"; # The home manager service doesn't seem to start nm-applet on Sway
-            always = false;
-          }
           {
             command = "${mullvadGui}";
             always = false;
