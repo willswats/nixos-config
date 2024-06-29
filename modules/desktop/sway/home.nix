@@ -352,7 +352,7 @@
             command = "${xrandr} --output ${monitorCenter} --primary"; # Ensures that xwindows (especially steam games) use the center monitor
             always = false;
           }
-          # All services related to sway should be added here - workaround for https://discourse.nixos.org/t/swayidle-timeouts-and-events-not-triggering/29887
+          # All services related to sway should be added here - workaround for https://discourse.nixos.org/t/sway-via-home-manager-startup-and-tray-services/45930
           {
             command = "systemctl --user restart swayidle.service";
             always = false;
