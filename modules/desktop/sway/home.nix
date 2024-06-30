@@ -369,6 +369,10 @@
             command = "systemctl --user restart network-manager-applet.service";
             always = false;
           }
+          {
+            command = "systemctl --user restart gammastep.service";
+            always = false;
+          }
         ];
       };
       extraConfig =
