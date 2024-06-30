@@ -31,6 +31,10 @@
           padding: 0 10px;
         }
 
+        #workspaces button {
+          padding: 5px;
+        }
+
         #workspaces button.focused {
           color: ${blue};
           background-color: ${crust};

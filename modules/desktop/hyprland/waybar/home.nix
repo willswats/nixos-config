@@ -31,6 +31,10 @@
           padding: 0 10px;
         } 
 
+        #workspaces button {
+          padding: 8px;
+        }
+
         #workspaces button.active {
           color: ${blue};
           background-color: ${crust};
