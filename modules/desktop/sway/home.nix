@@ -136,6 +136,8 @@
     in
     {
       enable = true;
+      package = pkgs.swayfx;
+      checkConfig = false; # workaround for https://github.com/nix-community/home-manager/issues/5307
       config = {
         modifier = "Mod4";
         terminal = kitty;
@@ -376,6 +378,8 @@
           workspace ${ws8} output ${monitorCenter}
           workspace ${ws9} output ${monitorCenter}
           workspace ${ws10} output ${monitorCenter}
+
+          corner_radius 10
         '';
     };
 }
