@@ -198,6 +198,7 @@
         windowrulev2 = [
           # Chatterino
           "opacity 0.9, initialClass:com.chatterino."
+          "noblur, initialClass:com.chatterino."
           "float, initialClass:com.chatterino."
           "size 400 600, initialClass:com.chatterino."
           # Steam
