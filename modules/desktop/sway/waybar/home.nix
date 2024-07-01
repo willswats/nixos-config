@@ -13,6 +13,7 @@
 
         "sway/window" = {
           max-length = 50;
+          tooltip = false;
         };
       };
     };
