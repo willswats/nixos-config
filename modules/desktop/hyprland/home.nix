@@ -292,16 +292,14 @@
           "$mod shift, equal, movetoworkspacesilent, m+0"
           "$mod shift, minus, movetoworkspacesilent, special"
 
-          "$mod shift, g, togglegroup"
-          "$mod, g, lockactivegroup, toggle"
+          "$mod shift, tab, togglegroup"
+          "$mod, tab, lockactivegroup, toggle"
           "$mod, o, moveoutofgroup"
 
-          "$mod, tab, changegroupactive, f"
-          "$mod shift, tab, changegroupactive, b"
-          "$mod, Next, changegroupactive, f"
-          "$mod, Prior, changegroupactive, b"
-          "$mod shift, Next, movegroupwindow, f"
-          "$mod shift, Prior, movegroupwindow, b"
+          "$mod alt, l, changegroupactive, f"
+          "$mod alt, h, changegroupactive, b"
+          "$mod alt shift, l, movegroupwindow, f"
+          "$mod alt shift, h, movegroupwindow, b"
 
           # Could remove this by using movewindoworgroup instead of movewindow below, however,
           # both are currently buggy, therefore, it's on a seperate key for now
