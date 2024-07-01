@@ -153,11 +153,6 @@
             command = "border pixel 2";
             criteria = { class = "^.*"; };
           }
-          # Kitty
-          {
-            command = "opacity 0.9";
-            criteria = { app_id = "kitty"; };
-          }
           # Chatterino
           {
             command = "floating enable, opacity 0.9";

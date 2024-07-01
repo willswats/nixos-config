@@ -196,8 +196,6 @@
         };
 
         windowrulev2 = [
-          # Kitty
-          "opacity 0.9, initialClass:kitty"
           # Chatterino
           "opacity 0.9, initialClass:com.chatterino."
           "float, initialClass:com.chatterino."
