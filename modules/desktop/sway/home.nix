@@ -317,15 +317,20 @@
           "${mod}+Shift+semicolon" = "exec ${swaylock}";
 
           "${mod}+d" = "exec ${fuzzel}";
+
           "${mod}+Return" = "exec ${kitty}"; # Terminal
+
           "${mod}+w" = "exec ${firefox}"; # Web browser
           "${mod}+a" = "exec ${pavucontrol}"; # Audio manager
           "${mod}+p" = "exec ${bitwarden}"; # Password manager
+          "${mod}+m" = "exec mpv"; # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
+          "${mod}+Shift+m" = "exec ${spotify}"; # Music player
+
           "${mod}+e" = "exec ${kitty} ${yazi}"; # File explorer
           "${mod}+t" = "exec ${kitty} nvim"; # Text editor
           "${mod}+s" = "exec ${kitty} ${btm} -b"; # Process monitor
           "${mod}+b" = "exec ${kitty} ${bluetuith}"; # Bluetooth manager
-          "${mod}+m" = "exec ${spotify}"; # Music player
+
           "${mod}+Shift+b" = "exec ${gammastepToggle}"; # Toggle Gammastep
           "${mod}+Shift+v" = "exec ${mullvadToggle}"; # VPN
 
