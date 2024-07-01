@@ -423,7 +423,7 @@
           workspace ${ws9} output ${monitorCenter}
           workspace ${ws10} output ${monitorCenter}
 
-          corner_radius 10
+          corner_radius 5
         '';
     };
 }
