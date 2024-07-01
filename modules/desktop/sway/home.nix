@@ -327,7 +327,7 @@
           "${mod}+Shift+m" = "exec ${spotify}"; # Music player
 
           "${mod}+e" = "exec ${kitty} ${yazi}"; # File explorer
-          "${mod}+t" = "exec ${kitty} nvim"; # Text editor
+          "${mod}+t" = "exec ${kitty} nvim"; # Text editor (not specifying the binary as it doesn't load my config)
           "${mod}+s" = "exec ${kitty} ${btm} -b"; # Process monitor
           "${mod}+b" = "exec ${kitty} ${bluetuith}"; # Bluetooth manager
 
