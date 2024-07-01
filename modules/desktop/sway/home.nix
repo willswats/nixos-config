@@ -159,17 +159,17 @@
             xkb_layout = "gb";
             accel_profile = "flat";
           };
+          "type:touchpad" = {
+            natural_scroll = "enabled";
+            scroll_factor = "0.5";
+            tap = "enabled";
+            tap_button_map = "lrm";
+          };
         };
         output = {
           "*" = {
             res = "1920x1080@144Hz";
             bg = "${wallpaper} fill";
-          };
-          ${monitorCenter} = {
-            pos = "1920 0";
-          };
-          ${monitorLeft} = {
-            pos = "0 0";
           };
         };
         seat = {
