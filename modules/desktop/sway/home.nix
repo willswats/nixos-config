@@ -148,10 +148,39 @@
           names = [ "Hack Nerd Font" ];
           size = 14.0;
         };
-        window.commands = [{
-          command = "border pixel 2";
-          criteria = { class = "^.*"; };
-        }];
+        window.commands = [
+          {
+            command = "border pixel 2";
+            criteria = { class = "^.*"; };
+          }
+          # Kitty
+          {
+            command = "opacity 0.9";
+            criteria = { app_id = "kitty"; };
+          }
+          # Chatterino
+          {
+            command = "floating enable, opacity 0.9";
+            criteria = { app_id = "com.chatterino."; };
+          }
+          # Steam
+          {
+            command = "floating enable";
+            criteria = { class = "steam"; title = "Friends List"; };
+          }
+          {
+            command = "floating enable";
+            criteria = { class = "steam"; title = "Steam Settings"; };
+          }
+          {
+            command = "floating enable";
+            criteria = { class = "steam"; title = "Game Servers"; };
+          }
+          {
+            command = "floating enable";
+            criteria = { class = "steam"; title = "Screenshot Manager"; };
+          }
+        ];
         gaps = { inner = 10; };
         bars = [{ command = waybar; }];
         input = {
