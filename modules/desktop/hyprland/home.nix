@@ -272,11 +272,11 @@
           "$mod, s, exec, ${kitty} ${btm} -b" # Process monitor
           "$mod, b, exec, ${kitty} ${bluetuith}" # Bluetooth manager
 
-          ", print, exec, ${grimblast} --notify save output" # Screenshot active monitor
-          "shift, print, exec, killall slurp; ${grimblast} --notify --freeze save area" # Screenshot manually selected area - killall to prevent overlap
-
           "$mod shift, b, exec, ${gammastepToggle}" # Toggle Gammastep
           "$mod shift, v, exec, ${mullvadToggle}" # Toggle VPN
+
+          ", print, exec, ${grimblast} --notify save output" # Screenshot active monitor
+          "shift, print, exec, killall slurp; ${grimblast} --notify --freeze save area" # Screenshot manually selected area - killall to prevent overlap
 
           "$mod shift, semicolon, exec, ${hyprlock}"
 
