@@ -389,19 +389,6 @@
             command = "${autotiling}";
             always = false;
           }
-          # All services related to sway should be added here - workaround for https://discourse.nixos.org/t/sway-via-home-manager-startup-and-tray-services/45930
-          {
-            command = "systemctl --user restart swayidle.service";
-            always = false;
-          }
-          {
-            command = "systemctl --user restart network-manager-applet.service";
-            always = false;
-          }
-          {
-            command = "systemctl --user restart gammastep.service";
-            always = false;
-          }
         ];
       };
       extraConfig =
