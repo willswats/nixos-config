@@ -330,7 +330,7 @@
           "${mod}+Shift+v" = "exec ${mullvadToggle}"; # VPN
 
           "Print" = "exec ${grimshot} --notify save output";
-          "Shift+Print" = "exec ${grimshot} --notify save area";
+          "Shift+Print" = "exec killall slurp; exec ${grimshot} --notify save area";
         };
         modes = {
           resize = {
