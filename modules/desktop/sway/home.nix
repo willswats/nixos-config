@@ -329,8 +329,8 @@
           "${mod}+Shift+b" = "exec ${gammastepToggle}"; # Toggle Gammastep
           "${mod}+Shift+v" = "exec ${mullvadToggle}"; # VPN
 
-          "${mod}+Print" = "exec ${grimshot} --notify save output";
-          "${mod}+Shift+Print" = "exec ${grimshot} --notify save area";
+          "Print" = "exec ${grimshot} --notify save output";
+          "Shift+Print" = "exec ${grimshot} --notify save area";
         };
         modes = {
           resize = {
