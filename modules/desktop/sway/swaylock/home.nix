@@ -1,4 +1,4 @@
-{ pkgs, globals, ... }:
+{ globals, ... }:
 
 let
   fontName = globals.font.name;
@@ -14,7 +14,6 @@ in
 {
   programs.swaylock = {
     enable = true;
-    package = pkgs.swaylock-effects;
     settings = {
       color = base;
 
@@ -26,13 +25,6 @@ in
       daemonize = true; # Fix screen locking multiple times - https://github.com/swaywm/swaylock/issues/86
 
       ignore-empty-password = true; # Don't allow empty password
-
-      clock = true;
-      indicator = true; # Always show indicator
-
-      # See https://strftime.org/
-      timestr = "%H:%M";
-      datestr = "%a %d %b";
 
       # Get rid of ring borders
       line-uses-inside = true;
