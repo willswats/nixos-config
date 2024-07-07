@@ -16,7 +16,6 @@
   home.packages = with pkgs; [
     # Utilities
     mangohud
-    gamescope
     # Emulators
     rpcs3
     pcsx2

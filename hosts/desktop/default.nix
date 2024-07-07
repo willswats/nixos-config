@@ -31,4 +31,7 @@
         "video=${monitorLeft}:1920x1080@144"
       ];
   };
+
+  programs.gamemode.enable = true;
+  programs.gamescope.enable = true;
 }
