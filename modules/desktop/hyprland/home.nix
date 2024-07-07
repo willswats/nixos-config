@@ -292,8 +292,8 @@
           "$mod shift, equal, movetoworkspacesilent, m+0"
           "$mod shift, minus, movetoworkspacesilent, special"
 
-          "$mod shift, tab, togglegroup"
-          "$mod, tab, lockactivegroup, toggle"
+          "$mod, tab, togglegroup"
+          "$mod shift, tab, lockactivegroup, toggle"
           "$mod, o, moveoutofgroup"
 
           "$mod alt, l, changegroupactive, f"
