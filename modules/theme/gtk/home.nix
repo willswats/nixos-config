@@ -11,7 +11,7 @@
         .csd .menu,
         .csd .dropdown,
         .csd .context-menu {
-          border-radius: 5px;
+          border-radius: 0px;
         }
       '';
       fontName = globals.font.name;

@@ -54,7 +54,7 @@ in {
           enable = true;
           openWinConfig = {
             relative = "editor";
-            border = "rounded";
+            border = "single";
             width = 40;
             height = 100000;
           };

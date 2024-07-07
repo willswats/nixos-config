@@ -5,7 +5,7 @@ let
 in
 {
   imports = [
-    ../modules/desktop/sway
+    ../modules/desktop/hyprland
     ../modules/system/sddm
     ../modules/system/console
     ../modules/system/plymouth

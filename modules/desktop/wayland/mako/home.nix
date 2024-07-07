@@ -19,7 +19,7 @@
       textColor = text;
       backgroundColor = base;
       borderColor = blue;
-      borderRadius = 5;
+      borderRadius = 0;
       # To draw the progress indicator on top of the background color, use the over attribute. 
       # To replace the background color, use the source attribute.
       progressColor = "over ${surface0}";

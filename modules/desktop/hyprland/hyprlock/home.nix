@@ -49,12 +49,12 @@
           fade_on_empty = false;
           fade_timeout = 0;
           placeholder_text = "";
-          rounding = 5;
+          rounding = 0;
 
           dots_size = 0.3;
           dots_spacing = 0.2;
           dots_center = true;
-          dots_rounding = 2;
+          dots_rounding = 0;
         }];
 
         label = [
