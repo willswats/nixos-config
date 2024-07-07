@@ -26,7 +26,6 @@
         #submap {
           color: ${blue};
           background-color: ${mantle};
-          border-radius: 5px;
           margin: 4px 2px 4px 2px;
           padding: 0 10px;
         } 

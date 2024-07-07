@@ -112,7 +112,6 @@
         #network, 
         #clock,
         #tray {
-          border-radius: 5px;
           background-color: ${mantle};
           margin: 4px 2px 4px 2px;
         }
@@ -138,7 +137,6 @@
 
         #workspaces button {
           color: ${overlay0};
-          border-radius: 5px;
         }
 
         #workspaces button:hover {
