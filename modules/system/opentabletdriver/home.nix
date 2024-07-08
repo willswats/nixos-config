@@ -15,9 +15,9 @@
             "Filters": [],
             "AbsoluteModeSettings": {
               "Display": {
-                "Width": 3840.0,
+                "Width": 1920.0,
                 "Height": 1080.0,
-                "X": 1920.0,
+                "X": 2880.0,
                 "Y": 540.0,
                 "Rotation": 0.0
               },
