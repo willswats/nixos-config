@@ -8,7 +8,7 @@
           {
             "Tablet": "Huion HS610",
             "OutputMode": {
-              "Path": "OpenTabletDriver.Desktop.Output.AbsoluteMode",
+              "Path": "OpenTabletDriver.Desktop.Output.RelativeMode",
               "Settings": [],
               "Enable": true
             },
@@ -33,8 +33,8 @@
               "LockAspectRatio": false
             },
             "RelativeModeSettings": {
-              "XSensitivity": 10.0,
-              "YSensitivity": 10.0,
+              "XSensitivity": 20.0,
+              "YSensitivity": 20.0,
               "RelativeRotation": 0.0,
               "RelativeResetDelay": "00:00:00.1000000"
             },
