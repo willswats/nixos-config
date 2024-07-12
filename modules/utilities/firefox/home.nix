@@ -170,16 +170,12 @@
                 url = "https://chatreplay.stream/subscriptions";
               }
               {
-                name = "Aniwave";
-                url = "https://aniwave.to/";
-              }
-              {
-                name = "FMovies";
-                url = "ttps://fmovies24.to";
-              }
-              {
                 name = "MangaDex";
                 url = "https://mangadex.org";
+              }
+              {
+                name = "MangaFire";
+                url = "https://mangafire.to";
               }
               {
                 name = "Google Play Books";
