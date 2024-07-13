@@ -170,22 +170,9 @@
                 url = "https://chatreplay.stream/subscriptions";
               }
               {
-                name = "MangaDex";
-                url = "https://mangadex.org";
-              }
-              {
-                name = "MangaFire";
-                url = "https://mangafire.to";
-              }
-              {
                 name = "Google Play Books";
                 url = "https://play.google.com/books";
               }
-            ];
-          }
-          {
-            name = "Social";
-            bookmarks = [
               {
                 name = "GitHub";
                 url = "https://github.com/";
@@ -197,27 +184,6 @@
               {
                 name = "LinkedIn";
                 url = "https://www.linkedin.com/";
-              }
-            ];
-          }
-          {
-            name = "Development";
-            bookmarks = [
-              {
-                name = "Home Manager";
-                url = "https://nix-community.github.io/home-manager/options.xhtml";
-              }
-              {
-                name = "nixvim";
-                url = "https://nix-community.github.io/nixvim/";
-              }
-              {
-                name = "catppuccin/nix";
-                url = "https://nix.catppuccin.com/";
-              }
-              {
-                name = "Hyprland";
-                url = "https://wiki.hyprland.org/";
               }
             ];
           }
@@ -243,6 +209,27 @@
               {
                 name = "ProtonDB";
                 url = "https://www.protondb.com/";
+              }
+            ];
+          }
+          {
+            name = "Development";
+            bookmarks = [
+              {
+                name = "Home Manager";
+                url = "https://nix-community.github.io/home-manager/options.xhtml";
+              }
+              {
+                name = "nixvim";
+                url = "https://nix-community.github.io/nixvim/";
+              }
+              {
+                name = "catppuccin/nix";
+                url = "https://nix.catppuccin.com/";
+              }
+              {
+                name = "Hyprland";
+                url = "https://wiki.hyprland.org/";
               }
             ];
           }
