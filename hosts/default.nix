@@ -21,6 +21,7 @@ in
     ../modules/utilities/mullvad-vpn
     ../modules/utilities/virt-manager
     ../modules/utilities/docker
+    ../modules/utilities/yacreader
   ];
 
   time.timeZone = "Europe/London";

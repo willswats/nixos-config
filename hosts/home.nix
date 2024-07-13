@@ -35,6 +35,7 @@
     ../modules/utilities/onlyoffice/home.nix
     ../modules/utilities/twitch/home.nix
     ../modules/utilities/hakuneko/home.nix
+    ../modules/utilities/yacreader/home.nix
   ];
 
   programs.home-manager.enable = true;
