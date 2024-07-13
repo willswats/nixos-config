@@ -57,6 +57,7 @@
       popsicle
       freetube
       miru
+      yacreader
       spotify
       dropbox
       zotero
