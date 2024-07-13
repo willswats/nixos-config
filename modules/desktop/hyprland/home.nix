@@ -107,7 +107,6 @@
           mkdir -p ${directoriesToCreate}
 
           ln -s ${drive}/.dots/FreeTube/ ~/.config/
-          ln -s ${drive}/.dots/YACReader/ ~/.local/share/YACReader/
 
           host=$(${hostname})
           if [ "$host" = "${desktopHostName}" ]; then
