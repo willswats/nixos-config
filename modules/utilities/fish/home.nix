@@ -45,9 +45,15 @@
             rebuild_switch_flake "${laptopHostName}" "#laptop"
           fi
         '';
+
+        # Close issue as completed with a comment referencing the last commit.
+        gh = "${pkgs.gh}/bin/gh";
+        git = "${pkgs.git}/bin/git";
+        ghIssueCloseCommit = pkgs.writeShellScript "ghIssueCloseCommit.sh" ''
+          ${gh} issue close "$1" -r "completed" --comment "Closed by $(${git} log -1 --pretty=format:%H)."
+        '';
       in
       {
-        # Shortened
         c = "clear";
         nv = "nvim";
         lg = "lazygit";
@@ -57,6 +63,13 @@
         code = "cd ${codeDirectory}";
         conf = "cd ${nixosConfigDirectory}; nvim";
         note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
+
+        # gh
+        ghicc = ghIssueCloseCommit.outPath;
+
+        # yt-dlp
+        dlmp3 = "${ytDlp} -x --audio-format mp3";
+        dlmp4 = "${ytDlp} -f mp4";
 
         # Nix Rebuild
         rsf = rebuildSwitchFlake.outPath;
@@ -71,10 +84,6 @@
         nsrust = "nix-shell ${nixosShellsDirectory}/rust.nix";
         nsflutter = "nix-shell ${nixosShellsDirectory}/flutter.nix";
         nshaskell = "nix-shell ${nixosShellsDirectory}/haskell.nix";
-
-        # yt-dlp
-        dlmp3 = "${ytDlp} -x --audio-format mp3";
-        dlmp4 = "${ytDlp} -f mp4";
       };
     interactiveShellInit = ''
       # Hide fish greeting
