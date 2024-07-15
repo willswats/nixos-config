@@ -1,4 +1,4 @@
-{ lib, config, pkgs, inputs, host, globals, ... }:
+{ lib, config, pkgs, host, globals, ... }:
 
 {
   imports = [
@@ -57,7 +57,7 @@
       pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
 
       kitty = "${pkgs.kitty}/bin/kitty";
-      yazi = "${inputs.yazi.packages.${pkgs.system}.yazi}/bin/yazi";
+      yazi = "${pkgs.yazi}/bin/yazi";
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
       grimshot = "${pkgs.sway-contrib.grimshot}/bin/grimshot";

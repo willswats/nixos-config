@@ -49,7 +49,7 @@
       pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
 
       kitty = "${pkgs.kitty}/bin/kitty";
-      yazi = "${inputs.yazi.packages.${pkgs.system}.yazi}/bin/yazi";
+      yazi = "${pkgs.yazi}/bin/yazi";
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
       grimblast = "${inputs.hyprland-contrib.packages.${pkgs.system}.grimblast}/bin/grimblast";

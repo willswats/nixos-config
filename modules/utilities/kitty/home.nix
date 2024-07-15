@@ -1,8 +1,8 @@
-{ globals, inputs, pkgs, ... }:
+{ globals, pkgs, ... }:
 
 let
   fontName = globals.font.name;
-  yazi = "${inputs.yazi.packages.${pkgs.system}.yazi}/bin/yazi";
+  yazi = "${pkgs.yazi}/bin/yazi";
 in
 {
   programs.kitty = {
