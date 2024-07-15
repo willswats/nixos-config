@@ -14,6 +14,7 @@
 
         codeDirectory = "~/Code";
         nixosConfigDirectory = "~/Code/nixos-config";
+        nixosShellsDirectory = "${nixosConfigDirectory}/shells";
 
         desktopHostName = globals.hostNames.desktop;
         laptopHostName = globals.hostNames.laptop;
@@ -46,20 +47,32 @@
         '';
       in
       {
+        # Shortened
         c = "clear";
         nv = "nvim";
         lg = "lazygit";
 
+        # CD
         uni = "cd ${universityDirectory}";
         code = "cd ${codeDirectory}";
         conf = "cd ${nixosConfigDirectory}; nvim";
         note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
 
+        # Nix Rebuild
         rsf = rebuildSwitchFlake.outPath;
         prsf = "git -C ${nixosConfigDirectory} pull; ${rebuildSwitchFlake.outPath}";
         fursf = "sudo nix flake update ${nixosConfigDirectory}; git -C ${nixosConfigDirectory} add flake.lock; ${rebuildSwitchFlake.outPath}";
-        nix-shell = "nix-shell --command fish";
 
+        # Nix Shells
+        nix-shell = "nix-shell --command fish";
+        nsnode = "nix-shell ${nixosShellsDirectory}/node.nix";
+        nspython = "nix-shell ${nixosShellsDirectory}/python.nix";
+        nsdotnet = "nix-shell ${nixosShellsDirectory}/dotnet.nix";
+        nsrust = "nix-shell ${nixosShellsDirectory}/rust.nix";
+        nsflutter = "nix-shell ${nixosShellsDirectory}/flutter.nix";
+        nshaskell = "nix-shell ${nixosShellsDirectory}/haskell.nix";
+
+        # yt-dlp
         dlmp3 = "${ytDlp} -x --audio-format mp3";
         dlmp4 = "${ytDlp} -f mp4";
       };
