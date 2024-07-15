@@ -25,13 +25,9 @@ in
       tab_separator = "|";
     };
     keybindings = {
-      # Open with cwd
-      "ctrl+shift+t" = "new_tab_with_cwd";
-      "ctrl+shift+n" = "new_os_window_with_cwd";
-      "ctrl+shift+enter" = "new_window_with_cwd";
-      # Open programs
-      "ctrl+shift+o" = "new_os_window_with_cwd nvim";
-      "ctrl+shift+f" = "new_os_window_with_cwd ${yazi}";
+      "ctrl+shift+enter" = "new_os_window_with_cwd";
+      "ctrl+shift+t" = "new_os_window_with_cwd nvim";
+      "ctrl+shift+e" = "new_os_window_with_cwd ${yazi}";
     };
   };
 }
