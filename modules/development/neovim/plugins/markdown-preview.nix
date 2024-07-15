@@ -14,9 +14,9 @@
           [
             {
               inherit mode;
-              key = "<leader>mp";
+              key = "<leader>p";
               action = "${cmd}MarkdownPreview${cr}";
-              options.desc = "Preview";
+              options.desc = "Markdown Preview";
             }
           ];
       in

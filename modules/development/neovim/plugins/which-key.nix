@@ -10,7 +10,7 @@
         "<leader>f" = "Find (Menu)";
         "<leader>g" = "Git (Menu)";
         "<leader>l" = "LSP (Menu)";
-        "<leader>m" = "Markdown (Menu)";
+        "<leader>m" = "Multicursors (Menu)";
         "<leader>t" = "Terminal (Menu)";
       };
     };

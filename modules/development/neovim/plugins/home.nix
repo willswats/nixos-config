@@ -17,13 +17,12 @@
     ./illuminate.nix
     ./indent-blankline.nix
     ./mkdnflow.nix
-    ./vim-visual-multi.nix
+    ./multicursors.nix
     ./markdown-preview.nix
     ./dap.nix
     ./nvim-colorizer.nix
     ./inc-rename.nix
     ./venv-selector.nix
-    ./project-nvim.nix
     ./auto-session.nix
   ];
 
