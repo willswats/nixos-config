@@ -13,66 +13,6 @@
     Icon=dolphin-emu
   '';
 
-  # Setup controllers
-  xdg.configFile."SlippiOnline/Config/GCPadNew.ini" = {
-    text = ''
-      [GCPad1]
-      Device = evdev/0/DualSense Wireless Controller
-      Buttons/A = `Button 3`
-      Buttons/B = `Button 2`
-      Buttons/X = `Button 1`
-      Buttons/Y = `Button 0`
-      Buttons/Z = `Button 5`
-      Buttons/Start = `Button 9`
-      Main Stick/Up = `Axis 1-`
-      Main Stick/Down = `Axis 1+`
-      Main Stick/Left = `Axis 0-`
-      Main Stick/Right = `Axis 0+`
-      C-Stick/Up = `Axis 4-`
-      C-Stick/Down = `Axis 4+`
-      C-Stick/Left = `Axis 3-`
-      C-Stick/Right = `Axis 3+`
-      Triggers/L = `Button 6`
-      Triggers/R = `Button 7`
-      D-Pad/Up = `Axis 7-`
-      D-Pad/Down = `Axis 7+`
-      D-Pad/Left = `Axis 6-`
-      D-Pad/Right = `Axis 6+`
-      [GCPad2]
-      Device = evdev/0/Xbox 360 Wireless Receiver
-      Buttons/A = `Button 2`
-      Buttons/B = `Button 3`
-      Buttons/X = `Button 1`
-      Buttons/Y = `Button 0`
-      Buttons/Z = `Button 5`
-      Buttons/Start = `Button 7`
-      Main Stick/Up = `Axis 1-`
-      Main Stick/Down = `Axis 1+`
-      Main Stick/Left = `Axis 0-`
-      Main Stick/Right = `Axis 0-+`
-      Main Stick/Modifier/Range = 50.000000000000000
-      C-Stick/Up = `Axis 4-`
-      C-Stick/Down = `Axis 4+`
-      C-Stick/Left = `Axis 3-`
-      C-Stick/Right = `Axis 3-+`
-      C-Stick/Modifier/Range = 50.000000000000000
-      Triggers/L = `Axis 2-+`
-      Triggers/R = `Axis 5+`
-      D-Pad/Up = `Button 13`
-      D-Pad/Down = `Button 14`
-      D-Pad/Left = `Button 11`
-      D-Pad/Right = `Button 12`
-      Main Stick/Dead Zone = 50.000000000000000
-      C-Stick/Dead Zone = 50.000000000000000
-      [GCPad3]
-      Main Stick/Radius = 1.8526784551501365e-68
-      Microphone/Threshold = 3.7261370281373367e+235
-      D-Pad/Threshold = 1.8526784551501365e-68
-      [GCPad4]
-      Main Stick/Radius = 6.2197924154954527e-318
-    '';
-  };
-
   # Setup settings (set path to ISO, disable slippi replays, set audio backend and volume)
   xdg.configFile."SlippiOnline/Config/Dolphin.ini" = {
     text =
