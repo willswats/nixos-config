@@ -73,8 +73,8 @@
 
         # Nix Rebuild
         rsf = rebuildSwitchFlake.outPath;
-        prsf = "git -C ${nixosConfigDirectory} pull; ${rebuildSwitchFlake.outPath}";
-        fursf = "sudo nix flake update ${nixosConfigDirectory}; git -C ${nixosConfigDirectory} add flake.lock; ${rebuildSwitchFlake.outPath}";
+        rsfp = "git -C ${nixosConfigDirectory} pull; ${rebuildSwitchFlake.outPath}";
+        rsfu = "sudo nix flake update ${nixosConfigDirectory}; git -C ${nixosConfigDirectory} add flake.lock; ${rebuildSwitchFlake.outPath}";
 
         # Nix Shells
         nix-shell = "nix-shell --command fish";
