@@ -51,10 +51,10 @@
         '';
       };
     }
-    # Set shiftwidth for sql (default is 2)
+    # Set shiftwidth for sql and cs files (default is 2)
     {
       event = [ "FileType" ];
-      pattern = [ "sql" ];
+      pattern = [ "sql" "cs" ];
       callback = {
         __raw = ''
           function()

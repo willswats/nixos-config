@@ -19,7 +19,7 @@ in
           installRustc = true;
         };
         clangd.enable = true; # C, C++ 
-        omnisharp.enable = true; # C#
+        csharp-ls.enable = true; # C#
         nil-ls.enable = true; # Nix
         lua-ls.enable = true; # Lua 
         pyright.enable = true; # Python
