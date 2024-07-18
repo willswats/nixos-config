@@ -13,17 +13,17 @@
         shfmt.enable = true; # Bash
         sqlfluff = {
           enable = true; # SQL
-          withArgs = ''{ extra_args = { "--dialect", "postgres" } }'';
+          settings = ''{ extra_args = { "--dialect", "postgres" } }'';
         };
       };
       diagnostics = {
         sqlfluff = {
           enable = true; # SQL
-          withArgs = ''{ extra_args = { "--dialect", "postgres" } }'';
+          settings = ''{ extra_args = { "--dialect", "postgres" } }'';
         };
         markdownlint = {
           enable = true; # Markdown
-          withArgs = ''{ extra_args = { "--disable", "MD013" } }'';
+          settings = ''{ extra_args = { "--disable", "MD013" } }'';
         };
       };
     };
