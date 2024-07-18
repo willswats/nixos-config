@@ -1,17 +1,17 @@
 { ... }:
 
 {
-  programs.nixvim.plugins = {
-    which-key = {
+  programs.nixvim = {
+    plugins.which-key = {
       enable = true;
       registrations = {
-        "<leader>b" = "Buffers (Menu)";
-        "<leader>d" = "Debug (Menu)";
-        "<leader>f" = "Find (Menu)";
-        "<leader>g" = "Git (Menu)";
-        "<leader>l" = "LSP (Menu)";
-        "<leader>m" = "Multicursors (Menu)";
-        "<leader>t" = "Terminal (Menu)";
+        "<leader>b" = "Buffers";
+        "<leader>d" = "Debug";
+        "<leader>f" = "Find";
+        "<leader>g" = "Git";
+        "<leader>l" = "LSP";
+        "<leader>m" = "Multicursors";
+        "<leader>t" = "Terminal";
       };
     };
   };
