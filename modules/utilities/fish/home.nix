@@ -14,7 +14,6 @@
 
         codeDirectory = "~/Code";
         nixosConfigDirectory = "~/Code/nixos-config";
-        nixosShellsDirectory = "${nixosConfigDirectory}/shells";
 
         desktopHostName = globals.hostNames.desktop;
         laptopHostName = globals.hostNames.laptop;
@@ -71,19 +70,11 @@
         dlmp3 = "${ytDlp} -x --audio-format mp3";
         dlmp4 = "${ytDlp} -f mp4";
 
-        # Nix Rebuild
+        # Nix
+        nix-shell = "nix-shell --command fish";
         rsf = rebuildSwitchFlake.outPath;
         rsfp = "git -C ${nixosConfigDirectory} pull; ${rebuildSwitchFlake.outPath}";
         rsfu = "sudo nix flake update ${nixosConfigDirectory}; git -C ${nixosConfigDirectory} add flake.lock; ${rebuildSwitchFlake.outPath}";
-
-        # Nix Shells
-        nix-shell = "nix-shell --command fish";
-        nsnode = "nix-shell ${nixosShellsDirectory}/node.nix";
-        nspython = "nix-shell ${nixosShellsDirectory}/python.nix";
-        nsdotnet = "nix-shell ${nixosShellsDirectory}/dotnet.nix";
-        nsrust = "nix-shell ${nixosShellsDirectory}/rust.nix";
-        nsflutter = "nix-shell ${nixosShellsDirectory}/flutter.nix";
-        nshaskell = "nix-shell ${nixosShellsDirectory}/haskell.nix";
       };
     interactiveShellInit = ''
       # Hide fish greeting
