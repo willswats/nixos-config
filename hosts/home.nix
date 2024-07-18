@@ -13,7 +13,11 @@
     ../modules/development/neovim/home.nix
     ../modules/development/vscode/home.nix
     ../modules/development/lazygit/home.nix
-    ../modules/development/poetry/home.nix
+    ../modules/development/rust/home.nix
+    ../modules/development/dotnet/home.nix
+    ../modules/development/haskell/home.nix
+    ../modules/development/flutter/home.nix
+    ../modules/development/python/home.nix
     ../modules/development/unity/home.nix
     ../modules/utilities/firefox/home.nix
     ../modules/utilities/chromium/home.nix
@@ -42,7 +46,8 @@
     stateVersion = "23.05";
 
     packages = with pkgs; [
-      # GUI
+      # Utilities 
+      ## GUI
       bitwarden
       obs-studio
       gpu-screen-recorder-gtk
@@ -57,17 +62,21 @@
       spotify
       dropbox
       zotero
-      # CLI
+      ## CLI
       wget
       zip
       unar
       killall
-      ffmpeg
       fzf
       appimage-run
       trash-cli
       yt-dlp
+      # Development
       gh
+      nodePackages.nodejs
+      nodePackages.pnpm
+      nodePackages.live-server
+      godot_4
     ];
   };
 

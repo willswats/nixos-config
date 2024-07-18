@@ -11,6 +11,7 @@ in
     ../modules/system/plymouth
     ../modules/system/pipewire
     ../modules/system/printing
+    ../modules/development/dotnet
     ../modules/theme/gtk
     ../modules/theme/qt
     ../modules/theme/catppuccin
