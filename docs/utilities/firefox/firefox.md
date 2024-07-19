@@ -1,5 +1,15 @@
 # Firefox
 
+## Tridactyl
+
+```text
+ bind / fillcmdline find
+ bind ? fillcmdline find -?
+ bind n findnext 1
+ bind N findnext -1
+ bind <Space>h nohlsearch
+```
+
 ## Bitwarden
 
 - Ask to add login: Disabled
