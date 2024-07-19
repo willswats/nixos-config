@@ -153,6 +153,12 @@
               key = "K";
               action = "<Nop>";
             }
+            # Keep same copy contents when pasting over text
+            {
+              inherit mode;
+              key = "p";
+              action = "\"_dP";
+            }
           ];
 
         terminal =
