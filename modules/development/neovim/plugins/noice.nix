@@ -1,14 +1,39 @@
-{ ... }:
+{ config, ... }:
 
 {
-  programs.nixvim.plugins.noice = {
-    enable = true;
-    presets = {
-      bottom_search = false;
-      command_palette = true;
-      long_message_to_split = false;
-      inc_rename = true;
-      lsp_doc_border = true;
+  programs.nixvim = {
+    keymaps =
+      let
+        cr = "<CR>";
+        cmd = "<CMD>";
+
+        normal =
+          let
+            mode = "n";
+          in
+          [
+            {
+              inherit mode;
+              key = "<leader>fn";
+              action = "${cmd}NoiceTelescope${cr}";
+              options.desc = "Noice";
+            }
+          ];
+      in
+      config.nixvim.helpers.keymaps.mkKeymaps
+        {
+          options.silent = true;
+        }
+        (normal);
+    plugins.noice = {
+      enable = true;
+      presets = {
+        bottom_search = false;
+        command_palette = true;
+        long_message_to_split = false;
+        inc_rename = true;
+        lsp_doc_border = true;
+      };
     };
   };
 }
