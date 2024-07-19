@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
 
@@ -11,7 +11,6 @@
     nodePackages.eslint # javascript and typescript linter
     marksman # markdown lsp
     nodePackages.markdownlint-cli # markdown linter
-    rustup # provides rust-analyzer
   ];
 
   programs.helix = {
@@ -20,9 +19,8 @@
       theme = "catppuccin_mocha";
       editor = {
         bufferline = "multiple";
-        cursor-shape = {
-          insert = "bar";
-        };
+        cursor-shape.insert = "bar";
+        indent-guides.render = true;
       };
       keys = {
         normal = {
@@ -31,6 +29,7 @@
         };
         insert = {
           j.k = "normal_mode";
+          k.j = "normal_mode";
         };
       };
     };
