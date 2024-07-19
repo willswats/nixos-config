@@ -14,5 +14,10 @@
         "<leader>t" = "Terminal";
       };
     };
+    extraConfigLua = ''
+      require("which-key").setup({
+        preset = "helix",
+      })
+    '';
   };
 }
