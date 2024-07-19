@@ -69,7 +69,7 @@
             {
               inherit mode;
               key = "<leader>w";
-              action = "${ cmd}w!${ cr}";
+              action = "${cmd}w!${cr}";
               options. desc = "Write format";
             }
             {
