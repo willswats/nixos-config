@@ -75,7 +75,7 @@ in
             action = "implementation";
             desc = "Implementation";
           };
-          "<leader>lR" = {
+          "<leader>lr" = {
             action = "references";
             desc = "References";
           };
