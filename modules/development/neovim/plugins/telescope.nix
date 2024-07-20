@@ -14,6 +14,12 @@ in {
       settings.defaults = {
         prompt_prefix = "${icons.ui.Telescope} ";
         selection_caret = "${icons.ui.Forward} ";
+        # Exit Telescope in one key press
+        mappings.i."<esc>".__raw = ''
+          function(...)
+            return require("telescope.actions").close(...)
+          end
+        '';
       };
       keymaps =
         {
