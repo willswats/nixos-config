@@ -10,6 +10,7 @@
     defaultApplications = {
       "image/png" = [ "swayimg.desktop" ]; # jpg
       "image/jpeg" = [ "swayimg.desktop" ]; # png
+      "image/heif" = [ "swayimg.desktop" ]; # HEIC
       "image/webp" = [ "swayimg.desktop" ]; # webp
       "image/gif" = [ "swayimg.desktop" ]; # gif
       "image/svg+xml" = [ "swayimg.desktop" ]; # svg
