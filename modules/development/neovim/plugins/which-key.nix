@@ -14,7 +14,7 @@
     #         "<leader>t" = "Terminal";
     #       };
     #     }
-    # Not using the NixVim config for which-key until the module has been updated to with which-key v3 (can't disable icons or set preset)
+    # Not using the NixVim config for which-key until the module has been updated to work with which-key v3 (can't disable icons or set preset)
     # This issue needs to be fixed as well before using NixVim registrations: https://github.com/nix-community/nixvim/issues/1901
     extraPlugins = with pkgs.vimPlugins;[ which-key-nvim ];
     extraConfigLua = ''
