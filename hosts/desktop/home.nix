@@ -8,7 +8,7 @@
     ../../modules/games/r2modman/home.nix
     ../../modules/games/osu/home.nix
     ../../modules/games/gzdoom/home.nix
-    ../../modules/emulators/ishiiruka/home.nix
+    ../../modules/emulators/slippi/home.nix
     ../../modules/emulators/retroarch/home.nix
     ../../modules/emulators/yuzu/home.nix
   ];

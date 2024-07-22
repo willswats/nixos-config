@@ -633,6 +633,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_5": {
+      "locked": {
+        "lastModified": 1716769173,
+        "narHash": "sha256-7EXDb5WBw+d004Agt+JHC/Oyh/KTUglOaQ4MNjBbo5w=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "9ca3f649614213b2aaf5f1e16ec06952fe4c2632",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixvim": {
       "inputs": {
         "devshell": "devshell",
@@ -685,7 +701,26 @@
         "hyprlock": "hyprlock",
         "nixpkgs": "nixpkgs_4",
         "nixvim": "nixvim",
-        "nur": "nur"
+        "nur": "nur",
+        "slippi": "slippi"
+      }
+    },
+    "slippi": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_5"
+      },
+      "locked": {
+        "lastModified": 1721686199,
+        "narHash": "sha256-4rMu207y5HCLkRDbZXdFhFqAfDKxwCJ1r9UOsXmef4Q=",
+        "owner": "lytedev",
+        "repo": "slippi-nix",
+        "rev": "2b9673de8ec491be1c3ad8d23461b1fe5f2736b0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lytedev",
+        "repo": "slippi-nix",
+        "type": "github"
       }
     },
     "systems": {

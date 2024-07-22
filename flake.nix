@@ -29,6 +29,8 @@
     };
 
     catppuccin.url = "github:catppuccin/nix";
+
+    slippi.url = "github:lytedev/slippi-nix";
   };
 
   outputs =
@@ -38,6 +40,7 @@
     , nixvim
     , hyprland
     , catppuccin
+    , slippi
     , ...
     }@inputs: {
       nixosConfigurations =
@@ -119,6 +122,7 @@
                   nur.nixosModules.nur
                   hyprland.nixosModules.default
                   catppuccin.nixosModules.catppuccin
+                  slippi.nixosModules.default
                   {
                     home-manager = {
                       useGlobalPkgs = true;
@@ -131,6 +135,7 @@
                         nur.hmModules.nur
                         nixvim.homeManagerModules.nixvim
                         catppuccin.homeManagerModules.catppuccin
+                        slippi.homeManagerModules.default
                       ];
                     };
                   }
