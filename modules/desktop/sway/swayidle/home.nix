@@ -14,7 +14,7 @@
 
   services =
     let
-      swaylock = "${pkgs.swaylock-effects}/bin/swaylock";
+      swaylock = "${pkgs.swaylock}/bin/swaylock";
       swaymsg = "${pkgs.sway}/bin/swaymsg";
     in
     {

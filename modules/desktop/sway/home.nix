@@ -48,7 +48,7 @@
       xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
 
       fuzzel = "${pkgs.fuzzel}/bin/fuzzel";
-      swaylock = "${pkgs.swaylock-effects}/bin/swaylock";
+      swaylock = "${pkgs.swaylock}/bin/swaylock";
       waybar = "${pkgs.waybar}/bin/waybar";
 
       firefox = "${pkgs.firefox}/bin/firefox";
