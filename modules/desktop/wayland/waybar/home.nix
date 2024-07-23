@@ -29,6 +29,7 @@
           on-scroll-up = "";
           on-scroll-down = "";
           tooltip = false;
+          cursor = false;
         };
 
         pulseaudio = {
@@ -39,6 +40,7 @@
           on-scroll-up = "";
           on-scroll-down = "";
           tooltip = false;
+          cursor = false;
         };
 
         bluetooth = {
