@@ -10,10 +10,10 @@
     enableBashIntegration = true;
     enableFishIntegration = true;
     enableSshSupport = true;
-    defaultCacheTtl = 604800; # 1 week
-    maxCacheTtl = 604800; # 1 week
-    defaultCacheTtlSsh = 604800; # 1 week
-    maxCacheTtlSsh = 604800; # 1 week
+    defaultCacheTtl = 34560000; # 400 days
+    maxCacheTtl = 34560000; # 400 days
+    defaultCacheTtlSsh = 34560000; # 400 days
+    maxCacheTtlSsh = 34560000; # 400 days
     pinentryPackage = pkgs.pinentry-gnome3;
   };
 }
