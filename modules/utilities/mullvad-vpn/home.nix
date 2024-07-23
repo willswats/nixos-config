@@ -5,7 +5,7 @@
     text = ''
       {
            "preferredLocale": "system",
-           "autoConnect": false,
+           "autoConnect": true,
            "enableSystemNotifications": true,
            "monochromaticIcon": true,
            "startMinimized": true,
