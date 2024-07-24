@@ -1,4 +1,4 @@
-{ pkgs, host, globals, inputs, ... }:
+{ pkgs, host, globals, ... }:
 
 let
   user = globals.user;
@@ -22,10 +22,6 @@ in
     ../modules/utilities/virt-manager
     ../modules/utilities/docker
     ../modules/utilities/yacreader
-  ];
-
-  nixpkgs.overlays = [
-    inputs.nixpkgs-wayland.overlay
   ];
 
   time.timeZone = "Europe/London";

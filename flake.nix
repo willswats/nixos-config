@@ -9,8 +9,6 @@
       "https://yazi.cachix.org"
       # nix-community (neovim-nightly-overlay)
       "https://nix-community.cachix.org"
-      # nix-community (nixpkgs-wayland)
-      "https://nixpkgs-wayland.cachix.org"
     ];
     extra-trusted-public-keys = [
       # Hyprland
@@ -19,8 +17,6 @@
       "yazi.cachix.org-1:Dcdz63NZKfvUCbDGngQDAZq6kOroIrFoyO064uvLh8k="
       # nix-community (neovim-nightly-overlay)
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-      # nix-community (nixpkgs-wayland)
-      "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
     ];
   };
 
@@ -33,7 +29,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nixvim = {
       url = "github:nix-community/nixvim";
