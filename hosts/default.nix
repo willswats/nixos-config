@@ -6,7 +6,7 @@ in
 {
   imports = [
     ../modules/desktop/sway
-    ../modules/system/sddm
+    ../modules/system/greetd
     ../modules/system/console
     ../modules/system/plymouth
     ../modules/system/pipewire
