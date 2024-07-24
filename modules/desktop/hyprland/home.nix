@@ -241,14 +241,6 @@
           "$mod alt shift, l, movegroupwindow, f"
           "$mod alt shift, h, movegroupwindow, b"
 
-          # Could remove this by using movewindoworgroup instead of movewindow below, however,
-          # both are currently buggy, therefore, it's on a seperate key for now
-          # https://github.com/hyprwm/Hyprland/issues/4205
-          "$mod, Left, moveintogroup, l"
-          "$mod, Right, moveintogroup, r"
-          "$mod, Up, moveintogroup, u"
-          "$mod, Down, moveintogroup, d"
-
           "$mod, space, cyclenext" # To select floating windows
 
           "$mod, h, movefocus, l"
@@ -256,10 +248,10 @@
           "$mod, k, movefocus, u"
           "$mod, j, movefocus, d"
 
-          "$mod shift, h, movewindow, l"
-          "$mod shift, l, movewindow, r"
-          "$mod shift, k, movewindow, u"
-          "$mod shift, j, movewindow, d"
+          "$mod shift, h, movewindoworgroup, l"
+          "$mod shift, l, movewindoworgroup, r"
+          "$mod shift, k, movewindoworgroup, u"
+          "$mod shift, j, movewindoworgroup, d"
 
           "$mod, 1, workspace, 1"
           "$mod, 2, workspace, 2"
