@@ -8,6 +8,7 @@
     ../../modules/games/r2modman/home.nix
     ../../modules/games/osu/home.nix
     ../../modules/games/gzdoom/home.nix
+    ../../modules/games/airshipper/home.nix
     ../../modules/emulators/slippi/home.nix
     ../../modules/emulators/retroarch/home.nix
     ../../modules/emulators/yuzu/home.nix
@@ -20,7 +21,6 @@
     rpcs3
     pcsx2
     # Launchers 
-    (callPackage ../../pkgs/airshipper { })
     prismlauncher
     heroic
     # Games
