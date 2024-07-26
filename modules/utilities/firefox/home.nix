@@ -245,6 +245,10 @@
                 url = "https://isthereanydeal.com";
               }
               {
+                name = "Itch";
+                url = "https://itch.io/";
+              }
+              {
                 name = "osu!";
                 url = "https://osu.ppy.sh/home";
               }
