@@ -24,6 +24,8 @@ in
     ../modules/utilities/yacreader
   ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   time.timeZone = "Europe/London";
 
   i18n = {
