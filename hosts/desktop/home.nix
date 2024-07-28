@@ -16,6 +16,7 @@
 
   home.packages = with pkgs; [
     # Utilities
+    alsa-scarlett-gui
     mangohud
     # Emulators
     rpcs3
