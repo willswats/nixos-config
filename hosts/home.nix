@@ -23,6 +23,7 @@
     ../modules/utilities/chromium/home.nix
     ../modules/utilities/mpv/home.nix
     ../modules/utilities/oculante/home.nix
+    ../modules/utilities/gpu-screen-recorder-gtk/home.nix
     ../modules/utilities/mullvad-vpn/home.nix
     ../modules/utilities/vesktop/home.nix
     ../modules/utilities/fish/home.nix
@@ -50,7 +51,6 @@
       ## GUI
       bitwarden
       obs-studio
-      gpu-screen-recorder-gtk
       gimp
       krita
       shotcut
