@@ -51,7 +51,7 @@ in {
             }
           ];
       in
-      config.nixvim.helpers.keymaps.mkKeymaps
+      config.lib.nixvim.keymaps.mkKeymaps
         {
           options.silent = true;
         }
