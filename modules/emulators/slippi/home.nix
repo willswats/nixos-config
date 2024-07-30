@@ -29,7 +29,7 @@ let
   '';
 in
 {
-  slippi.launcher =
+  slippi-launcher =
     let
       isoPath = "${globals.directories.drive}/Games/Emulation/ROMs/GC/Super Smash Bros. Melee (USA) (En,Ja) (Rev 2).nkit.iso";
     in
@@ -39,13 +39,6 @@ in
       isoPath = isoPath;
       rootSlpPath = ""; # The folder where your SLP replays should be saved
       spectateSlpPath = ""; # The folder where spectated games should be saved
-      # Manually set the Ishiiruka and Ishiiruka-Playback version if needed
-      # https://github.com/project-slippi/Ishiiruka/releases
-      # netplayVersion = "";
-      # netplayHash = "";
-      # https://github.com/project-slippi/Ishiiruka-Playback/releases
-      # playbackVersion = "";
-      # playbackHash = "";
     };
 
   # Setup controller profiles
