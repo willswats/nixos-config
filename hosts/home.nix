@@ -56,6 +56,7 @@
       shotcut
       deluge
       popsicle
+      # resources # collision with PCSX2
       freetube
       miru
       spotify
