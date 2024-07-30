@@ -34,30 +34,29 @@
       #       desc = "Terminal";
       #     }
       #   ];
-      # };
-      # Not using the NixVim config for which-key until the module has been updated to have more which-key v3 options (can't disable icons or set preset)
-      extraPlugins = with pkgs.vimPlugins;[ which-key-nvim ];
-      extraConfigLua = ''
-        local wk = require("which-key")
-
-        wk.setup({
-          preset = "helix",
-          icons = {
-            mappings = false,
-            rules = false,
-          }
-        })
-
-        wk.add({
-          { "<leader>b", group = "Buffers" },
-          { "<leader>d", group = "Debug" },
-          { "<leader>f", group = "Find" },
-          { "<leader>g", group = "Git" },
-          { "<leader>l", group = "LSP" },
-          { "<leader>m", group = "Multicursors" },
-          { "<leader>t", group = "Terminal" },
-        })
-      '';
     };
+    # Not using the NixVim config for which-key until the module has been updated to have more which-key v3 options (can't disable icons or set preset)
+    extraPlugins = with pkgs.vimPlugins;[ which-key-nvim ];
+    extraConfigLua = ''
+      local wk = require("which-key")
+
+      wk.setup({
+        preset = "helix",
+        icons = {
+          mappings = false,
+          rules = false,
+        }
+      })
+
+      wk.add({
+        { "<leader>b", group = "Buffers" },
+        { "<leader>d", group = "Debug" },
+        { "<leader>f", group = "Find" },
+        { "<leader>g", group = "Git" },
+        { "<leader>l", group = "LSP" },
+        { "<leader>m", group = "Multicursors" },
+        { "<leader>t", group = "Terminal" },
+      })
+    '';
   };
 }
