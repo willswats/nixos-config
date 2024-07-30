@@ -24,6 +24,7 @@ in
     ../modules/utilities/yacreader
   ];
 
+  # 6.10 is needed for Vocaster One drivers
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   time.timeZone = "Europe/London";
