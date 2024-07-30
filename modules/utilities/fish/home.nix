@@ -25,7 +25,7 @@
         # Rebuild command that's dependent upon the host name for choosing the flake
         rebuildSwitchFlake = pkgs.writeShellScript "rebuildSwitchFlake.sh" ''
           rebuild_switch_command() {
-            sudo nixos-rebuild switch --accept-flake-config --flake ${nixosConfigDirectory}"$1"
+            sudo nixos-rebuild switch --option eval-cache false --accept-flake-config --flake ${nixosConfigDirectory}"$1"
           }
 
           rebuild_switch_flake() {
