@@ -173,18 +173,6 @@
                 name = "Google Play Books";
                 url = "https://play.google.com/books";
               }
-              {
-                name = "GitHub";
-                url = "https://github.com/";
-              }
-              {
-                name = "Lemmy";
-                url = "https://lemmy.world";
-              }
-              {
-                name = "LinkedIn";
-                url = "https://www.linkedin.com/";
-              }
             ];
           }
           {
@@ -212,6 +200,24 @@
               }
             ];
           }
+          {
+            name = "Social";
+            bookmarks = [
+              {
+                name = "GitHub";
+                url = "https://github.com/";
+              }
+              {
+                name = "Lemmy";
+                url = "https://lemmy.world";
+              }
+              {
+                name = "LinkedIn";
+                url = "https://www.linkedin.com/";
+              }
+            ];
+          }
+
           {
             name = "Development";
             bookmarks = [
