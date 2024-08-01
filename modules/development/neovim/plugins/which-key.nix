@@ -2,39 +2,39 @@
 
 {
   programs.nixvim = {
-    plugins.which-key = {
-      enable = true;
-      #   settings.spec = [
-      #     {
-      #       __unkeyed-1 = "<leader>b";
-      #       desc = "Buffers";
-      #     }
-      #     {
-      #       __unkeyed-1 = "<leader>d";
-      #       desc = "Debug";
-      #     }
-      #     {
-      #       __unkeyed-1 = "<leader>f";
-      #       desc = "Find";
-      #     }
-      #     {
-      #       __unkeyed-1 = "<leader>g";
-      #       desc = "Git";
-      #     }
-      #     {
-      #       __unkeyed-1 = "<leader>l";
-      #       desc = "LSP";
-      #     }
-      #     {
-      #       __unkeyed-1 = "<leader>m";
-      #       desc = "Multicursors";
-      #     }
-      #     {
-      #       __unkeyed-1 = "<leader>t";
-      #       desc = "Terminal";
-      #     }
-      #   ];
-    };
+    # plugins.which-key = {
+    # enable = true;
+    #   settings.spec = [
+    #     {
+    #       __unkeyed-1 = "<leader>b";
+    #       desc = "Buffers";
+    #     }
+    #     {
+    #       __unkeyed-1 = "<leader>d";
+    #       desc = "Debug";
+    #     }
+    #     {
+    #       __unkeyed-1 = "<leader>f";
+    #       desc = "Find";
+    #     }
+    #     {
+    #       __unkeyed-1 = "<leader>g";
+    #       desc = "Git";
+    #     }
+    #     {
+    #       __unkeyed-1 = "<leader>l";
+    #       desc = "LSP";
+    #     }
+    #     {
+    #       __unkeyed-1 = "<leader>m";
+    #       desc = "Multicursors";
+    #     }
+    #     {
+    #       __unkeyed-1 = "<leader>t";
+    #       desc = "Terminal";
+    #     }
+    #   ];
+    # };
     # Not using the NixVim config for which-key until the module has been updated to have more which-key v3 options (can't disable icons or set preset)
     extraPlugins = with pkgs.vimPlugins;[ which-key-nvim ];
     extraConfigLua = ''
