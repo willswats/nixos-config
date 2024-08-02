@@ -5,10 +5,18 @@
     extra-substituters = [
       # Hyprland
       "https://hyprland.cachix.org"
+      # Yazi
+      "https://yazi.cachix.org"
+      # nix-community (neovim-nightly-overlay)
+      "https://nix-community.cachix.org"
     ];
     extra-trusted-public-keys = [
       # Hyprland
       "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+      # Yazi
+      "yazi.cachix.org-1:Dcdz63NZKfvUCbDGngQDAZq6kOroIrFoyO064uvLh8k="
+      # nix-community (neovim-nightly-overlay)
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
     ];
   };
 
@@ -21,10 +29,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    yazi.url = "github:sxyazi/yazi";
+
+    catppuccin.url = "github:catppuccin/nix";
 
     hyprland = {
       type = "git";
@@ -37,8 +50,6 @@
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    catppuccin.url = "github:catppuccin/nix";
 
     slippi.url = "github:lytedev/slippi-nix";
   };

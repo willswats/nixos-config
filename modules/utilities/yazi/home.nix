@@ -1,4 +1,4 @@
-{ globals, pkgs, ... }:
+{ globals, pkgs, inputs, ... }:
 
 {
   home.packages = with pkgs; [ ripdrag ];
@@ -9,6 +9,7 @@
     in
     {
       enable = true;
+      package = inputs.yazi.packages.${pkgs.system}.default;
       catppuccin.enable = true;
       enableBashIntegration = true;
       enableFishIntegration = true;
