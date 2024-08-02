@@ -236,10 +236,10 @@
           "$mod shift, tab, lockactivegroup, toggle"
           "$mod, o, moveoutofgroup"
 
-          "$mod alt, l, changegroupactive, f"
-          "$mod alt, h, changegroupactive, b"
-          "$mod alt shift, l, movegroupwindow, f"
-          "$mod alt shift, h, movegroupwindow, b"
+          "$mod shift, j, changegroupactive, b"
+          "$mod shift, k, changegroupactive, f"
+          "$mod alt, j, movegroupwindow, b"
+          "$mod alt, k, movegroupwindow, f"
 
           "$mod, space, cyclenext" # To select floating windows
 
