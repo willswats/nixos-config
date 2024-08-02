@@ -166,6 +166,10 @@
             name = "Media";
             bookmarks = [
               {
+                name = "MALSync PWA";
+                url = "https://malsync.moe/pwa";
+              }
+              {
                 name = "ChatReplay";
                 url = "https://chatreplay.stream/subscriptions";
               }
