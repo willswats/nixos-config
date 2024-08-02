@@ -36,7 +36,6 @@
     ../modules/utilities/onlyoffice/home.nix
     ../modules/utilities/streamlink-twitch-gui/home.nix
     ../modules/utilities/hakuneko/home.nix
-    ../modules/utilities/yacreader/home.nix
   ];
 
   programs.home-manager.enable = true;
