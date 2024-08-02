@@ -56,6 +56,7 @@
       popsicle
       # resources # collision with PCSX2
       freetube
+      miru
       spotify
       dropbox
       zotero
