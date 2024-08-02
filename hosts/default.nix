@@ -7,7 +7,6 @@ in
   imports = [
     ../modules/desktop/sway
     ../modules/system/greetd
-    ../modules/system/console
     ../modules/system/plymouth
     ../modules/system/pipewire
     ../modules/system/printing
@@ -43,7 +42,10 @@ in
     };
   };
 
-  console.keyMap = "uk";
+  console = {
+    keyMap = "uk";
+    catppuccin.enable = true;
+  };
 
   # Networking
   networking = {
@@ -54,6 +56,10 @@ in
   # Enable bluetooth 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
+
+  # Set location provider
+  services.geoclue2.enable = true;
+  location.provider = "geoclue2";
 
   # Enable polkit
   security.polkit.enable = true;
