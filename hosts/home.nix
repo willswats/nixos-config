@@ -62,8 +62,7 @@
       zotero
       ## CLI
       wget
-      zip
-      unar
+      ouch
       killall
       appimage-run
       trash-cli
