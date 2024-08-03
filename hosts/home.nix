@@ -65,7 +65,6 @@
       zip
       unar
       killall
-      fzf
       appimage-run
       trash-cli
       yt-dlp

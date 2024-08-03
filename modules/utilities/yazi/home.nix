@@ -1,7 +1,10 @@
 { globals, pkgs, inputs, ... }:
 
 {
-  home.packages = with pkgs; [ ripdrag ];
+  home.packages = with pkgs; [
+    ripdrag
+    fzf # Mapped to Z
+  ];
 
   programs.yazi =
     let
