@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    ripdrag
+    _7zz # Used for extraction
     fzf # Mapped to Z
   ];
 
