@@ -5,9 +5,10 @@
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;
-    extraCompatPackages = with pkgs; [
-      proton-ge-bin
-    ];
+    # Not using this, because when proton-ge-bin updates, all games set with it are reset to no proton
+    # extraCompatPackages = with pkgs; [
+    #   proton-ge-bin
+    # ];
   };
 
   # TF2 is currently broken on Linux and this is needed to fix it.

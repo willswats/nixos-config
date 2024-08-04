@@ -18,6 +18,8 @@
     # Utilities
     alsa-scarlett-gui
     mangohud
+    protonplus
+    protontricks
     # Emulators
     rpcs3
     pcsx2
