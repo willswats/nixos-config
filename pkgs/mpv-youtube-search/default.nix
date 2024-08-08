@@ -8,7 +8,7 @@ stdenvNoCC.mkDerivation rec {
     owner = "willswats";
     repo = "mpv-youtube-search";
     rev = "v${version}";
-    sha256 = "sha256-KwfEgZDKol9YBPbCF1KxGoaHTJgKlioZfhTFrKT0OTY=";
+    sha256 = "sha256-LD3uhE0uELlOZlSbWe2+sqozqOmfRY4m75Cxu3LgUaw=";
   };
 
   dontBuild = true;
