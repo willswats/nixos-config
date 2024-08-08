@@ -77,13 +77,15 @@
         w = "script-binding webtorrent/toggle-info";
 
         # mpv-youtube-search
-        "Alt+s" = "script-binding youtube_search_replace";
-        "Alt+a" = "script-binding youtube_search_append";
-        "Alt+r" = "script-binding search_results_update";
+        "Alt+s" = "script-binding youtube_search/youtube_search_replace";
+        "Alt+S" = "script-binding youtube_search/youtube_music_search_replace";
+        "Alt+a" = "script-binding youtube_search/youtube_search_append";
+        "Alt+A" = "script-binding youtube_search/youtube_music_search_append";
+        "Alt+r" = "script-binding youtube_search/search_results_update";
 
         # paste
-        "Ctrl+v" = "script-binding paste";
-        "Ctrl+Shift+v" = "script-binding paste_into_playlist";
+        "Ctrl+v" = "script-binding paste/paste";
+        "Ctrl+Shift+v" = "script-binding paste/paste_into_playlist";
       };
     scripts = with pkgs; [
       (callPackage ../../../pkgs/mpv-youtube-search { })
