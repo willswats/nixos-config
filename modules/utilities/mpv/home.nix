@@ -86,14 +86,7 @@
         "Ctrl+Shift+v" = "script-binding paste_into_playlist";
       };
     scripts = with pkgs; [
-      (callPackage ../../../pkgs/mpvScripts/mpv-user-input { })
-      (callPackage ../../../pkgs/mpvScripts/mpv-youtube-search {
-        mpv-user-input = {
-          src = {
-            outPath = (callPackage ../../../pkgs/mpvScripts/mpv-user-input { });
-          };
-        };
-      })
+      (callPackage ../../../pkgs/mpvScripts/mpv-youtube-search { })
       (callPackage ../../../pkgs/mpvScripts/memo { })
       mpvScripts.uosc # Proximity-based UI
       mpvScripts.thumbfast # Required for thumbnails in uosc

@@ -1,21 +1,15 @@
-{ lib, stdenvNoCC, fetchFromGitHub, mpv-user-input }:
+{ lib, stdenvNoCC, fetchFromGitHub }:
 
 stdenvNoCC.mkDerivation rec {
   pname = "mpv-youtube-search";
-  version = "unstable-2022-11-20";
+  version = "1.0.0";
 
   src = fetchFromGitHub {
     owner = "willswats";
     repo = "mpv-youtube-search";
-    rev = "9701c02d450c4cec53996b815764e25a76659dff";
-    name = pname;
-    sha256 = "sha256-kJcPG+lTA/CG0yGU8Ld9W3BkZclRdzk8u7y6VpovSP0=";
+    rev = "v${version}";
+    sha256 = "sha256-BfWFwRdV4V+I2RX9TE//+g0SJM5V+NV/L906Doz+2c4=";
   };
-
-  postPatch = ''
-    substituteInPlace youtube-search.lua \
-      --replace "~~/script-modules/" "${mpv-user-input.src.outPath}/share/mpv/script-modules/"
-  '';
 
   dontBuild = true;
 
