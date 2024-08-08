@@ -10,6 +10,8 @@
       no-input-default-bindings = ""; # Disable default bindings, see https://github.com/mpv-player/mpv/blob/master/etc/input.conf for defaults
       screenshot-directory = "~/Pictures"; # Screenshot dir
       watch-later-dir = "${globals.directories.drive}/.mpv/watch_later/"; # The directory in which to store the "watch later" temporary files.
+      osd-font-size = 40;
+      sub-font-size = 40;
       osd-bar = "no"; # Replaced by uosc
       border = "no"; # Replaced by uosc
     };
@@ -30,6 +32,10 @@
 
         z = "add sub-delay -0.1";
         x = "add sub-delay +0.1";
+        Z = "add sub-scale +0.1";
+        X = "add sub-scale -0.1";
+        "Ctrl+u" = "add sub-pos -1";
+        "Ctrl+d" = "add sub-pos +1";
 
         "`" = "script-binding console/enable";
 
