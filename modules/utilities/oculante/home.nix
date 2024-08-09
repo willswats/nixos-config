@@ -8,9 +8,11 @@
   xdg.mimeApps = {
     defaultApplications = {
       "image/png" = [ "oculante.desktop" ]; # jpg
+      "image/jxl" = [ "oculante.desktop" ]; # jxl
       "image/jpeg" = [ "oculante.desktop" ]; # png
       "image/heif" = [ "oculante.desktop" ]; # HEIC
       "image/webp" = [ "oculante.desktop" ]; # webp
+      "image/avif" = [ "oculante.desktop" ]; # avif
       "image/svg" = [ "oculante.desktop" ]; # svg
       "image/gif" = [ "oculante.desktop" ]; # gif
     };
