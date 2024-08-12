@@ -62,6 +62,7 @@
       zotero
       ## CLI
       wget
+      ffmpeg
       ouch
       killall
       appimage-run
