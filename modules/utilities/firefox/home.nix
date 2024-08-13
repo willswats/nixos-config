@@ -381,6 +381,10 @@
                 name = "Spotify Dedup";
                 url = "https://spotify-dedup.com/";
               }
+              {
+                name = "LibreSpeed";
+                url = "https://librespeed.org/";
+              }
             ];
           }
         ];
