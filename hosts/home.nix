@@ -57,6 +57,7 @@
       # resources # collision with PCSX2
       freetube
       miru
+      yacreader
       spotify
       dropbox
       zotero
