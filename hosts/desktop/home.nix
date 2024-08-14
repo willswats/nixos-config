@@ -27,7 +27,6 @@
     heroic
     # Games
     tetrio-desktop
-    nxengine-evo
   ];
 
   wayland.windowManager.hyprland.settings.monitor =
