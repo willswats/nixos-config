@@ -26,6 +26,7 @@
     prismlauncher
     heroic
     # Games
+    tetrio-desktop
     nxengine-evo
   ];
 

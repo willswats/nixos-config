@@ -263,11 +263,6 @@
                 url = "https://osu.ppy.sh/home";
               }
               {
-                name = "TETR.IO";
-                url =
-                  "https://tetr.io/";
-              }
-              {
                 name = "lichess.org";
                 url = "https://lichess.org/";
               }
