@@ -31,12 +31,6 @@
 
   programs.firefox = {
     enable = true;
-    package = pkgs.firefox.override {
-      nativeMessagingHosts = [
-        # Tridactyl native connector
-        pkgs.tridactyl-native
-      ];
-    };
     profiles.default = {
       id = 0;
       # Find extensions here: https://nur.nix-community.org/repos/rycee/
@@ -47,7 +41,7 @@
         consent-o-matic
         # QoL
         darkreader
-        tridactyl
+        vimium
         mal-sync
         bitwarden
         translate-web-pages
