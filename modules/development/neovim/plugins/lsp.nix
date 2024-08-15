@@ -48,6 +48,7 @@ in
         jsonls.enable = true; # JSON
         tsserver.enable = true; # TypeScript
         eslint.enable = true; # JavaScript Linter
+        svelte.enable = true; # Svelte
       };
       capabilities = capabilities;
       keymaps = {
