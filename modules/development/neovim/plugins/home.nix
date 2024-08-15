@@ -4,6 +4,7 @@
   imports = [
     # Language-related
     ./lsp.nix
+    ./treesitter.nix
     ./nvim-cmp.nix
     ./none-ls.nix
     ./inc-rename.nix
@@ -32,7 +33,6 @@
   ];
 
   programs.nixvim.plugins = {
-    treesitter.enable = true;
     comment.enable = true;
     nvim-autopairs.enable = true;
     ts-autotag.enable = true;
