@@ -266,6 +266,14 @@
             name = "Downloads";
             bookmarks = [
               {
+                name = "1337x";
+                url = "https://1337x.to/home/";
+              }
+              {
+                name = "vadapav.mov";
+                url = "https://vadapav.mov/";
+              }
+              {
                 name = "Nyaa";
                 url = "https://nyaa.si/";
               }
