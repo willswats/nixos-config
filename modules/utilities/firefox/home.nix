@@ -196,6 +196,10 @@
                 name = "ProtonDB";
                 url = "https://www.protondb.com/";
               }
+              {
+                name = "PCPartPicker";
+                url = "https://pcpartpicker.com/";
+              }
             ];
           }
           {
