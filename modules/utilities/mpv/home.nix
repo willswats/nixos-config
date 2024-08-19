@@ -73,6 +73,12 @@
         n = "script-binding uosc/next;";
         p = "script-binding uosc/prev;";
 
+        # memo
+        h = "script-binding memo-history";
+        H = "script-binding memo-log"; # To log history manually
+        "Alt+RIGHT" = "script-binding memo-next"; # Next history page
+        "Alt+LEFT" = "script-binding memo-prev"; # Prev history page
+
         # webtorrent-mpv-hook
         w = "script-binding webtorrent/toggle-info";
 
@@ -88,7 +94,8 @@
         "Ctrl+Shift+v" = "script-binding paste/paste_into_playlist";
       };
     scripts = with pkgs; [
-      (callPackage ../../../pkgs/mpv-youtube-search { })
+      (callPackage ../../../pkgs/mpvScripts/mpv-youtube-search { })
+      (callPackage ../../../pkgs/mpvScripts/memo { })
       mpvScripts.uosc # Proximity-based UI
       mpvScripts.thumbfast # Required for thumbnails in uosc
       mpvScripts.mpris # Allows control of the player using standard media keys
@@ -101,6 +108,10 @@
       };
       sponsorblock = {
         skip_categories = "sponsor,interaction,selfpromo";
+      };
+      memo = {
+        enabled = "no"; # Manual history
+        history_path = "${globals.directories.drive}/.mpv/memo.log"; # Where the history is stored
       };
       webtorrent = {
         path = "${globals.directories.home}/Downloads/"; # Path to save downloaded files in. Can be set to "memory" to store all files in RAM.
