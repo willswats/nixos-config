@@ -75,7 +75,6 @@
 
         # memo
         h = "script-binding memo-history";
-        H = "script-binding memo-log"; # To log history manually
         "Alt+RIGHT" = "script-binding memo-next"; # Next history page
         "Alt+LEFT" = "script-binding memo-prev"; # Prev history page
 
@@ -95,12 +94,12 @@
       };
     scripts = with pkgs; [
       (callPackage ../../../pkgs/mpvScripts/mpv-youtube-search { })
-      (callPackage ../../../pkgs/mpvScripts/memo { })
       mpvScripts.uosc # Proximity-based UI
       mpvScripts.thumbfast # Required for thumbnails in uosc
       mpvScripts.mpris # Allows control of the player using standard media keys
       mpvScripts.sponsorblock # Script for mpv to skip sponsored segments of YouTube videos
       mpvScripts.webtorrent-mpv-hook # Adds a hook that allows mpv to stream torrents 
+      mpvScripts.memo # Remember history
     ];
     scriptOpts = {
       thumbfast = {
@@ -110,7 +109,6 @@
         skip_categories = "sponsor,interaction,selfpromo";
       };
       memo = {
-        enabled = "no"; # Manual history
         history_path = "${globals.directories.drive}/.mpv/memo.log"; # Where the history is stored
       };
       webtorrent = {
