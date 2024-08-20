@@ -10,6 +10,7 @@ in
     ../modules/system/plymouth
     ../modules/system/pipewire
     ../modules/system/printing
+    ../modules/system/bluetooth
     ../modules/development/dotnet
     ../modules/theme/gtk
     ../modules/theme/qt
@@ -52,14 +53,6 @@ in
     hostName = host.hostName;
     networkmanager.enable = true;
   };
-
-  # Enable bluetooth 
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
-
-  # Set location provider
-  services.geoclue2.enable = true;
-  location.provider = "geoclue2";
 
   # Enable polkit
   security.polkit.enable = true;
