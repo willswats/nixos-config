@@ -104,6 +104,7 @@
       mpvScripts.memo # Remember history
       mpvScripts.autosubsync-mpv # Auto sync subtitles
       mpvScripts.webtorrent-mpv-hook # Adds a hook that allows mpv to stream torrents 
+      mpvScripts.autoload # Adds files to the mpv playlist
     ];
     scriptOpts = {
       thumbfast = {
