@@ -69,14 +69,17 @@
         i = "script-binding uosc/items"; # Opens playlist menu when playlist exists, or open-file menu otherwise 
         s = "script-binding uosc/shuffle; ${uoscFlashElementsControls}";
         c = "script-binding uosc/subtitles";
-        r = "script-binding uosc/stream-quality";
+        v = "script-binding uosc/stream-quality";
         n = "script-binding uosc/next;";
         p = "script-binding uosc/prev;";
 
         # memo
-        h = "script-binding memo-history";
-        "Alt+RIGHT" = "script-binding memo-next"; # Next history page
-        "Alt+LEFT" = "script-binding memo-prev"; # Prev history page
+        h = "script-binding memo/memo-history";
+        "Alt+RIGHT" = "script-binding memo/memo-next"; # Next history page
+        "Alt+LEFT" = "script-binding memo/memo-prev"; # Prev history page
+
+        # autosubsync
+        C = "script-binding autosubsync/autosubsync-menu";
 
         # webtorrent-mpv-hook
         w = "script-binding webtorrent/toggle-info";
@@ -98,8 +101,9 @@
       mpvScripts.thumbfast # Required for thumbnails in uosc
       mpvScripts.mpris # Allows control of the player using standard media keys
       mpvScripts.sponsorblock # Script for mpv to skip sponsored segments of YouTube videos
-      mpvScripts.webtorrent-mpv-hook # Adds a hook that allows mpv to stream torrents 
       mpvScripts.memo # Remember history
+      mpvScripts.autosubsync-mpv # Auto sync subtitles
+      mpvScripts.webtorrent-mpv-hook # Adds a hook that allows mpv to stream torrents 
     ];
     scriptOpts = {
       thumbfast = {
