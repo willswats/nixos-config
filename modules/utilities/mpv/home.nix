@@ -79,7 +79,7 @@
         "Alt+LEFT" = "script-binding memo/memo-prev"; # Prev history page
 
         # autosubsync
-        C = "script-binding autosubsync/autosubsync-menu";
+        C = "script-binding autosubsync-menu";
 
         # webtorrent-mpv-hook
         w = "script-binding webtorrent/toggle-info";
