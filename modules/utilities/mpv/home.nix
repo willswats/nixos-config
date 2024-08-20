@@ -53,10 +53,10 @@
         l = "no-osd cycle-values loop-playlist yes no; ${uoscFlashElementsControls}";
         L = "no-osd cycle-values loop-file yes no; ${uoscFlashElementsControls}";
 
-        RIGHT = "seek 1 exact; ${uoscFlashTimeline}";
-        LEFT = "seek -1 exact; ${uoscFlashTimeline}";
-        "Shift+RIGHT" = "seek 5 exact; ${uoscFlashTimeline}";
-        "Shift+LEFT" = "seek -5 exact; ${uoscFlashTimeline}";
+        RIGHT = "seek 5 exact; ${uoscFlashTimeline}";
+        LEFT = "seek -5 exact; ${uoscFlashTimeline}";
+        "Shift+RIGHT" = "seek 1 exact; ${uoscFlashTimeline}";
+        "Shift+LEFT" = "seek -1 exact; ${uoscFlashTimeline}";
         "Ctrl+RIGHT" = "seek 30; ${uoscFlashTimeline}";
         "Ctrl+LEFT" = "seek -30; ${uoscFlashTimeline}";
 
