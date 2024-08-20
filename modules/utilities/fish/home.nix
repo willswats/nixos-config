@@ -9,7 +9,7 @@
     shellAliases =
       let
         driveDir = globals.directories.drive;
-        notebookDirectory = "${driveDir}/Work/Notebook";
+        notebookDirectory = "${driveDir}/Notebook";
         universityDirectory = "${driveDir}/Work/Education/University";
 
         codeDirectory = "~/Code";
