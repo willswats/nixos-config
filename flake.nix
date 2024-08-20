@@ -137,7 +137,6 @@
                   inherit inputs globals host;
                 };
                 modules = [
-                  ./hosts
                   ./hosts/desktop
                   home-manager.nixosModules.home-manager
                   nur.nixosModules.nur
@@ -179,7 +178,6 @@
                 inherit inputs globals host;
               };
               modules = [
-                ./hosts
                 ./hosts/laptop
                 home-manager.nixosModules.home-manager
                 nur.nixosModules.nur
