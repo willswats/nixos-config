@@ -66,6 +66,7 @@
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
+      rclone = "${pkgs.rclone}/bin/rclone";
       autotiling = "${pkgs.autotiling}/bin/autotiling";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
@@ -313,6 +314,10 @@
             always = false;
           }
           # Misc
+          {
+            command = "${rclone} mount --vfs-cache-mode writes Dropbox:Entertainment ~/Entertainment/";
+            always = false;
+          }
           {
             command = "${xrandr} --output ${monitorCenter} --primary"; # Ensures that xwindows (especially steam games) use the center monitor
             always = false;

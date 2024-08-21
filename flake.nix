@@ -73,7 +73,7 @@
             drive = "/home/${user}/Dropbox";
             flake = "/home/${user}/Code/nixos-config";
           };
-          directoriesToCreate = "~/Downloads ~/Pictures ~/Videos ~/Code";
+          directoriesToCreate = "~/Downloads ~/Pictures ~/Videos ~/Code ~/Entertainment";
           hostNames = {
             desktop = "${user}-desktop";
             laptop = "${user}-laptop";

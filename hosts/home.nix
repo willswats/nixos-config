@@ -60,6 +60,7 @@
       freetube
       spotify
       dropbox
+      rclone
       zotero
       ## CLI
       wget
