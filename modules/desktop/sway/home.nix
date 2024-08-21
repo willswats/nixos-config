@@ -315,7 +315,7 @@
           }
           # Misc
           {
-            command = "${rclone} mount --vfs-cache-mode writes Dropbox:Entertainment ~/Entertainment/";
+            command = "${rclone} mount --allow-other --vfs-cache-mode writes Dropbox:Entertainment ~/Entertainment/";
             always = false;
           }
           {
