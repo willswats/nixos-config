@@ -23,7 +23,6 @@
     ../modules/utilities/chromium/home.nix
     ../modules/utilities/mpv/home.nix
     ../modules/utilities/oculante/home.nix
-    ../modules/utilities/jellyfin/home.nix
     ../modules/utilities/gpu-screen-recorder-gtk/home.nix
     ../modules/utilities/mullvad-vpn/home.nix
     ../modules/utilities/vesktop/home.nix
@@ -57,6 +56,7 @@
       deluge
       popsicle
       # resources # collision with PCSX2
+      jellyfin-media-player
       freetube
       spotify
       dropbox
