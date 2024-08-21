@@ -10,4 +10,7 @@
       };
     };
   };
+
+  # unlock GPG keyring on login
+  security.pam.services.greetd.enableGnomeKeyring = true;
 }
