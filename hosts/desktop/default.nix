@@ -7,7 +7,7 @@
     ../../modules/system/amd
     ../../modules/system/opentabletdriver
     ../../modules/system/wooting
-    ../../modules/utilities/jellyfin
+    ../../modules/servers/jellyfin
     ../../modules/games/steam
     ../../modules/games/r2modman
   ];
