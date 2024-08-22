@@ -116,7 +116,7 @@
         toolbar = true;
         bookmarks = [
           {
-            name = "Utilities";
+            name = "Google";
             bookmarks = [
               {
                 name = "Gmail";
@@ -138,6 +138,11 @@
                 name = "Drive";
                 url = "https://drive.google.com/";
               }
+            ];
+          }
+          {
+            name = "Utilities";
+            bookmarks = [
               {
                 name = "Dropbox";
                 url = "https://www.dropbox.com/home";
@@ -147,12 +152,20 @@
                 url = "https://www.paypal.com/myaccount/summary";
               }
               {
-                name = "AnonAddy";
-                url = "https://app.anonaddy.com/";
+                name = "addy.io";
+                url = "https://app.addy.io";
               }
               {
                 name = "Reactive Resume";
                 url = "https://rxresu.me/dashboard";
+              }
+              {
+                name = "Spotify Dedup";
+                url = "https://spotify-dedup.com/";
+              }
+              {
+                name = "LibreSpeed";
+                url = "https://librespeed.org/";
               }
             ];
           }
@@ -274,12 +287,16 @@
                 url = "https://1337x.to/home/";
               }
               {
+                name = "Nyaa";
+                url = "https://nyaa.si/";
+              }
+              {
                 name = "vadapav.mov";
                 url = "https://vadapav.mov/";
               }
               {
-                name = "Nyaa";
-                url = "https://nyaa.si/";
+                name = "Anna's Archive";
+                url = "https://annas-archive.org/";
               }
               {
                 name = "Vimm's Lair";
@@ -292,10 +309,6 @@
               {
                 name = "Myrient";
                 url = "https://myrient.erista.me";
-              }
-              {
-                name = "Anna's Archive";
-                url = "https://annas-archive.org/";
               }
             ];
           }
@@ -377,14 +390,6 @@
               {
                 name = "williamwatson.dev";
                 url = "https://williamwatson.dev";
-              }
-              {
-                name = "Spotify Dedup";
-                url = "https://spotify-dedup.com/";
-              }
-              {
-                name = "LibreSpeed";
-                url = "https://librespeed.org/";
               }
             ];
           }
