@@ -21,7 +21,7 @@
           bookmarkStart = "file://${globals.directories.home}/";
         in
         [
-          "${bookmarkStart}Dropbox Drive"
+          "${bookmarkStart}Dropbox Dropbox"
           "${bookmarkStart}Dropbox/Work/Education/University University"
           "${bookmarkStart}Downloads Downloads"
           "${bookmarkStart}Pictures Pictures"
