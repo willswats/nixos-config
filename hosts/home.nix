@@ -55,7 +55,6 @@
       shotcut
       deluge
       popsicle
-      # resources # collision with PCSX2
       jellyfin-media-player
       freetube
       miru
