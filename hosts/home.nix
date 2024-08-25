@@ -50,6 +50,7 @@
       ## GUI
       thunderbird
       bitwarden
+      fluffychat
       obs-studio
       gimp
       krita
