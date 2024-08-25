@@ -72,6 +72,7 @@
       appimage-run
       trash-cli
       yt-dlp
+      fastfetch
       # Development
       gh
       nodePackages.nodejs
