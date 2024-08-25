@@ -208,7 +208,7 @@
 
           "$mod, w, exec, ${firefox}" # Web browser
           "$mod, a, exec, ${pavucontrol}" # Audio manager 
-          "$mod, i, exec ${thunderbird}" # Inbox (email)
+          "$mod, i, exec, ${thunderbird}" # Inbox (email)
           "$mod, p, exec, ${bitwarden}" # Password manager
           "$mod, m, exec, mpv" # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
           "$mod shift, m, exec, ${spotify}" # Music player
