@@ -55,6 +55,7 @@
       shotcut
       deluge
       popsicle
+      gnome-disk-utility
       jellyfin-media-player
       freetube
       miru
