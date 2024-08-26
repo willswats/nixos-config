@@ -78,8 +78,8 @@
       package = inputs.hyprland.packages.${pkgs.system}.default;
       settings = {
         general = {
-          gaps_in = 5;
-          gaps_out = 10;
+          gaps_in = 0;
+          gaps_out = 0;
           border_size = 2;
           "col.active_border" = blue;
           "col.inactive_border" = overlay0;
