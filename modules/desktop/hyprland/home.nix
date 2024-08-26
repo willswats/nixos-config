@@ -207,7 +207,6 @@
 
         bind = [
           "$mod, d, exec, ${fuzzel}"
-          "alt, tab, exec, hypr-window-switcher" # (not specifying the binary as it acts differently)
 
           "$mod, return, exec, ${kitty}"
 

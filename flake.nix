@@ -50,7 +50,6 @@
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hypr-window-switcher.url = "github:kai-tub/hypr-window-switcher";
 
     slippi.url = "github:lytedev/slippi-nix";
   };
@@ -62,7 +61,6 @@
     , nixvim
     , hyprland
     , catppuccin
-    , hypr-window-switcher
     , slippi
     , ...
     }@inputs: {
@@ -144,7 +142,6 @@
                   nur.nixosModules.nur
                   hyprland.nixosModules.default
                   catppuccin.nixosModules.catppuccin
-                  hypr-window-switcher.nixosModules.default
                   slippi.nixosModules.default
                   {
                     home-manager = {
@@ -185,7 +182,6 @@
                 home-manager.nixosModules.home-manager
                 nur.nixosModules.nur
                 hyprland.nixosModules.default
-                hypr-window-switcher.nixosModules.default
                 catppuccin.nixosModules.catppuccin
                 {
                   home-manager = {

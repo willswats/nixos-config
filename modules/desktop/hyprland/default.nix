@@ -6,7 +6,6 @@
     ./hyprlock
   ];
 
-  programs.hypr-window-switcher.enable = true;
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
