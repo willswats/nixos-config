@@ -20,7 +20,7 @@
       backgroundColor = base;
       borderColor = blue;
       borderRadius = 0;
-      margin = "0"; # css-like margin
+      margin = "10"; # css-like margin
       # To draw the progress indicator on top of the background color, use the over attribute. 
       # To replace the background color, use the source attribute.
       progressColor = "over ${surface0}";

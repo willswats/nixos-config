@@ -125,7 +125,7 @@
             criteria = { class = "steam"; title = "Screenshot Manager"; };
           }
         ];
-        gaps.smartBorders = "on";
+        gaps.inner = 10;
         bars = [{ command = waybar; }];
         input = {
           "*" = {

@@ -78,8 +78,8 @@
       package = inputs.hyprland.packages.${pkgs.system}.default;
       settings = {
         general = {
-          gaps_in = 0;
-          gaps_out = 0;
+          gaps_in = 5;
+          gaps_out = 10;
           border_size = 2;
           "col.active_border" = blue;
           "col.inactive_border" = overlay0;
@@ -87,7 +87,6 @@
         };
 
         dwindle = {
-          no_gaps_when_only = 1; # hide borders when workspace contains a single window
           force_split = 2; # always split right or bottom
         };
 
