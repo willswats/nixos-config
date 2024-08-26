@@ -86,6 +86,16 @@
           layout = "dwindle";
         };
 
+        dwindle = {
+          smart_resizing = false;
+          no_gaps_when_only = 1;
+        };
+
+        master = {
+          smart_resizing = false;
+          no_gaps_when_only = 1;
+        };
+
         decoration = {
           rounding = 0;
         };
