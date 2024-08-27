@@ -82,7 +82,7 @@
             user = user;
             directories = directories;
             hostNames = hostNames;
-            wallpaper = ./wallpaper.jpg;
+            wallpaper = ./wallpaper.png;
             font = {
               package = "JetBrainsMono";
               name = "JetBrains Mono Nerd Font";
