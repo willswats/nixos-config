@@ -59,6 +59,7 @@
       popsicle
       gnome-disk-utility
       jellyfin-media-player
+      moonlight-qt
       freetube
       miru
       spotify
