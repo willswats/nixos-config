@@ -142,6 +142,10 @@
                 name = "LibreSpeed";
                 url = "https://librespeed.org/";
               }
+              {
+                name = "ToS;DR";
+                url = "https://tosdr.org/";
+              }
             ];
           }
           {
@@ -171,6 +175,10 @@
               {
                 name = "Simkl";
                 url = "https://simkl.com/";
+              }
+              {
+                name = "Infinite Backlog";
+                url = "https://infinitebacklog.net/";
               }
               {
                 name = "Goodreads";
