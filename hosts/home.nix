@@ -60,6 +60,7 @@
       popsicle
       gnome-disk-utility
       jellyfin-media-player
+      komikku
       moonlight-qt
       freetube
       miru
