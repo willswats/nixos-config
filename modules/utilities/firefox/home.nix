@@ -49,6 +49,7 @@
         zotero-connector
         youtube-alternative-switch
         iina-open-in-mpv
+        nyaa-linker
       ];
       search = {
         force = true;
