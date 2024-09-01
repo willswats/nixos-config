@@ -147,6 +147,10 @@
                 name = "ToS;DR";
                 url = "https://tosdr.org/";
               }
+              {
+                name = "HowLongToBeat";
+                url = "https://howlongtobeat.com/";
+              }
             ];
           }
           {
