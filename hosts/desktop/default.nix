@@ -16,7 +16,10 @@
 
   boot = {
     initrd = {
-      luks.devices."luks-418efaa8-2d4d-49f9-adb0-e8a37fb859ba".device = "/dev/disk/by-uuid/418efaa8-2d4d-49f9-adb0-e8a37fb859ba";
+      luks.devices = {
+        "luks-418efaa8-2d4d-49f9-adb0-e8a37fb859ba".device = "/dev/disk/by-uuid/418efaa8-2d4d-49f9-adb0-e8a37fb859ba";
+        "luks-908577b6-3ac9-4b67-ac70-cbfc3244a201".device = "/dev/disk/by-uuid/908577b6-3ac9-4b67-ac70-cbfc3244a201"; # Unlock 2TB drive at boot
+      };
     };
     loader = {
       systemd-boot = {
@@ -34,6 +37,11 @@
         "video=${monitorCenter}:1920x1080@144"
         "video=${monitorLeft}:1920x1080@144"
       ];
+  };
+
+  fileSystems."/run/media/will/2TB" = {
+    device = "/dev/disk/by-uuid/677867a5-7a72-482b-a007-cf359502d3bc"; # Mount 2TB drive
+    fsType = "ext4";
   };
 
   programs.gamemode.enable = true;
