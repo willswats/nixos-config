@@ -76,6 +76,7 @@
       trash-cli
       yt-dlp
       fastfetch
+      woeusb
       # Development
       gh
       nodePackages.nodejs
