@@ -345,6 +345,10 @@
                 name = "Hover";
                 url = "https://www.hover.com/";
               }
+              {
+                name = "TeamSpeak.host";
+                url = "https://teamspeak.host/";
+              }
             ];
           }
           {
