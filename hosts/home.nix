@@ -57,6 +57,7 @@
       shotcut
       deluge
       popsicle
+      teamspeak5_client
       gnome-disk-utility
       jellyfin-media-player
       komikku
