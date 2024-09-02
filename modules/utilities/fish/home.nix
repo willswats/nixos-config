@@ -1,4 +1,4 @@
-{ pkgs, globals, ... }:
+{ pkgs, globals, host, ... }:
 
 {
   home.packages = with pkgs; [ fish ];
@@ -8,7 +8,7 @@
     catppuccin.enable = true;
     shellAliases =
       let
-        driveDir = globals.directories.drive;
+        driveDir = host.directories.drive;
         notebookDirectory = "${driveDir}/Notebook";
         universityDirectory = "${driveDir}/Work/Education/University";
 

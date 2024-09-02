@@ -32,7 +32,7 @@ let
   ensureExists =
     let
       directoriesToCreate = host.directoriesToCreate;
-      drive = globals.directories.drive;
+      drive = host.directories.drive;
 
       desktopHostName = globals.hostNames.desktop;
       hostname = "${pkgs.hostname}/bin/hostname";

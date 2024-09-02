@@ -1,4 +1,4 @@
-{ globals, ... }:
+{ host, ... }:
 
 let
   duelSenseProfile = ''
@@ -31,7 +31,7 @@ in
 {
   slippi-launcher =
     let
-      isoPath = "${globals.directories.drive}/Games/Emulation/ROMs/GC/Super Smash Bros. Melee (USA) (En,Ja) (Rev 2).nkit.iso";
+      isoPath = "${host.directories.drive}/Games/Emulation/ROMs/GC/Super Smash Bros. Melee (USA) (En,Ja) (Rev 2).nkit.iso";
     in
     {
       enable = true;

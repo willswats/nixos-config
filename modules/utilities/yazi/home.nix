@@ -1,4 +1,4 @@
-{ globals, pkgs, inputs, ... }:
+{ host, pkgs, inputs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -8,7 +8,7 @@
 
   programs.yazi =
     let
-      driveDir = globals.directories.drive;
+      driveDir = host.directories.drive;
     in
     {
       enable = true;

@@ -1,4 +1,4 @@
-{ pkgs, globals, ... }:
+{ pkgs, globals, host, ... }:
 
 {
   home.packages = with pkgs; [ gzdoom ];
@@ -7,7 +7,7 @@
     text =
       let
         homeDir = globals.directories.home;
-        wadDirectory = "${globals.directories.drive}/Games/Doom/WADs";
+        wadDirectory = "${host.directories.drive}/Games/Doom/WADs";
 
         player = ''
           autoaim=0

@@ -1,4 +1,4 @@
-{ pkgs, globals, ... }:
+{ pkgs, globals, host, ... }:
 
 {
   xdg.mimeApps = {
@@ -18,7 +18,7 @@
       player-operation-mode = "pseudo-gui"; # Always open mpv as GUI (prevents mpv opening in terminal when using yazi)
       no-input-default-bindings = ""; # Disable default bindings, see https://github.com/mpv-player/mpv/blob/master/etc/input.conf for defaults
       screenshot-directory = "~/Pictures"; # Screenshot dir
-      watch-later-dir = "${globals.directories.drive}/.mpv/watch_later/"; # The directory in which to store the "watch later" temporary files.
+      watch-later-dir = "${host.directories.drive}/.mpv/watch_later/"; # The directory in which to store the "watch later" temporary files.
       osd-font-size = 40;
       sub-font-size = 40;
       osd-bar = "no"; # Replaced by uosc
@@ -123,7 +123,7 @@
         skip_categories = "sponsor,interaction,selfpromo";
       };
       memo = {
-        history_path = "${globals.directories.drive}/.mpv/memo.log"; # Where the history is stored
+        history_path = "${host.directories.drive}/.mpv/memo.log"; # Where the history is stored
       };
       webtorrent = {
         path = "${globals.directories.home}/Downloads/"; # Path to save downloaded files in. Can be set to "memory" to store all files in RAM.

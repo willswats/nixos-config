@@ -1,7 +1,7 @@
-{ pkgs, globals, ... }:
+{ pkgs, host, ... }:
 
 let
-  yuzuLocation = "${globals.directories.drive}/Games/Emulation/Emulators/Yuzu/Linux-Yuzu-EA-4176.AppImage";
+  yuzuLocation = "${host.directories.drive}/Games/Emulation/Emulators/Yuzu/Linux-Yuzu-EA-4176.AppImage";
   yuzuExec = "${pkgs.appimage-run}/bin/appimage-run ${yuzuLocation}";
 in
 {

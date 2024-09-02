@@ -1,4 +1,4 @@
-{ pkgs, globals, ... }:
+{ pkgs, globals, host, ... }:
 
 {
   gtk =
@@ -18,15 +18,17 @@
       fontPackage = globals.font.package;
       bookmarks =
         let
-          bookmarkStart = "file://${globals.directories.home}/";
+          bookmarkStartHome = "file://${globals.directories.home}/";
+          bookmarkStartDrive = "file://${host.directories.drive}/";
+
         in
         [
-          "${bookmarkStart}Dropbox Dropbox"
-          "${bookmarkStart}Dropbox/Work/Education/University University"
-          "${bookmarkStart}Downloads Downloads"
-          "${bookmarkStart}Pictures Pictures"
-          "${bookmarkStart}Videos Videos"
-          "${bookmarkStart}Code Code"
+          "${bookmarkStartDrive} Drive"
+          "${bookmarkStartHome}/Work/Education/University University"
+          "${bookmarkStartHome}Downloads Downloads"
+          "${bookmarkStartHome}Pictures Pictures"
+          "${bookmarkStartHome}Videos Videos"
+          "${bookmarkStartHome}Code Code"
         ];
     in
     {

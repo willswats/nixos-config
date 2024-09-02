@@ -70,7 +70,6 @@
           user = "will";
           directories = {
             home = "/home/${user}";
-            drive = "/home/${user}/Dropbox";
             flake = "/home/${user}/Code/nixos-config";
           };
           directoriesToCreate = "~/Downloads ~/Pictures ~/Videos ~/Code ~/Entertainment";
@@ -127,6 +126,7 @@
                   center = "DP-1";
                   left = "DP-2";
                 };
+                directories = { drive = "/run/media/will/2TB/Dropbox"; };
                 directoriesToCreate = "${directoriesToCreate} ~/Games/Heroic";
               };
             in
@@ -169,6 +169,7 @@
                   center = "eDP-1";
                   left = "eDP-1";
                 };
+                directories = { drive = "/home/will/Dropbox"; };
                 directoriesToCreate = directoriesToCreate;
               };
             in
