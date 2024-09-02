@@ -24,7 +24,7 @@
         in
         [
           "${bookmarkStartDrive} Drive"
-          "${bookmarkStartHome}/Work/Education/University University"
+          "${bookmarkStartDrive}/Work/Education/University University"
           "${bookmarkStartHome}Downloads Downloads"
           "${bookmarkStartHome}Pictures Pictures"
           "${bookmarkStartHome}Videos Videos"
