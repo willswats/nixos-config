@@ -131,10 +131,9 @@ rm ~/.bash_history
 ### Utilities
 
 1. [Dropbox](./docs/utilities/dropbox.md)
-2. [Rclone](./docs/utilities/rclone.md)
-3. [Firefox](./docs/utilities/firefox/firefox.md)
-4. [GPG](./docs/utilities/gpg.md)
-5. [virt-manager](./docs/utilities/virt-manager.md)
+2. [Firefox](./docs/utilities/firefox/firefox.md)
+3. [GPG](./docs/utilities/gpg.md)
+4. [virt-manager](./docs/utilities/virt-manager.md)
 
 ### Games
 

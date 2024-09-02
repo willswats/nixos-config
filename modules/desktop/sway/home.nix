@@ -67,7 +67,6 @@
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
-      rclone = "${pkgs.rclone}/bin/rclone";
       autotiling = "${pkgs.autotiling}/bin/autotiling";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
@@ -313,11 +312,6 @@
           }
           {
             command = "${dropbox}";
-            always = false;
-          }
-          # Misc
-          {
-            command = "${rclone} mount --allow-other --vfs-cache-mode writes Dropbox:Entertainment ~/Entertainment/";
             always = false;
           }
           {

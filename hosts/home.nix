@@ -66,8 +66,6 @@
       miru
       spotify
       dropbox
-      rclone
-      rclone-browser
       zotero
       ## CLI
       wget

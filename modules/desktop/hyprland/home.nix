@@ -59,7 +59,6 @@
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
-      rclone = "${pkgs.rclone}/bin/rclone";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
@@ -199,7 +198,6 @@
           "${mullvadGui}"
           "${dropbox}"
           # Misc
-          "${rclone} mount --alow-other --vfs-cache-mode writes Dropbox:Entertainment ~/Entertainment/"
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
           "${pcmanfm} --daemon-mode" # Run as dameon to prevent pcmanfm from opening slowly on first launch (bug)
         ];
