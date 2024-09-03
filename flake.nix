@@ -72,7 +72,7 @@
             home = "/home/${user}";
             flake = "/home/${user}/Code/nixos-config";
           };
-          directoriesToCreate = "~/Downloads ~/Pictures ~/Videos ~/Code ~/Entertainment";
+          directoriesToCreate = "~/Downloads ~/Pictures ~/Videos ~/Code";
           hostNames = {
             desktop = "${user}-desktop";
             laptop = "${user}-laptop";
