@@ -86,7 +86,7 @@
         manager = {
           sort_by = "natural";
         };
-        open.rules = [
+        open.prepend_rules = [
           # open cbz instead of extracting
           {
             name = "*.cbz";
