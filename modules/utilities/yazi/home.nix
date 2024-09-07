@@ -1,18 +1,12 @@
-{ host, pkgs, inputs, ... }:
+{ host, ... }:
 
 {
-  home.packages = with pkgs; [
-    _7zz # Used for extraction
-    fzf # Mapped to Z
-  ];
-
   programs.yazi =
     let
       driveDir = host.directories.drive;
     in
     {
       enable = true;
-      package = inputs.yazi.packages.${pkgs.system}.default;
       catppuccin.enable = true;
       enableBashIntegration = true;
       enableFishIntegration = true;
