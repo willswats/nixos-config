@@ -6,7 +6,6 @@
       "audio/mpeg" = [ "mpv.desktop" ]; # mp3
       "video/mp4" = [ "mpv.desktop" ]; # mp4
       "application/x-matroska" = [ "mpv.desktop" ]; # mkv
-      "application/vnd.comicbook+zip" = [ "mpv.desktop" ]; # cbz
     };
   };
 
