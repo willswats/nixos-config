@@ -82,6 +82,18 @@
           }
         ];
       };
+      settings = {
+        manager = {
+          sort_by = "natural";
+        };
+        open.rules = [
+          # open cbz instead of extracting
+          {
+            name = "*.cbz";
+            use = [ "open" ];
+          }
+        ];
+      };
     };
 
   # Enable built-in session plugin to allow yanking between terminals
