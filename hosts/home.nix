@@ -58,6 +58,7 @@
       shotcut
       deluge
       popsicle
+      discord
       teamspeak5_client
       gnome-disk-utility
       jellyfin-media-player
@@ -76,6 +77,7 @@
       appimage-run
       trash-cli
       yt-dlp
+      mkvtoolnix-cli
       fastfetch
       woeusb
       # Development
