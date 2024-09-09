@@ -86,6 +86,11 @@
             name = "*.cbz";
             use = [ "open" ];
           }
+          # edit srt to prevent xdg-open getting stuck
+          {
+            name = "*.srt";
+            use = [ "edit" ];
+          }
         ];
       };
     };
