@@ -24,7 +24,7 @@
     ./indent-blankline.nix
     ./multicursors.nix
     ./auto-session.nix
-    ./nvim-colorizer.nix
+    ./ccc.nix
     # Markdown
     ./mkdnflow.nix
     ./markdown-preview.nix
