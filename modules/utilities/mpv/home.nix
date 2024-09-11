@@ -20,6 +20,8 @@
       watch-later-dir = "${host.directories.drive}/.mpv/watch_later/"; # The directory in which to store the "watch later" temporary files.
       osd-font-size = 40;
       sub-font-size = 40;
+      alang = "jpn"; # Preffer Japanese audio
+      slang = "en"; # Preffer English subtitles
       osd-bar = "no"; # Replaced by uosc
       border = "no"; # Replaced by uosc
     };
