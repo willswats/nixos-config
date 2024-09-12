@@ -58,7 +58,6 @@
       shotcut
       deluge
       popsicle
-      discord
       teamspeak5_client
       gnome-disk-utility
       jellyfin-media-player
