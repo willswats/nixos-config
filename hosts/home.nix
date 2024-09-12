@@ -34,7 +34,7 @@
     ../modules/utilities/yazi/home.nix
     ../modules/utilities/bluetuith/home.nix
     ../modules/utilities/gnome-keyring/home.nix
-    ../modules/utilities/onlyoffice/home.nix
+    ../modules/utilities/libreoffice/home.nix
     ../modules/utilities/streamlink-twitch-gui/home.nix
     ../modules/utilities/hakuneko/home.nix
   ];
