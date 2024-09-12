@@ -5,48 +5,46 @@ in {
   programs.nixvim = {
     plugins.lualine = {
       enable = true;
-      componentSeparators = {
-        left = icons.ui.LineMiddle;
-        right = icons.ui.LineMiddle;
-      };
-      sectionSeparators = {
-        left = "";
-        right = "";
-      };
-      # +-------------------------------------------------+
-      # | A | B | C                             X | Y | Z |
-      # +-------------------------------------------------+
-      sections = {
-        lualine_a = [ "mode" ];
-        lualine_b = [
-          {
-            name = "branch";
-            icon = icons.git.Branch;
-          }
-          {
-            name = "diagnostics";
-            extraConfig = {
+      settings = {
+        componentSeparators = {
+          left = icons.ui.LineMiddle;
+          right = icons.ui.LineMiddle;
+        };
+        sectionSeparators = {
+          left = "";
+          right = "";
+        };
+        # +-------------------------------------------------+
+        # | A | B | C                             X | Y | Z |
+        # +-------------------------------------------------+
+        sections = {
+          lualine_a = [ "mode" ];
+          lualine_b = [
+            {
+              __unkeyed = "branch";
+              icon.__unkeyed = icons.git.Branch;
+            }
+            {
+              __unkeyed = "diagnostics";
               symbols = {
                 error = "${icons.diagnostics.Error} ";
                 warn = "${icons.diagnostics.Warning} ";
                 hint = "${icons.diagnostics.Hint} ";
               };
-            };
-          }
-          {
-            name = "diff";
-            extraConfig = {
+            }
+            {
+              __unkeyed = "diff";
               symbols = {
                 added = "${icons.git.LineAdded} ";
                 modified = "${icons.git.LineModified} ";
                 removed = "${icons.git.LineRemoved} ";
               };
-            };
-          }
-        ];
-        lualine_c = [ "filename" ];
-        lualine_y = [ "progress" ];
-        lualine_z = [ "location" ];
+            }
+          ];
+          lualine_c = [ "filename" ];
+          lualine_y = [ "progress" ];
+          lualine_z = [ "location" ];
+        };
       };
     };
     # Enable showmode https://github.com/folke/noice.nvim/wiki/A-Guide-to-Messages#showmode

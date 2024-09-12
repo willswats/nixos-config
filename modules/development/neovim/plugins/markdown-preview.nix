@@ -31,7 +31,7 @@
         enable = true;
         settings = {
           preview_options = {
-            disable_sync_scroll = true;
+            disable_sync_scroll = 1;
           };
         };
       };
