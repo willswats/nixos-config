@@ -38,9 +38,12 @@ let
       hostname = "${pkgs.hostname}/bin/hostname";
 
       compatDataDirectory = "~/.local/share/Steam/steamapps/compatdata/";
-      saveDirectory = "/pfx/drive_c/users/steamuser/AppData/Roaming/";
-      darkSouls3SaveDirectory = "${compatDataDirectory}374320${saveDirectory}DarkSoulsIII";
-      eldenRingSeamlessCoopSaveDirectory = "${compatDataDirectory}4003086771${saveDirectory}EldenRing/"; # The ID for seamless co-op will change as it is added as a non-steam game
+      roamingDirectory = "/pfx/drive_c/users/steamuser/AppData/Roaming/";
+      localDirectory = "/pfx/drive_c/users/steamuser/AppData/Local/";
+
+      darkSouls3SaveDirectory = "${compatDataDirectory}374320${roamingDirectory}DarkSoulsIII";
+      eldenRingSeamlessCoopSaveDirectory = "${compatDataDirectory}4003086771${roamingDirectory}EldenRing/"; # The ID for seamless co-op will change as it is added as a non-steam game
+      kenshiSaveDirectory = "${compatDataDirectory}233860${localDirectory}kenshi/";
     in
     pkgs.writeShellScript "ensureExists.sh" ''
       mkdir -p ${directoriesToCreate}
@@ -56,6 +59,7 @@ let
 
         ln -s ${drive}/Games/Saves/DarkSouls3/* ${darkSouls3SaveDirectory}
         ln -s ${drive}/Games/Saves/EldenRingSeamlessCoop/* ${eldenRingSeamlessCoopSaveDirectory}
+        ln -s ${drive}/Games/Saves/Kenshi/* ${kenshiSaveDirectory}
       fi
     '';
 in
