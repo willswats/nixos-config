@@ -367,6 +367,10 @@
                 url = "https://moodle.port.ac.uk";
               }
               {
+                name = "Work Placements";
+                url = "https://workplacements.port.ac.uk";
+              }
+              {
                 name = "Learning Catalytics";
                 url = "https://learningcatalytics.com/class_sessions";
               }
