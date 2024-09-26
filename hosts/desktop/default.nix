@@ -8,7 +8,6 @@
     ../../modules/system/opentabletdriver
     ../../modules/system/wooting
     ../../modules/servers/jellyfin
-    ../../modules/servers/komga
     ../../modules/servers/sunshine
     ../../modules/games/steam
     ../../modules/games/r2modman
