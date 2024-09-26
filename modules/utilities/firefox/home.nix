@@ -374,6 +374,10 @@
                 name = "Virtual Machine";
                 url = "https://uop-1-server-per-student-prod.appspot.com/instance/get";
               }
+              {
+                name = "DCalc";
+                url = "https://soc.port.ac.uk/dcalc/";
+              }
             ];
           }
           {
