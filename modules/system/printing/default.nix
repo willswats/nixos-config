@@ -2,12 +2,12 @@
 
 {
   services = {
-    printing.enable = true;
+    printing.enable = false;
     avahi = {
-      enable = true;
-      nssmdns4 = true;
+      enable = false;
+      nssmdns4 = false;
       # for a WiFi printer
-      openFirewall = true;
+      openFirewall = false;
     };
   };
 }
