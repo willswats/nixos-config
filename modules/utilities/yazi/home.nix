@@ -91,6 +91,11 @@
             name = "*.cbz";
             use = [ "open" ];
           }
+          # open docx instead of edit
+          {
+            name = "*.docx";
+            use = [ "open" ];
+          }
           # edit srt to prevent xdg-open getting stuck
           {
             name = "*.srt";
