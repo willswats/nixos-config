@@ -12,6 +12,11 @@
       enableFishIntegration = true;
       keymap = {
         manager.prepend_keymap = [
+          # Close tab to right of current
+          {
+            on = "T";
+            run = "tab_close 1";
+          }
           # Open shell
           {
             on = [ "<C-s>" ];
