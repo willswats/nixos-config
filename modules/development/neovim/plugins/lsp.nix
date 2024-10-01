@@ -46,7 +46,7 @@ in
         marksman.enable = true; # Markdown
         cssls.enable = true; # CSS
         jsonls.enable = true; # JSON
-        tsserver.enable = true; # TypeScript
+        ts-ls.enable = true; # TypeScript
         eslint.enable = true; # JavaScript Linter
         svelte.enable = true; # Svelte
       };
