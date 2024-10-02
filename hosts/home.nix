@@ -58,7 +58,6 @@
       shotcut
       deluge
       popsicle
-      teamspeak5_client
       gnome-disk-utility
       moonlight-qt
       jellyfin-media-player
