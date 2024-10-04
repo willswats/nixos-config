@@ -50,6 +50,7 @@
         youtube-alternative-switch
         iina-open-in-mpv
         nyaa-linker
+        libredirect
       ];
       search = {
         force = true;
