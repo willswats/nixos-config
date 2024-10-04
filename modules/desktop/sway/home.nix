@@ -25,7 +25,6 @@
   ];
 
   services.network-manager-applet.enable = true;
-  services.dropbox.enable = true;
 
   wayland.windowManager.sway =
     let
@@ -66,6 +65,7 @@
       grimshot = "${pkgs.sway-contrib.grimshot}/bin/grimshot";
 
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
+      maestralGui = "${pkgs.maestral-gui}/bin/maestral_qt";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       autotiling = "${pkgs.autotiling}/bin/autotiling";
 
@@ -306,9 +306,14 @@
           }
           # Applets
           {
+            command = "${maestralGui}";
+            always = false;
+          }
+          {
             command = "${mullvadGui}";
             always = false;
           }
+          # Misc
           {
             command = "${xrandr} --output ${monitorCenter} --primary"; # Ensures that xwindows (especially steam games) use the center monitor
             always = false;

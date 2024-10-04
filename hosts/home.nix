@@ -65,6 +65,7 @@
       miru
       spotify
       zotero
+      maestral-gui
       ## CLI
       wget
       ffmpeg
@@ -76,6 +77,7 @@
       mkvtoolnix-cli
       fastfetch
       woeusb
+      maestral
       # Development
       gh
       nodePackages.nodejs
