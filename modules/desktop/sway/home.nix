@@ -25,6 +25,7 @@
   ];
 
   services.network-manager-applet.enable = true;
+  services.dropbox.enable = true;
 
   wayland.windowManager.sway =
     let
@@ -66,7 +67,6 @@
 
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
-      dropbox = "${pkgs.dropbox}/bin/dropbox";
       autotiling = "${pkgs.autotiling}/bin/autotiling";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
@@ -307,10 +307,6 @@
           # Applets
           {
             command = "${mullvadGui}";
-            always = false;
-          }
-          {
-            command = "${dropbox}";
             always = false;
           }
           {

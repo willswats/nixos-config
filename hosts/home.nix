@@ -64,7 +64,6 @@
       freetube
       miru
       spotify
-      dropbox
       zotero
       ## CLI
       wget
