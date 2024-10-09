@@ -13,17 +13,17 @@ in
     plugins.lsp = {
       enable = true;
       servers = {
-        rust-analyzer = {
+        rust_analyzer = {
           enable = true; # Rust
           installCargo = true;
           installRustc = true;
         };
         clangd.enable = true; # C, C++ 
-        csharp-ls.enable = true; # C#
-        nil-ls.enable = true; # Nix
-        lua-ls.enable = true; # Lua 
+        csharp_ls.enable = true; # C#
+        nil_ls.enable = true; # Nix
+        lua_ls.enable = true; # Lua 
         pyright.enable = true; # Python
-        ruff-lsp.enable = true; # Python (Format & Lint)
+        ruff_lsp.enable = true; # Python (Format & Lint)
         dartls.enable = true; # Dart
         bashls.enable = true; # Bash
         taplo.enable = true; # TOML
@@ -46,7 +46,7 @@ in
         marksman.enable = true; # Markdown
         cssls.enable = true; # CSS
         jsonls.enable = true; # JSON
-        ts-ls.enable = true; # TypeScript
+        ts_ls.enable = true; # TypeScript
         eslint.enable = true; # JavaScript Linter
         svelte.enable = true; # Svelte
       };
