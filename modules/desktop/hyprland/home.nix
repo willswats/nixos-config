@@ -86,6 +86,7 @@
         };
 
         dwindle = {
+          no_gaps_when_only = 1; # hide borders when workspace contains a single window
           force_split = 2; # always split right or bottom
         };
 
