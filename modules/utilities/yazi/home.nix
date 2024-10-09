@@ -85,6 +85,18 @@
         manager = {
           sort_by = "natural";
         };
+        opener = {
+          open = [
+            # Set "orphan = true" to detach tasks from the yazi process
+            {
+              run = ''
+                xdg-open "$@"
+              '';
+              desc = "Open";
+              orphan = true;
+            }
+          ];
+        };
         open.prepend_rules = [
           # open cbz instead of extracting
           {
