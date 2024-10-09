@@ -8,7 +8,6 @@
 
   xdg.mimeApps = {
     defaultApplications = {
-      "application/pdf" = [ "firefox.desktop" ]; # pdf
       # Set firefox as the default browser
       "x-scheme-handler/http" = [ "firefox.desktop" ];
       "x-scheme-handler/https" = [ "firefox.desktop" ];
