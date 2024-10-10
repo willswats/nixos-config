@@ -63,5 +63,18 @@
         '';
       };
     }
+    # Remove SQL popup on insert with left and right arrow
+    {
+      event = [ "FileType" ];
+      pattern = [ "sql" ];
+      callback = {
+        __raw = ''
+          function()
+            vim.keymap.del("i", "<left>", { buffer = true })
+            vim.keymap.del("i", "<right>", { buffer = true })
+          end
+        '';
+      };
+    }
   ];
 }
