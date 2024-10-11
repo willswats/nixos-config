@@ -425,6 +425,7 @@
         "general.autoScroll" = true; # Enable auto scroll
         "accessibility.typeaheadfind.enablesound" = false; # Disable sound effect on failed "Find in page"
         "identity.fxaccounts.toolbar.enabled" = false; # Disable firefox accounts icon in toolbar
+        "browser.tabs.hoverPreview.enabled" = false; # Disable preview tab on hover
       };
     };
   };
