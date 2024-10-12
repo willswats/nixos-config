@@ -12,12 +12,21 @@
 
       ripdrag = "${pkgs.ripdrag}/bin/ripdrag";
       fileRoller = "${pkgs.file-roller}/bin/file-roller";
+
+      yazi-plugins = pkgs.fetchFromGitHub {
+        owner = "yazi-rs";
+        repo = "plugins";
+        rev = "main";
+        hash = "sha256-tAccywz2yPtyWGMe8Ff2VAiFFjtTn34qBP2J39H2PdA=";
+      };
     in
     {
       enable = true;
       catppuccin.enable = true;
       enableBashIntegration = true;
       enableFishIntegration = true;
+      shellWrapperName = "y";
+
       keymap = {
         manager.prepend_keymap = [
           # Open ripdrag with selected files - https://github.com/sxyazi/yazi/discussions/327#discussioncomment-8336702
@@ -52,17 +61,23 @@
               ''
             ];
           }
-          # Enter a directory or open the file
-          {
-            on = [ "l" ];
-            run = "plugin --sync smart-enter";
-            desc = "Enter the child directory, or open the file";
-          }
           # Overwrites "go to temp directory"
           {
             on = [ "g" "t" ];
             run = "cd ~/.local/share/Trash/files";
             desc = "Go to trash directory";
+          }
+          # Plugin (smart-enter) - Enter a directory or open the file
+          {
+            on = [ "l" ];
+            run = "plugin --sync smart-enter";
+            desc = "Enter the child directory, or open the file";
+          }
+          # Plugin (chmod) - chmod selected files
+          {
+            on = [ "c" "m" ];
+            run = "plugin chmod";
+            desc = "Chmod on selected files";
           }
         ];
         manager.append_keymap = [
@@ -98,6 +113,7 @@
           }
         ];
       };
+
       settings = {
         manager = {
           sort_by = "natural";
@@ -132,18 +148,23 @@
           }
         ];
       };
+
+      # Plugins found here - https://github.com/yazi-rs/plugins
+      plugins = {
+        chmod = "${yazi-plugins}/chmod.yazi";
+      };
+
+      # Some plugins need to be required
+      # session - built-in session plugin to allow yanking between terminals
+      initLua = ''
+        require("session"):setup {
+          sync_yanked = true,
+        }
+      '';
     };
 
-  # Enable built-in session plugin to allow yanking between terminals
-  xdg.configFile."yazi/init.lua" = {
-    text = ''
-      require("session"):setup {
-      	sync_yanked = true,
-      }
-    '';
-  };
-
-  # Enter a directory or open the file plugin
+  # Other plugins
+  # smart-enter - enter a directory or open the file
   xdg.configFile."yazi/plugins/smart-enter.yazi/init.lua" = {
     text = ''
       return {
