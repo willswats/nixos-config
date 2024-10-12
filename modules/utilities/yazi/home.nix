@@ -1,6 +1,8 @@
-{ host, ... }:
+{ host, pkgs, ... }:
 
 {
+  home.packages = with pkgs; [ ripdrag ];
+
   programs.yazi =
     let
       driveDir = host.directories.drive;
@@ -12,10 +14,12 @@
       enableFishIntegration = true;
       keymap = {
         manager.prepend_keymap = [
-          # Close tab to right of current
+          # Open ripdrag with selected files - https://github.com/sxyazi/yazi/discussions/327#discussioncomment-8336702
           {
-            on = "T";
-            run = "tab_close 1";
+            on = [ "<C-n>" ];
+            run = ''
+              shell 'ripdrag "$@" -x 2>/dev/null &' --confirm
+            '';
           }
           # Open shell
           {
