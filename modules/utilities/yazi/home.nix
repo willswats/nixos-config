@@ -1,11 +1,17 @@
 { host, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ ripdrag ];
+  home.packages = with pkgs; [
+    ripdrag
+    file-roller
+  ];
 
   programs.yazi =
     let
       driveDir = host.directories.drive;
+
+      ripdrag = "${pkgs.ripdrag}/bin/ripdrag";
+      fileRoller = "${pkgs.file-roller}/bin/file-roller";
     in
     {
       enable = true;
@@ -16,9 +22,16 @@
         manager.prepend_keymap = [
           # Open ripdrag with selected files - https://github.com/sxyazi/yazi/discussions/327#discussioncomment-8336702
           {
-            on = [ "<C-n>" ];
+            on = [ "<C-o>" ];
             run = ''
-              shell 'ripdrag "$@" -x 2>/dev/null &' --confirm
+              shell '${ripdrag} "$@" -x 2>/dev/null &' --confirm
+            '';
+          }
+          # Open file roller compress menu with selected files
+          {
+            on = [ "<C-i>" ];
+            run = ''
+              shell '${fileRoller} --add "$@" -x 2>/dev/null &' --confirm
             '';
           }
           # Open shell
