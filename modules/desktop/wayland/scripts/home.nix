@@ -20,12 +20,11 @@ let
   '';
 
   # Prevent microphone from being auto adjusted to lower than 100 (Discord)
-  # This uses the "node.name" from wpctl inspect ID with pw-cli, it does not use the ID from wpctl as it changes when unplugged.
-  # The way to use the name with pw-cli was found here https://gitlab.freedesktop.org/pipewire/wireplumber/-/issues/395
-  # If @DEFAULT_AUDIO_SOURCE@ is used instead, it sets the speakers to 100% volume when the microphone is unplugged.
+  # When the microphone is unplugged, this can set the speakers to 100% volume instead (not an issue for me due to my setup).
+  # For an alternative way of setting the microphone to 100 see here https://gitlab.freedesktop.org/pipewire/wireplumber/-/issues/395
   wpctl = "${pkgs.wireplumber}/bin/wpctl";
   preventMicrophoneAutoAdjust = pkgs.writeShellScript "preventMicrophoneAutoAdjust.sh" ''
-    while sleep 0.1; do ${wpctl} set-volume -l 1.0 $(pw-cli i alsa_input.usb-Blue_Microphones_Yeti_Stereo_Microphone_REV8-00.analog-stereo | grep -oP 'id: \K\w+') 100%; done
+    while sleep 0.1; do ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 100%; done
   '';
 
   # Create directories and symlinks from drive
