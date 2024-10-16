@@ -79,6 +79,7 @@
       mkvtoolnix-cli
       fastfetch
       woeusb
+      nmap
       maestral
       # Development
       gh
