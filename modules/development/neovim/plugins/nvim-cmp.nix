@@ -12,6 +12,14 @@ in {
       cmp_luasnip.enable = true;
       luasnip = {
         enable = true;
+        settings = {
+          # Events on which to leave the current snippet-root if the cursor is outside its’ 'region'.
+          # Disabled by default, `'CursorMoved'`, `'CursorHold'` or `'InsertEnter'`
+          region_check_events = "InsertEnter";
+          # When to check if the current snippet was deleted, and if so, remove it from the history.
+          # Off by default, `'TextChanged'` (perhaps 'InsertLeave'`, to react to changes done in Insert mode) should work just fine
+          delete_check_events = "InsertLeave";
+        };
         fromVscode = [
           { } # generates: require("luasnip.loaders.from_vscode").lazy_load({})
         ];
