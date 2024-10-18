@@ -5,6 +5,22 @@
     oculante
   ];
 
+  # Fix failed to open file in PCManFM - https://github.com/woelper/oculante/issues/399
+  # https://github.com/woelper/oculante/blob/0ff5d53bd0592538ea73387553cddbfebc6777cc/res/oculante.desktop
+  home.file.".local/share/applications/oculante.desktop".text = ''
+    [Desktop Entry]
+    Name=Oculante
+    Comment=A no-nonsense hardware-accelerated image viewer
+    GenericName=Image Viewer
+    Keywords=image viewer;graphics;
+    Exec=oculante %F
+    Icon=oculante
+    Terminal=false
+    Categories=Graphics;
+    Type=Application
+    MimeType=image/bmp;image/gif;image/vnd.microsoft.icon;image/jpeg;image/png;image/pnm;image/avif;image/tiff;image/webp;image/svg+xml;image/exr;image/x-dcraw;image/x-nikon-nef;image/x-canon-cr2;image/x-adobe-dng;image/x-epson-erf;image/x-fuji-raf;image/x-sony-arw;image/x-sony-srf;image/x-sony-sr2;image/x-panasonic-raw;
+  '';
+
   xdg.mimeApps = {
     defaultApplications = {
       "image/png" = [ "oculante.desktop" ]; # jpg
