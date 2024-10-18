@@ -90,9 +90,9 @@
         green = "#${globals.colours.green}";
         blue = "#${globals.colours.blue}";
         overlay0 = "#${globals.colours.overlay0}";
-        base = "rgba(30, 30, 46, 0.9)";
-        mantle = "rgba(24,24,37, 0.9)";
-        crust = "rgba(17, 17, 27, 0.9)";
+        base = "#${globals.colours.base}";
+        mantle = "#${globals.colours.mantle}";
+        crust = "#${globals.colours.crust}";
       in
       ''
         * { 
