@@ -1,6 +1,6 @@
 # NixOS Config
 
-My NixOS config.
+My [NixOS](https://nixos.org/) config.
 
 ## Table of Contents
 
