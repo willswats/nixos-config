@@ -7,7 +7,6 @@
         zathura = "org.pwmt.zathura.desktop";
       in
       {
-        "application/pdf" = [ zathura ]; # pdf
         "application/epub+zip" = [ zathura ]; # epub
       };
   };
