@@ -27,7 +27,11 @@ in
         dartls.enable = true; # Dart
         bashls.enable = true; # Bash
         taplo.enable = true; # TOML
-        hls.enable = true; # Haskell
+        hls = {
+          # Haskell
+          enable = true;
+          installGhc = true;
+        };
         sqls = {
           enable = true;
           onAttach.function = ''

@@ -17,7 +17,7 @@
           swanstation # Sony - Playstation (SwanStation)
           ppsspp # Sony - PlayStation Portable (PPSSPP)
           desmume # Nintendo - DS (DeSmuME)
-          citra # Nintendo - 3DS (Citra)
+          # citra # Nintendo - 3DS (Citra)
           fbneo # Arcade (FinalBurn Neo)
         ];
       })
