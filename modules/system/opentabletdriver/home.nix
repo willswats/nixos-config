@@ -53,6 +53,20 @@
               "EraserActivationThreshold": 0.0,
               "EraserButton": null,
               "PenButtons": [
+                null,
+                null
+              ],
+              "AuxButtons": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
                 {
                   "Path": "OpenTabletDriver.Desktop.Binding.MouseBinding",
                   "Settings": [
@@ -73,20 +87,6 @@
                   ],
                   "Enable": true
                 }
-              ],
-              "AuxButtons": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null
               ],
               "MouseButtons": [],
               "MouseScrollUp": null,
