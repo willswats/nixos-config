@@ -35,7 +35,7 @@ in
     in
     {
       enable = true;
-      launchMeleeOnPlay = true; # Switch to false to change dolphin settings
+      launchMeleeOnPlay = false; # Switch to false to change dolphin settings
       isoPath = isoPath;
       rootSlpPath = ""; # The folder where your SLP replays should be saved
       spectateSlpPath = ""; # The folder where spectated games should be saved
