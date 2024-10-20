@@ -53,22 +53,13 @@
               "EraserActivationThreshold": 0.0,
               "EraserButton": null,
               "PenButtons": [
+                null,
                 {
-                  "Path": "OpenTabletDriver.Desktop.Binding.KeyBinding",
+                  "Path": "OpenTabletDriver.Desktop.Binding.MouseBinding",
                   "Settings": [
                     {
-                      "Property": "Key",
-                      "Value": "None"
-                    }
-                  ],
-                  "Enable": true
-                },
-                {
-                  "Path": "OpenTabletDriver.Desktop.Binding.KeyBinding",
-                  "Settings": [
-                    {
-                      "Property": "Key",
-                      "Value": "None"
+                      "Property": "Button",
+                      "Value": "Right"
                     }
                   ],
                   "Enable": true
