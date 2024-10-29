@@ -52,7 +52,6 @@
     packages = with pkgs; [
       # Utilities 
       ## GUI
-      thunderbird
       bitwarden
       # fluffychat # add back after this issue is fixed: https://github.com/krille-chan/fluffychat/issues/1258
       obs-studio
