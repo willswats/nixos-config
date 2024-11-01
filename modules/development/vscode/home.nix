@@ -1,9 +1,14 @@
 { pkgs, ... }:
 
 {
+  # Install the following extensions manually:
+  # - sqls
+  # - sqlfluff
+  home.packages = with pkgs; [ sqls sqlfluff ];
+
   programs.vscode = {
     enable = true;
-    package = pkgs.vscodium;
+    package = pkgs.vscode;
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
     extensions = with pkgs.vscode-extensions; [
@@ -24,11 +29,18 @@
       "workbench.colorTheme" = "Catppuccin Mocha";
       "workbench.iconTheme" = "catppuccin-mocha";
       # Vim
-      "vim.useCtrlKeys" = false;
       "vim.useSystemClipboard" = true;
+      "vim.handleKeys" = {
+        "<C-w>" = false;
+        "<C-s>" = false;
+      };
       "vim.insertModeKeyBindings" = [
         {
           "before" = [ "j" "k" ];
+          "after" = [ "<Esc>" ];
+        }
+        {
+          "before" = [ "k" "j" ];
           "after" = [ "<Esc>" ];
         }
       ];
@@ -66,18 +78,5 @@
         "when" = "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus";
       }
     ];
-  };
-
-  # Set marketplace to the microsoft marketplace instead of open-vsx
-  xdg.configFile."VSCodium/product.json" = {
-    text = ''
-      {
-        "extensionsGallery": {
-          "serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
-          "cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
-          "itemUrl": "https://marketplace.visualstudio.com/items"
-        }
-      }
-    '';
   };
 }
