@@ -85,7 +85,6 @@
         };
 
         dwindle = {
-          no_gaps_when_only = 1; # hide borders when workspace contains a single window
           force_split = 2; # always split right or bottom
         };
 
@@ -237,14 +236,16 @@
           "$mod shift, equal, movetoworkspacesilent, m+0"
           "$mod shift, minus, movetoworkspacesilent, special"
 
-          "$mod, tab, togglegroup"
-          "$mod shift, tab, lockactivegroup, toggle"
+          "$mod shift, g, togglegroup"
+          "$mod, g, lockactivegroup, toggle"
           "$mod, o, moveoutofgroup"
 
-          "$mod shift, j, changegroupactive, b"
-          "$mod shift, k, changegroupactive, f"
-          "$mod alt, j, movegroupwindow, b"
-          "$mod alt, k, movegroupwindow, f"
+          "$mod, tab, changegroupactive, f"
+          "$mod shift, tab, changegroupactive, b"
+          "$mod, Next, changegroupactive, f"
+          "$mod, Prior, changegroupactive, b"
+          "$mod shift, Next, movegroupwindow, f"
+          "$mod shift, Prior, movegroupwindow, b"
 
           "$mod, space, cyclenext" # To select floating windows
 
@@ -309,6 +310,18 @@
       };
       # virtual submap for passing keyboard into virtual machine - https://github.com/hyprwm/Hyprland/issues/501
       extraConfig = ''
+        # Ref https://wiki.hyprland.org/Configuring/Workspace-Rules/
+        # "Smart gaps" / "No gaps when only"
+        workspace = w[t1], gapsout:0, gapsin:0
+        workspace = w[tg1], gapsout:0, gapsin:0
+        workspace = f[1], gapsout:0, gapsin:0
+        windowrulev2 = bordersize 0, floating:0, onworkspace:w[t1]
+        windowrulev2 = rounding 0, floating:0, onworkspace:w[t1]
+        windowrulev2 = bordersize 0, floating:0, onworkspace:w[tg1]
+        windowrulev2 = rounding 0, floating:0, onworkspace:w[tg1]
+        windowrulev2 = bordersize 0, floating:0, onworkspace:f[1]
+        windowrulev2 = rounding 0, floating:0, onworkspace:f[1]
+
         bind=$mod,r,submap,resize
         submap=resize
         binde=,h,resizeactive,10 0
