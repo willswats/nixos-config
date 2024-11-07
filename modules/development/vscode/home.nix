@@ -25,6 +25,7 @@
       "files.hotExit" = "off";
       "workbench.startupEditor" = "none";
       "window.restoreWindows" = "none";
+      "git.openRepositoryInParentFolders" = "always";
       # Catppuccin
       "workbench.colorTheme" = "Catppuccin Mocha";
       "workbench.iconTheme" = "catppuccin-mocha";
