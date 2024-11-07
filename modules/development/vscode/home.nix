@@ -44,6 +44,10 @@
           "after" = [ "<Esc>" ];
         }
       ];
+      # sqlfluff
+      "[sql]" = {
+        "editor.defaultFormatter" = "dorzey.vscode-sqlfluff";
+      };
     };
     keybindings = [
       {
