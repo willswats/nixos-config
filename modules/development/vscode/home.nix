@@ -4,7 +4,7 @@
   # Install the following extensions manually:
   # - sqls
   # - sqlfluff
-  home.packages = with pkgs; [ sqls sqlfluff ];
+  home.packages = with pkgs; [ sqls sqlfluff ruff ];
 
   programs.vscode = {
     enable = true;
@@ -18,9 +18,9 @@
       ms-vsliveshare.vsliveshare # live share
       esbenp.prettier-vscode # prettier (formatter)
       dbaeumer.vscode-eslint # eslint (js lint)
-      ms-pyright.pyright # pyright (type checker)
       ms-python.vscode-pylance # pylance (lsp)
       ms-python.debugpy # python debugger
+      charliermarsh.ruff # python linter and formatter
     ];
     userSettings = {
       # General
@@ -54,6 +54,10 @@
       # sqlfluff
       "[sql]" = {
         "editor.defaultFormatter" = "dorzey.vscode-sqlfluff";
+      };
+      # ruff
+      "[python]" = {
+        "editor.defaultFormatter" = "charliermarsh.ruff";
       };
     };
     keybindings = [
