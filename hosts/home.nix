@@ -81,6 +81,7 @@
       woeusb
       nmap
       maestral
+      distrobox
       # Development
       gh
       nodePackages.nodejs
