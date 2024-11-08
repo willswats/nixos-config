@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, globals, ... }:
 
 {
   # Install the following extensions manually:
@@ -22,44 +22,101 @@
       ms-python.debugpy # python debugger
       charliermarsh.ruff # python linter and formatter
     ];
-    userSettings = {
-      # General
-      "window.zoomLevel" = 1;
-      "editor.formatOnSave" = true;
-      "security.workspace.trust.enabled" = false;
-      "window.openFilesInNewWindow" = "default";
-      "files.hotExit" = "off";
-      "workbench.startupEditor" = "none";
-      "window.restoreWindows" = "none";
-      "git.openRepositoryInParentFolders" = "always";
-      # Catppuccin
-      "workbench.colorTheme" = "Catppuccin Mocha";
-      "workbench.iconTheme" = "catppuccin-mocha";
-      # Vim
-      "vim.useSystemClipboard" = true;
-      "vim.handleKeys" = {
-        "<C-w>" = false;
-        "<C-s>" = false;
+    userSettings =
+      let
+        fontName = globals.font.name;
+      in
+      {
+        # General
+        "window.zoomLevel" = 1;
+        "editor.formatOnSave" = true;
+        "editor.fontSize" = 14;
+        "editor.fontFamily" = "\'${fontName}\'";
+        "security.workspace.trust.enabled" = false;
+        "window.openFilesInNewWindow" = "default";
+        "files.hotExit" = "off";
+        "workbench.startupEditor" = "none";
+        "window.restoreWindows" = "none";
+        "git.openRepositoryInParentFolders" = "always";
+        # Catppuccin
+        "workbench.colorTheme" = "Catppuccin Mocha";
+        "workbench.iconTheme" = "catppuccin-mocha";
+        # Vim
+        "vim.useSystemClipboard" = true;
+        "vim.handleKeys" = {
+          "<C-f>" = false;
+        };
+        "vim.leader" = "space";
+        "vim.insertModeKeyBindings" = [
+          {
+            "before" = [ "j" "k" ];
+            "after" = [ "<Esc>" ];
+          }
+          {
+            "before" = [ "k" "j" ];
+            "after" = [ "<Esc>" ];
+          }
+        ];
+        "vim.normalModeKeyBindings" = [
+          {
+            "before" = [ "leader" "w" ];
+            "commands" = [
+              "workbench.action.files.save"
+            ];
+          }
+          {
+            "before" = [ "leader" "c" ];
+            commands = [
+              "workbench.action.closeActiveEditor"
+            ];
+          }
+          {
+            "before" = [ "K" ];
+            "commands" = [
+              "workbench.action.nextEditor"
+            ];
+          }
+          {
+            "before" = [ "J" ];
+            "commands" = [
+              "workbench.action.previousEditor"
+            ];
+          }
+          {
+            "before" = [ "alt+k" ];
+            "commands" = [
+              "workbench.action.moveEditorLeftInGroup"
+            ];
+          }
+          {
+            "before" = [ "alt+j" ];
+            "commands" = [
+              "workbench.action.moveEditorRightInGroup"
+            ];
+          }
+
+        ];
+        "vim.visualModeKeyBindings" = [
+          {
+            "before" = [ ">" ];
+            "commands" = [ "editor.action.indentLines" ];
+          }
+          {
+            "before" = [
+              "<"
+            ];
+            "commands" = [ "editor.action.outdentLines" ];
+          }
+        ];
+        # sqlfluff
+        "[sql]" = {
+          "editor.defaultFormatter" = "dorzey.vscode-sqlfluff";
+        };
+        # ruff
+        "[python]" = {
+          "editor.defaultFormatter" = "charliermarsh.ruff";
+        };
       };
-      "vim.insertModeKeyBindings" = [
-        {
-          "before" = [ "j" "k" ];
-          "after" = [ "<Esc>" ];
-        }
-        {
-          "before" = [ "k" "j" ];
-          "after" = [ "<Esc>" ];
-        }
-      ];
-      # sqlfluff
-      "[sql]" = {
-        "editor.defaultFormatter" = "dorzey.vscode-sqlfluff";
-      };
-      # ruff
-      "[python]" = {
-        "editor.defaultFormatter" = "charliermarsh.ruff";
-      };
-    };
     keybindings = [
       {
         "key" = "ctrl+tab";
