@@ -58,10 +58,11 @@
         lg = "lazygit";
 
         # CD
-        uni = "cd ${universityDirectory}";
-        code = "cd ${codeDirectory}";
-        conf = "cd ${nixosConfigDirectory}; nvim";
-        note = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
+        cduni = "cd ${universityDirectory}";
+        cdcode = "cd ${codeDirectory}";
+        # nvim
+        nvconf = "cd ${nixosConfigDirectory}; nvim";
+        nvnote = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
 
         # gh
         ghicc = ghIssueCloseCommit.outPath;
