@@ -12,9 +12,15 @@
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
     extensions = with pkgs.vscode-extensions; [
-      catppuccin.catppuccin-vsc
-      catppuccin.catppuccin-vsc-icons
-      vscodevim.vim
+      catppuccin.catppuccin-vsc # catppuccin
+      catppuccin.catppuccin-vsc-icons # catppuccin icons
+      vscodevim.vim # vim
+      ms-vsliveshare.vsliveshare # live share
+      esbenp.prettier-vscode # prettier (formatter)
+      dbaeumer.vscode-eslint # eslint (js lint)
+      ms-pyright.pyright # pyright (type checker)
+      ms-python.vscode-pylance # pylance (lsp)
+      ms-python.debugpy # python debugger
     ];
     userSettings = {
       # General
