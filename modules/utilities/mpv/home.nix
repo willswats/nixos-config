@@ -101,6 +101,9 @@
         "Alt+A" = "script-binding youtube_search/youtube_music_search_append";
         "Alt+r" = "script-binding youtube_search/search_results_update";
 
+        # reload
+        "Ctrl+r" = "script-binding reload/reload_resume";
+
         # paste
         "Ctrl+v" = "script-binding paste/paste";
         "Ctrl+Shift+v" = "script-binding paste/paste_into_playlist";
@@ -115,6 +118,7 @@
       mpvScripts.autosubsync-mpv # Auto sync subtitles
       mpvScripts.webtorrent-mpv-hook # Adds a hook that allows mpv to stream torrents 
       mpvScripts.autoload # Adds files to the mpv playlist
+      mpvScripts.reload # Manual & automatic reloading of videos
     ];
     scriptOpts = {
       thumbfast = {
