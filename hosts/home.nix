@@ -57,7 +57,7 @@
       obs-studio
       gimp
       krita
-      shotcut
+      kdenlive
       deluge
       popsicle
       gnome-disk-utility
