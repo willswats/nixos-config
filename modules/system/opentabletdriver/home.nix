@@ -6,7 +6,7 @@
       {
         "Profiles": [
           {
-            "Tablet": "Huion HS610",
+            "Tablet": "Wacom CTH-680",
             "OutputMode": {
               "Path": "OpenTabletDriver.Desktop.Output.RelativeMode",
               "Settings": [],
@@ -15,17 +15,17 @@
             "Filters": [],
             "AbsoluteModeSettings": {
               "Display": {
-                "Width": 1920.0,
+                "Width": 3840.0,
                 "Height": 1080.0,
-                "X": 2880.0,
+                "X": 1920.0,
                 "Y": 540.0,
                 "Rotation": 0.0
               },
               "Tablet": {
-                "Width": 254.0,
-                "Height": 158.75,
-                "X": 127.0,
-                "Y": 79.375,
+                "Width": 216.0,
+                "Height": 135.0,
+                "X": 108.0,
+                "Y": 67.5,
                 "Rotation": 0.0
               },
               "EnableClipping": true,
@@ -54,38 +54,6 @@
               "EraserButton": null,
               "PenButtons": [
                 {
-                  "Path": "OpenTabletDriver.Desktop.Binding.KeyBinding",
-                  "Settings": [
-                    {
-                      "Property": "Key",
-                      "Value": "None"
-                    }
-                  ],
-                  "Enable": true
-                },
-                {
-                  "Path": "OpenTabletDriver.Desktop.Binding.KeyBinding",
-                  "Settings": [
-                    {
-                      "Property": "Key",
-                      "Value": "None"
-                    }
-                  ],
-                  "Enable": true
-                }
-              ],
-              "AuxButtons": [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                {
                   "Path": "OpenTabletDriver.Desktop.Binding.MouseBinding",
                   "Settings": [
                     {
@@ -105,6 +73,12 @@
                   ],
                   "Enable": true
                 }
+              ],
+              "AuxButtons": [
+                null,
+                null,
+                null,
+                null
               ],
               "MouseButtons": [],
               "MouseScrollUp": null,
