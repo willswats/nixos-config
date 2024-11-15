@@ -7,7 +7,6 @@
     ../../modules/games/steam/home.nix
     ../../modules/games/heroic/home.nix
     ../../modules/games/r2modman/home.nix
-    ../../modules/games/osu/home.nix
     ../../modules/games/gzdoom/home.nix
     ../../modules/games/airshipper/home.nix
     ../../modules/emulators/slippi/home.nix
@@ -26,6 +25,7 @@
     # Launchers 
     prismlauncher
     # Games
+    osu-lazer-bin
     tetrio-desktop
   ];
 
