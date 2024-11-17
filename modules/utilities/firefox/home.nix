@@ -288,6 +288,10 @@
                 url = "https://osu.ppy.sh/home";
               }
               {
+                name = "Osekai INEX / Medals";
+                url = "https://inex.osekai.net/medals/";
+              }
+              {
                 name = "lichess.org";
                 url = "https://lichess.org/";
               }
