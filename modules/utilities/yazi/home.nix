@@ -9,6 +9,7 @@
     let
       driveDir = host.directories.drive;
 
+      pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
       fileRoller = "${pkgs.file-roller}/bin/file-roller";
 
       yazi-plugins = pkgs.fetchFromGitHub {
@@ -27,9 +28,16 @@
 
       keymap = {
         manager.prepend_keymap = [
-          # Open file roller compress menu with selected files - edited version of https://github.com/sxyazi/yazi/discussions/327#discussioncomment-8336702
+          # Open pcmanfm 
           {
             on = [ "<C-o>" ];
+            run = ''
+              shell '${pcmanfm} .' --confirm
+            '';
+          }
+          # Open file roller compress menu with selected files
+          {
+            on = [ "<C-i>" ];
             run = ''
               shell '${fileRoller} --add "$@" -x 2>/dev/null &' --confirm
             '';
