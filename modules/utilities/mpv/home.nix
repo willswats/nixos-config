@@ -133,6 +133,9 @@
       webtorrent = {
         path = "${globals.directories.home}/Downloads/"; # Path to save downloaded files in. Can be set to "memory" to store all files in RAM.
       };
+      youtube-search = {
+        osd_message_duration = 0;
+      };
     };
   };
 
