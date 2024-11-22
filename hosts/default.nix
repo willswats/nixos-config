@@ -18,7 +18,7 @@ in
     ../modules/theme/catppuccin
     ../modules/utilities/nh
     ../modules/utilities/gnome-keyring
-    ../modules/utilities/pcmanfm
+    ../modules/utilities/nautilus
     ../modules/utilities/mullvad-vpn
     ../modules/utilities/virt-manager
     ../modules/utilities/docker

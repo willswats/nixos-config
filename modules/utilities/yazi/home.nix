@@ -9,7 +9,7 @@
     let
       driveDir = host.directories.drive;
 
-      pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
+      nautilus = "${pkgs.nautilus}/bin/nautilus";
       fileRoller = "${pkgs.file-roller}/bin/file-roller";
 
       yazi-plugins = pkgs.fetchFromGitHub {
@@ -28,11 +28,11 @@
 
       keymap = {
         manager.prepend_keymap = [
-          # Open pcmanfm 
+          # Open nautilus 
           {
             on = [ "<C-o>" ];
             run = ''
-              shell '${pcmanfm} .' --confirm
+              shell '${nautilus} .' --confirm
             '';
           }
           # Open file roller compress menu with selected files

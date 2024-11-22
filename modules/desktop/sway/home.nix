@@ -55,7 +55,6 @@
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
       bitwarden = "${pkgs.bitwarden}/bin/bitwarden";
       spotify = "${pkgs.spotify}/bin/spotify";
-      pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
 
       kitty = "${pkgs.kitty}/bin/kitty";
       yazi = "${pkgs.yazi}/bin/yazi";
@@ -315,10 +314,6 @@
           # Misc
           {
             command = "${xrandr} --output ${monitorCenter} --primary"; # Ensures that xwindows (especially steam games) use the center monitor
-            always = false;
-          }
-          {
-            command = "${pcmanfm} --daemon-mode"; # Run as dameon to prevent pcmanfm from opening slowly on first launch (bug)
             always = false;
           }
           {
