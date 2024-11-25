@@ -32,6 +32,7 @@
     ../modules/utilities/kitty/home.nix
     ../modules/utilities/bottom/home.nix
     ../modules/utilities/yazi/home.nix
+    ../modules/utilities/nautilus/home.nix
     ../modules/utilities/bluetuith/home.nix
     ../modules/utilities/gnome-keyring/home.nix
     ../modules/utilities/onlyoffice/home.nix
