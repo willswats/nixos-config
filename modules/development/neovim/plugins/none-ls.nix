@@ -11,7 +11,7 @@
           { 
               extra_args = { 
                   "--dialect", "postgres", 
-                  "--exclude-rules", "ST07, LT02" 
+                  "--exclude-rules", "ST06, ST07, LT02" 
               } 
           }
         '';
