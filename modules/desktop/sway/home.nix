@@ -32,7 +32,6 @@
 
       wallpaper = globals.wallpaper;
       monitorCenter = host.monitors.center;
-      monitorLeft = host.monitors.left;
 
       ws1 = "1";
       ws2 = "2";
@@ -322,19 +321,5 @@
           }
         ];
       };
-      extraConfig =
-        # Fixes sway starting on ws10 - https://github.com/nix-community/home-manager/issues/695
-        ''
-          workspace ${ws1} output ${monitorLeft}
-          workspace ${ws2} output ${monitorCenter}
-          workspace ${ws3} output ${monitorCenter}
-          workspace ${ws4} output ${monitorCenter}
-          workspace ${ws5} output ${monitorCenter}
-          workspace ${ws6} output ${monitorCenter}
-          workspace ${ws7} output ${monitorCenter}
-          workspace ${ws8} output ${monitorCenter}
-          workspace ${ws9} output ${monitorCenter}
-          workspace ${ws10} output ${monitorCenter}
-        '';
     };
 }
