@@ -3,8 +3,8 @@
 {
   # Install the following extensions manually:
   # - sqls
-  # - sqlfluff
-  home.packages = with pkgs; [ sqls sqlfluff ruff ];
+  # - SQL Formatter VSCode
+  home.packages = with pkgs; [ sqls sql-formatter ruff ];
 
   programs.vscode = {
     enable = true;
@@ -108,10 +108,15 @@
             "commands" = [ "editor.action.outdentLines" ];
           }
         ];
-        # sqlfluff
+        # SQL Formatter VSCode 
         "[sql]" = {
-          "editor.defaultFormatter" = "dorzey.vscode-sqlfluff";
+          "editor.defaultFormatter" = "ReneSaarsoo.sql-formatter-vsc";
         };
+        "SQL-Formatter-VSCode.dialect" = "postgresql";
+        "SQL-Formatter-VSCode.tabSizeOverride" = 4;
+        "SQL-Formatter-VSCode.keywordCase" = "upper";
+        "SQL-Formatter-VSCode.dataTypeCase" = "upper";
+        "SQL-Formatter-VSCode.functionCase" = "upper";
         # ruff
         "[python]" = {
           "editor.defaultFormatter" = "charliermarsh.ruff";
