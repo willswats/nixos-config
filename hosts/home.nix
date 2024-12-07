@@ -61,7 +61,6 @@
       deluge
       popsicle
       gnome-disk-utility
-      moonlight-qt
       jellyfin-media-player
       freetube
       miru
