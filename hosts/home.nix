@@ -67,7 +67,6 @@
       spotify
       zotero
       maestral-gui
-      teams-for-linux
       ## CLI
       wget
       ffmpeg
