@@ -74,8 +74,6 @@
         # Nix
         nix-shell = "nix-shell --command fish";
         rsf = rebuildSwitchFlake.outPath;
-        rsfp = "git -C ${nixosConfigDirectory} pull; ${rebuildSwitchFlake.outPath}";
-        rsfu = "sudo nix flake update ${nixosConfigDirectory}; git -C ${nixosConfigDirectory} add flake.lock; ${rebuildSwitchFlake.outPath}";
       };
     interactiveShellInit = ''
       # Hide fish greeting
