@@ -70,13 +70,12 @@
       ## CLI
       wget
       ffmpeg
+      mkvtoolnix-cli
       ouch
       killall
       appimage-run
       trash-cli
       yt-dlp
-      mkvtoolnix-cli
-      fastfetch
       woeusb
       nmap
       maestral
