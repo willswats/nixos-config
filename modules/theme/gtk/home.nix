@@ -15,7 +15,6 @@
         }
       '';
       fontName = globals.font.name;
-      fontPackage = globals.font.package;
       bookmarks =
         let
           bookmarkStartHome = "file://${globals.directories.home}/";
@@ -35,7 +34,7 @@
       enable = true;
       font = {
         name = fontName;
-        package = pkgs.nerdfonts.override { fonts = [ fontPackage ]; };
+        package = pkgs.nerd-fonts.jetbrains-mono;
         size = 10;
       };
       theme = {

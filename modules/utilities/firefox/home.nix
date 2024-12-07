@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -35,7 +35,7 @@
       id = 0;
       # Find extensions here: https://nur.nix-community.org/repos/rycee/
       # Request new extensions here: https://gitlab.com/rycee/nur-expressions/
-      extensions = with config.nur.repos.rycee.firefox-addons; [
+      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
         # Block annoyances
         ublock-origin
         consent-o-matic

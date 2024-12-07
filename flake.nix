@@ -76,7 +76,6 @@
             hostNames = hostNames;
             wallpaper = ./wallpaper.png;
             font = {
-              package = "JetBrainsMono";
               name = "JetBrains Mono Nerd Font";
             };
             colours = {
@@ -132,7 +131,7 @@
                 modules = [
                   ./hosts/desktop
                   home-manager.nixosModules.home-manager
-                  nur.nixosModules.nur
+                  nur.modules.nixos.default
                   hyprland.nixosModules.default
                   catppuccin.nixosModules.catppuccin
                   slippi.nixosModules.default
@@ -145,7 +144,7 @@
                       };
                       users.will.imports = [
                         ./hosts/desktop/home.nix
-                        nur.hmModules.nur
+                        nur.modules.homeManager.default
                         nixvim.homeManagerModules.nixvim
                         catppuccin.homeManagerModules.catppuccin
                         slippi.homeManagerModules.default
@@ -174,7 +173,7 @@
               modules = [
                 ./hosts/laptop
                 home-manager.nixosModules.home-manager
-                nur.nixosModules.nur
+                nur.modules.nixos.default
                 hyprland.nixosModules.default
                 catppuccin.nixosModules.catppuccin
                 {
@@ -186,7 +185,7 @@
                     };
                     users.${user}.imports = [
                       ./hosts/home.nix
-                      nur.hmModules.nur
+                      nur.modules.homeManager.default
                       nixvim.homeManagerModules.nixvim
                       catppuccin.homeManagerModules.catppuccin
                     ];
