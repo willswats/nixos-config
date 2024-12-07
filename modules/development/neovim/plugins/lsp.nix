@@ -23,7 +23,7 @@ in
         nil_ls.enable = true; # Nix
         lua_ls.enable = true; # Lua 
         pyright.enable = true; # Python
-        ruff_lsp.enable = true; # Python (Format & Lint)
+        ruff.enable = true; # Python (Format & Lint)
         dartls.enable = true; # Dart
         bashls.enable = true; # Bash
         taplo.enable = true; # TOML
