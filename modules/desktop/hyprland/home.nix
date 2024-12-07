@@ -157,6 +157,8 @@
           # Firefox
           "suppressevent maximize, initialClass:firefox" # Fix Firefox maximizing certain windows (extensions)
           "float, initialClass:firefox, title:^(.*Bitwarden Password Manager.*)$" # Float bitwarden
+          # Oculante
+          "float, initialClass:oculante"
           # Godot
           "tile, initialClass:Godot_Engine" # Fix Godot starting as float
           # MPV

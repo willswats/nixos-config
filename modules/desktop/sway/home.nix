@@ -89,6 +89,7 @@
           names = [ "Hack Nerd Font" ];
           size = 14.0;
         };
+        # To find app_id / class names: swaymsg -t get_tree
         window.commands = [
           {
             command = "border pixel 2";
@@ -103,6 +104,11 @@
           {
             command = "floating enable";
             criteria = { app_id = "firefox"; title = "^(.*Bitwarden Password Manager.*)$"; };
+          }
+          # Oculante
+          {
+            command = "floating enable";
+            criteria = { class = "oculante"; };
           }
           # Steam
           {
