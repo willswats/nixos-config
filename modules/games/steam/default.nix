@@ -16,10 +16,10 @@
         "-e" # Enable steam integration (fix mouse issues on certain games)
       ];
     };
-    # Note: when proton-ge-bin updates, all games set with it are reset to no proton
-    extraCompatPackages = with pkgs; [
-      proton-ge-bin
-    ];
+    # Not using this, because when proton-ge-bin updates, all games set with it are reset to no proton
+    # extraCompatPackages = with pkgs; [
+    #   proton-ge-bin
+    # ];
   };
 
   # Fix gamescope on steam https://github.com/ValveSoftware/gamescope/issues/905#issuecomment-1660112668
