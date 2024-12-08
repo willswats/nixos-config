@@ -67,6 +67,7 @@
       spotify
       zotero
       maestral-gui
+      resources
       ## CLI
       wget
       ffmpeg
