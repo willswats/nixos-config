@@ -34,21 +34,21 @@
           {
             on = [ "<C-o>" ];
             run = ''
-              shell '${nautilus} .' --confirm
+              shell '${nautilus} .'
             '';
           }
           # Open file roller compress menu with selected files
           {
             on = [ "<C-i>" ];
             run = ''
-              shell '${fileRoller} --add "$@" -x 2>/dev/null &' --confirm
+              shell '${fileRoller} --add "$@" -x 2>/dev/null &'
             '';
           }
           # Open shell
           {
             on = [ "<C-s>" ];
             run = ''
-              shell "$SHELL" --block --confirm
+              shell "$SHELL" --block
             '';
             desc = "Open shell here";
           }
@@ -58,7 +58,7 @@
             run = [
               "yank"
               ''
-                shell --confirm 'for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list'
+                shell 'for path in "$@"; do echo "file://$path"; done | wl-copy -t text/uri-list'
               ''
             ];
           }
