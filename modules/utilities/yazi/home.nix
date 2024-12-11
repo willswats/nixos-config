@@ -12,11 +12,13 @@
       nautilus = "${pkgs.nautilus}/bin/nautilus";
       fileRoller = "${pkgs.file-roller}/bin/file-roller";
 
+      # Pinned to commit so that I do not need to keep updating the hash
+      # https://github.com/yazi-rs/plugins/tree/main
       yazi-plugins = pkgs.fetchFromGitHub {
         owner = "yazi-rs";
         repo = "plugins";
-        rev = "932b9311a810423659dae172ff8e215366bfc631"; # 2024-10-10
-        hash = "sha256-tAccywz2yPtyWGMe8Ff2VAiFFjtTn34qBP2J39H2PdA=";
+        rev = "ec97f8847feeb0307d240e7dc0f11d2d41ebd99d"; # 2024-12-11
+        hash = "sha256-By8XuqVJvS841u+8Dfm6R8GqRAs0mO2WapK6r2g7WI8=";
       };
     in
     {
@@ -69,7 +71,7 @@
           # Plugin (smart-enter) - Enter a directory or open the file
           {
             on = [ "l" ];
-            run = "plugin --sync smart-enter";
+            run = "plugin smart-enter";
             desc = "Enter the child directory, or open the file";
           }
           # Plugin (chmod) - chmod selected files
@@ -151,6 +153,7 @@
       # Plugins found here - https://github.com/yazi-rs/plugins
       plugins = {
         chmod = "${yazi-plugins}/chmod.yazi";
+        smart-enter = "${yazi-plugins}/smart-enter.yazi";
       };
 
       # Some plugins need to be required
@@ -161,17 +164,4 @@
         }
       '';
     };
-
-  # Other plugins
-  # smart-enter - enter a directory or open the file
-  xdg.configFile."yazi/plugins/smart-enter.yazi/init.lua" = {
-    text = ''
-      return {
-      	entry = function()
-      		local h = cx.active.current.hovered
-      		ya.manager_emit(h and h.cha.is_dir and "enter" or "open", {})
-      	end,
-      }
-    '';
-  };
 }
