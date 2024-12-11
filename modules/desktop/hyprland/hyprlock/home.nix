@@ -66,7 +66,7 @@
             font_family = "${fontName} Bold";
             color = blue;
 
-            position = "0, 80";
+            position = "0, 100";
 
             valign = "center";
             halign = "center";
@@ -79,7 +79,7 @@
             font_family = fontName;
             color = blue;
 
-            position = "0, 30";
+            position = "0, 50";
 
             valign = "center";
             halign = "center";
