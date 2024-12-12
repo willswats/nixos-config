@@ -161,10 +161,11 @@
           "suppressevent maximize, class:mpv" # Stop mpv from maximizing when adding a video
         ];
 
-        env = [
-          "HYPRCURSOR_THEME,Catppuccin-Mocha-Dark"
-          "HYPRCURSOR_SIZE,32"
-        ];
+        # Disable hyprcursor as it doesn't make a difference for me and will require gsettings
+        # to make it not go invisible on GTK (file dialog)
+        cursor = {
+          enable_hyprcursor = false;
+        };
 
         workspace = [
           "1, monitor:${monitorLeft}"
