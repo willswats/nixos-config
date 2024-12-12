@@ -144,25 +144,27 @@
 
         windowrulev2 = [
           # Chatterino
-          "opacity 0.9, initialClass:com.chatterino."
-          "noblur, initialClass:com.chatterino."
-          "float, initialClass:com.chatterino."
-          "size 400 600, initialClass:com.chatterino."
+          "opacity 0.9, class:com.chatterino."
+          "noblur, class:com.chatterino."
+          "float, class:com.chatterino."
+          "size 400 600, class:com.chatterino."
           # Steam
-          "float, initialClass:steam, title:Friends List"
-          "float, initialClass:steam, title:Steam Settings"
-          "float, initialClass:steam, title:Game Servers"
-          "float, initialClass:steam, title:Screenshot Manager"
-          "suppressevent maximize, initialClass:steam" # Fix Steam maximizing certain windows (Friends List)
+          "float, class:steam, title:Friends List"
+          "float, class:steam, title:Steam Settings"
+          "float, class:steam, title:Game Servers"
+          "float, class:steam, title:Screenshot Manager"
+          "suppressevent maximize, class:steam" # Fix Steam maximizing certain windows (Friends List)
           # Firefox
-          "suppressevent maximize, initialClass:firefox" # Fix Firefox maximizing certain windows (extensions)
-          "float, initialClass:firefox, title:^(.*Bitwarden Password Manager.*)$" # Float bitwarden
+          "suppressevent maximize, class:firefox" # Fix Firefox maximizing certain windows (extensions)
+          "float, class:firefox, title:^(.*Bitwarden Password Manager.*)$" # Float bitwarden
           # Oculante
-          "float, initialClass:oculante"
+          "float, class:oculante"
+          "center 1, class:oculante"
+          "size 1200 800, class:oculante"
           # Godot
-          "tile, initialClass:Godot_Engine" # Fix Godot starting as float
+          "tile, class:Godot" # Fix Godot starting as float
           # MPV
-          "suppressevent maximize, initialClass:mpv" # Stop mpv from maximizing when adding a video
+          "suppressevent maximize, class:mpv" # Stop mpv from maximizing when adding a video
         ];
 
         env = [
