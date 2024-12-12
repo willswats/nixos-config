@@ -105,11 +105,6 @@
             command = "floating enable";
             criteria = { app_id = "firefox"; title = "^(.*Bitwarden Password Manager.*)$"; };
           }
-          # Oculante
-          {
-            command = "floating enable";
-            criteria = { class = "oculante"; };
-          }
           # Steam
           {
             command = "floating enable";
