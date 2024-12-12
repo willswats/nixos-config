@@ -1,17 +1,6 @@
 {
   description = "NixOS configuration";
 
-  nixConfig = {
-    extra-substituters = [
-      # Hyprland
-      "https://hyprland.cachix.org"
-    ];
-    extra-trusted-public-keys = [
-      # Hyprland
-      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-    ];
-  };
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR";
@@ -28,18 +17,6 @@
 
     catppuccin.url = "github:catppuccin/nix";
 
-    hyprland = {
-      type = "git";
-      url = "https://github.com/hyprwm/Hyprland";
-      submodules = true;
-    };
-    hypridle.url = "github:hyprwm/hypridle";
-    hyprlock.url = "github:hyprwm/hyprlock";
-    hyprland-contrib = {
-      url = "github:hyprwm/contrib";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     slippi.url = "github:lytedev/slippi-nix";
   };
 
@@ -48,7 +25,6 @@
     , home-manager
     , nur
     , nixvim
-    , hyprland
     , catppuccin
     , slippi
     , ...
@@ -128,7 +104,6 @@
                   ./hosts/desktop
                   home-manager.nixosModules.home-manager
                   nur.modules.nixos.default
-                  hyprland.nixosModules.default
                   catppuccin.nixosModules.catppuccin
                   slippi.nixosModules.default
                   {
@@ -170,7 +145,6 @@
                 ./hosts/laptop
                 home-manager.nixosModules.home-manager
                 nur.modules.nixos.default
-                hyprland.nixosModules.default
                 catppuccin.nixosModules.catppuccin
                 {
                   home-manager = {

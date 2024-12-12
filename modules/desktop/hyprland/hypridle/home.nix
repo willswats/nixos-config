@@ -1,10 +1,10 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   services.hypridle =
     let
-      hyprlock = "${inputs.hyprlock.packages.${pkgs.system}.hyprlock}/bin/hyprlock";
-      hyprctl = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl";
+      hyprlock = "${pkgs.hyprlock}/bin/hyprlock";
+      hyprctl = "${pkgs.hyprland}/bin/hyprctl";
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       rg = "${pkgs.ripgrep}/bin/rg";
       # Both of these scripts check if there are no audio streams with "active"
@@ -31,7 +31,6 @@
     in
     {
       enable = true;
-      package = inputs.hypridle.packages.${pkgs.system}.hypridle;
       settings = {
         listener = [
           {

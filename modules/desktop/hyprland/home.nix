@@ -1,4 +1,4 @@
-{ inputs, pkgs, globals, host, ... }:
+{ pkgs, globals, host, ... }:
 
 {
   imports = [
@@ -37,8 +37,8 @@
 
       swaybg = "${pkgs.swaybg}/bin/swaybg";
 
-      hyprctl = "${inputs.hyprland.packages.${pkgs.system}.hyprland}/bin/hyprctl";
-      hyprlock = "${inputs.hyprlock.packages.${pkgs.system}.hyprlock}/bin/hyprlock";
+      hyprctl = "${pkgs.hyprland}/bin/hyprctl";
+      hyprlock = "${pkgs.hyprlock}/bin/hyprlock";
 
       fuzzel = "${pkgs.fuzzel}/bin/fuzzel";
       waybar = "${pkgs.waybar}/bin/waybar";
@@ -52,7 +52,7 @@
       yazi = "${pkgs.yazi}/bin/yazi";
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
-      grimblast = "${inputs.hyprland-contrib.packages.${pkgs.system}.grimblast}/bin/grimblast";
+      grimblast = "${pkgs.grimblast}/bin/grimblast";
 
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       maestralGui = "${pkgs.maestral-gui}/bin/maestral_qt";
@@ -72,7 +72,6 @@
     {
       enable = true;
       xwayland.enable = true;
-      package = inputs.hyprland.packages.${pkgs.system}.default;
       settings = {
         general = {
           gaps_in = 0;

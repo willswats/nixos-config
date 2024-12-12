@@ -1,7 +1,7 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  home.packages = [
-    inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
+  home.packages = with pkgs; [
+    grimblast
   ];
 }

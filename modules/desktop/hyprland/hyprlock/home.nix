@@ -1,4 +1,4 @@
-{ globals, inputs, pkgs, ... }:
+{ globals, ... }:
 
 {
   programs.hyprlock =
@@ -14,7 +14,6 @@
     in
     {
       enable = true;
-      package = inputs.hyprlock.packages.${pkgs.system}.hyprlock;
       settings = {
         general = {
           no_fade_in = true;
