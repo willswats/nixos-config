@@ -15,6 +15,7 @@ in
     ../modules/development/dotnet
     ../modules/theme/gtk
     ../modules/theme/qt
+    ../modules/theme/cursor
     ../modules/theme/catppuccin
     ../modules/utilities/nh
     ../modules/utilities/gnome-keyring
