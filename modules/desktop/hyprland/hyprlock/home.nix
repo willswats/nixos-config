@@ -6,9 +6,9 @@
       fontName = globals.font.name;
       wallpaper = globals.wallpaper;
 
-      blue = "rgb(137, 180, 250)";
-      text = "rgb(205, 214, 244)";
-      base = "rgb(30, 30, 46)";
+      blue = "rgb(137,180,250)";
+      text = "rgb(205,214,244)";
+      base = "rgb(30,30,46)";
       peach = "rgb(250,179,135)";
       red = "rgb(243,139,168)";
     in
