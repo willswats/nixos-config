@@ -100,11 +100,6 @@
             command = "floating enable, opacity 0.9";
             criteria = { app_id = "com.chatterino."; };
           }
-          # Firefox
-          {
-            command = "floating enable";
-            criteria = { app_id = "firefox"; title = "^(.*Bitwarden Password Manager.*)$"; };
-          }
           # Steam
           {
             command = "floating enable";

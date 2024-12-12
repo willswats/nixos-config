@@ -156,7 +156,6 @@
           "suppressevent maximize, class:steam" # Fix Steam maximizing certain windows (Friends List)
           # Firefox
           "suppressevent maximize, class:firefox" # Fix Firefox maximizing certain windows (extensions)
-          "float, class:firefox, title:^(.*Bitwarden Password Manager.*)$" # Float bitwarden
           # Godot
           "tile, class:Godot" # Fix Godot starting as float
           # MPV
