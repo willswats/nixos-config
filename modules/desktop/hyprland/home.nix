@@ -88,6 +88,9 @@
 
         decoration = {
           rounding = 0;
+          # Disable blur and shadow for battery life / performance
+          blur.enabled = false;
+          shadow.enabled = false;
         };
 
         monitor = [
