@@ -79,6 +79,7 @@
       yt-dlp
       woeusb
       nmap
+      vulkan-tools
       maestral
       distrobox
       # Development
