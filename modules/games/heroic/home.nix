@@ -39,7 +39,7 @@ in
           "winePrefix": "${homeDirectory}/Games/Heroic/Prefixes/default",
           "wineVersion": {
             "bin": "${homeDirectory}/.local/share/Steam/compatibilitytools.d/GE-Proton9-11/proton",
-            "name": "Proton - GE-Proton9-11",
+            "name": "Proton - GE-Proton9-20",
             "type": "proton"
           },
           "enableEsync": true,
