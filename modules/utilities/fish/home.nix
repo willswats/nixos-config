@@ -3,9 +3,9 @@
 {
   home.packages = with pkgs; [ fish ];
 
+  catppuccin.fish.enable = true;
   programs.fish = {
     enable = true;
-    catppuccin.enable = true;
     shellAliases =
       let
         driveDir = host.directories.drive;

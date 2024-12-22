@@ -48,8 +48,8 @@ in
 
   console = {
     keyMap = "uk";
-    catppuccin.enable = true;
   };
+  catppuccin.tty.enable = true;
 
   # Networking
   networking = {

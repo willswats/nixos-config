@@ -5,6 +5,7 @@
     file-roller
   ];
 
+  catppuccin.yazi.enable = true;
   programs.yazi =
     let
       driveDir = host.directories.drive;
@@ -23,7 +24,6 @@
     in
     {
       enable = true;
-      catppuccin.enable = true;
       enableBashIntegration = true;
       enableFishIntegration = true;
       shellWrapperName = "y";

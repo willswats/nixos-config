@@ -5,9 +5,9 @@ let
   yazi = "${pkgs.yazi}/bin/yazi";
 in
 {
+  catppuccin.kitty.enable = true;
   programs.kitty = {
     enable = true;
-    catppuccin.enable = true;
     shellIntegration = {
       enableBashIntegration = true;
       enableFishIntegration = true;
