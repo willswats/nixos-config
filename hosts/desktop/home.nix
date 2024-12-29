@@ -31,6 +31,7 @@
     # })
     osu-lazer-bin
     tetrio-desktop
+    cataclysm-dda
   ];
 
   wayland.windowManager.hyprland.settings.monitor =
