@@ -26,6 +26,13 @@ in
     ../modules/utilities/wireshark
   ];
 
+  # TODO: remove this, temp fix until https://nixpk.gs/pr-tracker.html?pr=368966
+  nixpkgs.overlays = [
+    (self: super: {
+      electron_31 = self.electron;
+    })
+  ];
+
   # 6.10 is needed for Vocaster One drivers
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
