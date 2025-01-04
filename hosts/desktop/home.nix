@@ -27,7 +27,6 @@
     # Games
     osu-lazer-bin
     tetrio-desktop
-    cataclysm-dda-git
   ];
 
   wayland.windowManager.hyprland.settings.monitor =
