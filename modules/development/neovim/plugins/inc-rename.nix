@@ -5,7 +5,7 @@
     plugins = {
       inc-rename = {
         enable = true;
-        showMessage = true;
+        settings.show_message = true;
       };
     };
 
