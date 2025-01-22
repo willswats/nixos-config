@@ -173,10 +173,6 @@
                 name = "ToS;DR";
                 url = "https://tosdr.org/";
               }
-              {
-                name = "HowLongToBeat";
-                url = "https://howlongtobeat.com/";
-              }
             ];
           }
           {
@@ -185,6 +181,10 @@
               {
                 name = "MALSync PWA";
                 url = "https://malsync.moe/pwa";
+              }
+              {
+                name = "YouTube";
+                url = "https://www.youtube.com/feed/subscriptions";
               }
               {
                 name = "ChatReplay";
@@ -208,12 +208,12 @@
                 url = "https://simkl.com/";
               }
               {
-                name = "Infinite Backlog";
-                url = "https://infinitebacklog.net/";
+                name = "Goodreads";
+                url = "https://www.goodreads.com";
               }
               {
-                name = "Goodreads";
-                url = "https://www.goodreads.com/";
+                name = "Infinite Backlog";
+                url = "https://infinitebacklog.net/";
               }
               {
                 name = "AlternativeTo";
@@ -237,12 +237,20 @@
                 url = "https://github.com/";
               }
               {
+                name = "LinkedIn";
+                url = "https://www.linkedin.com/";
+              }
+              {
                 name = "Lemmy";
                 url = "https://lemmy.world";
               }
               {
-                name = "LinkedIn";
-                url = "https://www.linkedin.com/";
+                name = "Pixelfed";
+                url = "https://pixelfed.social";
+              }
+              {
+                name = "Mastodon";
+                url = "https://mastodon.social";
               }
             ];
           }
@@ -276,12 +284,16 @@
                 url = "https://steamdb.info/";
               }
               {
+                name = "Itch";
+                url = "https://itch.io/";
+              }
+              {
                 name = "IsThereAnyDeal";
                 url = "https://isthereanydeal.com";
               }
               {
-                name = "Itch";
-                url = "https://itch.io/";
+                name = "HowLongToBeat";
+                url = "https://howlongtobeat.com/";
               }
               {
                 name = "osu!";
@@ -307,14 +319,6 @@
               {
                 name = "Nyaa";
                 url = "https://nyaa.si/";
-              }
-              {
-                name = "vadapav.mov";
-                url = "https://vadapav.mov/";
-              }
-              {
-                name = "Anna's Archive";
-                url = "https://annas-archive.org/";
               }
               {
                 name = "Vimm's Lair";
