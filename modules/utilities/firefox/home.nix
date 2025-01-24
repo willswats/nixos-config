@@ -319,6 +319,10 @@
                 url = "https://1337x.to/home/";
               }
               {
+                name = "Anna's Archive";
+                url = "https://annas-archive.org/";
+              }
+              {
                 name = "Nyaa";
                 url = "https://nyaa.si/";
               }
