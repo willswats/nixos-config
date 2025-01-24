@@ -51,6 +51,8 @@
         iina-open-in-mpv
         nyaa-linker
         libredirect
+        sponsorblock
+        return-youtube-dislikes
       ];
       search = {
         force = true;
