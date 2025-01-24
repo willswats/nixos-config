@@ -24,6 +24,7 @@ in
     ../modules/utilities/virt-manager
     ../modules/utilities/docker
     ../modules/utilities/wireshark
+    ../modules/utilities/gpu-screen-recorder
   ];
 
   # 6.10 is needed for Vocaster One drivers
