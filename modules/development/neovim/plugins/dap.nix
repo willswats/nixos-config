@@ -104,11 +104,9 @@
     plugins = {
       dap = {
         enable = true;
-        extensions = {
-          dap-ui = {
-            enable = true;
-          };
-        };
+      };
+      dap-ui = {
+        enable = true;
       };
     };
   };
