@@ -12,7 +12,7 @@
     ../modules/development/git/home.nix
     ../modules/development/gpg/home.nix
     ../modules/development/neovim/home.nix
-    # ../modules/development/helix/home.nix
+    ../modules/development/helix/home.nix
     ../modules/development/vscode/home.nix
     ../modules/development/lazygit/home.nix
     ../modules/development/rust/home.nix
