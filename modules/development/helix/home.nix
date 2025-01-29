@@ -4,37 +4,37 @@
 
   home.packages = with pkgs; [
     # Nix
-    nil
-    nixpkgs-fmt
+    nil # Nix LSP
+    nixpkgs-fmt # Nix Formatter
     # Web
     vscode-langservers-extracted # HTML/CSS/JSON/ESLint language servers
-    typescript-language-server
-    svelte-language-server
-    nodePackages.prettier
-    nodePackages.eslint
+    typescript-language-server # TypeScript LSP
+    svelte-language-server # Svelte LSP
+    nodePackages.prettier # Formatter
+    nodePackages.eslint # Linter
     # Markdown
-    marksman
-    markdownlint-cli
+    marksman # MD Language server
+    markdownlint-cli # MD Linter
     # Lua
-    lua-language-server
+    lua-language-server # Lua Language server
     # Python
-    pyright
-    ruff-lsp
+    pyright # Python LSP
+    ruff-lsp # Python Formatter & Linter
     # C#
-    csharp-ls
+    csharp-ls # C# LSP
     # C, C++
-    clang-tools
+    clang-tools # C, C++ LSP
     # Rust
-    rust-analyzer
-    rustfmt
+    rust-analyzer # Rust LSP
+    rustfmt # Rust Formatter
     # SQL
-    sqls
+    sqls # SQL LSP
     # Haskell
-    haskell-language-server
+    haskell-language-server # Haskell LSP
     # Bash
-    bash-language-server
+    bash-language-server # Bash LSP
     # TOML
-    taplo
+    taplo # TOML LSP
   ];
 
   programs.helix = {
