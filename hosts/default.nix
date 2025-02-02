@@ -13,6 +13,7 @@ in
     ../modules/system/printing
     ../modules/system/bluetooth
     ../modules/development/dotnet
+    ../modules/development/podman
     ../modules/theme/gtk
     ../modules/theme/qt
     ../modules/theme/cursor
@@ -22,7 +23,6 @@ in
     ../modules/utilities/nautilus
     ../modules/utilities/mullvad-vpn
     ../modules/utilities/virt-manager
-    ../modules/utilities/docker
     ../modules/utilities/wireshark
     ../modules/utilities/gpu-screen-recorder
   ];
