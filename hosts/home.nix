@@ -88,6 +88,7 @@
       nodePackages.nodejs
       nodePackages.pnpm
       nodePackages.live-server
+      nodePackages.vercel
       godot_4
     ];
   };
