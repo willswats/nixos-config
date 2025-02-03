@@ -80,10 +80,13 @@
       trash-cli
       yt-dlp
       woeusb
-      nmap
       vulkan-tools
       maestral
       distrobox
+      # Infosec
+      nmap
+      nikto
+      gobuster
       # Development
       gh
       nodePackages.nodejs
