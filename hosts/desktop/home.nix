@@ -27,6 +27,7 @@
     # Games
     osu-lazer-bin
     tetrio-desktop
+    sm64coopdx
   ];
 
   wayland.windowManager.hyprland.settings.monitor =
