@@ -140,7 +140,7 @@
         };
         seat = {
           "*" = {
-            hide_cursor = "2000";
+            hide_cursor = "1000";
           };
           seat0 = {
             xcursor_theme = "catppuccin-mocha-dark-cursors 32";
