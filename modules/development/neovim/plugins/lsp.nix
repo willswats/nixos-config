@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 let
   icons = import ../icons.nix;
@@ -53,6 +53,10 @@ in
         ts_ls.enable = true; # TypeScript
         eslint.enable = true; # JavaScript Linter
         svelte.enable = true; # Svelte
+        prismals = {
+          enable = true;
+          package = inputs.prisma.packages.${pkgs.system}."@prisma/language-server";
+        };
       };
       capabilities = capabilities;
       keymaps = {

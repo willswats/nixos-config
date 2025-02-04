@@ -400,6 +400,22 @@
     },
     "nixpkgs_4": {
       "locked": {
+        "lastModified": 1669542132,
+        "narHash": "sha256-DRlg++NJAwPh8io3ExBJdNW7Djs3plVI5jgYQ+iXAZQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "a115bb9bd56831941be3776c8a94005867f316a7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_5": {
+      "locked": {
         "lastModified": 1716769173,
         "narHash": "sha256-7EXDb5WBw+d004Agt+JHC/Oyh/KTUglOaQ4MNjBbo5w=",
         "owner": "nixos",
@@ -485,6 +501,24 @@
         "type": "github"
       }
     },
+    "prisma": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1738670749,
+        "narHash": "sha256-tUVgvWkFkgZzquaZiAYCLP26+kjpES4BXwJLUgrvH8c=",
+        "owner": "pimeys",
+        "repo": "nixos-prisma",
+        "rev": "549890575ba0a48522997ed7a9341acbf070babc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pimeys",
+        "repo": "nixos-prisma",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "catppuccin": "catppuccin",
@@ -492,6 +526,7 @@
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
         "nur": "nur",
+        "prisma": "prisma",
         "slippi": "slippi"
       }
     },
@@ -499,7 +534,7 @@
       "inputs": {
         "git-hooks": "git-hooks_2",
         "home-manager": "home-manager_3",
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": "nixpkgs_5"
       },
       "locked": {
         "lastModified": 1737730525,

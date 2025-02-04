@@ -15,6 +15,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    prisma.url = "github:pimeys/nixos-prisma";
+
     catppuccin.url = "github:catppuccin/nix";
 
     slippi.url = "github:lytedev/slippi-nix";
