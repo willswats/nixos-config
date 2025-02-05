@@ -25,6 +25,7 @@ in
     ../modules/utilities/virt-manager
     ../modules/utilities/wireshark
     ../modules/utilities/gpu-screen-recorder
+    ../modules/utilities/ollama
   ];
 
   # 6.10 is needed for Vocaster One drivers
