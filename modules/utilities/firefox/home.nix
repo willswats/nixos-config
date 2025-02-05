@@ -45,15 +45,16 @@
         mal-sync
         bitwarden
         translate-web-pages
+        iina-open-in-mpv
         wayback-machine
         zotero-connector
-        youtube-alternative-switch
-        iina-open-in-mpv
-        nyaa-linker
         libredirect
         # YouTube
         sponsorblock
         return-youtube-dislikes
+        youtube-alternative-switch
+        # nyaa.si
+        nyaa-linker
       ];
       search = {
         force = true;
