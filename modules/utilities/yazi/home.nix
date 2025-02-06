@@ -147,6 +147,11 @@
             name = "*.srt";
             use = [ "edit" ];
           }
+          # extract zip instead of open
+          {
+            name = "*.zip";
+            use = [ "extract" ];
+          }
         ];
       };
 
