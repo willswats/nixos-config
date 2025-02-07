@@ -129,6 +129,10 @@
           padding: 0 10px;
         }
 
+        #workspaces button {
+          padding: 5px;
+        }
+
         #tray {
           margin-right: 4px;
         }
