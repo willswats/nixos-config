@@ -11,6 +11,7 @@
     ../wayland/fuzzel/home.nix
     ../wayland/mako/home.nix
     ../wayland/gammastep/home.nix
+    ../wayland/wlogout/home.nix
   ];
 
   home.packages = with pkgs; [
@@ -48,7 +49,7 @@
       xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
 
       fuzzel = "${pkgs.fuzzel}/bin/fuzzel";
-      swaylock = "${pkgs.swaylock}/bin/swaylock";
+      wleave = "${pkgs.wleave}/bin/wleave";
       waybar = "${pkgs.waybar}/bin/waybar";
 
       firefox = "${pkgs.firefox}/bin/firefox";
@@ -250,8 +251,7 @@
 
           "${mod}+q" = "kill";
           "${mod}+Shift+r" = "exec swaymsg reload";
-          "${mod}+Shift+e" = "exec swaymsg exit";
-          "${mod}+Shift+semicolon" = "exec ${swaylock}";
+          "${mod}+Shift+semicolon" = "exec ${wleave}";
 
           "${mod}+d" = "exec ${fuzzel}";
 

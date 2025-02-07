@@ -11,6 +11,7 @@
     ../wayland/fuzzel/home.nix
     ../wayland/mako/home.nix
     ../wayland/gammastep/home.nix
+    ../wayland/wlogout/home.nix
   ];
 
   home.packages = with pkgs; [
@@ -38,9 +39,9 @@
       swaybg = "${pkgs.swaybg}/bin/swaybg";
 
       hyprctl = "${pkgs.hyprland}/bin/hyprctl";
-      hyprlock = "${pkgs.hyprlock}/bin/hyprlock";
 
       fuzzel = "${pkgs.fuzzel}/bin/fuzzel";
+      wleave = "${pkgs.wleave}/bin/wleave";
       waybar = "${pkgs.waybar}/bin/waybar";
 
       firefox = "${pkgs.firefox}/bin/firefox";
@@ -221,12 +222,11 @@
           ", print, exec, ${grimblast} --notify save output" # Screenshot active monitor
           "shift, print, exec, killall slurp; ${grimblast} --notify --freeze save area" # Screenshot manually selected area - killall to prevent overlap
 
-          "$mod shift, semicolon, exec, ${hyprlock}"
+          "$mod shift, semicolon, exec, ${wleave}"
 
           "$mod, q, killactive"
           "$mod, f, fullscreen"
 
-          "$mod shift, e, exec, ${hyprctl} dispatch exit"
           "$mod shift, r, exec, ${hyprctl} reload"
 
           "$mod shift, f, togglefloating"
