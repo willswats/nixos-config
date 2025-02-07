@@ -3,12 +3,12 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nur.url = "github:nix-community/NUR";
-
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur.url = "github:nix-community/NUR";
 
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -24,6 +24,7 @@
 
   outputs =
     { nixpkgs
+    , nixos-hardware
     , home-manager
     , nur
     , nixvim
@@ -104,6 +105,7 @@
                 };
                 modules = [
                   ./hosts/desktop
+                  nixos-hardware.nixosModules.gigabyte-b550
                   home-manager.nixosModules.home-manager
                   nur.modules.nixos.default
                   catppuccin.nixosModules.catppuccin
