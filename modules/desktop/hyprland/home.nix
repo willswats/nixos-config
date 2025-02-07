@@ -225,7 +225,7 @@
           ", print, exec, ${grimblast} --notify save output" # Screenshot active monitor
           "shift, print, exec, killall slurp; ${grimblast} --notify --freeze save area" # Screenshot manually selected area - killall to prevent overlap
 
-          "$mod shift, semicolon, exec, ${wleave}"
+          "$mod, semicolon, exec, ${wleave}"
 
           "$mod, q, killactive"
           "$mod, f, fullscreen"

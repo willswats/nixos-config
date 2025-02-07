@@ -251,7 +251,7 @@
 
           "${mod}+q" = "kill";
           "${mod}+Shift+r" = "exec swaymsg reload";
-          "${mod}+Shift+semicolon" = "exec ${wleave}";
+          "${mod}+semicolon" = "exec ${wleave}";
 
           "${mod}+d" = "exec ${fuzzel}";
 
