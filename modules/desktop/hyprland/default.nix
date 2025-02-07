@@ -4,6 +4,7 @@
   imports = [
     ./grimblast
     ./hyprlock
+    ./greetd
   ];
 
   programs.hyprland = {

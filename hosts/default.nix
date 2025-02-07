@@ -7,7 +7,6 @@ in
   imports = [
     # ../modules/desktop/sway
     ../modules/desktop/hyprland
-    ../modules/system/greetd
     ../modules/system/plymouth
     ../modules/system/pipewire
     ../modules/system/printing
