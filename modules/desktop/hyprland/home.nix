@@ -138,6 +138,9 @@
           };
         };
 
+        # Disable update messages
+        ecosystem.no_update_news = true;
+
         misc = {
           # Fix Firefox flashing default hyprland wallpaper on resize (still occurs, but it's less noticeable)
           # https://github.com/hyprwm/Hyprland/issues/2817
