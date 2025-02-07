@@ -31,6 +31,9 @@ in
   # 6.10 is needed for Vocaster One drivers
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  # Daemon for updating firmware
+  services.fwupd.enable = true;
+
   time.timeZone = "Europe/London";
 
   i18n = {
