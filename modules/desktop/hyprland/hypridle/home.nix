@@ -32,6 +32,7 @@
     {
       enable = true;
       settings = {
+        general.lock_cmd = hyprlock;
         listener = [
           {
             timeout = 1800;
