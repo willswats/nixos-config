@@ -1,9 +1,5 @@
 { globals, pkgs, ... }:
 
-
-let
-  home = globals.directories.home;
-in
 {
   xdg.configFile."wlogout/icons".source = ./icons;
 
@@ -49,52 +45,61 @@ in
       }
     ];
     # https://github.com/catppuccin/wlogout
-    style = ''
-      * {
-      	background-image: none;
-      	box-shadow: none;
-      }
+    style =
+      let
+        home = globals.directories.home;
 
-      window {
-      	background-color: rgba(30, 30, 46, 0.90);
-      }
+        base = globals.colours.base;
+        blue = globals.colours.blue;
+        text = globals.colours.text;
+        mantle = globals.colours.mantle;
+      in
+      ''
+        * {
+        	background-image: none;
+        	box-shadow: none;
+        }
 
-      button {
-      	border-radius: 0;
-      	border-color: #89b4fa;
-      	text-decoration-color: #cdd6f4;
-      	color: #cdd6f4;
-      	background-color: #181825;
-      	border-style: solid;
-      	border-width: 1px;
-      	background-repeat: no-repeat;
-      	background-position: center;
-      	background-size: 25%;
-      }
+        window {
+        	background-color: #${base};
+        }
 
-      #lock {
+        button {
+        	border-radius: 0;
+        	border-color: #${blue};
+        	text-decoration-color: #${text};
+        	color: #${text};
+        	background-color: #${mantle};
+        	border-style: solid;
+        	border-width: 1px;
+        	background-repeat: no-repeat;
+        	background-position: center;
+          background-size: 25%;
+        }
+
+        #lock {
           background-image: url("${home}/.config/wlogout/icons/lock.svg");
-      }
+        }
 
-      #logout {
+        #logout {
           background-image: url("${home}/.config/wlogout/icons/logout.svg");
-      }
+        }
 
-      #suspend {
+        #suspend {
           background-image: url("${home}/.config/wlogout/icons/suspend.svg");
-      }
+        }
 
-      #hibernate {
+        #hibernate {
           background-image: url("${home}/.config/wlogout/icons/hibernate.svg");
-      }
+        }
 
-      #shutdown {
+        #shutdown {
           background-image: url("${home}/.config/wlogout/icons/shutdown.svg");
-      }
+        }
 
-      #reboot {
+        #reboot {
           background-image: url("${home}/.config/wlogout/icons/reboot.svg");
-      }
-    '';
+        }
+      '';
   };
 }
