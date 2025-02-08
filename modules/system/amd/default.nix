@@ -14,4 +14,7 @@
   # "RADV" or "AMDVLK"
   # Default is AMDVLK if installed
   environment.variables.AMD_VULKAN_ICD = "AMDVLK";
+
+  # Enable GPU acceleration for AMD
+  services.ollama.acceleration = "rocm";
 }
