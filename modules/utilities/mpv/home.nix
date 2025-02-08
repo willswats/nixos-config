@@ -109,7 +109,7 @@
         "Ctrl+Shift+v" = "script-binding paste/paste_into_playlist";
       };
     scripts = with pkgs; [
-      inputs.mpv-youtube-search.packages.${pkgs.system}.default
+      inputs.mpv-youtube-search.packages.${pkgs.system}.mpv-youtube-search
       mpvScripts.uosc # Proximity-based UI
       mpvScripts.thumbfast # Required for thumbnails in uosc
       mpvScripts.mpris # Allows control of the player using standard media keys
