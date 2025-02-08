@@ -1,4 +1,4 @@
-{ pkgs, globals, host, ... }:
+{ pkgs, globals, host, inputs, ... }:
 
 {
   xdg.mimeApps = {
@@ -109,7 +109,7 @@
         "Ctrl+Shift+v" = "script-binding paste/paste_into_playlist";
       };
     scripts = with pkgs; [
-      (callPackage ../../../pkgs/mpvScripts/mpv-youtube-search { })
+      inputs.mpv-youtube-search.packages.${pkgs.system}.default
       mpvScripts.uosc # Proximity-based UI
       mpvScripts.thumbfast # Required for thumbnails in uosc
       mpvScripts.mpris # Allows control of the player using standard media keys

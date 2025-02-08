@@ -20,6 +20,8 @@
     catppuccin.url = "github:catppuccin/nix";
 
     slippi.url = "github:lytedev/slippi-nix";
+
+    mpv-youtube-search.url = "github:willswats/mpv-youtube-search";
   };
 
   outputs =
