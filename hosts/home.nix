@@ -83,11 +83,13 @@
       vulkan-tools
       maestral
       distrobox
+      lynx
       # Infosec
       nmap
       nikto
       gobuster
       exiftool
+      busybox
       # Development
       gh
       nodePackages.nodejs

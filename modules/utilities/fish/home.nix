@@ -74,6 +74,9 @@
         # Nix
         nix-shell = "nix-shell --command fish";
         rsf = rebuildSwitchFlake.outPath;
+
+        # lynx
+        lynx = "lynx -vikeys";
       };
     interactiveShellInit = ''
       # Hide fish greeting
