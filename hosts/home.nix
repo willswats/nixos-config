@@ -87,6 +87,7 @@
       nmap
       nikto
       gobuster
+      exiftool
       # Development
       gh
       nodePackages.nodejs
