@@ -8,6 +8,7 @@
       in
       {
         "application/epub+zip" = [ foliate ]; # epub
+        "application/vnd.comicbook+zip" = [ foliate ]; # cbz
       };
   };
 
