@@ -59,7 +59,7 @@
       gimp
       krita
       kdenlive
-      deluge
+      fragments
       popsicle
       gnome-disk-utility
       moonlight-qt
