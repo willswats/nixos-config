@@ -107,6 +107,12 @@
             icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
             definedAliases = [ "@nw" ];
           };
+          "MDN" = {
+            urls = [{ template = "https://developer.mozilla.org/en-US/search?q={searchTerms}"; }];
+            iconUpdateURL = "https://developer.mozilla.org/favicon-48x48.bc390275e955dacb2e65.png";
+            updateInterval = 24 * 60 * 60 * 1000; # every day
+            definedAliases = [ "@mdn" ];
+          };
         };
         order = [
           "DuckDuckGo"
