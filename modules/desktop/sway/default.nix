@@ -4,7 +4,7 @@
   imports = [
     ./swaylock
     ./grimshot
-    ./greetd
+    ../wayland/greetd
   ];
 
   programs.sway = {
