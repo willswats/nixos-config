@@ -4,7 +4,6 @@
   imports = [
     ./swayidle/home.nix
     ./swaylock/home.nix
-    ./waybar/home.nix
     ./grimshot/home.nix
     ../wayland/scripts/home.nix
     ../wayland/waybar/home.nix

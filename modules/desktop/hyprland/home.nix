@@ -5,7 +5,6 @@
     ./hypridle/home.nix
     ./hyprlock/home.nix
     ./grimblast/home.nix
-    ./waybar/home.nix
     ../wayland/scripts/home.nix
     ../wayland/waybar/home.nix
     ../wayland/fuzzel/home.nix
