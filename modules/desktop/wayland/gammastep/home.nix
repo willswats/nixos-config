@@ -1,5 +1,15 @@
-{ ... }:
+{ pkgs, lib, config, ... }:
 
+let
+  gammastep = "${pkgs.gammastep}/bin/gammastep";
+  gammastepToggle = pkgs.writeShellScript "gammastepToggle.sh" ''
+    if pgrep gammastep; then
+      killall .gammastep-wrap
+    else
+      ${gammastep}
+    fi
+  '';
+in
 {
   services.gammastep = {
     enable = true;
@@ -15,4 +25,17 @@
       };
     };
   };
+
+  wayland.windowManager.sway.config.keybindings =
+    let
+      mod = config.wayland.windowManager.sway.config.modifier;
+    in
+    lib.mkIf config.wayland.windowManager.sway.enable {
+      "${mod}+Shift+b" = "exec ${gammastepToggle}";
+    };
+
+  wayland.windowManager.hyprland.settings.bind =
+    lib.mkIf config.wayland.windowManager.hyprland.enable [
+      "$mod shift, b, exec, ${gammastepToggle}"
+    ];
 }
