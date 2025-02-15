@@ -26,17 +26,18 @@ in
     '';
   };
 
-  wayland.windowManager.sway.config.keybindings =
+  wayland.windowManager.sway.config =
     let
       mod = config.wayland.windowManager.sway.config.modifier;
     in
     lib.mkIf config.wayland.windowManager.sway.enable {
-      "${mod}+Shift+v" = "exec ${mullvadToggle}";
+      keybindings = lib.mkOptionDefault {
+        "${mod}+Shift+v" = "exec ${mullvadToggle}";
+      };
     };
 
   wayland.windowManager.hyprland.settings.bind =
     lib.mkIf config.wayland.windowManager.hyprland.enable [
       "$mod shift, v, exec, ${mullvadToggle}"
     ];
-
 }

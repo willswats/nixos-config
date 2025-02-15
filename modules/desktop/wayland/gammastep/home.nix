@@ -26,12 +26,14 @@ in
     };
   };
 
-  wayland.windowManager.sway.config.keybindings =
+  wayland.windowManager.sway.config =
     let
       mod = config.wayland.windowManager.sway.config.modifier;
     in
     lib.mkIf config.wayland.windowManager.sway.enable {
-      "${mod}+Shift+b" = "exec ${gammastepToggle}";
+      keybindings = lib.mkOptionDefault {
+        "${mod}+Shift+b" = "exec ${gammastepToggle}";
+      };
     };
 
   wayland.windowManager.hyprland.settings.bind =
