@@ -317,6 +317,10 @@
                 name = "lichess.org";
                 url = "https://lichess.org/";
               }
+              {
+                name = "BoardGameGeek";
+                url = "https://boardgamegeek.com/";
+              }
             ];
           }
           {
