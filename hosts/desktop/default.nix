@@ -1,5 +1,8 @@
-{ host, ... }:
+{ host, globals, ... }:
 
+let
+  user = globals.user;
+in
 {
   imports = [
     ../default.nix
@@ -45,5 +48,6 @@
   };
 
   programs.gamemode.enable = true;
+  users.users.${user}.extraGroups = [ "gamemode" ];
   programs.gamescope.enable = true;
 }
