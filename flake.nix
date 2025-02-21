@@ -15,13 +15,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    prisma.url = "github:pimeys/nixos-prisma";
-
     catppuccin.url = "github:catppuccin/nix";
 
-    slippi.url = "github:lytedev/slippi-nix";
+    prisma.url = "github:pimeys/nixos-prisma";
 
     mpv-youtube-search.url = "github:willswats/mpv-youtube-search";
+
+    slippi.url = "github:lytedev/slippi-nix";
+    nix-gaming.url = "github:fufexan/nix-gaming";
   };
 
   outputs =
