@@ -1,8 +1,6 @@
 { globals, pkgs, ... }:
 
 {
-  xdg.configFile."wlogout/icons".source = ./icons;
-
   programs.wlogout = {
     enable = true;
     package = pkgs.wleave;
@@ -47,8 +45,6 @@
     # https://github.com/catppuccin/wlogout
     style =
       let
-        home = globals.directories.home;
-
         base = globals.colours.base;
         blue = globals.colours.blue;
         text = globals.colours.text;
@@ -78,27 +74,27 @@
         }
 
         #lock {
-          background-image: url("${home}/.config/wlogout/icons/lock.svg");
+          background-image: url("${./icons/lock.svg}");
         }
 
         #logout {
-          background-image: url("${home}/.config/wlogout/icons/logout.svg");
+          background-image: url("${./icons/logout.svg}");
         }
 
         #suspend {
-          background-image: url("${home}/.config/wlogout/icons/suspend.svg");
+          background-image: url("${./icons/suspend.svg}");
         }
 
         #hibernate {
-          background-image: url("${home}/.config/wlogout/icons/hibernate.svg");
+          background-image: url("${./icons/hibernate.svg}");
         }
 
         #shutdown {
-          background-image: url("${home}/.config/wlogout/icons/shutdown.svg");
+          background-image: url("${./icons/shutdown.svg}");
         }
 
         #reboot {
-          background-image: url("${home}/.config/wlogout/icons/reboot.svg");
+          background-image: url("${./icons/reboot.svg}");
         }
       '';
   };
