@@ -40,7 +40,7 @@
       hyprctl = "${pkgs.hyprland}/bin/hyprctl";
 
       fuzzel = "${pkgs.fuzzel}/bin/fuzzel";
-      wleave = "${pkgs.wleave}/bin/wleave";
+      wlogout = "${pkgs.wlogout}/bin/wlogout";
       waybar = "${pkgs.waybar}/bin/waybar";
 
       firefox = "${pkgs.firefox}/bin/firefox";
@@ -224,7 +224,7 @@
           ", print, exec, ${grimblast} --notify save output" # Screenshot active monitor
           "shift, print, exec, killall slurp; ${grimblast} --notify --freeze save area" # Screenshot manually selected area - killall to prevent overlap
 
-          "$mod, semicolon, exec, ${wleave}"
+          "$mod, semicolon, exec, ${wlogout}"
 
           "$mod, q, killactive"
           "$mod, f, fullscreen"

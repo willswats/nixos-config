@@ -3,7 +3,7 @@
 {
   programs.wlogout = {
     enable = true;
-    package = pkgs.wleave;
+    package = pkgs.wlogout;
     layout = [
       {
         label = "lock";

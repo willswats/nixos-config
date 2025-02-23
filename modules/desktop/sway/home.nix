@@ -48,7 +48,7 @@
       xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
 
       fuzzel = "${pkgs.fuzzel}/bin/fuzzel";
-      wleave = "${pkgs.wleave}/bin/wleave";
+      wlogout = "${pkgs.wlogout}/bin/wlogout";
       waybar = "${pkgs.waybar}/bin/waybar";
 
       firefox = "${pkgs.firefox}/bin/firefox";
@@ -250,7 +250,7 @@
 
           "${mod}+q" = "kill";
           "${mod}+Shift+r" = "exec swaymsg reload";
-          "${mod}+semicolon" = "exec ${wleave}";
+          "${mod}+semicolon" = "exec ${wlogout}";
 
           "${mod}+d" = "exec ${fuzzel}";
 
