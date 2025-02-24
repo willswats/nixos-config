@@ -12,6 +12,9 @@ in
       key = email;
       signByDefault = true;
     };
-    extraConfig = { init.defaultBranch = "main"; };
+    extraConfig = {
+      init.defaultBranch = "main";
+      pull.ff = "only";
+    };
   };
 }
