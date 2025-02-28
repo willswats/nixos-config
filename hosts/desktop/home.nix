@@ -1,4 +1,4 @@
-{ pkgs, host, inputs, ... }:
+{ pkgs, host, ... }:
 
 {
   imports = [
@@ -14,11 +14,6 @@
     ../../modules/emulators/yuzu/home.nix
   ];
 
-  nix.settings = {
-    substituters = [ "https://nix-gaming.cachix.org" ];
-    trusted-public-keys = [ "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4=" ];
-  };
-
   home.packages = with pkgs; [
     # Utilities
     alsa-scarlett-gui
@@ -30,7 +25,7 @@
     # Launchers 
     prismlauncher
     # Games
-    inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
+    osu-lazer-bin
     tetrio-desktop
     sm64coopdx
   ];
