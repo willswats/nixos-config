@@ -47,7 +47,5 @@ in
     fsType = "ext4";
   };
 
-  programs.gamemode.enable = true;
-  users.users.${user}.extraGroups = [ "gamemode" ];
   programs.gamescope.enable = true;
 }
