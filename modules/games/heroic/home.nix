@@ -38,12 +38,9 @@ in
           "wineCrossoverBottle": "Heroic",
           "winePrefix": "${homeDirectory}/Games/Heroic/Prefixes/default",
           "wineVersion": {
-            "bin": "${homeDirectory}/.config/heroic/tools/wine/Wine-GE-latest/bin/wine",
-            "name": "Wine - Wine-GE-latest",
-            "type": "wine",
-            "lib": "${homeDirectory}/.config/heroic/tools/wine/Wine-GE-latest/lib64",
-            "lib32": "${homeDirectory}/.config/heroic/tools/wine/Wine-GE-latest/lib",
-            "wineserver": "${homeDirectory}/.config/heroic/tools/wine/Wine-GE-latest/bin/wineserver"
+            "bin": "${homeDirectory}/.config/heroic/tools/proton/GE-Proton-latest/proton",
+            "name": "Proton - GE-Proton-latest",
+            "type": "proton"
           },
           "enableEsync": true,
           "enableFsync": true,
