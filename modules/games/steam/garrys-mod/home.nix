@@ -10,12 +10,6 @@
     # Noclip
     unbind v 
 
-    # Walk
-    unbind alt 
-
-    # Zoom
-    unbind b 
-
     # Change weapons
     unbind mwheelup
     unbind mwheeldown
@@ -28,13 +22,15 @@
     bind / mwheeljump 
     mwheeljump
 
-    bind x +walk
+    bind mouse5 +left
+    bind mouse4 +right
+
     bind v +voicerecord
     bind semicolon "say !r"
     bindtoggle - voice_enable
 
     bind [ kill
-    bind alt noclip
+    bind x noclip
 
     # -- SETTINGS --
     cl_yawspeed 230

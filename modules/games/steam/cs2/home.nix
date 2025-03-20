@@ -31,7 +31,7 @@
       bind semicolon "say !r"
       bind - voice_modenable_toggle
 
-      bind alt noclip      
+      bind x noclip      
       bind / "exec nade"
  
       # -- SETTINGS --

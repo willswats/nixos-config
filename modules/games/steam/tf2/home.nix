@@ -27,7 +27,8 @@
       bind semicolon "impulse 101; say !r"
       bindtoggle - voice_enable
 
-      bind alt noclip
+      bind [ kill
+      bind x noclip
       bind / "exec practice"
 
       # -- SETTINGS --
