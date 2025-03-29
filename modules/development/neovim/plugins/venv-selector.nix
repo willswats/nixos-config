@@ -6,8 +6,8 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "linux-cultist";
       repo = "venv-selector.nvim";
-      rev = "f212a424fb29949cb5e683928bdd4038bbe0062d"; # https://github.com/linux-cultist/venv-selector.nvim/commit/f212a424fb29949cb5e683928bdd4038bbe0062d
-      hash = "sha256-L4L14yq5Ix3w5ty/CImkQXx/CBxwH7jsQhU+dWKndtQ=";
+      rev = "c677caa1030808a9f90092e522de7cc20c1390dd"; # https://github.com/linux-cultist/venv-selector.nvim/commit/c677caa1030808a9f90092e522de7cc20c1390dd
+      hash = "sha256-ogd4T+mIbb86qFUbDczzDra8yWm/bwKmYCRGYCJz6fM=";
     };
   };
 in
