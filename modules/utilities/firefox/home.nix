@@ -58,25 +58,25 @@
       ];
       search = {
         force = true;
-        default = "DuckDuckGo";
-        privateDefault = "DuckDuckGo";
+        default = "ddg";
+        privateDefault = "ddg";
         engines = {
           # Defaults
-          "Google".metaData.hidden = true;
-          "Bing".metaData.hidden = true;
+          "google".metaData.hidden = true;
+          "bing".metaData.hidden = true;
           "Amazon.co.uk".metaData.hidden = true;
-          "eBay".metaData.hidden = true;
-          "Wikipedia (en)".metaData.hidden = false;
+          "ebay".metaData.hidden = true;
+          "wikipedia".metaData.hidden = false;
           # Custom
           "Dictionary" = {
             urls = [{ template = "https://www.dictionary.com/browse/{searchTerms}"; }];
-            iconUpdateURL = "https://www.dictionary.com/94e56a525da4e9fe0cda.png";
+            icon = "https://www.dictionary.com/94e56a525da4e9fe0cda.png";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@d" ];
           };
           "Thesaurus" = {
             urls = [{ template = "https://www.thesaurus.com/browse/{searchTerms}"; }];
-            iconUpdateURL = "https://www.thesaurus.com/0d297be7e698b98c9da8.png";
+            icon = "https://www.thesaurus.com/0d297be7e698b98c9da8.png";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@t" ];
           };
@@ -109,14 +109,14 @@
           };
           "MDN" = {
             urls = [{ template = "https://developer.mozilla.org/en-US/search?q={searchTerms}"; }];
-            iconUpdateURL = "https://developer.mozilla.org/favicon-48x48.bc390275e955dacb2e65.png";
+            icon = "https://developer.mozilla.org/favicon-48x48.bc390275e955dacb2e65.png";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@mdn" ];
           };
         };
         order = [
-          "DuckDuckGo"
-          "Wikipedia (en)"
+          "ddg"
+          "wikipedia"
           "Dictionary"
           "Thesaurus"
           "Nix Packages"
@@ -124,9 +124,9 @@
           "NixOS Wiki"
         ];
       };
-      bookmarks = [{
-        toolbar = true;
-        bookmarks = [
+      bookmarks = {
+        force = true;
+        settings = [
           {
             name = "Google";
             bookmarks = [
@@ -442,7 +442,7 @@
             ];
           }
         ];
-      }];
+      };
       settings =
         let
           newTabPageBlocked = ''

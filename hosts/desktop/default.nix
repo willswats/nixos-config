@@ -1,8 +1,5 @@
-{ host, globals, ... }:
+{ host, ... }:
 
-let
-  user = globals.user;
-in
 {
   imports = [
     ../default.nix
