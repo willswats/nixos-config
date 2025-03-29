@@ -128,316 +128,322 @@
         force = true;
         settings = [
           {
-            name = "Google";
+            name = "Toolbar";
+            toolbar = true;
             bookmarks = [
               {
-                name = "Mail";
-                url = "https://mail.google.com";
+                name = "Google";
+                bookmarks = [
+                  {
+                    name = "Mail";
+                    url = "https://mail.google.com";
+                  }
+                  {
+                    name = "Calendar";
+                    url = "https://calendar.google.com";
+                  }
+                  {
+                    name = "Contacts";
+                    url = "https://contacts.google.com";
+                  }
+                  {
+                    name = "Maps";
+                    url = "https://maps.google.com";
+                  }
+                  {
+                    name = "Drive";
+                    url = "https://drive.google.com";
+                  }
+                ];
               }
               {
-                name = "Calendar";
-                url = "https://calendar.google.com";
+                name = "Utilities";
+                bookmarks = [
+                  {
+                    name = "Dropbox";
+                    url = "https://www.dropbox.com/home";
+                  }
+                  {
+                    name = "Paypal";
+                    url = "https://www.paypal.com/myaccount/summary";
+                  }
+                  {
+                    name = "addy.io";
+                    url = "https://app.addy.io";
+                  }
+                  {
+                    name = "Reactive Resume";
+                    url = "https://rxresu.me/dashboard";
+                  }
+                  {
+                    name = "Spotify Dedup";
+                    url = "https://spotify-dedup.com/";
+                  }
+                  {
+                    name = "LibreSpeed";
+                    url = "https://librespeed.org/";
+                  }
+                  {
+                    name = "ToS;DR";
+                    url = "https://tosdr.org/";
+                  }
+                ];
               }
               {
-                name = "Contacts";
-                url = "https://contacts.google.com";
+                name = "Media";
+                bookmarks = [
+                  {
+                    name = "MALSync PWA";
+                    url = "https://malsync.moe/pwa";
+                  }
+                  {
+                    name = "YouTube";
+                    url = "https://www.youtube.com/feed/subscriptions";
+                  }
+                  {
+                    name = "ChatReplay";
+                    url = "https://chatreplay.stream/subscriptions";
+                  }
+                  {
+                    name = "Google Play Books";
+                    url = "https://play.google.com/books";
+                  }
+                ];
               }
               {
-                name = "Maps";
-                url = "https://maps.google.com";
+                name = "Lists";
+                bookmarks = [
+                  {
+                    name = "AniList";
+                    url = "https://anilist.co/";
+                  }
+                  {
+                    name = "Simkl";
+                    url = "https://simkl.com/";
+                  }
+                  {
+                    name = "Goodreads";
+                    url = "https://www.goodreads.com";
+                  }
+                  {
+                    name = "Infinite Backlog";
+                    url = "https://infinitebacklog.net/";
+                  }
+                  {
+                    name = "AlternativeTo";
+                    url = "https://alternativeto.net/";
+                  }
+                  {
+                    name = "ProtonDB";
+                    url = "https://www.protondb.com/";
+                  }
+                  {
+                    name = "PCPartPicker";
+                    url = "https://pcpartpicker.com/";
+                  }
+                ];
               }
               {
-                name = "Drive";
-                url = "https://drive.google.com";
+                name = "Social";
+                bookmarks = [
+                  {
+                    name = "GitHub";
+                    url = "https://github.com/";
+                  }
+                  {
+                    name = "LinkedIn";
+                    url = "https://www.linkedin.com/";
+                  }
+                  {
+                    name = "Lemmy";
+                    url = "https://lemmy.world";
+                  }
+                  {
+                    name = "Pixelfed";
+                    url = "https://pixelfed.social";
+                  }
+                  {
+                    name = "Mastodon";
+                    url = "https://mastodon.social";
+                  }
+                ];
               }
-            ];
-          }
-          {
-            name = "Utilities";
-            bookmarks = [
-              {
-                name = "Dropbox";
-                url = "https://www.dropbox.com/home";
-              }
-              {
-                name = "Paypal";
-                url = "https://www.paypal.com/myaccount/summary";
-              }
-              {
-                name = "addy.io";
-                url = "https://app.addy.io";
-              }
-              {
-                name = "Reactive Resume";
-                url = "https://rxresu.me/dashboard";
-              }
-              {
-                name = "Spotify Dedup";
-                url = "https://spotify-dedup.com/";
-              }
-              {
-                name = "LibreSpeed";
-                url = "https://librespeed.org/";
-              }
-              {
-                name = "ToS;DR";
-                url = "https://tosdr.org/";
-              }
-            ];
-          }
-          {
-            name = "Media";
-            bookmarks = [
-              {
-                name = "MALSync PWA";
-                url = "https://malsync.moe/pwa";
-              }
-              {
-                name = "YouTube";
-                url = "https://www.youtube.com/feed/subscriptions";
-              }
-              {
-                name = "ChatReplay";
-                url = "https://chatreplay.stream/subscriptions";
-              }
-              {
-                name = "Google Play Books";
-                url = "https://play.google.com/books";
-              }
-            ];
-          }
-          {
-            name = "Lists";
-            bookmarks = [
-              {
-                name = "AniList";
-                url = "https://anilist.co/";
-              }
-              {
-                name = "Simkl";
-                url = "https://simkl.com/";
-              }
-              {
-                name = "Goodreads";
-                url = "https://www.goodreads.com";
-              }
-              {
-                name = "Infinite Backlog";
-                url = "https://infinitebacklog.net/";
-              }
-              {
-                name = "AlternativeTo";
-                url = "https://alternativeto.net/";
-              }
-              {
-                name = "ProtonDB";
-                url = "https://www.protondb.com/";
-              }
-              {
-                name = "PCPartPicker";
-                url = "https://pcpartpicker.com/";
-              }
-            ];
-          }
-          {
-            name = "Social";
-            bookmarks = [
-              {
-                name = "GitHub";
-                url = "https://github.com/";
-              }
-              {
-                name = "LinkedIn";
-                url = "https://www.linkedin.com/";
-              }
-              {
-                name = "Lemmy";
-                url = "https://lemmy.world";
-              }
-              {
-                name = "Pixelfed";
-                url = "https://pixelfed.social";
-              }
-              {
-                name = "Mastodon";
-                url = "https://mastodon.social";
-              }
-            ];
-          }
 
-          {
-            name = "Development";
-            bookmarks = [
               {
-                name = "Home Manager";
-                url = "https://nix-community.github.io/home-manager/options.xhtml";
+                name = "Development";
+                bookmarks = [
+                  {
+                    name = "Home Manager";
+                    url = "https://nix-community.github.io/home-manager/options.xhtml";
+                  }
+                  {
+                    name = "nixvim";
+                    url = "https://nix-community.github.io/nixvim/";
+                  }
+                  {
+                    name = "catppuccin/nix";
+                    url = "https://nix.catppuccin.com/";
+                  }
+                  {
+                    name = "Hyprland";
+                    url = "https://wiki.hyprland.org/";
+                  }
+                ];
               }
               {
-                name = "nixvim";
-                url = "https://nix-community.github.io/nixvim/";
+                name = "Gaming";
+                bookmarks = [
+                  {
+                    name = "SteamDB";
+                    url = "https://steamdb.info/";
+                  }
+                  {
+                    name = "Itch";
+                    url = "https://itch.io/";
+                  }
+                  {
+                    name = "IsThereAnyDeal";
+                    url = "https://isthereanydeal.com";
+                  }
+                  {
+                    name = "HowLongToBeat";
+                    url = "https://howlongtobeat.com/";
+                  }
+                  {
+                    name = "osu!";
+                    url = "https://osu.ppy.sh/home";
+                  }
+                  {
+                    name = "Osekai INEX / Medals";
+                    url = "https://inex.osekai.net/medals/";
+                  }
+                  {
+                    name = "lichess.org";
+                    url = "https://lichess.org/";
+                  }
+                  {
+                    name = "BoardGameGeek";
+                    url = "https://boardgamegeek.com/";
+                  }
+                ];
               }
               {
-                name = "catppuccin/nix";
-                url = "https://nix.catppuccin.com/";
+                name = "Downloads";
+                bookmarks = [
+                  {
+                    name = "1337x";
+                    url = "https://1337x.to/home/";
+                  }
+                  {
+                    name = "Anna's Archive";
+                    url = "https://annas-archive.org/";
+                  }
+                  {
+                    name = "Nyaa";
+                    url = "https://nyaa.si/";
+                  }
+                  {
+                    name = "Vimm's Lair";
+                    url = "https://vimm.net/";
+                  }
+                  {
+                    name = "hShop";
+                    url = "https://hshop.erista.me/";
+                  }
+                  {
+                    name = "Myrient";
+                    url = "https://myrient.erista.me";
+                  }
+                ];
               }
               {
-                name = "Hyprland";
-                url = "https://wiki.hyprland.org/";
-              }
-            ];
-          }
-          {
-            name = "Gaming";
-            bookmarks = [
-              {
-                name = "SteamDB";
-                url = "https://steamdb.info/";
-              }
-              {
-                name = "Itch";
-                url = "https://itch.io/";
-              }
-              {
-                name = "IsThereAnyDeal";
-                url = "https://isthereanydeal.com";
+                name = "Megathreads";
+                bookmarks = [
+                  {
+                    name = "dbzer0 Megathread";
+                    url = "https://rentry.co/megathread";
+                  }
+                  {
+                    name = "/r/Roms Megathread";
+                    url = "https://r-roms.github.io/";
+                  }
+                  {
+                    name = "The Index";
+                    url = "https://theindex.moe/";
+                  }
+                ];
               }
               {
-                name = "HowLongToBeat";
-                url = "https://howlongtobeat.com/";
+                name = "Shopping";
+                bookmarks = [
+                  {
+                    name = "Amazon";
+                    url = "https://www.amazon.co.uk/";
+                  }
+                  {
+                    name = "Tesco";
+                    url = "https://www.tesco.com/";
+                  }
+                  {
+                    name = "2Tall";
+                    url = "https://www.2tall.com/";
+                  }
+                ];
               }
               {
-                name = "osu!";
-                url = "https://osu.ppy.sh/home";
+                name = "Hosting";
+                bookmarks = [
+                  {
+                    name = "Vercel";
+                    url = "https://vercel.com/";
+                  }
+                  {
+                    name = "Hover";
+                    url = "https://www.hover.com/";
+                  }
+                ];
               }
               {
-                name = "Osekai INEX / Medals";
-                url = "https://inex.osekai.net/medals/";
+                name = "University";
+                bookmarks = [
+                  {
+                    name = "Student System";
+                    url = "https://student-system.port.ac.uk";
+                  }
+                  {
+                    name = "Timetable";
+                    url = "https://timetabling.port.ac.uk";
+                  }
+                  {
+                    name = "Moodle";
+                    url = "https://moodle.port.ac.uk";
+                  }
+                  {
+                    name = "Work Placements";
+                    url = "https://workplacements.port.ac.uk";
+                  }
+                  {
+                    name = "Learning Catalytics";
+                    url = "https://learningcatalytics.com/class_sessions";
+                  }
+                  {
+                    name = "Virtual Machine";
+                    url = "https://uop-1-server-per-student-prod.appspot.com/instance/get";
+                  }
+                  {
+                    name = "DCalc";
+                    url = "https://soc.port.ac.uk/dcalc/";
+                  }
+                ];
               }
               {
-                name = "lichess.org";
-                url = "https://lichess.org/";
-              }
-              {
-                name = "BoardGameGeek";
-                url = "https://boardgamegeek.com/";
-              }
-            ];
-          }
-          {
-            name = "Downloads";
-            bookmarks = [
-              {
-                name = "1337x";
-                url = "https://1337x.to/home/";
-              }
-              {
-                name = "Anna's Archive";
-                url = "https://annas-archive.org/";
-              }
-              {
-                name = "Nyaa";
-                url = "https://nyaa.si/";
-              }
-              {
-                name = "Vimm's Lair";
-                url = "https://vimm.net/";
-              }
-              {
-                name = "hShop";
-                url = "https://hshop.erista.me/";
-              }
-              {
-                name = "Myrient";
-                url = "https://myrient.erista.me";
-              }
-            ];
-          }
-          {
-            name = "Megathreads";
-            bookmarks = [
-              {
-                name = "dbzer0 Megathread";
-                url = "https://rentry.co/megathread";
-              }
-              {
-                name = "/r/Roms Megathread";
-                url = "https://r-roms.github.io/";
-              }
-              {
-                name = "The Index";
-                url = "https://theindex.moe/";
-              }
-            ];
-          }
-          {
-            name = "Shopping";
-            bookmarks = [
-              {
-                name = "Amazon";
-                url = "https://www.amazon.co.uk/";
-              }
-              {
-                name = "Tesco";
-                url = "https://www.tesco.com/";
-              }
-              {
-                name = "2Tall";
-                url = "https://www.2tall.com/";
-              }
-            ];
-          }
-          {
-            name = "Hosting";
-            bookmarks = [
-              {
-                name = "Vercel";
-                url = "https://vercel.com/";
-              }
-              {
-                name = "Hover";
-                url = "https://www.hover.com/";
-              }
-            ];
-          }
-          {
-            name = "University";
-            bookmarks = [
-              {
-                name = "Student System";
-                url = "https://student-system.port.ac.uk";
-              }
-              {
-                name = "Timetable";
-                url = "https://timetabling.port.ac.uk";
-              }
-              {
-                name = "Moodle";
-                url = "https://moodle.port.ac.uk";
-              }
-              {
-                name = "Work Placements";
-                url = "https://workplacements.port.ac.uk";
-              }
-              {
-                name = "Learning Catalytics";
-                url = "https://learningcatalytics.com/class_sessions";
-              }
-              {
-                name = "Virtual Machine";
-                url = "https://uop-1-server-per-student-prod.appspot.com/instance/get";
-              }
-              {
-                name = "DCalc";
-                url = "https://soc.port.ac.uk/dcalc/";
-              }
-            ];
-          }
-          {
-            name = "Other";
-            bookmarks = [
-              {
-                name = "williamwatson.dev";
-                url = "https://williamwatson.dev";
+                name = "Other";
+                bookmarks = [
+                  {
+                    name = "williamwatson.dev";
+                    url = "https://williamwatson.dev";
+                  }
+                ];
               }
             ];
           }
