@@ -5,6 +5,7 @@
     ./swayidle/home.nix
     ./swaylock/home.nix
     ./grimshot/home.nix
+    ../wayland/greetd/home.nix
     ../wayland/scripts/home.nix
     ../wayland/waybar/home.nix
     ../wayland/fuzzel/home.nix

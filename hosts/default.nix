@@ -33,6 +33,8 @@ in
   # Daemon for updating firmware
   services.fwupd.enable = true;
 
+  services.flatpak.enable = true;
+
   time.timeZone = "Europe/London";
 
   i18n = {
