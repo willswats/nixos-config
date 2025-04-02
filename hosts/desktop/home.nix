@@ -17,6 +17,7 @@
   home.packages = with pkgs; [
     # Utilities
     alsa-scarlett-gui
+    easyeffects
     mangohud
     protonplus
     # Emulators
