@@ -123,7 +123,7 @@
                         ./hosts/desktop/home.nix
                         nur.modules.homeManager.default
                         nixvim.homeManagerModules.nixvim
-                        catppuccin.homeManagerModules.catppuccin
+                        catppuccin.homeModules.catppuccin
                         slippi.homeManagerModules.default
                       ];
                     };
@@ -163,7 +163,7 @@
                       ./hosts/home.nix
                       nur.modules.homeManager.default
                       nixvim.homeManagerModules.nixvim
-                      catppuccin.homeManagerModules.catppuccin
+                      catppuccin.homeModules.catppuccin
                     ];
                   };
                 }
