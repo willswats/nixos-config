@@ -22,6 +22,7 @@ in
     ../modules/utilities/nautilus
     ../modules/utilities/mullvad-vpn
     ../modules/utilities/virt-manager
+    ../modules/utilities/virtualbox
     ../modules/utilities/wireshark
     ../modules/utilities/gpu-screen-recorder
     ../modules/utilities/ollama
