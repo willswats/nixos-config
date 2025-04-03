@@ -23,3 +23,9 @@ In-game FPS counter: Top-right
 ### Compatability
 
 Enable Steam Play for all other titles: Enabled
+
+## Big Picture
+
+### Display
+
+Start Big Picture mode Windowed: Enabled
