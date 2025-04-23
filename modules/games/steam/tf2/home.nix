@@ -5,6 +5,9 @@
     ''
       # -- UNBIND DEFAULTS --
 
+      # Voice menu 1
+      unbind z
+
       # Voice chat
       unbind k 
 
@@ -30,6 +33,10 @@
       bind [ kill
       bind x noclip
       bind / "exec practice"
+
+      bind f1 voice_menu_1
+      bind f2 voice_menu_2
+      bind f3 voice_menu_3
 
       # -- SETTINGS --
 
