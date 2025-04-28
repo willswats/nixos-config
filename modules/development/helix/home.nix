@@ -19,7 +19,7 @@
     lua-language-server # Lua Language server
     # Python
     pyright # Python LSP
-    ruff-lsp # Python Formatter & Linter
+    ruff # Python Formatter & Linter
     # C#
     csharp-ls # C# LSP
     # C, C++
