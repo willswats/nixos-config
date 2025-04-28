@@ -25,7 +25,6 @@ in
     ../modules/utilities/virtualbox
     ../modules/utilities/wireshark
     ../modules/utilities/gpu-screen-recorder
-    ../modules/utilities/ollama
   ];
 
   # 6.10 is needed for Vocaster One drivers
