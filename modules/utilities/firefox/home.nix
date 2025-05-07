@@ -222,8 +222,8 @@
                     url = "https://simkl.com/";
                   }
                   {
-                    name = "Goodreads";
-                    url = "https://www.goodreads.com";
+                    name = "The StoryGraph";
+                    url = "https://app.thestorygraph.com/";
                   }
                   {
                     name = "Infinite Backlog";
