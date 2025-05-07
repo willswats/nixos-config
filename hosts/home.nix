@@ -57,7 +57,7 @@
       gpu-screen-recorder-gtk
       gimp
       krita
-      kdePackages.kdenlive
+      shotcut
       fragments
       popsicle
       gnome-disk-utility
