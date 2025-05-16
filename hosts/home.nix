@@ -83,7 +83,6 @@
       maestral
       distrobox
       lynx
-      steam-run
       # Infosec
       nmap
       nikto
