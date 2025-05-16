@@ -139,7 +139,5 @@ You may need the revoked key to ensure that git commits are verified on another 
 
 ## Add an SSH key to Gnome Keyring with Login Auto Unlock
 
-1. Open seahorse and check if "Login" exists under "Passwords", if it does not, restart your device.
-2. Right click "Login" and click "Set as default".
-3. Run `git pull` on a repository that you've cloned with SSH.
-4. When prompted to input your SSH key, select "Save in password manager".
+1. Run `git pull` on a repository that you've cloned with SSH.
+2. When prompted to input your SSH key, select "Save in password manager".
