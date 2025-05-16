@@ -1,10 +1,5 @@
 # Firefox
 
-## Bitwarden
-
-- Ask to add login: Disabled
-- Ask to update existing login: Disabled
-
 ## uBlock
 
 - Run in Private Windows: Allow

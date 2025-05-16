@@ -79,7 +79,7 @@ cp /etc/nixos/hardware-configuration.nix ~/Code/nixos-config/hosts/host/
 
 ### Add boot.initrd.luks.devices Information
 
-Copy the text that starts with `boot.initrd.luks.devices` from `/etc/nixos/configuration.nix` to `~/Code/nixos-config/hosts/host/default.nix`, with `host` being your desired host.
+Copy the text that starts with `boot.initrd.luks.devices` from `/etc/nixos/configuration.nix` to `~/Code/nixos-config/hosts/host/default.nix`, with `host` being your desired host. Delete any previous `boot.initrd.luks.devices` entries in the `default.nix` file.
 
 ### Build the Config
 
@@ -130,8 +130,8 @@ rm ~/.bash_history
 
 ### Utilities
 
-1. [Maestral](./docs/utilities/maestral.md)
-2. [Firefox](./docs/utilities/firefox/firefox.md)
+1. [Firefox](./docs/utilities/firefox/firefox.md)
+2. [Maestral](./docs/utilities/maestral.md)
 3. [GPG](./docs/utilities/gpg.md)
 4. [virt-manager](./docs/utilities/virt-manager.md)
 
