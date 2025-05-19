@@ -17,15 +17,18 @@
       bind mouse5 +left
       bind mouse4 +right
 
-      bind [ "say /noclip"
-      bind ] "say /specbot"
+      bind z "say /specbot"
+      bind x "say /noclip"
+      bind c sm_teleport
       bind alt "say /r"
-      bind ralt sm_teleport
+      bind v +voicerecord
 
       # -- SETTINGS --
 
       # Game
       cl_yawspeed 230
+      hud_saytext_time 0
+
  
       host_writeconfig
     '';
