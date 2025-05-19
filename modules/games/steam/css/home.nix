@@ -21,6 +21,7 @@
       bind x "say /noclip"
       bind c sm_teleport
       bind alt "say /r"
+      bind ralt "say /nvgs"
       bind v +voicerecord
 
       # -- SETTINGS --
