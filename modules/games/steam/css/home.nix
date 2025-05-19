@@ -17,9 +17,9 @@
       bind mouse5 +left
       bind mouse4 +right
 
-      bind semicolon "say /r"
-      bind alt "say /noclip"
+      bind [ "say /noclip"
       bind ] "say /specbot"
+      bind alt "say /r"
       bind ralt sm_teleport
 
       # -- SETTINGS --
