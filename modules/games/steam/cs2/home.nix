@@ -24,14 +24,13 @@
       # -- BINDS --
 
       bind mwheeldown +jump
-      bind mwheelup +jump
+      bind mwheelup +jump   
         
+      bind x noclip      
       bind c player_ping
       bind v +voicerecord
-      bind semicolon "say !r"
+      bind alt "say !r"
       bind - voice_modenable_toggle
-
-      bind x noclip      
       bind / "exec nade"
  
       # -- SETTINGS --

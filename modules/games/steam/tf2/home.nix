@@ -24,14 +24,15 @@
 
       alias +chargejump "+jump; +attack2"
       alias -chargejump "-jump; -attack2"
-      bind c "+chargejump"
 
+      bind x noclip
+      bind c "+chargejump"
       bind v +voicerecord
-      bind semicolon "impulse 101; say !r"
+      bind alt "say !r"
       bindtoggle - voice_enable
 
       bind [ kill
-      bind x noclip
+      bind ] explode
       bind / "exec practice"
 
       bind f1 voice_menu_1

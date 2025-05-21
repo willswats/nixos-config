@@ -22,14 +22,16 @@
     bind / mwheeljump 
     mwheeljump
 
-    bind mouse5 +left
+    bind mouse3 +walk
     bind mouse4 +right
+    bind mouse5 +left
 
     bind v +voicerecord
-    bind semicolon "say !r"
+    bind alt "say !r"
     bindtoggle - voice_enable
 
     bind [ kill
+    bind ] explode
     bind x noclip
 
     # -- SETTINGS --
