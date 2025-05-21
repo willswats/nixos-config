@@ -55,6 +55,7 @@
       firefox = "${pkgs.firefox}/bin/firefox";
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
       spotify = "${pkgs.spotify}/bin/spotify";
+      miru = "${pkgs.miru}/bin/miru";
 
       kitty = "${pkgs.kitty}/bin/kitty";
       yazi = "${pkgs.yazi}/bin/yazi";
@@ -258,8 +259,9 @@
 
           "${mod}+w" = "exec ${firefox}"; # Web browser
           "${mod}+a" = "exec ${pavucontrol}"; # Audio manager
-          "${mod}+m" = "exec mpv"; # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
-          "${mod}+Shift+m" = "exec ${spotify}"; # Music player
+          "${mod}+v" = "exec mpv"; # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
+          "${mod}+m" = "exec ${spotify}"; # Music player
+          "${mod}+Shift+m" = "exec ${miru}"; # Miru
 
           "${mod}+e" = "exec ${kitty} ${yazi}"; # File explorer
           "${mod}+t" = "exec ${kitty} nvim"; # Text editor (not specifying the binary as it doesn't load my config)
