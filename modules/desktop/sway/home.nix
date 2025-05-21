@@ -54,7 +54,6 @@
 
       firefox = "${pkgs.firefox}/bin/firefox";
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
-      bitwarden = "${pkgs.bitwarden}/bin/bitwarden";
       spotify = "${pkgs.spotify}/bin/spotify";
 
       kitty = "${pkgs.kitty}/bin/kitty";
@@ -259,7 +258,6 @@
 
           "${mod}+w" = "exec ${firefox}"; # Web browser
           "${mod}+a" = "exec ${pavucontrol}"; # Audio manager
-          "${mod}+p" = "exec ${bitwarden}"; # Password manager
           "${mod}+m" = "exec mpv"; # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
           "${mod}+Shift+m" = "exec ${spotify}"; # Music player
 
