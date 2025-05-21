@@ -26,9 +26,9 @@
       alias -chargejump "-jump; -attack2"
 
       bind x noclip
-      bind c "+chargejump"
+      bind c "say !r"
       bind v +voicerecord
-      bind alt "say !r"
+      bind alt "+chargejump"
       bindtoggle - voice_enable
 
       bind [ kill

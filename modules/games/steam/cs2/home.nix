@@ -27,9 +27,9 @@
       bind mwheelup +jump   
         
       bind x noclip      
-      bind c player_ping
+      bind c "say !r"
       bind v +voicerecord
-      bind alt "say !r"
+      bind alt player_ping
       bind - voice_modenable_toggle
       bind / "exec nade"
  

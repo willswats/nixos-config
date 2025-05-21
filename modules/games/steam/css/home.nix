@@ -16,7 +16,6 @@
       bind = showchat
       showchat
 
-
       bind mwheeldown +jump
       bind mwheelup +jump
       bind mouse5 +left

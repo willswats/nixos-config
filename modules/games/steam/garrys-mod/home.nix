@@ -3,6 +3,8 @@
 {
   home.file.".steam/steam/steamapps/common/GarrysMod/garrysmod/cfg/autoexec.cfg".text = ''
     # -- UNBIND DEFAULTS --
+    # Context menu
+    unbind c
 
     # Voice chat
     unbind k 
@@ -22,16 +24,15 @@
     bind / mwheeljump 
     mwheeljump
 
-    bind mouse3 +walk
     bind mouse4 +right
     bind mouse5 +left
 
+    bind c "say !r"
     bind v +voicerecord
-    bind alt "say !r"
+    bind g +menu_context
     bindtoggle - voice_enable
 
     bind [ kill
-    bind ] explode
     bind x noclip
 
     # -- SETTINGS --
