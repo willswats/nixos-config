@@ -24,6 +24,11 @@
     bind / mwheeljump 
     mwheeljump
 
+    alias mousebuttonslean "bind mouse4 +leanleft; bind mouse5 +leanright; bind . mousebuttonslook"
+    alias mousebuttonslook "bind mouse4 +right; bind mouse5 +left; bind . mousebuttonslean"
+    bind . mousebuttonslook 
+    mousebuttonslook
+
     bind mouse4 +right
     bind mouse5 +left
 
@@ -38,6 +43,8 @@
     # -- SETTINGS --
     cl_yawspeed 230
     physgun_wheelspeed 50
+    npc_citizen_auto_player_squad 0
+    npc_citizen_auto_player_squad_allow_use 1
 
     host_writeconfig
   '';
