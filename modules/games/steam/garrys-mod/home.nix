@@ -29,6 +29,8 @@
     bind . mousebuttonslook 
     mousebuttonslook
 
+    bind , +drop
+
     bind mouse4 +right
     bind mouse5 +left
 
@@ -45,6 +47,7 @@
     physgun_wheelspeed 50
     npc_citizen_auto_player_squad 0
     npc_citizen_auto_player_squad_allow_use 1
+    vmanip_kick_bind mouse3
 
     host_writeconfig
   '';
