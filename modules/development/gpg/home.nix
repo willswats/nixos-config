@@ -14,6 +14,6 @@
     maxCacheTtl = 34560000; # 400 days
     defaultCacheTtlSsh = 34560000; # 400 days
     maxCacheTtlSsh = 34560000; # 400 days
-    pinentryPackage = pkgs.pinentry-gnome3;
+    pinentry.package = pkgs.pinentry-gnome3;
   };
 }
