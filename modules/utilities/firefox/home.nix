@@ -205,6 +205,10 @@
                     url = "https://chatreplay.stream/subscriptions";
                   }
                   {
+                    name = "radioMii";
+                    url = "https://radiomii.com/";
+                  }
+                  {
                     name = "Google Play Books";
                     url = "https://play.google.com/books";
                   }
