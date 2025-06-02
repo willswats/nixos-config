@@ -29,7 +29,7 @@
       shellWrapperName = "y";
 
       keymap = {
-        manager.prepend_keymap = [
+        mgr.prepend_keymap = [
           # Open nautilus 
           {
             on = [ "<C-o>" ];
@@ -81,7 +81,7 @@
             desc = "Chmod on selected files";
           }
         ];
-        manager.append_keymap = [
+        mgr.append_keymap = [
           {
             on = [ "g" "p" ];
             run = "cd ~/Pictures";
@@ -116,7 +116,7 @@
       };
 
       settings = {
-        manager = {
+        mgr = {
           sort_by = "natural";
         };
         opener = {
