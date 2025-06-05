@@ -26,6 +26,10 @@
     # Launchers 
     prismlauncher
     # Games
+    # (callPackage ../../pkgs/osu-lazer-bin {
+    #   ver = "2024.1115.3";
+    #   hash = "sha256-kwZHy0FfOUFIWvyOj0ghlQz05U+Lnzl5TgC4T6bhm7o=";
+    # })
     osu-lazer-bin
     tetrio-desktop
     sm64coopdx
