@@ -1,7 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
-  home.packages = with pkgs; [ flutter ];
+  home.packages = with pkgs; [
+    (lib.hiPrio flutter)
+  ];
 
   home.file.".dart-tool/dart-flutter-telemetry.config" = {
     text = ''
