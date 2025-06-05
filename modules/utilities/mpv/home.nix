@@ -117,7 +117,7 @@
       mpvScripts.memo # Remember history
       mpvScripts.autosubsync-mpv # Auto sync subtitles
       mpvScripts.webtorrent-mpv-hook # Adds a hook that allows mpv to stream torrents 
-      mpvScripts.autoload # Adds files to the mpv playlist
+      mpvScripts.builtins.autoload # Adds files to the mpv playlist
       mpvScripts.reload # Manual & automatic reloading of videos
     ];
     scriptOpts = {
@@ -135,6 +135,9 @@
       };
       youtube-search = {
         osd_message_duration = 0;
+      };
+      autoload = {
+        directory_mode = "ignore";
       };
     };
   };
