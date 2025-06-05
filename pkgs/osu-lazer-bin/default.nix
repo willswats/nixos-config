@@ -1,9 +1,10 @@
 { lib
-, stdenv
+, stdenvNoCC
 , fetchurl
 , fetchzip
 , appimageTools
 , makeWrapper
+, nativeWayland ? false
 , ver ? ""
 , hash ? ""
 }:
@@ -14,11 +15,21 @@ let
 
   src =
     {
+      aarch64-darwin = fetchzip {
+        url = "https://github.com/ppy/osu/releases/download/${version}/osu.app.Apple.Silicon.zip";
+        hash = hash;
+        stripRoot = false;
+      };
+      x86_64-darwin = fetchzip {
+        url = "https://github.com/ppy/osu/releases/download/${version}/osu.app.Intel.zip";
+        hash = hash;
+        stripRoot = false;
+      };
       x86_64-linux = fetchurl {
         url = "https://github.com/ppy/osu/releases/download/${version}/osu.AppImage";
         hash = hash;
       };
-    }.${stdenv.system} or (throw "osu-lazer-bin: ${stdenv.system} is unsupported.");
+    }.${stdenvNoCC.system} or (throw "osu-lazer-bin: ${stdenvNoCC.system} is unsupported.");
 
   meta = {
     description = "Rhythm is just a *click* away (AppImage version for score submission and multiplayer, and binary distribution for Darwin systems)";
@@ -32,6 +43,7 @@ let
     maintainers = with lib.maintainers; [
       gepbird
       stepbrobd
+      Guanran928
     ];
     mainProgram = "osu!";
     platforms = [
@@ -43,8 +55,8 @@ let
 
   passthru.updateScript = ./update.sh;
 in
-if stdenv.hostPlatform.isDarwin then
-  stdenv.mkDerivation
+if stdenvNoCC.isDarwin then
+  stdenvNoCC.mkDerivation
   {
     inherit
       pname
@@ -81,11 +93,14 @@ else
       ''
         . ${makeWrapper}/nix-support/setup-hook
         mv -v $out/bin/${pname} $out/bin/osu!
+
         wrapProgram $out/bin/osu! \
+          ${lib.optionalString nativeWayland "--set SDL_VIDEODRIVER wayland"} \
           --set OSU_EXTERNAL_UPDATE_PROVIDER 1
+
         install -m 444 -D ${contents}/osu!.desktop -t $out/share/applications
         for i in 16 32 48 64 96 128 256 512 1024; do
-          install -D ${contents}/osu!.png $out/share/icons/hicolor/''${i}x$i/apps/osu!.png
+          install -D ${contents}/osu.png $out/share/icons/hicolor/''${i}x$i/apps/osu.png
         done
       '';
   }

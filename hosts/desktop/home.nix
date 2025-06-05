@@ -26,11 +26,12 @@
     # Launchers 
     prismlauncher
     # Games
-    # (callPackage ../../pkgs/osu-lazer-bin {
-    #   ver = "2024.1115.3";
-    #   hash = "sha256-kwZHy0FfOUFIWvyOj0ghlQz05U+Lnzl5TgC4T6bhm7o=";
-    # })
-    osu-lazer-bin
+    (callPackage ../../pkgs/osu-lazer-bin {
+      ver = "2025.605.1"; # https://github.com/ppy/osu/releases 
+      hash = "sha256-0F5AlnID8EHbk0H8G6Idm0WYMAsHhG3j7GxhG+6rNlQ=";
+      nativeWayland = true;
+    })
+    # osu-lazer-bin
     tetrio-desktop
     sm64coopdx
   ];
