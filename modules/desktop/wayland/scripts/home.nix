@@ -29,8 +29,6 @@ let
     pkgs.writeShellScript "ensureExists.sh" ''
       mkdir -p ${directoriesToCreate}
 
-      ln -s ${drive}/.dots/FreeTube/ ~/.config/
-
       host=$(${hostname})
       if [ "$host" = "${desktopHostName}" ]; then
         ln -s ${drive}/.dots/retroarch/ ~/.config/

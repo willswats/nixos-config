@@ -50,8 +50,6 @@
         zotero-connector
         libredirect
         # YouTube
-        sponsorblock
-        return-youtube-dislikes
         youtube-alternative-switch
         # nyaa.si
         nyaa-linker
@@ -195,10 +193,6 @@
                   {
                     name = "MALSync PWA";
                     url = "https://malsync.moe/pwa";
-                  }
-                  {
-                    name = "YouTube";
-                    url = "https://www.youtube.com/feed/subscriptions";
                   }
                   {
                     name = "ChatReplay";

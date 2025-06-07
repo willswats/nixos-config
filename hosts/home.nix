@@ -62,7 +62,7 @@
       gnome-disk-utility
       moonlight-qt
       jellyfin-media-player
-      freetube
+      grayjay
       miru
       spotify
       zotero
