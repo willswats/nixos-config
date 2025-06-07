@@ -22,30 +22,28 @@
     # ];
   };
 
-  environment.systemPackages = with pkgs; [
-    adwsteamgtk
-    # Certain source games are currently broken on Linux and this is needed to fix it.
-    # Issue: https://github.com/ValveSoftware/Source-1-Games/issues/5043
-    # Fix: https://github.com/NixOS/nixpkgs/issues/271483#issuecomment-1838055011
-    pkgsi686Linux.gperftools
-  ];
-
   # Fix gamescope on steam https://github.com/ValveSoftware/gamescope/issues/905#issuecomment-1660112668
   nixpkgs.config.packageOverrides = pkgs: {
     steam = pkgs.steam.override {
-      extraPkgs = pkgs: with pkgs;
-        [
-          keyutils
-          libkrb5
-          libpng
-          libpulseaudio
-          libvorbis
-          stdenv.cc.cc.lib
-          xorg.libXcursor
-          xorg.libXi
-          xorg.libXinerama
-          xorg.libXScrnSaver
-        ];
+      extraPkgs = pkgs: with pkgs; [
+        keyutils
+        libkrb5
+        libpng
+        libpulseaudio
+        libvorbis
+        stdenv.cc.cc.lib
+        xorg.libXcursor
+        xorg.libXi
+        xorg.libXinerama
+        xorg.libXScrnSaver
+      ];
     };
   };
+
+  # Certain source games are currently broken on Linux and this is needed to fix it.
+  # Issue: https://github.com/ValveSoftware/Source-1-Games/issues/5043
+  # Fix: https://github.com/NixOS/nixpkgs/issues/271483#issuecomment-1838055011
+  environment.systemPackages = with pkgs; [
+    pkgsi686Linux.gperftools
+  ];
 }
