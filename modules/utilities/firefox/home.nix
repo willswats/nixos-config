@@ -51,6 +51,8 @@
         libredirect
         # YouTube
         youtube-alternative-switch
+        sponsorblock
+        return-youtube-dislikes
         # nyaa.si
         nyaa-linker
       ];
@@ -193,6 +195,10 @@
                   {
                     name = "MALSync PWA";
                     url = "https://malsync.moe/pwa";
+                  }
+                  {
+                    name = "YouTube";
+                    url = "https://www.youtube.com/";
                   }
                   {
                     name = "ChatReplay";
