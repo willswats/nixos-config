@@ -14,6 +14,12 @@
     ../../modules/games/r2modman
   ];
 
+  # Open ports for hosting games
+  networking.firewall = {
+    enable = true;
+    allowedUDPPorts = [ 27015 ];
+  };
+
   boot = {
     initrd = {
       luks.devices = {
