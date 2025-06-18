@@ -33,7 +33,8 @@
     , catppuccin
     , slippi
     , ...
-    }@inputs: {
+    }@inputs:
+    {
       nixosConfigurations =
         let
           system = "x86_64-linux";
@@ -42,7 +43,7 @@
             home = "/home/${user}";
             flake = "/home/${user}/Code/nixos-config";
           };
-          directoriesToCreate = "~/Downloads ~/Pictures ~/Videos ~/Code";
+          directoriesToCreate = "~/Downloads ~/Pictures ~/Videos ~/Code ~/Edits";
           hostNames = {
             desktop = "${user}-desktop";
             laptop = "${user}-laptop";
@@ -95,41 +96,42 @@
                   center = "DP-1";
                   left = "DP-2";
                 };
-                directories = { drive = "/run/media/will/2TB/Dropbox"; };
+                directories = {
+                  drive = "/run/media/will/2TB/Dropbox";
+                };
                 directoriesToCreate = "${directoriesToCreate} ~/Games/Heroic";
               };
             in
-            lib.nixosSystem
-              {
-                inherit system;
-                specialArgs = {
-                  inherit inputs globals host;
-                };
-                modules = [
-                  ./hosts/desktop
-                  nixos-hardware.nixosModules.gigabyte-b550
-                  home-manager.nixosModules.home-manager
-                  nur.modules.nixos.default
-                  catppuccin.nixosModules.catppuccin
-                  slippi.nixosModules.default
-                  {
-                    home-manager = {
-                      useGlobalPkgs = true;
-                      useUserPackages = true;
-                      extraSpecialArgs = {
-                        inherit inputs globals host;
-                      };
-                      users.will.imports = [
-                        ./hosts/desktop/home.nix
-                        nur.modules.homeManager.default
-                        nixvim.homeManagerModules.nixvim
-                        catppuccin.homeModules.catppuccin
-                        slippi.homeManagerModules.default
-                      ];
-                    };
-                  }
-                ];
+            lib.nixosSystem {
+              inherit system;
+              specialArgs = {
+                inherit inputs globals host;
               };
+              modules = [
+                ./hosts/desktop
+                nixos-hardware.nixosModules.gigabyte-b550
+                home-manager.nixosModules.home-manager
+                nur.modules.nixos.default
+                catppuccin.nixosModules.catppuccin
+                slippi.nixosModules.default
+                {
+                  home-manager = {
+                    useGlobalPkgs = true;
+                    useUserPackages = true;
+                    extraSpecialArgs = {
+                      inherit inputs globals host;
+                    };
+                    users.will.imports = [
+                      ./hosts/desktop/home.nix
+                      nur.modules.homeManager.default
+                      nixvim.homeManagerModules.nixvim
+                      catppuccin.homeModules.catppuccin
+                      slippi.homeManagerModules.default
+                    ];
+                  };
+                }
+              ];
+            };
           laptop =
             let
               host = {
@@ -138,7 +140,9 @@
                   center = "eDP-1";
                   left = "eDP-1";
                 };
-                directories = { drive = "/home/will/Dropbox"; };
+                directories = {
+                  drive = "/home/will/Dropbox";
+                };
                 directoriesToCreate = directoriesToCreate;
               };
             in
