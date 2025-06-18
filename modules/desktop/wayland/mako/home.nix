@@ -14,16 +14,14 @@
       enable = true;
       settings = {
         font = fontName;
-        defaultTimeout = 5000; # Milliseconds
-        borderSize = 2;
-        textColor = text;
-        backgroundColor = base;
-        borderColor = blue;
-        borderRadius = 0;
+        default-timeout = 5000; # Milliseconds
+        border-size = 2;
+        text-color = text;
+        background-color = base;
+        border-color = blue;
+        border-radius = 0;
         margin = "0"; # css-like margin
-        # To draw the progress indicator on top of the background color, use the over attribute. 
-        # To replace the background color, use the source attribute.
-        progressColor = "over ${surface0}";
+        progress-color = "over ${surface0}";
       };
     };
 }
