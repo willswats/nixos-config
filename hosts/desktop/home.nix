@@ -20,14 +20,16 @@
     easyeffects
     mangohud
     protonplus
+    protontricks
     # Emulators
     rpcs3
     pcsx2
-    # Launchers 
+    # Launchers
+    lutris
     prismlauncher
     # Games
     (callPackage ../../pkgs/osu-lazer-bin {
-      ver = "2025.605.1"; # https://github.com/ppy/osu/releases 
+      ver = "2025.605.1"; # https://github.com/ppy/osu/releases
       hash = "sha256-0F5AlnID8EHbk0H8G6Idm0WYMAsHhG3j7GxhG+6rNlQ=";
       nativeWayland = true;
     })
@@ -52,8 +54,12 @@
       monitorLeft = host.monitors.left;
     in
     {
-      ${monitorCenter} = { pos = "1920 0"; };
-      ${monitorLeft} = { pos = "0 0"; };
+      ${monitorCenter} = {
+        pos = "1920 0";
+      };
+      ${monitorLeft} = {
+        pos = "0 0";
+      };
     };
 
 }
