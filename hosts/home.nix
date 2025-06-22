@@ -57,6 +57,7 @@
       gimp
       krita
       kdePackages.kdenlive
+      olive-editor
       fragments
       popsicle
       gnome-disk-utility
