@@ -81,24 +81,40 @@
             definedAliases = [ "@t" ];
           };
           "Nix Packages" = {
-            urls = [{
-              template = "https://search.nixos.org/packages?channel=unstable";
-              params = [
-                { name = "type"; value = "packages"; }
-                { name = "query"; value = "{searchTerms}"; }
-              ];
-            }];
+            urls = [
+              {
+                template = "https://search.nixos.org/packages?channel=unstable";
+                params = [
+                  {
+                    name = "type";
+                    value = "packages";
+                  }
+                  {
+                    name = "query";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
             icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
             definedAliases = [ "@np" ];
           };
           "Nix Options" = {
-            urls = [{
-              template = "https://search.nixos.org/options?channel=unstable";
-              params = [
-                { name = "type"; value = "options"; }
-                { name = "query"; value = "{searchTerms}"; }
-              ];
-            }];
+            urls = [
+              {
+                template = "https://search.nixos.org/options?channel=unstable";
+                params = [
+                  {
+                    name = "type";
+                    value = "options";
+                  }
+                  {
+                    name = "query";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
             icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
             definedAliases = [ "@no" ];
           };
@@ -484,6 +500,8 @@
           "permissions.default.desktop-notification" = 2; # Disable desktop notifications by default
           "privacy.donottrackheader.enabled" = true; # Always send do not track header
           "privacy.history.custom" = true; # Custom history settings
+          "privacy.clearOnShutdown.history" = false; # Don't clear history on shutdown
+          "privacy.clearOnShutdown.sessions" = false; # Don't clear sessions on shutdown
           "privacy.clearOnShutdown.cache" = false; # Don't clear cache on shutdown
           "privacy.clearOnShutdown.cookies" = false; # Don't clear cookies on shutdown
           "privacy.sanitize.sanitizeOnShutdown" = true; # Clear on shutdown
@@ -496,6 +514,7 @@
           "accessibility.typeaheadfind.enablesound" = false; # Disable sound effect on failed "Find in page"
           "identity.fxaccounts.toolbar.enabled" = false; # Disable firefox accounts icon in toolbar
           "browser.tabs.hoverPreview.enabled" = false; # Disable preview tab on hover
+          "browser.discovery.containers.enabled" = false; # Disable containers
         };
     };
   };
