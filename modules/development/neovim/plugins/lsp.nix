@@ -18,15 +18,19 @@ in
           installCargo = true;
           installRustc = true;
         };
-        clangd.enable = true; # C, C++ 
+        clangd.enable = true; # C, C++
         csharp_ls.enable = true; # C#
         nil_ls.enable = true; # Nix
-        lua_ls.enable = true; # Lua 
+        lua_ls.enable = true; # Lua
         pyright.enable = true; # Python
         ruff.enable = true; # Python (Format & Lint)
         dartls.enable = true; # Dart
         bashls.enable = true; # Bash
         taplo.enable = true; # TOML
+        gdscript = {
+          enable = true;
+          package = null;
+        };
         hls = {
           # Haskell
           enable = true;
