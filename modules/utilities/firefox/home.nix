@@ -271,8 +271,12 @@
                     url = "https://github.com/";
                   }
                   {
-                    name = "LinkedIn";
-                    url = "https://www.linkedin.com/";
+                    name = "Codeberg";
+                    url = "https://codeberg.org/";
+                  }
+                  {
+                    name = "Element";
+                    url = "https://app.element.io/";
                   }
                   {
                     name = "Lemmy";
@@ -286,9 +290,12 @@
                     name = "Mastodon";
                     url = "https://mastodon.social";
                   }
+                  {
+                    name = "LinkedIn";
+                    url = "https://www.linkedin.com/";
+                  }
                 ];
               }
-
               {
                 name = "Development";
                 bookmarks = [
