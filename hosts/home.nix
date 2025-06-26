@@ -49,7 +49,7 @@
     stateVersion = "23.05";
 
     packages = with pkgs; [
-      # Utilities 
+      # Utilities
       ## GUI
       # fluffychat # add back after this issue is fixed: https://github.com/krille-chan/fluffychat/issues/1258
       obs-studio
@@ -82,6 +82,7 @@
       maestral
       distrobox
       lynx
+      steam-run
       # Infosec
       nmap
       nikto
@@ -90,6 +91,7 @@
       busybox
       # Development
       gh
+      codeberg-cli
       nodePackages.nodejs
       nodePackages.pnpm
       nodePackages.live-server
