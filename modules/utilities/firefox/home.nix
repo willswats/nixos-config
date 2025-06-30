@@ -408,8 +408,8 @@
                     url = "https://www.amazon.co.uk/";
                   }
                   {
-                    name = "Tesco";
-                    url = "https://www.tesco.com/";
+                    name = "Ocado";
+                    url = "https://www.ocado.com/";
                   }
                   {
                     name = "2Tall";
