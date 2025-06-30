@@ -61,7 +61,6 @@
       popsicle
       gnome-disk-utility
       moonlight-qt
-      jellyfin-media-player
       grayjay
       miru
       spotify
