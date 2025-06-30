@@ -152,4 +152,4 @@ Other configurations from where I learned and copied:
 
 All code is MIT licensed.
 
-The wallpaper is under it's own copyright and can be found [here](https://www.reddit.com/r/WidescreenWallpaper/comments/qhojc3/mount_fuji_japan_%F0%92%8C%8B_5160_2160/).
+The wallpaper is under it's own copyright and can be found on [Reddit](https://www.reddit.com/r/WidescreenWallpaper/comments/qhojc3/mount_fuji_japan_%F0%92%8C%8B_5160_2160/).
