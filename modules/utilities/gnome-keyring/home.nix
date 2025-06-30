@@ -1,5 +1,8 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ seahorse gcr ];
+  home.packages = with pkgs; [
+    seahorse
+    gcr
+  ];
 }

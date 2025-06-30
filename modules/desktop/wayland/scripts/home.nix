@@ -1,4 +1,10 @@
-{ host, globals, pkgs, config, lib, ... }:
+{ host
+, globals
+, pkgs
+, config
+, lib
+, ...
+}:
 
 let
   # Prevent microphone from being auto adjusted to lower than 100 (Discord)

@@ -1,4 +1,8 @@
-{ pkgs, lib, config, ... }:
+{ pkgs
+, lib
+, config
+, ...
+}:
 
 let
   gammastep = "${pkgs.gammastep}/bin/gammastep";
@@ -37,7 +41,8 @@ in
     };
 
   wayland.windowManager.hyprland.settings.bind =
-    lib.mkIf config.wayland.windowManager.hyprland.enable [
-      "$mod shift, b, exec, ${gammastepToggle}"
-    ];
+    lib.mkIf config.wayland.windowManager.hyprland.enable
+      [
+        "$mod shift, b, exec, ${gammastepToggle}"
+      ];
 }

@@ -1,4 +1,8 @@
-{ pkgs, globals, host, ... }:
+{ pkgs
+, globals
+, host
+, ...
+}:
 
 {
   imports = [
@@ -212,7 +216,7 @@
           "$mod, return, exec, ${kitty}"
 
           "$mod, w, exec, ${firefox}" # Web browser
-          "$mod, a, exec, ${pavucontrol}" # Audio manager 
+          "$mod, a, exec, ${pavucontrol}" # Audio manager
           "$mod, v, exec, mpv" # Video player (not specifying the binary as it doesn't load plugins in the nix-store)
           "$mod, m, exec, ${spotify}" # Music player
           "$mod shift, m, exec, ${miru}" # Miru

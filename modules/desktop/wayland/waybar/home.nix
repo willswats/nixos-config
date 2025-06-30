@@ -1,4 +1,8 @@
-{ globals, config, lib, ... }:
+{ globals
+, config
+, lib
+, ...
+}:
 
 {
   programs.waybar =
@@ -6,8 +10,16 @@
       swayEnabled = config.wayland.windowManager.sway.enable;
       hyprlandEnabled = config.wayland.windowManager.hyprland.enable;
       modules-left =
-        (lib.optionals swayEnabled [ "sway/workspaces" "sway/window" "sway/mode" ]) ++
-        (lib.optionals hyprlandEnabled [ "hyprland/workspaces" "hyprland/window" "hyprland/submap" ]);
+        (lib.optionals swayEnabled [
+          "sway/workspaces"
+          "sway/window"
+          "sway/mode"
+        ])
+        ++ (lib.optionals hyprlandEnabled [
+          "hyprland/workspaces"
+          "hyprland/window"
+          "hyprland/submap"
+        ]);
     in
     {
       enable = true;
@@ -17,7 +29,17 @@
           position = "top";
           height = 40;
           modules-left = modules-left;
-          modules-right = [ "battery" "backlight" "pulseaudio#microphone" "pulseaudio" "bluetooth" "network" "clock#calendar" "clock" "tray" ];
+          modules-right = [
+            "battery"
+            "backlight"
+            "pulseaudio#microphone"
+            "pulseaudio"
+            "bluetooth"
+            "network"
+            "clock#calendar"
+            "clock"
+            "tray"
+          ];
 
           "sway/workspaces" = lib.mkIf swayEnabled {
             disable-scroll = true;
@@ -39,7 +61,13 @@
           battery = {
             interval = 1;
             format = "{icon} {capacity}%";
-            format-icons = [ "" "" "" "" "" ];
+            format-icons = [
+              ""
+              ""
+              ""
+              ""
+              ""
+            ];
           };
 
           backlight = {
@@ -81,7 +109,13 @@
             format-wifi = "{icon} {essid} {signalStrength}%";
             format-ethernet = "󰤨 {ifname}";
             format-disconnected = "{icon} Disconnected";
-            format-icons = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
+            format-icons = [
+              "󰤯"
+              "󰤟"
+              "󰤢"
+              "󰤥"
+              "󰤨"
+            ];
             max-length = 20;
           };
 
@@ -154,7 +188,7 @@
               font-family: ${fontName};
               border-radius: 0;
             }
-          
+
             window#waybar {
               background-color: ${base};
             }

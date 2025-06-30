@@ -1,4 +1,8 @@
-{ pkgs, host, globals, ... }:
+{ pkgs
+, host
+, globals
+, ...
+}:
 
 let
   user = globals.user;
@@ -68,7 +72,12 @@ in
   users.users.${user} = {
     isNormalUser = true;
     description = user;
-    extraGroups = [ "networkmanager" "wheel" "audio" "input" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "audio"
+      "input"
+    ];
     shell = pkgs.fish;
   };
 
@@ -110,5 +119,7 @@ in
     allowUnfree = true;
   };
 
-  system = { stateVersion = "23.05"; };
+  system = {
+    stateVersion = "23.05";
+  };
 }

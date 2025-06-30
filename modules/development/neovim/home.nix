@@ -27,7 +27,7 @@
   };
 
   # Make Neovim work with Nautilus:
-  # - Terminal=false 
+  # - Terminal=false
   # - exec=kitty nvim %F
   home.file.".local/share/applications/nvim.desktop".text = ''
     [Desktop Entry]

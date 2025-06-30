@@ -5,6 +5,8 @@
     enable = true;
     openFirewall = true;
     user = globals.user;
-    settings = { server.port = 8081; };
+    settings = {
+      server.port = 8081;
+    };
   };
 }

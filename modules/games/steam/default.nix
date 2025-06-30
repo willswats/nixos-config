@@ -1,6 +1,5 @@
 { pkgs, ... }:
 
-
 {
 
   programs.steam = {
@@ -26,18 +25,19 @@
   # Fix gamescope on steam https://github.com/ValveSoftware/gamescope/issues/905#issuecomment-1660112668
   nixpkgs.config.packageOverrides = pkgs: {
     steam = pkgs.steam.override {
-      extraPkgs = pkgs: with pkgs; [
-        keyutils
-        libkrb5
-        libpng
-        libpulseaudio
-        libvorbis
-        stdenv.cc.cc.lib
-        xorg.libXcursor
-        xorg.libXi
-        xorg.libXinerama
-        xorg.libXScrnSaver
-      ];
+      extraPkgs =
+        pkgs: with pkgs; [
+          keyutils
+          libkrb5
+          libpng
+          libpulseaudio
+          libvorbis
+          stdenv.cc.cc.lib
+          xorg.libXcursor
+          xorg.libXi
+          xorg.libXinerama
+          xorg.libXScrnSaver
+        ];
     };
   };
 

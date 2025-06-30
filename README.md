@@ -26,7 +26,7 @@ My [NixOS](https://nixos.org/) config.
 ## Installing NixOS
 
 1. Set CSM support (or your equivalent) to disabled in the bios (ensures that you boot in UEFI, otherwise NixOS will use grub instead of systemd boot).
-2. Download the NixOS Plasma ISO from [here](https://nixos.org/download.html).
+2. Download the NixOS Plasma ISO from [nixos.org](https://nixos.org/download.html).
 3. Write the NixOS Plasma ISO to a USB and boot into it.
 4. Run the installer and set the following:
    - Language

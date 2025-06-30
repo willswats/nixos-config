@@ -20,41 +20,45 @@
           no_fade_out = true;
         };
 
-        background = [{
-          monitor = "";
-          path = "${wallpaper}";
-          color = base;
+        background = [
+          {
+            monitor = "";
+            path = "${wallpaper}";
+            color = base;
 
-          blur_passes = 1;
-        }];
+            blur_passes = 1;
+          }
+        ];
 
-        input-field = [{
-          monitor = "";
+        input-field = [
+          {
+            monitor = "";
 
-          size = "300, 50";
+            size = "300, 50";
 
-          outline_thickness = 2;
+            outline_thickness = 2;
 
-          outer_color = blue;
-          inner_color = base;
-          font_color = text;
+            outer_color = blue;
+            inner_color = base;
+            font_color = text;
 
-          check_color = peach;
-          fail_color = red;
-          fail_text = "";
-          fail_transition = 0;
-          capslock_color = peach;
+            check_color = peach;
+            fail_color = red;
+            fail_text = "";
+            fail_transition = 0;
+            capslock_color = peach;
 
-          fade_on_empty = false;
-          fade_timeout = 0;
-          placeholder_text = "";
-          rounding = 0;
+            fade_on_empty = false;
+            fade_timeout = 0;
+            placeholder_text = "";
+            rounding = 0;
 
-          dots_size = 0.3;
-          dots_spacing = 0.2;
-          dots_center = true;
-          dots_rounding = 0;
-        }];
+            dots_size = 0.3;
+            dots_spacing = 0.2;
+            dots_center = true;
+            dots_rounding = 0;
+          }
+        ];
 
         label = [
           {

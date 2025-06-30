@@ -1,4 +1,10 @@
-{ pkgs, globals, host, inputs, ... }:
+{
+  pkgs,
+  globals,
+  host,
+  inputs,
+  ...
+}:
 
 {
   xdg.mimeApps = {
@@ -76,7 +82,7 @@
         MBTN_RIGHT = "script-binding uosc/menu";
         tab = "script-binding uosc/menu";
         t = "script-binding uosc/toggle-ui";
-        i = "script-binding uosc/items"; # Opens playlist menu when playlist exists, or open-file menu otherwise 
+        i = "script-binding uosc/items"; # Opens playlist menu when playlist exists, or open-file menu otherwise
         s = "script-binding uosc/shuffle; ${uoscFlashElementsControls}";
         c = "script-binding uosc/subtitles";
         v = "script-binding uosc/stream-quality";
@@ -116,7 +122,7 @@
       mpvScripts.sponsorblock # Script for mpv to skip sponsored segments of YouTube videos
       mpvScripts.memo # Remember history
       mpvScripts.autosubsync-mpv # Auto sync subtitles
-      mpvScripts.webtorrent-mpv-hook # Adds a hook that allows mpv to stream torrents 
+      mpvScripts.webtorrent-mpv-hook # Adds a hook that allows mpv to stream torrents
       mpvScripts.builtins.autoload # Adds files to the mpv playlist
       mpvScripts.reload # Manual & automatic reloading of videos
     ];

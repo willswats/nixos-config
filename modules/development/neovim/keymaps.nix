@@ -70,7 +70,7 @@
               inherit mode;
               key = "<leader>w";
               action = "${cmd}w!${cr}";
-              options. desc = "Write format";
+              options.desc = "Write format";
             }
             {
               inherit mode;
@@ -109,7 +109,7 @@
               inherit mode;
               key = "<leader>r";
               action = "${cmd}checktime${cr}";
-              options. desc = "Refresh";
+              options.desc = "Refresh";
             }
           ];
 
@@ -136,7 +136,7 @@
             mode = "v";
           in
           [
-            # Stay in indent mode 
+            # Stay in indent mode
             {
               inherit mode;
               key = "<";

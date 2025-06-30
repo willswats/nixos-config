@@ -22,8 +22,10 @@
   boot = {
     initrd = {
       luks.devices = {
-        "luks-418efaa8-2d4d-49f9-adb0-e8a37fb859ba".device = "/dev/disk/by-uuid/418efaa8-2d4d-49f9-adb0-e8a37fb859ba";
-        "luks-908577b6-3ac9-4b67-ac70-cbfc3244a201".device = "/dev/disk/by-uuid/908577b6-3ac9-4b67-ac70-cbfc3244a201"; # Unlock 2TB drive at boot
+        "luks-418efaa8-2d4d-49f9-adb0-e8a37fb859ba".device =
+          "/dev/disk/by-uuid/418efaa8-2d4d-49f9-adb0-e8a37fb859ba";
+        "luks-908577b6-3ac9-4b67-ac70-cbfc3244a201".device =
+          "/dev/disk/by-uuid/908577b6-3ac9-4b67-ac70-cbfc3244a201"; # Unlock 2TB drive at boot
       };
     };
     loader = {

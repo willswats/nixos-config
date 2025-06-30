@@ -1,4 +1,9 @@
-{ pkgs, globals, host, ... }:
+{
+  pkgs,
+  globals,
+  host,
+  ...
+}:
 
 {
   home.packages = with pkgs; [ fish ];

@@ -1,4 +1,8 @@
-{ pkgs, lib, config, ... }:
+{ pkgs
+, lib
+, config
+, ...
+}:
 
 let
   mullvad = "${pkgs.mullvad-vpn}/bin/mullvad";
@@ -37,7 +41,8 @@ in
     };
 
   wayland.windowManager.hyprland.settings.bind =
-    lib.mkIf config.wayland.windowManager.hyprland.enable [
-      "$mod shift, v, exec, ${mullvadToggle}"
-    ];
+    lib.mkIf config.wayland.windowManager.hyprland.enable
+      [
+        "$mod shift, v, exec, ${mullvadToggle}"
+      ];
 }

@@ -1,4 +1,10 @@
-{ lib, config, pkgs, host, globals, ... }:
+{ lib
+, config
+, pkgs
+, host
+, globals
+, ...
+}:
 
 {
   imports = [
@@ -94,29 +100,45 @@
         window.commands = [
           {
             command = "border pixel 2";
-            criteria = { class = "^.*"; };
+            criteria = {
+              class = "^.*";
+            };
           }
           # Chatterino
           {
             command = "floating enable, opacity 0.9";
-            criteria = { app_id = "com.chatterino."; };
+            criteria = {
+              app_id = "com.chatterino.";
+            };
           }
           # Steam
           {
             command = "floating enable";
-            criteria = { class = "steam"; title = "Friends List"; };
+            criteria = {
+              class = "steam";
+              title = "Friends List";
+            };
           }
           {
             command = "floating enable";
-            criteria = { class = "steam"; title = "Steam Settings"; };
+            criteria = {
+              class = "steam";
+              title = "Steam Settings";
+            };
           }
           {
             command = "floating enable";
-            criteria = { class = "steam"; title = "Game Servers"; };
+            criteria = {
+              class = "steam";
+              title = "Game Servers";
+            };
           }
           {
             command = "floating enable";
-            criteria = { class = "steam"; title = "Screenshot Manager"; };
+            criteria = {
+              class = "steam";
+              title = "Screenshot Manager";
+            };
           }
         ];
         gaps.smartBorders = "on";
@@ -182,7 +204,7 @@
           };
         };
         keybindings = lib.mkOptionDefault {
-          # Raise and lower volume 
+          # Raise and lower volume
           "XF86AudioRaiseVolume" = "exec ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+";
           "XF86AudioLowerVolume" = "exec ${wpctl} set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-";
           # Mute audio and mic mute

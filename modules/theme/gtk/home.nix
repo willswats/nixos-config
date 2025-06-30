@@ -1,10 +1,17 @@
-{ pkgs, globals, host, ... }:
+{
+  pkgs,
+  globals,
+  host,
+  ...
+}:
 
 {
   gtk =
     let
       # Disable error sound
-      extraConfig = { gtk-error-bell = 0; };
+      extraConfig = {
+        gtk-error-bell = 0;
+      };
       # Set border radius to a specific value, this can render as black on some compositors, set it to 0 if needed
       extraCss = ''
         menu,
@@ -56,7 +63,9 @@
           flavor = "mocha";
         };
       };
-      gtk2 = { extraConfig = "gtk-error-bell = 0"; };
+      gtk2 = {
+        extraConfig = "gtk-error-bell = 0";
+      };
       gtk3 = {
         bookmarks = bookmarks;
         extraConfig = extraConfig;

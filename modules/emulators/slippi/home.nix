@@ -43,11 +43,11 @@ in
 
   # Setup controller profiles
   xdg.configFile."SlippiOnline/Config/Profiles/GCPad/DualSenseWired.ini" = {
-    text = ''  
+    text = ''
       [Profile]
       Device = evdev/0/Sony Interactive Entertainment DualSense Wireless Controller
       ${duelSenseProfile}
-  '';
+    '';
   };
 
   xdg.configFile."SlippiOnline/Config/Profiles/GCPad/DualSenseWireless.ini" = {

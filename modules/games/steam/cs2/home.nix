@@ -32,7 +32,7 @@
       bind alt player_ping
       bind - voice_modenable_toggle
       bind / "exec nade"
- 
+
       # -- SETTINGS --
 
       # Music

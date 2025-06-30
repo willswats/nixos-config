@@ -4,7 +4,11 @@
   # Install the following extensions manually:
   # - sqls
   # - SQL Formatter VSCode
-  home.packages = with pkgs; [ sqls sql-formatter ruff ];
+  home.packages = with pkgs; [
+    sqls
+    sql-formatter
+    ruff
+  ];
 
   programs.vscode = {
     enable = true;
@@ -50,23 +54,35 @@
           "vim.leader" = "space";
           "vim.insertModeKeyBindings" = [
             {
-              "before" = [ "j" "k" ];
+              "before" = [
+                "j"
+                "k"
+              ];
               "after" = [ "<Esc>" ];
             }
             {
-              "before" = [ "k" "j" ];
+              "before" = [
+                "k"
+                "j"
+              ];
               "after" = [ "<Esc>" ];
             }
           ];
           "vim.normalModeKeyBindings" = [
             {
-              "before" = [ "leader" "w" ];
+              "before" = [
+                "leader"
+                "w"
+              ];
               "commands" = [
                 "workbench.action.files.save"
               ];
             }
             {
-              "before" = [ "leader" "c" ];
+              "before" = [
+                "leader"
+                "c"
+              ];
               commands = [
                 "workbench.action.closeActiveEditor"
               ];
@@ -109,7 +125,7 @@
               "commands" = [ "editor.action.outdentLines" ];
             }
           ];
-          # SQL Formatter VSCode 
+          # SQL Formatter VSCode
           "[sql]" = {
             "editor.defaultFormatter" = "ReneSaarsoo.sql-formatter-vsc";
           };

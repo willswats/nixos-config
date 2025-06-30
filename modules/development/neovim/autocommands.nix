@@ -5,7 +5,14 @@
     {
       # Set q to close certain buffers
       event = "FileType";
-      pattern = [ "qf" "help" "man" "lspinfo" "lsp-installer" "null-ls-info" ];
+      pattern = [
+        "qf"
+        "help"
+        "man"
+        "lspinfo"
+        "lsp-installer"
+        "null-ls-info"
+      ];
       callback = {
         __raw = ''
           function()
@@ -18,7 +25,10 @@
     {
       # Set markdown and gitcommit opts
       event = [ "FileType" ];
-      pattern = [ "markdown" "gitcommit" ];
+      pattern = [
+        "markdown"
+        "gitcommit"
+      ];
       callback = {
         __raw = ''
           function()
@@ -54,7 +64,10 @@
     # Set shiftwidth for sql and cs files (default is 2)
     {
       event = [ "FileType" ];
-      pattern = [ "sql" "cs" ];
+      pattern = [
+        "sql"
+        "cs"
+      ];
       callback = {
         __raw = ''
           function()

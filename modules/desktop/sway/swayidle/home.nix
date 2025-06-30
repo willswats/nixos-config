@@ -32,8 +32,14 @@
           }
         ];
         events = [
-          { event = "before-sleep"; command = swaylock; }
-          { event = "lock"; command = swaylock; }
+          {
+            event = "before-sleep";
+            command = swaylock;
+          }
+          {
+            event = "lock";
+            command = swaylock;
+          }
         ];
       };
     };
