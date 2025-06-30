@@ -26,6 +26,7 @@
   ];
 
   services.network-manager-applet.enable = true;
+  services.dropbox.enable = true;
 
   wayland.windowManager.hyprland =
     let
@@ -56,7 +57,6 @@
       grimblast = "${pkgs.grimblast}/bin/grimblast";
 
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
-      maestralGui = "${pkgs.maestral-gui}/bin/maestral_qt";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
@@ -199,7 +199,6 @@
           "${playerctld}" # The home manager service doesn't seem to start playerctld
           "${lxpolkit}"
           # Applets
-          "${maestralGui}"
           "${mullvadGui}"
           # Misc
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
