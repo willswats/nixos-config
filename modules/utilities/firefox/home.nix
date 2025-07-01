@@ -511,7 +511,7 @@
           "permissions.default.desktop-notification" = 2; # Disable desktop notifications by default
           "privacy.donottrackheader.enabled" = true; # Always send do not track header
           "privacy.history.custom" = true; # Custom history settings
-          "privacy.clearOnShutdown.history" = false; # Don't clear history on shutdown
+          "privacy.clearOnShutdown.history" = true; # Clear history on shutdown
           "privacy.clearOnShutdown.sessions" = false; # Don't clear sessions on shutdown
           "privacy.clearOnShutdown.cache" = false; # Don't clear cache on shutdown
           "privacy.clearOnShutdown.cookies" = false; # Don't clear cookies on shutdown
