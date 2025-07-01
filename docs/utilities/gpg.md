@@ -51,7 +51,7 @@ Run the following command with the GPG secret key ID:
 gpg --armor --export
 ```
 
-Copy all of the output and add it to GitHub [here](https://github.com/settings/gpg/new).
+Copy all of the output and add it to [GitHub](https://github.com/settings/gpg/new).
 
 Name the key in the following way for clarity: `{host-name}-{date}`, e.g. `will-desktop-2024-06-05`.
 
@@ -75,7 +75,7 @@ Run this command:
 ssh-add -L
 ```
 
-Copy all of the output and add it to GitHub [here](https://github.com/settings/ssh/new).
+Copy all of the output and add it to [GitHub](https://github.com/settings/ssh/new).
 
 Name the key in the following way for clarity: `{host-name}-{date}`, e.g. `will-desktop-2024-06-05`.
 
@@ -127,7 +127,7 @@ gpg --output public.pgp --armor --export KEY-ID
 
 ### Adding the Revoked Key to GitHub
 
-Open `public.gpg` in a text editor and add the contents to GitHub [here](https://github.com/settings/gpg/new).
+Open `public.gpg` in a text editor and add the contents to [GitHub](https://github.com/settings/gpg/new).
 
 Name the key in the following way for clarity on GitHub: `{host-name}-revoked-{date}`, e.g. `will-desktop-revoked-2024-06-05`.
 
