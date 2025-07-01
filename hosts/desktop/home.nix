@@ -28,12 +28,7 @@
     lutris
     prismlauncher
     # Games
-    (callPackage ../../pkgs/osu-lazer-bin {
-      ver = "2025.605.1"; # https://github.com/ppy/osu/releases
-      hash = "sha256-0F5AlnID8EHbk0H8G6Idm0WYMAsHhG3j7GxhG+6rNlQ=";
-      nativeWayland = true;
-    })
-    # osu-lazer-bin
+    osu-lazer-bin
     tetrio-desktop
     sm64coopdx
   ];
