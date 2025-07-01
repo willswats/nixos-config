@@ -279,15 +279,19 @@
                     url = "https://app.element.io/";
                   }
                   {
-                    name = "Lemmy";
-                    url = "https://lemmy.world";
+                    name = "lemmy.ml";
+                    url = "https://lemmy.ml";
                   }
                   {
-                    name = "Pixelfed";
+                    name = "progamming.dev";
+                    url = "https://programming.dev";
+                  }
+                  {
+                    name = "pixelfed.social";
                     url = "https://pixelfed.social";
                   }
                   {
-                    name = "Mastodon";
+                    name = "mastodon.social";
                     url = "https://mastodon.social";
                   }
                   {
