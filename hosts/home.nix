@@ -65,7 +65,6 @@
       miru
       spotify
       zotero
-      maestral-gui
       resources
       ## CLI
       wget
@@ -78,7 +77,6 @@
       yt-dlp
       woeusb
       vulkan-tools
-      maestral
       distrobox
       lynx
       steam-run
