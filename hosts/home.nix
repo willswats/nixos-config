@@ -51,7 +51,6 @@
     packages = with pkgs; [
       # Utilities
       ## GUI
-      # fluffychat # add back after this issue is fixed: https://github.com/krille-chan/fluffychat/issues/1258
       obs-studio
       gpu-screen-recorder-gtk
       gimp
