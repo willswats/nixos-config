@@ -26,6 +26,9 @@
     ../modules/utilities/chromium/home.nix
     ../modules/utilities/mpv/home.nix
     ../modules/utilities/oculante/home.nix
+    ../modules/utilities/gimp/home.nix
+    ../modules/utilities/krita/home.nix
+    ../modules/utilities/kdenlive/home.nix
     ../modules/utilities/mullvad-vpn/home.nix
     ../modules/utilities/vesktop/home.nix
     ../modules/utilities/fish/home.nix
@@ -53,9 +56,6 @@
       ## GUI
       obs-studio
       gpu-screen-recorder-gtk
-      gimp
-      krita
-      kdePackages.kdenlive
       fragments
       popsicle
       gnome-disk-utility
