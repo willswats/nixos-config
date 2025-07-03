@@ -124,6 +124,7 @@
       mpvScripts.autosubsync-mpv # Auto sync subtitles
       mpvScripts.webtorrent-mpv-hook # Adds a hook that allows mpv to stream torrents
       mpvScripts.reload # Manual & automatic reloading of videos
+      mpvScripts.builtins.autocrop # Auto crop black borders on videos
     ];
     scriptOpts = {
       uosc = {
@@ -143,6 +144,9 @@
       };
       youtube-search = {
         osd_message_duration = 0;
+      };
+      autocrop = {
+        suppress_osd = true;
       };
     };
   };
