@@ -30,7 +30,7 @@
 
       keymap = {
         mgr.prepend_keymap = [
-          # Open nautilus 
+          # Open nautilus
           {
             on = [ "<C-o>" ];
             run = ''
@@ -64,7 +64,10 @@
           }
           # Overwrites "go to temp directory"
           {
-            on = [ "g" "t" ];
+            on = [
+              "g"
+              "t"
+            ];
             run = "cd ~/.local/share/Trash/files";
             desc = "Go to trash directory";
           }
@@ -76,39 +79,60 @@
           }
           # Plugin (chmod) - chmod selected files
           {
-            on = [ "c" "m" ];
+            on = [
+              "c"
+              "m"
+            ];
             run = "plugin chmod";
             desc = "Chmod on selected files";
           }
         ];
         mgr.append_keymap = [
           {
-            on = [ "g" "p" ];
+            on = [
+              "g"
+              "p"
+            ];
             run = "cd ~/Pictures";
             desc = "Go to the pictures directory";
           }
           {
-            on = [ "g" "v" ];
+            on = [
+              "g"
+              "v"
+            ];
             run = "cd ~/Videos";
             desc = "Go to the videos directory";
           }
           {
-            on = [ "g" "l" ];
+            on = [
+              "g"
+              "l"
+            ];
             run = "cd ~/.local";
             desc = "Go to the local directory";
           }
           {
-            on = [ "g" "D" ];
+            on = [
+              "g"
+              "D"
+            ];
             run = "cd ${driveDir}";
             desc = "Go to Drive directory";
           }
           {
-            on = [ "g" "C" ];
+            on = [
+              "g"
+              "C"
+            ];
             run = "cd ~/Code";
             desc = "Go to Code directory";
           }
           {
-            on = [ "g" "U" ];
+            on = [
+              "g"
+              "U"
+            ];
             run = "cd ${driveDir}/Work/Education/University";
             desc = "Go to University directory";
           }
@@ -135,6 +159,16 @@
           # open cbz instead of extracting
           {
             name = "*.cbz";
+            use = [ "open" ];
+          }
+          # open kra instead of extracting
+          {
+            name = "*.kra";
+            use = [ "open" ];
+          }
+          # open kdenlive instead of edit
+          {
+            name = "*.kdenlive";
             use = [ "open" ];
           }
           # open docx instead of edit
