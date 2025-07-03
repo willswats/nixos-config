@@ -4,17 +4,6 @@
 
   programs.steam = {
     enable = true;
-    gamescopeSession = {
-      enable = true;
-      args = [
-        "-w 1920"
-        "-h 1080"
-        "-W 1920"
-        "-H 1080"
-        "-f" # Fullscreen by default
-        "-e" # Enable steam integration (fix mouse issues on certain games)
-      ];
-    };
     extraCompatPackages = with pkgs; [
       steamtinkerlaunch
       # Not using this, because when proton-ge-bin updates, all games set with it are reset to no proton
@@ -22,21 +11,21 @@
     ];
   };
 
-  # Fix gamescope on steam https://github.com/ValveSoftware/gamescope/issues/905#issuecomment-1660112668
+  # Fix gamescope on steam https://wiki.nixos.org/wiki/Steam#Gamescope_fails_to_launch_when_used_within_Steam
   nixpkgs.config.packageOverrides = pkgs: {
     steam = pkgs.steam.override {
       extraPkgs =
         pkgs: with pkgs; [
-          keyutils
-          libkrb5
-          libpng
-          libpulseaudio
-          libvorbis
-          stdenv.cc.cc.lib
           xorg.libXcursor
           xorg.libXi
           xorg.libXinerama
           xorg.libXScrnSaver
+          libpng
+          libpulseaudio
+          libvorbis
+          stdenv.cc.cc.lib # Provides libstdc++.so.6
+          libkrb5
+          keyutils
         ];
     };
   };
