@@ -1,4 +1,4 @@
-{ host, ... }:
+{ pkgs, host, ... }:
 
 {
   imports = [
@@ -51,5 +51,11 @@
     fsType = "ext4";
   };
 
-  programs.gamescope.enable = true;
+  programs.gamescope = {
+    enable = true;
+    # Fix gamescope blur - https://github.com/ValveSoftware/gamescope/issues/1622
+    package = pkgs.gamescope.overrideAttrs (_: {
+      NIX_CFLAGS_COMPILE = [ "-fno-fast-math" ];
+    });
+  };
 }
