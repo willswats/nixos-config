@@ -30,7 +30,6 @@
   ];
 
   services.network-manager-applet.enable = true;
-  services.dropbox.enable = true;
 
   wayland.windowManager.hyprland =
     let
@@ -62,6 +61,7 @@
 
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
+      dropbox = "${pkgs.dropbox}/bin/dropbox";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
@@ -204,6 +204,7 @@
           "${lxpolkit}"
           # Applets
           "${mullvadGui}"
+          "${dropbox}"
           # Misc
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
         ];

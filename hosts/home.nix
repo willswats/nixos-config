@@ -63,6 +63,7 @@
       grayjay
       miru
       spotify
+      dropbox
       zotero
       resources
       ## CLI
