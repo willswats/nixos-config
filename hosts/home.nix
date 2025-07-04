@@ -29,7 +29,6 @@
     ../modules/utilities/gimp/home.nix
     ../modules/utilities/krita/home.nix
     ../modules/utilities/kdenlive/home.nix
-    ../modules/utilities/dropbox/home.nix
     ../modules/utilities/mullvad-vpn/home.nix
     ../modules/utilities/vesktop/home.nix
     ../modules/utilities/fish/home.nix
@@ -64,6 +63,7 @@
       grayjay
       miru
       spotify
+      dropbox
       zotero
       resources
       ## CLI
