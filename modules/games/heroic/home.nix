@@ -34,7 +34,7 @@ in
           "enviromentOptions": [],
           "wrapperOptions": [],
           "showFps": false,
-          "useGameMode": false,
+          "useGameMode": true,
           "wineCrossoverBottle": "Heroic",
           "winePrefix": "${homeDirectory}/Games/Heroic/Prefixes/default",
           "wineVersion": {

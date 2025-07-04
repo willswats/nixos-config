@@ -1,4 +1,9 @@
-{ pkgs, host, ... }:
+{
+  pkgs,
+  host,
+  globals,
+  ...
+}:
 
 {
   imports = [
@@ -58,4 +63,6 @@
       NIX_CFLAGS_COMPILE = [ "-fno-fast-math" ];
     });
   };
+  programs.gamemode.enable = true;
+  users.users.${globals.user}.extraGroups = [ "gamemode" ];
 }
