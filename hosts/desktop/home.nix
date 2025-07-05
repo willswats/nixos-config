@@ -28,7 +28,7 @@
     lutris
     prismlauncher
     # Games
-    osu-lazer-bin
+    (osu-lazer-bin.override { nativeWayland = true; })
     tetrio-desktop
     sm64coopdx
   ];
