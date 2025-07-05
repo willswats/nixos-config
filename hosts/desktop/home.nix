@@ -19,7 +19,6 @@
     alsa-scarlett-gui
     easyeffects
     mangohud
-    protonplus
     protontricks
     # Emulators
     rpcs3
