@@ -23,6 +23,7 @@
       "text/vnd.trolltech.linguist" = [ "nvim.desktop" ]; # ts
       "text/csv" = [ "nvim.desktop" ]; # csv
       "application/x-subrip" = [ "nvim.desktop" ]; # srt
+      "application/x-shellscript" = [ "nvim.desktop" ]; # sh
     };
   };
 
