@@ -165,6 +165,8 @@
           "suppressevent maximize, class:steam" # Fix Steam maximizing certain windows (Friends List)
           # SteamTinkerLaunch
           "float, class:yad"
+          # gamescope
+          "float, class:gamescope"
           # Firefox
           "suppressevent maximize, class:firefox" # Fix Firefox maximizing certain windows (extensions)
           # Godot

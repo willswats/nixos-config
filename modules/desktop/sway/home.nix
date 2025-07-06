@@ -132,6 +132,13 @@
               app_id = "yad";
             };
           }
+          # gamescope
+          {
+            command = "floating enable";
+            criteria = {
+              app_id = "gamescope";
+            };
+          }
           # Nautilus
           {
             command = "floating enable";
