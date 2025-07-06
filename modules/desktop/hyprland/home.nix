@@ -171,6 +171,8 @@
           "tile, class:Godot" # Fix Godot starting as float
           # MPV
           "suppressevent maximize, class:mpv" # Stop mpv from maximizing when adding a video
+          # Nautilus
+          "float, class:org.gnome.Nautilus"
         ];
 
         # Disable hyprcursor as it doesn't make a difference for me and will require gsettings

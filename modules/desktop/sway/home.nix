@@ -132,6 +132,13 @@
               app_id = "yad";
             };
           }
+          # Nautilus
+          {
+            command = "floating enable";
+            criteria = {
+              app_id = "org.gnome.Nautilus";
+            };
+          }
         ];
         gaps.smartBorders = "on";
         bars = [{ command = waybar; }];
