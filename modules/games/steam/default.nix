@@ -16,6 +16,7 @@
     steam = pkgs.steam.override {
       extraPkgs =
         pkgs: with pkgs; [
+          # gamescope
           xorg.libXcursor
           xorg.libXi
           xorg.libXinerama
@@ -26,6 +27,8 @@
           stdenv.cc.cc.lib # Provides libstdc++.so.6
           libkrb5
           keyutils
+          # beamp
+          nss # Provides libnss3.so for native beamng
         ];
     };
   };
