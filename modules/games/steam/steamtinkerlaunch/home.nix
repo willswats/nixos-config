@@ -327,7 +327,7 @@
     ## copy d3dcompiler_47 to game files, normally required but sometimes OS/drivers/SpecialK/ReShade may crash with it -- Disabling will remove this DLL only if it was installed by SteamTinkerLaunch for SpecialK
     USESPEKD3D47="1"
     ## enables native Wayland support for SDL games that support it with SDL_VIDEODRIVER=wayland
-    SDLUSEWAYLAND="0"
+    SDLUSEWAYLAND="1"
     ## A comma-separated list of named flags, which can be used to enable experimental driver features and performance enhancements for RADV Vulkan driver
     STLRAD_PFTST="none"
     ## Special K download version
