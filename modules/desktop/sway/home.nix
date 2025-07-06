@@ -116,28 +116,20 @@
             command = "floating enable";
             criteria = {
               class = "steam";
-              title = "Friends List";
             };
           }
           {
-            command = "floating enable";
+            command = "floating disable";
             criteria = {
               class = "steam";
-              title = "Steam Settings";
+              title = "^Steam$"; # Strict regex check for only the "Steam" window
             };
           }
+          # SteamTinkerLaunch
           {
             command = "floating enable";
             criteria = {
-              class = "steam";
-              title = "Game Servers";
-            };
-          }
-          {
-            command = "floating enable";
-            criteria = {
-              class = "steam";
-              title = "Screenshot Manager";
+              app_id = "yad";
             };
           }
         ];

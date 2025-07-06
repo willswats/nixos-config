@@ -160,11 +160,11 @@
           "float, class:com.chatterino."
           "size 400 600, class:com.chatterino."
           # Steam
-          "float, class:steam, title:Friends List"
-          "float, class:steam, title:Steam Settings"
-          "float, class:steam, title:Game Servers"
-          "float, class:steam, title:Screenshot Manager"
+          "float, class:steam"
+          "tile, class:steam, title:^Steam$" # Strict regex check for only the "Steam" window
           "suppressevent maximize, class:steam" # Fix Steam maximizing certain windows (Friends List)
+          # SteamTinkerLaunch
+          "float, class:yad"
           # Firefox
           "suppressevent maximize, class:firefox" # Fix Firefox maximizing certain windows (extensions)
           # Godot
