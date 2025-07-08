@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, globals, ... }:
 
 {
   home.packages = with pkgs; [
@@ -58,78 +58,95 @@
         youtube-alternative-switch
         sponsorblock
         return-youtube-dislikes
-        # Wayback Machine
+        ## Wayback Machine
         wayback-machine
         ## nyaa.si
         nyaa-linker
       ];
 
-      # Settings
+      # about:config
       settings =
         let
-          newTabPageBlocked = ''
-            {"R8wYCmScoyV0xHr6e1KJng==":1,"c/GpBaAESHY/bXEx/uourw==":1,"Z3sawLcfnygbilXeU5fdHg==":1,"6qTsCBZaEVXWrWxdXn5pmQ==":1,"+CUypgsitL9L0VmPZ0t22g==":1,"c9lsKElwtRd9PbcOXhz3dA==":1,"otFC2oJcatFNwWRBjMU7YA==":1,"26UbzFJ7qT9/4DhodHKA1Q==":1,"4gPpjkxgZzXPVtuEoAL9Ig==":1,"gLv0ja2RYVgxKdp0I5qwvA==":1,"0GuysDfjFIJXq6QVZ2C5YA==":1,"FX7dGM0Jj2q2tTyEv9oaUQ==":1,"BRX66S9KVyZQ1z3AIk0A7w==":1}
-          '';
-          uiCustomizationState = ''
-            {"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["_c84d89d9-a826-4015-957b-affebd9eb603_-browser-action","addon_darkreader_org-browser-action","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","ublock0_raymondhill_net-browser-action","_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action","gdpr_cavi_au_dk-browser-action","sponsorblocker_ajay_app-browser-action","_762f9885-5a13-4abd-9c77-433dcd38b8fd_-browser-action","_036a55b4-5e72-4d05-a06c-cba2dfcc134a_-browser-action","7esoorv3_alefvanoon_anonaddy_me-browser-action","_d66c8515-1e0d-408f-82ee-2682f2362726_-browser-action","wayback_machine_mozilla_org-browser-action","metacor_code_gmail_com-browser-action","_25cddbee-458b-4e9f-984d-dbf35511f124_-browser-action","zotero_chnm_gmu_edu-browser-action"],"nav-bar":["back-button","forward-button","stop-reload-button","urlbar-container","save-to-pocket-button","downloads-button","fxa-toolbar-menu-button","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"vertical-tabs":[],"PersonalToolbar":["personal-bookmarks"]},"seen":["metacor_code_gmail_com-browser-action","gdpr_cavi_au_dk-browser-action","wayback_machine_mozilla_org-browser-action","_25cddbee-458b-4e9f-984d-dbf35511f124_-browser-action","_d66c8515-1e0d-408f-82ee-2682f2362726_-browser-action","7esoorv3_alefvanoon_anonaddy_me-browser-action","addon_darkreader_org-browser-action","zotero_chnm_gmu_edu-browser-action","ublock0_raymondhill_net-browser-action","_036a55b4-5e72-4d05-a06c-cba2dfcc134a_-browser-action","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action","_c84d89d9-a826-4015-957b-affebd9eb603_-browser-action","developer-button","_762f9885-5a13-4abd-9c77-433dcd38b8fd_-browser-action","sponsorblocker_ajay_app-browser-action"],"dirtyAreaCache":["unified-extensions-area","nav-bar","PersonalToolbar","TabsToolbar","toolbar-menubar","vertical-tabs"],"currentVersion":20,"newElementCount":15}
-          '';
+          base = "#${globals.colours.base}";
 
           # Chinese (simplified)
           alwaysTranslateLanguages = ''
             zh-Hans
           '';
+
+          newTabPageBlocked = ''
+            {"R8wYCmScoyV0xHr6e1KJng==":1,"c/GpBaAESHY/bXEx/uourw==":1,"Z3sawLcfnygbilXeU5fdHg==":1,"6qTsCBZaEVXWrWxdXn5pmQ==":1,"+CUypgsitL9L0VmPZ0t22g==":1,"c9lsKElwtRd9PbcOXhz3dA==":1,"otFC2oJcatFNwWRBjMU7YA==":1,"26UbzFJ7qT9/4DhodHKA1Q==":1,"4gPpjkxgZzXPVtuEoAL9Ig==":1,"gLv0ja2RYVgxKdp0I5qwvA==":1,"0GuysDfjFIJXq6QVZ2C5YA==":1,"FX7dGM0Jj2q2tTyEv9oaUQ==":1,"BRX66S9KVyZQ1z3AIk0A7w==":1,"eV8/WsSLxHadrTL1gAxhug==":1}
+          '';
+          uiCustomization = ''
+            {"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action","ublock0_raymondhill_net-browser-action","sponsorblocker_ajay_app-browser-action","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","gdpr_cavi_au_dk-browser-action","addon_darkreader_org-browser-action","7esoorv3_alefvanoon_anonaddy_me-browser-action","_c84d89d9-a826-4015-957b-affebd9eb603_-browser-action","metacor_code_gmail_com-browser-action","_d66c8515-1e0d-408f-82ee-2682f2362726_-browser-action","_762f9885-5a13-4abd-9c77-433dcd38b8fd_-browser-action","wayback_machine_mozilla_org-browser-action","zotero_chnm_gmu_edu-browser-action"],"nav-bar":["back-button","forward-button","stop-reload-button","vertical-spacer","urlbar-container","save-to-pocket-button","downloads-button","fxa-toolbar-menu-button","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button"],"vertical-tabs":[],"PersonalToolbar":["personal-bookmarks"]},"seen":["developer-button","screenshot-button","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","gdpr_cavi_au_dk-browser-action","addon_darkreader_org-browser-action","7esoorv3_alefvanoon_anonaddy_me-browser-action","_c84d89d9-a826-4015-957b-affebd9eb603_-browser-action","metacor_code_gmail_com-browser-action","_d66c8515-1e0d-408f-82ee-2682f2362726_-browser-action","_762f9885-5a13-4abd-9c77-433dcd38b8fd_-browser-action","sponsorblocker_ajay_app-browser-action","ublock0_raymondhill_net-browser-action","_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action","wayback_machine_mozilla_org-browser-action","zotero_chnm_gmu_edu-browser-action"],"dirtyAreaCache":["nav-bar","vertical-tabs","unified-extensions-area","TabsToolbar"],"currentVersion":22,"newElementCount":5}
+          '';
         in
         {
-          "general.autoScroll" = true; # Enable auto scroll
+          # Enable features
+          ## Enable auto scroll
+          "general.autoScroll" = true;
+          ## Enable ability to play DRM controlled content
+          "media.eme.enabled" = true;
+          # Enable auto translation of languages
+          "browser.translations.alwaysTranslateLanguages" = alwaysTranslateLanguages;
 
-          "extensions.pocket.enabled" = false; # Disable pocket
-          "extensions.formautofill.creditCards.enabled" = false; # Disable autofill credit cards
-
-          # Disable firefox view
+          # Disable Features
+          ## Disable firefox view
           "browser.tabs.firefox-view" = false;
-          "browser.tabs.firefox-view-next" = false;
-          "browser.tabs.firefox-view-newIcon" = false;
-          "browser.tabs.tabmanager.enabled" = false; # Disable tab manager
+          ## Disable search suggestions
+          "browser.search.suggest.enabled" = false;
+          "browser.urlbar.suggest.quicksuggest.nonsponsored" = false;
+          "browser.urlbar.suggest.quicksuggest.sponsored" = false;
+          ## Disable pocket
+          "extensions.pocket.enabled" = false;
+          ## Disable autofill credit cards
+          "extensions.formautofill.creditCards.enabled" = false;
+          ## Disable Firefox accounts
+          "identity.fxaccounts.enabled" = false;
+          ## Disable desktop notifications by default
+          "permissions.default.desktop-notification" = 2;
+          ## Disable "ask to save passwords"
+          "signon.rememberSignons" = false;
+          ## Disable about:config warning
+          "browser.aboutConfig.showWarning" = false;
+          ## Disable about welcome
+          "browser.aboutwelcome.enabled" = false;
+          ## Disable containers
+          "privacy.userContext.enabled" = true;
 
-          "browser.aboutwelcome.enabled" = false; # Disable about welcome
-          "browser.aboutConfig.showWarning" = false; # Disable about config warning
+          # Customizations
+          ## General
           "browser.toolbars.bookmarks.visibility" = "newtab"; # Only show toolbar on new tab
+          "browser.startup.page" = 3; # Open previous windows and tabs
           "browser.contentblocking.category" = "strict"; # Content blocking strict
-          "browser.search.suggest.enabled" = false; # Disable search suggestions
-          "browser.discovery.containers.enabled" = false; # Disable containers
-          "browser.translations.alwaysTranslateLanguages" = alwaysTranslateLanguages; # Always translate these languages automatically
-
+          "browser.newtabpage.activity-stream.default.sites" = "";
+          "browser.newtabpage.blocked" = newTabPageBlocked; # Remove the default pinned websites from the new tab page (appears in search)
+          "browser.uiCustomization.state" = uiCustomization; # Save UI customizations
+          ## Sidebar
+          "sidebar.verticalTabs" = false;
+          "sidebar.revamp" = false;
+          "sidebar.main.tools" = "history,bookmarks";
+          ## New Tab Page
           "browser.newtabpage.activity-stream.showSearch" = false; # Don't show search on new tab page
           "browser.newtabpage.activity-stream.feeds.topsites" = false; # Disable new tab page top sites
           "browser.newtabpage.activity-stream.feeds.section.topstories" = false; # Disable new tab page recommended by pocket
           "browser.newtabpage.activity-stream.showSponsored" = false; # Disable new tab page sponsored
           "browser.newtabpage.activity-stream.showSponsoredTopSites" = false; # Disable new tab page sponsored top sites
-          "browser.newtabpage.blocked" = newTabPageBlocked; # Remove the default pinned websites from the new tab page (appears in search)
-          "browser.uiCustomization.state" = uiCustomizationState; # Save UI customizations
-
-          "privacy.donottrackheader.enabled" = true; # Always send do not track header
+          "browser.newtabpage.activity-stream.newtabWallpapers.wallpaper" = "solid-color-picker-${base}"; # Set wallpaper
+          ## Privacy
+          "privacy.globalprivacycontrol.enabled" = true; # Tell websites not to sell or share my data
           "privacy.history.custom" = true; # Custom history settings
           "privacy.clearOnShutdown.history" = true; # Clear history on shutdown
           "privacy.clearOnShutdown.sessions" = false; # Don't clear sessions on shutdown
           "privacy.clearOnShutdown.cache" = false; # Don't clear cache on shutdown
           "privacy.clearOnShutdown.cookies" = false; # Don't clear cookies on shutdown
           "privacy.sanitize.sanitizeOnShutdown" = true; # Clear on shutdown
-
-          "identity.fxaccounts.enabled" = false; # Disable Firefox accounts
-
+          ## HTTPS
           "dom.security.https_only_mode" = true; # Enable HTTPS only mode
           "dom.security.https_only_mode_ever_enabled" = true; # Always enable HTTPS only mode
-
-          "permissions.default.desktop-notification" = 2; # Disable desktop notifications by default
-
-          "media.eme.enabled" = true; # Play DRM controlled content
-
-          "datareporting.healthreport.uploadEnabled" = false; # Disable health report
-
+          ## Misc
           "app.shield.optoutstudies.enabled" = false; # Opt out of studies
-
-          "signon.rememberSignons" = false; # Don't ask to save passwords
-
+          "datareporting.healthreport.uploadEnabled" = false; # Disable health report
           "accessibility.typeaheadfind.enablesound" = false; # Disable sound effect on failed "Find in page"
         };
 
