@@ -1,9 +1,10 @@
-{ lib
-, config
-, pkgs
-, host
-, globals
-, ...
+{
+  lib,
+  config,
+  pkgs,
+  host,
+  globals,
+  ...
 }:
 
 {
@@ -58,7 +59,7 @@
       wlogout = "${pkgs.wlogout}/bin/wlogout";
       waybar = "${pkgs.waybar}/bin/waybar";
 
-      firefox = "${pkgs.firefox}/bin/firefox";
+      librewolf = "${pkgs.librewolf}/bin/librewolf";
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
       spotify = "${pkgs.spotify}/bin/spotify";
       miru = "${pkgs.miru}/bin/miru";
@@ -148,7 +149,7 @@
           }
         ];
         gaps.smartBorders = "on";
-        bars = [{ command = waybar; }];
+        bars = [ { command = waybar; } ];
         input = {
           "*" = {
             xkb_layout = "gb";
@@ -285,7 +286,7 @@
 
           "${mod}+Return" = "exec ${kitty}"; # Terminal
 
-          "${mod}+w" = "exec ${firefox}"; # Web browser
+          "${mod}+w" = "exec ${librewolf}"; # Web browser
           "${mod}+a" = "exec ${pavucontrol}"; # Audio manager
           "${mod}+v" = "exec mpv"; # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
           "${mod}+m" = "exec ${spotify}"; # Music player

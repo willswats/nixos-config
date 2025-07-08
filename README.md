@@ -131,7 +131,7 @@ rm ~/.bash_history
 ### Utilities
 
 1. [Dropbox](./docs/utilities/dropbox.md)
-2. [Firefox](./docs/utilities/firefox.md)
+2. [LibreWolf](./docs/utilities/librewolf.md)
 3. [GPG](./docs/utilities/gpg.md)
 4. [virt-manager](./docs/utilities/virt-manager.md)
 

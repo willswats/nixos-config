@@ -1,7 +1,8 @@
-{ pkgs
-, globals
-, host
-, ...
+{
+  pkgs,
+  globals,
+  host,
+  ...
 }:
 
 {
@@ -48,7 +49,7 @@
       wlogout = "${pkgs.wlogout}/bin/wlogout";
       waybar = "${pkgs.waybar}/bin/waybar";
 
-      firefox = "${pkgs.firefox}/bin/firefox";
+      librewolf = "${pkgs.librewolf}/bin/librewolf";
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
       spotify = "${pkgs.spotify}/bin/spotify";
       miru = "${pkgs.miru}/bin/miru";
@@ -167,8 +168,8 @@
           "float, class:yad"
           # gamescope
           "float, class:gamescope"
-          # Firefox
-          "suppressevent maximize, class:firefox" # Fix Firefox maximizing certain windows (extensions)
+          # librewolf
+          "suppressevent maximize, class:librewolf" # Fix librewolf maximizing certain windows (extensions)
           # Godot
           "tile, class:Godot" # Fix Godot starting as float
           # MPV
@@ -220,7 +221,7 @@
 
           "$mod, return, exec, ${kitty}"
 
-          "$mod, w, exec, ${firefox}" # Web browser
+          "$mod, w, exec, ${librewolf}" # Web browser
           "$mod, a, exec, ${pavucontrol}" # Audio manager
           "$mod, v, exec, mpv" # Video player (not specifying the binary as it doesn't load plugins in the nix-store)
           "$mod, m, exec, ${spotify}" # Music player
