@@ -141,9 +141,10 @@
           "privacy.clearOnShutdown_v2.cookiesAndStorage" = false;
           "privacy.clearOnShutdown_v2.sessions" = false;
           "privacy.sanitize.sanitizeOnShutdown" = true;
-          ## HTTPS
+          ## Security
           "dom.security.https_only_mode" = true; # Enable HTTPS only mode
           "dom.security.https_only_mode_ever_enabled" = true; # Always enable HTTPS only mode
+          "security.ssl.require_safe_negotiation" = false; # https://librewolf.net/docs/faq/#im-getting-the-ssl_error_unsafe_negotiation-error-what-can-i-do
           ## Misc
           "app.shield.optoutstudies.enabled" = false; # Opt out of studies
           "datareporting.healthreport.uploadEnabled" = false; # Disable health report
