@@ -166,12 +166,6 @@
           "MDN"
         ];
         engines = {
-          # Defaults
-          "ddg-lite".metaData.hidden = true;
-          "metager".metaData.hidden = true;
-          "mojeek".metaData.hidden = true;
-          "searxng".metaData.hidden = true;
-          "startpage".metaData.hidden = true;
           # Custom
           "Dictionary" = {
             urls = [ { template = "https://www.dictionary.com/browse/{searchTerms}"; } ];
