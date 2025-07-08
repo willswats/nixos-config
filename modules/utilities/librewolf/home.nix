@@ -59,8 +59,6 @@
         # Websites
         ## YouTube
         youtube-alternative-switch
-        sponsorblock
-        return-youtube-dislikes
         ## Wayback Machine
         wayback-machine
         ## nyaa.si
