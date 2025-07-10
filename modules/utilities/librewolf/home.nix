@@ -377,8 +377,8 @@
                     url = "https://app.element.io/";
                   }
                   {
-                    name = "lemmy.ml";
-                    url = "https://lemmy.ml";
+                    name = "feddit.uk";
+                    url = "https://feddit.uk/";
                   }
                   {
                     name = "progamming.dev";
