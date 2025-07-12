@@ -66,6 +66,7 @@
       dropbox
       zotero
       resources
+      pixelorama
       ## CLI
       wget
       ffmpeg
