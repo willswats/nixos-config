@@ -35,7 +35,9 @@
     lutris
     prismlauncher
     # Games
-    inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin
+    (inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin.override {
+      pipewire_latency = "256/48000";
+    })
     tetrio-desktop
     sm64coopdx
   ];
