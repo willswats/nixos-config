@@ -323,8 +323,8 @@
                     url = "https://radiomii.com/";
                   }
                   {
-                    name = "Google Play Books";
-                    url = "https://play.google.com/books";
+                    name = "BookFusion";
+                    url = "https://www.bookfusion.com/bookshelf";
                   }
                 ];
               }
