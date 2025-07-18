@@ -27,14 +27,10 @@
     bind alt sm_teleport
     bindtoggle - voice_enable
 
-    bind g "say /nvgs"
-    bind h "say /m"
-    bind j "say /mrank"
-    bind k "say /rank"
-
-    bind f1 voice_menu_1
-    bind f2 voice_menu_2
-    bind f3 voice_menu_3
+    bind f1 "say /m"
+    bind f2 "say /mrank"
+    bind f3 "say /rank"
+    bind f4 "say /nvgs"
 
     # -- SETTINGS --
 
