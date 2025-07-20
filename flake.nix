@@ -115,6 +115,7 @@
                 catppuccin.nixosModules.catppuccin
                 slippi.nixosModules.default
                 inputs.nix-gaming.nixosModules.pipewireLowLatency
+                inputs.nix-gaming.nixosModules.platformOptimizations
                 {
                   home-manager = {
                     useGlobalPkgs = true;

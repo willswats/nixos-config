@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
 {
+  programs.steam.platformOptimizations.enable = true;
 
   programs.steam = {
     enable = true;
