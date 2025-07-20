@@ -5,23 +5,23 @@
     ''
       echo "autoexec.cfg executed"
 
-      # -- UNBIND DEFAULTS --
+      // -- UNBIND DEFAULTS --
 
-      # Radio message
+      // Radio message
       unbind z 
-      # Chat Wheel 1
+      // Chat Wheel 1
       unbind c 
-      # Chat Wheel 2
+      // Chat Wheel 2
       unbind v 
-      # Player Ping
+      // Player Ping
       unbind mouse3 
-      # Use mic
+      // Use mic
       unbind mouse4 
-      # Change weapons
+      // Change weapons
       unbind mwheelup
       unbind mwheeldown
 
-      # -- BINDS --
+      // -- BINDS --
 
       bind mwheeldown +jump
       bind mwheelup +jump   
@@ -33,9 +33,9 @@
       bind - voice_modenable_toggle
       bind / "exec nade"
 
-      # -- SETTINGS --
+      // -- SETTINGS --
 
-      # Music
+      // Music
       snd_menumusic_volume 0
       snd_roundstart_volume 0
       snd_roundaction_volume 0
@@ -46,25 +46,25 @@
       snd_deathcamera_volume 0
       snd_mute_mvp_music_live_players true
 
-      # Game
+      // Game
       con_enable true
       cl_debounce_zoom false # hold to scope in twice
       mm_dedicated_search_maxping 50
 
-      # Hud
+      // Hud
       cl_hud_color 9
 
-      # Radar
+      // Radar
       cl_radar_scale 0.25
 
-      # Viewmodel
+      // Viewmodel
       viewmodel_fov	68
       viewmodel_offset_x 0
       viewmodel_offset_y 2
       viewmodel_offset_z -2
       viewmodel_presetpos	0
 
-      # Crosshair
+      // Crosshair
       cl_crosshair_recoil false
       cl_crosshair_friendly_warning 0
       cl_crosshair_drawoutline 1

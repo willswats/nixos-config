@@ -4,12 +4,12 @@
   home.file.".steam/steam/steamapps/common/Counter-Strike Source/cstrike/cfg/autoexec.cfg".text = ''
     echo "autoexec.cfg executed"
 
-    # -- UNBIND DEFAULTS --
+    // -- UNBIND DEFAULTS --
 
     unbind mwheelup
     unbind mwheeldown
 
-    # -- BINDS --
+    // -- BINDS --
     alias hidechat "hud_saytext_time 0; bind = showchat"
     alias showchat "hud_saytext_time 500; bind = hidechat"
     bind = showchat
@@ -32,9 +32,9 @@
     bind f3 "say /rank"
     bind f4 "say /nvgs"
 
-    # -- SETTINGS --
+    // -- SETTINGS --
 
-    # Game
+    // Game
     cl_yawspeed 230
 
     host_writeconfig

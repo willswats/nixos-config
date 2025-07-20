@@ -2,21 +2,24 @@
 
 {
   home.file.".steam/steam/steamapps/common/GarrysMod/garrysmod/cfg/autoexec.cfg".text = ''
-    # -- UNBIND DEFAULTS --
-    # Context menu
+    echo "autoexec.cfg executed"
+
+    // -- UNBIND DEFAULTS --
+    // Context menu
     unbind c
 
-    # Voice chat
+
+    // Voice chat
     unbind k 
 
-    # Noclip
+    // Noclip
     unbind v 
 
-    # Change weapons
+    // Change weapons
     unbind mwheelup
     unbind mwheeldown
 
-    # -- BINDS --
+    // -- BINDS --
 
     # Switch mouse wheel between jump and change weapons
     alias mwheelinv "bind mwheelup invnext; bind mwheeldown invprev; bind / mwheeljump"
@@ -42,7 +45,7 @@
     bind [ kill
     bind x noclip
 
-    # -- SETTINGS --
+    // -- SETTINGS --
     cl_yawspeed 230
     physgun_wheelspeed 50
     npc_citizen_auto_player_squad 0
