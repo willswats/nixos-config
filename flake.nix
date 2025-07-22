@@ -22,17 +22,21 @@
 
     slippi.url = "github:lytedev/slippi-nix";
     nix-gaming.url = "github:fufexan/nix-gaming";
+    bsp-casefolding-workaround.url = "github:SeraphimRP/bsp-casefolding-workaround-nix/stable";
   };
 
   outputs =
-    { nixpkgs
-    , nixos-hardware
-    , home-manager
-    , nur
-    , nixvim
-    , catppuccin
-    , slippi
-    , ...
+    {
+      nixpkgs,
+      nixos-hardware,
+      home-manager,
+      nur,
+      nixvim,
+      catppuccin,
+      slippi,
+      nix-gaming,
+      bsp-casefolding-workaround,
+      ...
     }@inputs:
     {
       nixosConfigurations =
@@ -114,8 +118,8 @@
                 nur.modules.nixos.default
                 catppuccin.nixosModules.catppuccin
                 slippi.nixosModules.default
-                inputs.nix-gaming.nixosModules.pipewireLowLatency
-                inputs.nix-gaming.nixosModules.platformOptimizations
+                nix-gaming.nixosModules.pipewireLowLatency
+                nix-gaming.nixosModules.platformOptimizations
                 {
                   home-manager = {
                     useGlobalPkgs = true;
@@ -129,6 +133,7 @@
                       nixvim.homeManagerModules.nixvim
                       catppuccin.homeModules.catppuccin
                       slippi.homeManagerModules.default
+                      bsp-casefolding-workaround.nixosModules.default
                     ];
                   };
                 }

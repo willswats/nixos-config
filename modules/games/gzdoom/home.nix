@@ -1,7 +1,8 @@
-{ pkgs
-, globals
-, host
-, ...
+{
+  pkgs,
+  globals,
+  host,
+  ...
 }:
 
 {

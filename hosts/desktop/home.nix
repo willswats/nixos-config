@@ -1,7 +1,8 @@
-{ pkgs
-, host
-, inputs
-, ...
+{
+  pkgs,
+  host,
+  inputs,
+  ...
 }:
 
 {
