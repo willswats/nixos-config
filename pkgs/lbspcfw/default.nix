@@ -1,15 +1,15 @@
-{ fetchFromGitHub
-, stdenvNoCC
-, lib
-, buildFHSEnv
-, curl
-, inotify-tools
-, libnotify
-, parallel
-, rsync
-, unzip
-, vpkedit
-,
+{
+  fetchFromGitHub,
+  stdenvNoCC,
+  lib,
+  buildFHSEnv,
+  curl,
+  inotify-tools,
+  libnotify,
+  parallel,
+  rsync,
+  unzip,
+  vpkedit,
 }:
 
 let
@@ -38,8 +38,8 @@ let
       substituteInPlace lbspcfw.sh \
         --replace 'declare path_script="$(dirname "$(realpath "$0")")"' \
                   'declare path_script="$(dirname "$(realpath "$0")")"
-      declare state_dir="''${LBSFCFW_STATE_DIR:-''${XDG_STATE_HOME:-$HOME/.local/state}/lbspcfw}"
-      mkdir -p "$state_dir"'
+                  declare state_dir="''${LBSFCFW_STATE_DIR:-''${XDG_STATE_HOME:-$HOME/.local/state}/lbspcfw}"
+                  mkdir -p "$state_dir"'
 
       # Redirect each writable path to state_dir
       for path in bsp cfg data hash log sync; do
@@ -47,10 +47,16 @@ let
           --replace "path_$path=\"\$path_script" "path_$path=\"\$state_dir"
       done
 
+      # Replace the vpkedit path with the nixpkgs one
+      substituteInPlace mod/process.sh \
+        --replace 'export path_vpkcli="''${command_run[vpkeditcli]}"' \
+                  'export path_vpkcli="${vpkedit}/bin/vpkeditcli"'
+
       # Don't checkvpk or checkupdate
       substituteInPlace lbspcfw.sh \
         --replace "checkupdate" "" \
         --replace "checkvpk" ""
+
     '';
   };
 
