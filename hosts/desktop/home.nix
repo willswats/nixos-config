@@ -1,8 +1,7 @@
-{
-  pkgs,
-  host,
-  inputs,
-  ...
+{ pkgs
+, host
+, inputs
+, ...
 }:
 
 {
@@ -29,6 +28,7 @@
     alsa-scarlett-gui
     mangohud
     protontricks
+    (callPackage ../../pkgs/bsp-extractor { })
     # Emulators
     rpcs3
     pcsx2
