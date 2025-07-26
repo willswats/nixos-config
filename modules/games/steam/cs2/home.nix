@@ -66,7 +66,7 @@
 
       // Crosshair
       cl_crosshairstyle 4
-      cl_crosshairsize 2.5
+      cl_crosshairsize 1.5
       cl_crosshairthickness 1.5
       cl_crosshairgap -6.5
       cl_crosshair_drawoutline 0
