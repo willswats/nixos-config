@@ -45,6 +45,7 @@
     ../modules/utilities/streamlink-twitch-gui/home.nix
     ../modules/utilities/zathura/home.nix
     ../modules/utilities/hakuneko/home.nix
+    ../modules/utilities/beets/home.nix
     ../modules/servers/mpd/home.nix
   ];
 
