@@ -1,8 +1,7 @@
-{
-  pkgs,
-  globals,
-  host,
-  ...
+{ pkgs
+, globals
+, host
+, ...
 }:
 
 {
@@ -51,8 +50,9 @@
 
       librewolf = "${pkgs.librewolf}/bin/librewolf";
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
-      spotify = "${pkgs.spotify}/bin/spotify";
       miru = "${pkgs.miru}/bin/miru";
+      spotify = "${pkgs.spotify}/bin/spotify";
+      euphonica = "${pkgs.euphonica}/bin/euphonica";
 
       kitty = "${pkgs.kitty}/bin/kitty";
       yazi = "${pkgs.yazi}/bin/yazi";
@@ -223,9 +223,10 @@
 
           "$mod, w, exec, ${librewolf}" # Web browser
           "$mod, a, exec, ${pavucontrol}" # Audio manager
-          "$mod, v, exec, mpv" # Video player (not specifying the binary as it doesn't load plugins in the nix-store)
-          "$mod, m, exec, ${spotify}" # Music player
-          "$mod shift, m, exec, ${miru}" # Miru
+          "$mod, v, exec, mpv" # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
+          "$mod shift, v, exec, ${miru}" # Streaming media player
+          "$mod, m, exec, ${euphonica}" # Local music player
+          "$mod shift, m, exec, ${spotify}" # Streaming music player
 
           "$mod, e, exec, ${kitty} ${yazi}" # File explorer
           "$mod, t, exec, ${kitty} nvim" # Text editor (not specifying the binary as it doesn't load my config)

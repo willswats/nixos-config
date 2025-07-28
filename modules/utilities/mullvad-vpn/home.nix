@@ -36,13 +36,13 @@ in
     in
     lib.mkIf config.wayland.windowManager.sway.enable {
       keybindings = lib.mkOptionDefault {
-        "${mod}+Shift+v" = "exec ${mullvadToggle}";
+        "${mod}+Shift+p" = "exec ${mullvadToggle}";
       };
     };
 
   wayland.windowManager.hyprland.settings.bind =
     lib.mkIf config.wayland.windowManager.hyprland.enable
       [
-        "$mod shift, v, exec, ${mullvadToggle}"
+        "$mod shift, p, exec, ${mullvadToggle}"
       ];
 }
