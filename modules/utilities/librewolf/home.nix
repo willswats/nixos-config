@@ -348,6 +348,10 @@
                     url = "https://infinitebacklog.net/";
                   }
                   {
+                    name = "ListenBrainz";
+                    url = "https://listenbrainz.org/";
+                  }
+                  {
                     name = "AlternativeTo";
                     url = "https://alternativeto.net/";
                   }
