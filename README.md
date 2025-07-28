@@ -135,6 +135,10 @@ rm ~/.bash_history
 3. [GPG](./docs/utilities/gpg.md)
 4. [virt-manager](./docs/utilities/virt-manager.md)
 
+### Servers
+
+1. [mpd](./docs/servers/mpd.md)
+
 ### Games
 
 1. [steam](./docs/games/steam.md)

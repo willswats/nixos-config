@@ -21,5 +21,15 @@
     notifications = true;
   };
 
+  services.mpdscribble = {
+    enable = true;
+    endpoints = {
+      "listenbrainz" = {
+        username = "XenBad";
+        passwordFile = "/run/secrets/listenbrainz_password";
+      };
+    };
+  };
+
   services.mpd-discord-rpc.enable = true;
 }
