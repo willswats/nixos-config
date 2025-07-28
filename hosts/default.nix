@@ -1,6 +1,7 @@
 { pkgs
 , host
 , globals
+, config
 , ...
 }:
 
@@ -28,6 +29,7 @@ in
     ../modules/utilities/virt-manager
     ../modules/utilities/wireshark
     ../modules/utilities/gpu-screen-recorder
+    ../modules/servers/mpd
   ];
 
   # 6.10 is needed for Vocaster One drivers

@@ -1,4 +1,7 @@
-{ pkgs, globals, ... }:
+{ pkgs
+, globals
+, ...
+}:
 
 {
   imports = [
@@ -42,6 +45,7 @@
     ../modules/utilities/streamlink-twitch-gui/home.nix
     ../modules/utilities/zathura/home.nix
     ../modules/utilities/hakuneko/home.nix
+    ../modules/servers/mpd/home.nix
   ];
 
   programs.home-manager.enable = true;
@@ -63,6 +67,7 @@
       grayjay
       miru
       spotify
+      euphonica
       dropbox
       zotero
       resources
@@ -76,6 +81,7 @@
       appimage-run
       trash-cli
       yt-dlp
+      spotdl
       woeusb
       vulkan-tools
       distrobox
