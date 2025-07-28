@@ -15,4 +15,11 @@
         }
       '';
     };
+
+  services.mpdris2 = {
+    enable = true;
+    notifications = true;
+  };
+
+  services.mpd-discord-rpc.enable = true;
 }
