@@ -7,7 +7,7 @@
     in
     {
       enable = true;
-      musicDirectory = "${driveDir}/Entertainment/Music";
+      musicDirectory = "${driveDir}/Entertainment/Music/Albums";
       extraConfig = ''
         audio_output {
           type "pipewire"
