@@ -1,7 +1,14 @@
-{ pkgs, host, ... }:
+{ pkgs
+, host
+, globals
+, ...
+}:
 
 {
-  home.packages = with pkgs; [ mpc ];
+  home.packages = with pkgs; [
+    mpc
+    mpris-scrobbler
+  ];
 
   services.mpd =
     let
@@ -28,7 +35,7 @@
     endpoints = {
       "listenbrainz" = {
         username = "XenBad";
-        passwordFile = "/run/secrets/listenbrainz_password";
+        passwordFile = "${globals.directories.home}/.local/share/mpris-scrobbler/listenbrainz-token";
       };
     };
   };
