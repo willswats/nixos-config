@@ -1,7 +1,8 @@
-{ pkgs
-, globals
-, host
-, ...
+{
+  pkgs,
+  globals,
+  host,
+  ...
 }:
 
 {
@@ -22,6 +23,7 @@
         desktopHostName = globals.hostNames.desktop;
         laptopHostName = globals.hostNames.laptop;
 
+        ytDlp = "${pkgs.yt-dlp}/bin/yt-dlp";
         notifySend = "${pkgs.libnotify}/bin/notify-send";
         hostname = "${pkgs.hostname}/bin/hostname";
 
@@ -69,6 +71,10 @@
 
         # gh
         ghicc = ghIssueCloseCommit.outPath;
+
+        # yt-dlp
+        dlmp3 = "${ytDlp} -x --audio-format mp3";
+        dlmp4 = "${ytDlp} -f mp4";
 
         # Nix
         nix-shell = "nix-shell --command fish";
