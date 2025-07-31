@@ -1,6 +1,8 @@
-{ host, ... }:
+{ pkgs, host, ... }:
 
 {
+  home.packages = with pkgs; [ mpc ];
+
   services.mpd =
     let
       driveDir = host.directories.drive;
