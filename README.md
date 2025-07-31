@@ -142,9 +142,8 @@ rm ~/.bash_history
 ### Games
 
 1. [steam](./docs/games/steam.md)
-2. [CS2](./docs/games/cs2.md)
-3. [TF2](./docs/games/tf2.md)
-4. [osu](./docs/games/osu.md)
+2. [TF2](./docs/games/tf2.md)
+3. [osu](./docs/games/osu.md)
 
 ## Acknowledgements
 
