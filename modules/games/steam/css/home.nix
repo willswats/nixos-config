@@ -17,13 +17,18 @@
 
     bind mwheeldown +jump
     bind mwheelup +jump
-    bind mouse5 +left
-    bind mouse4 +right
+
+    bind q +left
+    bind e +right
+    bind f +use
+
+    bind mouse4 "impulse 100"
 
     bind z "say /specbot"
     bind x "say /noclip"
     bind c "say /r"
     bind v +voicerecord
+
     bind alt sm_teleport
     bindtoggle - voice_enable
 

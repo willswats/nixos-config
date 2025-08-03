@@ -20,15 +20,19 @@
 
     bind mwheeldown +jump
     bind mwheelup +jump      
-    bind mouse5 +left
-    bind mouse4 +right
+
+    bind q +left
+    bind e +right
+
+    bind f +use
 
     alias +chargejump "+jump; +attack2"
     alias -chargejump "-jump; -attack2"
 
     bind x noclip
-    bind c "say !r"
+    bind c lastinv
     bind v +voicerecord
+
     bind alt "+chargejump"
     bindtoggle - voice_enable
 

@@ -8,7 +8,6 @@
     // Context menu
     unbind c
 
-
     // Voice chat
     unbind k 
 
@@ -27,23 +26,27 @@
     bind / mwheeljump 
     mwheeljump
 
-    alias mousebuttonslean "bind mouse4 +leanleft; bind mouse5 +leanright; bind . mousebuttonslook"
-    alias mousebuttonslook "bind mouse4 +right; bind mouse5 +left; bind . mousebuttonslean"
-    bind . mousebuttonslook 
-    mousebuttonslook
+    alias lean "bind q +leanleft; bind e +leanright; bind . mousebuttonslook"
+    alias rotate "bind q +left; bind e +right; bind . mousebuttonslean"
+    bind . rotate
+    rotate 
+
+    bind mouse4 "impulse 100"
+
+    bind f +use
+
+    bind g +menu
+    bind h +menu_context
 
     bind , +drop
 
-    bind mouse4 +right
-    bind mouse5 +left
-
-    bind c "say !r"
+    bind x noclip
+    bind c lastinv
     bind v +voicerecord
-    bind g +menu_context
+
     bindtoggle - voice_enable
 
     bind [ kill
-    bind x noclip
 
     // -- SETTINGS --
     cl_yawspeed 230
