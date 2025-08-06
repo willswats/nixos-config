@@ -18,6 +18,11 @@
 
     // -- BINDS --
 
+    alias hidechat "hud_saytext_time 0; bind = showchat"
+    alias showchat "hud_saytext_time 500; bind = hidechat"
+    bind = showchat
+    showchat
+
     bind mwheeldown +jump
     bind mwheelup +jump      
     bind mouse5 +left
@@ -29,7 +34,9 @@
     bind x noclip
     bind c "say !r"
     bind v +voicerecord
+
     bind alt "+chargejump"
+
     bindtoggle - voice_enable
 
     bind [ kill

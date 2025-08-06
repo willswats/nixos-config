@@ -29,8 +29,11 @@
       bind x noclip      
       bind c "say !r"
       bind v +voicerecord
+
       bind alt player_ping
+
       bind - voice_modenable_toggle
+
       bind / "exec nade"
 
       // -- SETTINGS --

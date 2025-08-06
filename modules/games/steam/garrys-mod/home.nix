@@ -21,7 +21,6 @@
 
     // -- BINDS --
 
-    # Switch mouse wheel between jump and change weapons
     alias mwheelinv "bind mwheelup invnext; bind mwheeldown invprev; bind / mwheeljump"
     alias mwheeljump "bind mwheelup +jump; bind mwheeldown +jump; bind / mwheelinv"
     bind / mwheeljump 
@@ -32,18 +31,25 @@
     bind . mousebuttonslook 
     mousebuttonslook
 
+    alias hidechat "hud_saytext_time 0; bind = showchat"
+    alias showchat "hud_saytext_time 500; bind = hidechat"
+    bind = showchat
+    showchat
+
     bind , +drop
 
-    bind mouse4 +right
-    bind mouse5 +left
+    bind q lastinv
 
+    bind g +menu
+    bind h +menu_context
+
+    bind x noclip
     bind c "say !r"
     bind v +voicerecord
-    bind g +menu_context
+
     bindtoggle - voice_enable
 
     bind [ kill
-    bind x noclip
 
     // -- SETTINGS --
     cl_yawspeed 230

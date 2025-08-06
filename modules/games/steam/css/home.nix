@@ -10,6 +10,7 @@
     unbind mwheeldown
 
     // -- BINDS --
+
     alias hidechat "hud_saytext_time 0; bind = showchat"
     alias showchat "hud_saytext_time 500; bind = hidechat"
     bind = showchat
@@ -24,7 +25,9 @@
     bind x "say /noclip"
     bind c "say /r"
     bind v +voicerecord
+
     bind alt sm_teleport
+
     bindtoggle - voice_enable
 
     bind f1 "say /m"
