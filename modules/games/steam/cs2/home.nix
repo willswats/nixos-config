@@ -13,8 +13,6 @@
       unbind c 
       // Chat Wheel 2
       unbind v 
-      // Switch viewmodel side
-      unbind h
       // Player Ping
       unbind mouse3 
       // Use mic
@@ -27,18 +25,11 @@
 
       bind mwheeldown +jump
       bind mwheelup +jump   
-
-      bind mouse4 slot12 // Health vial
-      bind mouse5 player_ping
-
-      bind q +turnleft
-      bind e +turnright
-      bind f +use
         
       bind x noclip      
-      bind c lastinv
+      bind c "say !r"
       bind v +voicerecord
-
+      bind alt player_ping
       bind - voice_modenable_toggle
       bind / "exec nade"
 
