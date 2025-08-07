@@ -27,7 +27,7 @@
     mwheeljump
 
     alias mousebuttonslean "bind mouse4 +leanleft; bind mouse5 +leanright; bind . mousebuttonslook"
-    alias mousebuttonslook "bind mouse4 +right; bind mouse5 +left; bind . mousebuttonslean"
+    alias mousebuttonslook " bind mouse4 +left; bind mouse5 +right; bind . mousebuttonslean"
     bind . mousebuttonslook 
     mousebuttonslook
 

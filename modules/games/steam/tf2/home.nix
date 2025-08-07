@@ -25,8 +25,8 @@
 
     bind mwheeldown +jump
     bind mwheelup +jump      
-    bind mouse5 +left
-    bind mouse4 +right
+    bind mouse4 +left
+    bind mouse5 +right
 
     alias +chargejump "+jump; +attack2"
     alias -chargejump "-jump; -attack2"

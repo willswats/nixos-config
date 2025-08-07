@@ -18,8 +18,8 @@
 
     bind mwheeldown +jump
     bind mwheelup +jump
-    bind mouse5 +left
-    bind mouse4 +right
+    bind mouse4 +left
+    bind mouse5 +right
 
     bind z "say /specbot"
     bind x "say /noclip"
