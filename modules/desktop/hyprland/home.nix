@@ -64,6 +64,7 @@
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
+      sway-audio-idle-inhibit = "${pkgs.sway-audio-idle-inhibit}/bin/sway-audio-idle-inhibit";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
@@ -214,6 +215,7 @@
           "${dropbox}"
           # Misc
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
+          "${sway-audio-idle-inhibit}"
         ];
 
         "$mod" = "SUPER";

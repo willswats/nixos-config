@@ -75,6 +75,7 @@
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
       autotiling = "${pkgs.autotiling}/bin/autotiling";
+      sway-audio-idle-inhibit = "${pkgs.sway-audio-idle-inhibit}/bin/sway-audio-idle-inhibit";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
@@ -342,12 +343,17 @@
             command = "${dropbox}";
             always = false;
           }
+          # Misc
           {
             command = "${xrandr} --output ${monitorCenter} --primary"; # Ensures that xwindows (especially steam games) use the center monitor
             always = false;
           }
           {
             command = "${autotiling}";
+            always = false;
+          }
+          {
+            command = "${sway-audio-idle-inhibit}";
             always = false;
           }
         ];
