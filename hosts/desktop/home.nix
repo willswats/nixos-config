@@ -28,7 +28,6 @@
     alsa-scarlett-gui
     mangohud
     protontricks
-    (callPackage ../../pkgs/bsp-extractor { })
     # Emulators
     rpcs3
     pcsx2
