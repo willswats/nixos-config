@@ -22,21 +22,20 @@
 
     slippi.url = "github:lytedev/slippi-nix";
     nix-gaming.url = "github:fufexan/nix-gaming";
-    bsp-casefolding-workaround.url = "github:SeraphimRP/bsp-casefolding-workaround-nix/stable";
+    bsp-casefolding-workaround.url = "github:SeraphimRP/bsp-casefolding-workaround-nix";
   };
 
   outputs =
-    {
-      nixpkgs,
-      nixos-hardware,
-      home-manager,
-      nur,
-      nixvim,
-      catppuccin,
-      slippi,
-      nix-gaming,
-      bsp-casefolding-workaround,
-      ...
+    { nixpkgs
+    , nixos-hardware
+    , home-manager
+    , nur
+    , nixvim
+    , catppuccin
+    , slippi
+    , nix-gaming
+    , bsp-casefolding-workaround
+    , ...
     }@inputs:
     {
       nixosConfigurations =
@@ -130,7 +129,7 @@
                     users.will.imports = [
                       ./hosts/desktop/home.nix
                       nur.modules.homeManager.default
-                      nixvim.homeManagerModules.nixvim
+                      nixvim.homeModules.nixvim
                       catppuccin.homeModules.catppuccin
                       slippi.homeManagerModules.default
                       bsp-casefolding-workaround.nixosModules.default
@@ -173,7 +172,7 @@
                     users.${user}.imports = [
                       ./hosts/home.nix
                       nur.modules.homeManager.default
-                      nixvim.homeManagerModules.nixvim
+                      nixvim.homeModules.nixvim
                       catppuccin.homeModules.catppuccin
                       inputs.nix-gaming.nixosModules.pipewireLowLatency
                     ];

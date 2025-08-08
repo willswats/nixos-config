@@ -1,11 +1,12 @@
 { pkgs, config, ... }:
 
-let icons = import ../icons.nix;
-in {
-  home.packages = with pkgs;
-    [
-      trash-cli # Removal command in nvim-tree
-    ];
+let
+  icons = import ../icons.nix;
+in
+{
+  home.packages = with pkgs; [
+    trash-cli # Removal command in nvim-tree
+  ];
 
   programs.nixvim = {
     keymaps =
@@ -14,7 +15,8 @@ in {
         cmd = "<CMD>";
 
         normal =
-          let mode = "n";
+          let
+            mode = "n";
           in
           [
             {
@@ -33,70 +35,71 @@ in {
 
     plugins.nvim-tree = {
       enable = true;
-      disableNetrw = false; # Don't disableNetrw (breaks gx)
-      hijackCursor = true; # Keep the cursor on the first letter of the filename
-      syncRootWithCwd =
-        true; # Changes the tree root directory on DirChanged and refreshes the tree
-      respectBufCwd = true; # Will change cwd of nvim-tree to that of new buffer’s when opening nvim-tree
-      actions.changeDir = {
-        enable = true;
-        global = true; # Use :cd instead of :lcd when changing directories
-      };
-      updateFocusedFile = {
-        enable = true;
-        updateRoot = true; # Update the root directory of the tree if the file is not under current root directory
-      };
-      trash.cmd = "trash"; # The command used to trash items
-      git.ignore = false;
-      # Set as floating
-      view = {
-        float = {
+      settings = {
+        disable_netrw = false; # Don't disableNetrw (breaks gx)
+        hijack_cursor = true; # Keep the cursor on the first letter of the filename
+        sync_root_with_cwd = true; # Changes the tree root directory on DirChanged and refreshes the tree
+        respect_buf_cwd = true; # Will change cwd of nvim-tree to that of new buffer’s when opening nvim-tree
+        actions.change_dir = {
           enable = true;
-          openWinConfig = {
-            relative = "editor";
-            border = "single";
-            width = 40;
-            height = 100000;
+          global = true; # Use :cd instead of :lcd when changing directories
+        };
+        update_focused_file = {
+          enable = true;
+          update_root = true; # Update the root directory of the tree if the file is not under current root directory
+        };
+        trash.cmd = "trash"; # The command used to trash items
+        git.ignore = false;
+        # Set as floating
+        view = {
+          float = {
+            enable = true;
+            open_win_config = {
+              relative = "editor";
+              border = "single";
+              width = 40;
+              height = 100000;
+            };
           };
         };
-      };
-      renderer = {
-        icons = {
-          glyphs = {
-            default = icons.ui.File;
-            symlink = icons.ui.FileSymlink;
-            modified = icons.ui.Circle;
-            folder = {
-              arrowClosed = icons.ui.ChevronShortDown;
-              arrowOpen = icons.ui.ChevronShortUp;
-              default = icons.ui.Folder;
-              open = icons.ui.FolderOpen;
-              empty = icons.ui.EmptyFolder;
-              emptyOpen = icons.ui.EmptyFolderOpen;
+        renderer = {
+          icons = {
+            glyphs = {
+              default = icons.ui.File;
               symlink = icons.ui.FileSymlink;
-              symlinkOpen = icons.ui.FileSymlink;
-            };
-            git = {
-              unstaged = icons.git.FileUnstaged;
-              staged = icons.git.FileStaged;
-              unmerged = icons.git.FileUnmerged;
-              renamed = icons.git.FileRenamed;
-              untracked = icons.git.FileUntracked;
-              deleted = icons.git.FileDeleted;
-              ignored = icons.git.FileIgnored;
+              modified = icons.ui.Circle;
+              folder = {
+                arrow_closed = icons.ui.ChevronShortDown;
+                arrow_open = icons.ui.ChevronShortUp;
+                default = icons.ui.Folder;
+                open = icons.ui.FolderOpen;
+                empty = icons.ui.EmptyFolder;
+                empty_open = icons.ui.EmptyFolderOpen;
+                symlink = icons.ui.FileSymlink;
+                symlink_open = icons.ui.FileSymlink;
+              };
+              git = {
+                unstaged = icons.git.FileUnstaged;
+                staged = icons.git.FileStaged;
+                unmerged = icons.git.FileUnmerged;
+                renamed = icons.git.FileRenamed;
+                untracked = icons.git.FileUntracked;
+                deleted = icons.git.FileDeleted;
+                ignored = icons.git.FileIgnored;
+              };
             };
           };
         };
-      };
-      diagnostics = {
-        enable = true;
-        showOnDirs = true;
-        showOnOpenDirs = true;
-        icons = {
-          hint = icons.diagnostics.Hint;
-          info = icons.diagnostics.Information;
-          warning = icons.diagnostics.Warning;
-          error = icons.diagnostics.Error;
+        diagnostics = {
+          enable = true;
+          show_on_dirs = true;
+          show_on_open_dirs = true;
+          icons = {
+            hint = icons.diagnostics.Hint;
+            info = icons.diagnostics.Information;
+            warning = icons.diagnostics.Warning;
+            error = icons.diagnostics.Error;
+          };
         };
       };
       # Set custom mappings
