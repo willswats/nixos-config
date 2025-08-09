@@ -101,29 +101,29 @@ in
             error = icons.diagnostics.Error;
           };
         };
-      };
-      # Set custom mappings
-      onAttach = {
-        __raw = ''
-          function(bufnr)
-            local api = require('nvim-tree.api')
+        # Set custom mappings
+        on_attach = {
+          __raw = ''
+            function(bufnr)
+              local api = require('nvim-tree.api')
 
-            local function opts(desc)
-              return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+              local function opts(desc)
+                return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+              end
+
+              api.config.mappings.default_on_attach(bufnr)
+
+              vim.keymap.set('n', 'L', api.tree.change_root_to_node, opts('CD'))
+              vim.keymap.set('n', 'l', api.node.open.edit, opts('Open'))
+              vim.keymap.set('n', 'h', api.node.navigate.parent_close, opts('Close Directory'))
+              vim.keymap.set('n', 'v', api.node.open.vertical, opts('Open: Vertical Split'))
+              vim.keymap.set('n', 'd', api.fs.trash, opts('Trash')) 
+              vim.keymap.set('n', 'c', api.fs.copy.filename, opts('Copy Name'))
+              vim.keymap.set('n', 'C', api.fs.copy.relative_path, opts('Copy Relative Path'))
+              vim.keymap.set('n', 'y', api.fs.copy.node, opts('Copy'))
             end
-
-            api.config.mappings.default_on_attach(bufnr)
-
-            vim.keymap.set('n', 'L', api.tree.change_root_to_node, opts('CD'))
-            vim.keymap.set('n', 'l', api.node.open.edit, opts('Open'))
-            vim.keymap.set('n', 'h', api.node.navigate.parent_close, opts('Close Directory'))
-            vim.keymap.set('n', 'v', api.node.open.vertical, opts('Open: Vertical Split'))
-            vim.keymap.set('n', 'd', api.fs.trash, opts('Trash')) 
-            vim.keymap.set('n', 'c', api.fs.copy.filename, opts('Copy Name'))
-            vim.keymap.set('n', 'C', api.fs.copy.relative_path, opts('Copy Relative Path'))
-            vim.keymap.set('n', 'y', api.fs.copy.node, opts('Copy'))
-          end
-        '';
+          '';
+        };
       };
     };
   };

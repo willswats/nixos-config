@@ -6,7 +6,7 @@ in
 {
   services.greetd = {
     enable = true;
-    settings.default_session.command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd ${cmd}";
+    settings.default_session.command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd ${cmd}";
   };
 
   # unlock GPG keyring on login
