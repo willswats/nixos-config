@@ -5,10 +5,11 @@
     let
       hyprlock = "${pkgs.hyprlock}/bin/hyprlock";
       hyprctl = "${pkgs.hyprland}/bin/hyprctl";
-      wpctl = "${pkgs.wireplumber}/bin/wpctl";
-      rg = "${pkgs.ripgrep}/bin/rg";
+
       # Both of these scripts check if there are no audio streams with "active"
       # Both of these scripts could be replaced, if this issues gets closed with a PR: https://github.com/hyprwm/hypridle/issues/27
+      wpctl = "${pkgs.wireplumber}/bin/wpctl";
+      rg = "${pkgs.ripgrep}/bin/rg";
       streamsActive = ''
         streams_active() {
           ${wpctl} status | ${rg} "active"
