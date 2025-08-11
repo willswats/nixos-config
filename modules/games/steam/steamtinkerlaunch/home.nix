@@ -1,7 +1,10 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ steamtinkerlaunch ];
+  home.packages = with pkgs; [
+    steamtinkerlaunch
+    winetricks
+  ];
 
   xdg.configFile."steamtinkerlaunch/default_template.conf".text = ''
     ## config Version: v14.0.20250602
