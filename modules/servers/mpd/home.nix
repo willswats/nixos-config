@@ -18,6 +18,8 @@
       enable = true;
       musicDirectory = "${driveDir}/Entertainment/Music/Albums";
       playlistDirectory = "${driveDir}/Entertainment/Music/Playlists";
+      network.listenAddress = "any";
+      network.port = 6600;
       extraConfig = ''
         audio_output {
           type "pipewire"
