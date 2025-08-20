@@ -49,6 +49,7 @@
         bitwarden
         vimium
         mal-sync
+        web-scrobbler
         libredirect
 
         # Programs
