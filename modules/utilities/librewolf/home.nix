@@ -315,6 +315,10 @@
                     url = "https://www.youtube.com/";
                   }
                   {
+                    name = "YouTube Music";
+                    url = "https://music.youtube.com";
+                  }
+                  {
                     name = "ChatReplay";
                     url = "https://chatreplay.stream/subscriptions";
                   }
