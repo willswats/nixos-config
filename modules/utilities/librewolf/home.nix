@@ -315,12 +315,16 @@
                     url = "https://www.youtube.com/";
                   }
                   {
+                    name = "ChatReplay";
+                    url = "https://chatreplay.stream/subscriptions";
+                  }
+                  {
                     name = "YouTube Music";
                     url = "https://music.youtube.com";
                   }
                   {
-                    name = "ChatReplay";
-                    url = "https://chatreplay.stream/subscriptions";
+                    name = "iBroadcast";
+                    url = "https://media.ibroadcast.com/";
                   }
                   {
                     name = "radioMii";
