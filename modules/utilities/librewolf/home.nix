@@ -357,6 +357,10 @@
                     url = "https://infinitebacklog.net/";
                   }
                   {
+                    name = "MusicButler";
+                    url = "https://www.musicbutler.io/";
+                  }
+                  {
                     name = "ListenBrainz";
                     url = "https://listenbrainz.org/";
                   }
