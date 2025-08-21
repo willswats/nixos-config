@@ -320,10 +320,6 @@
                     url = "https://chatreplay.stream/subscriptions";
                   }
                   {
-                    name = "YouTube Music";
-                    url = "https://music.youtube.com";
-                  }
-                  {
                     name = "iBroadcast";
                     url = "https://media.ibroadcast.com/";
                   }
