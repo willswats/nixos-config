@@ -63,7 +63,6 @@
       miru = "${pkgs.miru}/bin/miru";
       spotify = "${pkgs.spotify}/bin/spotify";
       euphonica = "${pkgs.euphonica}/bin/euphonica";
-      mpd-sima = "${pkgs.mpd-sima}/bin/mpd-sima";
 
       kitty = "${pkgs.kitty}/bin/kitty";
       yazi = "${pkgs.yazi}/bin/yazi";
@@ -327,10 +326,6 @@
           }
           {
             command = "${lxpolkit}";
-            always = false;
-          }
-          {
-            command = "${mpd-sima}";
             always = false;
           }
           # Applets

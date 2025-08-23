@@ -53,7 +53,6 @@
       miru = "${pkgs.miru}/bin/miru";
       spotify = "${pkgs.spotify}/bin/spotify";
       euphonica = "${pkgs.euphonica}/bin/euphonica";
-      mpd-sima = "${pkgs.mpd-sima}/bin/mpd-sima";
 
       kitty = "${pkgs.kitty}/bin/kitty";
       yazi = "${pkgs.yazi}/bin/yazi";
@@ -208,7 +207,6 @@
           # Daemons
           "${playerctld}" # The home manager service doesn't seem to start playerctld
           "${lxpolkit}"
-          "${mpd-sima}"
           # Applets
           "${mullvadGui}"
           "${dropbox}"
