@@ -50,8 +50,7 @@
 
       librewolf = "${pkgs.librewolf}/bin/librewolf";
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
-      miru = "${pkgs.miru}/bin/miru";
-      spotify = "${pkgs.spotify}/bin/spotify";
+      youtube-music = "${pkgs.youtube-music}/bin/youtube-music";
       euphonica = "${pkgs.euphonica}/bin/euphonica";
 
       kitty = "${pkgs.kitty}/bin/kitty";
@@ -224,9 +223,8 @@
           "$mod, w, exec, ${librewolf}" # Web browser
           "$mod, a, exec, ${pavucontrol}" # Audio manager
           "$mod, v, exec, mpv" # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
-          "$mod shift, v, exec, ${miru}" # Streaming media player
           "$mod, m, exec, ${euphonica}" # Local music player
-          "$mod shift, m, exec, ${spotify}" # Streaming music player
+          "$mod shift, m, exec, ${youtube-music}" # Streaming music player
 
           "$mod, e, exec, ${kitty} ${yazi}" # File explorer
           "$mod, t, exec, ${kitty} nvim" # Text editor (not specifying the binary as it doesn't load my config)
