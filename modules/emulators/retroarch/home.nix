@@ -15,7 +15,7 @@
             blastem # Sega - Mega Drive - Genesis (BlastEm)
             beetle-saturn # Sega - Saturn (Beetle Saturn)
             flycast # Sega - Dreamcast/Naomi (Flycast)
-            swanstation # Sony - Playstation (SwanStation)
+            beetle-psx # Sony - Playstation (Beetle PSX)
             ppsspp # Sony - PlayStation Portable (PPSSPP)
             desmume # Nintendo - DS (DeSmuME)
             citra # Nintendo - 3DS (Citra)
