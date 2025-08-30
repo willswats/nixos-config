@@ -72,7 +72,7 @@
       lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
-      autotiling = "${pkgs.autotiling}/bin/autotiling";
+      autotiling = "${pkgs.autotiling-rs}/bin/autotiling-rs";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
