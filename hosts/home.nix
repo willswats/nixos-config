@@ -77,6 +77,7 @@
       ffmpeg
       mkvtoolnix-cli
       ouch
+      nsz
       killall
       appimage-run
       trash-cli
