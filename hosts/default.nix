@@ -24,7 +24,7 @@ in
     ../modules/theme/catppuccin
     ../modules/utilities/nh
     ../modules/utilities/gnome-keyring
-    ../modules/utilities/nautilus
+    ../modules/utilities/pcmanfm
     ../modules/utilities/mullvad-vpn
     ../modules/utilities/virt-manager
     ../modules/utilities/wireshark

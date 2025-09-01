@@ -5,7 +5,7 @@
     oculante
   ];
 
-  # Fix failed to open file in GUI file managers - https://github.com/woelper/oculante/issues/399
+  # Fix failed to open file in PCManFM - https://github.com/woelper/oculante/issues/399
   # https://github.com/woelper/oculante/blob/0ff5d53bd0592538ea73387553cddbfebc6777cc/res/oculante.desktop
   home.file.".local/share/applications/oculante.desktop".text = ''
     [Desktop Entry]
