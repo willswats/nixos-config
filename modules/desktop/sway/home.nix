@@ -139,11 +139,11 @@
               app_id = "gamescope";
             };
           }
-          # Nautilus
+          # pcmanfm
           {
             command = "floating enable";
             criteria = {
-              app_id = "org.gnome.Nautilus";
+              app_id = "pcmanfm";
             };
           }
         ];

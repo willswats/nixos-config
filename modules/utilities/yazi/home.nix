@@ -10,7 +10,7 @@
     let
       driveDir = host.directories.drive;
 
-      nautilus = "${pkgs.nautilus}/bin/nautilus";
+      pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
       fileRoller = "${pkgs.file-roller}/bin/file-roller";
 
       # Pinned to commit so that I do not need to keep updating the hash
@@ -30,11 +30,11 @@
 
       keymap = {
         mgr.prepend_keymap = [
-          # Open nautilus
+          # Open file manager
           {
             on = [ "<C-o>" ];
             run = ''
-              shell '${nautilus} .'
+              shell '${pcmanfm} .'
             '';
           }
           # Open file roller compress menu with selected files
