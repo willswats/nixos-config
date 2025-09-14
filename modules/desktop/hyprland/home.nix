@@ -59,7 +59,7 @@
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
       grimblast = "${pkgs.grimblast}/bin/grimblast";
 
-      lxpolkit = "${pkgs.lxde.lxsession}/bin/lxpolkit";
+      lxpolkit = "${pkgs.lxsession}/bin/lxpolkit";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
 
