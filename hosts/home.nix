@@ -66,6 +66,7 @@
       gnome-disk-utility
       moonlight-qt
       grayjay
+      spotify
       youtube-music
       euphonica
       dropbox
