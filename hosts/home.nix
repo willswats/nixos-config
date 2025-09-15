@@ -65,6 +65,7 @@
       popsicle
       gnome-disk-utility
       moonlight-qt
+      tidal-hifi
       grayjay
       euphonica
       dropbox

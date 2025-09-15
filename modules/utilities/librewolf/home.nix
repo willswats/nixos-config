@@ -314,10 +314,6 @@
                     url = "https://chatreplay.stream/subscriptions";
                   }
                   {
-                    name = "Tidal";
-                    url = "https://tidal.com/";
-                  }
-                  {
                     name = "iBroadcast";
                     url = "https://media.ibroadcast.com/";
                   }
