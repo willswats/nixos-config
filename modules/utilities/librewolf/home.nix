@@ -49,6 +49,7 @@
         bitwarden
         vimium
         mal-sync
+        translate-web-pages
         web-scrobbler
         libredirect
 
@@ -74,11 +75,6 @@
         let
           base = "#${globals.colours.base}";
 
-          # Chinese (simplified)
-          alwaysTranslateLanguages = ''
-            zh-Hans
-          '';
-
         in
         {
           # Enable features
@@ -86,8 +82,6 @@
           "general.autoScroll" = true;
           ## Enable ability to play DRM controlled content
           "media.eme.enabled" = true;
-          # Enable auto translation of languages
-          "browser.translations.alwaysTranslateLanguages" = alwaysTranslateLanguages;
           # Enable history (clear it on shutdown later)
           "places.history.enabled" = true;
           # Enable form history (clear it on shutdown later)
