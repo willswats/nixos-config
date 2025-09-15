@@ -66,8 +66,8 @@
       gnome-disk-utility
       moonlight-qt
       tidal-hifi
-      grayjay
       euphonica
+      grayjay
       dropbox
       zotero
       resources
