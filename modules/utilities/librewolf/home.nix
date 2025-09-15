@@ -320,6 +320,10 @@
                     url = "https://chatreplay.stream/subscriptions";
                   }
                   {
+                    name = "Tidal";
+                    url = "https://tidal.com/";
+                  }
+                  {
                     name = "iBroadcast";
                     url = "https://media.ibroadcast.com/";
                   }
@@ -548,6 +552,10 @@
               {
                 name = "University";
                 bookmarks = [
+                  {
+                    name = "Outlook";
+                    url = "https://outlook.office.com/mail/";
+                  }
                   {
                     name = "Student System";
                     url = "https://student-system.port.ac.uk";
