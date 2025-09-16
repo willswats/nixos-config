@@ -13,6 +13,7 @@
     {
       enable = true;
       settings = {
+        anchor = "bottom-right";
         font = fontName;
         default-timeout = 5000; # Milliseconds
         border-size = 2;
