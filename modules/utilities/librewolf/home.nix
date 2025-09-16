@@ -135,7 +135,7 @@
           "privacy.globalprivacycontrol.enabled" = true; # Tell websites not to sell or share my data
           ### Clear data on shutdown
           "privacy.clearOnShutdown_v2.formdata" = true;
-          "privacy.clearOnShutdown_v2.browsingHistoryAndDownloads" = false;
+          "privacy.clearOnShutdown_v2.browsingHistoryAndDownloads" = true;
           "privacy.clearOnShutdown_v2.siteSettings" = false;
           "privacy.clearOnShutdown_v2.cache" = false;
           "privacy.clearOnShutdown_v2.cookiesAndStorage" = false;
