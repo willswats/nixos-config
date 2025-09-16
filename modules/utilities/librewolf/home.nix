@@ -547,6 +547,10 @@
                     url = "https://outlook.office.com/mail/";
                   }
                   {
+                    name = "OneDrive";
+                    url = "https://portdotacdotuk-my.sharepoint.com/";
+                  }
+                  {
                     name = "Student System";
                     url = "https://student-system.port.ac.uk";
                   }
@@ -557,6 +561,10 @@
                   {
                     name = "Moodle";
                     url = "https://moodle.port.ac.uk";
+                  }
+                  {
+                    name = "Moodle Archive";
+                    url = "https://moodlearchive.port.ac.uk";
                   }
                   {
                     name = "Work Placements";
