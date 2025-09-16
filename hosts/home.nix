@@ -72,6 +72,7 @@
       zotero
       resources
       pixelorama
+      teams-for-linux
       ## CLI
       wget
       ffmpeg
