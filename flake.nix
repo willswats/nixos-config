@@ -162,6 +162,7 @@
                 home-manager.nixosModules.home-manager
                 nur.modules.nixos.default
                 catppuccin.nixosModules.catppuccin
+                nix-gaming.nixosModules.pipewireLowLatency
                 {
                   home-manager = {
                     useGlobalPkgs = true;
@@ -174,7 +175,6 @@
                       nur.modules.homeManager.default
                       nixvim.homeModules.nixvim
                       catppuccin.homeModules.catppuccin
-                      inputs.nix-gaming.nixosModules.pipewireLowLatency
                     ];
                   };
                 }

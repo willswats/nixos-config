@@ -3,48 +3,45 @@
 # to /etc/nixos/configuration.nix instead.
 { config
 , lib
+, pkgs
 , modulesPath
 , ...
 }:
 
 {
-  imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
+  imports = [
+    (modulesPath + "/installer/scan/not-detected.nix")
+  ];
 
   boot.initrd.availableKernelModules = [
     "xhci_pci"
-    "ahci"
-    "usb_storage"
-    "sd_mod"
-    "rtsx_pci_sdmmc"
+    "thunderbolt"
+    "vmd"
+    "nvme"
   ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/f105ec86-97aa-472d-916d-cdf0e7a2f07d";
+    device = "/dev/mapper/luks-3674979b-dee9-424b-b2ab-945964af0430";
     fsType = "ext4";
   };
 
-  boot.initrd.luks.devices."luks-2d8e8a50-7bbf-4029-b73c-de8a086c6811".device =
-    "/dev/disk/by-uuid/2d8e8a50-7bbf-4029-b73c-de8a086c6811";
+  boot.initrd.luks.devices."luks-3674979b-dee9-424b-b2ab-945964af0430".device =
+    "/dev/disk/by-uuid/3674979b-dee9-424b-b2ab-945964af0430";
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/1550-B8DA";
+    device = "/dev/disk/by-uuid/F6B7-C96B";
     fsType = "vfat";
+    options = [
+      "fmask=0077"
+      "dmask=0077"
+    ];
   };
 
-  swapDevices = [{ device = "/dev/disk/by-uuid/c29728ce-e574-4cf7-9cf3-6795de323018"; }];
-
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp0s31f6.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
+  swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
