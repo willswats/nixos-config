@@ -48,7 +48,7 @@
       wlogout = "${pkgs.wlogout}/bin/wlogout";
       waybar = "${pkgs.waybar}/bin/waybar";
 
-      librewolf = "${pkgs.librewolf}/bin/librewolf";
+      firefox = "${pkgs.firefox}/bin/firefox";
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
       tidal-hifi = "${pkgs.tidal-hifi}/bin/tidal-hifi";
       euphonica = "${pkgs.euphonica}/bin/euphonica";
@@ -169,8 +169,8 @@
           "float, class:gamescope"
           # pcmanfm
           "float, class:pcmanfm"
-          # librewolf
-          "suppressevent maximize, class:librewolf" # Fix librewolf maximizing certain windows (extensions)
+          # firefox
+          "suppressevent maximize, class:firefox" # Fix firefox maximizing certain windows (extensions)
           # Godot
           "tile, class:Godot" # Fix Godot starting as float
           # MPV
@@ -220,7 +220,7 @@
 
           "$mod, return, exec, ${kitty}"
 
-          "$mod, w, exec, ${librewolf}" # Web browser
+          "$mod, w, exec, ${firefox}" # Web browser
           "$mod, a, exec, ${pavucontrol}" # Audio manager
           "$mod, v, exec, mpv" # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
           "$mod, m, exec, ${euphonica}" # Local music player

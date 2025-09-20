@@ -25,7 +25,7 @@
     ../modules/development/haskell/home.nix
     ../modules/development/direnv/home.nix
     # ../modules/development/unity/home.nix
-    ../modules/utilities/librewolf/home.nix
+    ../modules/utilities/firefox/home.nix
     ../modules/utilities/chromium/home.nix
     ../modules/utilities/mpv/home.nix
     ../modules/utilities/oculante/home.nix

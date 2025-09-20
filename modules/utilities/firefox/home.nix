@@ -9,11 +9,11 @@
   xdg.mimeApps = {
     defaultApplications = {
       # Set firefox as the default browser
-      "application/pdf" = [ "librewolf.desktop" ]; # pdf
-      "x-scheme-handler/http" = [ "librewolf.desktop" ];
-      "x-scheme-handler/https" = [ "librewolf.desktop" ];
-      "x-scheme-handler/about" = [ "librewolf.desktop" ];
-      "x-scheme-handler/unknown" = [ "librewolf.desktop" ];
+      "application/pdf" = [ "firefox.desktop" ]; # pdf
+      "x-scheme-handler/http" = [ "firefox.desktop" ];
+      "x-scheme-handler/https" = [ "firefox.desktop" ];
+      "x-scheme-handler/about" = [ "firefox.desktop" ];
+      "x-scheme-handler/unknown" = [ "firefox.desktop" ];
       # Open in MPV
       "x-scheme-handler/mpv" = [ "open-in-mpv.desktop" ];
     };
@@ -29,13 +29,8 @@
     MimeType=x-scheme-handler/mpv
   '';
 
-  programs.librewolf = {
+  programs.firefox = {
     enable = true;
-    # LibreWolf Settings
-    settings = {
-      "webgl.disabled" = false;
-      "privacy.resistFingerprinting" = false;
-    };
     profiles.default = {
       id = 0;
 
@@ -44,6 +39,7 @@
       # Request new extensions here: https://gitlab.com/rycee/nur-expressions/
       extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
         # QoL
+        ublock-origin
         consent-o-matic
         darkreader
         bitwarden
@@ -74,6 +70,13 @@
         let
           base = "#${globals.colours.base}";
 
+          newTabPageBlocked = ''
+            {"R8wYCmScoyV0xHr6e1KJng==":1,"c/GpBaAESHY/bXEx/uourw==":1,"Z3sawLcfnygbilXeU5fdHg==":1,"6qTsCBZaEVXWrWxdXn5pmQ==":1,"+CUypgsitL9L0VmPZ0t22g==":1,"c9lsKElwtRd9PbcOXhz3dA==":1,"otFC2oJcatFNwWRBjMU7YA==":1,"26UbzFJ7qT9/4DhodHKA1Q==":1,"4gPpjkxgZzXPVtuEoAL9Ig==":1,"gLv0ja2RYVgxKdp0I5qwvA==":1,"0GuysDfjFIJXq6QVZ2C5YA==":1,"FX7dGM0Jj2q2tTyEv9oaUQ==":1,"BRX66S9KVyZQ1z3AIk0A7w==":1,"eV8/WsSLxHadrTL1gAxhug==":1}
+          '';
+
+          uiCustomizationState = ''
+            {"placements":{"widget-overflow-fixed-list":[],"unified-extensions-area":["ublock0_raymondhill_net-browser-action","sponsorblocker_ajay_app-browser-action","_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action","_036a55b4-5e72-4d05-a06c-cba2dfcc134a_-browser-action","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","_762f9885-5a13-4abd-9c77-433dcd38b8fd_-browser-action","_d66c8515-1e0d-408f-82ee-2682f2362726_-browser-action","_c84d89d9-a826-4015-957b-affebd9eb603_-browser-action","7esoorv3_alefvanoon_anonaddy_me-browser-action","addon_darkreader_org-browser-action","gdpr_cavi_au_dk-browser-action","metacor_code_gmail_com-browser-action","wayback_machine_mozilla_org-browser-action","zotero_chnm_gmu_edu-browser-action"],"nav-bar":["back-button","forward-button","stop-reload-button","vertical-spacer","urlbar-container","downloads-button","fxa-toolbar-menu-button","unified-extensions-button"],"toolbar-menubar":["menubar-items"],"TabsToolbar":["tabbrowser-tabs","new-tab-button","alltabs-button"],"vertical-tabs":[],"PersonalToolbar":["personal-bookmarks"]},"seen":["developer-button","screenshot-button","_036a55b4-5e72-4d05-a06c-cba2dfcc134a_-browser-action","_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action","_762f9885-5a13-4abd-9c77-433dcd38b8fd_-browser-action","_d66c8515-1e0d-408f-82ee-2682f2362726_-browser-action","_c84d89d9-a826-4015-957b-affebd9eb603_-browser-action","7esoorv3_alefvanoon_anonaddy_me-browser-action","_d7742d87-e61d-4b78-b8a1-b469842139fa_-browser-action","addon_darkreader_org-browser-action","gdpr_cavi_au_dk-browser-action","metacor_code_gmail_com-browser-action","sponsorblocker_ajay_app-browser-action","wayback_machine_mozilla_org-browser-action","zotero_chnm_gmu_edu-browser-action","ublock0_raymondhill_net-browser-action"],"dirtyAreaCache":["nav-bar","vertical-tabs","unified-extensions-area","TabsToolbar","toolbar-menubar","PersonalToolbar"],"currentVersion":23,"newElementCount":3}
+          '';
         in
         {
           # Enable features
@@ -119,6 +122,8 @@
           "browser.toolbars.bookmarks.visibility" = "newtab"; # Only show toolbar on new tab
           "browser.startup.page" = 3; # Open previous windows and tabs
           "browser.contentblocking.category" = "strict"; # Content blocking strict
+          "browser.newtabpage.blocked" = newTabPageBlocked; # Remove the default pinned websites from the new tab page (appears in search)
+          "browser.uiCustomization.state" = uiCustomizationState; # Save UI customizations
           ## Sidebar
           "sidebar.verticalTabs" = false;
           "sidebar.revamp" = false;
@@ -143,7 +148,6 @@
           ## Security
           "dom.security.https_only_mode" = true; # Enable HTTPS only mode
           "dom.security.https_only_mode_ever_enabled" = true; # Always enable HTTPS only mode
-          "security.ssl.require_safe_negotiation" = false; # https://librewolf.net/docs/faq/#im-getting-the-ssl_error_unsafe_negotiation-error-what-can-i-do
           ## Misc
           "app.shield.optoutstudies.enabled" = false; # Opt out of studies
           "datareporting.healthreport.uploadEnabled" = false; # Disable health report
@@ -166,6 +170,12 @@
           "MDN"
         ];
         engines = {
+          # Defaults
+          "google".metaData.hidden = true;
+          "bing".metaData.hidden = true;
+          "Amazon.co.uk".metaData.hidden = true;
+          "ebay".metaData.hidden = true;
+          "wikipedia".metaData.hidden = false;
           # Custom
           "Dictionary" = {
             urls = [{ template = "https://www.dictionary.com/browse/{searchTerms}"; }];
@@ -344,10 +354,6 @@
                   {
                     name = "Infinite Backlog";
                     url = "https://infinitebacklog.net/";
-                  }
-                  {
-                    name = "MusicButler";
-                    url = "https://www.musicbutler.io/";
                   }
                   {
                     name = "ListenBrainz";
