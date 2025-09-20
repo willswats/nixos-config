@@ -50,7 +50,6 @@
         vimium
         mal-sync
         translate-web-pages
-        web-scrobbler
         libredirect
 
         # Programs
