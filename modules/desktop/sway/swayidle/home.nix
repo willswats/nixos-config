@@ -25,7 +25,7 @@
         ${streamsActive}
 
         if ! streams_active; then 
-          ${swaymsg} output * power off
+          ${swaymsg} 'output * power off'
         fi
       '';
     in
