@@ -132,7 +132,7 @@ rm ~/.bash_history
 
 1. [Dropbox](./docs/utilities/dropbox.md)
 2. [Firefox](./docs/utilities/firefox.md)
-3. [GPG](./docs/utilities/gpg.md)
+3. [SSH](./docs/utilities/ssh.md)
 4. [virt-manager](./docs/utilities/virt-manager.md)
 
 ### Servers

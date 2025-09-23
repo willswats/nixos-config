@@ -43,8 +43,7 @@ Then edit `allowed_signers` and move the email to the start of the line.
 ssh-add ~/.ssh/id_ed25519
 ```
 
-## Connect to GitHub
+## Add an SSH key to Gnome Keyring with Login Auto Unlock
 
-```bash
-ssh git@github.com -v
-```
+1. Run `git pull` on a repository that you've cloned with SSH.
+2. When prompted to input your SSH key, select "Save in password manager".
