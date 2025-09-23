@@ -9,7 +9,8 @@ in
     userName = "willswats";
     userEmail = email;
     signing = {
-      key = email;
+      format = "ssh";
+      key = "~/.ssh/id_ed25519.pub";
       signByDefault = true;
     };
     extraConfig = {
