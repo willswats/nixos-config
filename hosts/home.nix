@@ -63,31 +63,32 @@
       fragments
       popsicle
       gnome-disk-utility
+      resources
+      gpu-viewer
       moonlight-qt
       tidal-hifi
       euphonica
       grayjay
       dropbox
-      zotero
-      resources
       pixelorama
+      zotero
       teams-for-linux
       ## CLI
       wget
+      killall
       ffmpeg
       mkvtoolnix-cli
       ouch
       nsz
-      killall
       appimage-run
+      steam-run
       trash-cli
       yt-dlp
       spotdl
-      woeusb
       vulkan-tools
-      distrobox
+      woeusb
       lynx
-      steam-run
+      distrobox
       # Infosec
       nmap
       nikto
