@@ -40,7 +40,6 @@
     })
     tetrio-desktop
     sm64coopdx
-    unciv
   ];
 
   wayland.windowManager.hyprland.settings.monitor =
