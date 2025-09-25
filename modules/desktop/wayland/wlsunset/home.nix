@@ -5,28 +5,23 @@
 }:
 
 let
-  gammastep = "${pkgs.gammastep}/bin/gammastep";
-  gammastepToggle = pkgs.writeShellScript "gammastepToggle.sh" ''
-    if pgrep gammastep; then
-      killall .gammastep-wrap
+  wlsunset = "${pkgs.wlsunset}/bin/wlsunset";
+  wlsunsetToggle = pkgs.writeShellScript "wlsunsetToggle.sh" ''
+    if pgrep wlsunset; then
+      killall wlsunset
     else
-      ${gammastep}
+      ${wlsunset}
     fi
   '';
 in
 {
-  services.gammastep = {
+  services.wlsunset = {
     enable = true;
-    dawnTime = "08:00";
-    duskTime = "19:00";
+    sunrise = "08:00";
+    sunset = "19:00";
     temperature = {
       day = 6500;
       night = 3000;
-    };
-    settings = {
-      general = {
-        fade = 0;
-      };
     };
   };
 
@@ -36,13 +31,13 @@ in
     in
     lib.mkIf config.wayland.windowManager.sway.enable {
       keybindings = lib.mkOptionDefault {
-        "${mod}+Shift+b" = "exec ${gammastepToggle}";
+        "${mod}+Shift+b" = "exec ${wlsunsetToggle}";
       };
     };
 
   wayland.windowManager.hyprland.settings.bind =
     lib.mkIf config.wayland.windowManager.hyprland.enable
       [
-        "$mod shift, b, exec, ${gammastepToggle}"
+        "$mod shift, b, exec, ${wlsunsetToggle}"
       ];
 }

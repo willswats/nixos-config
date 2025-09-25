@@ -14,7 +14,7 @@
     ../wayland/waybar/home.nix
     ../wayland/fuzzel/home.nix
     ../wayland/mako/home.nix
-    ../wayland/gammastep/home.nix
+    ../wayland/wlsunset/home.nix
     ../wayland/wlogout/home.nix
   ];
 
