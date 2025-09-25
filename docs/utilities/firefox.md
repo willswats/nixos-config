@@ -1,5 +1,9 @@
 # Firefox
 
+## Theme
+
+[Install theme](https://addons.mozilla.org/en-US/firefox/addon/catppuccin-mocha-blue-git)
+
 ## uBlock
 
 - Run in Private Windows: Allow
