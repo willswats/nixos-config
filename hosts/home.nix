@@ -85,6 +85,7 @@
       trash-cli
       yt-dlp
       spotdl
+      nyaa
       vulkan-tools
       woeusb
       lynx
