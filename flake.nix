@@ -55,7 +55,10 @@
             user = user;
             directories = directories;
             hostNames = hostNames;
-            wallpaper = ./wallpaper.png;
+            wallpaper = {
+              url = "https://i.redd.it/mgq8j7bpc7w71.png";
+              hash = "sha256-zWdMqIYDF86GaM/iahHcRMddDh0vTBmHD4Cbzw4B+x8=";
+            };
             font = {
               name = "JetBrains Mono Nerd Font";
             };

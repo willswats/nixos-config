@@ -33,7 +33,10 @@
 
   wayland.windowManager.hyprland =
     let
-      wallpaper = globals.wallpaper;
+      wallpaper = pkgs.fetchurl {
+        url = globals.wallpaperUrl;
+        hash = "";
+      };
 
       monitorCenter = host.monitors.center;
       monitorLeft = host.monitors.left;

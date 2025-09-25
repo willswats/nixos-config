@@ -1,10 +1,13 @@
-{ globals, ... }:
+{ globals, pkgs, ... }:
 
 {
   programs.hyprlock =
     let
       fontName = globals.font.name;
-      wallpaper = globals.wallpaper;
+      wallpaper = pkgs.fetchurl {
+        url = globals.wallpaper.url;
+        hash = globals.wallpaper.hash;
+      };
 
       blue = "rgb(137,180,250)";
       text = "rgb(205,214,244)";

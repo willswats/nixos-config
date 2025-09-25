@@ -37,7 +37,10 @@
     let
       mod = config.wayland.windowManager.sway.config.modifier;
 
-      wallpaper = globals.wallpaper;
+      wallpaper = pkgs.fetchurl {
+        url = globals.wallpaper.url;
+        hash = globals.wallpaper.hash;
+      };
       monitorCenter = host.monitors.center;
       monitorLeft = host.monitors.left;
 
