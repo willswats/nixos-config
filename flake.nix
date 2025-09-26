@@ -23,6 +23,10 @@
     slippi.url = "github:lytedev/slippi-nix";
     nix-gaming.url = "github:fufexan/nix-gaming";
     bsp-casefolding-workaround.url = "github:SeraphimRP/bsp-casefolding-workaround-nix";
+    nyaa = {
+      url = "github:Beastwick18/nyaa";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -35,6 +39,7 @@
     , slippi
     , nix-gaming
     , bsp-casefolding-workaround
+    , nyaa
     , ...
     }@inputs:
     {
@@ -136,6 +141,7 @@
                       catppuccin.homeModules.catppuccin
                       slippi.homeManagerModules.default
                       bsp-casefolding-workaround.nixosModules.default
+                      nyaa.homeManagerModule
                     ];
                   };
                 }
@@ -178,6 +184,7 @@
                       nur.modules.homeManager.default
                       nixvim.homeModules.nixvim
                       catppuccin.homeModules.catppuccin
+                      nyaa.homeManagerModule
                     ];
                   };
                 }
