@@ -65,7 +65,7 @@
       fragments
       popsicle
       gnome-disk-utility
-      resources
+      mission-center
       gpu-viewer
       moonlight-qt
       tidal-hifi
