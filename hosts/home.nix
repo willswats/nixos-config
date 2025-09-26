@@ -14,6 +14,7 @@
     ../modules/theme/catppuccin/home.nix
     ../modules/development/fish/home.nix
     ../modules/development/git/home.nix
+    ../modules/development/fzf/home.nix
     ../modules/development/neovim/home.nix
     ../modules/development/helix/home.nix
     ../modules/development/vscode/home.nix
