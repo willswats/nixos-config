@@ -12,6 +12,7 @@
     ../modules/theme/gtk/home.nix
     ../modules/theme/qt/home.nix
     ../modules/theme/catppuccin/home.nix
+    ../modules/development/fish/home.nix
     ../modules/development/git/home.nix
     ../modules/development/neovim/home.nix
     ../modules/development/helix/home.nix
@@ -33,7 +34,6 @@
     ../modules/utilities/kdenlive/home.nix
     ../modules/utilities/mullvad-vpn/home.nix
     ../modules/utilities/vesktop/home.nix
-    ../modules/utilities/fish/home.nix
     ../modules/utilities/kitty/home.nix
     ../modules/utilities/bottom/home.nix
     ../modules/utilities/pcmanfm/home.nix

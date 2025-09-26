@@ -17,11 +17,11 @@ in
     ../modules/system/bluetooth
     ../modules/development/dotnet
     ../modules/development/podman
+    ../modules/development/nh
     ../modules/theme/gtk
     ../modules/theme/qt
     ../modules/theme/cursor
     ../modules/theme/catppuccin
-    ../modules/utilities/nh
     ../modules/utilities/gnome-keyring
     ../modules/utilities/pcmanfm
     ../modules/utilities/mullvad-vpn
