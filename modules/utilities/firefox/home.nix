@@ -29,6 +29,8 @@
     MimeType=x-scheme-handler/mpv
   '';
 
+  catppuccin.firefox.enable = true;
+
   programs.firefox = {
     enable = true;
     profiles.default = {
@@ -37,6 +39,7 @@
       # Extensions
       # Find extensions here: https://nur.nix-community.org/repos/rycee/
       # Request new extensions here: https://gitlab.com/rycee/nur-expressions/
+      extensions.force = true;
       extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
         # QoL
         ublock-origin
@@ -47,6 +50,7 @@
         mal-sync
         translate-web-pages
         libredirect
+        firefox-color
 
         # Programs
         ## Zotero
@@ -178,13 +182,13 @@
           "wikipedia".metaData.hidden = false;
           # Custom
           "Dictionary" = {
-            urls = [ { template = "https://www.dictionary.com/browse/{searchTerms}"; } ];
+            urls = [{ template = "https://www.dictionary.com/browse/{searchTerms}"; }];
             icon = "https://www.dictionary.com/94e56a525da4e9fe0cda.png";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@d" ];
           };
           "Thesaurus" = {
-            urls = [ { template = "https://www.thesaurus.com/browse/{searchTerms}"; } ];
+            urls = [{ template = "https://www.thesaurus.com/browse/{searchTerms}"; }];
             icon = "https://www.thesaurus.com/0d297be7e698b98c9da8.png";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@t" ];
@@ -228,12 +232,12 @@
             definedAliases = [ "@no" ];
           };
           "NixOS Wiki" = {
-            urls = [ { template = "https://wiki.nixos.org/w/index.php?search={searchTerms}"; } ];
+            urls = [{ template = "https://wiki.nixos.org/w/index.php?search={searchTerms}"; }];
             icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
             definedAliases = [ "@nw" ];
           };
           "MDN" = {
-            urls = [ { template = "https://developer.mozilla.org/en-US/search?q={searchTerms}"; } ];
+            urls = [{ template = "https://developer.mozilla.org/en-US/search?q={searchTerms}"; }];
             icon = "https://developer.mozilla.org/favicon-48x48.bc390275e955dacb2e65.png";
             updateInterval = 24 * 60 * 60 * 1000; # every day
             definedAliases = [ "@mdn" ];
