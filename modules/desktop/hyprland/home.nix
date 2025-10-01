@@ -1,7 +1,8 @@
-{ pkgs
-, globals
-, host
-, ...
+{
+  pkgs,
+  globals,
+  host,
+  ...
 }:
 
 {
@@ -12,7 +13,7 @@
     ../wayland/greetd/home.nix
     ../wayland/scripts/home.nix
     ../wayland/waybar/home.nix
-    ../wayland/fuzzel/home.nix
+    ../wayland/rofi/home.nix
     ../wayland/mako/home.nix
     ../wayland/wlsunset/home.nix
     ../wayland/wlogout/home.nix
@@ -47,7 +48,7 @@
 
       hyprctl = "${pkgs.hyprland}/bin/hyprctl";
 
-      fuzzel = "${pkgs.fuzzel}/bin/fuzzel";
+      rofi = "${pkgs.rofi}/bin/rofi";
       wlogout = "${pkgs.wlogout}/bin/wlogout";
       waybar = "${pkgs.waybar}/bin/waybar";
 
@@ -219,7 +220,7 @@
         "$mod" = "SUPER";
 
         bind = [
-          "$mod, d, exec, ${fuzzel}"
+          "$mod, d, exec, ${rofi} -show drun"
 
           "$mod, return, exec, ${kitty}"
 

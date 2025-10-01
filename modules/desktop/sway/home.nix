@@ -1,9 +1,10 @@
-{ lib
-, config
-, pkgs
-, host
-, globals
-, ...
+{
+  lib,
+  config,
+  pkgs,
+  host,
+  globals,
+  ...
 }:
 
 {
@@ -14,7 +15,7 @@
     ../wayland/greetd/home.nix
     ../wayland/scripts/home.nix
     ../wayland/waybar/home.nix
-    ../wayland/fuzzel/home.nix
+    ../wayland/rofi/home.nix
     ../wayland/mako/home.nix
     ../wayland/wlsunset/home.nix
     ../wayland/wlogout/home.nix
@@ -57,7 +58,7 @@
 
       xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
 
-      fuzzel = "${pkgs.fuzzel}/bin/fuzzel";
+      rofi = "${pkgs.rofi}/bin/rofi";
       wlogout = "${pkgs.wlogout}/bin/wlogout";
       waybar = "${pkgs.waybar}/bin/waybar";
 
@@ -94,7 +95,7 @@
       config = {
         modifier = "Mod4";
         terminal = kitty;
-        menu = fuzzel;
+        menu = rofi;
         fonts = {
           names = [ "Hack Nerd Font" ];
           size = 14.0;
@@ -151,7 +152,7 @@
           }
         ];
         gaps.smartBorders = "on";
-        bars = [{ command = waybar; }];
+        bars = [ { command = waybar; } ];
         input = {
           "*" = {
             xkb_layout = "gb";
@@ -284,7 +285,7 @@
           "${mod}+Shift+r" = "exec swaymsg reload";
           "${mod}+semicolon" = "exec ${wlogout}";
 
-          "${mod}+d" = "exec ${fuzzel}";
+          "${mod}+d" = "exec ${rofi} -show drun";
 
           "${mod}+Return" = "exec ${kitty}"; # Terminal
 
