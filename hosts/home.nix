@@ -66,6 +66,7 @@
       fragments
       popsicle
       gnome-disk-utility
+      mission-center
       baobab
       gpu-viewer
       moonlight-qt
