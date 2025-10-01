@@ -1,6 +1,7 @@
-{ pkgs
-, globals
-, ...
+{
+  pkgs,
+  globals,
+  ...
 }:
 
 {
@@ -75,6 +76,7 @@
       pixelorama
       zotero
       teams-for-linux
+      qalculate-gtk
       ## CLI
       wget
       killall
