@@ -539,8 +539,8 @@
                 name = "Hosting";
                 bookmarks = [
                   {
-                    name = "Vercel";
-                    url = "https://vercel.com/";
+                    name = "Netlify";
+                    url = "https://app.netlify.com/";
                   }
                   {
                     name = "Hover";
