@@ -5,7 +5,7 @@
 
   programs.rofi = {
     enable = true;
-    font = "${globals.font.name} 14";
+    font = "${globals.font.name} 16";
     terminal = "${pkgs.kitty}/bin/kitty";
     extraConfig = {
       show-icons = true;
