@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -11,5 +11,15 @@
     enable = true;
     wrapperFeatures.gtk = true;
     extraPackages = [ ]; # By default this installs a few extra unwanted packages
+  };
+
+  xdg.portal.wlr = {
+    enable = true;
+    settings = {
+      screencast = {
+        chooser_type = "dmenu";
+        chooser_cmd = "${pkgs.rofi}/bin/rofi -dmenu -p 'Select a source to share'";
+      };
+    };
   };
 }
