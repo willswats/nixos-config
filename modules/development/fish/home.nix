@@ -1,7 +1,8 @@
-{ pkgs
-, globals
-, host
-, ...
+{
+  pkgs,
+  globals,
+  host,
+  ...
 }:
 
 {
@@ -22,6 +23,7 @@
         desktopHostName = globals.hostNames.desktop;
         laptopHostName = globals.hostNames.laptop;
 
+        nh = "${pkgs.nh}/bin/nh";
         ytDlp = "${pkgs.yt-dlp}/bin/yt-dlp";
         notifySend = "${pkgs.libnotify}/bin/notify-send";
         hostname = "${pkgs.hostname}/bin/hostname";
@@ -29,7 +31,7 @@
         # Rebuild command that's dependent upon the host name for choosing the flake
         rebuildSwitchFlake = pkgs.writeShellScript "rebuildSwitchFlake.sh" ''
           rebuild_switch_command() {
-            sudo nixos-rebuild switch --option eval-cache false --accept-flake-config --flake ${nixosConfigDirectory}"$1"
+            sudo ${nh} os switch -R -H "$1" ${nixosConfigDirectory}
           }
 
           rebuild_switch_flake() {
@@ -43,9 +45,9 @@
 
           host=$(${hostname})
           if [ "$host" = "${desktopHostName}" ]; then
-            rebuild_switch_flake "${desktopHostName}" "#desktop"
+            rebuild_switch_flake "${desktopHostName}" "desktop"
           elif [ "$host" = "${laptopHostName}" ]; then
-            rebuild_switch_flake "${laptopHostName}" "#laptop"
+            rebuild_switch_flake "${laptopHostName}" "laptop"
           fi
         '';
 
