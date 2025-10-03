@@ -134,8 +134,12 @@
           "col.border_locked_active" = mauve;
           "col.border_locked_inactive" = overlay0;
           groupbar = {
-            font_size = 14;
+            font_size = 18;
+            height = 18;
+            gradients = true;
+            gaps_in = 0;
             gaps_out = 0;
+            text_offset = -1;
             "col.active" = blue;
             "col.inactive" = overlay0;
             "col.locked_active" = mauve;
