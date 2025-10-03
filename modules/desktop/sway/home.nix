@@ -61,6 +61,7 @@
       rofi = "${pkgs.rofi}/bin/rofi";
       wlogout = "${pkgs.wlogout}/bin/wlogout";
       waybar = "${pkgs.waybar}/bin/waybar";
+      hyprpicker = "${pkgs.hyprpicker}/bin/hyprpicker";
 
       firefox = "${pkgs.firefox}/bin/firefox";
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
@@ -299,8 +300,9 @@
           "${mod}+s" = "exec ${kitty} ${btm} -b"; # Process monitor
           "${mod}+b" = "exec ${kitty} ${bluetuith}"; # Bluetooth manager
 
-          "Print" = "exec ${grimshot} --notify save output";
-          "Shift+Print" = "exec killall slurp; exec ${grimshot} --notify save area";
+          "${mod}+p" = "exec ${hyprpicker} -a"; # Colour picker
+          "Print" = "exec ${grimshot} --notify save output"; # Screnshot active monitor
+          "Shift+Print" = "exec killall slurp; exec ${grimshot} --notify save area"; # # Screenshot manually selected area - killall to prevent overlap
         };
         modes = {
           resize = {

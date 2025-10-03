@@ -51,6 +51,7 @@
       rofi = "${pkgs.rofi}/bin/rofi";
       wlogout = "${pkgs.wlogout}/bin/wlogout";
       waybar = "${pkgs.waybar}/bin/waybar";
+      hyprpicker = "${pkgs.hyprpicker}/bin/hyprpicker";
 
       firefox = "${pkgs.firefox}/bin/firefox";
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
@@ -240,6 +241,7 @@
           "$mod, s, exec, ${kitty} ${btm} -b" # Process monitor
           "$mod, b, exec, ${kitty} ${bluetuith}" # Bluetooth manager
 
+          "$mod, p, exec, ${hyprpicker} -a" # Colour picker
           ", print, exec, ${grimblast} --notify save output" # Screenshot active monitor
           "shift, print, exec, killall slurp; ${grimblast} --notify --freeze save area" # Screenshot manually selected area - killall to prevent overlap
 
