@@ -48,6 +48,7 @@
         youtube-alternative-switch
         sponsorblock
         return-youtube-dislikes
+        youtube-subscription-groups
         ## Wayback Machine
         wayback-machine
         ## nyaa.si
