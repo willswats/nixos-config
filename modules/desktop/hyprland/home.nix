@@ -35,8 +35,8 @@
   wayland.windowManager.hyprland =
     let
       wallpaper = pkgs.fetchurl {
-        url = globals.wallpaperUrl;
-        hash = "";
+        url = globals.wallpaper.url;
+        hash = globals.wallpaper.hash;
       };
 
       monitorCenter = host.monitors.center;
