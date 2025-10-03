@@ -119,10 +119,6 @@
           preserve_split = true;
         };
 
-        gestures = {
-          workspace_swipe = true;
-        };
-
         animations = {
           enabled = false;
           animation = [
@@ -147,10 +143,15 @@
           };
         };
 
-        # Disable update messages
-        ecosystem.no_update_news = true;
+        # Disable update messages and nag messages
+        ecosystem = {
+          no_update_news = true;
+          no_donation_nag = false;
+        };
 
         misc = {
+          # Disable app not responding dialog
+          enable_anr_dialog = false;
           # Fix Firefox flashing default hyprland wallpaper on resize (still occurs, but it's less noticeable)
           # https://github.com/hyprwm/Hyprland/issues/2817
           disable_hyprland_logo = true;
