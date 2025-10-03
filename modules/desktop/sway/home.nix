@@ -76,7 +76,6 @@
       lxpolkit = "${pkgs.lxsession}/bin/lxpolkit";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
-      autotiling = "${pkgs.autotiling}/bin/autotiling";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
@@ -341,10 +340,6 @@
           }
           {
             command = "${xrandr} --output ${monitorCenter} --primary"; # Ensures that xwindows (especially steam games) use the center monitor
-            always = false;
-          }
-          {
-            command = "${autotiling}";
             always = false;
           }
         ];
