@@ -1,7 +1,7 @@
-{ pkgs
-, host
-, globals
-, ...
+{
+  pkgs,
+  host,
+  ...
 }:
 
 {
@@ -31,15 +31,5 @@
   services.mpdris2 = {
     enable = true;
     notifications = true;
-  };
-
-  services.mpdscribble = {
-    enable = true;
-    endpoints = {
-      "listenbrainz" = {
-        username = "XenBad";
-        passwordFile = "${globals.directories.home}/.local/share/mpris-scrobbler/listenbrainz-token";
-      };
-    };
   };
 }
