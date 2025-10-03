@@ -279,6 +279,19 @@
                 ];
               }
               {
+                name = "Proton";
+                bookmarks = [
+                  {
+                    name = "Mail";
+                    url = "https://mail.proton.me";
+                  }
+                  {
+                    name = "Calendar";
+                    url = "https://calendar.proton.me";
+                  }
+                ];
+              }
+              {
                 name = "Utilities";
                 bookmarks = [
                   {
