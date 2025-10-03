@@ -350,10 +350,10 @@
         bind=$mod,r,submap,reset 
         submap=reset
 
-        bind=$mod,v,submap,virtual
+        bind=$mod,x,submap,virtual
         submap=virtual
 
-        bind=$mod,v,submap,reset
+        bind=$mod,x,submap,reset
         submap=reset
       '';
     };
