@@ -3,7 +3,6 @@
 {
   home.packages = with pkgs; [
     web-ext
-    open-in-mpv
   ];
 
   xdg.mimeApps = {
@@ -14,20 +13,8 @@
       "x-scheme-handler/https" = [ "firefox.desktop" ];
       "x-scheme-handler/about" = [ "firefox.desktop" ];
       "x-scheme-handler/unknown" = [ "firefox.desktop" ];
-      # Open in MPV
-      "x-scheme-handler/mpv" = [ "open-in-mpv.desktop" ];
     };
   };
-
-  home.file.".local/share/applications/open-in-mpv.desktop".text = ''
-    [Desktop Entry]
-    Name=open-in-mpv
-    Exec=open-in-mpv %u
-    Type=Application
-    Terminal=false
-    NoDisplay=true
-    MimeType=x-scheme-handler/mpv
-  '';
 
   catppuccin.firefox.enable = true;
 
@@ -55,8 +42,6 @@
         # Programs
         ## Zotero
         zotero-connector
-        ## mpv
-        iina-open-in-mpv
 
         # Websites
         ## YouTube
