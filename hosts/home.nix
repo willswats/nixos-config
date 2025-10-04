@@ -20,6 +20,7 @@
     ../modules/development/helix/home.nix
     ../modules/development/vscode/home.nix
     ../modules/development/lazygit/home.nix
+    ../modules/development/node/home.nix
     ../modules/development/rust/home.nix
     ../modules/development/dotnet/home.nix
     ../modules/development/python/home.nix
@@ -103,10 +104,6 @@
       # Development
       gh
       codeberg-cli
-      nodePackages.nodejs
-      nodePackages.pnpm
-      nodePackages.live-server
-      nodePackages.vercel
       godot_4
     ];
   };
