@@ -1,9 +1,14 @@
-{ ... }:
+{ pkgs, ... }:
 
 let
   email = "william@williamwatson.dev";
 in
 {
+  home.packages = with pkgs; [
+    gh
+    codeberg-cli
+  ];
+
   programs.git = {
     enable = true;
     userName = "willswats";

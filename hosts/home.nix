@@ -79,6 +79,7 @@
       zotero
       teams-for-linux
       qalculate-gtk
+      godot_4
       ## CLI
       wget
       killall
@@ -101,10 +102,6 @@
       gobuster
       exiftool
       busybox
-      # Development
-      gh
-      codeberg-cli
-      godot_4
     ];
   };
 
