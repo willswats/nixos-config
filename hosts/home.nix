@@ -95,7 +95,6 @@
       vulkan-tools
       woeusb
       lynx
-      distrobox
       # Infosec
       nmap
       nikto
