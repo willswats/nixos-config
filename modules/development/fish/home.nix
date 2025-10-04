@@ -57,6 +57,10 @@
         ghIssueCloseCommit = pkgs.writeShellScript "ghIssueCloseCommit.sh" ''
           ${gh} issue close "$1" -r "completed" --comment "Closed by $(${git} log -1 --pretty=format:%H)."
         '';
+
+        devtemp = pkgs.writeShellScript "devtemp.sh" ''
+          nix flake init --template "https://flakehub.com/f/the-nix-way/dev-templates/*#$1"
+        '';
       in
       {
         c = "clear";
@@ -80,6 +84,7 @@
         # Nix
         nix-shell = "nix-shell --command fish";
         rsf = rebuildSwitchFlake.outPath;
+        devtemp = devtemp.outPath;
 
         # lynx
         lynx = "lynx -vikeys";
