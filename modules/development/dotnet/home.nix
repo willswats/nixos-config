@@ -2,6 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    dotnet-sdk_8
+    dotnet-sdk_9
   ];
 }
