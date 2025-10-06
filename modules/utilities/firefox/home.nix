@@ -521,8 +521,8 @@
                 name = "Shopping";
                 bookmarks = [
                   {
-                    name = "Amazon";
-                    url = "https://www.amazon.co.uk/";
+                    name = "Ebay";
+                    url = "https://www.ebay.co.uk/";
                   }
                   {
                     name = "Ocado";
