@@ -72,6 +72,7 @@
       yazi = "${pkgs.yazi}/bin/yazi";
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
+      nyaa = "${pkgs.nyaa}/bin/nyaa";
       grimshot = "${pkgs.sway-contrib.grimshot}/bin/grimshot";
 
       lxpolkit = "${pkgs.lxsession}/bin/lxpolkit";
@@ -299,6 +300,7 @@
           "${mod}+t" = "exec ${kitty} nvim"; # Text editor (not specifying the binary as it doesn't load my config)
           "${mod}+s" = "exec ${kitty} ${btm} -b"; # Process monitor
           "${mod}+b" = "exec ${kitty} ${bluetuith}"; # Bluetooth manager
+          "${mod}+n" = "exec ${kitty} ${nyaa}"; # Nyaa
 
           "${mod}+p" = "exec ${hyprpicker} -a"; # Colour picker
           "Print" = "exec ${grimshot} --notify save output"; # Screnshot active monitor
