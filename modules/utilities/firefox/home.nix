@@ -248,10 +248,6 @@
                     url = "https://contacts.google.com";
                   }
                   {
-                    name = "Maps";
-                    url = "https://maps.google.com";
-                  }
-                  {
                     name = "Drive";
                     url = "https://drive.google.com";
                   }
