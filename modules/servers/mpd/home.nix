@@ -7,7 +7,6 @@
 {
   home.packages = with pkgs; [
     mpc
-    mpris-scrobbler
   ];
 
   services.mpd =
