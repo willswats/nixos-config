@@ -38,20 +38,13 @@
         translate-web-pages
         libredirect
         firefox-color
-
-        # Programs
-        ## Zotero
+        # Zotero
         zotero-connector
-
-        # Websites
-        ## YouTube
+        # YouTube
         youtube-alternative-switch
-        sponsorblock
-        return-youtube-dislikes
-        youtube-subscription-groups
-        ## Wayback Machine
+        # Wayback Machine
         wayback-machine
-        ## nyaa.si
+        # nyaa.si
         nyaa-linker
       ];
 
