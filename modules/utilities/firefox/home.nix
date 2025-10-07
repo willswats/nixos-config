@@ -311,10 +311,6 @@
                     url = "https://malsync.moe/pwa";
                   }
                   {
-                    name = "YouTube";
-                    url = "https://www.youtube.com/";
-                  }
-                  {
                     name = "ChatReplay";
                     url = "https://chatreplay.stream/subscriptions";
                   }
