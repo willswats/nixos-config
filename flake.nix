@@ -15,8 +15,8 @@
     };
 
     nixvim = {
-      url = "github:nix-community/nixvim/8e2bbc6b0bcec4154e3c18f20c6da1ba6caa7810";
-      # inputs.nixpkgs.follows = "nixpkgs"; # Add back and remove commit in url when this package arrives https://tracker.nixos.c3d2.de/?pr=448280
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     catppuccin.url = "github:catppuccin/nix";
