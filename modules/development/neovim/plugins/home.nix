@@ -37,5 +37,6 @@
     nvim-autopairs.enable = true;
     ts-autotag.enable = true;
     web-devicons.enable = true;
+    render-markdown.enable = true;
   };
 }
