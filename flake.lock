@@ -493,6 +493,22 @@
     },
     "nixpkgs_10": {
       "locked": {
+        "lastModified": 1669542132,
+        "narHash": "sha256-DRlg++NJAwPh8io3ExBJdNW7Djs3plVI5jgYQ+iXAZQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "a115bb9bd56831941be3776c8a94005867f316a7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_11": {
+      "locked": {
         "lastModified": 1744463964,
         "narHash": "sha256-LWqduOgLHCFxiTNYi3Uj5Lgz0SR+Xhw3kr/3Xd0GPTM=",
         "owner": "nixos",
@@ -718,6 +734,24 @@
         "type": "github"
       }
     },
+    "prisma": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_10"
+      },
+      "locked": {
+        "lastModified": 1759777443,
+        "narHash": "sha256-0sAAccbPU7qYdSV2Mn6gaBoJscHtrieO3pT+Rh2ODFc=",
+        "owner": "pimeys",
+        "repo": "nixos-prisma",
+        "rev": "9c97876f6e51c5c8b06fed6b5db0ed225c04add3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pimeys",
+        "repo": "nixos-prisma",
+        "type": "github"
+      }
+    },
     "purescript-overlay": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -772,6 +806,7 @@
         "nixvim": "nixvim",
         "nur": "nur",
         "nyaa": "nyaa",
+        "prisma": "prisma",
         "slippi": "slippi"
       }
     },
@@ -802,7 +837,7 @@
       "inputs": {
         "git-hooks": "git-hooks",
         "home-manager": "home-manager_2",
-        "nixpkgs": "nixpkgs_10"
+        "nixpkgs": "nixpkgs_11"
       },
       "locked": {
         "lastModified": 1755373950,
