@@ -30,7 +30,7 @@
             ''
           ];
         };
-        gdformat.enable = true;
+        gdformat.enable = true; # Godot
       };
       diagnostics = {
         markdownlint = {
@@ -40,7 +40,7 @@
             "MD013"
           ];
         };
-        gdlint.enable = true;
+        gdlint.enable = true; # Godot
       };
     };
   };
