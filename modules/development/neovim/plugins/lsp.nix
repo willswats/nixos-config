@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 let
   icons = import ../icons.nix;
@@ -59,7 +59,7 @@ in
         svelte.enable = true; # Svelte
         prismals = {
           enable = true;
-          package = inputs.prisma.packages.${pkgs.system}."@prisma/language-server";
+          package = pkgs.prisma-language-server;
         };
       };
       capabilities = capabilities;

@@ -20,7 +20,6 @@
     };
 
     catppuccin.url = "github:catppuccin/nix";
-    prisma.url = "github:pimeys/nixos-prisma";
 
     mpv-youtube-search.url = "github:willswats/mpv-youtube-search";
 
