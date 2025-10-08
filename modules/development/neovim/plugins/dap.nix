@@ -8,7 +8,6 @@
         cmd = "<CMD>";
 
         dap = "lua require'dap'";
-        dapui = "lua require'dapui'";
 
         normal =
           let
@@ -89,25 +88,27 @@
             }
             {
               inherit mode;
-              key = "<leader>dU";
-              action = "${cmd}${dapui}.toggle({reset = true})${cr}";
-              options.desc = "Toggle UI";
+              key = "<leader>dv";
+              action = "${cmd}DapViewOpen${cr}";
+              options.desc = "View open";
+            }
+            {
+              inherit mode;
+              key = "<leader>dV";
+              action = "${cmd}DapViewClose${cr}";
+              options.desc = "View close";
             }
           ];
       in
-      config.lib.nixvim.keymaps.mkKeymaps
-        {
-          options.silent = true;
-        }
-        (normal);
+      config.lib.nixvim.keymaps.mkKeymaps {
+        options.silent = true;
+      } (normal);
 
     plugins = {
       dap = {
         enable = true;
       };
-      dap-ui = {
-        enable = true;
-      };
+      dap-view.enable = true;
     };
   };
 }
