@@ -344,8 +344,8 @@
                     url = "https://infinitebacklog.net/";
                   }
                   {
-                    name = "ListenBrainz";
-                    url = "https://listenbrainz.org/";
+                    name = "last.fm";
+                    url = "https://www.last.fm";
                   }
                   {
                     name = "AlternativeTo";
