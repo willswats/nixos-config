@@ -1,7 +1,9 @@
 { pkgs, config, ... }:
 
-let icons = import ../icons.nix;
-in {
+let
+  icons = import ../../icons.nix;
+in
+{
   programs.nixvim = {
     extraPlugins = with pkgs.vimPlugins; [ friendly-snippets ];
     plugins = {
@@ -65,7 +67,11 @@ in {
             "<CR>" = "cmp.mapping.confirm({ select = false })";
           };
           formatting = {
-            fields = [ "abbr" "kind" "menu" ];
+            fields = [
+              "abbr"
+              "kind"
+              "menu"
+            ];
             format = ''
               function(_, vim_item)
                 icons_kind = ${config.lib.nixvim.toLuaObject icons.kind}

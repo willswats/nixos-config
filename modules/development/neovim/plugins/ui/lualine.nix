@@ -1,7 +1,9 @@
-{ ... }:
+{ globals, ... }:
 
-let icons = import ../icons.nix;
-in {
+let
+  icons = import ../../icons.nix;
+in
+{
   programs.nixvim = {
     plugins.lualine = {
       enable = true;

@@ -5,6 +5,7 @@
     ./autocommands.nix
     ./keymaps.nix
     ./options.nix
+    ./colorscheme.nix
     ./plugins/home.nix
   ];
 

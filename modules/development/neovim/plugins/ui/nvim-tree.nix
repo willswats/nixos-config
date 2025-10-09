@@ -1,7 +1,7 @@
 { pkgs, config, ... }:
 
 let
-  icons = import ../icons.nix;
+  icons = import ../../icons.nix;
 in
 {
   home.packages = with pkgs; [
@@ -27,11 +27,9 @@ in
             }
           ];
       in
-      config.lib.nixvim.keymaps.mkKeymaps
-        {
-          options.silent = true;
-        }
-        (normal);
+      config.lib.nixvim.keymaps.mkKeymaps {
+        options.silent = true;
+      } (normal);
 
     plugins.nvim-tree = {
       enable = true;

@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  icons = import ../icons.nix;
+  icons = import ../../icons.nix;
   capabilities = "require('cmp_nvim_lsp').default_capabilities()";
 in
 {

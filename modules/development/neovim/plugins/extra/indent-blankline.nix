@@ -1,7 +1,7 @@
 { ... }:
 
 let
-  icons = import ../icons.nix;
+  icons = import ../../icons.nix;
 in
 {
   programs.nixvim.plugins.indent-blankline = {

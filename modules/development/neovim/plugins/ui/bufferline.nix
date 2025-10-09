@@ -1,7 +1,9 @@
 { config, ... }:
 
-let icons = import ../icons.nix;
-in {
+let
+  icons = import ../../icons.nix;
+in
+{
   programs.nixvim = {
     keymaps =
       let
@@ -65,11 +67,9 @@ in {
             }
           ];
       in
-      config.lib.nixvim.keymaps.mkKeymaps
-        {
-          options.silent = true;
-        }
-        (normal);
+      config.lib.nixvim.keymaps.mkKeymaps {
+        options.silent = true;
+      } (normal);
 
     plugins.bufferline = {
       enable = true;

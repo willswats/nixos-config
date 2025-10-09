@@ -2,34 +2,32 @@
 
 {
   imports = [
-    # Language-related
-    ./lsp.nix
-    ./treesitter.nix
-    ./nvim-cmp.nix
-    ./none-ls.nix
-    ./inc-rename.nix
-    # UI
-    ./colorscheme.nix
-    ./nvim-tree.nix
-    ./bufferline.nix
-    ./lualine.nix
-    ./telescope.nix
-    ./which-key.nix
-    ./dap.nix
-    ./noice.nix
-    ./toggleterm.nix
-    # QoL
-    ./gitsigns.nix
-    ./illuminate.nix
-    ./indent-blankline.nix
-    ./multicursors.nix
-    ./auto-session.nix
-    ./ccc.nix
+    # Essential
+    ./essential/cmp.nix
+    ./essential/lsp.nix
+    ./essential/none-ls.nix
+    ./essential/treesitter.nix
+    # Extra
+    ./extra/auto-session.nix
+    ./extra/ccc.nix
+    ./extra/gitsigns.nix
+    ./extra/illuminate.nix
+    ./extra/inc-rename.nix
+    ./extra/indent-blankline.nix
+    ./extra/multicursors.nix
+    ./extra/venv-selector.nix
     # Markdown
-    ./mkdnflow.nix
-    ./markdown-preview.nix
-    # Python
-    ./venv-selector.nix
+    ./markdown/markdown-preview.nix
+    ./markdown/mkdnflow.nix
+    # UI
+    ./ui/bufferline.nix
+    ./ui/dap.nix
+    ./ui/lualine.nix
+    ./ui/noice.nix
+    ./ui/nvim-tree.nix
+    ./ui/telescope.nix
+    ./ui/toggleterm.nix
+    ./ui/which-key.nix
   ];
 
   programs.nixvim.plugins = {
