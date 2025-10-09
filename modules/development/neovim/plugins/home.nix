@@ -31,7 +31,7 @@
   ];
 
   programs.nixvim.plugins = {
-    comment.enable = true;
+    ts-comments.enable = true;
     nvim-autopairs.enable = true;
     ts-autotag.enable = true;
     web-devicons.enable = true;
