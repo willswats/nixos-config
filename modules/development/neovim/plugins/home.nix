@@ -37,6 +37,5 @@
     ts-autotag.enable = true;
     nvim-autopairs.enable = true;
     friendly-snippets.enable = true;
-    render-markdown.enable = true;
   };
 }
