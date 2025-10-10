@@ -11,14 +11,17 @@
       theme = "catppuccin_mocha";
       editor = {
         bufferline = "multiple";
+        cursorline = true;
         cursor-shape.insert = "bar";
         indent-guides.render = true;
       };
-      keys = {
-        normal = {
-          space.w = ":w";
-          space.q = ":q";
+      editor = {
+        lsp = {
+          display-inlay-hints = true; # type hints
         };
+        inline-diagnostics.cursor-line = "hint"; # cursor-line diagnostics
+      };
+      keys = {
         insert = {
           j.k = "normal_mode";
           k.j = "normal_mode";
