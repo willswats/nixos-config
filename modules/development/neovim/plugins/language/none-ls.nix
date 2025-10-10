@@ -7,7 +7,7 @@
       formatting = {
         prettier = {
           enable = true; # Web
-          disableTsServerFormatter = true;
+          disableTsServerFormatter = true; # Use the ts_ls language server formatter instead
         };
         nixpkgs_fmt.enable = true; # Nix
         shfmt.enable = true; # Bash
