@@ -1,15 +1,19 @@
 { ... }:
 
+let
+  icons = import ../../icons.nix;
+in
 {
   programs.nixvim.plugins.blink-cmp = {
     enable = true;
     settings = {
+      appearance.kind_icons = icons.kind;
       completion = {
         accept.auto_brackets.enabled = true;
         documentation.auto_show = true;
         list.selection = {
           preselect = false;
-          auto_insert = false;
+          auto_insert = true;
         };
       };
       sources = {
