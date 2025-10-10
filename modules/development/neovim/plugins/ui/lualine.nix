@@ -1,4 +1,4 @@
-{ globals, ... }:
+{ ... }:
 
 let
   icons = import ../../icons.nix;
@@ -9,8 +9,8 @@ in
       enable = true;
       settings = {
         componentSeparators = {
-          left = icons.ui.LineMiddle;
-          right = icons.ui.LineMiddle;
+          left = "";
+          right = "";
         };
         sectionSeparators = {
           left = "";
@@ -20,14 +20,21 @@ in
         # | A | B | C                             X | Y | Z |
         # +-------------------------------------------------+
         sections = {
-          lualine_a = [ "mode" ];
+          lualine_a = [
+            {
+              __unkeyed = "mode";
+              separator.__unkeyed = "";
+            }
+          ];
           lualine_b = [
             {
               __unkeyed = "branch";
               icon.__unkeyed = icons.git.Branch;
+              separator.__unkeyed = "";
             }
             {
               __unkeyed = "diagnostics";
+              separator.__unkeyed = "";
               symbols = {
                 error = "${icons.diagnostics.Error} ";
                 warn = "${icons.diagnostics.Warning} ";
@@ -36,6 +43,7 @@ in
             }
             {
               __unkeyed = "diff";
+              separator.__unkeyed = "";
               symbols = {
                 added = "${icons.git.LineAdded} ";
                 modified = "${icons.git.LineModified} ";
@@ -43,9 +51,24 @@ in
               };
             }
           ];
-          lualine_c = [ "filename" ];
-          lualine_y = [ "progress" ];
-          lualine_z = [ "location" ];
+          lualine_c = [
+            {
+              __unkeyed = "filename";
+              separator.__unkeyed = "";
+            }
+          ];
+          lualine_y = [
+            {
+              __unkeyed = "progress";
+              separator.__unkeyed = "";
+            }
+          ];
+          lualine_z = [
+            {
+              __unkeyed = "location";
+              separator.__unkeyed = "";
+            }
+          ];
         };
       };
     };
@@ -58,9 +81,16 @@ in
             {
               require("noice").api.statusline.mode.get,
               cond = require("noice").api.statusline.mode.has,
+              separator = "",
             },
-            "encoding", 
-            "filetype"
+            {
+              "encoding", 
+              separator = "",
+            },
+            {
+              "filetype",
+              separator = "",
+            },
           },
         },
       })
