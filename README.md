@@ -134,10 +134,6 @@ rm ~/.bash_history
 3. [SSH](./docs/utilities/ssh.md)
 4. [virt-manager](./docs/utilities/virt-manager.md)
 
-### Servers
-
-1. [mpd](./docs/servers/mpd.md)
-
 ### Games
 
 1. [steam](./docs/games/steam.md)
