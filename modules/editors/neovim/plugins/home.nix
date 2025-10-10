@@ -25,6 +25,7 @@
     ./qol/inc-rename.nix
     ./qol/indent-blankline.nix
     ./qol/multicursors.nix
+    ./qol/hbac.nix
     ./qol/venv-selector.nix
     # Markdown
     ./markdown/markdown-preview.nix
