@@ -2,7 +2,7 @@
 
 let
   icons = import ../../icons.nix;
-  capabilities = "require('cmp_nvim_lsp').default_capabilities()";
+  # capabilities = "require('cmp_nvim_lsp').default_capabilities()";
 in
 {
   home.packages = with pkgs; [
@@ -38,18 +38,18 @@ in
         };
         sqls = {
           enable = true;
-          onAttach.function = ''
-            client.server_capabilities.documentFormattingProvider = false
-            client.server_capabilities.documentRangeFormattingProvider = false
-          '';
+          # onAttach.function = ''
+          #   client.server_capabilities.documentFormattingProvider = false
+          #   client.server_capabilities.documentRangeFormattingProvider = false
+          # '';
         };
         html = {
           enable = true;
           # Disable formatting (conflicts with Prettier)
-          onAttach.function = ''
-            client.server_capabilities.documentFormattingProvider = false
-            client.server_capabilities.documentRangeFormattingProvider = false
-          '';
+          # onAttach.function = ''
+          #   client.server_capabilities.documentFormattingProvider = false
+          #   client.server_capabilities.documentRangeFormattingProvider = false
+          # '';
         };
         marksman.enable = true; # Markdown
         cssls.enable = true; # CSS
@@ -62,7 +62,7 @@ in
           package = pkgs.prisma-language-server;
         };
       };
-      capabilities = capabilities;
+      # capabilities = capabilities;
       keymaps = {
         silent = true;
         diagnostic = {

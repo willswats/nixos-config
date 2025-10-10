@@ -3,8 +3,9 @@
 {
   imports = [
     # Language
-    ./language/cmp.nix
     ./language/lsp.nix
+    ./language/luasnip.nix
+    ./language/blink-cmp.nix
     ./language/none-ls.nix
     ./language/treesitter.nix
     # UI
@@ -31,10 +32,11 @@
   ];
 
   programs.nixvim.plugins = {
-    ts-comments.enable = true;
-    nvim-autopairs.enable = true;
-    ts-autotag.enable = true;
     web-devicons.enable = true;
+    ts-comments.enable = true;
+    ts-autotag.enable = true;
+    nvim-autopairs.enable = true;
+    friendly-snippets.enable = true;
     render-markdown.enable = true;
   };
 }
