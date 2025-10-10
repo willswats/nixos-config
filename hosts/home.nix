@@ -16,9 +16,6 @@
     ../modules/development/fish/home.nix
     ../modules/development/git/home.nix
     ../modules/development/fzf/home.nix
-    ../modules/development/neovim/home.nix
-    ../modules/development/helix/home.nix
-    ../modules/development/vscode/home.nix
     ../modules/development/lazygit/home.nix
     ../modules/development/node/home.nix
     ../modules/development/rust/home.nix
@@ -28,6 +25,10 @@
     ../modules/development/haskell/home.nix
     ../modules/development/direnv/home.nix
     # ../modules/development/unity/home.nix
+    ../modules/editors/neovim/home.nix
+    ../modules/editors/helix/home.nix
+    ../modules/editors/zed/home.nix
+    ../modules/editors/vscode/home.nix
     ../modules/utilities/firefox/home.nix
     ../modules/utilities/chromium/home.nix
     ../modules/utilities/mpv/home.nix
