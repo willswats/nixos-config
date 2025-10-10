@@ -1,6 +1,10 @@
 { pkgs, globals, ... }:
 
 {
+  # TODO:
+  # - use vscode extensions nix flake
+  # - add C-j and C-k to jump between snippet completion
+
   # Install the following extensions manually:
   # - sqls
   # - SQL Formatter VSCode
