@@ -36,6 +36,7 @@
     ts-comments.enable = true;
     ts-autotag.enable = true;
     nvim-autopairs.enable = true;
+    nvim-surround.enable = true;
     friendly-snippets.enable = true;
   };
 }
