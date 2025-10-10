@@ -8,9 +8,9 @@
     ./language/blink-cmp.nix
     ./language/none-ls.nix
     ./language/treesitter.nix
+    ./language/dap.nix
     # UI
     ./ui/bufferline.nix
-    ./ui/dap.nix
     ./ui/lualine.nix
     ./ui/noice.nix
     ./ui/nvim-tree.nix
