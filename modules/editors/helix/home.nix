@@ -33,6 +33,7 @@
         cursorline = true;
         cursor-shape.insert = "bar";
         indent-guides.render = true;
+        completion-timeout = 5;
       };
       keys = {
         insert = {
