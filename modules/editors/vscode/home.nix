@@ -135,6 +135,39 @@
           "command" = "-selectPrevSuggestion";
           "when" = "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus";
         }
+        # Dance
+        {
+          "key" = "j";
+          "command" = "dance.openMenu";
+          "args" = {
+            "menu" = {
+              "items" = {
+                "jk" = {
+                  "text" = "escape to normal";
+                  "command" = "dance.modes.set.normal";
+                };
+              };
+            };
+            "prefix" = "j";
+          };
+          "when" = "editorTextFocus && dance.mode == 'helix/insert'";
+        }
+        {
+          "key" = "k";
+          "command" = "dance.openMenu";
+          "args" = {
+            "menu" = {
+              "items" = {
+                "kj" = {
+                  "text" = "escape to normal";
+                  "command" = "dance.modes.set.normal";
+                };
+              };
+            };
+            "prefix" = "k";
+          };
+          "when" = "editorTextFocus && dance.mode == 'helix/insert'";
+        }
       ];
     };
   };
