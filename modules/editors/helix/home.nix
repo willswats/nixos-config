@@ -33,11 +33,6 @@
         cursor-shape.insert = "bar";
         indent-guides.render = true;
       };
-      editor = {
-        lsp = {
-          display-inlay-hints = true; # type hints
-        };
-      };
       keys = {
         insert = {
           j.k = "normal_mode";
