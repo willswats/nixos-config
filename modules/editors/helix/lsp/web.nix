@@ -86,4 +86,39 @@
       formatter = { command = 'prettier', args = ["--parser", "typescript"] }
       auto-format = true
     '';
+
+  xdg.configFile."helix/external-snippets.toml".text = lib.mkAfter ''
+    [[sources.paths]] 
+    scope = [ "html" ]  
+    path = "snippets/html.json"
+
+    [[sources.paths]] 
+    scope = [ "css" ]  
+    path = "snippets/css.json"
+
+    [[sources.paths]] 
+    scope = [ "javascript" ]  
+    path = "snippets/javascript/javascript.json"
+
+    [[sources.paths]] 
+    scope = [ "javascriptreact" ]  
+    path = "snippets/javascript/react.json"    
+
+    [[sources.paths]] 
+    scope = [ "javascriptreact" ]  
+    path = "snippets/javascript/next.json"    
+
+    [[sources.paths]] 
+    scope = [ "typescript" ]  
+    path = "snippets/javascript/typescript.json"
+
+    [[sources.paths]] 
+    scope = [ "typescriptreact" ]  
+    path = "snippets/javascript/react-ts.json"    
+
+    [[sources.paths]] 
+    scope = [ "typescriptreact" ]  
+    path = "snippets/javascript/next-ts.json"    
+  '';
+
 }

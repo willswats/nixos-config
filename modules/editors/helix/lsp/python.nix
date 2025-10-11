@@ -20,4 +20,11 @@
     args = ["server"]
     auto-format = true
   '';
+
+
+  xdg.configFile."helix/external-snippets.toml".text = lib.mkAfter ''
+    [[sources.paths]] 
+    scope = [ "python" ]  
+    path = "snippets/python/python.json"
+  '';
 }

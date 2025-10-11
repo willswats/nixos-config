@@ -13,4 +13,10 @@
     formatter = { command = "nixpkgs-fmt" }      
     auto-format = true
   '';
+
+  xdg.configFile."helix/external-snippets.toml".text = lib.mkAfter ''
+    [[sources.paths]] 
+    scope = [ "nix" ]  
+    path = "snippets/nix.json"    
+  '';
 }

@@ -2,13 +2,13 @@
 
 {
   imports = [
+    ./lsp/completion.nix
     ./lsp/nix.nix
     ./lsp/web.nix
     ./lsp/markdown.nix
     ./lsp/python.nix
     ./lsp/rust.nix
     ./lsp/godot.nix
-    ./lsp/completion.nix
   ];
 
   xdg.mimeApps = {

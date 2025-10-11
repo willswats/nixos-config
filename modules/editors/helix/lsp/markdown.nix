@@ -28,6 +28,13 @@
     comment-tokens = ["-", "+", "*", "- [ ]", ">"]
   '';
 
+
+  xdg.configFile."helix/external-snippets.toml".text = lib.mkAfter ''
+    [[sources.paths]] 
+    scope = [ "markdown" ]  
+    path = "snippets/markdown.json"    
+  '';
+
   # Configure efm-langserver to use markdownlint-cli
   # https://github.com/helix-editor/helix/discussions/11639#discussioncomment-10572676
   xdg.configFile."efm-langserver/config.yaml".text = ''

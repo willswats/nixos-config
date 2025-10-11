@@ -18,4 +18,10 @@
     formatter = { command = "gdformat", args = ["-"] }
     auto-format = true
   '';
+
+  xdg.configFile."helix/external-snippets.toml".text = ''
+    [[sources.paths]] 
+    scope = [ "gdscript" ]
+    path = "snippets/gdscript.json"
+  '';
 }

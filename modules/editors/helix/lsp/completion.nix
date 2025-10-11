@@ -26,57 +26,5 @@
     [[sources]] 
     name = "friendly-snippets"  
     git = "https://github.com/rafamadriz/friendly-snippets.git" 
-    
-    [[sources.paths]] 
-    scope = [ "html" ]  
-    path = "snippets/html.json"
-    
-    [[sources.paths]] 
-    scope = [ "css" ]  
-    path = "snippets/css.json"
-
-    [[sources.paths]] 
-    scope = [ "javascript" ]  
-    path = "snippets/javascript/javascript.json"
-
-    [[sources.paths]] 
-    scope = [ "javascriptreact" ]  
-    path = "snippets/javascript/react.json"    
-
-    [[sources.paths]] 
-    scope = [ "javascriptreact" ]  
-    path = "snippets/javascript/next.json"    
-
-    [[sources.paths]] 
-    scope = [ "typescript" ]  
-    path = "snippets/javascript/typescript.json"
-
-    [[sources.paths]] 
-    scope = [ "typescriptreact" ]  
-    path = "snippets/javascript/react-ts.json"    
-    
-    [[sources.paths]] 
-    scope = [ "typescriptreact" ]  
-    path = "snippets/javascript/next-ts.json"    
-
-    [[sources.paths]] 
-    scope = [ "markdown" ]  
-    path = "snippets/markdown.json"    
-
-    [[sources.paths]] 
-    scope = [ "nix" ]  
-    path = "snippets/nix.json"    
-
-    [[sources.paths]] 
-    scope = [ "python" ]  
-    path = "snippets/python/python.json"
-
-    [[sources.paths]] 
-    scope = [ "rust" ]  
-    path = "snippets/rust/rust.json"
-
-    [[sources.paths]] 
-    scope = [ "gdscript" ]
-    path = "snippets/gdscript.json"
   '';
 }

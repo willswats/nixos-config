@@ -16,4 +16,11 @@
     formatter = { command = "taplo", args = ["format", "-"] }
     auto-format = true
   '';
+
+
+  xdg.configFile."helix/external-snippets.toml".text = ''
+    [[sources.paths]] 
+    scope = [ "rust" ]  
+    path = "snippets/rust/rust.json"
+  '';
 }
