@@ -1,7 +1,6 @@
 { lib, pkgs, ... }:
 
 {
-
   programs.helix.extraPackages = with pkgs; [
     nil # Nix LSP
     nixpkgs-fmt # Nix Formatter

@@ -26,11 +26,7 @@
     [[sources]] 
     name = "friendly-snippets"  
     git = "https://github.com/rafamadriz/friendly-snippets.git" 
-
-    [[sources.paths]] 
-    scope = [ "python" ]  
-    path = "snippets/python/python.json"
-
+    
     [[sources.paths]] 
     scope = [ "html" ]  
     path = "snippets/html.json"
@@ -66,5 +62,21 @@
     [[sources.paths]] 
     scope = [ "markdown" ]  
     path = "snippets/markdown.json"    
+
+    [[sources.paths]] 
+    scope = [ "nix" ]  
+    path = "snippets/nix.json"    
+
+    [[sources.paths]] 
+    scope = [ "python" ]  
+    path = "snippets/python/python.json"
+
+    [[sources.paths]] 
+    scope = [ "rust" ]  
+    path = "snippets/rust/rust.json"
+
+    [[sources.paths]] 
+    scope = [ "gdscript" ]
+    path = "snippets/gdscript.json"
   '';
 }
