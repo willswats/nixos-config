@@ -1,10 +1,9 @@
-{
-  lib,
-  config,
-  pkgs,
-  host,
-  globals,
-  ...
+{ lib
+, config
+, pkgs
+, host
+, globals
+, ...
 }:
 
 {
@@ -153,7 +152,7 @@
           }
         ];
         gaps.smartBorders = "on";
-        bars = [ { command = waybar; } ];
+        bars = [{ command = waybar; }];
         input = {
           "*" = {
             xkb_layout = "gb";
@@ -297,7 +296,7 @@
           "${mod}+Shift+m" = "exec ${tidal-hifi}"; # Streaming music player
 
           "${mod}+e" = "exec ${kitty} ${yazi}"; # File explorer
-          "${mod}+t" = "exec ${kitty} nvim"; # Text editor (not specifying the binary as it doesn't load my config)
+          "${mod}+t" = "exec ${kitty} $EDITOR"; # Text editor
           "${mod}+s" = "exec ${kitty} ${btm} -b"; # Process monitor
           "${mod}+b" = "exec ${kitty} ${bluetuith}"; # Bluetooth manager
           "${mod}+n" = "exec ${kitty} ${nyaa}"; # Nyaa

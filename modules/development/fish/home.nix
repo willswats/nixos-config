@@ -1,8 +1,7 @@
-{
-  pkgs,
-  globals,
-  host,
-  ...
+{ pkgs
+, globals
+, host
+, ...
 }:
 
 {
@@ -70,9 +69,9 @@
         # CD
         cduni = "cd ${universityDirectory}";
         cdcode = "cd ${codeDirectory}";
-        # nvim
-        nvconf = "cd ${nixosConfigDirectory}; nvim";
-        nvnote = "cd ${notebookDirectory}; nvim ${notebookDirectory}/1-ToDo/1-Today.md";
+        # Edit
+        edconf = "cd ${nixosConfigDirectory}; $EDITOR";
+        ednote = "cd ${notebookDirectory}; $EDITOR ${notebookDirectory}/1-ToDo/1-Today.md";
 
         # gh
         ghicc = ghIssueCloseCommit.outPath;

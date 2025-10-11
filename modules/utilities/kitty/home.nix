@@ -27,7 +27,7 @@ in
     };
     keybindings = {
       "ctrl+shift+enter" = "new_tab_with_cwd";
-      "ctrl+shift+t" = "new_tab_with_cwd nvim";
+      "ctrl+shift+t" = "new_tab_with_cwd $EDITOR";
       "ctrl+shift+e" = "new_tab_with_cwd ${yazi}";
     };
   };
