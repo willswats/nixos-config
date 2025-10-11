@@ -25,7 +25,8 @@
       extensions = with pkgs.nix-vscode-extensions.vscode-marketplace; [
         catppuccin.catppuccin-vsc # catppuccin
         catppuccin.catppuccin-vsc-icons # catppuccin icons
-        jasew.vscode-helix-emulation # helix emulation
+        gregoire.dance # kakoune modal-editing 
+        gregoire.dance-helix # helix keymaps for dance
         ms-vsliveshare.vsliveshare # live share
         jnoortheen.nix-ide # nix
         esbenp.prettier-vscode # prettier (formatter)
@@ -70,6 +71,12 @@
           };
           # nix-ide
           "nix.enableLanguageServer" = true;
+          # dance
+          "dance.modes" = {
+            "helix/normal" = {
+              "lineNumbers" = "inherit";
+            };
+          };
         };
       keybindings = [
         # Use the standard tab instead of the most recent tab menu
