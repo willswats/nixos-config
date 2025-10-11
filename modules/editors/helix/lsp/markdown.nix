@@ -1,7 +1,6 @@
 { lib, pkgs, ... }:
 
 {
-
   programs.helix.extraPackages = with pkgs; [
     marksman # MD Language server
     harper # Spell checker
@@ -26,8 +25,7 @@
     language-servers = [ "marksman", "harper-ls", { name = "efm", only-features = [ "diagnostics" ] } ]
     auto-format = true
     soft-wrap.enable = true
-
-    
+    comment-tokens = ["-", "+", "*", "- [ ]", ">"]
   '';
 
   # Configure efm-langserver to use markdownlint-cli
