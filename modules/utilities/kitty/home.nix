@@ -23,6 +23,7 @@ in
       tab_bar_edge = "top";
       tab_bar_style = "separator";
       tab_separator = "|";
+      allow_remote_control = true;
     };
     keybindings = {
       "ctrl+shift+enter" = "new_tab_with_cwd";

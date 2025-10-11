@@ -10,7 +10,6 @@
   xdg.configFile."helix/languages.toml".text = lib.mkAfter ''
     [[language]]
     name = "nix"
-    auto-format = true
     formatter = { command = "nixpkgs-fmt" }      
   '';
 }

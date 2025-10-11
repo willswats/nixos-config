@@ -15,6 +15,7 @@
     settings = {
       theme = "catppuccin_mocha";
       editor = {
+        auto-format = true;
         bufferline = "multiple";
         cursorline = true;
         cursor-shape.insert = "bar";
@@ -31,15 +32,28 @@
           k.j = "normal_mode";
         };
         normal = {
-          # Lazygit integration - https://helix-editor.vercel.app/help/recipes#git-integration
+          # Lazygit integration - https://github.com/helix-editor/helix/discussions/12045#discussioncomment-11277859
           C-g = [
-            ":write-all"
-            ":new"
-            ":insert-output lazygit"
-            ":buffer-close!"
-            ":redraw"
+            ":sh kitty @ launch --no-response --cwd=current --type=overlay --copy-env lazygit"
             ":reload-all"
           ];
+          # Yazi integration - https://github.com/helix-editor/helix/discussions/12934#discussioncomment-12438498
+          C-e =
+            let
+              echo = ''
+                \x1b[?1049h\x1b[?2004h
+              '';
+            in
+            [
+              ":sh rm -f /tmp/unique-file"
+              ":insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file"
+              ":insert-output echo '${echo}' > /dev/tty"
+              ":open %sh{cat /tmp/unique-file}"
+              ":redraw"
+            ];
+          # More intuitive x and X motions - https://helix-editor.vercel.app/help/recipes#more-intuitive-x-and-x-motions
+          x = "select_line_below";
+          X = "select_line_above";
         };
       };
     };

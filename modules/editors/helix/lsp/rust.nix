@@ -13,6 +13,5 @@
     [[language]]
     name = "toml"
     formatter = { command = "taplo", args = ["format", "-"] }
-    auto-format = true
   '';
 }
