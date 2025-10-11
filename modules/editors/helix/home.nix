@@ -30,6 +30,17 @@
           j.k = "normal_mode";
           k.j = "normal_mode";
         };
+        normal = {
+          # Lazygit integration - https://helix-editor.vercel.app/help/recipes#git-integration
+          C-g = [
+            ":write-all"
+            ":new"
+            ":insert-output lazygit"
+            ":buffer-close!"
+            ":redraw"
+            ":reload-all"
+          ];
+        };
       };
     };
   };
