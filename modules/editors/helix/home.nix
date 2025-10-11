@@ -33,6 +33,8 @@
         normal = {
           space.w = ":w";
           space.q = ":q";
+          space.c = ":bc";
+          space.C = ":bco";
           C-r = ":reload-all";
           # Lazygit integration - https://github.com/helix-editor/helix/discussions/12045#discussioncomment-11277859
           # Note: using insert-output for lazygit breaks key handling in kitty, whereas this method doesn't, however,
