@@ -4,6 +4,7 @@
 
   programs.helix.extraPackages = with pkgs; [
     netcat
+    gdtoolkit_4
   ];
 
   xdg.configFile."helix/languages.toml".text = lib.mkAfter ''
@@ -14,5 +15,7 @@
     [[language]]
     name = "gdscript"
     language-servers = [ "godot", "scls" ]
+    formatter = { command = "gdformat", args = ["-"] }
+    auto-format = true
   '';
 }
