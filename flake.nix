@@ -18,6 +18,7 @@
       url = "github:nix-community/nixvim/8e2bbc6b0bcec4154e3c18f20c6da1ba6caa7810";
       # inputs.nixpkgs.follows = "nixpkgs"; # Add back and remove commit in url when this package arrives https://tracker.nixos.c3d2.de/?pr=448280
     };
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
     catppuccin.url = "github:catppuccin/nix";
 
@@ -33,18 +34,17 @@
   };
 
   outputs =
-    {
-      nixpkgs,
-      nixos-hardware,
-      home-manager,
-      nur,
-      nixvim,
-      catppuccin,
-      slippi,
-      nix-gaming,
-      bsp-casefolding-workaround,
-      nyaa,
-      ...
+    { nixpkgs
+    , nixos-hardware
+    , home-manager
+    , nur
+    , nixvim
+    , catppuccin
+    , slippi
+    , nix-gaming
+    , bsp-casefolding-workaround
+    , nyaa
+    , ...
     }@inputs:
     {
       nixosConfigurations =

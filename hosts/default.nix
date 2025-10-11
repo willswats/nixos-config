@@ -1,9 +1,8 @@
-{
-  pkgs,
-  host,
-  globals,
-  inputs,
-  ...
+{ pkgs
+, host
+, globals
+, inputs
+, ...
 }:
 
 let
@@ -45,7 +44,10 @@ in
     ];
   };
 
-  nixpkgs.overlays = [ inputs.nixpkgs-wayland.overlay ];
+  nixpkgs.overlays = [
+    inputs.nixpkgs-wayland.overlay
+    inputs.nix-vscode-extensions.overlays.default
+  ];
 
   # 6.10 is needed for Vocaster One drivers
   boot.kernelPackages = pkgs.linuxPackages_latest;
