@@ -13,6 +13,6 @@
 
     [[language]]
     name = "gdscript"
-    language-servers = [ "godot" ]
+    language-servers = [ "godot", "scls" ]
   '';
 }

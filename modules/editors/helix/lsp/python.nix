@@ -10,7 +10,7 @@
   xdg.configFile."helix/languages.toml".text = lib.mkAfter ''
     [[language]]
     name = "python"
-    language-servers = [ "pyright", "ruff" ]
+    language-servers = [ "pyright", "ruff", "scls" ]
 
     [language-server.pyright.config.python.analysis]
     typeCheckingMode = "basic"

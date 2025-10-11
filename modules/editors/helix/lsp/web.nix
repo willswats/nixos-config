@@ -15,6 +15,7 @@
     language-servers = [
       "typescript-language-server",
       "vscode-eslint-language-server",
+      "scls"
     ]
 
     [[language]]
@@ -22,6 +23,7 @@
     language-servers = [
       "typescript-language-server",
       "vscode-eslint-language-server",
+      "scls"
     ]
 
     [[language]]

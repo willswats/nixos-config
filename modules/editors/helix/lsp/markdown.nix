@@ -22,7 +22,7 @@
     [[language]]
     name = "markdown"
     formatter = { command = 'prettier', args = ["--parser", "markdown"] }
-    language-servers = [ "marksman", "harper-ls", { name = "efm", only-features = [ "diagnostics" ] } ]
+    language-servers = [ "marksman", "harper-ls", { name = "efm", only-features = [ "diagnostics" ] }, "scls" ]
     auto-format = true
     soft-wrap.enable = true
     comment-tokens = ["-", "+", "*", "- [ ]", ">"]
