@@ -32,10 +32,12 @@
           k.j = "normal_mode";
         };
         normal = {
+          C-r = ":reload-all";
           # Lazygit integration - https://github.com/helix-editor/helix/discussions/12045#discussioncomment-11277859
+          # Note: using insert-output for lazygit breaks key handling in kitty, however, this method requires a manual reload-all
+          # to see updated git gutters as the sh command is not async and reload-all will not run if added to the C-g below
           C-g = [
             ":sh kitty @ launch --no-response --cwd=current --type=overlay --copy-env lazygit"
-            ":reload-all"
           ];
           # Yazi integration - https://github.com/helix-editor/helix/discussions/12934#discussioncomment-12438498
           C-e =
