@@ -2,7 +2,12 @@
 
 {
   imports = [
-    ../lsp/home.nix
+    ./lsp/nix.nix
+    ./lsp/web.nix
+    ./lsp/markdown.nix
+    ./lsp/python.nix
+    ./lsp/rust.nix
+    ./lsp/godot.nix
   ];
 
   programs.helix = {
@@ -19,7 +24,6 @@
         lsp = {
           display-inlay-hints = true; # type hints
         };
-        inline-diagnostics.cursor-line = "hint"; # cursor-line diagnostics
       };
       keys = {
         insert = {
@@ -29,4 +33,7 @@
       };
     };
   };
+
+  # https://helix-editor.vercel.app/reference/language-servers
+  xdg.configFile."helix/languages.toml".text = '''';
 }
