@@ -18,17 +18,16 @@ in
           installRustc = true;
         };
         clangd.enable = true; # C, C++
-        csharp_ls.enable = true; # C#
+        omnisharp.enable = true; # C#
         nil_ls.enable = true; # Nix
         lua_ls.enable = true; # Lua
         pyright.enable = true; # Python
         ruff.enable = true; # Python (Format & Lint)
-        dartls.enable = true; # Dart
         bashls.enable = true; # Bash
         taplo.enable = true; # TOML
         gdscript = {
           enable = true;
-          package = null;
+          package = null; # Uses Godot
         };
         sqls = {
           enable = true;
@@ -45,16 +44,16 @@ in
             client.server_capabilities.documentRangeFormattingProvider = false
           '';
         };
-        marksman.enable = true; # Markdown
         cssls.enable = true; # CSS
         jsonls.enable = true; # JSON
-        ts_ls.enable = true; # TypeScript
         eslint.enable = true; # JavaScript Linter
+        ts_ls.enable = true; # TypeScript
         svelte.enable = true; # Svelte
         prismals = {
           enable = true;
           package = pkgs.prisma-language-server;
         };
+        marksman.enable = true; # Markdown
       };
       keymaps = {
         silent = true;
