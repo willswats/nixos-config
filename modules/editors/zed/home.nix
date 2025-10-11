@@ -23,14 +23,23 @@
       "catppuccin"
       "catppuccin-icons"
       # LSP
+      ## Nix
       "nix"
+      ## SQL
       "sql"
-      "ruff"
+      ## Web
+      "svelte"
+      ## Markdown
       "marksman"
       "markdownlint"
+      ## Python
+      "ruff"
+      ## Godot
       "gdscript"
+      ## Lua
       "lua"
-      "svelte"
+      ## Rust
+      "toml"
     ];
   };
 
