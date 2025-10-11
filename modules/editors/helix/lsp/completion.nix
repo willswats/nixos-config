@@ -18,4 +18,53 @@
     feature_paths = false                # enable path completion
     feature_citations = false            # enable citation completion (only on `citation` feature enabled)    
   '';
+
+  # Snippets: https://github.com/rafamadriz/friendly-snippets/tree/main/snippets
+  # Use language identifier for scope field:
+  # https://code.visualstudio.com/docs/languages/identifiers#_known-language-identifiers
+  xdg.configFile."helix/external-snippets.toml".text = ''
+    [[sources]] 
+    name = "friendly-snippets"  
+    git = "https://github.com/rafamadriz/friendly-snippets.git" 
+
+    [[sources.paths]] 
+    scope = [ "python" ]  
+    path = "snippets/python/python.json"
+
+    [[sources.paths]] 
+    scope = [ "html" ]  
+    path = "snippets/html.json"
+    
+    [[sources.paths]] 
+    scope = [ "css" ]  
+    path = "snippets/css.json"
+
+    [[sources.paths]] 
+    scope = [ "javascript" ]  
+    path = "snippets/javascript/javascript.json"
+
+    [[sources.paths]] 
+    scope = [ "javascriptreact" ]  
+    path = "snippets/javascript/react.json"    
+
+    [[sources.paths]] 
+    scope = [ "javascriptreact" ]  
+    path = "snippets/javascript/next.json"    
+
+    [[sources.paths]] 
+    scope = [ "typescript" ]  
+    path = "snippets/javascript/typescript.json"
+
+    [[sources.paths]] 
+    scope = [ "typescriptreact" ]  
+    path = "snippets/javascript/react-ts.json"    
+    
+    [[sources.paths]] 
+    scope = [ "typescriptreact" ]  
+    path = "snippets/javascript/next-ts.json"    
+
+    [[sources.paths]] 
+    scope = [ "markdown" ]  
+    path = "snippets/markdown.json"    
+  '';
 }
