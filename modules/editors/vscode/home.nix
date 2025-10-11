@@ -2,9 +2,14 @@
 
 {
   home.packages = with pkgs; [
+    # sql
     sqls
     sql-formatter
+    # python
     ruff
+    # nix
+    nil
+    nixfmt
   ];
 
   programs.vscode = {
@@ -13,6 +18,8 @@
     profiles.default = {
       enableUpdateCheck = false;
       enableExtensionUpdateCheck = false;
+      # Search for extensions:
+      # https://marketplace.visualstudio.com
       # To see if an extension is in the overlay:
       # https://raw.githubusercontent.com/nix-community/nix-vscode-extensions/refs/heads/master/data/cache/vscode-marketplace-latest.json
       extensions = with pkgs.nix-vscode-extensions.vscode-marketplace; [
@@ -20,6 +27,7 @@
         catppuccin.catppuccin-vsc-icons # catppuccin icons
         jasew.vscode-helix-emulation # helix emulation
         ms-vsliveshare.vsliveshare # live share
+        jnoortheen.nix-ide # nix
         esbenp.prettier-vscode # prettier (formatter)
         dbaeumer.vscode-eslint # eslint (js lint)
         ms-python.vscode-pylance # pylance (lsp)
@@ -60,6 +68,8 @@
           "[python]" = {
             "editor.defaultFormatter" = "charliermarsh.ruff";
           };
+          # nix-ide
+          "nix.enableLanguageServer" = true;
         };
       keybindings = [
         # Use the standard tab instead of the most recent tab menu
