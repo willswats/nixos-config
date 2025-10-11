@@ -30,11 +30,6 @@ in
           enable = true;
           package = null;
         };
-        hls = {
-          # Haskell
-          enable = true;
-          installGhc = true;
-        };
         sqls = {
           enable = true;
           onAttach.function = ''
