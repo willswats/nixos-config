@@ -31,6 +31,7 @@
   '';
 
   # Configure efm-langserver to use markdownlint-cli
+  # https://github.com/helix-editor/helix/discussions/11639#discussioncomment-10572676
   xdg.configFile."efm-langserver/config.yaml".text = ''
     version: 2
     #log-file: "/Users/some-user/.config/efm-langserver/log.log"
