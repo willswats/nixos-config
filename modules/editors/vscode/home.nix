@@ -57,18 +57,11 @@
           "workbench.colorTheme" = "Catppuccin Mocha";
           "workbench.iconTheme" = "catppuccin-mocha";
           # SQL Formatter VSCode
-          "[sql]" = {
-            "editor.defaultFormatter" = "ReneSaarsoo.sql-formatter-vsc";
-          };
           "SQL-Formatter-VSCode.dialect" = "postgresql";
           "SQL-Formatter-VSCode.tabSizeOverride" = 4;
           "SQL-Formatter-VSCode.keywordCase" = "upper";
           "SQL-Formatter-VSCode.dataTypeCase" = "upper";
           "SQL-Formatter-VSCode.functionCase" = "upper";
-          # ruff
-          "[python]" = {
-            "editor.defaultFormatter" = "charliermarsh.ruff";
-          };
           # nix-ide
           "nix.enableLanguageServer" = true;
           # dance
@@ -76,6 +69,37 @@
             "helix/normal" = {
               "lineNumbers" = "inherit";
             };
+          };
+          # Set default formatters
+          "[html]" = {
+            "editor.defaultFormatter" = "esbenp.prettier-vscode";
+          };
+          "[css]" = {
+            "editor.defaultFormatter" = "esbenp.prettier-vscode";
+          };
+          "[javascript]" = {
+            "editor.defaultFormatter" = "esbenp.prettier-vscode";
+          };
+          "[javascriptreact]" = {
+            "editor.defaultFormatter" = "esbenp.prettier-vscode";
+          };
+          "[typescript]" = {
+            "editor.defaultFormatter" = "esbenp.prettier-vscode";
+          };
+          "[typescriptreact]" = {
+            "editor.defaultFormatter" = "esbenp.prettier-vscode";
+          };
+          "[json]" = {
+            "editor.defaultFormatter" = "esbenp.prettier-vscode";
+          };
+          "[markdown]" = {
+            "editor.defaultFormatter" = "esbenp.prettier-vscode";
+          };
+          "[sql]" = {
+            "editor.defaultFormatter" = "ReneSaarsoo.sql-formatter-vsc";
+          };
+          "[python]" = {
+            "editor.defaultFormatter" = "charliermarsh.ruff";
           };
         };
       keybindings = [
