@@ -10,6 +10,19 @@
     ./lsp/godot.nix
   ];
 
+  xdg.mimeApps = {
+    defaultApplications = {
+      "text/markdown" = [ "helix.desktop" ]; # markdown
+      "text/plain" = [ "helix.desktop" ]; # plain text
+      "text/html" = [ "helix.desktop" ]; # html
+      "text/css" = [ "helix.desktop" ]; # css
+      "text/vnd.trolltech.linguist" = [ "helix.desktop" ]; # ts
+      "text/csv" = [ "helix.desktop" ]; # csv
+      "application/x-subrip" = [ "helix.desktop" ]; # srt
+      "application/x-shellscript" = [ "helix.desktop" ]; # sh
+    };
+  };
+
   programs.helix = {
     enable = true;
     settings = {
