@@ -17,8 +17,9 @@
     
     [[language]]
     name = "markdown"
-    soft-wrap.enable = true
     formatter = { command = 'prettier', args = ["--parser", "markdown"] }
     language-servers = [ "marksman", "harper-ls" ]
+    auto-format = true
+    soft-wrap.enable = true
   '';
 }

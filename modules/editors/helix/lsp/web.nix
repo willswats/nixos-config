@@ -27,21 +27,26 @@
     [[language]]
     name = "html"
     formatter = { command = 'prettier', args = ["--parser", "html"] }
+    auto-format = true
 
     [[language]]
     name = "css"
     formatter = { command = 'prettier', args = ["--parser", "css"] }
+    auto-format = true
 
     [[language]]
     name = "javascript"
     formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+    auto-format = true
 
     [[language]]
     name = "typescript"
     formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+    auto-format = true
 
     [[language]]
     name = "tsx"
     formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+    auto-format = true
   '';
 }

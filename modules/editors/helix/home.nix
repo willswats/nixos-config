@@ -15,7 +15,6 @@
     settings = {
       theme = "catppuccin_mocha";
       editor = {
-        auto-format = true;
         bufferline = "multiple";
         cursorline = true;
         cursor-shape.insert = "bar";
