@@ -46,7 +46,7 @@
             ":w"
             ":format"
           ];
-          space.W = ":w";
+          space.W = ":w --no-format";
           space.q = ":q";
           space.c = ":bc";
           space.C = ":bco";
