@@ -9,6 +9,7 @@
     ./lsp/python.nix
     ./lsp/rust.nix
     ./lsp/godot.nix
+    ./lsp/c-sharp.nix
   ];
 
   xdg.mimeApps = {
