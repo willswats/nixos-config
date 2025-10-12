@@ -2,7 +2,7 @@
 
 {
   programs.helix.extraPackages = with pkgs; [
-    clangd
+    clang-tools
   ];
 
   xdg.configFile."helix/languages.toml".text = lib.mkAfter ''
