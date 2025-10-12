@@ -12,6 +12,7 @@
     name = "python"
     language-servers = [ "pyright", "ruff", "scls" ]
 
+    # Prevent ruff conflict
     [language-server.pyright.config.python.analysis]
     typeCheckingMode = "basic"
 
