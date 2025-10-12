@@ -47,6 +47,7 @@
       Service = {
         Type = "oneshot";
         ExecStart = fetch-external-snippets.outPath;
+        Environment = "PATH=${pkgs.git}/bin:${pkgs.coreutils}/bin:$PATH";
       };
 
       Unit = {
