@@ -16,7 +16,6 @@
     name = "gdscript"
     language-servers = [ "godot", "scls" ]
     formatter = { command = "gdformat", args = ["-"] }
-    auto-format = true
   '';
 
   xdg.configFile."helix/external-snippets.toml".text = ''

@@ -9,7 +9,6 @@
     [[language]]
     name = "c-sharp"
     language-servers = [ "omnisharp", "scls" ]
-    auto-format = true
   '';
 
   xdg.configFile."helix/external-snippets.toml".text = lib.mkAfter ''

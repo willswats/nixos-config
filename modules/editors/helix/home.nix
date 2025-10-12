@@ -42,7 +42,11 @@
           k.j = "normal_mode";
         };
         normal = {
-          space.w = ":w";
+          space.w = [
+            ":w"
+            ":format"
+          ];
+          space.W = ":w";
           space.q = ":q";
           space.c = ":bc";
           space.C = ":bco";

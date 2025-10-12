@@ -14,7 +14,6 @@
     name = "toml"
     language-servers = [ "rust-analyzer", "scls" ]
     formatter = { command = "taplo", args = ["format", "-"] }
-    auto-format = true
   '';
 
 

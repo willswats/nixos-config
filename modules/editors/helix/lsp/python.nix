@@ -19,7 +19,6 @@
     [language-server.ruff]
     command = "ruff"
     args = ["server"]
-    auto-format = true
   '';
 
 
