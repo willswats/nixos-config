@@ -1,15 +1,22 @@
 { ... }:
 
 {
+  # Note: a lot of the lsp config is only defined for the sake of adding scls to the language servers list, and to define the snippets for scls.
   imports = [
-    ./lsp/completion.nix
+    ./lsp/scls.nix
     ./lsp/nix.nix
     ./lsp/web.nix
+    ./lsp/svelte.nix
+    ./lsp/prisma.nix
+    ./lsp/taplo.nix
     ./lsp/markdown.nix
     ./lsp/python.nix
     ./lsp/rust.nix
     ./lsp/godot.nix
+    ./lsp/c.nix
     ./lsp/c-sharp.nix
+    ./lsp/lua.nix
+    ./lsp/bash.nix
   ];
 
   xdg.mimeApps = {

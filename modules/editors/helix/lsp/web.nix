@@ -4,7 +4,6 @@
   programs.helix.extraPackages = with pkgs; [
     vscode-langservers-extracted # HTML/CSS/JSON/ESLint language servers
     typescript-language-server # TypeScript LSP
-    svelte-language-server # Svelte LSP
     nodePackages.prettier # Formatter
   ];
 
@@ -53,6 +52,13 @@
       language-servers = [
         "typescript-language-server",
         "vscode-eslint-language-server",
+        "scls"
+      ]
+      
+      [[language]]
+      name = "json"
+      language-servers = [
+        "vscode-json-language-server",
         "scls"
       ]
 
