@@ -27,4 +27,30 @@
     name = "friendly-snippets"  
     git = "https://github.com/rafamadriz/friendly-snippets.git" 
   '';
+
+  systemd.user.services.scls =
+    let
+      scls = "${pkgs.simple-completion-language-server}/bin/simple-completion-language-server";
+      fetch-external-snippets = pkgs.writeShellScript "fetchExternalSnippets.sh" ''
+        SNIPPETS_DIR="$HOME/.config/helix/external-snippets/"
+
+        if [ ! -d "$SNIPPETS_DIR" ]; then
+            ${scls} fetch-external-snippets
+        fi
+      '';
+    in
+    {
+      Install = {
+        WantedBy = [ "default.target" ];
+      };
+
+      Service = {
+        Type = "oneshot";
+        ExecStart = fetch-external-snippets.outPath;
+      };
+
+      Unit = {
+        Description = "simple-completion-language-server - fetch external snippets";
+      };
+    };
 }
