@@ -17,6 +17,7 @@
     ./lsp/c-sharp.nix
     ./lsp/lua.nix
     ./lsp/bash.nix
+    ./lsp/sql.nix
   ];
 
   xdg.mimeApps = {
