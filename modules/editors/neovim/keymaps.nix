@@ -83,6 +83,12 @@
               action = "${cmd}nohlsearch${cr}";
               options.desc = "No highlight";
             }
+            # Set redo
+            {
+              inherit mode;
+              key = "U";
+              action = "${cmd}redo${cr}";
+            }
             # Refresh file
             {
               inherit mode;
@@ -169,10 +175,8 @@
             }
           ];
       in
-      config.lib.nixvim.keymaps.mkKeymaps
-        {
-          options.silent = true;
-        }
-        (normal ++ insert ++ visual ++ terminal);
+      config.lib.nixvim.keymaps.mkKeymaps {
+        options.silent = true;
+      } (normal ++ insert ++ visual ++ terminal);
   };
 }
