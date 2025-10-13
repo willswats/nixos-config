@@ -17,11 +17,17 @@ in
         prompt_prefix = "${icons.ui.Telescope} ";
         selection_caret = "${icons.ui.Forward} ";
         # Exit Telescope in one key press
-        mappings.i."<esc>".__raw = ''
-          function(...)
-            return require("telescope.actions").close(...)
-          end
-        '';
+        mappings = {
+          i = {
+            "<esc>".__raw = ''
+              function(...)
+                return require("telescope.actions").close(...)
+              end
+            '';
+            "<Tab>".__raw = "require('telescope.actions').move_selection_next";
+            "S-<Tab>".__raw = "require('telescope.actions').move_selection_previous";
+          };
+        };
       };
       keymaps = {
         "<leader>f" = {
@@ -30,7 +36,7 @@ in
         };
         "<leader>/" = {
           action = "live_grep";
-          options.desc = "Global search in workspace folder";
+          options.desc = "Global search";
         };
         "<leader>'" = {
           action = "resume";
@@ -43,6 +49,14 @@ in
         "<leader>d" = {
           action = "diagnostics";
           options.desc = "Open diagnostics picker";
+        };
+        "<leader>s" = {
+          action = "telescope_document_symbols";
+          options.desc = "Open symbol picker";
+        };
+        "<leader>e" = {
+          action = "file_browser";
+          options.desc = "Open file explorer";
         };
       };
     };

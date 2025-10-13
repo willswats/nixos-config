@@ -15,17 +15,15 @@
           [
             {
               inherit mode;
-              key = "<leader>s";
+              key = "<leader>l";
               action = "${cmd}Telescope session-lens${cr}";
-              options.desc = "Open session picker";
+              options.desc = "Open session-lens picker";
             }
           ];
       in
-      config.lib.nixvim.keymaps.mkKeymaps
-        {
-          options.silent = true;
-        }
-        (normal);
+      config.lib.nixvim.keymaps.mkKeymaps {
+        options.silent = true;
+      } (normal);
     plugins.auto-session.enable = true;
   };
 
