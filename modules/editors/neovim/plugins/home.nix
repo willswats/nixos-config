@@ -4,10 +4,10 @@
   imports = [
     # Language
     ./language/lsp.nix
+    ./language/treesitter.nix
     ./language/luasnip.nix
     ./language/blink-cmp.nix
     ./language/none-ls.nix
-    ./language/treesitter.nix
     ./language/dap.nix
     # UI
     ./ui/bufferline.nix
@@ -30,11 +30,13 @@
   ];
 
   programs.nixvim.plugins = {
+    # UI
     web-devicons.enable = true;
+    # Language
+    friendly-snippets.enable = true;
     ts-comments.enable = true;
     ts-autotag.enable = true;
     nvim-autopairs.enable = true;
     nvim-surround.enable = true;
-    friendly-snippets.enable = true;
   };
 }

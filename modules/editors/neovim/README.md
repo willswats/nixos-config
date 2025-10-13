@@ -16,9 +16,11 @@ My [Nixvim](https://github.com/nix-community/nixvim) config.
 - [ts-comments.nvim](https://github.com/folke/ts-comments.nvim)
 - [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+- [nvim-surround](https://github.com/kylechui/nvim-surround)
 
 ### UI
 
+- [nvim-web-dev-icons](https://github.com/nvim-tree/nvim-web-devicons)
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - [yazi.nvim](https://github.com/mikavilpas/yazi.nvim/)
@@ -35,7 +37,6 @@ My [Nixvim](https://github.com/nix-community/nixvim) config.
 - [multicursors.nvim](https://github.com/smoka7/multicursors.nvim)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [venv-selector](https://github.com/linux-cultist/venv-selector.nvim)
-- [nvim-web-dev-icons](https://github.com/nvim-tree/nvim-web-devicons)
 
 ### Markdown
 
