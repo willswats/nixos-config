@@ -1,0 +1,34 @@
+{ config, ... }:
+
+{
+  programs.nixvim = {
+    keymaps =
+      let
+        cr = "<CR>";
+        cmd = "<CMD>";
+
+        normal =
+          let
+            mode = "n";
+          in
+          [
+            {
+              inherit mode;
+              key = "<leader>e";
+              action = "${cmd}NvimTreeToggle${cr}";
+              options.desc = "Explorer";
+            }
+          ];
+      in
+      config.lib.nixvim.keymaps.mkKeymaps {
+        options.silent = true;
+      } (normal);
+
+    plugins.yazi = {
+      enable = true;
+      open_for_directories = true;
+      floating_window_scaling_factor = 1;
+      yazi_floating_window_border = "single";
+    };
+  };
+}

@@ -12,7 +12,7 @@
     # UI
     ./ui/bufferline.nix
     ./ui/lualine.nix
-    ./ui/nvim-tree.nix
+    ./ui/yazi.nix
     ./ui/telescope.nix
     ./ui/which-key.nix
     # QoL
