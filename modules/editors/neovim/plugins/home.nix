@@ -17,6 +17,7 @@
     ./ui/which-key.nix
     ./ui/gitsigns.nix
     ./ui/indent-blankline.nix
+    ./ui/inline-diagnostic.nix
     # QoL
     ./qol/auto-session.nix
     ./qol/ccc.nix
