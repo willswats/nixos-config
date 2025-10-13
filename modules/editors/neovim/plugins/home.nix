@@ -15,13 +15,13 @@
     ./ui/yazi.nix
     ./ui/telescope.nix
     ./ui/which-key.nix
+    ./ui/gitsigns.nix
+    ./ui/indent-blankline.nix
     # QoL
     ./qol/auto-session.nix
     ./qol/ccc.nix
-    ./qol/gitsigns.nix
     ./qol/illuminate.nix
     ./qol/inc-rename.nix
-    ./qol/indent-blankline.nix
     ./qol/multicursors.nix
     ./qol/venv-selector.nix
     # Markdown
