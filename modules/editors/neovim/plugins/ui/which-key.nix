@@ -24,10 +24,6 @@
             __unkeyed-1 = "<leader>m";
             desc = "Multicursors";
           }
-          {
-            __unkeyed-1 = "<leader>t";
-            desc = "Terminal";
-          }
         ];
       };
     };

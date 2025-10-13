@@ -33,14 +33,12 @@ in
               inherit mode;
               key = "<leader>v";
               action = "${cmd}VenvSelect${cr}";
-              options.desc = "Venv";
+              options.desc = "Open venv picker";
             }
           ];
       in
-      config.lib.nixvim.keymaps.mkKeymaps
-        {
-          options.silent = true;
-        }
-        (normal);
+      config.lib.nixvim.keymaps.mkKeymaps {
+        options.silent = true;
+      } (normal);
   };
 }
