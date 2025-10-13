@@ -21,7 +21,6 @@
     # QoL
     ./qol/auto-session.nix
     ./qol/ccc.nix
-    ./qol/inc-rename.nix
     ./qol/multicursors.nix
     ./qol/venv-selector.nix
     # Markdown
