@@ -54,10 +54,6 @@ in
           action = "telescope_document_symbols";
           options.desc = "Open symbol picker";
         };
-        "<leader>e" = {
-          action = "file_browser";
-          options.desc = "Open file explorer";
-        };
       };
     };
   };
