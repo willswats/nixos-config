@@ -29,6 +29,7 @@ in
       "ctrl+shift+enter" = "new_tab_with_cwd";
       "ctrl+shift+t" = "new_tab_with_cwd $EDITOR";
       "ctrl+shift+e" = "new_tab_with_cwd ${yazi}";
+      "ctrl+g" = "launch --type overlay --cwd current lazygit";
     };
   };
 }
