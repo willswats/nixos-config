@@ -43,6 +43,23 @@
         cursor-shape.insert = "bar";
         indent-guides.render = true;
         completion-timeout = 5;
+        statusline = {
+          left = [
+            "mode"
+            "version-control"
+            "spacer"
+            "diagnostics"
+            "file-name"
+            "read-only-indicator"
+            "file-modification-indicator"
+          ];
+          right = [
+            "file-encoding"
+            "file-type"
+            "position-percentage"
+            "position"
+          ];
+        };
       };
       keys = {
         insert = {
