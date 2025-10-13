@@ -83,18 +83,28 @@
               action = "${cmd}nohlsearch${cr}";
               options.desc = "No highlight";
             }
-            # Set redo
-            {
-              inherit mode;
-              key = "U";
-              action = "${cmd}redo${cr}";
-            }
             # Refresh file
             {
               inherit mode;
               key = "<C-r>";
               action = "${cmd}checktime${cr}";
               options.desc = "Refresh";
+            }
+            # Helix keymaps
+            {
+              inherit mode;
+              key = "U";
+              action = "${cmd}redo${cr}";
+            }
+            {
+              inherit mode;
+              key = "gh";
+              action = "0";
+            }
+            {
+              inherit mode;
+              key = "gl";
+              action = "\$";
             }
           ];
 
@@ -175,8 +185,10 @@
             }
           ];
       in
-      config.lib.nixvim.keymaps.mkKeymaps {
-        options.silent = true;
-      } (normal ++ insert ++ visual ++ terminal);
+      config.lib.nixvim.keymaps.mkKeymaps
+        {
+          options.silent = true;
+        }
+        (normal ++ insert ++ visual ++ terminal);
   };
 }
