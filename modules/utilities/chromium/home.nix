@@ -1,6 +1,7 @@
 { ... }:
 
 {
+  catppuccin.chromium.enable = true;
   programs.chromium = {
     enable = true;
     extensions = [
