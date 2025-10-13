@@ -14,8 +14,8 @@
           [
             {
               inherit mode;
-              key = "<leader>e";
-              action = "${cmd}NvimTreeToggle${cr}";
+              key = "<C-e>";
+              action = "${cmd}Yazi${cr}";
               options.desc = "Explorer";
             }
           ];
