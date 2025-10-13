@@ -26,9 +26,11 @@
 
     plugins.yazi = {
       enable = true;
-      open_for_directories = true;
-      floating_window_scaling_factor = 1;
-      yazi_floating_window_border = "single";
+      settings = {
+        open_for_directories = true;
+        floating_window_scaling_factor = 1;
+        yazi_floating_window_border = "single";
+      };
     };
   };
 }
