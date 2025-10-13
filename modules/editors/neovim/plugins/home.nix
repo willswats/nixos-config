@@ -15,7 +15,6 @@
     ./ui/noice.nix
     ./ui/nvim-tree.nix
     ./ui/telescope.nix
-    ./ui/toggleterm.nix
     ./ui/which-key.nix
     # QoL
     ./qol/auto-session.nix

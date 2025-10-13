@@ -24,7 +24,6 @@ My [Nixvim](https://github.com/nix-community/nixvim) config.
 - [noice.nvim](https://github.com/folke/noice.nvim)
 - [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-- [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
 - [which-key.nvim](https://github.com/folke/which-key.nvim)
 
 ### Quality of Life

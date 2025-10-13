@@ -6,7 +6,6 @@
     settings.filetypes_denylist = [
       "NvimTree"
       "TelescopePrompt"
-      "toggleterm"
     ];
   };
 }
