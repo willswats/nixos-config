@@ -12,7 +12,6 @@
     # UI
     ./ui/bufferline.nix
     ./ui/lualine.nix
-    ./ui/noice.nix
     ./ui/nvim-tree.nix
     ./ui/telescope.nix
     ./ui/which-key.nix

@@ -21,7 +21,6 @@ My [Nixvim](https://github.com/nix-community/nixvim) config.
 
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
-- [noice.nvim](https://github.com/folke/noice.nvim)
 - [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [which-key.nvim](https://github.com/folke/which-key.nvim)
