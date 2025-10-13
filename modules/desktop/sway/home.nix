@@ -302,8 +302,8 @@
           "${mod}+n" = "exec ${kitty} ${nyaa}"; # Nyaa
 
           "${mod}+p" = "exec ${hyprpicker} -a"; # Colour picker
-          "Print" = "exec ${grimshot} --notify save output"; # Screnshot active monitor
-          "Shift+Print" = "exec killall slurp; exec ${grimshot} --notify save area"; # # Screenshot manually selected area - killall to prevent overlap
+          "Print" = "exec ${grimshot} --notify savecopy output"; # Screnshot active monitor
+          "Shift+Print" = "exec killall slurp; exec ${grimshot} --notify savecopy area"; # # Screenshot manually selected area - killall to prevent overlap
         };
         modes = {
           resize = {

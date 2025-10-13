@@ -243,8 +243,8 @@
           "$mod, n, exec ${kitty} ${nyaa}" # Nyaa
 
           "$mod, p, exec, ${hyprpicker} -a" # Colour picker
-          ", print, exec, ${grimblast} --notify save output" # Screenshot active monitor
-          "shift, print, exec, killall slurp; ${grimblast} --notify --freeze save area" # Screenshot manually selected area - killall to prevent overlap
+          ", print, exec, ${grimblast} --notify copysave output" # Screenshot active monitor
+          "shift, print, exec, killall slurp; ${grimblast} --notify --freeze copysave area" # Screenshot manually selected area - killall to prevent overlap
 
           "$mod, semicolon, exec, ${wlogout}"
 
