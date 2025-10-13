@@ -64,12 +64,30 @@
               action = "${cmd}confirm q${cr}";
               options.desc = "Quit";
             }
-            # Delete buffer
+            # Buffers
             {
               inherit mode;
               key = "<leader>c";
               action = "${cmd}confirm bd${cr}";
               options.desc = "Close buffer";
+            }
+            {
+              inherit mode;
+              key = "<leader>C";
+              action = "${cmd}%bd|e#|bd#${cr}";
+              options.desc = "Close all buffers but current";
+            }
+            {
+              inherit mode;
+              key = "gp";
+              action = "${cmd}bp${cr}";
+              options.desc = "Goto previous buffer";
+            }
+            {
+              inherit mode;
+              key = "gn";
+              action = "${cmd}bn${cr}";
+              options.desc = "Goto next buffer";
             }
             # Remove highlight
             {
@@ -154,6 +172,17 @@
               key = "p";
               action = "\"_dP";
             }
+            # Helix keymaps
+            {
+              inherit mode;
+              key = "gh";
+              action = "0";
+            }
+            {
+              inherit mode;
+              key = "gl";
+              action = "\$";
+            }
           ];
 
         terminal =
@@ -185,10 +214,8 @@
             }
           ];
       in
-      config.lib.nixvim.keymaps.mkKeymaps
-        {
-          options.silent = true;
-        }
-        (normal ++ insert ++ visual ++ terminal);
+      config.lib.nixvim.keymaps.mkKeymaps {
+        options.silent = true;
+      } (normal ++ insert ++ visual ++ terminal);
   };
 }
