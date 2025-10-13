@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 let
   icons = import ../../icons.nix;
@@ -11,6 +11,28 @@ in
   ];
 
   programs.nixvim = {
+    keymaps =
+      let
+        cr = "<CR>";
+        cmd = "<CMD>";
+
+        normal =
+          let
+            mode = "n";
+          in
+          [
+            {
+              inherit mode;
+              key = "<leader>b";
+              action = "${cmd}lua require('telescope.builtin').buffers({ sort_mru = true })${cr}";
+              options.desc = "Open buffer picker";
+            }
+          ];
+      in
+      config.lib.nixvim.keymaps.mkKeymaps {
+        options.silent = true;
+      } (normal);
+
     plugins.telescope = {
       enable = true;
       settings.defaults = {
@@ -41,10 +63,6 @@ in
         "<leader>'" = {
           action = "resume";
           options.desc = "Open last picker";
-        };
-        "<leader>b" = {
-          action = "buffers";
-          options.desc = "Open buffer picker";
         };
         "<leader>d" = {
           action = "diagnostics";
