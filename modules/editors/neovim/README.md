@@ -26,16 +26,15 @@ My [Nixvim](https://github.com/nix-community/nixvim) config.
 - [yazi.nvim](https://github.com/mikavilpas/yazi.nvim/)
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [which-key.nvim](https://github.com/folke/which-key.nvim)
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [tiny-inline-diagnostic](https://github.com/rachartier/tiny-inline-diagnostic.nvim)
 
 ### Quality of Life
 
 - [auto-session](https://github.com/rmagatti/auto-session)
 - [ccc.nvim](https://github.com/uga-rosa/ccc.nvim)
-- [vim-illuminate](https://github.com/RRethy/vim-illuminate)
-- [inc-rename.nvim](https://github.com/smjonas/inc-rename.nvim)
-- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [multicursors.nvim](https://github.com/smoka7/multicursors.nvim)
-- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [venv-selector](https://github.com/linux-cultist/venv-selector.nvim)
 
 ### Markdown
