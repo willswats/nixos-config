@@ -20,7 +20,6 @@
     # QoL
     ./qol/auto-session.nix
     ./qol/ccc.nix
-    ./qol/illuminate.nix
     ./qol/inc-rename.nix
     ./qol/multicursors.nix
     ./qol/venv-selector.nix
