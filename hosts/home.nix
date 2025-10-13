@@ -93,6 +93,7 @@
       vulkan-tools
       woeusb
       lynx
+      scooter
       # Infosec
       nmap
       nikto
