@@ -68,7 +68,7 @@
             }
             {
               inherit mode;
-              key = "<leader>tg";
+              key = "<C-g>";
               action = "${cmd}lua LAZYGIT_TOGGLE()${cr}";
               options.desc = "Lazygit";
             }

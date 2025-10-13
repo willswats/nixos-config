@@ -15,9 +15,9 @@
           [
             {
               inherit mode;
-              key = "<leader>fs";
+              key = "<leader>s";
               action = "${cmd}Telescope session-lens${cr}";
-              options.desc = "Sessions";
+              options.desc = "Open session picker";
             }
           ];
       in

@@ -24,29 +24,25 @@ in
         '';
       };
       keymaps = {
-        "<leader>ff" = {
+        "<leader>f" = {
           action = "find_files";
-          options.desc = "Files";
+          options.desc = "Open file picker";
         };
-        "<leader>fo" = {
-          action = "oldfiles";
-          options.desc = "Old files";
-        };
-        "<leader>ft" = {
+        "<leader>/" = {
           action = "live_grep";
-          options.desc = "Text";
+          options.desc = "Global search in workspace folder";
         };
-        "<leader>fr" = {
+        "<leader>'" = {
           action = "resume";
-          options.desc = "Resume";
+          options.desc = "Open last picker";
         };
-        "<leader>fb" = {
+        "<leader>b" = {
           action = "buffers";
-          options.desc = "Buffers";
+          options.desc = "Open buffer picker";
         };
-        "<leader>fd" = {
+        "<leader>d" = {
           action = "diagnostics";
-          options.desc = "Diagnostics";
+          options.desc = "Open diagnostics picker";
         };
       };
     };

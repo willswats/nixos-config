@@ -17,59 +17,29 @@ in
           [
             {
               inherit mode;
-              key = "<S-j>";
+              key = "gp";
               action = "${cmd}BufferLineCyclePrev${cr}";
+              options.desc = "Goto previous buffer";
             }
             {
               inherit mode;
-              key = "<S-k>";
+              key = "gn";
               action = "${cmd}BufferLineCycleNext${cr}";
+              options.desc = "Goto next buffer";
             }
             {
               inherit mode;
-              key = "<A-j>";
-              action = "${cmd}BufferLineMovePrev${cr}";
-            }
-            {
-              inherit mode;
-              key = "<A-k>";
-              action = "${cmd}BufferLineMoveNext${cr}";
-            }
-            {
-              inherit mode;
-              key = "<leader>bh";
-              action = "${cmd}BufferLineCloseLeft${cr}";
-              options.desc = "Close left";
-            }
-            {
-              inherit mode;
-              key = "<leader>bl";
-              action = "${cmd}BufferLineCloseRight${cr}";
-              options.desc = "Close right";
-            }
-            {
-              inherit mode;
-              key = "<leader>bo";
+              key = "<leader>C";
               action = "${cmd}BufferLineCloseOthers${cr}";
               options.desc = "Close others";
             }
-            {
-              inherit mode;
-              key = "<leader>bp";
-              action = "${cmd}BufferLinePick${cr}";
-              options.desc = "Pick";
-            }
-            {
-              inherit mode;
-              key = "<leader>bP";
-              action = "${cmd}BufferLinePickClose${cr}";
-              options.desc = "Pick close";
-            }
           ];
       in
-      config.lib.nixvim.keymaps.mkKeymaps {
-        options.silent = true;
-      } (normal);
+      config.lib.nixvim.keymaps.mkKeymaps
+        {
+          options.silent = true;
+        }
+        (normal);
 
     plugins.bufferline = {
       enable = true;

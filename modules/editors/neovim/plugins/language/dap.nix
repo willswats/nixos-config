@@ -16,93 +16,95 @@
           [
             {
               inherit mode;
-              key = "<leader>dt";
+              key = "<leader>Gt";
               action = "${cmd}${dap}.toggle_breakpoint()${cr}";
               options.desc = "Toggle breakpoint";
             }
             {
               inherit mode;
-              key = "<leader>db";
+              key = "<leader>Gb";
               action = "${cmd}${dap}.step_back()${cr}";
               options.desc = "Step back";
             }
             {
               inherit mode;
-              key = "<leader>dc";
+              key = "<leader>Gc";
               action = "${cmd}${dap}.continue()${cr}";
               options.desc = "Continue";
             }
             {
               inherit mode;
-              key = "<leader>dC";
+              key = "<leader>GC";
               action = "${cmd}${dap}.run_to_cursor()${cr}";
               options.desc = "Run to cursor";
             }
             {
               inherit mode;
-              key = "<leader>dd";
+              key = "<leader>Gd";
               action = "${cmd}${dap}.disconnect()${cr}";
               options.desc = "Disconnect";
             }
             {
               inherit mode;
-              key = "<leader>ds";
+              key = "<leader>Gs";
               action = "${cmd}${dap}.session()${cr}";
               options.desc = "Get session";
             }
             {
               inherit mode;
-              key = "<leader>di";
+              key = "<leader>Gi";
               action = "${cmd}${dap}.step_into()${cr}";
               options.desc = "Step into";
             }
             {
               inherit mode;
-              key = "<leader>do";
+              key = "<leader>Go";
               action = "${cmd}${dap}.step_over()${cr}";
               options.desc = "Step over";
             }
             {
               inherit mode;
-              key = "<leader>du";
+              key = "<leader>Gu";
               action = "${cmd}${dap}.step_out()${cr}";
               options.desc = "Step out";
             }
             {
               inherit mode;
-              key = "<leader>dp";
+              key = "<leader>Gp";
               action = "${cmd}${dap}.pause()${cr}";
               options.desc = "Pause";
             }
             {
               inherit mode;
-              key = "<leader>dr";
+              key = "<leader>Gr";
               action = "${cmd}${dap}.repl.toggle()${cr}";
               options.desc = "Toggle REPL";
             }
             {
               inherit mode;
-              key = "<leader>dq";
+              key = "<leader>Gq";
               action = "${cmd}${dap}.close()${cr}";
               options.desc = "Quit";
             }
             {
               inherit mode;
-              key = "<leader>dv";
+              key = "<leader>Gv";
               action = "${cmd}DapViewOpen${cr}";
               options.desc = "View open";
             }
             {
               inherit mode;
-              key = "<leader>dV";
+              key = "<leader>GV";
               action = "${cmd}DapViewClose${cr}";
               options.desc = "View close";
             }
           ];
       in
-      config.lib.nixvim.keymaps.mkKeymaps {
-        options.silent = true;
-      } (normal);
+      config.lib.nixvim.keymaps.mkKeymaps
+        {
+          options.silent = true;
+        }
+        (normal);
 
     plugins = {
       dap = {

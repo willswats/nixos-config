@@ -14,9 +14,9 @@
           [
             {
               inherit mode;
-              key = "<leader>fn";
+              key = "<leader>n";
               action = "${cmd}NoiceTelescope${cr}";
-              options.desc = "Noice";
+              options.desc = "Open nvim error picker";
             }
           ];
       in

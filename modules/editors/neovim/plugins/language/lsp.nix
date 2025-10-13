@@ -57,36 +57,22 @@ in
       };
       keymaps = {
         silent = true;
-        diagnostic = {
-          "<leader>lj" = {
-            action = "goto_next";
-            desc = "Next diagnostic";
-          };
-          "<leader>lk" = {
-            action = "goto_prev";
-            desc = "Previous diagnostic";
-          };
-          "<leader>lf" = {
-            action = "open_float";
-            desc = "Float";
-          };
-        };
         lspBuf = {
-          "<leader>la" = {
+          "<leader>a" = {
             action = "code_action";
-            desc = "Action";
+            desc = "Code action";
           };
-          "<leader>li" = {
+          "gi" = {
             action = "implementation";
-            desc = "Implementation";
+            desc = "Goto implementation";
           };
-          "<leader>lr" = {
+          "gr" = {
             action = "references";
-            desc = "References";
+            desc = "Goto references";
           };
-          "<leader>lh" = {
+          "<leader>k" = {
             action = "hover";
-            desc = "Hover";
+            desc = "Show docs for item under cursor";
           };
         };
       };

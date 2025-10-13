@@ -17,27 +17,6 @@
             mode = "n";
           in
           [
-            # Window navigation
-            {
-              inherit mode;
-              key = "<C-h>";
-              action = "<C-w>h";
-            }
-            {
-              inherit mode;
-              key = "<C-j>";
-              action = "<C-w>j";
-            }
-            {
-              inherit mode;
-              key = "<C-k>";
-              action = "<C-w>k";
-            }
-            {
-              inherit mode;
-              key = "<C-l>";
-              action = "<C-w>l";
-            }
             # Resize with arrow keys
             {
               inherit mode;
@@ -100,14 +79,14 @@
             }
             {
               inherit mode;
-              key = "<leader>h";
+              key = ";";
               action = "${cmd}nohlsearch${cr}";
               options.desc = "No highlight";
             }
             # Refresh file
             {
               inherit mode;
-              key = "<leader>r";
+              key = "<C-r>";
               action = "${cmd}checktime${cr}";
               options.desc = "Refresh";
             }
