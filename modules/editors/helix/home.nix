@@ -44,6 +44,7 @@
         indent-guides.render = true;
         rainbow-brackets = true;
         inline-diagnostics.cursor-line = "disable";
+        end-of-line-diagnostics = "disable";
         word-completion.trigger-length = 1;
         completion-timeout = 5;
         completion-trigger-len = 1;
