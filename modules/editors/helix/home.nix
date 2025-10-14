@@ -45,6 +45,8 @@
         rainbow-brackets = true;
         inline-diagnostics.cursor-line = "disable";
         end-of-line-diagnostics = "disable";
+        line-number = "relative";
+        scrolloff = 8;
         word-completion.trigger-length = 1;
         completion-timeout = 5;
         completion-trigger-len = 1;
