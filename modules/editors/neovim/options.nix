@@ -33,6 +33,7 @@
       scrolloff = 8; # Minimal number of screen lines to keep above and below the cursor
       sidescrolloff = 8; # The minimal number of screen columns to keep to the left and to the right of the cursor if 'nowrap' is set
       foldmethod = "manual"; # Manual folds
+      relativenumber = true; # Relative numbers
     };
   };
 }
