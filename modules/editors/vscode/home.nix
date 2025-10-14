@@ -53,6 +53,7 @@
           "workbench.startupEditor" = "none";
           "window.restoreWindows" = "none";
           "git.openRepositoryInParentFolders" = "always";
+          "chat.disableAIFeatures" = true;
           # Catppuccin
           "workbench.colorTheme" = "Catppuccin Mocha";
           "workbench.iconTheme" = "catppuccin-mocha";
