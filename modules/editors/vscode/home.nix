@@ -25,8 +25,7 @@
       extensions = with pkgs.nix-vscode-extensions.vscode-marketplace; [
         catppuccin.catppuccin-vsc # catppuccin
         catppuccin.catppuccin-vsc-icons # catppuccin icons
-        gregoire.dance # kakoune modal-editing
-        gregoire.dance-helix # helix keymaps for dance
+        jasew.vscode-helix-emulation # helix emulation
         ms-vsliveshare.vsliveshare # live share
         jnoortheen.nix-ide # nix
         esbenp.prettier-vscode # prettier (formatter)
