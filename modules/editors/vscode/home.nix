@@ -56,6 +56,8 @@
           # Catppuccin
           "workbench.colorTheme" = "Catppuccin Mocha";
           "workbench.iconTheme" = "catppuccin-mocha";
+          # Helix
+          "helixKeymap.toggleRelativeLineNumbers" = true;
           # SQL Formatter VSCode
           "SQL-Formatter-VSCode.dialect" = "postgresql";
           "SQL-Formatter-VSCode.tabSizeOverride" = 4;
@@ -128,6 +130,12 @@
           "key" = "up";
           "command" = "-selectPrevSuggestion";
           "when" = "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus";
+        }
+        # Helix
+        {
+          "key" = "ctrl+c";
+          "command" = "editor.action.commentLine";
+          "when" = "editorTextFocus && extension.helixKeymap.normalMode || editorTextFocus && extension.helixKeymap.visualMode";
         }
       ];
     };
