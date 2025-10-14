@@ -42,6 +42,7 @@
         cursorline = true;
         cursor-shape.insert = "bar";
         indent-guides.render = true;
+        rainbow-brackets = true;
         completion-timeout = 5;
         completion-trigger-len = 1;
         path-completion = false; # use scls for this as the paths are appearing at the bottom of the menu
