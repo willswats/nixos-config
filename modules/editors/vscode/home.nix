@@ -14,7 +14,7 @@
 
   programs.vscode = {
     enable = true;
-    package = pkgs.vscodium;
+    package = pkgs.vscode-fhs; # Note: vscodium does not work with certain ms extensions (vsliveshare)
     profiles.default = {
       enableUpdateCheck = false;
       enableExtensionUpdateCheck = false;
@@ -25,7 +25,7 @@
       extensions = with pkgs.nix-vscode-extensions.vscode-marketplace; [
         catppuccin.catppuccin-vsc # catppuccin
         catppuccin.catppuccin-vsc-icons # catppuccin icons
-        gregoire.dance # kakoune modal-editing 
+        gregoire.dance # kakoune modal-editing
         gregoire.dance-helix # helix keymaps for dance
         ms-vsliveshare.vsliveshare # live share
         jnoortheen.nix-ide # nix
