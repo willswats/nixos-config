@@ -13,25 +13,27 @@
       url = "github:nix-community/nixpkgs-wayland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    catppuccin.url = "github:catppuccin/nix";
 
+    # Editors
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
+    helix.url = "github:helix-editor/helix";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
-    catppuccin.url = "github:catppuccin/nix";
-
+    # Apps
     mpv-youtube-search.url = "github:willswats/mpv-youtube-search";
-
-    slippi.url = "github:lytedev/slippi-nix";
-    nix-gaming.url = "github:fufexan/nix-gaming";
-    bsp-casefolding-workaround.url = "github:SeraphimRP/bsp-casefolding-workaround-nix";
     nyaa = {
       url = "github:Beastwick18/nyaa";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Gaming
+    slippi.url = "github:lytedev/slippi-nix";
+    nix-gaming.url = "github:fufexan/nix-gaming";
+    bsp-casefolding-workaround.url = "github:SeraphimRP/bsp-casefolding-workaround-nix";
   };
 
   outputs =

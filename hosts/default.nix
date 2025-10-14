@@ -47,6 +47,7 @@ in
   nixpkgs.overlays = [
     inputs.nixpkgs-wayland.overlay
     inputs.nix-vscode-extensions.overlays.default
+    inputs.helix.overlays.helix
   ];
 
   # 6.10 is needed for Vocaster One drivers
