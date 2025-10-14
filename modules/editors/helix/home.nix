@@ -43,6 +43,7 @@
         cursor-shape.insert = "bar";
         indent-guides.render = true;
         rainbow-brackets = true;
+        inline-diagnostics.cursor-line = "disable";
         completion-timeout = 5;
         completion-trigger-len = 1;
         statusline = {
