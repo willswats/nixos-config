@@ -17,6 +17,7 @@ My [Nixvim](https://github.com/nix-community/nixvim) config.
 - [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 - [nvim-surround](https://github.com/kylechui/nvim-surround)
+- [rainbow-brackets.nvim](https://gitlab.com/HiPhish/rainbow-delimiters.nvim)
 
 ### UI
 
