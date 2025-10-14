@@ -15,7 +15,7 @@
     snippets_first = true                # completions will return before snippets by default
     snippets_inline_by_word_tail = false # suggest snippets by WORD tail, for example text `xsq|` become `x^2|` when snippet `sq` has body `^2`
     feature_unicode_input = false        # enable "unicode input"
-    feature_paths = true                 # enable path completion
+    feature_paths = false                # enable path completion
     feature_citations = false            # enable citation completion (only on `citation` feature enabled)    
   '';
 
