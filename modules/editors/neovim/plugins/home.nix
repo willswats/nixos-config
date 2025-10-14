@@ -22,7 +22,6 @@
     ./qol/auto-session.nix
     ./qol/ccc.nix
     ./qol/multicursors.nix
-    ./qol/venv-selector.nix
     # Markdown
     ./markdown/markdown-preview.nix
     ./markdown/mkdnflow.nix

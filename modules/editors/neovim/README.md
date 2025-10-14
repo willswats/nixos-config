@@ -35,7 +35,6 @@ My [Nixvim](https://github.com/nix-community/nixvim) config.
 - [auto-session](https://github.com/rmagatti/auto-session)
 - [ccc.nvim](https://github.com/uga-rosa/ccc.nvim)
 - [multicursors.nvim](https://github.com/smoka7/multicursors.nvim)
-- [venv-selector](https://github.com/linux-cultist/venv-selector.nvim)
 
 ### Markdown
 
