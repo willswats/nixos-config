@@ -30,8 +30,10 @@
         jnoortheen.nix-ide # nix
         esbenp.prettier-vscode # prettier (formatter)
         dbaeumer.vscode-eslint # eslint (js lint)
+        ms-python.python # top-level python extension
         ms-python.vscode-pylance # pylance (lsp)
         ms-python.debugpy # python debugger
+        ms-python.vscode-python-envs # python environments
         charliermarsh.ruff # python linter and formatter
         lighttiger2505.sqls # sqls
         renesaarsoo.sql-formatter-vsc # sql formatter
