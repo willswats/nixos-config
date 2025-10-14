@@ -77,6 +77,7 @@
           space.q = ":q";
           space.c = ":bc";
           space.C = ":bco";
+          space.x = ":reset-diff-change";
           C-r = ":reload-all";
           # Yazi integration - https://github.com/helix-editor/helix/discussions/12934#discussioncomment-12438498
           C-e =
