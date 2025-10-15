@@ -60,6 +60,9 @@
           "workbench.iconTheme" = "catppuccin-mocha";
           # Helix
           "helixKeymap.toggleRelativeLineNumbers" = true;
+          "extensions.experimental.affinity" = {
+            "jasew.vscode-helix-emulation" = 1;
+          };
           # SQL Formatter VSCode
           "SQL-Formatter-VSCode.dialect" = "postgresql";
           "SQL-Formatter-VSCode.tabSizeOverride" = 4;
