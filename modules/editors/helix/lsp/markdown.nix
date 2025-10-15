@@ -15,7 +15,10 @@
 
     [language-server.harper-ls.config.harper-ls]   
     dialect = "British"
-    
+
+    [language-server.harper-ls.config.harper-ls.linters]    
+    LongSentences = false
+
     [language-server.efm]
     command = "efm-langserver"
     
