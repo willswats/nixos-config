@@ -71,7 +71,6 @@
       moonlight-qt
       tidal-hifi
       euphonica
-      grayjay
       freetube
       dropbox
       pixelorama
