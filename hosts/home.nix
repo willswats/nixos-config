@@ -72,6 +72,7 @@
       tidal-hifi
       euphonica
       grayjay
+      freetube
       dropbox
       pixelorama
       zotero

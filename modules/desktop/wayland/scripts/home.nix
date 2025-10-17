@@ -34,6 +34,7 @@ let
     in
     pkgs.writeShellScript "ensureExists.sh" ''
       mkdir -p ${directoriesToCreate}
+      ln -s ${drive}/.dots/FreeTube ~/.config/
       ln -s ${drive}/.dots/Grayjay ~/.local/share/
 
 
