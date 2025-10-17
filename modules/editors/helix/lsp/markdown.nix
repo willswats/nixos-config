@@ -6,6 +6,7 @@
     harper # Spell checker
     efm-langserver # Wrapper lsp for markdownlint-cli
     markdownlint-cli # Markdown linter
+    mpls # Markdown preview lsp
   ];
 
   xdg.configFile."helix/languages.toml".text = lib.mkAfter ''
@@ -22,10 +23,14 @@
     [language-server.efm]
     command = "efm-langserver"
     
+    [language-server.mpls]
+    command = "mpls"
+    args = [ "--no-auto", "--dark-mode", "--enable-emoji", ]    
+
     [[language]]
     name = "markdown"
     formatter = { command = 'prettier', args = ["--parser", "markdown"] }
-    language-servers = [ "marksman", "harper-ls", { name = "efm", only-features = [ "diagnostics" ] }, "scls" ]
+    language-servers = [ "marksman", "harper-ls", { name = "efm", only-features = [ "diagnostics" ] }, "mpls", "scls" ]
     soft-wrap.enable = true
     comment-tokens = ["-", "+", "*", "- [ ]", ">"]
   '';
