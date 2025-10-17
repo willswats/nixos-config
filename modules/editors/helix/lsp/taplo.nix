@@ -1,14 +1,20 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
-
-  programs.helix.extraPackages = with pkgs; [
-    taplo
-  ];
-
-  xdg.configFile."helix/languages.toml".text = lib.mkAfter ''
-    [[language]]
-    name = "toml"
-    language-servers = [ "taplo", "scls" ]
-  '';
+  programs.helix = {
+    extraPackages = with pkgs; [
+      taplo # toml
+    ];
+    languages = {
+      language = [
+        {
+          name = "toml";
+          language-servers = [
+            "taplo"
+            "scls"
+          ];
+        }
+      ];
+    };
+  };
 }

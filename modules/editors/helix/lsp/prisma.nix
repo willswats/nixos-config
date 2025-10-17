@@ -1,13 +1,15 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
-  programs.helix.extraPackages = with pkgs; [
-    prisma-language-server
-  ];
-
-  xdg.configFile."helix/languages.toml".text = lib.mkAfter ''
-    [[language]]
-    name = "prisma"
-    language-servers = [ "prisma-language-server", "scls" ]
-  '';
+  programs.helix = {
+    extraPackages = with pkgs; [
+      prisma-language-server
+    ];
+    languages = {
+      language = [{
+        name = "prisma";
+        language-servers = [ "prisma-language-server" "scls" ];
+      }];
+    };
+  };
 }

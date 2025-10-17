@@ -1,19 +1,23 @@
 { pkgs, lib, ... }:
 
 {
-  programs.helix.extraPackages = with pkgs; [
-    clang-tools
-  ];
-
-  xdg.configFile."helix/languages.toml".text = lib.mkAfter ''
-    [[language]]
-    name = "c"
-    language-servers = [ "clangd", "scls" ]
-
-    [[language]]
-    name = "cpp"
-    language-servers = [ "clangd", "scls" ]
-  '';
+  programs.helix = {
+    extraPackages = with pkgs; [
+      clang-tools
+    ];
+    languages = {
+      language = [
+        {
+          name = "c";
+          language-servers = [ "clangd" "scls" ];
+        }
+        {
+          name = "cpp";
+          language-servers = [ "clangd" "scls" ];
+        }
+      ];
+    };
+  };
 
   xdg.configFile."helix/external-snippets.toml".text = lib.mkAfter ''
     [[sources.paths]] 

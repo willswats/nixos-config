@@ -1,21 +1,25 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-
-  programs.helix.extraPackages = with pkgs; [
-    rust-analyzer # Rust LSP
-  ];
-
-  xdg.configFile."helix/languages.toml".text = lib.mkAfter ''
-    [language-server.rust-analyzer.config.check]
-    command = "clippy"
-
-    [[language]]
-    name = "toml"
-    language-servers = [ "rust-analyzer", "scls" ]
-    formatter = { command = "taplo", args = ["format", "-"] }
-  '';
-
+  programs.helix = {
+    extraPackages = with pkgs; [
+      rust-analyzer # Rust LSP
+    ];
+    languages = {
+      language = [
+        {
+          name = "rust";
+          language-servers = [
+            "rust-analyzer"
+            "scls"
+          ];
+        }
+      ];
+      language-server = {
+        rust-analyzer.config.check.command = "clippy";
+      };
+    };
+  };
 
   xdg.configFile."helix/external-snippets.toml".text = ''
     [[sources.paths]] 

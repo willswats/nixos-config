@@ -1,40 +1,73 @@
 { lib, pkgs, ... }:
 
 {
-  programs.helix.extraPackages = with pkgs; [
-    marksman # MD Language server
-    harper # Spell checker
-    efm-langserver # Wrapper lsp for markdownlint-cli
-    markdownlint-cli # Markdown linter
-    mpls # Markdown preview lsp
-  ];
 
-  xdg.configFile."helix/languages.toml".text = lib.mkAfter ''
-    [language-server.harper-ls]
-    command = "harper-ls"
-    args = ["--stdio"]
-
-    [language-server.harper-ls.config.harper-ls]   
-    dialect = "British"
-
-    [language-server.harper-ls.config.harper-ls.linters]    
-    LongSentences = false
-
-    [language-server.efm]
-    command = "efm-langserver"
-    
-    [language-server.mpls]
-    command = "mpls"
-    args = [ "--no-auto", "--dark-mode", "--enable-emoji", ]    
-
-    [[language]]
-    name = "markdown"
-    formatter = { command = 'prettier', args = ["--parser", "markdown"] }
-    language-servers = [ "marksman", "harper-ls", { name = "efm", only-features = [ "diagnostics" ] }, "mpls", "scls" ]
-    soft-wrap.enable = true
-    comment-tokens = ["-", "+", "*", "- [ ]", ">"]
-  '';
-
+  programs.helix = {
+    languages = {
+      language = [
+        {
+          name = "markdown";
+          formatter = {
+            command = "prettier";
+            args = [
+              "--parser"
+              "markdown"
+            ];
+          };
+          language-servers = [
+            "marksman"
+            "harper-ls"
+            "scls"
+            {
+              name = "efm";
+              only-features = [ "diagnostics" ];
+            }
+            "mpls"
+          ];
+          soft-wrap.enable = true;
+          comment-tokens = [
+            "-"
+            "+"
+            "*"
+            "- [ ]"
+            ">"
+          ];
+        }
+      ];
+      language-server = {
+        harper-ls = {
+          command = "harper-ls";
+          args = [
+            "--stdio"
+          ];
+          config.harper-ls = {
+            dialect = "British";
+            linters = {
+              LongSentences = false;
+            };
+          };
+        };
+        efm = {
+          command = "efm-langserver";
+        };
+        mpls = {
+          command = "mpls";
+          args = [
+            "--no-auto"
+            "--dark-mode"
+            "--enable-emoji"
+          ];
+        };
+      };
+    };
+    extraPackages = with pkgs; [
+      marksman # MD Language server
+      harper # Spell checker
+      efm-langserver # Wrapper lsp for markdownlint-cli
+      markdownlint-cli # Markdown linter
+      mpls # Markdown preview lsp
+    ];
+  };
 
   xdg.configFile."helix/external-snippets.toml".text = lib.mkAfter ''
     [[sources.paths]] 
