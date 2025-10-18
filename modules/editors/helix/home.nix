@@ -43,6 +43,7 @@
         cursor-shape.insert = "bar";
         indent-guides.render = true;
         rainbow-brackets = true;
+        color-modes = true;
         inline-diagnostics.cursor-line = "disable";
         end-of-line-diagnostics = "disable";
         line-number = "relative";
@@ -53,6 +54,7 @@
         statusline = {
           left = [
             "mode"
+            "spacer"
             "version-control"
             "spacer"
             "diagnostics"
