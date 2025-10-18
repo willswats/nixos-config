@@ -62,7 +62,6 @@
               ''
             ];
           }
-          # Overwrites "go to temp directory"
           {
             on = [
               "g"
@@ -88,6 +87,15 @@
           }
         ];
         mgr.append_keymap = [
+          # Add helix go to bottom
+          {
+            on = [
+              "g"
+              "e"
+            ];
+            run = "arrow bot";
+            desc = "Go to bottom";
+          }
           {
             on = [
               "g"
