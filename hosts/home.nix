@@ -20,7 +20,6 @@
     ../modules/development/rust/home.nix
     ../modules/development/dotnet/home.nix
     ../modules/development/python/home.nix
-    ../modules/development/flutter/home.nix
     ../modules/development/direnv/home.nix
     # ../modules/development/unity/home.nix
     ../modules/editors/neovim/home.nix
