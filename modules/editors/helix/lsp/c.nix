@@ -10,10 +10,12 @@
         {
           name = "c";
           language-servers = [ "clangd" "scls" ];
+          auto-format = true;
         }
         {
           name = "cpp";
           language-servers = [ "clangd" "scls" ];
+          auto-format = true;
         }
       ];
     };

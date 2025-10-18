@@ -7,13 +7,6 @@
       language = [
         {
           name = "markdown";
-          formatter = {
-            command = "prettier";
-            args = [
-              "--parser"
-              "markdown"
-            ];
-          };
           language-servers = [
             "marksman"
             "harper-ls"
@@ -24,6 +17,14 @@
             }
             "mpls"
           ];
+          auto-format = true;
+          formatter = {
+            command = "prettier";
+            args = [
+              "--parser"
+              "markdown"
+            ];
+          };
           soft-wrap.enable = true;
           comment-tokens = [
             "-"

@@ -13,6 +13,7 @@
             "bash-language-server"
             "scls"
           ];
+          auto-format = true;
         }
       ];
     };

@@ -9,6 +9,7 @@
       language = [{
         name = "prisma";
         language-servers = [ "prisma-language-server" "scls" ];
+        auto-format = true;
       }];
     };
   };

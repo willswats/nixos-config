@@ -13,6 +13,7 @@
             "omnisharp"
             "scls"
           ];
+          auto-format = true;
         }
       ];
     };

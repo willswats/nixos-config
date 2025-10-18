@@ -13,6 +13,7 @@
             "rust-analyzer"
             "scls"
           ];
+          auto-format = true;
         }
       ];
       language-server = {

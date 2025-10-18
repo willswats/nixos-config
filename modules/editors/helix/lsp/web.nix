@@ -15,6 +15,7 @@
             "vscode-html-language-server"
             "scls"
           ];
+          auto-format = true;
           formatter = {
             command = "prettier";
             args = [
@@ -29,6 +30,7 @@
             "vscode-css-language-server"
             "scls"
           ];
+          auto-format = true;
           formatter = {
             command = "prettier";
             args = [
@@ -44,6 +46,7 @@
             "vscode-eslint-language-server"
             "scls"
           ];
+          auto-format = true;
           formatter = {
             command = "prettier";
             args = [
@@ -60,7 +63,7 @@
             "vscode-eslint-language-server"
             "scls"
           ];
-
+          auto-format = true;
           formatter = {
             command = "prettier";
             args = [
@@ -76,6 +79,7 @@
             "vscode-eslint-language-server"
             "scls"
           ];
+          auto-format = true;
           formatter = {
             command = "prettier";
             args = [
@@ -91,6 +95,7 @@
             "vscode-eslint-language-server"
             "scls"
           ];
+          auto-format = true;
           formatter = {
             command = "prettier";
             args = [
@@ -105,6 +110,7 @@
             "vscode-json-language-server"
             "scls"
           ];
+          auto-format = true;
         }
       ];
     };

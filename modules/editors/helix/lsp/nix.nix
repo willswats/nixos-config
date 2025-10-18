@@ -14,6 +14,7 @@
             "nil"
             "scls"
           ];
+          auto-format = true;
           formatter = {
             command = "nixpkgs-fmt";
           };

@@ -14,6 +14,7 @@
             "godot"
             "scls"
           ];
+          auto-format = true;
           formatter = {
             command = "gdformat";
             args = [ "-" ];

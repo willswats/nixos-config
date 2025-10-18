@@ -10,6 +10,7 @@
       language = [{
         name = "python";
         language-servers = [ "pyright" "ruff" "scls" ];
+        auto-format = true;
       }];
       language-server = {
         ruff = {

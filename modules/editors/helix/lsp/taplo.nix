@@ -13,6 +13,7 @@
             "taplo"
             "scls"
           ];
+          auto-format = true;
         }
       ];
     };

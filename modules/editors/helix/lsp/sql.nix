@@ -10,6 +10,7 @@
       language = [{
         name = "sql";
         language-servers = [ "sqls" "scls" ];
+        auto-format = true;
         formatter = {
           command = "sql-formatter";
           args = [

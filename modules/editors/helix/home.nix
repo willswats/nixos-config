@@ -2,6 +2,7 @@
 
 {
   # Note: a lot of the lsp config is only defined for the sake of adding scls to the language servers list, and to define the snippets for scls.
+  # We also have to define them to add "auto-format = true" to the servers where it is not the default. 
   imports = [
     ./lsp/scls.nix
     ./lsp/nix.nix
@@ -76,9 +77,10 @@
           k.j = "normal_mode";
         };
         normal = {
+          # Note: it's not currently possible to format and then write in this command as it doesn't block write from happening until format is complete.
+          # Could be fixed by: https://github.com/helix-editor/helix/issues/8853
           space.w = [
             ":w"
-            ":format"
           ];
           space.W = ":w --no-format";
           space.q = ":q";

@@ -10,6 +10,7 @@
       language = [{
         name = "svelte";
         language-servers = [ "svelteserver" "scls" ];
+        auto-format = true;
       }];
     };
   };

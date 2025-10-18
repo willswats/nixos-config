@@ -13,6 +13,7 @@
             "lua-language-server"
             "scls"
           ];
+          auto-format = true;
         }
       ];
     };
