@@ -26,13 +26,26 @@ in
       tab_bar_style = "separator";
       tab_separator = "|";
       allow_remote_control = true;
+      kitty_mod = "alt";
     };
     keybindings = {
-      "ctrl+shift+enter" = "new_tab_with_cwd";
-      "ctrl+shift+t" = "new_tab_with_cwd $EDITOR";
-      "ctrl+shift+e" = "new_tab_with_cwd ${yazi}";
-      "ctrl+shift+r" = "launch --type overlay --cwd current ${scooter}";
-      "ctrl+g" = "launch --type overlay --cwd current ${lazygit}";
+      "kitty_mod+1" = "goto_tab 1";
+      "kitty_mod+2" = "goto_tab 2";
+      "kitty_mod+3" = "goto_tab 3";
+      "kitty_mod+4" = "goto_tab 4";
+      "kitty_mod+5" = "goto_tab 5";
+      "kitty_mod+6" = "goto_tab 6";
+      "kitty_mod+7" = "goto_tab 7";
+      "kitty_mod+8" = "goto_tab 8";
+      "kitty_mod+9" = "goto_tab 9";
+      "kitty_mod+0" = "goto_tab 10";
+
+      "kitty_mod+enter" = "new_tab_with_cwd";
+      "kitty_mod+t" = "new_tab_with_cwd $EDITOR";
+      "kitty_mod+e" = "new_tab_with_cwd ${yazi}";
+      "kitty_mod+r" = "new_tab_with_cwd ${scooter}";
+      "kitty_mod+g" = "new_tab_with_cwd ${lazygit}";
+
     };
   };
 }
