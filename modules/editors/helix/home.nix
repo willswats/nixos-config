@@ -106,7 +106,4 @@
       };
     };
   };
-
-  # https://helix-editor.vercel.app/reference/language-servers
-  xdg.configFile."helix/languages.toml".text = '''';
 }
