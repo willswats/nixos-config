@@ -10,8 +10,8 @@
         {
           name = "c-sharp";
           language-servers = [
-            "omnisharp"
             "scls"
+            "omnisharp"
           ];
           auto-format = true;
         }

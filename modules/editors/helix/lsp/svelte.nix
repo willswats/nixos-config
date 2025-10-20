@@ -9,7 +9,7 @@
     languages = {
       language = [{
         name = "svelte";
-        language-servers = [ "svelteserver" "scls" ];
+        language-servers = [ "scls" "svelteserver" ];
         auto-format = true;
       }];
     };

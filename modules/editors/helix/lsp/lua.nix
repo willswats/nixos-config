@@ -10,8 +10,8 @@
         {
           name = "lua";
           language-servers = [
-            "lua-language-server"
             "scls"
+            "lua-language-server"
           ];
           auto-format = true;
         }

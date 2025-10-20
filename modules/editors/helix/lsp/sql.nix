@@ -9,7 +9,7 @@
     languages = {
       language = [{
         name = "sql";
-        language-servers = [ "sqls" "scls" ];
+        language-servers = [ "scls" "sqls" ];
         auto-format = true;
         formatter = {
           command = "sql-formatter";

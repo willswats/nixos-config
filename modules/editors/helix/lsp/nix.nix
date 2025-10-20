@@ -11,8 +11,8 @@
         {
           name = "nix";
           language-servers = [
-            "nil"
             "scls"
+            "nil"
           ];
           auto-format = true;
           formatter = {

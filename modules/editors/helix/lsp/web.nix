@@ -12,8 +12,8 @@
         {
           name = "html";
           language-servers = [
-            "vscode-html-language-server"
             "scls"
+            "vscode-html-language-server"
           ];
           auto-format = true;
           formatter = {
@@ -27,8 +27,8 @@
         {
           name = "css";
           language-servers = [
-            "vscode-css-language-server"
             "scls"
+            "vscode-css-language-server"
           ];
           auto-format = true;
           formatter = {
@@ -42,9 +42,9 @@
         {
           name = "javascript";
           language-servers = [
+            "scls"
             "typescript-language-server"
             "vscode-eslint-language-server"
-            "scls"
           ];
           auto-format = true;
           formatter = {
@@ -59,9 +59,9 @@
 
           name = "jsx";
           language-servers = [
+            "scls"
             "typescript-language-server"
             "vscode-eslint-language-server"
-            "scls"
           ];
           auto-format = true;
           formatter = {
@@ -75,9 +75,9 @@
         {
           name = "typescript";
           language-servers = [
+            "scls"
             "typescript-language-server"
             "vscode-eslint-language-server"
-            "scls"
           ];
           auto-format = true;
           formatter = {
@@ -91,9 +91,9 @@
         {
           name = "tsx";
           language-servers = [
+            "scls"
             "typescript-language-server"
             "vscode-eslint-language-server"
-            "scls"
           ];
           auto-format = true;
           formatter = {
@@ -107,8 +107,8 @@
         {
           name = "json";
           language-servers = [
-            "vscode-json-language-server"
             "scls"
+            "vscode-json-language-server"
           ];
           auto-format = true;
         }

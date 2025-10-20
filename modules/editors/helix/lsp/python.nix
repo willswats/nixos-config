@@ -9,7 +9,7 @@
     languages = {
       language = [{
         name = "python";
-        language-servers = [ "pyright" "ruff" "scls" ];
+        language-servers = [ "scls" "pyright" "ruff" ];
         auto-format = true;
       }];
       language-server = {

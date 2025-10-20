@@ -10,8 +10,8 @@
         {
           name = "bash";
           language-servers = [
-            "bash-language-server"
             "scls"
+            "bash-language-server"
           ];
           auto-format = true;
         }

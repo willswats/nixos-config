@@ -9,12 +9,12 @@
       language = [
         {
           name = "c";
-          language-servers = [ "clangd" "scls" ];
+          language-servers = [ "scls" "clangd" ];
           auto-format = true;
         }
         {
           name = "cpp";
-          language-servers = [ "clangd" "scls" ];
+          language-servers = [ "scls" "clangd" ];
           auto-format = true;
         }
       ];

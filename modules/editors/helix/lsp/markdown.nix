@@ -8,9 +8,9 @@
         {
           name = "markdown";
           language-servers = [
+            "scls"
             "marksman"
             "harper-ls"
-            "scls"
             {
               name = "efm";
               only-features = [ "diagnostics" ];

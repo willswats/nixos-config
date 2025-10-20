@@ -11,8 +11,8 @@
         {
           name = "gdscript";
           language-servers = [
-            "godot"
             "scls"
+            "godot"
           ];
           auto-format = true;
           formatter = {

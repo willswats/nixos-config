@@ -10,8 +10,8 @@
         {
           name = "rust";
           language-servers = [
-            "rust-analyzer"
             "scls"
+            "rust-analyzer"
           ];
           auto-format = true;
         }

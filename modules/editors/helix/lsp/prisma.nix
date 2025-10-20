@@ -8,7 +8,7 @@
     languages = {
       language = [{
         name = "prisma";
-        language-servers = [ "prisma-language-server" "scls" ];
+        language-servers = [ "scls" "prisma-language-server" ];
         auto-format = true;
       }];
     };

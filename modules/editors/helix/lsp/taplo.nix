@@ -10,8 +10,8 @@
         {
           name = "toml";
           language-servers = [
-            "taplo"
             "scls"
+            "taplo"
           ];
           auto-format = true;
         }
