@@ -6,7 +6,7 @@
       (callPackage ../../../../pkgs/simple-completion-language-server { })
     ];
     languages.language-server.scls = {
-      command = "simple-completion-languages-server";
+      command = "simple-completion-language-server";
       config = {
         feature_words = false; # enable completion by word
         feature_snippets = true; # enable snippets
