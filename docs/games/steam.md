@@ -14,7 +14,8 @@ Start Up Location: Library
 
 Enable context menu focus compatibility mode: Enabled
 
-Notify me about additions or changes to my games, new releases and upcoming releases: Disabled
+Notify me about additions or changes to my games, new releases and upcoming
+releases: Disabled
 
 Enable GPU accelerated rendering in web views: Disabled
 
@@ -26,6 +27,8 @@ Start Big Picture mode Windowed: Enabled
 
 ## SteamTinkerLaunch
 
-Force the compatibility tool `Steam Tinker Launch` on games that you want to use proton with.
+Force the compatibility tool `Steam Tinker Launch` on games that you want to use
+proton with.
 
-To use the native version of the game with the Steam Tinker Launch settings, add the launch option `steamtinkerlaunch %command%`.
+To use the native version of the game with the Steam Tinker Launch settings, add
+the launch option `steamtinkerlaunch %command%` .

@@ -19,7 +19,8 @@ ssh-add ~/.ssh/id_ed25519
 
 ## Adding SSH key to GitHub & Codeberg
 
-Note: name the key in the following way for clarity: `{host-name}-{date}`, e.g. `will-desktop-2024-06-05`.
+Note: name the key in the following way for clarity: `{host-name}-{date}` , e.g.
+`will-desktop-2024-06-05` .
 
 Navigate to [GitHub](https://github.com/settings/ssh/new).
 
@@ -49,4 +50,5 @@ Then edit `allowed_signers` and move the email to the start of the line.
 
 1. Run `ssh-add -D` to remove all the keys from the SSH agent.
 2. Run `git pull` on a repository that you've cloned with SSH.
-3. When prompted to input your SSH key password, select "Automatically unlock this key whenever I'm logged in" (it may prompt twice).
+3. When prompted to input your SSH key password, select "Automatically unlock
+   this key whenever I'm logged in" (it may prompt twice).

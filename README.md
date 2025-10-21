@@ -24,7 +24,8 @@ My [NixOS](https://nixos.org/) config.
 
 ## Installing NixOS
 
-1. Set CSM support (or your equivalent) to disabled in the bios (ensures that you boot in UEFI, otherwise NixOS will use grub instead of systemd boot).
+1. Disable CSM support (or your equivalent) in the bios (ensures that you boot
+   in UEFI, otherwise NixOS will use grub instead of systemd boot).
 2. Download the NixOS Plasma ISO from [nixos.org](https://nixos.org/download.html).
 3. Write the NixOS Plasma ISO to a USB and boot into it.
 4. Run the installer and set the following:
@@ -48,7 +49,8 @@ To list Wi-Fi access points:
 nmcli dev wifi list
 ```
 
-To connect to a Wi-Fi access point (replace network-ssid with the name of the network and network-password with the password of the network):
+To connect to a Wi-Fi access point (replace network-ssid with the name of the
+network and network-password with the password of the network):
 
 ```bash
 sudo nmcli dev wifi connect network-ssid password "network-password"
@@ -70,7 +72,8 @@ git clone https://github.com/willswats/nixos-config.git ~/Code/nixos-config
 
 ### Add hardware-configuration.nix
 
-Add the `hardware-configuration.nix` to your chosen host (replace `host` with the desired host):
+Add the `hardware-configuration.nix` to your chosen host (replace `host` with
+the desired host):
 
 ```bash
 cp /etc/nixos/hardware-configuration.nix ~/Code/nixos-config/hosts/host/
@@ -78,7 +81,10 @@ cp /etc/nixos/hardware-configuration.nix ~/Code/nixos-config/hosts/host/
 
 ### Add boot.initrd.luks.devices Information
 
-Copy the text that starts with `boot.initrd.luks.devices` from `/etc/nixos/configuration.nix` to `~/Code/nixos-config/hosts/host/default.nix`, with `host` being your desired host. Delete any previous `boot.initrd.luks.devices` entries in the `default.nix` file.
+Copy the text that starts with `boot.initrd.luks.devices` from
+`/etc/nixos/configuration.nix` to `~/Code/nixos-config/hosts/host/default.nix` ,
+with `host` being your desired host. Delete any previous
+`boot.initrd.luks.devices` entries in the `default.nix` file.
 
 ### Build the Config
 
@@ -110,7 +116,8 @@ reboot
 
 ### Add the nixos-unstable Channel
 
-Add the nixos-unstable channel for `nix-shell` and run `sudo nix-channel --update` to fix issues with `command-not-found`:
+Add the nixos-unstable channel for `nix-shell` and run
+`sudo nix-channel --update` to fix issues with `command-not-found` :
 
 ```bash
 sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
