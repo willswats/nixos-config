@@ -15,10 +15,6 @@
             "godot"
           ];
           auto-format = true;
-          formatter = {
-            command = "gdformat";
-            args = [ "-" ];
-          };
         }
       ];
       language-server.godot = {
