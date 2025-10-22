@@ -33,7 +33,7 @@
         consent-o-matic
         darkreader
         bitwarden
-        vimium
+        tridactyl
         mal-sync
         translate-web-pages
         libredirect
