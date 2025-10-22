@@ -11,16 +11,18 @@ in
 
   programs.git = {
     enable = true;
-    userName = "willswats";
-    userEmail = email;
+    settings = {
+      user = {
+        name = "willswats";
+        email = email;
+      };
+      init.defaultBranch = "main";
+      pull.ff = "only";
+    };
     signing = {
       format = "ssh";
       key = "~/.ssh/id_ed25519.pub";
       signByDefault = true;
-    };
-    extraConfig = {
-      init.defaultBranch = "main";
-      pull.ff = "only";
     };
   };
 }
