@@ -15,6 +15,10 @@
             "mpls"
           ];
           auto-format = true;
+          formatter = {
+            command = "prettier";
+            args = [ "--parser" "markdown" "--prose-wrap" "always" ];
+          };
           soft-wrap.enable = true;
           comment-tokens = [
             "-"
@@ -54,17 +58,12 @@
     };
     extraPackages = with pkgs; [
       marksman # MD Language server
-      rumdl # Markdown formatter & linter
+      prettier # Markdown formatter
+      rumdl # Markdown linter
       harper # Spell checker
       mpls # Markdown preview lsp
     ];
   };
-
-  xdg.configFile."rumdl/rumdl.toml".text = ''      
-    [MD013]
-    line-length = 80
-    enable-reflow = true
-'';
 
   xdg.configFile."helix/external-snippets.toml".text = lib.mkAfter ''
     [[sources.paths]] 
