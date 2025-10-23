@@ -23,18 +23,16 @@
 
       // -- BINDS --
 
+      bind - voice_modenable_toggle
+
       bind mwheeldown +jump
       bind mwheelup +jump   
         
       bind x noclip      
-      bind c "say !r"
+      bind c player_ping
       bind v +voicerecord
 
-      bind alt player_ping
-
-      bind - voice_modenable_toggle
-
-      bind / "exec nade"
+      bind . "exec nade"
 
       // -- SETTINGS --
 
@@ -86,6 +84,7 @@
       host_writeconfig
     '';
 
+  # Nade practice commands
   home.file.".steam/steam/steamapps/common/Counter-Strike Global Offensive/game/csgo/cfg/nade.cfg".text =
     ''
       sv_cheats 1; bot_kick; mp_warmup_end; mp_freezetime 0; mp_roundtime_defuse 60; sv_grenade_trajectory 1; sv_grenade_trajectory_time 10; sv_showimpacts 1; ammo_grenade_limit_total 5; sv_infinite_ammo 1;

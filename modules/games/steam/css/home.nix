@@ -10,25 +10,19 @@
     unbind mwheeldown
 
     // -- BINDS --
+    exec movement_restart
+    exec show_chat
 
-    alias hidechat "hud_saytext_time 0; bind = showchat"
-    alias showchat "hud_saytext_time 500; bind = hidechat"
-    bind = showchat
-    showchat
+    bindtoggle - voice_enable
 
     bind mwheeldown +jump
     bind mwheelup +jump
     bind mouse4 +left
     bind mouse5 +right
 
-    bind z "say /specbot"
     bind x "say /noclip"
-    bind c "say /r"
+    bind c "say /specbot"
     bind v +voicerecord
-
-    bind alt sm_teleport
-
-    bindtoggle - voice_enable
 
     bind f1 "say /m"
     bind f2 "say /mrank"
@@ -41,5 +35,21 @@
     cl_yawspeed 230
 
     host_writeconfig
+  '';
+
+  # Switch between reload and restart
+  home.file.".steam/steam/steamapps/common/Counter-Strike Source/cstrike/cfg/movement_reload.cfg".text = ''
+    bind r +reload; bind t +spray; bind / "exec movement_restart"
+  '';
+  home.file.".steam/steam/steamapps/common/Counter-Strike Source/cstrike/cfg/movement_restart.cfg".text = ''
+    bind r sm_teleport; bind t "!say r"; bind / "exec movement_reload"
+  '';
+
+  # Hide and show chat
+  home.file.".steam/steam/steamapps/common/Counter-Strike Source/cstrike/cfg/hide_chat.cfg".text = ''
+    hud_saytext_time 0; bind = "exec show_chat"
+  '';
+  home.file.".steam/steam/steamapps/common/Counter-Strike Source/cstrike/cfg/show_chat.cfg".text = ''
+    hud_saytext_time 100; bind = "exec hide_chat"
   '';
 }

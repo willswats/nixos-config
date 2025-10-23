@@ -17,11 +17,10 @@
     unbind mwheeldown
 
     // -- BINDS --
+    exec movement_reload
+    exec show_chat
 
-    alias hidechat "hud_saytext_time 0; bind = showchat"
-    alias showchat "hud_saytext_time 500; bind = hidechat"
-    bind = showchat
-    showchat
+    bindtoggle - voice_enable
 
     bind mwheeldown +jump
     bind mwheelup +jump      
@@ -32,16 +31,12 @@
     alias -chargejump "-jump; -attack2"
 
     bind x noclip
-    bind c "say !r"
+    bind c "+chargejump"
     bind v +voicerecord
-
-    bind alt "+chargejump"
-
-    bindtoggle - voice_enable
 
     bind [ kill
     bind ] explode
-    bind / "exec practice"
+    bind . "exec practice"
 
     bind f1 voice_menu_1
     bind f2 voice_menu_2
@@ -111,7 +106,24 @@
     host_writeconfig
   '';
 
+  # Practice commands
   home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/practice.cfg".text = ''
     sv_cheats 1; buddha; ent_fire team_round_timer disable; sv_allow_point_servercommand always; mp_teams_unbalance_limit 0
+  '';
+
+  # Switch between reload and restart
+  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/movement_reload.cfg".text = ''
+    bind r +reload; bind t +spray; bind / "exec movement_restart"
+  '';
+  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/movement_restart.cfg".text = ''
+    bind r sm_teleport; bind t "!say r"; bind / "exec movement_reload"
+  '';
+
+  # Hide and show chat
+  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/hide_chat.cfg".text = ''
+    hud_saytext_time 0; bind = "exec show_chat"
+  '';
+  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/show_chat.cfg".text = ''
+    hud_saytext_time 100; bind = "exec hide_chat"
   '';
 }
