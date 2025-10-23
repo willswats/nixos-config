@@ -22,6 +22,7 @@
       unbind mwheeldown
 
       // -- BINDS --
+      exec movement_reload
 
       bind - voice_modenable_toggle
 
@@ -90,4 +91,12 @@
       sv_cheats 1; bot_kick; mp_warmup_end; mp_freezetime 0; mp_roundtime_defuse 60; sv_grenade_trajectory 1; sv_grenade_trajectory_time 10; sv_showimpacts 1; ammo_grenade_limit_total 5; sv_infinite_ammo 1;
       mp_buy_anywhere 1; mp_maxmoney 50000; mp_startmoney 50000; mp_buytime 9999; mp_restartgame 1; sv_grenade_trajectory_prac_pipreview true;
     '';
+
+  # Switch between reload and restart
+  home.file.".steam/steam/steamapps/common/Counter-Strike Global Offensive/game/csgo/cfg/movement_reload.cfg".text = ''
+    bind r +reload; bind / "exec movement_restart"
+  '';
+  home.file.".steam/steam/steamapps/common/Counter-Strike Global Offensive/game/csgo/cfg/movement_restart.cfg".text = ''
+    bind r "!say r"; bind / "exec movement_reload"
+  '';
 }
