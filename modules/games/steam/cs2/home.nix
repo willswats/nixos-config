@@ -69,17 +69,18 @@
 
       // Crosshair
       cl_crosshairstyle 4
-      cl_crosshairsize 1.5
-      cl_crosshairthickness 1.5
-      cl_crosshairgap -6.5
-      cl_crosshair_drawoutline 0
+      cl_crosshairsize 2
+      cl_crosshairthickness 1
+      cl_crosshairgap -1.5
+      cl_crosshair_drawoutline 1
+      cl_crosshair_outlinethickness 1
       cl_crosshairdot 0
       cl_crosshair_t 0
       cl_crosshairusealpha 1
       cl_crosshairalpha 255
       cl_crosshair_recoil 0
       cl_crosshairgap_useweaponvalue 0
-      cl_crosshaircolor 5 
+      cl_crosshaircolor 5
       cl_crosshair_sniper_width 1
 
       host_writeconfig
