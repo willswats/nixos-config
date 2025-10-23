@@ -97,6 +97,6 @@
     bind r +reload; bind / "exec movement_restart"
   '';
   home.file.".steam/steam/steamapps/common/Counter-Strike Global Offensive/game/csgo/cfg/movement_restart.cfg".text = ''
-    bind r "!say r"; bind / "exec movement_reload"
+    bind r "say !r"; bind / "exec movement_reload"
   '';
 }

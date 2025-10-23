@@ -116,7 +116,7 @@
     bind r +reload; bind / "exec movement_restart"
   '';
   home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/movement_restart.cfg".text = ''
-    bind r "!say r"; bind / "exec movement_reload"
+    bind r "say !r"; bind / "exec movement_reload"
   '';
 
   # Hide and show chat
