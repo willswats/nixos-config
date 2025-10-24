@@ -17,7 +17,7 @@
           auto-format = true;
           formatter = {
             command = "prettier";
-            args = [ "--parser" "markdown" "--prose-wrap" "always" ];
+            args = [ "--parser" "markdown" ];
           };
           soft-wrap.enable = true;
           comment-tokens = [
@@ -64,6 +64,12 @@
       mpls # Markdown preview lsp
     ];
   };
+
+  # Disable line length rule
+  xdg.configFile."rumdl/rumdl.toml".text = ''
+    [global]
+    disable = [ "MD013" ]
+  '';
 
   xdg.configFile."helix/external-snippets.toml".text = lib.mkAfter ''
     [[sources.paths]] 
