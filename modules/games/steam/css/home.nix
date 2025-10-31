@@ -42,7 +42,7 @@
     bind r +reload; bind t +spray; bind / "exec movement_restart"
   '';
   home.file.".steam/steam/steamapps/common/Counter-Strike Source/cstrike/cfg/movement_restart.cfg".text = ''
-    bind r sm_teleport; bind t "say !r"; bind / "exec movement_reload"
+    bind r sm_teleport; bind t "say /r"; bind / "exec movement_reload"
   '';
 
   # Hide and show chat
