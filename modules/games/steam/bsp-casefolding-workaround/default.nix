@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    vpkedit
+    # TODO: add back vpkedit
+    # vpkedit
   ];
 }

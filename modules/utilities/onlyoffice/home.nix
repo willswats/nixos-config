@@ -16,6 +16,6 @@
   };
 
   home.packages = with pkgs; [
-    onlyoffice-bin_latest
+    onlyoffice-desktopeditors
   ];
 }
