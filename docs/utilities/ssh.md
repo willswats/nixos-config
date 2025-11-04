@@ -48,7 +48,5 @@ Then edit `allowed_signers` and move the email to the start of the line.
 
 ## Add an SSH key to Gnome Keyring with Login Auto Unlock
 
-1. Run `ssh-add -D` to remove all the keys from the SSH agent.
-2. Run `git pull` on a repository that you've cloned with SSH.
-3. When prompted to input your SSH key password, select "Automatically unlock
-   this key whenever I'm logged in" (it may prompt twice).
+1. Run `git pull` on a repository that you've cloned with SSH.
+2. When prompted to input your SSH key password, select "Automatically unlock this key whenever I'm logged in" (it may prompt twice).
