@@ -8,8 +8,7 @@ Run:
 ssh-keygen -t ed25519 -C "william@williamwatson.dev"
 ```
 
-Press enter until you are prompted to set the passphrase, then set the
-passphrase to something and save it somewhere.
+Press enter until you are prompted to set the passphrase, then set the passphrase to something and save it somewhere.
 
 ## Add the key
 
@@ -19,8 +18,7 @@ ssh-add ~/.ssh/id_ed25519
 
 ## Adding SSH key to GitHub & Codeberg
 
-Note: name the key in the following way for clarity: `{host-name}-{date}` , e.g.
-`will-desktop-2024-06-05` .
+Note: name the key in the following way for clarity: `{host-name}-{date}`, e.g. `will-desktop-2024-06-05` .
 
 Navigate to [GitHub](https://github.com/settings/ssh/new).
 
