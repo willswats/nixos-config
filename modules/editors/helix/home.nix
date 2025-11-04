@@ -46,8 +46,8 @@
         line-number = "relative"; # Relative line numbers
         indent-guides.render = true; # Indent guides
         scrolloff = 8; # How many lines to before scrolling starts
-        inline-diagnostics.cursor-line = "disable";
-        end-of-line-diagnostics = "disable";
+        inline-diagnostics.cursor-line = "disable"; # Disable cursor line diagnostics (moves lines and it's annoying)
+        end-of-line-diagnostics = "disable"; # Disable end of line diagnostics (too many warnings at times, some of them go off the screen)
 
         # Completion
         completion-timeout = 5; # Time in milliseconds after typing a word character before completions are shown, 5 is instant
