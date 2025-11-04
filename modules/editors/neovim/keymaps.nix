@@ -118,11 +118,25 @@
               inherit mode;
               key = "gh";
               action = "0";
+              options.desc = "Goto line start";
+            }
+            {
+              inherit mode;
+              key = "gs";
+              action = "\^";
+              options.desc = "Goto first non-blank in line";
             }
             {
               inherit mode;
               key = "gl";
               action = "\$";
+              options.desc = "Goto line end";
+            }
+            {
+              inherit mode;
+              key = "ge";
+              action = "G";
+              options.desc = "Goto last line";
             }
           ];
 
@@ -177,11 +191,25 @@
               inherit mode;
               key = "gh";
               action = "0";
+              options.desc = "Goto line start";
+            }
+            {
+              inherit mode;
+              key = "gs";
+              action = "\^";
+              options.desc = "Goto first non-blank in line";
             }
             {
               inherit mode;
               key = "gl";
               action = "\$";
+              options.desc = "Goto line end";
+            }
+            {
+              inherit mode;
+              key = "ge";
+              action = "G";
+              options.desc = "Goto last line";
             }
           ];
 
