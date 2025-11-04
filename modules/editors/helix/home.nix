@@ -39,17 +39,21 @@
     settings = {
       theme = "catppuccin_mocha";
       editor = {
-        bufferline = "multiple";
-        cursorline = true;
-        cursor-shape.insert = "bar";
-        indent-guides.render = true;
-        rainbow-brackets = true;
-        color-modes = true;
-        line-number = "relative";
-        scrolloff = 8;
-        word-completion.trigger-length = 1;
-        completion-timeout = 5;
-        completion-trigger-len = 1;
+        cursorline = true; # Highlight current line
+        cursor-shape.insert = "bar"; # Change to bar in insert
+        bufferline = "multiple"; # Show bufferline when multiple buffers
+        rainbow-brackets = true; # Rainbow brackets
+        line-number = "relative"; # Relative line numbers
+        indent-guides.render = true; # Indent guides
+        scrolloff = 8; # How many lines to before scrolling starts
+
+        # Completion
+        completion-timeout = 5; # Time in milliseconds after typing a word character before completions are shown, 5 is instant
+        completion-trigger-len = 1; # Min-length of word under cursor to trigger autocompletion
+        word-completion.trigger-length = 1; # Number of word characters to type before triggering completion
+
+        # Status line
+        color-modes = true; # Coloured modes in statusline
         statusline = {
           left = [
             "mode"
