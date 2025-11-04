@@ -5,8 +5,8 @@
     ../default.nix
     ./hardware-configuration.nix
   ];
-
   boot = {
+    initrd.luks.devices."luks-6a022660-731b-4890-8d6d-aba86801525b".device = "/dev/disk/by-uuid/6a022660-731b-4890-8d6d-aba86801525b";
     loader = {
       systemd-boot = {
         enable = true;
