@@ -2,7 +2,7 @@
 
 {
   # Note: a lot of the lsp config is only defined for the sake of adding scls to the language servers list, and to define the snippets for scls.
-  # We also have to define them to add "auto-format = true" to the servers where it is not the default.
+  # We also have to define them to add "auto-format = true" to the servers where it is not the default. 
   imports = [
     ./lsp/scls.nix
     ./lsp/nix.nix
@@ -46,6 +46,8 @@
         line-number = "relative"; # Relative line numbers
         indent-guides.render = true; # Indent guides
         scrolloff = 8; # How many lines to before scrolling starts
+        inline-diagnostics.cursor-line = "disable";
+        end-of-line-diagnostics = "disable";
 
         # Completion
         completion-timeout = 5; # Time in milliseconds after typing a word character before completions are shown, 5 is instant
