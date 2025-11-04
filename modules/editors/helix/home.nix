@@ -2,7 +2,7 @@
 
 {
   # Note: a lot of the lsp config is only defined for the sake of adding scls to the language servers list, and to define the snippets for scls.
-  # We also have to define them to add "auto-format = true" to the servers where it is not the default. 
+  # We also have to define them to add "auto-format = true" to the servers where it is not the default.
   imports = [
     ./lsp/scls.nix
     ./lsp/nix.nix
@@ -45,8 +45,6 @@
         indent-guides.render = true;
         rainbow-brackets = true;
         color-modes = true;
-        inline-diagnostics.cursor-line = "disable";
-        end-of-line-diagnostics = "disable";
         line-number = "relative";
         scrolloff = 8;
         word-completion.trigger-length = 1;
