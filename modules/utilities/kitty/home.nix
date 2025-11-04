@@ -29,6 +29,9 @@ in
       kitty_mod = "alt";
     };
     keybindings = {
+      "ctrl+c" = "copy_to_clipboard";
+      "ctrl+v" = "paste_from_clipboard";
+
       "kitty_mod+1" = "goto_tab 1";
       "kitty_mod+2" = "goto_tab 2";
       "kitty_mod+3" = "goto_tab 3";
@@ -45,7 +48,6 @@ in
       "kitty_mod+e" = "new_tab_with_cwd ${yazi}";
       "kitty_mod+r" = "new_tab_with_cwd ${scooter}";
       "kitty_mod+g" = "new_tab_with_cwd ${lazygit}";
-
     };
   };
 }
