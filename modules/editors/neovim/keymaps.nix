@@ -138,6 +138,11 @@
               action = "G";
               options.desc = "Goto last line";
             }
+            {
+              key = "mm";
+              action = "\%";
+              options.desc = "Goto matching bracket";
+            }
           ];
 
         insert =
@@ -210,6 +215,11 @@
               key = "ge";
               action = "G";
               options.desc = "Goto last line";
+            }
+            {
+              key = "mm";
+              action = "\%";
+              options.desc = "Goto matching bracket";
             }
           ];
 
