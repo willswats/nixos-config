@@ -33,7 +33,7 @@
       bind c player_ping
       bind v +voicerecord
 
-      bind . "exec nade"
+      bind KP_0 "exec nade" // numpad 0
 
       // -- SETTINGS --
 
@@ -92,11 +92,11 @@
       mp_buy_anywhere 1; mp_maxmoney 50000; mp_startmoney 50000; mp_buytime 9999; mp_restartgame 1; sv_grenade_trajectory_prac_pipreview true;
     '';
 
-  # Switch between reload and restart
+  # Switch between reload and restart (numpad 1)
   home.file.".steam/steam/steamapps/common/Counter-Strike Global Offensive/game/csgo/cfg/movement_reload.cfg".text = ''
-    bind r +reload; bind / "exec movement_restart"
+    bind r +reload; bind KP_1 "exec movement_restart"
   '';
   home.file.".steam/steam/steamapps/common/Counter-Strike Global Offensive/game/csgo/cfg/movement_restart.cfg".text = ''
-    bind r "say !r"; bind / "exec movement_reload"
+    bind r "say !r"; bind KP_1 "exec movement_reload"
   '';
 }

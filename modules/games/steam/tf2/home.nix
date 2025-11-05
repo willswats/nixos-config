@@ -36,7 +36,7 @@
 
     bind [ kill
     bind ] explode
-    bind . "exec practice"
+    bind KP_INS "exec practice" // numpad 0
 
     bind f1 voice_menu_1
     bind f2 voice_menu_2
@@ -111,12 +111,12 @@
     sv_cheats 1; buddha; ent_fire team_round_timer disable; sv_allow_point_servercommand always; mp_teams_unbalance_limit 0
   '';
 
-  # Switch between reload and restart
+  # Switch between reload and restart (numpad 1) 
   home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/movement_reload.cfg".text = ''
-    bind r +reload; bind / "exec movement_restart"
+    bind r +reload; bind KP_END "exec movement_restart"
   '';
   home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/movement_restart.cfg".text = ''
-    bind r "say !r"; bind / "exec movement_reload"
+    bind r "say !r"; bind KP_END "exec movement_reload"
   '';
 
   # Hide and show chat

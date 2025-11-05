@@ -40,28 +40,28 @@
     host_writeconfig
   '';
 
-  # Switch between reload and restart
+  # Switch between reload and restart (numpad 1)
   home.file.".steam/steam/steamapps/common/GarrysMod/garrysmod/cfg/movement_reload.cfg".text = ''
-    bind r +reload; bind / "exec movement_restart"
+    bind r +reload; bind KP_END "exec movement_restart"
   '';
   home.file.".steam/steam/steamapps/common/GarrysMod/garrysmod/cfg/movement_restart.cfg".text = ''
-    bind r "say !r"; bind / "exec movement_reload"
+    bind r "say !r"; bind KP_END "exec movement_reload"
   '';
 
-  # Switch between lean and turn binds
-  home.file.".steam/steam/steamapps/common/GarrysMod/garrysmod/cfg/mouse_buttons_turn.cfg".text = ''
-    bind mouse4 +left; bind mouse5 +right; bind , "exec mouse_buttons_lean"
-  '';
-  home.file.".steam/steam/steamapps/common/GarrysMod/garrysmod/cfg/mouse_buttons_lean.cfg".text = ''
-    bind mouse4 +leanleft; bind mouse5 +leanright; bind , "exec mouse_buttons_turn"
-  '';
-
-  # Switch between mwheel jump and mwheel scroll inv
+  # Switch between mwheel jump and mwheel scroll inv (numpad 2)
   home.file.".steam/steam/steamapps/common/GarrysMod/garrysmod/cfg/mwheel_jump.cfg".text = ''
-    bind mwheelup +jump; bind mwheeldown +jump; bind . "exec mwheel_inv"
+    bind mwheelup +jump; bind mwheeldown +jump; bind KP_DOWNARROW "exec mwheel_inv"
   '';
   home.file.".steam/steam/steamapps/common/GarrysMod/garrysmod/cfg/mwheel_inv.cfg".text = ''
-    bind mwheelup invnext; bind mwheeldown invprev; bind . "exec mwheel_jump"
+    bind mwheelup invnext; bind mwheeldown invprev; bind KP_DOWNARROW "exec mwheel_jump"
+  '';
+
+  # Switch between lean and turn binds (numpad 3)
+  home.file.".steam/steam/steamapps/common/GarrysMod/garrysmod/cfg/mouse_buttons_turn.cfg".text = ''
+    bind mouse4 +left; bind mouse5 +right; bind KP_PGDN "exec mouse_buttons_lean"
+  '';
+  home.file.".steam/steam/steamapps/common/GarrysMod/garrysmod/cfg/mouse_buttons_lean.cfg".text = ''
+    bind mouse4 +leanleft; bind mouse5 +leanright; bind KP_PGDN "exec mouse_buttons_turn"
   '';
 
   # Hide and show chat
