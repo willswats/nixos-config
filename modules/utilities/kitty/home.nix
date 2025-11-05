@@ -29,8 +29,8 @@ in
       kitty_mod = "alt";
     };
     keybindings = {
-      "ctrl+c" = "copy_to_clipboard";
-      "ctrl+v" = "paste_from_clipboard";
+      "ctrl+shift+c" = "copy_to_clipboard";
+      "ctrl+shift+v" = "paste_from_clipboard";
 
       "kitty_mod+1" = "goto_tab 1";
       "kitty_mod+2" = "goto_tab 2";
