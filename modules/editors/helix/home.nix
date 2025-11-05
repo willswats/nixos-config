@@ -39,6 +39,7 @@
     settings = {
       theme = "catppuccin_mocha";
       editor = {
+        mouse = true; # Enable mouse
         cursorline = true; # Highlight current line
         cursor-shape.insert = "bar"; # Change to bar in insert
         bufferline = "multiple"; # Show bufferline when multiple buffers
