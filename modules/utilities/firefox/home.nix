@@ -73,8 +73,6 @@
           "browser.formfill.enable" = true;
 
           # Disable Features
-          ## Disable firefox view
-          "browser.tabs.firefox-view" = false;
           ## Disable search suggestions
           "browser.search.suggest.enabled" = false;
           "browser.urlbar.suggest.quicksuggest.nonsponsored" = false;
@@ -95,8 +93,6 @@
           "browser.aboutwelcome.enabled" = false;
           ## Disable containers
           "privacy.userContext.enabled" = false;
-          ## Disable hover preview
-          "browser.tabs.hoverPreview.enabled" = false;
           # Disable middle mouse paste
           "middlemouse.paste" = false;
 
@@ -108,6 +104,10 @@
           "browser.newtabpage.blocked" = newTabPageBlocked; # Remove the default pinned websites from the new tab page (appears in search)
           "browser.uiCustomization.state" = uiCustomizationState; # Save UI customizations
           "browser.ml.chat.enabled" = false; # Disable ML chat
+          ## Tabs
+          "browser.tabs.firefox-view" = false;
+          "browser.tabs.hoverPreview.enabled" = false;
+          "browser.tabs.groups.enabled" = false;
           ## Sidebar
           "sidebar.verticalTabs" = false;
           "sidebar.revamp" = false;
