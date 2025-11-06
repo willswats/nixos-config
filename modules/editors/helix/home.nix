@@ -47,8 +47,12 @@
         line-number = "relative"; # Relative line numbers
         indent-guides.render = true; # Indent guides
         scrolloff = 8; # How many lines to before scrolling starts
+        file-picker.hidden = false; # Enable hidden files in file picker
+
+        # Diagnostics & LSP
         inline-diagnostics.cursor-line = "disable"; # Disable cursor line diagnostics (moves lines and it's annoying)
         end-of-line-diagnostics = "disable"; # Disable end of line diagnostics (too many warnings at times, some of them go off the screen)
+        lsp.auto-signature-help = false; # Disable auto signature help box (gets in the way)
 
         # Completion
         completion-timeout = 5; # Time in milliseconds after typing a word character before completions are shown, 5 is instant
