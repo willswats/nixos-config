@@ -78,18 +78,16 @@ in
       };
     };
     extraConfigLua = ''
-      local lspconfig = require("lspconfig")
-
-      local signs = {
-        { name = "DiagnosticSignError", text = "${icons.diagnostics.BoldError}" },
-        { name = "DiagnosticSignWarn",  text = "${icons.diagnostics.BoldWarning}" },
-        { name = "DiagnosticSignHint",  text = "${icons.diagnostics.BoldHint}" },
-        { name = "DiagnosticSignInfo",  text = "${icons.diagnostics.BoldInformation}" },
-      }
-
-      for _, sign in pairs(signs) do
-        vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
-      end
+      vim.diagnostic.config({
+        signs = {
+          text = {
+            [vim.diagnostic.severity.ERROR] = "${icons.diagnostics.BoldError}",
+            [vim.diagnostic.severity.WARN] = "${icons.diagnostics.BoldWarning}",
+            [vim.diagnostic.severity.HINT] = "${icons.diagnostics.BoldHint}",
+            [vim.diagnostic.severity.INFO] = "${icons.diagnostics.BoldInformation}",
+          },
+        },
+      })
     '';
   };
 }
