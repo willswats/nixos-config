@@ -50,7 +50,7 @@
         file-picker.hidden = false; # Enable hidden files in file picker
 
         # Diagnostics & LSP
-        inline-diagnostics.cursor-line = "disable"; # Disable cursor line diagnostics (moves lines and it's annoying)
+        inline-diagnostics.cursor-line = "hint"; # Enable cursor line diagnostics for hints and above (better than having errors cover the screen at the top right)
         end-of-line-diagnostics = "disable"; # Disable end of line diagnostics (too many warnings at times, some of them go off the screen)
         lsp.auto-signature-help = false; # Disable auto signature help box (gets in the way)
 
