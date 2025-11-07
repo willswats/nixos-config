@@ -45,7 +45,7 @@
       callback = {
         __raw = ''
           function()
-            vim.highlight.on_yank { higroup = "Visual", timeout = 200 }
+            vim.hl.on_yank({ higroup = "Visual", timeout = 200 })
           end
         '';
       };
