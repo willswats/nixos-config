@@ -71,7 +71,6 @@
       tidal-hifi
       euphonica
       freetube
-      mangayomi
       dropbox
       pixelorama
       zotero
