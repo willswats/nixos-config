@@ -24,6 +24,7 @@
     bindtoggle - voice_enable
 
     bind g +drop
+    bind mouse3 mightyfootengaged
 
     bind x noclip
     bind v +voicerecord
@@ -35,7 +36,6 @@
     physgun_wheelspeed 50
     npc_citizen_auto_player_squad 0
     npc_citizen_auto_player_squad_allow_use 1
-    vmanip_kick_bind mouse3
 
     host_writeconfig
   '';
