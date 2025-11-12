@@ -86,6 +86,7 @@
           k.j = "normal_mode";
         };
         normal = {
+          esc = "collapse_selection";
           # Note: it's not currently possible to format and then write in this command as it doesn't block write from happening until format is complete.
           # Could be fixed by: https://github.com/helix-editor/helix/issues/8853
           space.w = [
