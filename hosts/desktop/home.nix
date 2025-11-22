@@ -25,6 +25,7 @@
     # Emulators
     rpcs3
     pcsx2
+    dolphin-emu
     # Launchers
     lutris
     prismlauncher

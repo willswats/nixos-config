@@ -8,7 +8,6 @@
         pkgs.retroarch.withCores (
           cores: with cores; [
             mgba # Nintendo - Game Boy Advance (mGBA)
-            dolphin # Nintendo - GameCube / Wii (Dolphin)
             mesen # Nintendo - NES / Famicom (Mesen)
             mupen64plus # Nintendo - Nintendo 64 (Mupen64Plus-Next)
             bsnes # - Nintendo - SNES / SFC (bsnes)
