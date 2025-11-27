@@ -93,6 +93,7 @@
       woeusb
       lynx
       scooter
+      live-server
       # Infosec
       nmap
       nikto
