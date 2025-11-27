@@ -30,7 +30,7 @@
     lutris
     prismlauncher
     # Games
-    (inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin.override {
+    (inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.osu-lazer-bin.override {
       pipewire_latency = "256/48000";
       releaseStream = "tachyon";
     })
