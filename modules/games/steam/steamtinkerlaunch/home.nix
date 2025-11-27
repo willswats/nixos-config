@@ -22,7 +22,7 @@
     ## Force reaper command if not available
     FORCEREAP="0"
     ## Start the game with this Proton version
-    USEPROTON="GE-Proton10-8"
+    USEPROTON="GE-Proton10-25"
     ## Use compatdata depending on the Proton version - 'single-proton' for using compatdata per game and Proton version - 'global-proton' for using the same Proton version based compatdata globally for all games
     REDIRCOMPDATA="disabled"
     ## Mode how to handle the steamuser directory on compatdata redirect
