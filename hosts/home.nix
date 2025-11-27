@@ -22,7 +22,8 @@
     ../modules/development/python/home.nix
     ../modules/development/direnv/home.nix
     # ../modules/development/unity/home.nix
-    ../modules/editors/neovim/home.nix
+    # TODO: uncomment neovim when fixed https://github.com/nix-community/nixvim/issues/3974
+    # ../modules/editors/neovim/home.nix
     ../modules/editors/helix/home.nix
     ../modules/editors/vscode/home.nix
     ../modules/utilities/firefox/home.nix
