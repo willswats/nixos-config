@@ -81,7 +81,8 @@
         MBTN_RIGHT = "script-binding uosc/menu";
         tab = "script-binding uosc/menu";
         t = "script-binding uosc/toggle-ui";
-        i = "script-binding uosc/items"; # Opens playlist menu when playlist exists, or open-file menu otherwise
+        i = "script-binding uosc/playlist";
+        o = "script-binding uosc/open-file";
         s = "script-binding uosc/shuffle; ${uoscFlashElementsControls}";
         c = "script-binding uosc/subtitles";
         v = "script-binding uosc/stream-quality";
@@ -128,7 +129,6 @@
     ];
     scriptOpts = {
       uosc = {
-        autoload = "yes"; # Autoload next file by default
         controls = "menu,gap,<video,audio>subtitles,<has_many_audio>audio,<has_many_video>video,<has_many_edition>editions,<stream>stream-quality,gap,space,<video,audio>speed,space,shuffle,loop-playlist,loop-file,toggle:hdr_auto:autoload@uosc,gap,prev,items,next,gap,fullscreen";
       };
       thumbfast = {
