@@ -58,7 +58,10 @@
         space = "cycle pause; ${uoscFlashTimeline}";
 
         "Ctrl+s" = "screenshot"; # Screenshot with subtitles
-        "Shift+s" = "screenshot video"; # Screenshot without subtitles
+        "Ctrl+shift+s" = "screenshot video"; # Screenshot without subtitles
+
+        s = "playlist-shuffle";
+        S = "playlist-unshuffle";
 
         # uosc
         "+" = "no-osd add volume 5; ${uoscFlashVolume}";
@@ -83,12 +86,10 @@
         t = "script-binding uosc/toggle-ui";
         i = "script-binding uosc/playlist";
         o = "script-binding uosc/open-file";
-        s = "script-binding uosc/shuffle; ${uoscFlashElementsControls}";
         c = "script-binding uosc/subtitles";
         v = "script-binding uosc/stream-quality";
         n = "script-binding uosc/next;";
         p = "script-binding uosc/prev;";
-        a = "no-osd cycle-values script-opts uosc-autoload=no uosc-autoload=yes; ${uoscFlashElementsControls}"; # Switch between autoplaying the next file or not using uosc autoload
 
         # memo
         h = "script-binding memo/memo-history";
@@ -129,7 +130,10 @@
     ];
     scriptOpts = {
       uosc = {
-        controls = "menu,gap,<video,audio>subtitles,<has_many_audio>audio,<has_many_video>video,<has_many_edition>editions,<stream>stream-quality,gap,space,<video,audio>speed,space,shuffle,loop-playlist,loop-file,toggle:hdr_auto:autoload@uosc,gap,prev,items,next,gap,fullscreen";
+        # Changes:
+        # - Remove shuffle, don't want to use uosc shuffle as it only works for picking a random file, and does not work for playlists.
+        # - The same applies to autoplay button, which I used to have here, doesn't work for playlists.
+        controls = "menu,gap,<video,audio>subtitles,<has_many_audio>audio,<has_many_video>video,<has_many_edition>editions,<stream>stream-quality,gap,space,<video,audio>speed,space,loop-playlist,loop-file,gap,prev,items,next,gap,fullscreen";
       };
       thumbfast = {
         network = "yes"; # Enable on network playback
