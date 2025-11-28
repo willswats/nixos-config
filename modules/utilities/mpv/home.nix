@@ -133,6 +133,7 @@
         # Changes:
         # - Remove shuffle, don't want to use uosc shuffle as it only works for picking a random file, and does not work for playlists.
         # - The same applies to autoplay button, which I used to have here, doesn't work for playlists.
+        # Note: I need to use playlists as MPRIS will not work with the file system
         controls = "menu,gap,<video,audio>subtitles,<has_many_audio>audio,<has_many_video>video,<has_many_edition>editions,<stream>stream-quality,gap,space,<video,audio>speed,space,loop-playlist,loop-file,gap,prev,items,next,gap,fullscreen";
       };
       thumbfast = {
