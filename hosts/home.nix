@@ -93,6 +93,7 @@
       lynx
       scooter
       live-server
+      termusic
       # Infosec
       nmap
       nikto

@@ -68,6 +68,7 @@
 
       kitty = "${pkgs.kitty}/bin/kitty";
       yazi = "${pkgs.yazi}/bin/yazi";
+      termusic = "${pkgs.termusic}/bin/termusic";
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
       nyaa = "${pkgs.nyaa}/bin/nyaa";
@@ -293,8 +294,9 @@
           "${mod}+v" = "exec mpv"; # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
           "${mod}+Shift+v" = "exec ${freetube}"; # Freetube
 
-          "${mod}+e" = "exec ${kitty} ${yazi}"; # File explorer
           "${mod}+t" = "exec ${kitty} $EDITOR"; # Text editor
+          "${mod}+e" = "exec ${kitty} ${yazi}"; # File explorer
+          "${mod}+m" = "exec ${kitty} ${termusic}"; # Music player
           "${mod}+s" = "exec ${kitty} ${btm} -b"; # Process monitor
           "${mod}+b" = "exec ${kitty} ${bluetuith}"; # Bluetooth manager
           "${mod}+n" = "exec ${kitty} ${nyaa}"; # Nyaa
