@@ -83,12 +83,15 @@
         t = "script-binding uosc/toggle-ui";
         i = "script-binding uosc/playlist";
         o = "script-binding uosc/open-file";
+        # Randomly pick a file (does not work with playlists)
         s = "script-binding uosc/shuffle; ${uoscFlashElementsControls}";
         c = "script-binding uosc/subtitles";
         v = "script-binding uosc/stream-quality";
         n = "script-binding uosc/next;";
         p = "script-binding uosc/prev;";
-        a = "no-osd cycle-values script-opts uosc-autoload=no uosc-autoload=yes; ${uoscFlashElementsControls}"; # Switch between autoplaying the next file or not using uosc autoload
+        # Switch between autoplaying the next file or not using uosc autoload
+        # Note: this will not work with MPRIS as MPRIS requires the files to be a in a playlist
+        a = "no-osd cycle-values script-opts uosc-autoload=no uosc-autoload=yes; ${uoscFlashElementsControls}";
 
         # memo
         h = "script-binding memo/memo-history";
@@ -129,6 +132,7 @@
     ];
     scriptOpts = {
       uosc = {
+        # Add autoload button
         controls = "menu,gap,<video,audio>subtitles,<has_many_audio>audio,<has_many_video>video,<has_many_edition>editions,<stream>stream-quality,gap,space,<video,audio>speed,space,shuffle,loop-playlist,loop-file,toggle:hdr_auto:autoload@uosc,gap,prev,items,next,gap,fullscreen";
       };
       thumbfast = {
