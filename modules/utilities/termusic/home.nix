@@ -194,7 +194,7 @@ in
     [player]
     music_dirs = ["${musicDir}"]
     loop_mode = "playlist"
-    volume = 50
+    volume = 20
     speed = 10
     gapless = true
     use_mediacontrols = true
