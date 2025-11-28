@@ -47,7 +47,6 @@
     ../modules/utilities/hakuneko/home.nix
     ../modules/utilities/beets/home.nix
     ../modules/utilities/nyaa/home.nix
-    ../modules/servers/mpd/home.nix
   ];
 
   programs.home-manager.enable = true;

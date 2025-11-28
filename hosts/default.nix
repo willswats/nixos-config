@@ -29,7 +29,6 @@ in
     ../modules/utilities/virt-manager
     ../modules/utilities/wireshark
     ../modules/utilities/gpu-screen-recorder
-    ../modules/servers/mpd
   ];
 
   # Settings and overlays
