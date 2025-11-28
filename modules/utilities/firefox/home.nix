@@ -312,8 +312,8 @@
                     url = "https://chatreplay.stream/subscriptions";
                   }
                   {
-                    name = "iBroadcast";
-                    url = "https://media.ibroadcast.com/";
+                    name = "MusicButler";
+                    url = "https://www.musicbutler.io";
                   }
                   {
                     name = "radioMii";
