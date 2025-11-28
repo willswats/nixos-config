@@ -68,7 +68,6 @@
       baobab
       gpu-viewer
       moonlight-qt
-      euphonica
       picard
       freetube
       dropbox
