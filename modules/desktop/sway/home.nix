@@ -65,7 +65,6 @@
       firefox = "${pkgs.firefox}/bin/firefox";
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
       freetube = "${pkgs.freetube}/bin/freetube";
-      euphonica = "${pkgs.euphonica}/bin/euphonica";
 
       kitty = "${pkgs.kitty}/bin/kitty";
       yazi = "${pkgs.yazi}/bin/yazi";
@@ -293,7 +292,6 @@
           "${mod}+a" = "exec ${pavucontrol}"; # Audio manager
           "${mod}+v" = "exec mpv"; # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
           "${mod}+Shift+v" = "exec ${freetube}"; # Freetube
-          "${mod}+m" = "exec ${euphonica}"; # Music player for Albums
 
           "${mod}+e" = "exec ${kitty} ${yazi}"; # File explorer
           "${mod}+t" = "exec ${kitty} $EDITOR"; # Text editor
