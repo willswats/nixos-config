@@ -71,6 +71,7 @@
       moonlight-qt
       tidal-hifi
       euphonica
+      picard
       freetube
       dropbox
       pixelorama
