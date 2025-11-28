@@ -69,7 +69,6 @@
       baobab
       gpu-viewer
       moonlight-qt
-      tidal-hifi
       euphonica
       picard
       freetube
