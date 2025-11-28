@@ -10,8 +10,8 @@
     let
       driveDir = host.directories.drive;
 
-      pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm";
-      fileRoller = "${pkgs.file-roller}/bin/file-roller";
+      pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm"; # GUI file manager (drag and drop)
+      fileRoller = "${pkgs.file-roller}/bin/file-roller"; # GUI archive manager
 
       # Pinned to commit so that I do not need to keep updating the hash
       # https://github.com/yazi-rs/plugins/tree/main
@@ -127,6 +127,14 @@
             ];
             run = "cd ${driveDir}";
             desc = "Go to Drive directory";
+          }
+          {
+            on = [
+              "g"
+              "m"
+            ];
+            run = "cd ${driveDir}/Entertainment/Music";
+            desc = "Go to Music directory";
           }
           {
             on = [
