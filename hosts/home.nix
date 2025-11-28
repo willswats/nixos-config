@@ -39,6 +39,7 @@
     ../modules/utilities/bottom/home.nix
     ../modules/utilities/pcmanfm/home.nix
     ../modules/utilities/yazi/home.nix
+    ../modules/utilities/termusic/home.nix
     ../modules/utilities/bluetuith/home.nix
     ../modules/utilities/gnome-keyring/home.nix
     ../modules/utilities/onlyoffice/home.nix
@@ -93,7 +94,6 @@
       lynx
       scooter
       live-server
-      termusic
       # Infosec
       nmap
       nikto
