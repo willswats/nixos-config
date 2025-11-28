@@ -87,7 +87,7 @@
         v = "script-binding uosc/stream-quality";
         n = "script-binding uosc/next;";
         p = "script-binding uosc/prev;";
-        a = "no-osd cycle-values script-opts uosc-autoload=yes uosc-autoload=no; ${uoscFlashElementsControls}"; # Switch between autoplaying the next file or not using uosc autoload
+        a = "no-osd cycle-values script-opts uosc-autoload=no uosc-autoload=yes; ${uoscFlashElementsControls}"; # Switch between autoplaying the next file or not using uosc autoload
 
         # memo
         h = "script-binding memo/memo-history";
@@ -128,6 +128,7 @@
     ];
     scriptOpts = {
       uosc = {
+        autoload = "yes"; # Autoload next file by default
         controls = "menu,gap,<video,audio>subtitles,<has_many_audio>audio,<has_many_video>video,<has_many_edition>editions,<stream>stream-quality,gap,space,<video,audio>speed,space,shuffle,loop-playlist,loop-file,toggle:hdr_auto:autoload@uosc,gap,prev,items,next,gap,fullscreen";
       };
       thumbfast = {
