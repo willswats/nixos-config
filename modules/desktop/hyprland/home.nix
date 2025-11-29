@@ -65,6 +65,7 @@
       grimblast = "${pkgs.grimblast}/bin/grimblast";
 
       lxpolkit = "${pkgs.lxsession}/bin/lxpolkit";
+      rescrobbled = "${pkgs.rescrobbled}/bin/rescrobbled";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
 
@@ -216,6 +217,7 @@
           # Daemons
           "${playerctld}" # The home manager service doesn't seem to start playerctld
           "${lxpolkit}"
+          "${rescrobbled}"
           # Applets
           "${mullvadGui}"
           "${dropbox}"

@@ -137,6 +137,7 @@ sudo nix-channel --update
 2. [Firefox](./docs/utilities/firefox.md)
 3. [SSH](./docs/utilities/ssh.md)
 4. [virt-manager](./docs/utilities/virt-manager.md)
+5. [rescrobbled](./docs/utilities/rescrobbled.md)
 
 ### Games
 

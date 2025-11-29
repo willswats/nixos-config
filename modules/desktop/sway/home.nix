@@ -75,6 +75,7 @@
       grimshot = "${pkgs.sway-contrib.grimshot}/bin/grimshot";
 
       lxpolkit = "${pkgs.lxsession}/bin/lxpolkit";
+      rescrobbled = "${pkgs.rescrobbled}/bin/rescrobbled";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
 
@@ -330,6 +331,10 @@
           }
           {
             command = "${lxpolkit}";
+            always = false;
+          }
+          {
+            command = "${rescrobbled}";
             always = false;
           }
           # Applets

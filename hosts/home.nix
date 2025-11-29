@@ -94,6 +94,7 @@
       lynx
       scooter
       live-server
+      rescrobbled
       # Infosec
       nmap
       nikto
