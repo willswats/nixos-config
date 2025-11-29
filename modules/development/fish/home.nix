@@ -76,8 +76,8 @@
         ghicc = ghIssueCloseCommit.outPath;
 
         # yt-dlp
-        dlmp3 = "${ytDlp} -o '%(title)s.%(ext)s' --embed-thumbnail -t mp3";
-        dlmp4 = "${ytDlp} -o '%(title)s.%(ext)s' -t mp4";
+        dlmp3 = "${ytDlp} --cookies-from-browser firefox -o '%(title)s.%(ext)s' --embed-thumbnail -t mp3";
+        dlmp4 = "${ytDlp} --cookies-from-browser firefox -o '%(title)s.%(ext)s' -t mp4";
 
         # Nix
         nix-shell = "nix-shell --command fish";
