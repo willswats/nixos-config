@@ -24,6 +24,7 @@
       ensureDirsExist = pkgs.writeShellScript "ensureDirsExist.sh" ''
         mkdir -p ${directoriesToCreate}
         ln -s ${drive}/.dots/FreeTube ~/.config/
+        ln -s ${drive}/.dots/Youtube\ Music ~/.config/
 
         host=$(${hostname})
         if [ "$host" = "${desktopHostName}" ]; then
