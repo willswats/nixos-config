@@ -198,7 +198,7 @@ in
     speed = 10
     gapless = true
     use_mediacontrols = true
-    set_discord_status = true
+    set_discord_status = false
     random_track_quantity = 20
     random_album_min_quantity = 5
     backend = "rusty"
