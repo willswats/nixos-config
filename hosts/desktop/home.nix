@@ -31,7 +31,7 @@
     prismlauncher
     # Games
     (inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.osu-lazer-bin.override {
-      pipewire_latency = "256/48000";
+      pipewire_latency = "512/48000";
       releaseStream = "tachyon";
     })
     tetrio-desktop
