@@ -23,6 +23,7 @@
         laptopHostName = globals.hostNames.laptop;
 
         ytDlp = "${pkgs.yt-dlp}/bin/yt-dlp";
+        beet = "${pkgs.beet}/bin/beet";
         notifySend = "${pkgs.libnotify}/bin/notify-send";
         hostname = "${pkgs.hostname}/bin/hostname";
 
@@ -78,6 +79,10 @@
         # yt-dlp
         dlmp3 = "${ytDlp} --cookies-from-browser firefox -o '%(title)s.%(ext)s' --embed-thumbnail -t mp3";
         dlmp4 = "${ytDlp} --cookies-from-browser firefox -o '%(title)s.%(ext)s' -t mp4";
+
+        # beet
+        bi = "${beet} import ."; # For albums
+        binc = "${beet} import -C ."; # For playlists - no copy to library
 
         # Nix
         nix-shell = "nix-shell --command fish";
