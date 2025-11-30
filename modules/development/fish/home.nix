@@ -23,7 +23,7 @@
         laptopHostName = globals.hostNames.laptop;
 
         ytDlp = "${pkgs.yt-dlp}/bin/yt-dlp";
-        beet = "${pkgs.beet}/bin/beet";
+        beet = "${pkgs.beets}/bin/beet";
         notifySend = "${pkgs.libnotify}/bin/notify-send";
         hostname = "${pkgs.hostname}/bin/hostname";
 
