@@ -69,7 +69,6 @@
       gpu-viewer
       moonlight-qt
       youtube-music
-      picard
       freetube
       dropbox
       pixelorama
