@@ -244,7 +244,7 @@
           "$mod, m, exec, ${kitty} ${termusic}" # Music player
           "$mod, s, exec, ${kitty} ${btm} -b" # Process monitor
           "$mod, b, exec, ${kitty} ${bluetuith}" # Bluetooth manager
-          "$mod, n, exec ${kitty} ${nyaa}" # Nyaa
+          "$mod, n, exec, ${kitty} ${nyaa}" # Nyaa
 
           "$mod, p, exec, ${hyprpicker} -a" # Colour picker
           ", print, exec, ${grimblast} --notify copysave output" # Screenshot active monitor
