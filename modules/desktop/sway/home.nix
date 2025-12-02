@@ -222,6 +222,7 @@
           # Mute audio and mic mute
           "XF86AudioMute" = "exec ${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle";
           "XF86AudioMicMute" = "exec ${wpctl} set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
+          "XF86Tools" = "exec ${wpctl} set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
 
           # Setup play, pause, next and previous keys
           "XF86AudioPlay" = "exec ${playerctl} play-pause";
