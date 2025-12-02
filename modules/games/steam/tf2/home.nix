@@ -30,7 +30,7 @@
     alias +chargejump "+jump; +attack2"
     alias -chargejump "-jump; -attack2"
 
-    bind x noclip
+    bind x "noclip; impulse 101;
     bind c "+chargejump"
     bind v +voicerecord
 
@@ -108,7 +108,7 @@
 
   # Practice commands
   home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/practice.cfg".text = ''
-    sv_cheats 1; buddha; ent_fire team_round_timer disable; sv_allow_point_servercommand always; mp_teams_unbalance_limit 0
+    sv_cheats 1; ent_fire team_round_timer disable; hurtme -10000000;
   '';
 
   # Switch between reload and restart (numpad 1) 
