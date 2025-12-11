@@ -76,6 +76,7 @@
       teams-for-linux
       qalculate-gtk
       godot_4
+      warp
       ## CLI
       wget
       killall
