@@ -17,7 +17,6 @@
             beetle-psx # Sony - Playstation (Beetle PSX)
             ppsspp # Sony - PlayStation Portable (PPSSPP)
             desmume # Nintendo - DS (DeSmuME)
-            citra # Nintendo - 3DS (Citra)
             fbneo # Arcade (FinalBurn Neo)
           ]
         )

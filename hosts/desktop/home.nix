@@ -26,6 +26,7 @@
     rpcs3
     pcsx2
     dolphin-emu
+    azahar
     # Launchers
     lutris
     prismlauncher
