@@ -83,6 +83,7 @@
       ffmpeg
       mkvtoolnix-cli
       ouch
+      unrar-free
       nsz
       appimage-run
       steam-run
