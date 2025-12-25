@@ -29,6 +29,7 @@ in
     ../modules/utilities/virt-manager
     ../modules/utilities/wireshark
     ../modules/utilities/gpu-screen-recorder
+    ../modules/utilities/nix-alien
   ];
 
   # Settings and overlays
