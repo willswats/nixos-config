@@ -27,6 +27,8 @@
     pcsx2
     dolphin-emu
     azahar
+    xenia-canary
+    shadps4
     # Launchers
     lutris
     prismlauncher
