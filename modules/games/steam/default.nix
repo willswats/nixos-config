@@ -5,6 +5,7 @@
 
   programs.steam = {
     enable = true;
+    remotePlay.openFirewall = true;
     extraCompatPackages = with pkgs; [
       steamtinkerlaunch
       # Not using this, because when proton-ge-bin updates, all games set with it are reset to no proton
