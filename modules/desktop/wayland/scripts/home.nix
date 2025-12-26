@@ -28,7 +28,6 @@
 
         host=$(${hostname})
         if [ "$host" = "${desktopHostName}" ]; then
-          ln -s ${drive}/.dots/retroarch/ ~/.config/
           ln -s ${drive}/.dots/PCSX2/ ~/.config/
           ln -s ${drive}/.dots/rpcs3/ ~/.config/
           ln -s ${drive}/.dots/yuzu/ ~/.local/share/
