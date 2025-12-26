@@ -60,3 +60,5 @@ Install the following DLC:
 - PPSSPP
 - Retroarch - Beetle Saturn
 - Retroarch - Mupen64Plus Next
+
+Add the Retroarch `system` folder containing all the required bios files to `~/.local/share/Steam/steamapps/common/RetroArch/`.
