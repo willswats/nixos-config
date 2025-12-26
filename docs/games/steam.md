@@ -32,3 +32,31 @@ proton with.
 
 To use the native version of the game with the Steam Tinker Launch settings, add
 the launch option `steamtinkerlaunch %command%` .
+
+## Games
+
+### TF2
+
+HUD:
+
+```bash
+git clone https://github.com/rbjaxter/budhud.git ~/.steam/steam/steamapps/common/'Team Fortress 2'/tf/custom/budhud-master
+```
+
+### Retroarch
+
+Uninstall all DLC.
+
+Install the following DLC:
+
+- Beetle PSX
+- BlastEm
+- bsnes
+- Desmume
+- Final Burn Neo
+- Flycast
+- Mesen
+- mGBA
+- PPSSPP
+- Retroarch - Beetle Saturn
+- Retroarch - Mupen64Plus Next
