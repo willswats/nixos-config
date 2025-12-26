@@ -90,6 +90,7 @@
       trash-cli
       yt-dlp
       spotdl
+      mp3gain
       vulkan-tools
       woeusb
       lynx

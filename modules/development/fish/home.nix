@@ -24,6 +24,8 @@
 
         ytDlp = "${pkgs.yt-dlp}/bin/yt-dlp";
         beet = "${pkgs.beets}/bin/beet";
+        mp3gain = "${pkgs.mp3gain}/bin/mp3gain";
+
         notifySend = "${pkgs.libnotify}/bin/notify-send";
         hostname = "${pkgs.hostname}/bin/hostname";
 
@@ -83,6 +85,9 @@
         # beet
         bi = "${beet} import ."; # For albums
         binc = "${beet} import -C ."; # For playlists - no copy to library
+
+        # mp3gain
+        norm = "${mp3gain} -c -r";
 
         # Nix
         nix-shell = "nix-shell --command fish";
