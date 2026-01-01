@@ -33,7 +33,6 @@
     ../modules/utilities/krita/home.nix
     ../modules/utilities/kdenlive/home.nix
     ../modules/utilities/mullvad-vpn/home.nix
-    ../modules/utilities/vesktop/home.nix
     ../modules/utilities/kitty/home.nix
     ../modules/utilities/bottom/home.nix
     ../modules/utilities/pcmanfm/home.nix
@@ -77,6 +76,7 @@
       qalculate-gtk
       godot_4
       warp
+      discord
       ## CLI
       wget
       killall
