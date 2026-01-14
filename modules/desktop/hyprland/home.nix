@@ -55,7 +55,7 @@
       firefox = "${pkgs.firefox}/bin/firefox";
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
       freetube = "${pkgs.freetube}/bin/freetube";
-      youtube-music = "${pkgs.youtube-music}/bin/youtube-music";
+      pear-desktop = "${pkgs.pear-desktop}/bin/pear-desktop";
 
       kitty = "${pkgs.kitty}/bin/kitty";
       yazi = "${pkgs.yazi}/bin/yazi";
@@ -237,7 +237,7 @@
           "$mod, a, exec, ${pavucontrol}" # Audio manager
           "$mod, v, exec, mpv" # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
           "$mod shift, v, exec, ${freetube}" # Freetube
-          "$mod shift, m, exec, ${youtube-music}" # Youtube Music
+          "$mod shift, m, exec, ${pear-desktop}" # Youtube Music
 
           "$mod, t, exec, ${kitty} $EDITOR" # Text editor
           "$mod, e, exec, ${kitty} ${yazi}" # File explorer

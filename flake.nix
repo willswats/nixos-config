@@ -34,7 +34,7 @@
     # Gaming
     slippi.url = "github:lytedev/slippi-nix";
     nix-gaming.url = "github:fufexan/nix-gaming";
-    bsp-casefolding-workaround.url = "github:SeraphimRP/bsp-casefolding-workaround-nix";
+    bsp-casefolding-workaround.url = "github:SeraphimRP/bsp-casefolding-workaround-nix/v1.0.1";
   };
 
   outputs =

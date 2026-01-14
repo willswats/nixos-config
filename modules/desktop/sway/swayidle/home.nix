@@ -43,16 +43,10 @@
             resumeCommand = "${swaymsg} 'output * power on'";
           }
         ];
-        events = [
-          {
-            event = "before-sleep";
-            command = swaylock;
-          }
-          {
-            event = "lock";
-            command = swaylock;
-          }
-        ];
+        events = {
+          "before-sleep" = swaylock;
+          "lock" = swaylock;
+        };
       };
     };
 }

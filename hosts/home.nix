@@ -28,7 +28,7 @@
     ../modules/utilities/firefox/home.nix
     ../modules/utilities/chromium/home.nix
     ../modules/utilities/mpv/home.nix
-    ../modules/utilities/oculante/home.nix
+    # ../modules/utilities/oculante/home.nix TODO: uncomment when fixed
     ../modules/utilities/gimp/home.nix
     ../modules/utilities/krita/home.nix
     ../modules/utilities/kdenlive/home.nix
@@ -67,7 +67,7 @@
       baobab
       gpu-viewer
       moonlight-qt
-      youtube-music
+      pear-desktop
       freetube
       dropbox
       pixelorama
