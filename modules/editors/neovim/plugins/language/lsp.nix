@@ -29,13 +29,7 @@ in
           enable = true;
           package = null; # Uses Godot
         };
-        sqls = {
-          enable = true;
-          onAttach.function = ''
-            client.server_capabilities.documentFormattingProvider = false
-            client.server_capabilities.documentRangeFormattingProvider = false
-          '';
-        };
+        postgres_lsp.enable = true;
         html = {
           enable = true;
           # Disable formatting (conflicts with Prettier)
