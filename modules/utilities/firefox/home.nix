@@ -103,7 +103,9 @@
           "browser.contentblocking.category" = "strict"; # Content blocking strict
           "browser.newtabpage.blocked" = newTabPageBlocked; # Remove the default pinned websites from the new tab page (appears in search)
           "browser.uiCustomization.state" = uiCustomizationState; # Save UI customizations
+          ## ML
           "browser.ml.chat.enabled" = false; # Disable ML chat
+          "browser.ml.linkPreview.enabled" = false; # Disable link preview
           ## Tabs
           "browser.tabs.firefox-view" = false;
           "browser.tabs.hoverPreview.enabled" = false;
