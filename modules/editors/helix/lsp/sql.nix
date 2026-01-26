@@ -3,13 +3,13 @@
 {
   programs.helix = {
     extraPackages = with pkgs; [
-      postgres-language-server
+      sqls
       sql-formatter
     ];
     languages = {
       language = [{
         name = "sql";
-        language-servers = [ "scls" "postgrestools" ];
+        language-servers = [ "scls" "sqls" ];
         auto-format = true;
         formatter = {
           command = "sql-formatter";
@@ -22,9 +22,8 @@
         };
       }];
       language-server = {
-        postgrestools = {
-          command = "postgrestools";
-          args = [ "lsp-proxy" ];
+        sqls = {
+          command = "sqls";
         };
       };
     };

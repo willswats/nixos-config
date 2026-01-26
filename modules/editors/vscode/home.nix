@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     # sql
-    postgres-language-server
+    sqls
     sql-formatter
     # python
     ruff
@@ -35,7 +35,7 @@
         ms-python.debugpy # python debugger
         ms-python.vscode-python-envs # python environments
         charliermarsh.ruff # python linter and formatter
-        supabase.postgrestools # postgres lsp
+        lighttiger2505.sqls # sqls
         renesaarsoo.sql-formatter-vsc # sql formatter
       ];
       userSettings =
