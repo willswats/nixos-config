@@ -76,7 +76,7 @@
       grimshot = "${pkgs.sway-contrib.grimshot}/bin/grimshot";
 
       lxpolkit = "${pkgs.lxsession}/bin/lxpolkit";
-      rescrobbled = "${pkgs.rescrobbled}/bin/rescrobbled";
+      turntable = "${pkgs.turntable}/bin/dev.geopjr.Turntable";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
 
@@ -337,7 +337,7 @@
             always = false;
           }
           {
-            command = "${rescrobbled}";
+            command = "${turntable} -c org.mpris.MediaPlayer2.playerctld";
             always = false;
           }
           # Applets

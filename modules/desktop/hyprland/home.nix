@@ -66,7 +66,7 @@
       grimblast = "${pkgs.grimblast}/bin/grimblast";
 
       lxpolkit = "${pkgs.lxsession}/bin/lxpolkit";
-      rescrobbled = "${pkgs.rescrobbled}/bin/rescrobbled";
+      turntable = "${pkgs.turntable}/bin/dev.geopjr.Turntable";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
 
@@ -218,7 +218,7 @@
           # Daemons
           "${playerctld}" # The home manager service doesn't seem to start playerctld
           "${lxpolkit}"
-          "${rescrobbled}"
+          "${turntable} -c org.mpris.MediaPlayer2.playerctld"
           # Applets
           "${mullvadGui}"
           "${dropbox}"
