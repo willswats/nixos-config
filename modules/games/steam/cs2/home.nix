@@ -68,12 +68,12 @@
 
       // Crosshair
       cl_crosshairstyle 4
-      cl_crosshairsize 2
-      cl_crosshairthickness 1
-      cl_crosshairgap -1.5
+      cl_crosshairsize 1.5
+      cl_crosshairthickness 0.5
+      cl_crosshairgap -3.0
       cl_crosshair_drawoutline 1
       cl_crosshair_outlinethickness 1
-      cl_crosshairdot 0
+      cl_crosshairdot 1
       cl_crosshair_t 0
       cl_crosshairusealpha 1
       cl_crosshairalpha 255
