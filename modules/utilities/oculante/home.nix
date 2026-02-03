@@ -23,7 +23,7 @@
   xdg.mimeApps = {
     defaultApplications =
       let
-        app = "oculante";
+        app = "mpv"; # TODO: change back to oculante when fixed - https://github.com/woelper/oculante/issues/746
       in
       {
         "image/png" = [ "${app}.desktop" ]; # jpg
