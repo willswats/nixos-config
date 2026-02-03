@@ -11,5 +11,5 @@
       };
   };
 
-  # home.packages = with pkgs; [ kdePackages.kdenlive ]; TODO: uncomment when fixed
+  # home.packages = with pkgs; [ kdePackages.kdenlive ]; // TODO: uncomment when fixed
 }
