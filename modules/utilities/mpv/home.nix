@@ -60,13 +60,13 @@
         "Ctrl+s" = "screenshot"; # Screenshot with subtitles
         "Shift+s" = "screenshot video"; # Screenshot without subtitles
 
-        "Alt+=" = "add video-zoom 0.25";
-        "Alt+-" = "add video-zoom -0.25";
-        "Alt+h" = "add video-pan-x 0.05";
-        "Alt+l" = "add video-pan-x -0.05";
-        "Alt+k" = "add video-pan-y 0.05";
-        "Alt+j" = "add video-pan-y -0.05";
-        "Alt+r" = "set video-pan-x  0.00; set video-pan-y 0.00; set video-zoom 0.00;";
+        "Alt+=" = "no-osd add video-zoom 0.25";
+        "Alt+-" = "no-osd add video-zoom -0.25";
+        "Alt+h" = "no-osd add video-pan-x 0.05";
+        "Alt+l" = "no-osd add video-pan-x -0.05";
+        "Alt+k" = "no-osd add video-pan-y 0.05";
+        "Alt+j" = "no-osd add video-pan-y -0.05";
+        "Alt+r" = "no-osd set video-pan-x  0.00; no-osd set video-pan-y 0.00; no-osd set video-zoom 0.00;";
 
         # uosc
         "+" = "no-osd add volume 5; ${uoscFlashVolume}";
