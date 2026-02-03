@@ -60,6 +60,14 @@
         "Ctrl+s" = "screenshot"; # Screenshot with subtitles
         "Shift+s" = "screenshot video"; # Screenshot without subtitles
 
+        "Alt+=" = "add video-zoom 0.25";
+        "Alt+-" = "add video-zoom -0.25";
+        "Alt+h" = "add video-pan-x 0.05";
+        "Alt+l" = "add video-pan-x -0.05";
+        "Alt+k" = "add video-pan-y 0.05";
+        "Alt+j" = "add video-pan-y -0.05";
+        "Alt+r" = "set video-pan-x  0.00; set video-pan-y 0.00; set video-zoom 0.00;";
+
         # uosc
         "+" = "no-osd add volume 5; ${uoscFlashVolume}";
         "-" = "no-osd add volume -5; ${uoscFlashVolume}";
@@ -109,7 +117,7 @@
         "Alt+S" = "script-binding youtube_search/youtube_music_search_replace";
         "Alt+a" = "script-binding youtube_search/youtube_search_append";
         "Alt+A" = "script-binding youtube_search/youtube_music_search_append";
-        "Alt+r" = "script-binding youtube_search/search_results_update";
+        "Alt+u" = "script-binding youtube_search/search_results_update";
 
         # reload
         "Ctrl+r" = "script-binding reload/reload_resume";
