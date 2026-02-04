@@ -68,12 +68,12 @@
 
       // Crosshair
       cl_crosshairstyle 4
-      cl_crosshairsize 1.5
-      cl_crosshairthickness 0.5
-      cl_crosshairgap -3.0
+      cl_crosshairsize 2
+      cl_crosshairthickness 1
+      cl_crosshairgap -2
       cl_crosshair_drawoutline 1
       cl_crosshair_outlinethickness 1
-      cl_crosshairdot 1
+      cl_crosshairdot 0
       cl_crosshair_t 0
       cl_crosshairusealpha 1
       cl_crosshairalpha 255
@@ -81,6 +81,22 @@
       cl_crosshairgap_useweaponvalue 0
       cl_crosshaircolor 5
       cl_crosshair_sniper_width 1
+
+      // Grenade crosshair
+      cl_grenadecrosshair_keepusercrosshair false 
+
+      cl_grenadecrosshair_smoke false
+      cl_grenadecrosshair_fire false
+      cl_grenadecrosshair_flash false
+      cl_grenadecrosshair_decoy false
+      cl_grenadecrosshair_decoy false
+      cl_grenadecrosshair_explosive false
+
+      cl_grenadecrosshairdelay_smoke 0.5
+      cl_grenadecrosshairdelay_fire 0.5
+      cl_grenadecrosshairdelay_flash 0.5
+      cl_grenadecrosshairdelay_decoy 0.5
+      cl_grenadecrosshairdelay_explosive 0.5
 
       host_writeconfig
     '';
