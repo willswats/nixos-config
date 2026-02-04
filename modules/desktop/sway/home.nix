@@ -337,7 +337,11 @@
             always = false;
           }
           {
-            command = "${turntable} -c org.mpris.MediaPlayer2.playerctld";
+            command = "${turntable} -c org.mpris.MediaPlayer2.YoutubeMusic";
+            always = false;
+          }
+          {
+            command = "${turntable} -c org.mpris.MediaPlayer2.termusic";
             always = false;
           }
           # Applets
