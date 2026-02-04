@@ -1,9 +1,8 @@
 { ... }:
 
-{
-  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/autoexec.cfg".text = ''
-    echo "autoexec.cfg executed"
 
+let
+  autoexecGlobal = ''    
     // -- UNBIND DEFAULTS --
 
     // Voice menu 1
@@ -103,27 +102,63 @@
     cl_spraydisable 0
     cl_disablehtmlmotd 1
 
+  '';
+
+  autoexecTf2 = ''
+    echo "autoexec.cfg executed"
+
+    ${autoexecGlobal}
+
+    host_writeconfig
+  '';
+  autoexecTf2C = ''
+    echo "autoexec.cfg executed"
+
+    ${autoexecGlobal}
+
+    muzzleflash_light 1
+    fov_desired 110
+
     host_writeconfig
   '';
 
-  # Practice commands
-  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/practice.cfg".text = ''
+  practice = ''
     sv_cheats 1; ent_fire team_round_timer disable; hurtme -10000000;
   '';
 
-  # Switch between reload and restart (numpad 1) 
-  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/movement_reload.cfg".text = ''
+  movement_reload = ''    
     bind r +reload; bind KP_END "exec movement_restart"
   '';
-  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/movement_restart.cfg".text = ''
+
+  movement_restart = ''    
     bind r "say !r"; bind KP_END "exec movement_reload"
   '';
 
-  # Hide and show chat
-  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/hide_chat.cfg".text = ''
+  hide_chat = ''    
     hud_saytext_time 0; bind = "exec show_chat"
   '';
-  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/show_chat.cfg".text = ''
+
+  show_chat = ''
     hud_saytext_time 100; bind = "exec hide_chat"
   '';
+in
+{
+  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/autoexec.cfg".text = autoexecTf2;
+  home.file.".steam/steam/steamapps/common/Team Fortress 2 Classified/tf2classified/cfg/autoexec.cfg".text = autoexecTf2C;
+
+  # Practice commands
+  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/practice.cfg".text = practice;
+  home.file.".steam/steam/steamapps/common/Team Fortress 2 Classified/tf2classified/cfg/practice.cfg".text = practice;
+
+  # Switch between reload and restart (numpad 1) 
+  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/movement_reload.cfg".text = movement_reload;
+  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/movement_restart.cfg".text = movement_restart;
+  home.file.".steam/steam/steamapps/common/Team Fortress 2 Classified/tf2classified/cfg/movement_reload.cfg".text = movement_reload;
+  home.file.".steam/steam/steamapps/common/Team Fortress 2 Classified/tf2classified/cfg/movement_restart.cfg".text = movement_restart;
+
+  # Hide and show chat
+  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/hide_chat.cfg".text = hide_chat;
+  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/show_chat.cfg".text = show_chat;
+  home.file.".steam/steam/steamapps/common/Team Fortress 2 Classified/tf2classified/cfg/hide_chat.cfg".text = hide_chat;
+  home.file.".steam/steam/steamapps/common/Team Fortress 2 Classified/tf2classified/cfg/show_chat.cfg".text = show_chat;
 }
