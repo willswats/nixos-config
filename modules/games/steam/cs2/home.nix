@@ -41,6 +41,7 @@
       con_enable true
       cl_debounce_zoom false # hold to scope in twice
       mm_dedicated_search_maxping 50
+      r_drawtracers_firstperson 0
 
       // Music
       snd_menumusic_volume 0
