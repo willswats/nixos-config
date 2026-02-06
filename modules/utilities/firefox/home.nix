@@ -430,6 +430,14 @@
                     url = "https://steamdb.info/";
                   }
                   {
+                    name = "CS2 Browser";
+                    url = "https://cs2browser.net";
+                  }
+                  {
+                    name = "Leetify";
+                    url = "https://leetify.com";
+                  }
+                  {
                     name = "Itch";
                     url = "https://itch.io/";
                   }
