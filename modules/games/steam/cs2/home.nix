@@ -29,9 +29,14 @@
       bind mwheeldown +jump
       bind mwheelup +jump   
         
-      bind x noclip      
-      bind c player_ping
-      bind v +voicerecord
+      bind alt noclip      
+      bind mouse4 player_ping
+      bind mouse5 +voicerecord
+
+      bind v "slot6" // grenade
+      bind c "slot7" // flash
+      bind x "slot8" // smoke
+      bind z "slot10" // molotov
 
       bind KP_0 "exec nade" // numpad 0
 
