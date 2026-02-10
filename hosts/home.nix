@@ -74,6 +74,7 @@
       pixelorama
       zotero
       teams-for-linux
+      teamspeak6-client
       qalculate-gtk
       godot_4
       warp
