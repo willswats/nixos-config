@@ -26,7 +26,8 @@
     bind g +drop
     bind mouse3 mightyfootengaged
 
-    bind x noclip
+    bind alt noclip
+    bind x +walk
     bind v +voicerecord
 
     bind [ kill
@@ -69,6 +70,6 @@
     hud_saytext_time 0; bind = "exec show_chat"
   '';
   home.file.".steam/steam/steamapps/common/GarrysMod/garrysmod/cfg/show_chat.cfg".text = ''
-    hud_saytext_time 100; bind = "exec hide_chat"
+    hud_saytext_time 12; bind = "exec hide_chat"
   '';
 }

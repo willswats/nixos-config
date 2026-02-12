@@ -20,14 +20,14 @@
     bind mouse4 +left
     bind mouse5 +right
 
-    bind x "say /noclip"
-    bind c "say /specbot"
+    bind alt "say /noclip"
     bind v +voicerecord
 
     bind f1 "say /m"
     bind f2 "say /mrank"
     bind f3 "say /rank"
     bind f4 "say /nvgs"
+    bind f5 "say /specbot"
 
     // -- SETTINGS --
 
@@ -50,6 +50,6 @@
     hud_saytext_time 0; bind = "exec show_chat"
   '';
   home.file.".steam/steam/steamapps/common/Counter-Strike Source/cstrike/cfg/show_chat.cfg".text = ''
-    hud_saytext_time 100; bind = "exec hide_chat"
+    hud_saytext_time 12; bind = "exec hide_chat"
   '';
 }

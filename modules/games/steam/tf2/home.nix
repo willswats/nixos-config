@@ -29,7 +29,7 @@ let
     alias +chargejump "+jump; +attack2"
     alias -chargejump "-jump; -attack2"
 
-    bind x "noclip; impulse 101;
+    bind alt "noclip; impulse 101;
     bind c "+chargejump"
     bind v +voicerecord
 
@@ -37,9 +37,9 @@ let
     bind ] explode
     bind KP_INS "exec practice" // numpad 0
 
-    bind f1 voice_menu_1
-    bind f2 voice_menu_2
-    bind f3 voice_menu_3
+    bind 4 voice_menu_1
+    bind 5 voice_menu_2
+    bind 6 voice_menu_3
 
     // -- SETTINGS --
 
@@ -139,7 +139,7 @@ let
   '';
 
   show_chat = ''
-    hud_saytext_time 100; bind = "exec hide_chat"
+    hud_saytext_time 12; bind = "exec hide_chat"
   '';
 in
 {
