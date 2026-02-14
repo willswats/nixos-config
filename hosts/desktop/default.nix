@@ -29,7 +29,9 @@
       "luks-418efaa8-2d4d-49f9-adb0-e8a37fb859ba".device =
         "/dev/disk/by-uuid/418efaa8-2d4d-49f9-adb0-e8a37fb859ba";
       "luks-908577b6-3ac9-4b67-ac70-cbfc3244a201".device =
-        "/dev/disk/by-uuid/908577b6-3ac9-4b67-ac70-cbfc3244a201"; # Unlock 2TB drive at boot
+        "/dev/disk/by-uuid/908577b6-3ac9-4b67-ac70-cbfc3244a201"; # Unlock 2TB M.2 drive at boot
+      "luks-b1976cfe-f76b-44f3-8541-29a4bb168489".device =
+        "/dev/disk/by-uuid/b1976cfe-f76b-44f3-8541-29a4bb168489"; # Unlock 2TB SSD drive at boot
     };
     loader = {
       systemd-boot = {
@@ -50,7 +52,12 @@
   };
 
   fileSystems."/run/media/will/2TB" = {
-    device = "/dev/disk/by-uuid/677867a5-7a72-482b-a007-cf359502d3bc"; # Mount 2TB drive
+    device = "/dev/disk/by-uuid/677867a5-7a72-482b-a007-cf359502d3bc"; # Mount 2TB M.2 drive
+    fsType = "ext4";
+  };
+
+  fileSystems."/run/media/will/2TB-SSD" = {
+    device = "/dev/disk/by-uuid/110c1df3-21ee-4419-93e1-c2f400b1fd36"; # Mount 2TB SSD drive
     fsType = "ext4";
   };
 
