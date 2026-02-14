@@ -75,6 +75,7 @@
       zotero
       teams-for-linux
       teamspeak6-client
+      element-desktop
       qalculate-gtk
       godot_4
       warp
