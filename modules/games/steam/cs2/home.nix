@@ -29,7 +29,8 @@
       bind mwheeldown +jump
       bind mwheelup +jump   
         
-      bind alt noclip
+      bind f1 noclip
+
       bind mouse4 player_ping
       bind mouse5 +voicerecord
 

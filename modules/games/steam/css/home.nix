@@ -20,14 +20,14 @@
     bind mouse4 +left
     bind mouse5 +right
 
-    bind alt "say /noclip"
     bind v +voicerecord
 
-    bind f1 "say /m"
-    bind f2 "say /mrank"
-    bind f3 "say /rank"
-    bind f4 "say /nvgs"
-    bind f5 "say /specbot"
+    bind f1 "say /noclip"
+    bind f2 "say /specbot"
+    bind f3 "say /m"
+    bind f4 "say /mrank"
+    bind f5 "say /rank"
+    bind f6 "say /nvgs"
 
     // -- SETTINGS --
 

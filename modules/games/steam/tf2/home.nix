@@ -28,18 +28,19 @@ let
 
     alias +chargejump "+jump; +attack2"
     alias -chargejump "-jump; -attack2"
+    bind alt "+chargejump"
 
-    bind alt "noclip; impulse 101;
-    bind c "+chargejump"
+    bind f1 "noclip; impulse 101;
+
     bind v +voicerecord
 
     bind [ kill
     bind ] explode
     bind KP_INS "exec practice" // numpad 0
 
-    bind 4 voice_menu_1
-    bind 5 voice_menu_2
-    bind 6 voice_menu_3
+    bind z voice_menu_1
+    bind x voice_menu_2
+    bind c voice_menu_3
 
     // -- SETTINGS --
 

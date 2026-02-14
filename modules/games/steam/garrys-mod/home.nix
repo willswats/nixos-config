@@ -26,8 +26,8 @@
     bind g +drop
     bind mouse3 mightyfootengaged
 
-    bind alt noclip
-    bind x +walk
+    bind f1 noclip
+
     bind v +voicerecord
 
     bind [ kill
