@@ -1,7 +1,7 @@
-{ globals, pkgs, ... }:
+{ host, pkgs, ... }:
 
 let
-  homeDirectory = globals.directories.home;
+  gameDrive = host.directories.gameDrive;
 in
 {
   home.packages = with pkgs; [ heroic ];
@@ -22,10 +22,10 @@ in
           "checkForUpdatesOnStartup": true,
           "autoUpdateGames": true,
           "customWinePaths": [],
-          "defaultInstallPath": "${homeDirectory}/Games/Heroic",
+          "defaultInstallPath": "${gameDrive}/Games/Heroic",
           "libraryTopSection": "disabled",
-          "defaultSteamPath": "${homeDirectory}/.steam/steam",
-          "defaultWinePrefix": "${homeDirectory}/Games/Heroic/Prefixes/default",
+          "defaultSteamPath": "${gameDrive}/.steam/steam",
+          "defaultWinePrefix": "${gameDrive}/Games/Heroic/Prefixes/default",
           "hideChangelogsOnStartup": false,
           "language": "en",
           "maxWorkers": 0,
@@ -36,9 +36,9 @@ in
           "showFps": false,
           "useGameMode": true,
           "wineCrossoverBottle": "Heroic",
-          "winePrefix": "${homeDirectory}/Games/Heroic/Prefixes/default",
+          "winePrefix": "${gameDrive}/Games/Heroic/Prefixes/default",
           "wineVersion": {
-            "bin": "${homeDirectory}/.config/heroic/tools/proton/GE-Proton-latest/proton",
+            "bin": "${gameDrive}/.config/heroic/tools/proton/GE-Proton-latest/proton",
             "name": "Proton - GE-Proton-latest",
             "type": "proton"
           },

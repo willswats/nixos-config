@@ -117,8 +117,9 @@
                 };
                 directories = {
                   drive = "/run/media/will/2TB/Dropbox";
+                  gameDrive = "/run/media/will/2TB-SSD";
                 };
-                directoriesToCreate = "${directoriesToCreate} ~/Games/Heroic";
+                directoriesToCreate = "${directoriesToCreate} /run/media/will/2TB-SSD/Games/Heroic";
               };
             in
             lib.nixosSystem {
