@@ -118,6 +118,7 @@
                 directories = {
                   drive = "/run/media/will/2TB/Dropbox";
                   gameDrive = "/run/media/will/2TB-SSD";
+                  steamLibrary = "/run/media/will/2TB-SSD/SteamLibrary/steamapps/common";
                 };
                 directoriesToCreate = "${directoriesToCreate} /run/media/will/2TB-SSD/Games/Heroic";
               };

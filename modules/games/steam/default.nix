@@ -1,6 +1,15 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ./bsp-casefolding-workaround
+    ./cs2
+    ./css
+    ./tf2
+    ./garrys-mod
+    ./half-life
+  ];
+
   programs.steam.platformOptimizations.enable = true;
 
   programs.steam = {

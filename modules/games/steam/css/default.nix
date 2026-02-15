@@ -1,7 +1,10 @@
-{ ... }:
+{ host, ... }:
 
+let
+  steamDir = host.directories.steamLibrary;
+in
 {
-  home.file.".steam/steam/steamapps/common/Counter-Strike Source/cstrike/cfg/autoexec.cfg".text = ''
+  environment.etc."${steamDir}/Counter-Strike Source/cstrike/cfg/autoexec.cfg".text = ''
     echo "autoexec.cfg executed"
 
     // -- UNBIND DEFAULTS --
@@ -38,18 +41,18 @@
   '';
 
   # Switch between reload and restart (numpad 1)
-  home.file.".steam/steam/steamapps/common/Counter-Strike Source/cstrike/cfg/movement_reload.cfg".text = ''
+  environment.etc."${steamDir}/Counter-Strike Source/cstrike/cfg/movement_reload.cfg".text = ''
     bind r +reload; bind t +spray; bind KP_END "exec movement_restart"
   '';
-  home.file.".steam/steam/steamapps/common/Counter-Strike Source/cstrike/cfg/movement_restart.cfg".text = ''
+  environment.etc."${steamDir}/Counter-Strike Source/cstrike/cfg/movement_restart.cfg".text = ''
     bind r sm_teleport; bind t "say /r"; bind KP_END "exec movement_reload"
   '';
 
   # Hide and show chat
-  home.file.".steam/steam/steamapps/common/Counter-Strike Source/cstrike/cfg/hide_chat.cfg".text = ''
+  environment.etc."${steamDir}/Counter-Strike Source/cstrike/cfg/hide_chat.cfg".text = ''
     hud_saytext_time 0; bind = "exec show_chat"
   '';
-  home.file.".steam/steam/steamapps/common/Counter-Strike Source/cstrike/cfg/show_chat.cfg".text = ''
+  environment.etc."${steamDir}/Counter-Strike Source/cstrike/cfg/show_chat.cfg".text = ''
     hud_saytext_time 12; bind = "exec hide_chat"
   '';
 }

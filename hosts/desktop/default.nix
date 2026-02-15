@@ -14,7 +14,6 @@
     ../../modules/servers/komga
     ../../modules/servers/sunshine
     ../../modules/games/steam
-    ../../modules/games/steam/bsp-casefolding-workaround
     ../../modules/games/r2modman
   ];
 

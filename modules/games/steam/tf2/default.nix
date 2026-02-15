@@ -1,7 +1,9 @@
-{ ... }:
+{ host, ... }:
 
 
 let
+  steamDir = host.directories.steamLibrary;
+
   autoexecGlobal = ''    
     // -- UNBIND DEFAULTS --
 
@@ -144,22 +146,22 @@ let
   '';
 in
 {
-  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/autoexec.cfg".text = autoexecTf2;
-  home.file.".steam/steam/steamapps/common/Team Fortress 2 Classified/tf2classified/cfg/autoexec.cfg".text = autoexecTf2C;
+  environment.etc."${steamDir}/Team Fortress 2/tf/cfg/autoexec.cfg".text = autoexecTf2;
+  environment.etc."${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/autoexec.cfg".text = autoexecTf2C;
 
   # Practice commands
-  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/practice.cfg".text = practice;
-  home.file.".steam/steam/steamapps/common/Team Fortress 2 Classified/tf2classified/cfg/practice.cfg".text = practice;
+  environment.etc."${steamDir}/Team Fortress 2/tf/cfg/practice.cfg".text = practice;
+  environment.etc."${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/practice.cfg".text = practice;
 
   # Switch between reload and restart (numpad 1) 
-  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/movement_reload.cfg".text = movement_reload;
-  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/movement_restart.cfg".text = movement_restart;
-  home.file.".steam/steam/steamapps/common/Team Fortress 2 Classified/tf2classified/cfg/movement_reload.cfg".text = movement_reload;
-  home.file.".steam/steam/steamapps/common/Team Fortress 2 Classified/tf2classified/cfg/movement_restart.cfg".text = movement_restart;
+  environment.etc."${steamDir}/Team Fortress 2/tf/cfg/movement_reload.cfg".text = movement_reload;
+  environment.etc."${steamDir}/Team Fortress 2/tf/cfg/movement_restart.cfg".text = movement_restart;
+  environment.etc."${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/movement_reload.cfg".text = movement_reload;
+  environment.etc."${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/movement_restart.cfg".text = movement_restart;
 
   # Hide and show chat
-  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/hide_chat.cfg".text = hide_chat;
-  home.file.".steam/steam/steamapps/common/Team Fortress 2/tf/cfg/show_chat.cfg".text = show_chat;
-  home.file.".steam/steam/steamapps/common/Team Fortress 2 Classified/tf2classified/cfg/hide_chat.cfg".text = hide_chat;
-  home.file.".steam/steam/steamapps/common/Team Fortress 2 Classified/tf2classified/cfg/show_chat.cfg".text = show_chat;
+  environment.etc."${steamDir}/Team Fortress 2/tf/cfg/hide_chat.cfg".text = hide_chat;
+  environment.etc."${steamDir}/Team Fortress 2/tf/cfg/show_chat.cfg".text = show_chat;
+  environment.etc."${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/hide_chat.cfg".text = hide_chat;
+  environment.etc."${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/show_chat.cfg".text = show_chat;
 }

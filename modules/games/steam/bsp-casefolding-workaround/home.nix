@@ -1,8 +1,7 @@
-{ globals, ... }:
+{ host, ... }:
 
 let
-  homeDir = globals.directories.home;
-  steamDir = "${homeDir}/.local/share/Steam/steamapps/common";
+  steamDir = host.directories.steamLibrary;
 in
 {
   services.bsp-casefolding-workaround = {
