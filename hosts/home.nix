@@ -61,7 +61,7 @@
       ## GUI
       obs-studio
       gpu-screen-recorder-gtk
-      fragments
+      deluge
       popsicle
       gnome-disk-utility
       mission-center
