@@ -41,7 +41,7 @@
       monitorCenter = host.monitors.center;
       monitorLeft = host.monitors.left;
 
-      xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
+      xrandr = "${pkgs.xrandr}/bin/xrandr";
 
       swaybg = "${pkgs.swaybg}/bin/swaybg";
 

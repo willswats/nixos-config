@@ -16,31 +16,25 @@
         complete = "x";
       };
       mappings = {
-        MkdnEnter = {
-          modes = [
-            "n"
-            "v"
-          ];
-          key = "<CR>";
-        };
+        MkdnEnter = [ [ "n" "v" ] "<CR>" ];
         MkdnTab = false;
         MkdnSTab = false;
-        MkdnNextLink = {
-          modes = "n";
-          key = "<Tab>";
-        };
-        MkdnPrevLink = {
-          modes = "n";
-          key = "<S-Tab>";
-        };
-        MkdnNextHeading = {
-          modes = "n";
-          key = "]]";
-        };
-        MkdnPrevHeading = {
-          modes = "n";
-          key = "[[";
-        };
+        MkdnNextLink = [
+          "n"
+          "<Tab>"
+        ];
+        MkdnPrevLink = [
+          "n"
+          "<S-Tab>"
+        ];
+        MkdnNextHeading = [
+          "n"
+          "]]"
+        ];
+        MkdnPrevHeading = [
+          "n"
+          "[["
+        ];
         MkdnGoBack = false;
         MkdnGoForward = false;
         MkdnFollowLink = false; # see MkdnEnter
@@ -50,30 +44,30 @@
         MkdnMoveSource = false;
         MkdnYankAnchorLink = false;
         MkdnYankFileAnchorLink = false;
-        MkdnIncreaseHeading = {
-          modes = "n";
-          key = "+";
-        };
-        MkdnDecreaseHeading = {
-          modes = "n";
-          key = "-";
-        };
-        MkdnToggleToDo = {
-          modes = [
+        MkdnIncreaseHeading = [
+          "n"
+          "+"
+        ];
+        MkdnDecreaseHeading = [
+          "n"
+          "-"
+        ];
+        MkdnToggleToDo = [
+          [
             "n"
             "v"
-          ];
-          key = "<C-Space>";
-        };
+          ]
+          "<C-Space>"
+        ];
         MkdnNewListItem = false;
-        MkdnNewListItemBelowInsert = {
-          modes = "n";
-          key = "o";
-        };
-        MkdnNewListItemAboveInsert = {
-          modes = "n";
-          key = "O";
-        };
+        MkdnNewListItemBelowInsert = [
+          "n"
+          "o"
+        ];
+        MkdnNewListItemAboveInsert = [
+          "n"
+          "O"
+        ];
         MkdnExtendList = false;
         MkdnUpdateNumbering = false;
         MkdnTableNextCell = false;
@@ -88,6 +82,5 @@
         MkdnUnfoldSection = false;
       };
     };
-
   };
 }

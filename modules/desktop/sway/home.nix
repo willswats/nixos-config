@@ -55,7 +55,7 @@
       ws9 = "9";
       ws10 = "10";
 
-      xrandr = "${pkgs.xorg.xrandr}/bin/xrandr";
+      xrandr = "${pkgs.xrandr}/bin/xrandr";
 
       rofi = "${pkgs.rofi}/bin/rofi";
       wlogout = "${pkgs.wlogout}/bin/wlogout";
