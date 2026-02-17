@@ -74,7 +74,6 @@
       pixelorama
       zotero
       teams-for-linux
-      teamspeak6-client
       signal-desktop
       qalculate-gtk
       godot_4
