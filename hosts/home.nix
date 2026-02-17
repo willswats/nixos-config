@@ -75,6 +75,7 @@
       zotero
       teams-for-linux
       teamspeak6-client
+      signal-desktop
       element-desktop
       qalculate-gtk
       godot_4
