@@ -78,7 +78,7 @@
       lxpolkit = "${pkgs.lxsession}/bin/lxpolkit";
       turntable = "${pkgs.turntable}/bin/dev.geopjr.Turntable";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
-      dropbox = "${pkgs.dropbox}/bin/dropbox";
+      filen-desktop = "${pkgs.filen-desktop}/bin/filen-desktop";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
@@ -350,7 +350,7 @@
             always = false;
           }
           {
-            command = "${dropbox}";
+            command = "${filen-desktop}";
             always = false;
           }
           {

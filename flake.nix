@@ -116,7 +116,7 @@
                   left = "DP-2";
                 };
                 directories = {
-                  drive = "/run/media/will/2TB/Dropbox";
+                  drive = "/run/media/will/2TB/Drive";
                   gameDrive = "/run/media/will/2TB-SSD";
                   steamLibrary = "/run/media/will/2TB-SSD/SteamLibrary/steamapps/common";
                 };
@@ -166,7 +166,7 @@
                   left = "eDP-1";
                 };
                 directories = {
-                  drive = "/home/will/Dropbox";
+                  drive = "/home/will/Drive";
                 };
                 directoriesToCreate = directoriesToCreate;
               };

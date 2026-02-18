@@ -273,8 +273,8 @@
                 name = "Utilities";
                 bookmarks = [
                   {
-                    name = "Dropbox";
-                    url = "https://www.dropbox.com/home";
+                    name = "Filen";
+                    url = "https://app.filen.io";
                   }
                   {
                     name = "Paypal";
