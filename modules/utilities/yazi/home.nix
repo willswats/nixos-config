@@ -12,15 +12,6 @@
 
       pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm"; # GUI file manager (drag and drop)
       fileRoller = "${pkgs.file-roller}/bin/file-roller"; # GUI archive manager
-
-      # Pinned to commit so that I do not need to keep updating the hash
-      # https://github.com/yazi-rs/plugins/tree/main
-      yazi-plugins = pkgs.fetchFromGitHub {
-        owner = "yazi-rs";
-        repo = "plugins";
-        rev = "57f18631fde7ce9b5eb01f9c3996be296dec9a39"; # 2026-01-13
-        hash = "sha256-z4BO80p61JTEJBTd1VXJ2Oo3bNIk4TdSlUrSOvHpjC4=";
-      };
     in
     {
       enable = true;
@@ -205,10 +196,9 @@
         ];
       };
 
-      # Plugins found here - https://github.com/yazi-rs/plugins
       plugins = {
-        chmod = "${yazi-plugins}/chmod.yazi";
-        smart-enter = "${yazi-plugins}/smart-enter.yazi";
+        chmod = pkgs.yaziPlugins.chmod;
+        smart-enter = pkgs.yaziPlugins.smart-enter;
       };
 
       # Some plugins need to be required
