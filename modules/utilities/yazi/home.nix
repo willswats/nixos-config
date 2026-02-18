@@ -9,7 +9,6 @@
   programs.yazi =
     let
       driveDir = host.directories.drive;
-      gameDir = host.directories.gameDrive;
 
       pcmanfm = "${pkgs.pcmanfm}/bin/pcmanfm"; # GUI file manager (drag and drop)
       fileRoller = "${pkgs.file-roller}/bin/file-roller"; # GUI archive manager
@@ -128,14 +127,6 @@
             ];
             run = "cd ${driveDir}";
             desc = "Go to Drive directory";
-          }
-          {
-            on = [
-              "g"
-              "G"
-            ];
-            run = "cd ${gameDir}";
-            desc = "Go to Game Drive directory";
           }
           {
             on = [
