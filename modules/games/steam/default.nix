@@ -10,8 +10,6 @@
     ./half-life
   ];
 
-  programs.steam.platformOptimizations.enable = true;
-
   programs.steam = {
     enable = true;
     remotePlay.openFirewall = true;

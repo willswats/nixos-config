@@ -29,7 +29,6 @@
 
     # Gaming
     slippi.url = "github:lytedev/slippi-nix";
-    nix-gaming.url = "github:fufexan/nix-gaming";
     bsp-casefolding-workaround.url = "github:SeraphimRP/bsp-casefolding-workaround-nix/v1.0.1";
   };
 
@@ -41,7 +40,6 @@
     , nixvim
     , catppuccin
     , slippi
-    , nix-gaming
     , bsp-casefolding-workaround
     , nyaa
     , ...
@@ -131,8 +129,6 @@
                 nur.modules.nixos.default
                 catppuccin.nixosModules.catppuccin
                 slippi.nixosModules.default
-                nix-gaming.nixosModules.pipewireLowLatency
-                nix-gaming.nixosModules.platformOptimizations
                 {
                   home-manager = {
                     useGlobalPkgs = true;
@@ -177,7 +173,6 @@
                 home-manager.nixosModules.home-manager
                 nur.modules.nixos.default
                 catppuccin.nixosModules.catppuccin
-                nix-gaming.nixosModules.pipewireLowLatency
                 {
                   home-manager = {
                     useGlobalPkgs = true;
