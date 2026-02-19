@@ -58,7 +58,7 @@ sudo nmcli dev wifi connect network-ssid --ask
 
 ### Clone the Repository
 
-Enter a nix-shell with `git` and `neovim`:
+Enter a nix-shell with `git` and `helix`:
 
 ```bash
 nix-shell -p git helix
