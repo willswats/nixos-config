@@ -7,9 +7,13 @@
   ];
 
   xdg.mimeApps = {
-    defaultApplications = {
-      "inode/directory" = [ "pcmanfm.desktop" ]; # Directories
-    };
+    defaultApplications =
+      let
+        pcmanfm = "pcmanfm.desktop";
+      in
+      {
+        "inode/directory" = [ pcmanfm ]; # Directories
+      };
   };
 
   xdg.configFile."pcmanfm/default/pcmanfm.conf" = {

@@ -23,17 +23,17 @@
   xdg.mimeApps = {
     defaultApplications =
       let
-        app = "mpv"; # TODO: change back to oculante when fixed - https://github.com/woelper/oculante/issues/746
+        mpv = "mpv.desktop"; # TODO: change back to oculante when fixed - https://github.com/woelper/oculante/issues/746
       in
       {
-        "image/png" = [ "${app}.desktop" ]; # jpg
-        "image/jxl" = [ "${app}.desktop" ]; # jxl
-        "image/jpeg" = [ "${app}.desktop" ]; # png
-        "image/heif" = [ "${app}.desktop" ]; # HEIC
-        "image/webp" = [ "${app}.desktop" ]; # webp
-        "image/avif" = [ "${app}.desktop" ]; # avif
-        "image/svg" = [ "${app}.desktop" ]; # svg
-        "image/gif" = [ "${app}.desktop" ]; # gif
+        "image/png" = [ mpv ]; # jpg
+        "image/jxl" = [ mpv ]; # jxl
+        "image/jpeg" = [ mpv ]; # png
+        "image/heif" = [ mpv ]; # HEIC
+        "image/webp" = [ mpv ]; # webp
+        "image/avif" = [ mpv ]; # avif
+        "image/svg" = [ mpv ]; # svg
+        "image/gif" = [ mpv ]; # gif
       };
   };
 

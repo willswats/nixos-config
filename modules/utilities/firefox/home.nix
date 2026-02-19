@@ -6,14 +6,18 @@
   ];
 
   xdg.mimeApps = {
-    defaultApplications = {
-      # Set firefox as the default browser
-      "application/pdf" = [ "firefox.desktop" ]; # pdf
-      "x-scheme-handler/http" = [ "firefox.desktop" ];
-      "x-scheme-handler/https" = [ "firefox.desktop" ];
-      "x-scheme-handler/about" = [ "firefox.desktop" ];
-      "x-scheme-handler/unknown" = [ "firefox.desktop" ];
-    };
+    defaultApplications =
+      let
+        firefox = "firefox.desktop";
+      in
+      {
+        # Set firefox as the default browser
+        "application/pdf" = [ firefox ]; # pdf
+        "x-scheme-handler/http" = [ firefox ];
+        "x-scheme-handler/https" = [ firefox ];
+        "x-scheme-handler/about" = [ firefox ];
+        "x-scheme-handler/unknown" = [ firefox ];
+      };
   };
 
   catppuccin.firefox.enable = true;

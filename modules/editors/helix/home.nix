@@ -22,16 +22,20 @@
   ];
 
   xdg.mimeApps = {
-    defaultApplications = {
-      "text/markdown" = [ "helix.desktop" ]; # markdown
-      "text/plain" = [ "helix.desktop" ]; # plain text
-      "text/html" = [ "helix.desktop" ]; # html
-      "text/css" = [ "helix.desktop" ]; # css
-      "text/vnd.trolltech.linguist" = [ "helix.desktop" ]; # ts
-      "text/csv" = [ "helix.desktop" ]; # csv
-      "application/x-subrip" = [ "helix.desktop" ]; # srt
-      "application/x-shellscript" = [ "helix.desktop" ]; # sh
-    };
+    defaultApplications =
+      let
+        helix = "helix.desktop";
+      in
+      {
+        "text/markdown" = [ helix ]; # markdown
+        "text/plain" = [ helix ]; # plain text
+        "text/html" = [ helix ]; # html
+        "text/css" = [ helix ]; # css
+        "text/vnd.trolltech.linguist" = [ helix ]; # ts
+        "text/csv" = [ helix ]; # csv
+        "application/x-subrip" = [ helix ]; # srt
+        "application/x-shellscript" = [ helix ]; # sh
+      };
   };
 
   programs.helix = {

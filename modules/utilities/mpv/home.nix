@@ -7,11 +7,15 @@
 
 {
   xdg.mimeApps = {
-    defaultApplications = {
-      "audio/mpeg" = [ "mpv.desktop" ]; # mp3
-      "video/mp4" = [ "mpv.desktop" ]; # mp4
-      "application/x-matroska" = [ "mpv.desktop" ]; # mkv
-    };
+    defaultApplications =
+      let
+        mpv = "mpv.desktop";
+      in
+      {
+        "audio/mpeg" = [ mpv ]; # mp3
+        "video/mp4" = [ mpv ]; # mp4
+        "application/x-matroska" = [ mpv ]; # mkv
+      };
   };
 
   programs.mpv = {
