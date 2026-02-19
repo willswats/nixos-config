@@ -194,11 +194,25 @@
             use = [ "extract" ];
           }
         ];
+        plugin.prepend_fetchers = [
+          {
+            id = "git";
+            url = "*";
+            run = "git";
+          }
+          {
+            id = "git";
+            url = "/";
+            run = "git";
+          }
+        ];
       };
 
       plugins = {
         chmod = pkgs.yaziPlugins.chmod;
         smart-enter = pkgs.yaziPlugins.smart-enter;
+        git = pkgs.yaziPlugins.git;
+        githead = pkgs.yaziPlugins.githead;
       };
 
       # Some plugins need to be required
@@ -206,6 +220,13 @@
       initLua = ''
         require("session"):setup {
           sync_yanked = true,
+        }
+
+        require("githead"):setup()
+
+        require("git"):setup {
+        	-- Order of status signs showing in the linemode
+        	order = 1500,
         }
       '';
     };
