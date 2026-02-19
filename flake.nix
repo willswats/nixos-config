@@ -17,10 +17,6 @@
     catppuccin.url = "github:catppuccin/nix";
 
     # Editors
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     helix.url = "github:helix-editor/helix";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 

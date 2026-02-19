@@ -409,10 +409,6 @@
                     url = "https://nix-community.github.io/home-manager/options.xhtml";
                   }
                   {
-                    name = "nixvim";
-                    url = "https://nix-community.github.io/nixvim/";
-                  }
-                  {
                     name = "catppuccin/nix";
                     url = "https://nix.catppuccin.com/";
                   }

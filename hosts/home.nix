@@ -22,7 +22,6 @@
     ../modules/development/python/home.nix
     ../modules/development/direnv/home.nix
     # ../modules/development/unity/home.nix
-    ../modules/editors/neovim/home.nix
     ../modules/editors/helix/home.nix
     ../modules/editors/vscode/home.nix
     ../modules/utilities/firefox/home.nix
