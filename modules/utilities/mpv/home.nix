@@ -141,6 +141,7 @@
       mpvScripts.webtorrent-mpv-hook # Adds a hook that allows mpv to stream torrents
       mpvScripts.reload # Manual & automatic reloading of videos
       mpvScripts.builtins.autocrop # Auto crop black borders on videos
+      mpvScripts.eisa01.smartskip # Automatically or manually skip opening, intro, outro, and preview
     ];
     scriptOpts = {
       uosc = {
@@ -164,6 +165,39 @@
       };
       autocrop = {
         suppress_osd = true;
+      };
+      # https://github.com/Eisa01/mpv-scripts/blob/master/script-opts/SmartSkip.conf
+      SmartSkip = {
+        #-- Enables or disables Auto-Skip during playback for the session
+        toggle_autoskip_keybind = [ "ctrl+." ];
+        #-- Enables or disables a chapter for Auto-Skip during playback for the session
+        toggle_category_autoskip_keybind = [ "" ];
+        #-- Cancels Auto-Skip when countdown is started
+        cancel_autoskip_countdown_keybind = [ "esc" "n" ];
+        #-- Proceeds Auto-Skip when countdown is started
+        proceed_autoskip_countdown_keybind = [ "enter" "y" ];
+        #-- Add a chapter for the reached position
+        add_chapter_keybind = [ "" ];
+        #-- Removes the current chapter
+        remove_chapter_keybind = [ "" ];
+        #-- Renames the current chapter
+        edit_chapter_keybind = [ "" ];
+        #-- Manually save the changes for chapters using an external file
+        write_chapters_keybind = [ "" ];
+        #-- Merge the changes of chapters for the file inside mkv file
+        bake_chapters_keybind = [ "" ];
+        #-- Jumps to next chapter > to next playlist
+        chapter_next_keybind = [ "" ];
+        #-- Jumps to previous chapter > to begining > to previous playlist
+        chapter_prev_keybind = [ "" ];
+        #-- Triggers silence_skip > next chapter > next playlist based on different variables
+        smart_next_keybind = [ "" ];
+        #-- Jumps to begining  > previous chapter > previous playlist based on different variables
+        smart_prev_keybind = [ "" ];
+        #-- Triggers silence skip to detect silence as per the configured parameters
+        silence_skip_keybind = [ "" ];
+        #-- Cancels silence skip while it is runnng
+        cancel_silence_skip_keybind = [ "" ];
       };
     };
   };
