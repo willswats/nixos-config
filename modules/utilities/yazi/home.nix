@@ -165,32 +165,32 @@
         open.prepend_rules = [
           # open cbz instead of extracting
           {
-            name = "*.cbz";
+            url = "*.cbz";
             use = [ "open" ];
           }
           # open kra instead of extracting
           {
-            name = "*.kra";
+            url = "*.kra";
             use = [ "open" ];
           }
           # open kdenlive instead of edit
           {
-            name = "*.kdenlive";
+            url = "*.kdenlive";
             use = [ "open" ];
           }
           # open docx instead of edit
           {
-            name = "*.docx";
+            url = "*.docx";
             use = [ "open" ];
           }
           # edit srt to prevent xdg-open getting stuck
           {
-            name = "*.srt";
+            url = "*.srt";
             use = [ "edit" ];
           }
           # extract zip instead of open
           {
-            name = "*.zip";
+            url = "*.zip";
             use = [ "extract" ];
           }
         ];
