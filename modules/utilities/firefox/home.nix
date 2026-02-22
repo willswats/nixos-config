@@ -438,6 +438,10 @@
                     url = "https://leetify.com";
                   }
                   {
+                    name = "Deadlock Meta";
+                    url = "deadlockmeta.com";
+                  }
+                  {
                     name = "Itch";
                     url = "https://itch.io/";
                   }
