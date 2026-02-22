@@ -138,6 +138,7 @@ sudo nix-channel --update
 3. [SSH](./docs/utilities/ssh.md)
 4. [virt-manager](./docs/utilities/virt-manager.md)
 5. [turntable](./docs/utilities/turntable.md)
+6. [HakuNeko](/docs/utilities/hakuneko.md)
 
 ### Games
 
