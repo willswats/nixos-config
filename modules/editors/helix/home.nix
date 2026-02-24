@@ -104,6 +104,7 @@
           space.m = ":lsp-workspace-command open-preview"; # mpls lsp - open markdown preview
           C-r = ":reload-all";
           # Yazi integration - https://github.com/helix-editor/helix/discussions/12934#discussioncomment-12438498
+          # Fix for mouse scroll - https://github.com/helix-editor/helix/discussions/12934#discussioncomment-15620950
           C-e =
             let
               echo = ''
@@ -116,6 +117,8 @@
               ":insert-output echo '${echo}' > /dev/tty"
               ":open %sh{cat /tmp/unique-file}"
               ":redraw"
+              ":set-option mouse false"
+              ":set-option mouse true"
             ];
           # More intuitive x and X motions - https://helix-editor.vercel.app/help/recipes#more-intuitive-x-and-x-motions
           x = "select_line_below";
