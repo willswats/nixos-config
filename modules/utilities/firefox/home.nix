@@ -519,6 +519,10 @@
                     name = "The Index";
                     url = "https://theindex.moe/";
                   }
+                  {
+                    name = "Everything Moe";
+                    url = "https://everythingmoe.org/";
+                  }
                 ];
               }
               {
