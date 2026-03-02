@@ -18,6 +18,7 @@
     ./ui/gitsigns.nix
     ./ui/indent-blankline.nix
     ./ui/inline-diagnostic.nix
+    ./ui/noice.nix
     # QoL
     ./qol/auto-session.nix
     ./qol/ccc.nix
