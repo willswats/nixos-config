@@ -74,20 +74,28 @@
             {
               inherit mode;
               key = "<leader>C";
-              action = "${cmd}%bd|e#|bd#${cr}";
+              action = "${cmd}BufferLineCloseOthers${cr}";
               options.desc = "Close all buffers but current";
             }
             {
               inherit mode;
-              key = "gp";
-              action = "${cmd}bp${cr}";
-              options.desc = "Goto previous buffer";
+              key = "J";
+              action = "${cmd}BufferLineCyclePrev${cr}";
             }
             {
               inherit mode;
-              key = "gn";
-              action = "${cmd}bn${cr}";
-              options.desc = "Goto next buffer";
+              key = "K";
+              action = "${cmd}BufferLineCycleNext${cr}";
+            }
+            {
+              inherit mode;
+              key = "<A-j>";
+              action = "${cmd}BufferLineMovePrev${cr}";
+            }
+            {
+              inherit mode;
+              key = "<A-k>";
+              action = "${cmd}BufferLineMoveNext${cr}";
             }
             # Remove highlight
             {
