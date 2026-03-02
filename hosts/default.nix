@@ -103,7 +103,7 @@ in
   environment = {
     variables = {
       TERMINAL = "kitty";
-      EDITOR = "hx";
+      EDITOR = "nvim";
       NIXOS_OZONE_WL = "1"; # Wayland for Chromium and Electron
     };
     # Add shells to /etc/shells
