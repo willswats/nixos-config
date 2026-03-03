@@ -23,7 +23,6 @@ My [Nixvim](https://github.com/nix-community/nixvim) config.
 ### UI
 
 - [nvim-web-dev-icons](https://github.com/nvim-tree/nvim-web-devicons)
-- [noice.nvim](https://github.com/folke/noice.nvim)
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - [yazi.nvim](https://github.com/mikavilpas/yazi.nvim/)

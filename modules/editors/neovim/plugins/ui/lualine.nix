@@ -57,6 +57,16 @@ in
               separator.__unkeyed = "";
             }
           ];
+          lualine_x = [
+            {
+              __unkeyed = "encoding";
+              separator.__unkeyed = "";
+            }
+            {
+              __unkeyed = "filetype";
+              separator.__unkeyed = "";
+            }
+          ];
           lualine_y = [
             {
               __unkeyed = "progress";
@@ -72,28 +82,5 @@ in
         };
       };
     };
-    # Enable showmode https://github.com/folke/noice.nvim/wiki/A-Guide-to-Messages#showmode
-    # Showmode is needed, because when you record macros it stops cmp https://github.com/hrsh7th/nvim-cmp/issues/1692
-    extraConfigLua = ''
-      require("lualine").setup({
-        sections = {
-          lualine_x = {
-            {
-              require("noice").api.statusline.mode.get,
-              cond = require("noice").api.statusline.mode.has,
-              separator = "",
-            },
-            {
-              "encoding", 
-              separator = "",
-            },
-            {
-              "filetype",
-              separator = "",
-            },
-          },
-        },
-      })
-    '';
   };
 }
