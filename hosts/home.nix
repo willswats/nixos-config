@@ -78,6 +78,7 @@
       qalculate-gtk
       godot_4
       warp
+      turntable
       ## CLI
       wget
       killall
@@ -97,7 +98,7 @@
       lynx
       scooter
       live-server
-      turntable
+      license-cli
       # Infosec
       nmap
       nikto
