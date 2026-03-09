@@ -1,8 +1,9 @@
-{ pkgs
-, host
-, globals
-, inputs
-, ...
+{
+  pkgs,
+  host,
+  globals,
+  inputs,
+  ...
 }:
 
 let
@@ -29,6 +30,22 @@ in
     ../modules/utilities/virt-manager
     ../modules/utilities/wireshark
     ../modules/utilities/gpu-screen-recorder
+  ];
+
+  # Fix ulimit error: https://discourse.nixos.org/t/unable-to-fix-too-many-open-files-error/27094/10
+  security.pam.loginLimits = [
+    {
+      domain = "*";
+      type = "soft";
+      item = "nofile";
+      value = "65536";
+    }
+    {
+      domain = "*";
+      type = "hard";
+      item = "nofile";
+      value = "1048576";
+    }
   ];
 
   # Settings and overlays
