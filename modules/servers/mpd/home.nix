@@ -1,7 +1,6 @@
-{
-  pkgs,
-  host,
-  ...
+{ pkgs
+, host
+, ...
 }:
 
 {
@@ -15,8 +14,8 @@
     in
     {
       enable = true;
-      musicDirectory = "${driveDir}/Entertainment/Music/Albums";
-      playlistDirectory = "${driveDir}/Entertainment/Music/Playlists";
+      musicDirectory = "${driveDir}/Entertainment/Music";
+      playlistDirectory = "${driveDir}/Entertainment/Music/M3UPlaylists";
       network.listenAddress = "any";
       network.port = 6600;
       extraConfig = ''
