@@ -30,6 +30,7 @@ in
     ../modules/utilities/virt-manager
     ../modules/utilities/wireshark
     ../modules/utilities/gpu-screen-recorder
+    ../modules/servers/mpd
   ];
 
   # Fix ulimit error: https://discourse.nixos.org/t/unable-to-fix-too-many-open-files-error/27094/10
