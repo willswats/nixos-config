@@ -1,9 +1,8 @@
-{
-  pkgs,
-  host,
-  globals,
-  inputs,
-  ...
+{ pkgs
+, host
+, globals
+, inputs
+, ...
 }:
 
 let
@@ -30,6 +29,7 @@ in
     ../modules/utilities/virt-manager
     ../modules/utilities/wireshark
     ../modules/utilities/gpu-screen-recorder
+    ../modules/utilities/localsend
     ../modules/servers/mpd
   ];
 
