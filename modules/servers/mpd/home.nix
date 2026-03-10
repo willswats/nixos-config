@@ -23,6 +23,15 @@
           type "pipewire"
           name "My PipeWire Output"
         }
+
+        audio_output {
+          type "httpd"
+          name "My HTTP Stream"
+          encoder "vorbis"
+          quality "5.0"
+          bind_to_address "0.0.0.0"
+          port "8000"
+        }
       '';
     };
 
