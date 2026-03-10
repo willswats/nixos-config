@@ -69,7 +69,7 @@
 
       kitty = "${pkgs.kitty}/bin/kitty";
       yazi = "${pkgs.yazi}/bin/yazi";
-      termusic = "${pkgs.termusic}/bin/termusic";
+      euphonica = "${pkgs.euphonica}/bin/euphonica";
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
       nyaa = "${pkgs.nyaa}/bin/nyaa";
@@ -296,11 +296,11 @@
           "${mod}+a" = "exec ${pavucontrol}"; # Audio manager
           "${mod}+v" = "exec mpv"; # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
           "${mod}+Shift+v" = "exec ${freetube}"; # Freetube
+          "${mod}+m" = "exec ${euphonica}"; # Music player
           "${mod}+Shift+m" = "exec ${pear-desktop}"; # Youtube Music
 
           "${mod}+t" = "exec ${kitty} $EDITOR"; # Text editor
           "${mod}+e" = "exec ${kitty} ${yazi}"; # File explorer
-          "${mod}+m" = "exec ${kitty} ${termusic}"; # Music player
           "${mod}+s" = "exec ${kitty} ${btm} -b"; # Process monitor
           "${mod}+b" = "exec ${kitty} ${bluetuith}"; # Bluetooth manager
           "${mod}+n" = "exec ${kitty} ${nyaa}"; # Nyaa
@@ -341,7 +341,7 @@
             always = false;
           }
           {
-            command = "${turntable} -c org.mpris.MediaPlayer2.termusic";
+            command = "${turntable} -c org.mpris.MediaPlayer2.io.github.htkhiem.Euphonica";
             always = false;
           }
           # Applets
