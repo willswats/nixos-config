@@ -25,7 +25,7 @@
     ../modules/editors/neovim/home.nix
     ../modules/editors/helix/home.nix
     ../modules/editors/vscode/home.nix
-    ../modules/utilities/firefox/home.nix
+    ../modules/utilities/librewolf/home.nix
     ../modules/utilities/chromium/home.nix
     ../modules/utilities/mpv/home.nix
     ../modules/utilities/oculante/home.nix

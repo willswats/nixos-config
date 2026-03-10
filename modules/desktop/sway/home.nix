@@ -62,7 +62,7 @@
       waybar = "${pkgs.waybar}/bin/waybar";
       hyprpicker = "${pkgs.hyprpicker}/bin/hyprpicker";
 
-      firefox = "${pkgs.firefox}/bin/firefox";
+      librewolf = "${pkgs.librewolf}/bin/librewolf";
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
       freetube = "${pkgs.freetube}/bin/freetube";
       pear-desktop = "${pkgs.pear-desktop}/bin/pear-desktop";
@@ -292,7 +292,7 @@
 
           "${mod}+Return" = "exec ${kitty}"; # Terminal
 
-          "${mod}+w" = "exec ${firefox}"; # Web browser
+          "${mod}+w" = "exec ${librewolf}"; # Web browser
           "${mod}+a" = "exec ${pavucontrol}"; # Audio manager
           "${mod}+v" = "exec mpv"; # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
           "${mod}+Shift+v" = "exec ${freetube}"; # Freetube

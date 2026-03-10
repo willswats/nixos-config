@@ -52,7 +52,7 @@
       waybar = "${pkgs.waybar}/bin/waybar";
       hyprpicker = "${pkgs.hyprpicker}/bin/hyprpicker";
 
-      firefox = "${pkgs.firefox}/bin/firefox";
+      librewolf = "${pkgs.librewolf}/bin/librewolf";
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
       freetube = "${pkgs.freetube}/bin/freetube";
       pear-desktop = "${pkgs.pear-desktop}/bin/pear-desktop";
@@ -181,8 +181,8 @@
           "float, class:gamescope"
           # pcmanfm
           "float, class:pcmanfm"
-          # firefox
-          "suppressevent maximize, class:firefox" # Fix firefox maximizing certain windows (extensions)
+          # librewolf
+          "suppressevent maximize, class:librewolf" # Fix librewolf maximizing certain windows (extensions)
           # Godot
           "tile, class:Godot" # Fix Godot starting as float
           # MPV
@@ -234,7 +234,7 @@
 
           "$mod, return, exec, ${kitty}"
 
-          "$mod, w, exec, ${firefox}" # Web browser
+          "$mod, w, exec, ${librewolf}" # Web browser
           "$mod, a, exec, ${pavucontrol}" # Audio manager
           "$mod, v, exec, mpv" # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
           "$mod shift, v, exec, ${freetube}" # Freetube
