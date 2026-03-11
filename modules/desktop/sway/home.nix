@@ -337,11 +337,11 @@
             always = false;
           }
           {
-            command = "${turntable} -c org.mpris.MediaPlayer2.YoutubeMusic";
+            command = "${turntable} -c org.mpris.MediaPlayer2.mpd";
             always = false;
           }
           {
-            command = "${turntable} -c org.mpris.MediaPlayer2.io.github.htkhiem.Euphonica";
+            command = "${turntable} -c org.mpris.MediaPlayer2.YoutubeMusic";
             always = false;
           }
           # Applets

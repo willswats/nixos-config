@@ -218,8 +218,8 @@
           # Daemons
           "${playerctld}" # The home manager service doesn't seem to start playerctld
           "${lxpolkit}"
+          "${turntable} -c org.mpris.MediaPlayer2.mpd"
           "${turntable} -c org.mpris.MediaPlayer2.YoutubeMusic"
-          "${turntable} -c org.mpris.MediaPlayer2.io.github.htkhiem.Euphonica."
           # Applets
           "${mullvadGui}"
           "${filen-desktop}"
