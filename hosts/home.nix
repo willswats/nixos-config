@@ -84,7 +84,7 @@
       wget
       killall
       ffmpeg
-      rclone
+      (callPackage ../pkgs/rclone { }) # TODO: remove custom rclone when this PR is merged and in current version - https://github.com/rclone/rclone/pull/9209 
       mkvtoolnix-cli
       ouch
       unrar-free
