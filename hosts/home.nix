@@ -79,7 +79,7 @@
       godot_4
       warp
       turntable
-      euphonica
+      rmpc
       ## CLI
       wget
       killall

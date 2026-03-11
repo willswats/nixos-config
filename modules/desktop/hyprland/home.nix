@@ -59,7 +59,7 @@
 
       kitty = "${pkgs.kitty}/bin/kitty";
       yazi = "${pkgs.yazi}/bin/yazi";
-      euphonica = "${pkgs.euphonica}/bin/euphonica";
+      rmpc = "${pkgs.rmpc}/bin/rmpc";
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
       nyaa = "${pkgs.nyaa}/bin/nyaa";
@@ -238,11 +238,11 @@
           "$mod, a, exec, ${pavucontrol}" # Audio manager
           "$mod, v, exec, mpv" # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
           "$mod shift, v, exec, ${freetube}" # Freetube
-          "$mod, m, exec, ${euphonica}" # Music player
           "$mod shift, m, exec, ${pear-desktop}" # Youtube Music
 
           "$mod, t, exec, ${kitty} $EDITOR" # Text editor
           "$mod, e, exec, ${kitty} ${yazi}" # File explorer
+          "$mod, m, exec, ${kitty} ${rmpc}" # Music player
           "$mod, s, exec, ${kitty} ${btm} -b" # Process monitor
           "$mod, b, exec, ${kitty} ${bluetuith}" # Bluetooth manager
           "$mod, n, exec, ${kitty} ${nyaa}" # Nyaa
