@@ -35,8 +35,27 @@
       '';
     };
 
-  services.mpdris2 = {
-    enable = true;
-    notifications = true;
-  };
+
+  systemd.user.services.mpdris2-rs =
+    let
+      mpdris2-rs = "${pkgs.mpdris2-rs}/bin/mpdris2-rs";
+    in
+    {
+      Install = {
+        WantedBy = [ "default.target" ];
+      };
+
+      Service = {
+        Type = "simple";
+        ExecStart = mpdris2-rs;
+        Restart = "always";
+        RestartSec = "5";
+      };
+
+      Unit = {
+        Description = "mpdris2-rs";
+        Requires = [ "dbus.socket" ];
+        After = [ "dbus.socket" ];
+      };
+    };
 }
