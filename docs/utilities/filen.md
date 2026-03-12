@@ -2,11 +2,15 @@
 
 1. Open Filen Desktop and sign in.
 2. In settings, enable start minimized.
-3. Add drive sync.
-4. (Laptop): CD to drive directory, then run:
+3. (Desktop) Add whole drive sync (disable exclude dot files).
+4. (Laptop) Add sync individually for the following directories (disable exclude dot files):
 
-```bash
-echo -e "Entertainment/\nGames/\nEdits/" > .filenignore
+```
+Documents
+Dots/Apps
+Media
+Notebook
+Work
 ```
 
-5. Unpause sync
+5. Unpause sync for all syncs.
