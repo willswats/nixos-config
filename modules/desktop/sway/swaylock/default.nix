@@ -6,4 +6,6 @@
       auth include login
     '';
   };
+
+  security.pam.services.swaylock.enableGnomeKeyring = true;
 }
