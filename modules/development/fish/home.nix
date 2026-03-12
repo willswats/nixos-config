@@ -84,7 +84,6 @@
 
         # beet
         bi = "${beet} import ."; # For albums
-        binc = "${beet} import -C ."; # For playlists - no copy to library
 
         # mp3gain
         norm = "${mp3gain} -c -r";
