@@ -1,8 +1,7 @@
-{
-  pkgs,
-  globals,
-  host,
-  ...
+{ pkgs
+, globals
+, host
+, ...
 }:
 
 {
@@ -76,6 +75,12 @@
         extraCss = extraCss;
       };
     };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
 
   # GTK4 Theme
   home.sessionVariables.GTK_THEME = "Colloid-Dark-Catppuccin";
