@@ -15,14 +15,14 @@
 
       ensureDirsExist = pkgs.writeShellScript "ensureDirsExist.sh" ''
         mkdir -p ${directoriesToCreate}
-        ln -sf ${drive}/.dots/FreeTube ~/.config/
-        ln -sf ${drive}/.dots/YouTube\ Music ~/.config/
+        ln -sf ${drive}/Dots/Apps/FreeTube ~/.config/
+        ln -sf ${drive}/Dots/Apps/YouTube\ Music ~/.config/
 
         host=$(${hostname})
         if [ "$host" = "${desktopHostName}" ]; then          
-          ln -sf ${drive}/.dots/PCSX2/ ~/.config/
-          ln -sf ${drive}/.dots/rpcs3/ ~/.config/
-          ln -sf ${drive}/.dots/yuzu/ ~/.local/share/
+          ln -sf ${drive}/Dots/Games/PCSX2/ ~/.config/
+          ln -sf ${drive}/Dots/Games/rpcs3/ ~/.config/
+          ln -sf ${drive}/Dots/Games/yuzu/ ~/.local/share/
         fi
       '';
     in
