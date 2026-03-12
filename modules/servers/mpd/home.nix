@@ -14,8 +14,8 @@
     in
     {
       enable = true;
-      musicDirectory = "${driveDir}/Entertainment/Music";
-      playlistDirectory = "${driveDir}/Entertainment/Music/M3UPlaylists";
+      musicDirectory = "${driveDir}/Entertainment/Music/Albums";
+      playlistDirectory = "${driveDir}/Entertainment/Music/Playlists";
       network.listenAddress = "any";
       network.port = 6600;
       extraConfig = ''
