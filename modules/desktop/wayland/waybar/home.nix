@@ -117,6 +117,7 @@
               "󰤨"
             ];
             max-length = 20;
+            tooltip = false;
           };
 
           "clock#calendar" = {
@@ -218,7 +219,9 @@
             }
 
             #workspaces button {
-              padding: 5px;
+              all: initial; /* Remove default styles from gtk */
+              color: ${overlay0};
+              padding: 5px 10px;
             }
 
             #tray {
@@ -227,10 +230,6 @@
 
             #workspaces { 
               margin-left: 4px;
-            }
-
-            #workspaces button {
-              color: ${overlay0};
             }
 
             #workspaces button:hover {
