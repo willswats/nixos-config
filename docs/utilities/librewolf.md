@@ -1,9 +1,5 @@
 # LibreWolf
 
-## uBlock
-
-- Run in Private Windows: Allow
-
 ## Consent-O-Matic
 
 - Preferences and Functionality: Enabled
