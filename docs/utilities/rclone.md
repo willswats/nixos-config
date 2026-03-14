@@ -1,14 +1,13 @@
 # Rclone
 
-1. Run `filen` and login.
-2. Run `rclone config` and configure Filen (run `filen export-api-key` to get the API key).
-3. Create filters file:
+1. Run `rclone config` and configure Filen (run `filen export-api-key` to get the API key).
+2. Create filters file:
 
 Laptop:
 
 ```fish
 echo "\
-- /.filen.trash.local/
+- .filen.trash.local/
 - /Dots/Games/
 - /Edits/
 - /Entertainment/
@@ -18,10 +17,10 @@ echo "\
 Desktop:
 
 ```fish
-echo "- /.filen.trash.local/" > /home/will/.config/rclone/bisync-filters.txt
+echo "- .filen.trash.local/" > /home/will/.config/rclone/bisync-filters.txt
 ```
 
-4. Run the following command and replace `localDrive` with the local drive location (make local match remote):
+3. Run the following command and replace `localDrive` with the local drive location (make local match remote):
 
 ```bash
 rclone bisync filen: localDrive \
