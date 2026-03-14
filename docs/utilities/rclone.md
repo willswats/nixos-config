@@ -1,0 +1,42 @@
+# Rclone
+
+1. Run `filen` and login.
+2. Run `rclone config` and configure Filen (run `filen export-api-key` to get the API key).
+3. Create filters file:
+
+Laptop:
+
+```fish
+echo "\
+- /.filen.trash.local/
+- /Dots/Games/
+- /Edits/
+- /Entertainment/
+- /Games/" > /home/will/.config/rclone/bisync-filters.txt
+```
+
+Desktop:
+
+```fish
+echo "- /.filen.trash.local/" > /home/will/.config/rclone/bisync-filters.txt
+```
+
+4. Run the following command and replace `localDrive` with the local drive location (make local match remote):
+
+```bash
+rclone bisync filen: localDrive \
+  --create-empty-src-dirs \
+  --compare size,modtime,checksum \
+  --slow-hash-sync-only \
+  --resync \
+  --log-level INFO \
+  --log-file "/home/will/.config/rclone/rclone.log" \
+  --filters-file "/home/will/.config/rclone/bisync-filters.txt"
+```
+
+Flags explained:
+
+- `--create-empty-src-dirs` - Sync creation and deletion of empty directories
+- `--compare size,modtime,checksum` Compare files based on all three
+- `--slow-hash-sync-only` - Only check checksums where `modtime` and `size` has changed
+- `--resync` - Must be used on first run of `bisync`
