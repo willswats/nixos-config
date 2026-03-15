@@ -54,6 +54,7 @@
         wayback-machine
         # nyaa.si
         nyaa-linker
+        # TODO: add gumbo
       ];
 
       # about:config

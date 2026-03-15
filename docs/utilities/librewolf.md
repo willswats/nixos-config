@@ -6,7 +6,7 @@
 
 ## Bitwarden
 
-### Notifications
+### Bitwarden - Notifications
 
 - Ask to save and use passkeys: Disabled
 - Ask to add login: Disabled
@@ -14,7 +14,18 @@
 
 ## MAL-Sync
 
-### MAL-Sync Notifications
+### MAL-Sync - Notifications
 
 - Notifications (Anime): Disabled
 - Notifications (Manga): Disabled
+
+## Gumbo
+
+### Gumbo - General
+
+- Click action: Open chat
+- Click behaviour: Open in a new window
+
+### Gumbo - Notifications
+
+- Enable notifications: Disabled

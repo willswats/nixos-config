@@ -42,7 +42,6 @@
     ../modules/utilities/bluetuith/home.nix
     ../modules/utilities/gnome-keyring/home.nix
     ../modules/utilities/onlyoffice/home.nix
-    ../modules/utilities/streamlink-twitch-gui/home.nix
     ../modules/utilities/zathura/home.nix
     ../modules/utilities/hakuneko/home.nix
     ../modules/utilities/beets/home.nix
@@ -102,6 +101,7 @@
       license-cli
       filen-cli
       rmpc
+      twitch-hls-client
       # Infosec
       nmap
       nikto
