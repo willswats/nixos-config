@@ -109,11 +109,20 @@
               class = "^.*";
             };
           }
-          # Chatterino
+          # Twitch Popout Chat
           {
             command = "floating enable, opacity 0.9";
             criteria = {
-              app_id = "com.chatterino.";
+              app_id = "librewolf";
+              title = "Chat - Twitch";
+            };
+          }
+          # Bitwarden Extension
+          {
+            command = "floating enable, opacity 0.9";
+            criteria = {
+              app_id = "librewolf";
+              title = "Bitwarden Password Manager";
             };
           }
           # Steam

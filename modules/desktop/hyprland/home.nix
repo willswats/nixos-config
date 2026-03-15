@@ -165,11 +165,10 @@
         };
 
         windowrulev2 = [
-          # Chatterino
-          "opacity 0.9, class:com.chatterino."
-          "noblur, class:com.chatterino."
-          "float, class:com.chatterino."
-          "size 400 600, class:com.chatterino."
+          # Twitch Popout Chat
+          "float, title:Chat - Twitch, opacity:0.9"
+          # Bitwarden Extension
+          "float, title:Bitwarden Password Manager, opacity:0.9"
           # Steam
           "float, class:steam"
           "tile, class:steam, title:^Steam$" # Strict regex check for only the "Steam" window
