@@ -11,8 +11,7 @@
   #     rclone-bisync-command = pkgs.writeShellScript "rclone-bisync-command.sh" ''
   #       ${rclone} bisync filen: ${driveDir} \
   #         --create-empty-src-dirs \
-  #         --compare size,modtime,checksum \
-  #         --slow-hash-sync-only \
+  #         --resilient \
   #         --log-level INFO \
   #         --log-file "/home/will/.config/rclone/rclone.log" \
   #         --filters-file "/home/will/.config/rclone/bisync-filters.txt"

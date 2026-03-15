@@ -25,8 +25,7 @@ echo "- .filen.trash.local/" > /home/will/.config/rclone/bisync-filters.txt
 ```bash
 rclone bisync filen: localDrive \
   --create-empty-src-dirs \
-  --compare size,modtime,checksum \
-  --slow-hash-sync-only \
+  --resilient \
   --resync \
   --log-level INFO \
   --log-file "/home/will/.config/rclone/rclone.log" \
@@ -38,4 +37,5 @@ Flags explained:
 - `--create-empty-src-dirs` - Sync creation and deletion of empty directories
 - `--compare size,modtime,checksum` Compare files based on all three
 - `--slow-hash-sync-only` - Only check checksums where `modtime` and `size` has changed
+- `--resilient` - Allow future runs to retry after certain less-serious errors, instead of requiring `--resync`.
 - `--resync` - Must be used on first run of `bisync`
