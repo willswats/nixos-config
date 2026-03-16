@@ -68,6 +68,7 @@
       lxpolkit = "${pkgs.lxsession}/bin/lxpolkit";
       turntable = "${pkgs.turntable}/bin/dev.geopjr.Turntable";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
+      filen-desktop = "${pkgs.filen-desktop}/bin/filen-desktop";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
@@ -220,6 +221,7 @@
           "${turntable} -c org.mpris.MediaPlayer2.YoutubeMusic"
           # Applets
           "${mullvadGui}"
+          "${filen-desktop}"
           # Misc
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
         ];

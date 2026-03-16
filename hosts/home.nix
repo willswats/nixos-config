@@ -69,6 +69,7 @@
       moonlight-qt
       pear-desktop
       freetube
+      filen-desktop
       pixelorama
       zotero
       teams-for-linux
