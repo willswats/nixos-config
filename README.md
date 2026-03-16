@@ -133,7 +133,7 @@ sudo nix-channel --update
 
 ### Utilities
 
-1. [Filen](./docs/utilities/filen.md)
+1. [Dropbox](./docs/utilities/dropbox.md)
 2. [LibreWolf](./docs/utilities/librewolf.md)
 3. [SSH](./docs/utilities/ssh.md)
 4. [virt-manager](./docs/utilities/virt-manager.md)

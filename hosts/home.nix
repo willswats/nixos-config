@@ -69,7 +69,7 @@
       moonlight-qt
       pear-desktop
       freetube
-      filen-desktop
+      dropbox
       pixelorama
       zotero
       teams-for-linux
@@ -99,7 +99,6 @@
       scooter
       live-server
       license-cli
-      filen-cli
       rmpc
       twitch-hls-client
       # Infosec
