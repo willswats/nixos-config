@@ -83,8 +83,6 @@
       wget
       killall
       ffmpeg
-      filen-cli
-      rclone
       mkvtoolnix-cli
       ouch
       unrar-free
