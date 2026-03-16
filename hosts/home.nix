@@ -25,7 +25,6 @@
     ../modules/editors/neovim/home.nix
     ../modules/editors/helix/home.nix
     ../modules/editors/vscode/home.nix
-    ../modules/utilities/rclone/home.nix
     ../modules/utilities/librewolf/home.nix
     ../modules/utilities/chromium/home.nix
     ../modules/utilities/mpv/home.nix
@@ -79,10 +78,13 @@
       godot_4
       warp
       turntable
+      rmpc
       ## CLI
       wget
       killall
       ffmpeg
+      filen-cli
+      rclone
       mkvtoolnix-cli
       ouch
       unrar-free
