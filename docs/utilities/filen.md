@@ -1,43 +1,16 @@
 # Filen
 
-1. Create `syncPairs.json`
+1. Open Filen Desktop and sign in.
+2. In settings, enable start minimized.
+3. (Desktop) Add whole drive sync (disable exclude dot files).
+4. (Laptop) Add sync individually for the following directories (disable exclude dot files):
 
-Desktop:
-
-```bash
-echo '[
-  {
-    "local": "/run/media/will/2TB/Drive/",
-    "remote": "/",
-    "syncMode": "twoWay",
-    "excludeDotFiles": false
-  }
-]' > ~/.config/filen-cli/syncPairs.json
+```
+Documents
+Dots/Apps
+Media
+Notebook
+Work
 ```
 
-Laptop:
-
-```bash
-echo '
-[
-  {
-    "local": "/home/will/Drive/",
-    "remote": "/",
-    "syncMode": "twoWay",
-    "ignore": [
-      "Dots/Games/",
-      "Edits/",
-      "Entertainment/",
-      "Games/"
-    ],
-    "excludeDotFiles": false
-  }
-]' > ~/.config/filen-cli/syncPairs.json
-```
-
-2. Run `filen sync --continious`, sign in, then cancel the command.
-3. Restart the `systemd` service if it has already failed:
-
-```bash
-systemctl --user restart filen-sync.service
-```
+5. Unpause sync for all syncs.
