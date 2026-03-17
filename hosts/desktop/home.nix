@@ -1,6 +1,5 @@
 { pkgs
 , host
-, inputs
 , ...
 }:
 
@@ -35,6 +34,7 @@
     osu-lazer-bin
     tetrio-desktop
     sm64coopdx
+    deadlock-mod-manager
   ];
 
   wayland.windowManager.hyprland.settings.monitor =
