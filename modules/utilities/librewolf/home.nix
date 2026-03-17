@@ -50,11 +50,12 @@
         zotero-connector
         # YouTube
         youtube-alternative-switch
+        # Twitch
+        gumbo-twitch-companion
         # Wayback Machine
         wayback-machine
         # nyaa.si
         nyaa-linker
-        # TODO: add gumbo
       ];
 
       # about:config
