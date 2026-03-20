@@ -27,6 +27,7 @@ in
       tab_separator = "|";
       allow_remote_control = true;
       kitty_mod = "alt";
+      paste_actions = "filter"; # Disable paste prompt
     };
     keybindings = {
       "ctrl+shift+c" = "copy_to_clipboard";
