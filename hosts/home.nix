@@ -78,6 +78,7 @@
       godot_4
       warp
       turntable
+      easyeffects
       euphonica
       ## CLI
       wget
