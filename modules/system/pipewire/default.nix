@@ -10,13 +10,46 @@
     pulse.enable = true;
     jack.enable = true;
     wireplumber.enable = true;
-    # For low latency - keep increasing the quant value until you get no crackles
-    # lowLatency = {
-    #   # enable this module
-    #   enable = true;
-    #   # defaults (no need to be set unless modified)
-    #   quantum = 512;
-    #   rate = 48000;
-    # };
+    extraConfig =
+      {
+        pipewire."92-low-latency" =
+          let
+            quant = 1024;
+          in
+          {
+            context.properties = {
+              default.clock.rate = 48000;
+              default.clock.quantum = quant;
+              default.clock.min-quantum = quant;
+              default.clock.max-quantum = 1024;
+            };
+          };
+        # Applications using the Pulse backend have a separate configuration.
+        # The default minimum value  is 1024, so it needs to be tweaked if low-latency audio is desired.
+        # As a general rule, the values in pipewire-pulse should not be lower than the ones in pipewire.
+        pipewire-pulse."92-low-latency" =
+          let
+            quant = "1024";
+          in
+          {
+            "context.properties" = [
+              {
+                name = "libpipewire-module-protocol-pulse";
+                args = { };
+              }
+            ];
+            "pulse.properties" = {
+              "pulse.min.req" = "${quant}/48000";
+              "pulse.default.req" = "${quant}/48000";
+              "pulse.max.req" = "${quant}/48000";
+              "pulse.min.quantum" = "${quant}/48000";
+              "pulse.max.quantum" = "${quant}/48000";
+            };
+            "stream.properties" = {
+              "node.latency" = "${quant}/48000";
+              "resample.quality" = 1;
+            };
+          };
+      };
   };
 }
