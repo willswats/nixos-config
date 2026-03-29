@@ -71,7 +71,7 @@
       dropbox
       pixelorama
       zotero
-      legcord
+      discord
       teams-for-linux
       signal-desktop
       qalculate-gtk
