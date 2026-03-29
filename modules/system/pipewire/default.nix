@@ -14,14 +14,16 @@
       {
         pipewire."92-low-latency" =
           let
-            quant = 1024;
+            quant = 2048;
+            minQuant = 256;
+            maxQuant = 8192;
           in
           {
             context.properties = {
               default.clock.rate = 48000;
               default.clock.quantum = quant;
-              default.clock.min-quantum = quant;
-              default.clock.max-quantum = 1024;
+              default.clock.min-quantum = minQuant;
+              default.clock.max-quantum = maxQuant;
             };
           };
         # Applications using the Pulse backend have a separate configuration.
@@ -29,7 +31,9 @@
         # As a general rule, the values in pipewire-pulse should not be lower than the ones in pipewire.
         pipewire-pulse."92-low-latency" =
           let
-            quant = "1024";
+            quant = "2048";
+            minQuant = "256";
+            maxQuant = "8192";
           in
           {
             "context.properties" = [
@@ -39,11 +43,11 @@
               }
             ];
             "pulse.properties" = {
-              "pulse.min.req" = "${quant}/48000";
+              "pulse.min.req" = "${minQuant}/48000";
               "pulse.default.req" = "${quant}/48000";
-              "pulse.max.req" = "${quant}/48000";
-              "pulse.min.quantum" = "${quant}/48000";
-              "pulse.max.quantum" = "${quant}/48000";
+              "pulse.max.req" = "${maxQuant}/48000";
+              "pulse.min.quantum" = "${minQuant}/48000";
+              "pulse.max.quantum" = "${maxQuant}/48000";
             };
             "stream.properties" = {
               "node.latency" = "${quant}/48000";
