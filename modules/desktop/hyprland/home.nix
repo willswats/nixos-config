@@ -69,6 +69,7 @@
       turntable = "${pkgs.turntable}/bin/dev.geopjr.Turntable";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
+      easyEffects = "${pkgs.easyeffects}/bin/easyeffects";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
@@ -222,6 +223,7 @@
           # Applets
           "${mullvadGui}"
           "${dropbox}"
+          "${easyEffects}"
           # Misc
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
         ];

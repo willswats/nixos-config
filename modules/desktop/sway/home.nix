@@ -79,6 +79,7 @@
       turntable = "${pkgs.turntable}/bin/dev.geopjr.Turntable";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
+      easyEffects = "${pkgs.easyeffects}/bin/easyeffects";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
       playerctl = "${pkgs.playerctl}/bin/playerctl";
@@ -360,6 +361,10 @@
           }
           {
             command = "${dropbox}";
+            always = false;
+          }
+          {
+            command = "${easyEffects}";
             always = false;
           }
           {
