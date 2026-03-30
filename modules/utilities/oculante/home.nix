@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    oculante
+    # oculante
   ];
 
   # Fix failed to open file in PCManFM - https://github.com/woelper/oculante/issues/399
