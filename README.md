@@ -137,7 +137,8 @@ sudo nix-channel --update
 2. [LibreWolf](./docs/utilities/librewolf.md)
 3. [SSH](./docs/utilities/ssh.md)
 4. [virt-manager](./docs/utilities/virt-manager.md)
-5. [turntable](./docs/utilities/turntable.md)
+5. [Turntable](./docs/utilities/turntable.md)
+6. [Easy Effects](/docs/utilities/easy-effects.md)
 
 ### Games
 
