@@ -18,7 +18,7 @@ in
   services.wlsunset = {
     enable = true;
     sunrise = "08:00";
-    sunset = "19:00";
+    sunset = "18:00";
     temperature = {
       day = 6500;
       night = 3000;
