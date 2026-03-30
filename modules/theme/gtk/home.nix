@@ -71,6 +71,7 @@
         extraCss = extraCss;
       };
       gtk4 = {
+        theme = null; # Silence warning and adopt new behavior
         extraConfig = extraConfig;
         extraCss = extraCss;
       };
