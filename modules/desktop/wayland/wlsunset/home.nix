@@ -10,21 +10,11 @@ let
     if pgrep wlsunset; then
       killall wlsunset
     else
-      ${wlsunset}
+      ${wlsunset} -S 08:00 -s 18:00 -t 3000 -T 6500
     fi
   '';
 in
 {
-  services.wlsunset = {
-    enable = true;
-    sunrise = "08:00";
-    sunset = "18:00";
-    temperature = {
-      day = 6500;
-      night = 3000;
-    };
-  };
-
   wayland.windowManager.sway.config =
     let
       mod = config.wayland.windowManager.sway.config.modifier;
