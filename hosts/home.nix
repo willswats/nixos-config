@@ -28,7 +28,6 @@
     ../modules/utilities/librewolf/home.nix
     ../modules/utilities/chromium/home.nix
     ../modules/utilities/mpv/home.nix
-    ../modules/utilities/oculante/home.nix
     ../modules/utilities/gimp/home.nix
     ../modules/utilities/krita/home.nix
     ../modules/utilities/kdenlive/home.nix

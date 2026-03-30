@@ -15,6 +15,16 @@
         "audio/mpeg" = [ mpv ]; # mp3
         "video/mp4" = [ mpv ]; # mp4
         "application/x-matroska" = [ mpv ]; # mkv
+
+        # Images
+        "image/png" = [ mpv ]; # jpg
+        "image/jxl" = [ mpv ]; # jxl
+        "image/jpeg" = [ mpv ]; # png
+        "image/heif" = [ mpv ]; # HEIC
+        "image/webp" = [ mpv ]; # webp
+        "image/avif" = [ mpv ]; # avif
+        "image/svg" = [ mpv ]; # svg
+        "image/gif" = [ mpv ]; # gif
       };
   };
 
