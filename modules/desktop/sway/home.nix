@@ -364,7 +364,7 @@
             always = false;
           }
           {
-            command = "${easyEffects}";
+            command = "${easyEffects} -w";
             always = false;
           }
           {

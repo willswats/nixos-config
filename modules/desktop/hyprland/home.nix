@@ -223,7 +223,7 @@
           # Applets
           "${mullvadGui}"
           "${dropbox}"
-          "${easyEffects}"
+          "${easyEffects} -w"
           # Misc
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
         ];
