@@ -31,6 +31,7 @@
     # Launchers
     lutris
     prismlauncher
+    deadlock-mod-manager
     # Games
     osu-lazer-bin
     tetrio-desktop
