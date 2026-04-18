@@ -5,7 +5,7 @@
     extraPackages = with pkgs; [
       vscode-langservers-extracted # HTML/CSS/JSON/ESLint language servers
       typescript-language-server # TypeScript LSP
-      nodePackages.prettier # Formatter
+      prettier # Formatter
     ];
     languages = {
       language = [
