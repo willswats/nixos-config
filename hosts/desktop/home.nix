@@ -1,6 +1,5 @@
 { pkgs
 , host
-, inputs
 , ...
 }:
 
@@ -11,7 +10,7 @@
     ../../modules/games/steam/home.nix
     ../../modules/games/heroic/home.nix
     ../../modules/games/r2modman/home.nix
-    ../../modules/games/gzdoom/home.nix
+    ../../modules/games/uzdoom/home.nix
     ../../modules/games/airshipper/home.nix
     ../../modules/emulators/slippi/home.nix
     ../../modules/emulators/yuzu/home.nix

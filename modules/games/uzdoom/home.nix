@@ -1,14 +1,13 @@
-{
-  pkgs,
-  globals,
-  host,
-  ...
+{ pkgs
+, globals
+, host
+, ...
 }:
 
 {
-  home.packages = with pkgs; [ gzdoom ];
+  home.packages = with pkgs; [ uzdoom ];
 
-  xdg.configFile."gzdoom/gzdoom.ini" = {
+  xdg.configFile."uzdoom/uzdoom.ini" = {
     text =
       let
         homeDir = globals.directories.home;
@@ -360,7 +359,7 @@
         [IWADSearch.Directories]
         Path=.
         Path=$DOOMWADDIR
-        Path=$HOME/.config/gzdoom
+        Path=$HOME/.config/uzdoom
         Path=$HOME/.local/share/games/doom
         Path=/usr/local/share/doom
         Path=/usr/local/share/games/doom
@@ -372,7 +371,7 @@
         # command line parameter, if they cannot be found with the path
         # as-is. Layout is the same as for IWADSearch.Directories
         [FileSearch.Directories]
-        Path=$HOME/.config/gzdoom
+        Path=$HOME/.config/uzdoom
         Path=$HOME/.local/share/games/doom
         Path=/usr/local/share/
         Path=/usr/local/share/doom
@@ -384,8 +383,8 @@
         # These are the directories to search for soundfonts that let listed in the menu.
         # Layout is the same as for IWADSearch.Directories
         [SoundfontSearch.Directories]
-        Path=$HOME/.config/gzdoom/soundfonts
-        Path=$HOME/.config/gzdoom/fm_banks
+        Path=$HOME/.config/uzdoom/soundfonts
+        Path=$HOME/.config/uzdoom/fm_banks
         Path=$HOME/.local/share/games/doom/soundfonts
         Path=$HOME/.local/share/games/doom/fm_banks
         Path=/usr/local/share/doom/soundfonts
@@ -401,19 +400,19 @@
         # Each file should be on its own line, preceded by Path=
 
         [Doom.AutoExec]
-        Path=${homeDir}/.config/gzdoom/autoexec.cfg
+        Path=${homeDir}/.config/uzdoom/autoexec.cfg
 
         [Heretic.AutoExec]
-        Path=${homeDir}/.config/gzdoom/autoexec.cfg
+        Path=${homeDir}/.config/uzdoom/autoexec.cfg
 
         [Hexen.AutoExec]
-        Path=${homeDir}/.config/gzdoom/autoexec.cfg
+        Path=${homeDir}/.config/uzdoom/autoexec.cfg
 
         [Strife.AutoExec]
-        Path=${homeDir}/.config/gzdoom/autoexec.cfg
+        Path=${homeDir}/.config/uzdoom/autoexec.cfg
 
         [Chex.AutoExec]
-        Path=${homeDir}/.config/gzdoom/autoexec.cfg
+        Path=${homeDir}/.config/uzdoom/autoexec.cfg
 
         # WAD files to always load. These are loaded after the IWAD but before
         # any files added with -file. Place each file on its own line, preceded
@@ -571,7 +570,7 @@
         fluid_gain=0.5
         fluid_interp=1
         fluid_lib=
-        fluid_patchset=gzdoom
+        fluid_patchset=uzdoom
         fluid_reverb=false
         fluid_reverb_damping=0.23000000417232513
         fluid_reverb_level=0.5699999928474426
@@ -740,7 +739,7 @@
         telezoom=true
         timidity_channel_pressure=false
         timidity_chorus=0
-        timidity_config=gzdoom
+        timidity_config=uzdoom
         timidity_drum_effect=false
         timidity_drum_power=1
         timidity_key_adjust=0
