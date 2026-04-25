@@ -35,6 +35,7 @@
     osu-lazer-bin
     tetrio-desktop
     sm64coopdx
+    vintagestory
   ];
 
   wayland.windowManager.hyprland.settings.monitor =
