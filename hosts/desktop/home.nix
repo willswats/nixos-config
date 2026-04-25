@@ -34,7 +34,7 @@
     osu-lazer-bin
     tetrio-desktop
     sm64coopdx
-    vintagestory
+    (callPackage ../../pkgs/vintagestory { })
   ];
 
   wayland.windowManager.hyprland.settings.monitor =
