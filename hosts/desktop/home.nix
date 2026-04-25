@@ -28,7 +28,6 @@
     xenia-canary
     shadps4
     # Launchers
-    lutris
     prismlauncher
     deadlock-mod-manager
     # Games
