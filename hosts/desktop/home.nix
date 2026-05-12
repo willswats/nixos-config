@@ -33,9 +33,10 @@
     # Games
     osu-lazer-bin
     tetrio-desktop
-    sm64coopdx
+    # sm64coopdx
     (callPackage ../../pkgs/vintagestory { })
   ];
+
 
   wayland.windowManager.hyprland.settings.monitor =
     let
