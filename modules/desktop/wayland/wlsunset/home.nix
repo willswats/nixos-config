@@ -10,7 +10,7 @@ let
     if pgrep wlsunset; then
       killall wlsunset
     else
-      ${wlsunset} -S 08:00 -s 18:00 -t 3000 -T 6500
+      ${wlsunset} -S 08:00 -s 19:00 -t 3000 -T 6500
     fi
   '';
 in
