@@ -1,4 +1,8 @@
-# LibreWolf
+# Firefox
+
+## uBlock
+
+- Run in Private Windows: Allow
 
 ## Consent-O-Matic
 

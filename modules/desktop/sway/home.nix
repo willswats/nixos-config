@@ -62,7 +62,7 @@
       waybar = "${pkgs.waybar}/bin/waybar";
       hyprpicker = "${pkgs.hyprpicker}/bin/hyprpicker";
 
-      librewolf = "${pkgs.librewolf}/bin/librewolf";
+      firefox = "${pkgs.firefox}/bin/firefox";
       pavucontrol = "${pkgs.pavucontrol}/bin/pavucontrol";
       freetube = "${pkgs.freetube}/bin/freetube";
       pear-desktop = "${pkgs.pear-desktop}/bin/pear-desktop";
@@ -115,7 +115,7 @@
           {
             command = "floating enable, opacity 0.9";
             criteria = {
-              app_id = "librewolf";
+              app_id = "firefox";
               title = "Chat - Twitch";
             };
           }
@@ -123,7 +123,7 @@
           {
             command = "floating enable, opacity 0.9";
             criteria = {
-              app_id = "librewolf";
+              app_id = "firefox";
               title = "Bitwarden Password Manager";
             };
           }
@@ -302,7 +302,7 @@
 
           "${mod}+Return" = "exec ${kitty}"; # Terminal
 
-          "${mod}+w" = "exec ${librewolf}"; # Web browser
+          "${mod}+w" = "exec ${firefox}"; # Web browser
           "${mod}+a" = "exec ${pavucontrol}"; # Audio manager
           "${mod}+v" = "exec mpv"; # Media player (not specifying the binary as it doesn't load plugins in the nix-store)
           "${mod}+Shift+v" = "exec ${freetube}"; # Freetube

@@ -1,4 +1,4 @@
-{ pkgs, globals, ... }:
+{ pkgs, globals, config, ... }:
 
 {
   home.packages = with pkgs; [
@@ -8,27 +8,23 @@
   xdg.mimeApps = {
     defaultApplications =
       let
-        librewolf = "librewolf.desktop";
+        firefox = "firefox.desktop";
       in
       {
-        # Set librewolf as the default browser
-        "application/pdf" = [ librewolf ]; # pdf
-        "x-scheme-handler/http" = [ librewolf ];
-        "x-scheme-handler/https" = [ librewolf ];
-        "x-scheme-handler/about" = [ librewolf ];
-        "x-scheme-handler/unknown" = [ librewolf ];
+        # Set firefox as the default browser
+        "application/pdf" = [ firefox ]; # pdf
+        "x-scheme-handler/http" = [ firefox ];
+        "x-scheme-handler/https" = [ firefox ];
+        "x-scheme-handler/about" = [ firefox ];
+        "x-scheme-handler/unknown" = [ firefox ];
       };
   };
 
-  catppuccin.librewolf.enable = true;
+  catppuccin.firefox.enable = true;
 
-  programs.librewolf = {
+  programs.firefox = {
     enable = true;
-    # LibreWolf Settings
-    settings = {
-      "webgl.disabled" = false;
-      "privacy.resistFingerprinting" = false;
-    };
+    configPath = "${config.xdg.configHome}/mozilla/firefox"; # To adopt the new default behaviour
     profiles.default = {
       id = 0;
 
@@ -38,6 +34,7 @@
       extensions.force = true;
       extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
         # QoL
+        ublock-origin
         consent-o-matic
         darkreader
         bitwarden
@@ -50,6 +47,7 @@
         zotero-connector
         # YouTube
         youtube-alternative-switch
+        sponsorblock
         # Twitch
         betterttv
         gumbo-twitch-companion
@@ -135,7 +133,6 @@
           ## Security
           "dom.security.https_only_mode" = true; # Enable HTTPS only mode
           "dom.security.https_only_mode_ever_enabled" = true; # Always enable HTTPS only mode
-          "security.ssl.require_safe_negotiation" = false; # https://librewolf.net/docs/faq/#im-getting-the-ssl_error_unsafe_negotiation-error-what-can-i-do
           ## Misc
           "app.shield.optoutstudies.enabled" = false; # Opt out of studies
           "datareporting.healthreport.uploadEnabled" = false; # Disable health report
