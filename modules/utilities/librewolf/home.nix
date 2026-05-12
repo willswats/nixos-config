@@ -51,6 +51,7 @@
         # YouTube
         youtube-alternative-switch
         # Twitch
+        betterttv
         gumbo-twitch-companion
         # Wayback Machine
         wayback-machine
