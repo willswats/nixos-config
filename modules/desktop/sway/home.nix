@@ -77,6 +77,7 @@
 
       lxpolkit = "${pkgs.lxsession}/bin/lxpolkit";
       turntable = "${pkgs.turntable}/bin/dev.geopjr.Turntable";
+      wlsunset = "${pkgs.wlsunset}/bin/wlsunset";
       mullvadGui = "${pkgs.mullvad-vpn}/bin/mullvad-gui";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
       easyEffects = "${pkgs.easyeffects}/bin/easyeffects";
@@ -352,6 +353,10 @@
           }
           {
             command = "${turntable} -c org.mpris.MediaPlayer2.YoutubeMusic";
+            always = false;
+          }
+          {
+            command = "${wlsunset}";
             always = false;
           }
           # Applets
