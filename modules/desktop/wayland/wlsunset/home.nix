@@ -30,4 +30,6 @@ in
       [
         "$mod shift, b, exec, ${wlsunsetToggle}"
       ];
+
+  services.wlsunset.enable = true;
 }
