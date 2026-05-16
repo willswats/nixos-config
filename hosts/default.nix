@@ -50,17 +50,17 @@ in
   ];
 
   # Settings and overlays
-  nix.settings = {
-    substituters = [
-      "https://nixpkgs-wayland.cachix.org"
-    ];
-    trusted-public-keys = [
-      "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
-    ];
-  };
+  # nix.settings = {
+  #   substituters = [
+  #     "https://nixpkgs-wayland.cachix.org"
+  #   ];
+  #   trusted-public-keys = [
+  #     "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
+  #   ];
+  # };
 
   nixpkgs.overlays = [
-    inputs.nixpkgs-wayland.overlay
+    # inputs.nixpkgs-wayland.overlay
     inputs.nix-vscode-extensions.overlays.default
     inputs.helix.overlays.helix
   ];
