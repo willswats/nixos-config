@@ -33,8 +33,8 @@
     # Games
     osu-lazer-bin
     tetrio-desktop
+    vintagestory
     # sm64coopdx
-    (callPackage ../../pkgs/vintagestory { })
   ];
 
 
