@@ -37,7 +37,6 @@
         ublock-origin
         consent-o-matic
         darkreader
-        bitwarden
         tridactyl
         mal-sync
         translate-web-pages

@@ -170,8 +170,6 @@
         windowrulev2 = [
           # Twitch Popout Chat
           "float, title:Chat - Twitch, opacity:0.9"
-          # Bitwarden Extension
-          "float, title:Bitwarden Password Manager, opacity:0.9"
           # Steam
           "float, class:steam"
           "tile, class:steam, title:^Steam$" # Strict regex check for only the "Steam" window

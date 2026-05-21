@@ -120,14 +120,6 @@
               title = "Chat - Twitch";
             };
           }
-          # Bitwarden Extension
-          {
-            command = "floating enable, opacity 0.9";
-            criteria = {
-              app_id = "firefox";
-              title = "Bitwarden Password Manager";
-            };
-          }
           # Steam
           {
             command = "floating enable";
