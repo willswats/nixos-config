@@ -79,6 +79,8 @@
       turntable
       easyeffects
       euphonica
+      proton-vpn
+      proton-pass
       ## CLI
       wget
       killall
