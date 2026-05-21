@@ -1,13 +1,17 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
-  services = {
-    printing.enable = false;
-    avahi = {
-      enable = false;
-      nssmdns4 = false;
-      # for a WiFi printer
-      openFirewall = false;
-    };
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      cups-filters
+      cups-browsed
+    ];
   };
 }
