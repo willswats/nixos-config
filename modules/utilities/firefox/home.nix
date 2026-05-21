@@ -260,6 +260,10 @@
                     name = "Calendar";
                     url = "https://calendar.proton.me";
                   }
+                  {
+                    name = "Pass";
+                    url = "https://pass.proton.me";
+                  }
                 ];
               }
               {
