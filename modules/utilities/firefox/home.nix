@@ -228,27 +228,6 @@
             toolbar = true;
             bookmarks = [
               {
-                name = "Google";
-                bookmarks = [
-                  {
-                    name = "Mail";
-                    url = "https://mail.google.com";
-                  }
-                  {
-                    name = "Calendar";
-                    url = "https://calendar.google.com";
-                  }
-                  {
-                    name = "Contacts";
-                    url = "https://contacts.google.com";
-                  }
-                  {
-                    name = "Drive";
-                    url = "https://drive.google.com";
-                  }
-                ];
-              }
-              {
                 name = "Proton";
                 bookmarks = [
                   {
