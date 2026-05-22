@@ -64,6 +64,7 @@
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
       nyaa = "${pkgs.nyaa}/bin/nyaa";
       grimblast = "${pkgs.grimblast}/bin/grimblast";
+      equibop = "${pkgs.equibop}/bin/equibop";
 
       lxpolkit = "${pkgs.lxsession}/bin/lxpolkit";
       turntable = "${pkgs.turntable}/bin/dev.geopjr.Turntable";
@@ -320,6 +321,9 @@
           ", XF86AudioPause, exec, ${playerctl} play-pause"
           ", XF86AudioNext, exec, ${playerctl} next"
           ", XF86AudioPrev, exec, ${playerctl} previous"
+
+          "alt, v, exec, ${equibop} --toggle-mic"
+          "alt, m, exec, ${equibop} --toggle-deafen"
         ];
 
         binde = [

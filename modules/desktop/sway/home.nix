@@ -74,6 +74,7 @@
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
       nyaa = "${pkgs.nyaa}/bin/nyaa";
       grimshot = "${pkgs.sway-contrib.grimshot}/bin/grimshot";
+      equibop = "${pkgs.equibop}/bin/equibop";
 
       lxpolkit = "${pkgs.lxsession}/bin/lxpolkit";
       turntable = "${pkgs.turntable}/bin/dev.geopjr.Turntable";
@@ -311,6 +312,9 @@
           "${mod}+p" = "exec ${hyprpicker} -a"; # Colour picker
           "Print" = "exec ${grimshot} --notify savecopy output"; # Screnshot active monitor
           "Shift+Print" = "exec killall slurp; exec ${grimshot} --notify savecopy area"; # # Screenshot manually selected area - killall to prevent overlap
+
+          "alt+v" = "exec ${equibop} --toggle-mic";
+          "alt+m" = "exec ${equibop} --toggle-deafen";
         };
         modes = {
           resize = {

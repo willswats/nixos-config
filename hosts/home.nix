@@ -70,7 +70,7 @@
       dropbox
       pixelorama
       zotero
-      discord
+      equibop
       teams-for-linux
       signal-desktop
       qalculate-gtk
