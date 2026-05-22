@@ -93,6 +93,18 @@
       text = "#${globals.colours.text}";
       overlay0 = "#${globals.colours.overlay0}";
       base = "#${globals.colours.base}";
+
+      # This is needed as muting easy effects (the default mic) does not mute my microphone.
+      muteMic = pkgs.writeShellScript "muteMic.sh" ''
+        MIC_ID=$(${wpctl} status | grep "Vocaster One USB Multichannel" | grep -Eo '[0-9]{1,4}' | head -1)
+
+        if [ -n "$MIC_ID" ]; then
+            ${wpctl} set-mute "$MIC_ID" toggle
+            ${wpctl} set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+        else
+            ${wpctl} set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+        fi
+      '';
     in
     {
       enable = true;
@@ -226,7 +238,7 @@
           # Mute audio and mic mute
           "XF86AudioMute" = "exec ${wpctl} set-mute @DEFAULT_AUDIO_SINK@ toggle";
           "XF86AudioMicMute" = "exec ${wpctl} set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
-          "XF86Tools" = "exec ${wpctl} set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
+          "XF86Tools" = "exec ${muteMic.outPath}";
 
           # Setup play, pause, next and previous keys
           "XF86AudioPlay" = "exec ${playerctl} play-pause";
