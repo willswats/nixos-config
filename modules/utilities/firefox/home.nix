@@ -48,8 +48,7 @@
         youtube-alternative-switch
         sponsorblock
         # Twitch
-        betterttv
-        gumbo-twitch-companion
+        frankerfacez
         # Wayback Machine
         wayback-machine
         # nyaa.si
