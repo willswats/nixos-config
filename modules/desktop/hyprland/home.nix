@@ -99,6 +99,7 @@
     {
       enable = true;
       xwayland.enable = true;
+      configType = "hyprlang";
       settings = {
         general = {
           gaps_in = 0;
@@ -180,25 +181,25 @@
           background_color = crust;
         };
 
-        windowrulev2 = [
+        windowrule = [
           # Twitch Popout Chat
-          "float, title:Chat - Twitch, opacity:0.9"
+          "float on, match:title = Chat - Twitch, opacity 0.9"
           # Steam
-          "float, class:steam"
-          "tile, class:steam, title:^Steam$" # Strict regex check for only the "Steam" window
-          "suppressevent maximize, class:steam" # Fix Steam maximizing certain windows (Friends List)
+          "float on, match:class = steam"
+          "tile on, match:class = steam, match:title = ^Steam$" # Strict regex check for only the "Steam" window
+          "suppress_event maximize, match:class = steam" # Fix Steam maximizing certain windows (Friends List)
           # SteamTinkerLaunch
-          "float, class:yad"
+          "float on, match:class = yad"
           # gamescope
-          "float, class:gamescope"
+          "float on, match:class = gamescope"
           # pcmanfm
-          "float, class:pcmanfm"
+          "float on, match:class = pcmanfm"
           # firefox
-          "suppressevent maximize, class:firefox" # Fix firefox maximizing certain windows (extensions)
+          "suppress_event maximize, match:class = firefox" # Fix firefox maximizing certain windows (extensions)
           # Godot
-          "tile, class:Godot" # Fix Godot starting as float
+          "tile on, match:class = Godot" # Fix Godot starting as float
           # MPV
-          "suppressevent maximize, class:mpv" # Stop mpv from maximizing when adding a video
+          "suppress_event maximize, match:class = mpv" # Stop mpv from maximizing when adding a video
         ];
 
         # Disable hyprcursor as it doesn't make a difference for me and will require gsettings
@@ -273,7 +274,7 @@
           "$mod shift, r, exec, ${hyprctl} reload"
 
           "$mod shift, f, togglefloating"
-          "$mod shift, s, togglesplit"
+          "$mod shift, s, layoutmsg, togglesplit"
 
           "$mod, equal, togglespecialworkspace"
           "$mod shift, equal, movetoworkspacesilent, m+0"
@@ -357,13 +358,13 @@
       };
       # virtual submap for passing keyboard into virtual machine - https://github.com/hyprwm/Hyprland/issues/501
       extraConfig = ''
-        # Smart gaps - https://wiki.hyprland.org/Configuring/Workspace-Rules/#smart-gaps 
+        # Smart gaps - https://wiki.hypr.land/0.54.0/Configuring/Workspace-Rules/#smart-gaps 
         workspace = w[tv1], gapsout:0, gapsin:0
         workspace = f[1], gapsout:0, gapsin:0
-        windowrulev2 = bordersize 0, floating:0, onworkspace:w[tv1]
-        windowrulev2 = rounding 0, floating:0, onworkspace:w[tv1]
-        windowrulev2 = bordersize 0, floating:0, onworkspace:f[1]
-        windowrulev2 = rounding 0, floating:0, onworkspace:f[1]
+        windowrule = border_size 0, match:float 0, match:workspace w[tv1]
+        windowrule = rounding 0, match:float 0, match:workspace w[tv1]
+        windowrule = border_size 0, match:float 0, match:workspace f[1]
+        windowrule = rounding 0, match:float 0, match:workspace f[1]
 
         bind=$mod,r,submap,resize
         submap=resize
