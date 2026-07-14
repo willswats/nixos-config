@@ -36,6 +36,7 @@
         # QoL
         ublock-origin
         consent-o-matic
+        proton-pass
         darkreader
         tridactyl
         mal-sync
