@@ -3,7 +3,7 @@
 {
   programs.helix = {
     extraPackages = with pkgs; [
-      (callPackage ../../../../pkgs/simple-completion-language-server { })
+      simple-completion-language-server
     ];
     languages.language-server.scls = {
       command = "simple-completion-language-server";
