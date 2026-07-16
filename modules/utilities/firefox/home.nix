@@ -118,6 +118,7 @@
           "browser.newtabpage.activity-stream.feeds.section.topstories" = false; # Disable new tab page recommended by pocket
           "browser.newtabpage.activity-stream.showSponsored" = false; # Disable new tab page sponsored
           "browser.newtabpage.activity-stream.showSponsoredTopSites" = false; # Disable new tab page sponsored top sites
+          "browser.newtabpage.activity-stream.showWeather" = false; # Disable weather forecast
           "browser.newtabpage.activity-stream.newtabWallpapers.wallpaper" = "solid-color-picker-${base}"; # Set wallpaper
           ## Privacy
           "privacy.globalprivacycontrol.enabled" = true; # Tell websites not to sell or share my data
