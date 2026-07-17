@@ -34,7 +34,6 @@
     osu-lazer-bin
     tetrio-desktop
     vintagestory
-    xivlauncher
     # sm64coopdx
   ];
 
