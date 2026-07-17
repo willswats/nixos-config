@@ -560,6 +560,10 @@
                 name = "University";
                 bookmarks = [
                   {
+                    name = "Awards and Verifications";
+                    url = "https://awardsandverification.port.ac.uk/";
+                  }
+                  {
                     name = "Outlook";
                     url = "https://outlook.office.com/mail/";
                   }
