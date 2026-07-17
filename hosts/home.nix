@@ -101,7 +101,6 @@
       scooter
       live-server
       license-cli
-      rmpc
       twitch-hls-client
       # Infosec
       nmap
