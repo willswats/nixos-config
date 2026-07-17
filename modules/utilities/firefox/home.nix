@@ -327,6 +327,14 @@
                     url = "https://www.last.fm";
                   }
                   {
+                    name = "listenbrainz";
+                    url = "https://listenbrainz.org";
+                  }
+                  {
+                    name = "musicbrainz";
+                    url = "https://musicbrainz.org";
+                  }
+                  {
                     name = "AlternativeTo";
                     url = "https://alternativeto.net/";
                   }
@@ -395,6 +403,10 @@
                   {
                     name = "Hyprland";
                     url = "https://wiki.hyprland.org/";
+                  }
+                  {
+                    name = "Renovate";
+                    url = "https://developer.mend.io/github/willswats";
                   }
                 ];
               }
