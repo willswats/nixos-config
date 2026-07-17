@@ -304,7 +304,7 @@
 
           "${mod}+t" = "exec ${kitty} $EDITOR"; # Text editor
           "${mod}+e" = "exec ${kitty} ${yazi}"; # File explorer
-          "${mod}+m" = "exec ${kitty} ${euphonica}"; # Music player
+          "${mod}+m" = "exec ${euphonica}"; # Music player
           "${mod}+s" = "exec ${kitty} ${btm} -b"; # Process monitor
           "${mod}+b" = "exec ${kitty} ${bluetuith}"; # Bluetooth manager
           "${mod}+n" = "exec ${kitty} ${nyaa}"; # Nyaa
