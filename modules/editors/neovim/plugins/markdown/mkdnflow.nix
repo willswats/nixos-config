@@ -4,17 +4,6 @@
   programs.nixvim.plugins.mkdnflow = {
     enable = true;
     settings = {
-      to_do = {
-        symbols = [
-          " "
-          "x"
-          " "
-        ];
-        update_parents = false;
-        not_started = " ";
-        in_progress = " ";
-        complete = "x";
-      };
       mappings = {
         MkdnEnter = [ [ "n" "v" ] "<CR>" ];
         MkdnTab = false;
