@@ -2,6 +2,7 @@
 
 {
   home.pointerCursor = {
+    enable = true;
     name = "catppuccin-mocha-dark-cursors";
     package = pkgs.catppuccin-cursors.mochaDark;
     size = 32; # 24 32 48 64
