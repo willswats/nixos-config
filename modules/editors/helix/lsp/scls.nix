@@ -1,14 +1,15 @@
 { pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    simple-completion-language-server
+  ];
+
   programs.helix = {
-    extraPackages = with pkgs; [
-      simple-completion-language-server
-    ];
     languages.language-server.scls = {
       command = "simple-completion-language-server";
       config = {
-        feature_words = false; # enable completion by word
+        feature_words = true; # enable completion by word
         feature_snippets = true; # enable snippets
         snippets_first = true; # completions will return before snippets by default
         snippets_inline_by_word_tail = false; # suggest snippets by WORD tail, for example text `xsq|` become `x^2|` when snippet `sq` has body `^2`
