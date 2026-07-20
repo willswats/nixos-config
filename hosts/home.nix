@@ -78,7 +78,7 @@
       warp
       turntable
       easyeffects
-      euphonica
+      cantata
       proton-vpn
       proton-pass
       ## CLI

@@ -59,7 +59,7 @@
 
       kitty = "${pkgs.kitty}/bin/kitty";
       yazi = "${pkgs.yazi}/bin/yazi";
-      euphonica = "${pkgs.euphonica}/bin/euphonica";
+      cantata = "${pkgs.cantata}/bin/cantata";
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
       nyaa = "${pkgs.nyaa}/bin/nyaa";
@@ -245,7 +245,7 @@
 
           "$mod, t, exec, ${kitty} $EDITOR" # Text editor
           "$mod, e, exec, ${kitty} ${yazi}" # File explorer
-          "$mod, m, exec, ${euphonica}" # Music player
+          "$mod, m, exec, ${cantata}" # Music player
           "$mod, s, exec, ${kitty} ${btm} -b" # Process monitor
           "$mod, b, exec, ${kitty} ${bluetuith}" # Bluetooth manager
           "$mod, n, exec, ${kitty} ${nyaa}" # Nyaa
