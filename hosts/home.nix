@@ -72,7 +72,6 @@
       zotero
       equibop
       teams-for-linux
-      signal-desktop
       qalculate-gtk
       godot_4
       warp
