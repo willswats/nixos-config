@@ -84,6 +84,7 @@
       ffmpeg
       mkvtoolnix-cli
       ouch
+      zip
       unrar-free
       nsz
       appimage-run
