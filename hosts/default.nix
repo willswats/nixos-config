@@ -25,7 +25,6 @@ in
     ../modules/theme/catppuccin
     ../modules/utilities/gnome-keyring
     ../modules/utilities/pcmanfm
-    ../modules/utilities/mullvad-vpn
     ../modules/utilities/virt-manager
     ../modules/utilities/wireshark
     ../modules/utilities/gpu-screen-recorder

@@ -31,7 +31,7 @@
     ../modules/utilities/gimp/home.nix
     ../modules/utilities/krita/home.nix
     ../modules/utilities/kdenlive/home.nix
-    ../modules/utilities/mullvad-vpn/home.nix
+    ../modules/utilities/proton-vpn/home.nix
     ../modules/utilities/kitty/home.nix
     ../modules/utilities/bottom/home.nix
     ../modules/utilities/pcmanfm/home.nix
@@ -78,8 +78,6 @@
       turntable
       easyeffects
       cantata
-      proton-vpn
-      proton-pass
       ## CLI
       wget
       killall
