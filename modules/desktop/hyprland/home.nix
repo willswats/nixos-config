@@ -62,7 +62,6 @@
       cantata = "${pkgs.cantata}/bin/cantata";
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
-      nyaa = "${pkgs.nyaa}/bin/nyaa";
       grimblast = "${pkgs.grimblast}/bin/grimblast";
       equibop = "${pkgs.equibop}/bin/equibop";
 
@@ -246,7 +245,6 @@
           "$mod, m, exec, ${cantata}" # Music player
           "$mod, s, exec, ${kitty} ${btm} -b" # Process monitor
           "$mod, b, exec, ${kitty} ${bluetuith}" # Bluetooth manager
-          "$mod, n, exec, ${kitty} ${nyaa}" # Nyaa
 
           "$mod, p, exec, ${hyprpicker} -a" # Colour picker
           ", print, exec, ${grimblast} --notify copysave output" # Screenshot active monitor

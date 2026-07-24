@@ -21,10 +21,6 @@
 
     # Apps
     mpv-youtube-search.url = "github:willswats/mpv-youtube-search";
-    nyaa = {
-      url = "github:Beastwick18/nyaa";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     # Gaming
     slippi.url = "github:lytedev/slippi-nix";
@@ -39,7 +35,6 @@
     , catppuccin
     , slippi
     , bsp-casefolding-workaround
-    , nyaa
     , ...
     }@inputs:
     {
@@ -140,7 +135,6 @@
                       catppuccin.homeModules.catppuccin
                       slippi.homeManagerModules.default
                       bsp-casefolding-workaround.nixosModules.default
-                      nyaa.homeManagerModule
                     ];
                   };
                 }
@@ -181,7 +175,6 @@
                       ./hosts/home.nix
                       nur.modules.homeManager.default
                       catppuccin.homeModules.catppuccin
-                      nyaa.homeManagerModule
                     ];
                   };
                 }
