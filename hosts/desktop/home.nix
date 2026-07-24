@@ -6,6 +6,7 @@
 {
   imports = [
     ../home.nix
+    ../../modules/servers/seanime/home.nix
     ../../modules/system/opentabletdriver/home.nix
     ../../modules/games/steam/home.nix
     ../../modules/games/heroic/home.nix

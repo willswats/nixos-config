@@ -282,6 +282,14 @@
                 name = "Media";
                 bookmarks = [
                   {
+                    name = "Seanime";
+                    url = "http://127.0.0.1:43211";
+                  }
+                  {
+                    name = "Komga";
+                    url = "http://localhost:8081/";
+                  }
+                  {
                     name = "MALSync PWA";
                     url = "https://malsync.moe/pwa";
                   }
