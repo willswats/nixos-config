@@ -3,7 +3,7 @@
 {
   home.packages = with pkgs; [
     python3
-    poetry
+    # poetry TODO: uncomment when fixed
   ];
 
   xdg.configFile."pypoetry/config.toml" = {
