@@ -4,6 +4,7 @@
   programs.helix = {
     extraPackages = with pkgs; [
       vscode-langservers-extracted # HTML/CSS/JSON/ESLint language servers
+      svelte-language-server # Svelte LSP
       typescript-language-server # TypeScript LSP
       prettier # Formatter
     ];
@@ -56,7 +57,6 @@
           };
         }
         {
-
           name = "jsx";
           language-servers = [
             "scls"
@@ -112,6 +112,16 @@
           ];
           auto-format = true;
         }
+
+        {
+          name = "svelte";
+          language-servers = [
+            "scls"
+            "svelteserver"
+            "vscode-eslint-language-server"
+          ];
+          auto-format = true;
+        }
       ];
     };
   };
@@ -148,6 +158,9 @@
     [[sources.paths]] 
     scope = [ "typescriptreact" ]  
     path = "snippets/javascript/next-ts.json"    
-  '';
 
+    [[sources.paths]] 
+    scope = [ "svelte" ] 
+    path = "snippets/svelte.json"
+  '';
 }

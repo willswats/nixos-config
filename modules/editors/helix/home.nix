@@ -7,7 +7,6 @@
     ./lsp/scls.nix
     ./lsp/nix.nix
     ./lsp/web.nix
-    ./lsp/svelte.nix
     ./lsp/prisma.nix
     ./lsp/taplo.nix
     ./lsp/markdown.nix
