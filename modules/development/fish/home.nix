@@ -65,7 +65,6 @@
       in
       {
         c = "clear";
-        nv = "nvim";
         lg = "lazygit";
 
         # CD

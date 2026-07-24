@@ -16,7 +16,6 @@
     catppuccin.url = "github:catppuccin/nix";
 
     # Editors
-    nixvim.url = "github:nix-community/nixvim";
     helix.url = "github:helix-editor/helix";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
@@ -37,7 +36,6 @@
     , nixos-hardware
     , home-manager
     , nur
-    , nixvim
     , catppuccin
     , slippi
     , bsp-casefolding-workaround
@@ -139,7 +137,6 @@
                     users.will.imports = [
                       ./hosts/desktop/home.nix
                       nur.modules.homeManager.default
-                      nixvim.homeModules.nixvim
                       catppuccin.homeModules.catppuccin
                       slippi.homeManagerModules.default
                       bsp-casefolding-workaround.nixosModules.default
@@ -183,7 +180,6 @@
                     users.${user}.imports = [
                       ./hosts/home.nix
                       nur.modules.homeManager.default
-                      nixvim.homeModules.nixvim
                       catppuccin.homeModules.catppuccin
                       nyaa.homeManagerModule
                     ];
