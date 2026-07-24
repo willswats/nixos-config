@@ -29,6 +29,7 @@ in
     ../modules/utilities/wireshark
     ../modules/utilities/gpu-screen-recorder
     ../modules/utilities/localsend
+    ../modules/utilities/iloader
     ../modules/servers/mpd
   ];
 
@@ -111,6 +112,7 @@ in
       "wheel"
       "audio"
       "input"
+      "usbmux"
     ];
     shell = pkgs.fish;
   };
