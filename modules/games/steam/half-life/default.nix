@@ -1,9 +1,9 @@
-{ host, ... }:
+{ host, pkgs, ... }:
 
 let
   halfLifeDirectory = "${host.directories.steamLibrary}/Half-Life";
 
-  config = ''
+  userconfig = pkgs.writeText "half-life-userconfig.cfg" ''
     bind mwheelup +jump
     bind mwheeldown +jump
     bind space +jump
@@ -15,9 +15,14 @@ let
     fps_override 1
     fps_max 300
   '';
+
+  mkSymlink = target: linkPath:
+    "L+ \"${linkPath}\" - - - - ${target}";
 in
 {
-  environment.etc."${halfLifeDirectory}/valve/userconfig.cfg".text = config;
-  environment.etc."${halfLifeDirectory}/gearbox/userconfig.cfg".text = config;
-  environment.etc."${halfLifeDirectory}/bshift/userconfig.cfg".text = config;
+  systemd.tmpfiles.rules = [
+    (mkSymlink "${userconfig}" "${halfLifeDirectory}/valve/userconfig.cfg")
+    (mkSymlink "${userconfig}" "${halfLifeDirectory}/gearbox/userconfig.cfg")
+    (mkSymlink "${userconfig}" "${halfLifeDirectory}/bshift/userconfig.cfg")
+  ];
 }

@@ -1,5 +1,4 @@
-{ host, ... }:
-
+{ host, pkgs, ... }:
 
 let
   steamDir = host.directories.steamLibrary;
@@ -104,17 +103,17 @@ let
     con_enable 1  
     cl_spraydisable 0
     cl_disablehtmlmotd 1
-
   '';
 
-  autoexecTf2 = ''
+  autoexecTf2 = pkgs.writeText "autoexec-tf2.cfg" ''
     echo "autoexec.cfg executed"
 
     ${autoexecGlobal}
 
     host_writeconfig
   '';
-  autoexecTf2C = ''
+
+  autoexecTf2C = pkgs.writeText "autoexec-tf2c.cfg" ''
     echo "autoexec.cfg executed"
 
     ${autoexecGlobal}
@@ -125,43 +124,49 @@ let
     host_writeconfig
   '';
 
-  practice = ''
+  practice = pkgs.writeText "practice.cfg" ''
     sv_cheats 1; ent_fire team_round_timer disable; hurtme -10000000;
   '';
 
-  movement_reload = ''    
+  movement_reload = pkgs.writeText "movement_reload.cfg" ''    
     bind r +reload; bind KP_END "exec movement_restart"
   '';
 
-  movement_restart = ''    
+  movement_restart = pkgs.writeText "movement_restart.cfg" ''    
     bind r "say !r"; bind KP_END "exec movement_reload"
   '';
 
-  hide_chat = ''    
+  hide_chat = pkgs.writeText "hide_chat.cfg" ''    
     hud_saytext_time 0; bind = "exec show_chat"
   '';
 
-  show_chat = ''
+  show_chat = pkgs.writeText "show_chat.cfg" ''
     hud_saytext_time 12; bind = "exec hide_chat"
   '';
+
+  mkSymlink = target: linkPath:
+    "L+ \"${linkPath}\" - - - - ${target}";
 in
 {
-  environment.etc."${steamDir}/Team Fortress 2/tf/cfg/autoexec.cfg".text = autoexecTf2;
-  environment.etc."${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/autoexec.cfg".text = autoexecTf2C;
+  systemd.tmpfiles.rules = [
+    # Team Fortress 2 configs
+    (mkSymlink "${autoexecTf2}" "${steamDir}/Team Fortress 2/tf/cfg/autoexec.cfg")
+    (mkSymlink "${autoexecTf2C}" "${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/autoexec.cfg")
 
-  # Practice commands
-  environment.etc."${steamDir}/Team Fortress 2/tf/cfg/practice.cfg".text = practice;
-  environment.etc."${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/practice.cfg".text = practice;
+    # Practice commands
+    (mkSymlink "${practice}" "${steamDir}/Team Fortress 2/tf/cfg/practice.cfg")
+    (mkSymlink "${practice}" "${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/practice.cfg")
 
-  # Switch between reload and restart (numpad 1) 
-  environment.etc."${steamDir}/Team Fortress 2/tf/cfg/movement_reload.cfg".text = movement_reload;
-  environment.etc."${steamDir}/Team Fortress 2/tf/cfg/movement_restart.cfg".text = movement_restart;
-  environment.etc."${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/movement_reload.cfg".text = movement_reload;
-  environment.etc."${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/movement_restart.cfg".text = movement_restart;
+    # Movement reload/restart
+    (mkSymlink "${movement_reload}" "${steamDir}/Team Fortress 2/tf/cfg/movement_reload.cfg")
+    (mkSymlink "${movement_restart}" "${steamDir}/Team Fortress 2/tf/cfg/movement_restart.cfg")
+    (mkSymlink "${movement_reload}" "${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/movement_reload.cfg")
+    (mkSymlink "${movement_restart}" "${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/movement_restart.cfg")
 
-  # Hide and show chat
-  environment.etc."${steamDir}/Team Fortress 2/tf/cfg/hide_chat.cfg".text = hide_chat;
-  environment.etc."${steamDir}/Team Fortress 2/tf/cfg/show_chat.cfg".text = show_chat;
-  environment.etc."${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/hide_chat.cfg".text = hide_chat;
-  environment.etc."${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/show_chat.cfg".text = show_chat;
+    # Hide and show chat
+    (mkSymlink "${hide_chat}" "${steamDir}/Team Fortress 2/tf/cfg/hide_chat.cfg")
+    (mkSymlink "${show_chat}" "${steamDir}/Team Fortress 2/tf/cfg/show_chat.cfg")
+    (mkSymlink "${hide_chat}" "${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/hide_chat.cfg")
+    (mkSymlink "${show_chat}" "${steamDir}/Team Fortress 2 Classified/tf2classified/cfg/show_chat.cfg")
+  ];
 }
