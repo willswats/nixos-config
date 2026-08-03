@@ -33,6 +33,10 @@ let
 
     // -- SETTINGS --
 
+    // Fix scope crash
+    hud_draw_active_reticle 0
+    hud_draw_fixed_reticle 0    
+
     // Game
     cl_yawspeed 230
 
