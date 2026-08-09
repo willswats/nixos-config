@@ -69,7 +69,6 @@
       pixelorama
       zotero
       equibop
-      discord
       teams-for-linux
       qalculate-gtk
       godot_4
