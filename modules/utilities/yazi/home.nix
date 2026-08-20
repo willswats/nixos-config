@@ -145,7 +145,6 @@
           }
         ];
       };
-
       settings = {
         mgr = {
           sort_by = "natural";
@@ -154,9 +153,7 @@
           open = [
             # Set "orphan = true" to detach tasks from the yazi process
             {
-              run = ''
-                xdg-open "$@"
-              '';
+              run = "xdg-open %s1";
               desc = "Open";
               orphan = true;
             }
@@ -196,14 +193,12 @@
         ];
         plugin.prepend_fetchers = [
           {
-            id = "git";
             url = "*";
             run = "git";
             group = "git";
           }
           {
-            id = "git";
-            url = "/";
+            url = "*/";
             run = "git";
             group = "git";
           }
