@@ -76,6 +76,8 @@
       turntable
       easyeffects
       cantata
+      f3d
+      blender
       ## CLI
       wget
       killall
@@ -105,6 +107,17 @@
       exiftool
       busybox
     ];
+  };
+
+
+  xdg.mimeApps = {
+    defaultApplications =
+      let
+        f3d = "f3d.desktop";
+      in
+      {
+        "model/gltf-binary" = [ f3d ];
+      };
   };
 
   # Use `xdg-mime query filetype` to find a file's MIME type
