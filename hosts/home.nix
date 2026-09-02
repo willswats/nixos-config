@@ -41,6 +41,7 @@
     ../modules/utilities/zathura/home.nix
     ../modules/utilities/hakuneko/home.nix
     ../modules/utilities/beets/home.nix
+    ../modules/utilities/f3d/home.nix
     ../modules/servers/mpd/home.nix
   ];
 
@@ -76,7 +77,6 @@
       turntable
       easyeffects
       cantata
-      f3d
       blender
       ## CLI
       wget
@@ -107,17 +107,6 @@
       exiftool
       busybox
     ];
-  };
-
-
-  xdg.mimeApps = {
-    defaultApplications =
-      let
-        f3d = "f3d.desktop";
-      in
-      {
-        "model/gltf-binary" = [ f3d ];
-      };
   };
 
   # Use `xdg-mime query filetype` to find a file's MIME type
