@@ -78,6 +78,7 @@
       easyeffects
       cantata
       blender
+      tenacity
       ## CLI
       wget
       killall
