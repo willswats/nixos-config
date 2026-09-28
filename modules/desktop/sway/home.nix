@@ -69,7 +69,7 @@
 
       kitty = "${pkgs.kitty}/bin/kitty";
       yazi = "${pkgs.yazi}/bin/yazi";
-      cantata = "${pkgs.cantata}/bin/cantata";
+      euphonica = "${pkgs.euphonica}/bin/euphonica";
       btm = "${pkgs.bottom}/bin/btm";
       bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
       grimshot = "${pkgs.sway-contrib.grimshot}/bin/grimshot";
@@ -302,7 +302,7 @@
 
           "${mod}+t" = "exec ${kitty} $EDITOR"; # Text editor
           "${mod}+e" = "exec ${kitty} ${yazi}"; # File explorer
-          "${mod}+m" = "exec ${cantata}"; # Music player
+          "${mod}+m" = "exec ${euphonica}"; # Music player
           "${mod}+s" = "exec ${kitty} ${btm} -b"; # Process monitor
           "${mod}+b" = "exec ${kitty} ${bluetuith}"; # Bluetooth manager
 

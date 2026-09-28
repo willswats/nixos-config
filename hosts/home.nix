@@ -76,7 +76,7 @@
       warp
       turntable
       easyeffects
-      cantata
+      euphonica
       blender
       tenacity
       mediasynclite
