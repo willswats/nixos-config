@@ -79,6 +79,7 @@
       cantata
       blender
       tenacity
+      mediasynclite
       ## CLI
       wget
       killall
