@@ -282,6 +282,10 @@
                 name = "Media";
                 bookmarks = [
                   {
+                    name = "iBroadcast";
+                    url = "https://media.ibroadcast.com";
+                  }
+                  {
                     name = "Seanime";
                     url = "http://127.0.0.1:43211";
                   }
