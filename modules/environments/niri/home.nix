@@ -115,7 +115,7 @@
             urgent-color = red;
           };
 
-          default-column-width = { proportion = 0.33333; };
+          default-column-width = { proportion = 1.0; };
           preset-column-widths._children = [
             { proportion = 0.33333; }
             { proportion = 0.66667; }
@@ -220,10 +220,10 @@
           "${mod}+Shift+Ctrl+l".move-column-to-monitor-right = { };
 
           # Move and focus first and last columns
-          "${mod}+g".focus-column-first = { };
-          "${mod}+Ctrl+g".focus-column-last = { };
-          "${mod}+Shift+g".move-column-to-first = { };
-          "${mod}+Shift+Ctrl+g".move-column-to-last = { };
+          "${mod}+Alt+h".focus-column-first = { };
+          "${mod}+Alt+l".focus-column-last = { };
+          "${mod}+Alt+Shift+h".move-column-to-first = { };
+          "${mod}+Alt+Shift+l".move-column-to-last = { };
 
           # Mouse focus
           "${mod}+WheelScrollDown".focus-workspace-down = { };
@@ -271,16 +271,14 @@
           "${mod}+Shift+e".quit = { };
 
           # Window management
-          # Can use these if you want more precise adjustment of both width and height
-          # instead of just maximize
-          # "${mod}+r".expand-column-to-available-width = { };
-          # "${mod}+Shift+r".reset-window-height = { };
-          "${mod}+r".maximize-window-to-edges = { };
+          "${mod}+r".expand-column-to-available-width = { };
+          "${mod}+Shift+r".reset-window-height = { };
 
-          "${mod}+x".switch-preset-column-width = { };
-          "${mod}+Shift+x".switch-preset-column-width-back = { };
-          "${mod}+z".switch-preset-window-height = { };
-          "${mod}+Shift+z".switch-preset-window-height-back = { };
+          "${mod}+x".switch-preset-column-width-back = { };
+          "${mod}+z".switch-preset-window-height-back = { };
+
+          "${mod}+Shift+x".switch-preset-column-width = { };
+          "${mod}+Shift+z".switch-preset-window-height = { };
 
           "${mod}+c".center-column = { };
           "${mod}+Shift+c".center-visible-columns = { };
@@ -296,12 +294,12 @@
           "${mod}+Period".expel-window-from-column = { };
 
           # Overview
-          "${mod}+o" = {
+          "${mod}+tab" = {
             _props.repeat = false;
             toggle-overview = { };
           };
 
-          "${mod}+tab".toggle-column-tabbed-display = { };
+          "${mod}+g".toggle-column-tabbed-display = { };
           "${mod}+f".fullscreen-window = { };
           "${mod}+Shift+f".toggle-window-floating = { };
           "${mod}+space".switch-focus-between-floating-and-tiling = { };
