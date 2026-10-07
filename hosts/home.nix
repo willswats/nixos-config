@@ -5,9 +5,9 @@
 
 {
   imports = [
-    ../modules/desktop/niri/home.nix
-    # ../modules/desktop/sway/home.nix
-    # ../modules/desktop/hyprland/home.nix
+    ../modules/environments/niri/home.nix
+    # ../modules/environments/sway/home.nix
+    # ../modules/environments/hyprland/home.nix
     ../modules/theme/fonts/home.nix
     ../modules/theme/cursor/home.nix
     ../modules/theme/gtk/home.nix

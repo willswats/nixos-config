@@ -10,9 +10,9 @@ let
 in
 {
   imports = [
-    ../modules/desktop/niri
-    # ../modules/desktop/sway
-    # ../modules/desktop/hyprland
+    ../modules/environments/niri
+    # ../modules/environments/sway
+    # ../modules/environments/hyprland
     ../modules/system/plymouth
     ../modules/system/pipewire
     ../modules/system/printing
