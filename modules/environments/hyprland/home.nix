@@ -94,9 +94,16 @@
           shadow.enabled = false;
         };
 
-        monitor = [
-          "${monitorCenter}, highrr, auto, 1"
-        ];
+        monitor =
+          if host.hostName == globals.hostNames.desktop then
+            [
+              "${monitorCenter}, 1920x1080@144, 1920x0, 1"
+              "${monitorLeft}, 1920x1080@144, 0x0, 1"
+            ]
+          else
+            [
+              "${monitorCenter}, highrr, auto, 1"
+            ];
 
         input = {
           kb_layout = "gb";

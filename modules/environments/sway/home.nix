@@ -156,12 +156,19 @@
             tap_button_map = "lrm";
           };
         };
-        output = {
-          "*" = {
-            res = "1920x1080@144Hz";
-            bg = "${wallpaper} fill";
-          };
-        };
+        output =
+          if host.hostName == globals.hostNames.desktop then
+            {
+              "${monitorCenter}" = { pos = "1920 0"; };
+              "${monitorLeft}" = { pos = "0 0"; };
+            }
+          else
+            {
+              "*" = {
+                res = "1920x1080@144Hz";
+                bg = "${wallpaper} fill";
+              };
+            };
         seat = {
           seat0 = {
             xcursor_theme = "catppuccin-mocha-dark-cursors 32";

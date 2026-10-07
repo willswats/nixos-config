@@ -8,9 +8,9 @@ let
   protonvpn = "${pkgs.proton-vpn-cli}/bin/protonvpn";
   protonVpnToggle = pkgs.writeShellScript "protonVpnToggle.sh" ''
     if ${protonvpn} status | grep 'Connected'; then
-    	 ${protonvpn} disconnect
+      ${protonvpn} disconnect
     else
-    	${protonvpn} connect --country sweden
+      ${protonvpn} connect --country sweden
     fi
   '';
 in
@@ -32,4 +32,9 @@ in
       [
         "$mod shift, p, exec, ${protonVpnToggle}"
       ];
+
+  wayland.windowManager.niri.settings.binds =
+    lib.mkIf config.wayland.windowManager.niri.enable {
+      "Mod+Shift+p".spawn = [ "${protonVpnToggle}" ];
+    };
 }

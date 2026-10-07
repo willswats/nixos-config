@@ -1,4 +1,5 @@
-{ pkgs
+{ config
+, pkgs
 , host
 , globals
 , ...
@@ -27,6 +28,7 @@
           hash = globals.wallpaper.hash;
         };
         monitorCenter = host.monitors.center;
+        monitorLeft = host.monitors.left;
 
         xrandr = "${pkgs.xrandr}/bin/xrandr";
         rofi = "${pkgs.rofi}/bin/rofi";
@@ -38,7 +40,7 @@
         pear-desktop = "${pkgs.pear-desktop}/bin/pear-desktop";
         kitty = "${pkgs.kitty}/bin/kitty";
         yazi = "${pkgs.yazi}/bin/yazi";
-        cantata = "${pkgs.cantata}/bin/cantata";
+        euphonica = "${pkgs.euphonica}/bin/euphonica";
         btm = "${pkgs.bottom}/bin/btm";
         bluetuith = "${pkgs.bluetuith}/bin/bluetuith";
         equibop = "${pkgs.equibop}/bin/equibop";
@@ -56,23 +58,27 @@
 
         base = "#${globals.colours.base}";
         blue = "#${globals.colours.blue}";
+        red = "#${globals.colours.red}";
         overlay0 = "#${globals.colours.overlay0}";
       in
       {
         input = {
           keyboard.xkb.layout = "gb";
+          mouse = {
+            accel-profile = "flat";
+          };
           touchpad = {
             natural-scroll = { };
             scroll-factor = 0.5;
             tap = { };
             accel-profile = "flat";
           };
+          focus-follows-mouse = { };
         };
 
-        output = {
-          _args = [ "${monitorCenter}" ];
-          mode = "1920x1080@144";
-          scale = 1;
+        cursor = {
+          xcursor-theme = config.home.pointerCursor.name;
+          xcursor-size = config.home.pointerCursor.size;
         };
 
         overview = {
@@ -80,36 +86,55 @@
         };
 
         gestures = {
-          hot-corners = { };
+          hot-corners = { off = { }; };
         };
 
         layout = {
           gaps = 0;
+
           border = {
             off = { };
             width = 2;
             active-color = blue;
             inactive-color = overlay0;
+            urgent-color = red;
           };
           focus-ring = {
             width = 2;
             active-color = blue;
             inactive-color = overlay0;
+            urgent-color = red;
+          };
+          tab-indicator = {
+            place-within-column = { };
+            width = 8;
+            gap = 0;
+            length._props.total-proportion = 1.0;
+            active-color = blue;
+            inactive-color = overlay0;
+            urgent-color = red;
           };
 
-          default-column-width = { proportion = 0.5; };
+          default-column-width = { proportion = 0.33333; };
           preset-column-widths._children = [
             { proportion = 0.33333; }
-            { proportion = 0.5; }
             { proportion = 0.66667; }
             { proportion = 1.0; }
           ];
           preset-window-heights._children = [
             { proportion = 0.33333; }
-            { proportion = 0.5; }
             { proportion = 0.66667; }
             { proportion = 1.0; }
           ];
+        };
+
+        recent-windows = {
+          binds = {
+            "Alt+Tab".next-window = { };
+            "Alt+Shift+Tab".previous-window = { };
+            "Alt+grave".next-window._props.filter = "app-id";
+            "Alt+Shift+grave".previous-window._props.filter = "app-id";
+          };
         };
 
 
@@ -173,14 +198,44 @@
           # Focus
           "${mod}+j".focus-window-or-workspace-down = { };
           "${mod}+k".focus-window-or-workspace-up = { };
-          "${mod}+h".focus-column-left = { };
-          "${mod}+l".focus-column-right = { };
+          "${mod}+h".focus-column-or-monitor-left = { };
+          "${mod}+l".focus-column-or-monitor-right = { };
 
           # Move
           "${mod}+Shift+j".move-window-down-or-to-workspace-down = { };
           "${mod}+Shift+k".move-window-up-or-to-workspace-up = { };
-          "${mod}+Shift+h".move-column-left = { };
-          "${mod}+Shift+l".move-column-right = { };
+          "${mod}+Shift+h".move-column-left-or-to-monitor-left = { };
+          "${mod}+Shift+l".move-column-right-or-to-monitor-right = { };
+
+          # Monitor focus
+          "${mod}+Ctrl+h".focus-monitor-left = { };
+          "${mod}+Ctrl+j".focus-monitor-down = { };
+          "${mod}+Ctrl+k".focus-monitor-up = { };
+          "${mod}+Ctrl+l".focus-monitor-right = { };
+
+          # Monitor move
+          "${mod}+Shift+Ctrl+h".move-column-to-monitor-left = { };
+          "${mod}+Shift+Ctrl+j".move-column-to-monitor-down = { };
+          "${mod}+Shift+Ctrl+k".move-column-to-monitor-up = { };
+          "${mod}+Shift+Ctrl+l".move-column-to-monitor-right = { };
+
+          # Move and focus first and last columns
+          "${mod}+g".focus-column-first = { };
+          "${mod}+Ctrl+g".focus-column-last = { };
+          "${mod}+Shift+g".move-column-to-first = { };
+          "${mod}+Shift+Ctrl+g".move-column-to-last = { };
+
+          # Mouse focus
+          "${mod}+WheelScrollDown".focus-workspace-down = { };
+          "${mod}+WheelScrollUp".focus-workspace-up = { };
+          "${mod}+Ctrl+WheelScrollDown".focus-column-right = { };
+          "${mod}+Ctrl+WheelScrollUp".focus-column-left = { };
+
+          # Mouse move
+          "${mod}+Shift+WheelScrollDown".move-column-to-workspace-down = { };
+          "${mod}+Shift+WheelScrollUp".move-column-to-workspace-up = { };
+          "${mod}+Shift+Ctrl+WheelScrollDown".move-column-right = { };
+          "${mod}+Shift+Ctrl+WheelScrollUp".move-column-left = { };
 
           # Workspaces
           "${mod}+1".focus-workspace = 1;
@@ -194,6 +249,7 @@
           "${mod}+9".focus-workspace = 9;
           "${mod}+0".focus-workspace = 10;
 
+          # Move workspaces
           "${mod}+Shift+1".move-column-to-workspace = 1;
           "${mod}+Shift+2".move-column-to-workspace = 2;
           "${mod}+Shift+3".move-column-to-workspace = 3;
@@ -205,11 +261,41 @@
           "${mod}+Shift+9".move-column-to-workspace = 9;
           "${mod}+Shift+0".move-column-to-workspace = 10;
 
-          # Window management
-          "${mod}+r".expand-column-to-available-width = { };
-          "${mod}+x".switch-preset-column-width = { };
-          "${mod}+z".switch-preset-window-height = { };
+          "${mod}+Slash".show-hotkey-overlay = { };
+          "${mod}+Escape" = {
+            _props.allow-inhibiting = false;
+            toggle-keyboard-shortcuts-inhibit = { };
+          };
 
+          # Power
+          "${mod}+Shift+e".quit = { };
+
+          # Window management
+          # Can use these if you want more precise adjustment of both width and height
+          # instead of just maximize
+          # "${mod}+r".expand-column-to-available-width = { };
+          # "${mod}+Shift+r".reset-window-height = { };
+          "${mod}+r".maximize-window-to-edges = { };
+
+          "${mod}+x".switch-preset-column-width = { };
+          "${mod}+Shift+x".switch-preset-column-width-back = { };
+          "${mod}+z".switch-preset-window-height = { };
+          "${mod}+Shift+z".switch-preset-window-height-back = { };
+
+          "${mod}+c".center-column = { };
+          "${mod}+Shift+c".center-visible-columns = { };
+
+          "${mod}+Minus".set-column-width = "-10%";
+          "${mod}+Equal".set-column-width = "+10%";
+          "${mod}+Shift+Minus".set-window-height = "-10%";
+          "${mod}+Shift+Equal".set-window-height = "+10%";
+
+          "${mod}+BracketLeft".consume-or-expel-window-left = { };
+          "${mod}+BracketRight".consume-or-expel-window-right = { };
+          "${mod}+Comma".consume-window-into-column = { };
+          "${mod}+Period".expel-window-from-column = { };
+
+          # Overview
           "${mod}+o" = {
             _props.repeat = false;
             toggle-overview = { };
@@ -232,7 +318,7 @@
           "${mod}+Shift+m".spawn = [ pear-desktop ];
           "${mod}+t".spawn = [ kitty "$EDITOR" ];
           "${mod}+e".spawn = [ kitty yazi ];
-          "${mod}+m".spawn = [ cantata ];
+          "${mod}+m".spawn = [ euphonica ];
           "${mod}+s".spawn = [ kitty btm "-b" ];
           "${mod}+b".spawn = [ kitty bluetuith ];
           "${mod}+p".spawn = [ hyprpicker "-a" ];
@@ -244,121 +330,84 @@
           # Equibop
           "alt+v".spawn = [ equibop "--toggle-mic" ];
           "alt+m".spawn = [ equibop "--toggle-deafen" ];
-
-          # TODO: Customise these
-          "${mod}+Shift+Slash".show-hotkey-overlay = { };
-          "${mod}+Escape" = {
-            _props.allow-inhibiting = false;
-            toggle-keyboard-shortcuts-inhibit = { };
-          };
-          "${mod}+Shift+e".quit = { };
-          "${mod}+Shift+p".power-off-monitors = { };
-
-          "${mod}+Shift+Ctrl+h".move-column-to-monitor-left = { };
-          "${mod}+Shift+Ctrl+j".move-column-to-monitor-down = { };
-          "${mod}+Shift+Ctrl+k".move-column-to-monitor-up = { };
-          "${mod}+Shift+Ctrl+l".move-column-to-monitor-right = { };
-
-          "${mod}+Home".focus-column-first = { };
-          "${mod}+End".focus-column-last = { };
-          "${mod}+Ctrl+Home".move-column-to-first = { };
-          "${mod}+Ctrl+End".move-column-to-last = { };
-
-          "${mod}+WheelScrollDown" = {
-            _props.cooldown-ms = 150;
-            focus-workspace-down = { };
-          };
-          "${mod}+WheelScrollUp" = {
-            _props.cooldown-ms = 150;
-            focus-workspace-up = { };
-          };
-          "${mod}+Ctrl+WheelScrollDown" = {
-            _props.cooldown-ms = 150;
-            move-column-to-workspace-down = { };
-          };
-          "${mod}+Ctrl+WheelScrollUp" = {
-            _props.cooldown-ms = 150;
-            move-column-to-workspace-up = { };
-          };
-
-          "${mod}+WheelScrollRight".focus-column-right = { };
-          "${mod}+WheelScrollLeft".focus-column-left = { };
-          "${mod}+Ctrl+WheelScrollRight".move-column-right = { };
-          "${mod}+Ctrl+WheelScrollLeft".move-column-left = { };
-          "${mod}+Shift+WheelScrollDown".focus-column-right = { };
-          "${mod}+Shift+WheelScrollUp".focus-column-left = { };
-          "${mod}+Ctrl+Shift+WheelScrollDown".move-column-right = { };
-          "${mod}+Ctrl+Shift+WheelScrollUp".move-column-left = { };
-
-          "${mod}+BracketLeft".consume-or-expel-window-left = { };
-          "${mod}+BracketRight".consume-or-expel-window-right = { };
-          "${mod}+Comma".consume-window-into-column = { };
-          "${mod}+Period".expel-window-from-column = { };
-
-          "${mod}+Shift+r".switch-preset-column-width-back = { };
-          "${mod}+Ctrl+r".reset-window-height = { };
-          "${mod}+Minus".set-column-width = "-10%";
-          "${mod}+Equal".set-column-width = "+10%";
-          "${mod}+Shift+Minus".set-window-height = "-10%";
-          "${mod}+Shift+Equal".set-window-height = "+10%";
-
-          # "${mod}+Ctrl+m".maximize-window-to-edges = { };
-          "${mod}+c".center-column = { };
-          "${mod}+Ctrl+c".center-visible-columns = { };
         };
 
-        _children = [
-          # Window rules
-          {
-            window-rule = {
-              match._props = { app-id = "^firefox$"; title = "^Chat - Twitch$"; };
-              open-floating = true;
-              opacity = 0.9;
-            };
-          }
-          {
-            window-rule = {
-              match._props = { app-id = "^steam$"; };
-              open-floating = true;
-            };
-          }
-          {
-            window-rule = {
-              match._props = { app-id = "^steam$"; title = "^Steam$"; };
-              open-floating = false;
-            };
-          }
-          {
-            window-rule = {
-              match._props = { app-id = "^yad$"; };
-              open-floating = true;
-            };
-          }
-          {
-            window-rule = {
-              match._props = { app-id = "^gamescope$"; };
-              open-floating = true;
-            };
-          }
-          {
-            window-rule = {
-              match._props = { app-id = "^pcmanfm$"; };
-              open-floating = true;
-            };
-          }
+        _children =
+          (if host.hostName == globals.hostNames.desktop then
+            [
+              {
+                output = {
+                  _args = [ "${monitorLeft}" ];
+                  mode = "1920x1080@144.001";
+                  scale = 1;
+                  position._props = { x = 0; y = 0; };
+                };
+              }
+              {
+                output = {
+                  _args = [ "${monitorCenter}" ];
+                  mode = "1920x1080@144.001";
+                  scale = 1;
+                  position._props = { x = 1920; y = 0; };
+                };
+              }
+            ]
+          else
+            [
+              { output = { _args = [ "${monitorCenter}" ]; scale = 1; }; }
+            ])
+          ++ [
+            # Window rules
+            {
+              window-rule = {
+                match._props = { app-id = "^firefox$"; title = "^Chat - Twitch$"; };
+                open-floating = true;
+                opacity = 0.9;
+              };
+            }
+            {
+              window-rule = {
+                match._props = { app-id = "^steam$"; };
+                open-floating = true;
+              };
+            }
+            {
+              window-rule = {
+                match._props = { app-id = "^steam$"; title = "^Steam$"; };
+                open-floating = false;
+              };
+            }
+            {
+              window-rule = {
+                match._props = { app-id = "^yad$"; };
+                open-floating = true;
+              };
+            }
+            {
+              window-rule = {
+                match._props = { app-id = "^gamescope$"; };
+                open-floating = true;
+              };
+            }
+            {
+              window-rule = {
+                match._props = { app-id = "^pcmanfm$"; };
+                open-floating = true;
+              };
+            }
 
-          # Startup
-          { spawn-at-startup._args = [ playerctld ]; }
-          { spawn-at-startup._args = [ lxpolkit ]; }
-          { spawn-at-startup._args = [ turntable "-c" "org.mpris.MediaPlayer2.mpd" ]; }
-          { spawn-at-startup._args = [ turntable "-c" "org.mpris.MediaPlayer2.YoutubeMusic" ]; }
-          { spawn-at-startup._args = [ wlsunset ]; }
-          { spawn-at-startup._args = [ dropbox ]; }
-          { spawn-at-startup._args = [ easyEffects "-w" ]; }
-          { spawn-at-startup._args = [ xrandr "--output" monitorCenter "--primary" ]; }
-          { spawn-at-startup._args = [ waybar ]; }
-          { spawn-at-startup._args = [ swaybg "-i" "${wallpaper}" "-m" "fill" ]; }
-        ];
+            # Startup
+            { spawn-at-startup._args = [ playerctld ]; }
+            { spawn-at-startup._args = [ lxpolkit ]; }
+            { spawn-at-startup._args = [ turntable "-c" "org.mpris.MediaPlayer2.mpd" ]; }
+            { spawn-at-startup._args = [ turntable "-c" "org.mpris.MediaPlayer2.YoutubeMusic" ]; }
+            { spawn-at-startup._args = [ wlsunset ]; }
+            { spawn-at-startup._args = [ dropbox ]; }
+            { spawn-at-startup._args = [ easyEffects "-w" ]; }
+            { spawn-at-startup._args = [ xrandr "--output" monitorCenter "--primary" ]; }
+            { spawn-at-startup._args = [ waybar ]; }
+            { spawn-at-startup._args = [ swaybg "-i" "${wallpaper}" "-m" "fill" ]; }
+          ];
       };
   };
 }

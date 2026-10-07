@@ -64,6 +64,11 @@
             max-length = 40;
           };
 
+          "niri/workspaces" = lib.mkIf niriEnabled {
+            hide-empty = true;
+            display-condition = "only-populated";
+          };
+
           battery = {
             interval = 1;
             format = "{icon} {capacity}%";

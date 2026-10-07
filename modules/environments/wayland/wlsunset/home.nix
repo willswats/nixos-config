@@ -30,4 +30,9 @@ in
       [
         "$mod shift, b, exec, ${wlsunsetToggle}"
       ];
+
+  wayland.windowManager.niri.settings.binds =
+    lib.mkIf config.wayland.windowManager.niri.enable {
+      "Mod+Shift+b".spawn = [ "${wlsunsetToggle}" ];
+    };
 }
