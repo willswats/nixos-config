@@ -54,7 +54,7 @@
         waybar = "${pkgs.waybar}/bin/waybar";
         swaybg = "${pkgs.swaybg}/bin/swaybg";
 
-        mantle = "#${globals.colours.mantle}";
+        base = "#${globals.colours.base}";
         blue = "#${globals.colours.blue}";
         overlay0 = "#${globals.colours.overlay0}";
       in
@@ -76,7 +76,11 @@
         };
 
         overview = {
-          backdrop-color = "${mantle}";
+          backdrop-color = "${base}";
+        };
+
+        gestures = {
+          hot-corners = { };
         };
 
         layout = {
