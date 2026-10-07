@@ -18,19 +18,6 @@
     ../wayland/wlogout/home.nix
   ];
 
-  home.packages = with pkgs; [
-    # Utilities
-    ## GUI
-    waypaper
-    pavucontrol
-    ## CLI
-    wl-clipboard
-    wev
-    swaybg
-  ];
-
-  services.network-manager-applet.enable = true;
-
   wayland.windowManager.hyprland =
     let
       wallpaper = pkgs.fetchurl {

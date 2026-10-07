@@ -5,7 +5,8 @@
 
 {
   imports = [
-    ../modules/desktop/sway/home.nix
+    ../modules/desktop/niri/home.nix
+    # ../modules/desktop/sway/home.nix
     # ../modules/desktop/hyprland/home.nix
     ../modules/theme/fonts/home.nix
     ../modules/theme/cursor/home.nix
@@ -47,6 +48,8 @@
 
   programs.home-manager.enable = true;
 
+  services.network-manager-applet.enable = true;
+
   home = {
     username = globals.user;
     homeDirectory = globals.directories.home;
@@ -55,6 +58,8 @@
     packages = with pkgs; [
       # Utilities
       ## GUI
+      waypaper
+      pavucontrol
       obs-studio
       gpu-screen-recorder-gtk
       deluge
@@ -81,6 +86,9 @@
       tenacity
       mediasynclite
       ## CLI
+      wl-clipboard
+      swaybg
+      wev
       wget
       killall
       ffmpeg

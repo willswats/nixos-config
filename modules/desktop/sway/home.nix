@@ -20,19 +20,6 @@
     ../wayland/wlogout/home.nix
   ];
 
-  home.packages = with pkgs; [
-    # Utilities
-    ## GUI
-    waypaper
-    pavucontrol
-    ## CLI
-    wl-clipboard
-    swaybg
-    wev
-  ];
-
-  services.network-manager-applet.enable = true;
-
   wayland.windowManager.sway =
     let
       mod = config.wayland.windowManager.sway.config.modifier;

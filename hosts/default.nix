@@ -10,7 +10,8 @@ let
 in
 {
   imports = [
-    ../modules/desktop/sway
+    ../modules/desktop/niri
+    # ../modules/desktop/sway
     # ../modules/desktop/hyprland
     ../modules/system/plymouth
     ../modules/system/pipewire

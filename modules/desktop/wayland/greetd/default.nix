@@ -1,7 +1,14 @@
 { pkgs, config, ... }:
 
 let
-  cmd = if config.programs.sway.enable == true then "sway" else "Hyprland";
+  cmd =
+    if config.programs.sway.enable then
+      "sway"
+    else if config.programs.hyprland.enable then
+      "Hyprland"
+    else if config.programs.niri.enable then
+      "niri-session"
+    else "";
 in
 {
   services.greetd = {

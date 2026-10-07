@@ -9,6 +9,7 @@
     let
       swayEnabled = config.wayland.windowManager.sway.enable;
       hyprlandEnabled = config.wayland.windowManager.hyprland.enable;
+      niriEnabled = config.wayland.windowManager.niri.enable;
       modules-left =
         (lib.optionals swayEnabled [
           "sway/workspaces"
@@ -19,6 +20,11 @@
           "hyprland/workspaces"
           "hyprland/window"
           "hyprland/submap"
+        ])
+        ++
+        (lib.optionals niriEnabled [
+          "niri/workspaces"
+          "niri/window"
         ]);
     in
     {
@@ -183,6 +189,13 @@
             }
           '';
 
+          niriStyle = lib.optionalString niriEnabled ''
+            #workspaces button.active {
+              color: ${blue};
+              background-color: ${crust};
+            }
+          '';
+
           baseStyle = ''
             * { 
               font-size: 18px;    
@@ -289,6 +302,6 @@
             }
           '';
         in
-        baseStyle + swayStyle + hyprlandStyle;
+        baseStyle + swayStyle + hyprlandStyle + niriStyle;
     };
 }
