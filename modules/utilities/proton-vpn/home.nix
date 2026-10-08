@@ -5,12 +5,24 @@
 }:
 
 let
+  notify-send = "${pkgs.libnotify}/bin/notify-send";
   protonvpn = "${pkgs.proton-vpn-cli}/bin/protonvpn";
   protonVpnToggle = pkgs.writeShellScript "protonVpnToggle.sh" ''
+
     if ${protonvpn} status | grep 'Connected'; then
-      ${protonvpn} disconnect
+      ${notify-send} "ProtonVPN" "Disconnecting"
+      if ${protonvpn} disconnect; then
+        ${notify-send} "ProtonVPN"  "Disconnected"
+      else
+        ${notify-send} "ProtonVPN" "Disconnect failed"
+      fi
     else
-      ${protonvpn} connect --country sweden
+      ${notify-send} "ProtonVPN" "Connecting"
+      if ${protonvpn} connect --country sweden; then
+        ${notify-send} "ProtonVPN" "Connected"
+      else
+        ${notify-send} "ProtonVPN" "Connection failed"
+      fi
     fi
   '';
 in
