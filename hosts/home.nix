@@ -42,7 +42,6 @@
     ../modules/utilities/zathura/home.nix
     ../modules/utilities/hakuneko/home.nix
     ../modules/utilities/beets/home.nix
-    ../modules/utilities/streamlink-twitch-gui/home.nix
     ../modules/utilities/f3d/home.nix
     ../modules/servers/mpd/home.nix
   ];
@@ -110,6 +109,7 @@
       scooter
       live-server
       license-cli
+      twitch-hls-client
       # Infosec
       nmap
       nikto
