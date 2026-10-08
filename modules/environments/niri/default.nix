@@ -3,7 +3,6 @@
 {
   imports = [
     ../sway/swaylock
-    ../sway/grimshot
     ../wayland/greetd
   ];
 
