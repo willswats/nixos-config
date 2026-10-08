@@ -16,7 +16,7 @@
     ../wayland/waybar/home.nix
     ../wayland/rofi/home.nix
     ../wayland/mako/home.nix
-    ../wayland/wlsunset/home.nix
+    ../wayland/gammastep/home.nix
     ../wayland/wlogout/home.nix
   ];
 
@@ -64,7 +64,6 @@
 
       lxpolkit = "${pkgs.lxsession}/bin/lxpolkit";
       turntable = "${pkgs.turntable}/bin/dev.geopjr.Turntable";
-      wlsunset = "${pkgs.wlsunset}/bin/wlsunset";
       dropbox = "${pkgs.dropbox}/bin/dropbox";
       easyEffects = "${pkgs.easyeffects}/bin/easyeffects";
 
@@ -340,10 +339,6 @@
           }
           {
             command = "${turntable} -c org.mpris.MediaPlayer2.YoutubeMusic";
-            always = false;
-          }
-          {
-            command = "${wlsunset}";
             always = false;
           }
           # Applets

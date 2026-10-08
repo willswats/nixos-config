@@ -14,7 +14,7 @@
     ../wayland/waybar/home.nix
     ../wayland/rofi/home.nix
     ../wayland/mako/home.nix
-    ../wayland/wlsunset/home.nix
+    ../wayland/gammastep/home.nix
     ../wayland/wlogout/home.nix
   ];
 
@@ -46,7 +46,6 @@
         equibop = "${pkgs.equibop}/bin/equibop";
         lxpolkit = "${pkgs.lxsession}/bin/lxpolkit";
         turntable = "${pkgs.turntable}/bin/dev.geopjr.Turntable";
-        wlsunset = "${pkgs.wlsunset}/bin/wlsunset";
         dropbox = "${pkgs.dropbox}/bin/dropbox";
         easyEffects = "${pkgs.easyeffects}/bin/easyeffects";
         wpctl = "${pkgs.wireplumber}/bin/wpctl";
@@ -405,7 +404,6 @@
             { spawn-at-startup._args = [ lxpolkit ]; }
             { spawn-at-startup._args = [ turntable "-c" "org.mpris.MediaPlayer2.mpd" ]; }
             { spawn-at-startup._args = [ turntable "-c" "org.mpris.MediaPlayer2.YoutubeMusic" ]; }
-            { spawn-at-startup._args = [ wlsunset ]; }
             { spawn-at-startup._args = [ dropbox ]; }
             { spawn-at-startup._args = [ easyEffects "-w" ]; }
             { spawn-at-startup._args = [ xrandr "--output" monitorCenter "--primary" ]; }

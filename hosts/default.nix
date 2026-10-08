@@ -73,6 +73,8 @@ in
 
   services.flatpak.enable = true;
 
+  services.geoclue2.enable = true;
+
   time.timeZone = "Europe/London";
 
   i18n = {
