@@ -71,7 +71,7 @@
             natural-scroll = { };
             scroll-factor = 0.5;
             tap = { };
-            accel-profile = "flat";
+            # accel-profile = "flat";
           };
           focus-follows-mouse = { };
         };
