@@ -21,7 +21,6 @@
 
     # Apps
     mpv-youtube-search.url = "github:willswats/mpv-youtube-search";
-    iloader.url = "github:nab138/iloader";
 
     # Gaming
     slippi.url = "github:lytedev/slippi-nix";
