@@ -356,13 +356,16 @@
             ])
           ++ [
             # Window rules
-            {
-              window-rule = {
-                match._props = { app-id = "^firefox$"; title = "^Chat - Twitch$"; };
-                open-floating = true;
-                opacity = 0.9;
-              };
-            }
+            # Twitch Popout Chat
+            # TODO: this doesn't work
+            # {
+            #   window-rule = {
+            #     match._props = { app-id = "^firefox$"; title = "^Chat - Twitch$"; };
+            #     open-floating = true;
+            #     opacity = 0.9;
+            #   };
+            # }
+            # Steam
             {
               window-rule = {
                 match._props = { app-id = "^steam$"; };
@@ -375,18 +378,21 @@
                 open-floating = false;
               };
             }
+            # SteamTinkerLaunch
             {
               window-rule = {
                 match._props = { app-id = "^yad$"; };
                 open-floating = true;
               };
             }
+            # gamescope
             {
               window-rule = {
                 match._props = { app-id = "^gamescope$"; };
                 open-floating = true;
               };
             }
+            # pcmanfm
             {
               window-rule = {
                 match._props = { app-id = "^pcmanfm$"; };
