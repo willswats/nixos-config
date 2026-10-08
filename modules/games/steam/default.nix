@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./bsp-casefolding-workaround
     ./cs2
     ./css
     ./tf2

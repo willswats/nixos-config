@@ -25,7 +25,6 @@
 
     # Gaming
     slippi.url = "github:lytedev/slippi-nix";
-    bsp-casefolding-workaround.url = "github:SeraphimRP/bsp-casefolding-workaround-nix/v1.0.1";
   };
 
   outputs =
@@ -35,7 +34,6 @@
     , nur
     , catppuccin
     , slippi
-    , bsp-casefolding-workaround
     , ...
     }@inputs:
     {
@@ -135,7 +133,6 @@
                       nur.modules.homeManager.default
                       catppuccin.homeModules.catppuccin
                       slippi.homeManagerModules.default
-                      bsp-casefolding-workaround.nixosModules.default
                     ];
                   };
                 }
