@@ -20,7 +20,7 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
     # Apps
-    mpv-youtube-search.url = "github:willswats/mpv-youtube-search";
+    mpv-youtube-search.url = "git+https://codeberg.org/willswats/mpv-youtube-search";
 
     # Gaming
     slippi.url = "github:lytedev/slippi-nix";
