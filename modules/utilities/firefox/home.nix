@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     web-ext
+    open-in-mpv
   ];
 
   xdg.mimeApps = {
@@ -17,8 +18,19 @@
         "x-scheme-handler/https" = [ firefox ];
         "x-scheme-handler/about" = [ firefox ];
         "x-scheme-handler/unknown" = [ firefox ];
+        "x-scheme-handler/mpv" = [ "open-in-mpv.desktop" ];
       };
   };
+
+  home.file.".local/share/applications/open-in-mpv.desktop".text = ''
+    [Desktop Entry]
+    Name=open-in-mpv
+    Exec=open-in-mpv %u
+    Type=Application
+    Terminal=false
+    NoDisplay=true
+    MimeType=x-scheme-handler/mpv
+  '';
 
   catppuccin.firefox.enable = true;
 
@@ -43,6 +55,7 @@
         translate-web-pages
         libredirect
         firefox-color
+        iina-open-in-mpv
         # Zotero
         zotero-connector
         # YouTube
