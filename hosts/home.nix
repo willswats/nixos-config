@@ -85,6 +85,7 @@
       blender
       tenacity
       mediasynclite
+      chatterino2
       ## CLI
       wl-clipboard
       swaybg

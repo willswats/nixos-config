@@ -161,8 +161,8 @@
         };
 
         windowrule = [
-          # Twitch Popout Chat
-          "float on, match:title = Chat - Twitch, opacity 0.9"
+          # Chatterino
+          "float on, match:class = com.chatterino., opacity 0.9"
           # Steam
           "float on, match:class = steam"
           "tile on, match:class = steam, match:title = ^Steam$" # Strict regex check for only the "Steam" window

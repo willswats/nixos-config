@@ -97,12 +97,11 @@
               class = "^.*";
             };
           }
-          # Twitch Popout Chat
+          # Chatterino
           {
             command = "floating enable, opacity 0.9";
             criteria = {
-              app_id = "firefox";
-              title = "Chat - Twitch";
+              app_id = "com.chatterino.";
             };
           }
           # Steam

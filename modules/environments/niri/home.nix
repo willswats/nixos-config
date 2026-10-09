@@ -355,15 +355,14 @@
             ])
           ++ [
             # Window rules
-            # Twitch Popout Chat
-            # TODO: this doesn't work
-            # {
-            #   window-rule = {
-            #     match._props = { app-id = "^firefox$"; title = "^Chat - Twitch$"; };
-            #     open-floating = true;
-            #     opacity = 0.9;
-            #   };
-            # }
+            # Chatterino
+            {
+              window-rule = {
+                match._props = { app-id = "^com.chatterino.$"; };
+                open-floating = true;
+                opacity = 0.9;
+              };
+            }
             # Steam
             {
               window-rule = {
