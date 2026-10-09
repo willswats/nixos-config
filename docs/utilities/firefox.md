@@ -14,14 +14,3 @@
 
 - Notifications (Anime): Disabled
 - Notifications (Manga): Disabled
-
-## Gumbo
-
-### Gumbo - General
-
-- Click action: Open chat
-- Click behaviour: Open in a new window
-
-### Gumbo - Notifications
-
-- Enable notifications: Disabled

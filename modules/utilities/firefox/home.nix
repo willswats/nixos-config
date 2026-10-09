@@ -63,7 +63,6 @@
         sponsorblock
         # Twitch
         frankerfacez
-        gumbo-twitch-companion
         # Wayback Machine
         wayback-machine
         # nyaa.si
