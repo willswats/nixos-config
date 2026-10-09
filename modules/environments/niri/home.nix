@@ -313,7 +313,7 @@
           "${mod}+v".spawn = [ "mpv" ];
           "${mod}+Shift+v".spawn = [ freetube ];
           "${mod}+Shift+m".spawn = [ pear-desktop ];
-          "${mod}+t".spawn = [ kitty "$EDITOR" ];
+          "${mod}+t".spawn-sh = "${kitty} $EDITOR";
           "${mod}+e".spawn = [ kitty yazi ];
           "${mod}+m".spawn = [ euphonica ];
           "${mod}+s".spawn = [ kitty btm "-b" ];
