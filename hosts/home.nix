@@ -73,7 +73,7 @@
       freetube
       dropbox
       pixelorama
-      # zotero TODO: cant build
+      # zotero TODO: cant build - https://github.com/NixOS/nixpkgs/issues/568692
       equibop
       teams-for-linux
       qalculate-gtk
