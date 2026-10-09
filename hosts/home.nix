@@ -110,6 +110,7 @@
       scooter
       live-server
       license-cli
+      streamlink
       twitch-hls-client
       # Infosec
       nmap
