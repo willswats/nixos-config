@@ -3,6 +3,6 @@
 {
   home.packages = with pkgs; [
     seahorse
-    gcr
+    gcr_4
   ];
 }

@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, pkgs, ... }:
 
 {
   # Note: a lot of the lsp config is only defined for the sake of adding scls to the language servers list, and to define the snippets for scls.
@@ -37,93 +37,111 @@
       };
   };
 
-  programs.helix = {
-    enable = true;
-    settings = {
-      theme = "catppuccin_mocha";
-      editor = {
-        mouse = true; # Enable mouse
-        cursorline = true; # Highlight current line
-        cursor-shape.insert = "bar"; # Change to bar in insert
-        bufferline = "multiple"; # Show bufferline when multiple buffers
-        rainbow-brackets = true; # Rainbow brackets
-        line-number = "relative"; # Relative line numbers
-        indent-guides.render = true; # Indent guides
-        scrolloff = 8; # How many lines to before scrolling starts
-        file-picker.hidden = false; # Enable hidden files in file picker
+  programs.helix =
 
-        # Diagnostics & LSP
-        inline-diagnostics.cursor-line = "hint"; # Enable cursor line diagnostics for hints and above (better than having errors cover the screen at the top right)
-        end-of-line-diagnostics = "disable"; # Disable end of line diagnostics (too many warnings at times, some of them go off the screen)
-        lsp.auto-signature-help = false; # Disable auto signature help box (gets in the way)
+    let
+      # TODO: remove this when this is fixed https://github.com/helix-editor/helix/issues/16347
+      helix-src = pkgs.stdenvNoCC.mkDerivation {
+        name = "helix-patched";
+        src = inputs.helix;
+        nativeBuildInputs = [ pkgs.dasel ];
+        buildPhase = ''
+          cat languages.toml | dasel -i toml --root 'grammar = grammar.filter($this.name != "perl")' > languages.toml.new
+          mv languages.toml.new languages.toml
 
-        # Completion
-        completion-timeout = 5; # Time in milliseconds after typing a word character before completions are shown, 5 is instant
-        completion-trigger-len = 1; # Min-length of word under cursor to trigger autocompletion
-        word-completion.trigger-length = 1; # Number of word characters to type before triggering completion
-
-        # Status line
-        color-modes = true; # Coloured modes in statusline
-        statusline = {
-          left = [
-            "mode"
-            "spacer"
-            "version-control"
-            "spacer"
-            "diagnostics"
-            "file-name"
-            "read-only-indicator"
-            "file-modification-indicator"
-          ];
-          right = [
-            "file-encoding"
-            "file-type"
-            "position-percentage"
-            "position"
-          ];
-        };
+          mkdir -p "$out"
+          cp -r . "$out"
+        '';
       };
-      keys = {
-        insert = {
-          j.k = "normal_mode";
-          k.j = "normal_mode";
-        };
-        normal = {
-          esc = "collapse_selection";
-          # Note: it's not currently possible to format and then write in this command as it doesn't block write from happening until format is complete.
-          # Could be fixed by: https://github.com/helix-editor/helix/issues/8853
-          space.w = [
-            ":w"
-          ];
-          space.W = ":w --no-format";
-          space.q = ":q";
-          space.c = ":bc";
-          space.C = ":bco";
-          space.x = ":reset-diff-change";
-          space.m = ":lsp-workspace-command open-preview"; # mpls lsp - open markdown preview
-          C-r = ":reload-all";
-          # Yazi integration - https://github.com/helix-editor/helix/discussions/12934#discussioncomment-12438498
-          # Fix for mouse scroll - https://github.com/helix-editor/helix/discussions/12934#discussioncomment-15620950
-          C-e =
-            let
-              echo = ''
-                \x1b[?1049h\x1b[?2004h
-              '';
-            in
-            [
-              ":sh rm -f /tmp/unique-file"
-              ":insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file"
-              ":insert-output echo '${echo}' > /dev/tty"
-              ":open %sh{cat /tmp/unique-file}"
-              ":redraw"
-              ":set-option mouse false"
-              ":set-option mouse true"
+    in
+    {
+      enable = true;
+      package = pkgs.callPackage helix-src { };
+      settings = {
+        theme = "catppuccin_mocha";
+        editor = {
+          mouse = true; # Enable mouse
+          cursorline = true; # Highlight current line
+          cursor-shape.insert = "bar"; # Change to bar in insert
+          bufferline = "multiple"; # Show bufferline when multiple buffers
+          rainbow-brackets = true; # Rainbow brackets
+          line-number = "relative"; # Relative line numbers
+          indent-guides.render = true; # Indent guides
+          scrolloff = 8; # How many lines to before scrolling starts
+          file-picker.hidden = false; # Enable hidden files in file picker
+
+          # Diagnostics & LSP
+          inline-diagnostics.cursor-line = "hint"; # Enable cursor line diagnostics for hints and above (better than having errors cover the screen at the top right)
+          end-of-line-diagnostics = "disable"; # Disable end of line diagnostics (too many warnings at times, some of them go off the screen)
+          lsp.auto-signature-help = false; # Disable auto signature help box (gets in the way)
+
+          # Completion
+          completion-timeout = 5; # Time in milliseconds after typing a word character before completions are shown, 5 is instant
+          completion-trigger-len = 1; # Min-length of word under cursor to trigger autocompletion
+          word-completion.trigger-length = 1; # Number of word characters to type before triggering completion
+
+          # Status line
+          color-modes = true; # Coloured modes in statusline
+          statusline = {
+            left = [
+              "mode"
+              "spacer"
+              "version-control"
+              "spacer"
+              "diagnostics"
+              "file-name"
+              "read-only-indicator"
+              "file-modification-indicator"
             ];
-          # More intuitive x and X motions - https://helix-editor.vercel.app/help/recipes#more-intuitive-x-and-x-motions
-          x = "select_line_below";
-          X = "select_line_above";
+            right = [
+              "file-encoding"
+              "file-type"
+              "position-percentage"
+              "position"
+            ];
+          };
+        };
+        keys = {
+          insert = {
+            j.k = "normal_mode";
+            k.j = "normal_mode";
+          };
+          normal = {
+            esc = "collapse_selection";
+            # Note: it's not currently possible to format and then write in this command as it doesn't block write from happening until format is complete.
+            # Could be fixed by: https://github.com/helix-editor/helix/issues/8853
+            space.w = [
+              ":w"
+            ];
+            space.W = ":w --no-format";
+            space.q = ":q";
+            space.c = ":bc";
+            space.C = ":bco";
+            space.x = ":reset-diff-change";
+            space.m = ":lsp-workspace-command open-preview"; # mpls lsp - open markdown preview
+            C-r = ":reload-all";
+            # Yazi integration - https://github.com/helix-editor/helix/discussions/12934#discussioncomment-12438498
+            # Fix for mouse scroll - https://github.com/helix-editor/helix/discussions/12934#discussioncomment-15620950
+            C-e =
+              let
+                echo = ''
+                  \x1b[?1049h\x1b[?2004h
+                '';
+              in
+              [
+                ":sh rm -f /tmp/unique-file"
+                ":insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file"
+                ":insert-output echo '${echo}' > /dev/tty"
+                ":open %sh{cat /tmp/unique-file}"
+                ":redraw"
+                ":set-option mouse false"
+                ":set-option mouse true"
+              ];
+            # More intuitive x and X motions - https://helix-editor.vercel.app/help/recipes#more-intuitive-x-and-x-motions
+            x = "select_line_below";
+            X = "select_line_above";
+          };
         };
       };
     };
-  };
 }

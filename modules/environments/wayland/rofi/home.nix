@@ -5,9 +5,9 @@
 
   programs.rofi = {
     enable = true;
-    font = "${globals.font.name} 16";
-    terminal = "${pkgs.kitty}/bin/kitty";
-    extraConfig = {
+    settings = {
+      font = "${globals.font.name} 16";
+      terminal = "${pkgs.kitty}/bin/kitty";
       show-icons = true;
     };
   };

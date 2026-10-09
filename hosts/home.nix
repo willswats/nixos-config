@@ -40,7 +40,7 @@
     ../modules/utilities/gnome-keyring/home.nix
     ../modules/utilities/onlyoffice/home.nix
     ../modules/utilities/zathura/home.nix
-    ../modules/utilities/hakuneko/home.nix
+    # ../modules/utilities/hakuneko/home.nix
     ../modules/utilities/beets/home.nix
     ../modules/utilities/f3d/home.nix
     ../modules/servers/mpd/home.nix
@@ -73,7 +73,7 @@
       freetube
       dropbox
       pixelorama
-      zotero
+      # zotero TODO: cant build
       equibop
       teams-for-linux
       qalculate-gtk

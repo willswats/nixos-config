@@ -15,7 +15,6 @@
           red = "#${globals.colours.red}";
           yellow = "#${globals.colours.yellow}";
           blue = "#${globals.colours.blue}";
-          lavender = "#${globals.colours.lavender}";
           text = "#${globals.colours.text}";
           subtext0 = "#${globals.colours.subtext0}";
           surface0 = "#${globals.colours.surface0}";
@@ -34,7 +33,6 @@
           unstagedChangesColor = [ "${red}" ];
           defaultFgColor = [ "${text}" ];
           searchingActiveBorderColor = [ "${yellow}" ];
-          authorColors = [ "#${lavender}" ];
         };
     };
   };
