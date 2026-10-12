@@ -397,6 +397,19 @@
                 open-floating = true;
               };
             }
+            # Godot - don't float editor, float everything else
+            {
+              window-rule = {
+                match._props = { app-id = "org.godotengine.Editor"; };
+                open-floating = false;
+              };
+            }
+            {
+              window-rule = {
+                match._props = { title = "Godot"; };
+                open-floating = true;
+              };
+            }
 
             # Startup
             { spawn-at-startup._args = [ playerctld ]; }
