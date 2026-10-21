@@ -397,20 +397,14 @@
                 open-floating = true;
               };
             }
-            # Godot - don't float editor, float everything else
+            # Godot - float all windows except the main editor
             {
               window-rule = {
                 match._props = { app-id = "org.godotengine.Editor"; };
-                open-floating = false;
-              };
-            }
-            {
-              window-rule = {
-                match._props = { title = "Godot"; };
+                exclude._props = { title = "Godot Engine$"; };
                 open-floating = true;
               };
             }
-
             # Startup
             { spawn-at-startup._args = [ playerctld ]; }
             { spawn-at-startup._args = [ lxpolkit ]; }
