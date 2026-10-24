@@ -76,7 +76,7 @@
       ## Enable GameMode for this game
       USEGAMEMODERUN="1"
       ## Enable gamescope for this game
-      USEGAMESCOPE="0"
+      USEGAMESCOPE="1"
       ## The command line arguments for gamescope for this game
       GAMESCOPE_ARGS="-w 1920 -h 1080 -r 144 -f --force-grab-cursor --expose-wayland"
       ## Start the game through obs-gamecapture
