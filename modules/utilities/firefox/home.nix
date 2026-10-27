@@ -62,7 +62,7 @@
         youtube-alternative-switch
         sponsorblock
         # Twitch
-        frankerfacez
+        betterttv
         # Wayback Machine
         wayback-machine
         # nyaa.si
