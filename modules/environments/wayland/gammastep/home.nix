@@ -18,8 +18,8 @@ in
   services.gammastep = {
     enable = true;
     tray = true;
-    dawnTime = "6:00-7:45";
-    duskTime = "18:35-20:15";
+    dawnTime = "6:00-8:00";
+    duskTime = "18:00-20:00";
     temperature = {
       day = 6500;
       night = 3000;
