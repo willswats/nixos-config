@@ -49,20 +49,11 @@ in
     }
   ];
 
-  # Settings and overlays
-  nix.settings = {
-    substituters = [
-      "https://nixpkgs-wayland.cachix.org"
-    ];
-    trusted-public-keys = [
-      "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
-    ];
-  };
-
+  # Overlays
   nixpkgs.overlays = [
-    inputs.nixpkgs-wayland.overlay
     inputs.nix-vscode-extensions.overlays.default
     inputs.helix.overlays.helix
+    inputs.nur.overlays.default
   ];
 
   # 6.10 is needed for Vocaster One drivers

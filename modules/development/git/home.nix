@@ -6,7 +6,7 @@ in
 {
   home.packages = with pkgs; [
     gh
-    codeberg-cli
+    forgejo-cli
   ];
 
   programs.git = {

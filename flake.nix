@@ -9,10 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nur.url = "github:nix-community/NUR";
-    nixpkgs-wayland = {
-      url = "github:nix-community/nixpkgs-wayland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     catppuccin.url = "github:catppuccin/nix";
 
     # Editors
@@ -129,7 +125,6 @@
                     };
                     users.will.imports = [
                       ./hosts/desktop/home.nix
-                      nur.modules.homeManager.default
                       catppuccin.homeModules.catppuccin
                       slippi.homeManagerModules.default
                     ];
@@ -170,7 +165,6 @@
                     };
                     users.${user}.imports = [
                       ./hosts/home.nix
-                      nur.modules.homeManager.default
                       catppuccin.homeModules.catppuccin
                     ];
                   };
