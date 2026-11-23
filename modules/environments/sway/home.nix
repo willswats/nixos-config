@@ -64,7 +64,6 @@
 
       lxpolkit = "${pkgs.lxsession}/bin/lxpolkit";
       turntable = "${pkgs.turntable}/bin/dev.geopjr.Turntable";
-      dropbox = "${pkgs.dropbox}/bin/dropbox";
       easyEffects = "${pkgs.easyeffects}/bin/easyeffects";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
@@ -341,10 +340,6 @@
             always = false;
           }
           # Applets
-          {
-            command = "${dropbox}";
-            always = false;
-          }
           {
             command = "${easyEffects} -w";
             always = false;

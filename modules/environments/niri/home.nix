@@ -46,7 +46,6 @@
         equibop = "${pkgs.equibop}/bin/equibop";
         lxpolkit = "${pkgs.lxsession}/bin/lxpolkit";
         turntable = "${pkgs.turntable}/bin/dev.geopjr.Turntable";
-        dropbox = "${pkgs.dropbox}/bin/dropbox";
         easyEffects = "${pkgs.easyeffects}/bin/easyeffects";
         wpctl = "${pkgs.wireplumber}/bin/wpctl";
         playerctl = "${pkgs.playerctl}/bin/playerctl";
@@ -410,7 +409,6 @@
             { spawn-at-startup._args = [ lxpolkit ]; }
             { spawn-at-startup._args = [ turntable "-c" "org.mpris.MediaPlayer2.mpd" ]; }
             { spawn-at-startup._args = [ turntable "-c" "org.mpris.MediaPlayer2.YoutubeMusic" ]; }
-            { spawn-at-startup._args = [ dropbox ]; }
             { spawn-at-startup._args = [ easyEffects "-w" ]; }
             { spawn-at-startup._args = [ xrandr "--output" monitorCenter "--primary" ]; }
             { spawn-at-startup._args = [ waybar ]; }

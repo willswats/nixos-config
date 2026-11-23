@@ -71,7 +71,6 @@
       moonlight-qt
       pear-desktop
       freetube
-      dropbox
       pixelorama
       # zotero TODO: cant build - https://github.com/NixOS/nixpkgs/issues/568692
       equibop

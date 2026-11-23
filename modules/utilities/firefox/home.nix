@@ -262,8 +262,8 @@
                 name = "Utilities";
                 bookmarks = [
                   {
-                    name = "Dropbox";
-                    url = "https://www.dropbox.com/home";
+                    name = "Jottacloud";
+                    url = "https://jottacloud.com";
                   }
                   {
                     name = "Paypal";

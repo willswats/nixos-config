@@ -54,7 +54,6 @@
 
       lxpolkit = "${pkgs.lxsession}/bin/lxpolkit";
       turntable = "${pkgs.turntable}/bin/dev.geopjr.Turntable";
-      dropbox = "${pkgs.dropbox}/bin/dropbox";
       easyEffects = "${pkgs.easyeffects}/bin/easyeffects";
 
       wpctl = "${pkgs.wireplumber}/bin/wpctl";
@@ -213,7 +212,6 @@
           "${turntable} -c org.mpris.MediaPlayer2.mpd"
           "${turntable} -c org.mpris.MediaPlayer2.YoutubeMusic"
           # Applets
-          "${dropbox}"
           "${easyEffects} -w"
           # Misc
           "${xrandr} --output ${monitorCenter} --primary" # Ensures that xwindows (especially steam games) use the center monitor
