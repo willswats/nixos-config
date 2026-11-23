@@ -112,6 +112,7 @@
       license-cli
       streamlink
       twitch-hls-client
+      scarlett2
       # Infosec
       nmap
       nikto
